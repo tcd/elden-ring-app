@@ -48,7 +48,7 @@ module Lib
           pb.increment()
         rescue StandardError => e
           invalid << {
-            # args:  args,
+            args:  args,
             name: args&.dig(:name),
             error: e.message,
           }
@@ -228,6 +228,7 @@ module Lib
 
       # @return [void]
       def self.shields()
+        Weapon.where(is_shield: true).each(&:destroy)
         type_ids = {
           "Small Shields"  => 41,
           "Medium Shields" => 42,
@@ -238,30 +239,47 @@ module Lib
         invalid = self.from_json("shields.json", Weapon) do |fx|
           _args = {
             is_shield:             true,
+            is_special:            (fx["special"] == true || fx["special"] == "TRUE"),
             name:                  fx["name"],
             weight:                fx["weight"],
             weapon_type_id:        type_ids[fx["weapon_type"]],
-            weapon_skill_id:       skill_ids[fx["skill_name"]],
+            weapon_skill_id:       skill_ids[fx["skill"]],
             physical_damage_types: [ "Strike" ],
             metadata:              { skill: fx["skill"] },
+
+            required_strength:     fx["required_strength"],
+            required_dexterity:    fx["required_dexterity"],
+            required_intelligence: fx["required_intelligence"],
+            required_faith:        fx["required_faith"],
+            required_arcane:       fx["required_arcane"],
+
             attack_physical:       fx["attack_physical"],
             attack_magic:          fx["attack_magic"],
             attack_fire:           fx["attack_fire"],
             attack_lightning:      fx["attack_lightning"],
             attack_holy:           fx["attack_holy"],
+            attack_critical:       fx["attack_critical"],
+
             defense_physical:      fx["defense_physical"],
             defense_magic:         fx["defense_magic"],
             defense_fire:          fx["defense_fire"],
             defense_lightning:     fx["defense_lightning"],
             defense_holy:          fx["defense_holy"],
             defense_guard_boost:   fx["defense_guard_boost"],
-            attack_critical:       fx["attack_critical"],
+
             scaling_strength:      fx["scaling_strength"],
+            scaling_intelligence:  fx["scaling_intelligence"],
             scaling_dexterity:     fx["scaling_dexterity"],
             scaling_faith:         fx["scaling_faith"],
-            required_strength:     fx["required_strength"],
-            required_dexterity:    fx["required_dexterity"],
-            required_faith:        fx["required_faith"],
+            scaling_arcane:        fx["scaling_arcane"],
+
+            damage_blood_loss:   fx["damage_blood_loss"],
+            damage_frost:        fx["damage_frost"],
+            damage_madness:      fx["damage_madness"],
+            damage_poison:       fx["damage_poison"],
+            damage_sleep:        fx["damage_sleep"],
+            damage_death_blight: fx["damage_death_blight"],
+            damage_scarlet_rot:  fx["damage_scarlet_rot"],
           }
         end
         return invalid
@@ -269,6 +287,7 @@ module Lib
 
       # @return [void]
       def self.weapons()
+        Weapon.where(is_shield: false).each(&:destroy)
         type_ids = {}
         skill_ids = {}
         WeaponType.all.each { |wt| type_ids[wt.singular_name] = wt.id }
@@ -276,14 +295,17 @@ module Lib
         invalid = self.from_tsv("weapons.tsv", Weapon) do |fx|
           _args = {
             is_shield:             false,
+            is_special:            (fx["special"] == true || fx["special"] == "TRUE"),
             name:                  fx["name"],
             weight:                fx["weight"],
             weapon_type_id:        type_ids[fx["weapon_type"]],
             weapon_skill_id:       skill_ids[fx["skill_name"]],
             physical_damage_types: fx["physical_damage_types"].split(/,\s*/),
             metadata: {
-              effects: fx["weight"],
-              notes:   fx["notes"],
+              effects:                fx["effects"],
+              notes:                  fx["notes"],
+              spell_boost_group:      fx["spell_boost_group"],
+              spell_boost_percentage: fx["spell_boost_percentage"],
             },
             # FIXME: seeding weapons, defense_guard_boost
             defense_guard_boost:    fx["defense_guard_boost"] || -1,

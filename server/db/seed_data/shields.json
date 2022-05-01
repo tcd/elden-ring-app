@@ -72,7 +72,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 2,
-		"skill": "No skill"
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -222,7 +222,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 2,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -272,7 +272,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 3,
-		"skill": null
+				"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -322,7 +322,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 3,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -472,7 +472,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 17,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -551,6 +551,7 @@
 	},
 	{
 		"is_shield": true,
+		"is_special": true,
 		"weapon_type": "Greatshields",
 		"name": "Erdtree Greatshield",
 		"attack_physical": 120,
@@ -572,7 +573,8 @@
 		"required_dexterity": null,
 		"required_faith": 12,
 		"weight": 13.5,
-		"skill": "Golden Retaliation"
+		"skill": "Golden Retaliation",
+        "damage_blood_loss": true
 	},
 	{
 		"is_shield": true,
@@ -601,6 +603,7 @@
 	},
 	{
 		"is_shield": true,
+        "is_special": true,
 		"weapon_type": "Greatshields",
 		"name": "Jellyfish Shield",
 		"attack_physical": 123,
@@ -672,10 +675,11 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 11.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
+		"is_special": true,
 		"weapon_type": "Greatshields",
 		"name": "One-Eyed Shield",
 		"attack_physical": 175,
@@ -701,6 +705,7 @@
 	},
 	{
 		"is_shield": true,
+		"is_special": true,
 		"weapon_type": "Greatshields",
 		"name": "Visage Shield",
 		"attack_physical": 186,
@@ -826,6 +831,7 @@
 	},
 	{
 		"is_shield": true,
+        "is_special": true,
 		"weapon_type": "Greatshields",
 		"name": "Ant's Skull Plate",
 		"attack_physical": 136,
@@ -838,7 +844,7 @@
 		"defense_fire": 42,
 		"defense_lightning": 57,
 		"defense_holy": 57,
-		"defense_guard_boost": 100,
+		"defense_guard_boost": 69,
 		"attack_critical": 63,
 		"scaling_strength": "D",
 		"scaling_dexterity": null,
@@ -847,7 +853,16 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 13.5,
-		"skill": "Shield Bash"
+		"skill": "Shield Bash",
+        "damage_poison": true,
+        "effects": [
+            {
+                "effect_method": "flat",
+                "effect_type": "increase",
+                "affected_stat": "Immunity",
+                "value": 63
+            }
+        ]
 	},
 	{
 		"is_shield": true,
@@ -872,7 +887,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 14,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -897,7 +912,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 15,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -922,7 +937,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 15,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -947,7 +962,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 17,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -972,7 +987,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 17.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -997,7 +1012,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 18.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1022,7 +1037,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 8,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1072,7 +1087,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 4.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1097,7 +1112,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 3,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1122,7 +1137,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 4,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1147,7 +1162,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 6,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1222,7 +1237,7 @@
 		"required_dexterity": 10,
 		"required_faith": 10,
 		"weight": 3.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1297,7 +1312,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 4.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1347,7 +1362,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 7,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1422,7 +1437,7 @@
 		"required_dexterity": 10,
 		"required_faith": 15,
 		"weight": 4.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1472,7 +1487,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 3.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1647,7 +1662,7 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 3.5,
-		"skill": null
+		"skill": "No Skill"
 	},
 	{
 		"is_shield": true,
@@ -1722,6 +1737,6 @@
 		"required_dexterity": null,
 		"required_faith": null,
 		"weight": 3,
-		"skill": null
+		"skill": "No Skill"
 	}
 ]
