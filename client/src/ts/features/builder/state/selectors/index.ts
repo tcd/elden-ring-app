@@ -21,7 +21,6 @@ export const BuilderSelectors = {
         weaponTypes: Api.selectWeaponTypes,
         weaponSkills: Api.selectWeaponSkills,
     },
-    shouldFetchEverything: Api.selectShouldFetchEverything,
     startingClassName: Stats.selectStartingClassName,
     level: Stats.selectLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
