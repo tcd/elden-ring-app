@@ -4,8 +4,6 @@ $gray: #221e19;
 $transparentGray: rgba($gray, 0.55);
 $equipment-slot-overlay-color: #B6AD84;
 
-$text-shadow-offset: 1.5px;
-
 $EldenRingColor: (
     // menu-bg: #292927,
     menu-bg: #201F19,
@@ -28,3 +26,151 @@ $CorrectColors: (
     red:   "#CD3138",
     blue:  "#527ED5",
 );
+
+// ============================================================================
+// Theme (Bootstrap variables)
+// ============================================================================
+
+// ----------------------------------------------------------------------------
+// Color System
+// ----------------------------------------------------------------------------
+
+// scss-docs-start gray-color-variables
+// $white:    #ffffff !default;
+// $gray-100: #f8f9fa !default;
+// $gray-200: #e9ecef !default;
+// $gray-300: #dee2e6 !default;
+// $gray-400: #ced4da !default;
+// $gray-500: #adb5bd !default;
+// $gray-600: #6c757d !default;
+// $gray-700: #495057 !default;
+// $gray-800: #343a40 !default;
+// $gray-900: #212529 !default;
+// $black:    #000000 !default;
+$white:    #e3e2de !default;
+$black:    #1e1e1e !default;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue:    #527ED5 !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #d63384 !default;
+$red:     #CD3138 !default;
+// $orange:  #fd7e14 !default;
+$yellow:  #ebbd6c !default;
+$green:   #338636 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark".
+// Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   4.5 !default;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark:      $black !default;
+$color-contrast-light:     $white !default;
+
+// scss-docs-start theme-color-variables
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+$success:       $green !default;
+// $info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+// ----------------------------------------------------------------------------
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+// ----------------------------------------------------------------------------
+
+// Prefix for :root CSS variables
+$variable-prefix: er- !default; // Deprecated in Bootstrap v5.2.0 for the shorter `$prefix`
+$prefix:          $variable-prefix !default;
+
+// ----------------------------------------------------------------------------
+// Z-index master list
+//
+// Warning: Avoid customizing these values.
+// They're used for a bird's eye view of components dependent on the z-axis and are designed to all work together.
+// ----------------------------------------------------------------------------
+
+// scss-docs-start zindex-stack
+// $zindex-dropdown:                   1000 !default;
+// $zindex-sticky:                     1020 !default;
+// $zindex-fixed:                      1030 !default;
+// $zindex-offcanvas-backdrop:         1040 !default;
+// $zindex-offcanvas:                  1045 !default;
+$zindex-modal-backdrop:             1050 !default;
+$zindex-modal:                      1055 !default;
+// $zindex-popover:                    1070 !default;
+// $zindex-tooltip:                    1080 !default;
+// $zindex-toast:                      1090 !default;
+// scss-docs-end zindex-stack
+
+// ----------------------------------------------------------------------------
+// Body
+//
+// Settings for the `<body>` element.
+// ----------------------------------------------------------------------------
+
+$body-color-bg: $black !default;
+$body-color-fg: $white !default;
+
+// ----------------------------------------------------------------------------
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+// ----------------------------------------------------------------------------
+
+// // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// // $font-size-base affects the font size of the body text
+// $font-size-root: null !default;
+// $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+// // $font-size-sm:   $font-size-base * .875 !default;
+// // $font-size-lg:   $font-size-base * 1.25 !default;
+//
+// $font-weight-lighter:         lighter !default;
+// $font-weight-light:           300 !default;
+// $font-weight-normal:          400 !default;
+// $font-weight-semibold:        600 !default;
+// $font-weight-bold:            700 !default;
+// $font-weight-bolder:          bolder !default;
+//
+// $font-weight-base:            $font-weight-normal !default;
+
+// $line-height-base:            1.5 !default;
+// $line-height-sm:              1.25 !default;
+// $line-height-lg:              2 !default;
+
+$headings-color: #cfc1a6 !default;
+
+$text-shadow-offset: 1.5px;
+
+// ----------------------------------------------------------------------------
+// Navbar
+// ----------------------------------------------------------------------------
+
+$navbar-height: 48px; // 48px/56px/64px
+
+// ----------------------------------------------------------------------------
+// Tables
+// ----------------------------------------------------------------------------
+
+$table-color-fg: $body-color-fg !default;
+$table-color-bg:    transparent !default;
+
+// ----------------------------------------------------------------------------
+// Modal
+// ----------------------------------------------------------------------------
+
+$modal-backdrop-bg: $transparentGray;
+
+$modal-color-bg: #26221C;
+$modal-color-border: #4D4B3F;

@@ -3,11 +3,6 @@
 @use "../variables" as v;
 @use "../mixins/index" as m;
 
-// $menu-background: #201E18;
-// $menu-background: #201F19;
-$menu-background: #26221C;
-$menu-border: #4D4B3F;
-
 $inner-border-1: #423E35;
 $inner-border-2: #4C4A3F;
 $inner-border-3: #454139;
@@ -51,7 +46,7 @@ $body-stops: (
 }
 
 .elden-ring-modal-overlay {
-    background-color: v.$transparentGray;
+    z-index: v.$zindex-modal-backdrop;
     position: absolute;
     top: 0;
     left: 0;
@@ -60,19 +55,21 @@ $body-stops: (
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: v.$modal-backdrop-bg;
 }
 
 .elden-ring-modal {
+    min-width: 45%;
+    min-height: 50%;
+
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: stretch;
-    background-color: $menu-background;
 
-    background: m.customGradient(90deg, $menu-background, $body-stops);
+    background-color: v.$modal-color-bg;
+    background: m.customGradient(90deg, v.$modal-color-bg, $body-stops);
 
-    min-width: 45%;
-    min-height: 50%;
 
     header {
         text-align: center;
@@ -98,8 +95,8 @@ $body-stops: (
     .top-border {
         height: 3px;
         background:
-            m.customGradient(90deg, $menu-background, $top-bottom-border-stops),
-            $menu-border;
+            m.customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
+            v.$modal-color-border;
     }
 
     .inner-border-wrapper {
@@ -112,7 +109,7 @@ $body-stops: (
             text-align: center;
             width: 90%;
             background:
-                m.customGradient(90deg, $menu-background, $inner-border-stops),
+                m.customGradient(90deg, v.$modal-color-bg, $inner-border-stops),
                 linear-gradient(180deg, rgba(66,62,53,0.5) 0%, rgba(76,74,63,1) 50%, rgba(69,65,57,0.5) 100%);
             height: 2px;
         }

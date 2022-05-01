@@ -1,18 +1,14 @@
 @use "../variables"as v;
 @use "../mixins/customGradient" as m;
 
-$gold: #C9BBA1;
-$black: #2A2923;
-// #616053
-
 // bottom left
-// #585949 l3
-// #676856 l2
-// #737360 l1
+// #585949 L3
+// #676856 L2
+// #737360 L1
 // #777664 center
-// #70715E r1
-// #646454 r2
-// #555447 r3
+// #70715E R1
+// #646454 R2
+// #555447 R3
 .vertical-gradient {
     background: linear-gradient(
         180deg,
@@ -38,7 +34,7 @@ article.elden-ring-card {
         flex-direction: row;
         align-items: center;
         svg {
-            color: $gold;
+            color: v.$gold;
             margin-left: 5px;
             margin-right: 5px;
             // https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
@@ -46,7 +42,7 @@ article.elden-ring-card {
             filter: drop-shadow(v.$text-shadow-offset v.$text-shadow-offset 0.075px rgb(0, 0, 0));
         }
         span.elden-ring-card__title {
-            color: $gold;
+            color: v.$gold;
             font-size: 24px;
             margin-bottom: 0px;
             padding-bottom: 0px;
@@ -66,7 +62,7 @@ article.elden-ring-card {
             font-size: 18px;
         }
         svg {
-            color: $gold;
+            color: v.$gold;
             margin-left: 5px;
             margin-right: 5px;
             height: 20px;

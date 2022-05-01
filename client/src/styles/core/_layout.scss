@@ -5,16 +5,19 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    background-color: v.$offWhite;
 }
 
 body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    color: v.$body-color-fg;
+    background-color: v.$body-color-bg;
 }
 
-$bodyHeight: calc(100vh - 64px);
+// height minus the header
+$header-height: 64px;
+$main-height: calc(100vh - $header-height);
 
 #root {
     height: 100vh;
@@ -24,7 +27,7 @@ $bodyHeight: calc(100vh - 64px);
     flex-direction: column;
     // background-color: v.$offWhite;
     // background: linear-gradient(180deg, rgba(13,14,9,1) 0%, rgba(85,85,73,1) 100%);
-    background: linear-gradient(0deg, rgba(68,68,59,1) 0%, rgba(18,18,17,1) $bodyHeight, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(68,68,59,1) 0%, rgba(18,18,17,1) $main-height, rgba(0,0,0,1) 100%);
 }
 
 #outlet-wrapper {

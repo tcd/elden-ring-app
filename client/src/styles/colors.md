@@ -1,0 +1,35 @@
+## Colors from game screenshots
+
+- menu value increase
+    - #527ED5
+- menu value decrease
+    - #CD3138
+    - #D03138
+- Flamedrake Talisman
+    - #be3f17
+    - #d95a39
+- Boltdrake Talisman
+    - #deb540
+    - #e0bc21
+    - #e7c03d
+- No Combat Zone icon
+    - #ebbd6c
+- Spelldrake Talisman
+    - #37cdd7
+- Viridian Amber Medallion
+    - #578b38
+    - #689f4c
+    - #3f7324
+    - #338636
+- HP, FP, Stamina bars
+    - #6d241e
+    - #255369
+    - #26533a
+- Quit Game Screen
+    - Character Portrait BG
+        - #211e16
+    - Horizontal Rule
+        - #302e25            (above)
+        - #525145            (inside)
+        - #4d4d3f / #504d41  (inside)
+        - #26251e/ #25241c   (below)
