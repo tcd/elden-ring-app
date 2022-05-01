@@ -20,7 +20,7 @@ export const Weapons = (): JSX.Element => {
     }
 
     const slotWithWeapon = (id: WeaponSlotId, weapon?: Weapon) => {
-        const classNames = ["equipment-slot"]
+        const classNames = ["equipment-slot", "equipment-slot-filled"]
         if (id.startsWith("L")) {
             classNames.push("equipment-slot-weapon-left")
         } else {

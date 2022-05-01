@@ -14,12 +14,14 @@ $equipment-slot-images: (
 );
 
 .equipment-slot {
+    position: relative;
+
     width:  80px;
     height: 90px;
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    position: relative;
 
     &.equipment-slot-weapon-left  { background-image: url(map-get($equipment-slot-images, "weapon-left"));  }
     &.equipment-slot-weapon-right { background-image: url(map-get($equipment-slot-images, "weapon-right")); }
@@ -28,6 +30,17 @@ $equipment-slot-images: (
     &.equipment-slot-armor-chest  { background-image: url(map-get($equipment-slot-images, "armor-chest"));  }
     &.equipment-slot-armor-armor  { background-image: url(map-get($equipment-slot-images, "armor-arms"));   }
     &.equipment-slot-armor-legs   { background-image: url(map-get($equipment-slot-images, "armor-legs"));   }
+
+    &.equipment-slot-filled {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        // justify-content: center;
+        // align-content: center;
+        img {
+            padding: 10px;
+        }
+    }
 
     &:hover {
         // background-color: goldenrod;

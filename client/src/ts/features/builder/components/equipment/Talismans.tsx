@@ -15,7 +15,7 @@ export const Talismans = (): JSX.Element => {
 
     const slotWithTalisman = (number: number, talisman?: Talisman) => {
         return (
-            <li className="equipment-slot equipment-slot-talisman" key={`talisman_${number}`} onClick={() => handleClick(number)}>
+            <li className="equipment-slot equipment-slot-filled equipment-slot-talisman" key={`talisman_${number}`} onClick={() => handleClick(number)}>
                 {/* <span>{talisman.name}</span> */}
                 <img className="img-fluid" src={talisman.image_url} alt={talisman.name} />
             </li>

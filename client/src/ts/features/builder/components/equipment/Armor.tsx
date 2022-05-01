@@ -17,14 +17,16 @@ interface ArmorSlotProps {
 }
 
 const ArmorSlot = ({ type, armor, handleClick }: ArmorSlotProps) => {
+    const classNames = ["equipment-slot", armorTypeCssClasses[type]]
     let armorImage = null
     if (armor) {
+        classNames.push("equipment-slot-filled")
         armorImage = <img className="img-fluid" src={armor.image_url} alt={armor.name} />
     }
     return (
         <li
             id={`armor-${type}`}
-            className={"equipment-slot " + armorTypeCssClasses[type]}
+            className={classNames.join(" ")}
             key={`armor_slot_${type}`}
             onClick={() => handleClick(type)}
         >
