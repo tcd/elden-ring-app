@@ -1,0 +1,6 @@
+x 2022-03-28 2022-03-27 Cant set a value as selected in TalismanModal because its filtered out. @client
+x 2022-03-27 EldenRingModal styles @client
+x 2022-03-29 Spells @client @server
+2022-04-27 Add Staves to rails seed data @server
+2022-04-27 Normalize weapon type names across front & back end code @client @server
+2022-04-28 "https://css-tricks.com/grainy-gradients/" @client
