@@ -40,6 +40,11 @@ class WeaponType < ApplicationRecord
   # ============================================================================
 
   # @return [String]
+  def display_name()
+    return self.singular_name
+  end
+
+  # @return [String]
   def image_url()
     return "/public/images/weapon-types/#{self.singular_name}.png"
   end
