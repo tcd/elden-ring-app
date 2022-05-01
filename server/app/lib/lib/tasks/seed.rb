@@ -129,6 +129,7 @@ module Lib
 
       # @return [void]
       def self.weapon_types()
+        # WeaponType.destroy_all()
         invalid = self.from_fixture("weapon_types.yml", WeaponType) do |fx|
           _args = {
             id:            fx["id"],
@@ -143,6 +144,7 @@ module Lib
 
       # @return [void]
       def self.armor_types()
+        # ArmorType.destroy_all()
         invalid = self.from_fixture("armor_types.yml", ArmorType) do |fx|
           _args = {
             id:   fx["id"],
@@ -154,6 +156,7 @@ module Lib
 
       # @return [void]
       def self.weapon_skills()
+        # WeaponSkill.destroy_all()
         invalid = self.from_tsv("weapon-skills.tsv", WeaponSkill) do |fx|
           _args = {
             name:              fx["name"],
@@ -168,6 +171,7 @@ module Lib
 
       # @return [void]
       def self.armor()
+        Armor.destroy_all()
         armor_types = {
           "Head"  => 1,
           "Chest" => 2,
@@ -203,6 +207,7 @@ module Lib
 
       # @return [void]
       def self.talismans()
+        Talisman.destroy_all()
         invalid = self.from_json("talismans.json", Talisman) do |fx|
           _args = {
 
@@ -215,7 +220,6 @@ module Lib
 
             equipment_effects_attributes: fx["effects"],
 
-            # metadata:         fx["metadata"],
             metadata: {
               location: fx["location"],
               **(fx["metadata"] || {}),
@@ -238,6 +242,8 @@ module Lib
         WeaponSkill.all.each { |ws| skill_ids[ws.name] = ws.id }
         invalid = self.from_json("shields.json", Weapon) do |fx|
           _args = {
+            equipment_effects_attributes: (fx["effects"] || []),
+
             is_shield:             true,
             is_special:            (fx["special"] == true || fx["special"] == "TRUE"),
             name:                  fx["name"],
@@ -294,6 +300,8 @@ module Lib
         WeaponSkill.all.each { |ws| skill_ids[ws.name] = ws.id }
         invalid = self.from_tsv("weapons.tsv", Weapon) do |fx|
           _args = {
+            # equipment_effects_attributes: (fx["effects"] || []),
+
             is_shield:             false,
             is_special:            (fx["special"] == true || fx["special"] == "TRUE"),
             name:                  fx["name"],
@@ -364,6 +372,7 @@ module Lib
 
       # @return [void]
       def self.spells()
+        Spell.destroy_all()
         invalid = self.from_tsv("spells.tsv", Spell) do |fx|
           _args = {
               metadata: {
