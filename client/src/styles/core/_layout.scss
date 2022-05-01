@@ -1,5 +1,5 @@
-@use "./variables" as v;
-@use "./mixins/customGradient" as m;
+@use "../variables" as v;
+@use "../mixins/customGradient" as m;
 
 html, body {
     height: 100%;
