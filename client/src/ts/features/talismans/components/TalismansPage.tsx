@@ -1,7 +1,6 @@
 import { Heading } from "@app/shared"
 import { TalismansTable } from "./TalismansTable"
 
-
 export const TalismansPage = (): JSX.Element => {
 
     return (
