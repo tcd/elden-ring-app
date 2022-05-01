@@ -39,7 +39,7 @@ Sentry's Torch	Torch	5	true	Torch Attack	Strike																137	0	0	0	245	100
 St. Trina's Torch	Torch	3	true	Fires of Slumber	Strike																124	0	222	0	0	100	104	25	15	40	15	15		D	D		C		10	10	0	14	0
 Steel-Wire Torch	Torch	3	false	Firebreather	Strike																149	0	267	0	0	100	104	25	18	30	18	18		D	B				10	8	0	0	0
 Torch	Torch	1.5	false	Torch Attack	Strike																132	0	237	0	0	100	84	21	15	25	15	15		C	D				5	5	0	0	0
-Alabaster Lord's Sword	Greatsword	8	true	Alabaster Lords' Pull	Standard, Pierce																313	93	0	0	0	100	126	41	33	27	27	27		B	D	D			16	12	18	0	0
+Alabaster Lord's Sword	Greatsword	8	true	Alabaster Lord's Pull	Standard, Pierce																313	93	0	0	0	100	126	41	33	27	27	27		B	D	D			16	12	18	0	0
 Banished Knight's Greatsword	Greatsword	10	false	Stamp (Upward Cut)	Standard, Pierce																347	0	0	0	0	100	132	52	36	36	36	36		C	D				17	9	0	0	0
 Bastard Sword	Greatsword	9	false	Stamp (Upward Cut)	Standard, Pierce																338	0	0	0	0	100	126	50	35	35	35	35		C	D				16	10	0	0	0
 Blasphemous Blade	Greatsword	13.5	true	Taker's Flames	Standard, Pierce																296	0	191	0	0	100	138	56	39	54	39	39		C	C		B		22	15	0	21	0
@@ -68,15 +68,15 @@ Monk's Flameblade	Curved Greatsword	9	false	Spinning Slash	Slash																
 Morgott's Cursed Sword	Curved Greatsword	7.5	true	Cursed-Blood Slice	Slash	blood loss (60)															294	0	0	0	0	110	96	42	29	29	29	29		D	B			D	13	35	0	0	17
 Omen Cleaver	Curved Greatsword	11.5	false	Spinning Slash	Slash																347	0	0	0	0	100	128	52	36	36	36	36		C	C				19	16	0	0	0
 Onyx Lord's Greatsword	Curved Greatsword	11.5	true	Onyx Lord's Repulsion	Slash																289	186	0	0	0	100	128	42	42	29	29	29		B	E	B			20	16	16	0	0
-Zamor Curved Sword	Curved Greatsword	9	true	Zamor Ice Storm	Slash	frostbite (65)															306	0	0	0	0	100	128	47	33	33	33	33		C	B				16	16	0	0	0
+Zamor Curved Sword	Curved Greatsword	9	true	Zamor Ice Storm	Slash	frostbite (65)					65										306	0	0	0	0	100	128	47	33	33	33	33		C	B				16	16	0	0	0
 Axe of Godfrey	Colossal Weapon	18	true	Regal Roar	Standard																404	0	0	0	0	100	150	60	45	45	45	45		C	D				42	14	0	0	0
 Dragon Greatclaw	Colossal Weapon	16	true	Endure	Standard																294	0	0	191	0	100	150	52	40	40	52	40		C	D				30	14	0	0	0
 Duelist Greataxe	Colossal Weapon	20	false	Endure	Strike																268	0	0	0	0	100	109	63	47	47	47	47		E	C				30	10	0	0	0
 Envoy's Greathorn	Colossal Weapon	19.5	true	Great Oracular Bubble	Strike																296	0	0	0	191	100	202	55	43	43	43	55		C	C		D		28	12	0	24	0
 Fallingstar Beast Jaw	Colossal Weapon	21.5	true	Gravity Bolt	Strike, Pierce																320	208	0	0	0	100	180	55	55	43	43	43		C	C	D			34	12	20	0	0
 Ghiza's Wheel	Colossal Weapon	19	true	Spinning Wheel	Standard	blood loss (70)															382	0	0	0	0	100	184	58	43	43	43	43		C	C				28	18	0	0	0
-Giant-Crusher	Colossal Weapon	26.5	false	Strike	Strike																244	0	0	0	0	100	156	70	52	52	52	52		B					60	0	0	0	0
-Golem's Halberd	Colossal Weapon	21.5	false	Charge Forth	Standard, Pierce																249	0	0	0	0	100	93	60	45	45	45	45		C	D				36	14	0	0	0
+Giant-Crusher	Colossal Weapon	26.5	false	Endure	Strike																244	0	0	0	0	100	156	70	52	52	52	52		B					60	0	0	0	0
+Golem's Halberd	Colossal Weapon	21.5	false	Charge Forth	Standard, Pierce																249	0	0	0	0	100	93	60	45	45	45	45	69	C	D				36	14	0	0	0
 Great Club	Colossal Weapon	17	false	Golden Land	Strike																243	0	0	0	0	100	133	57	42	42	42	42		C					35	0	0	0	0
 Prelate's Inferno Crozier	Colossal Weapon	23.5	false	Prelate's Charge	Strike																246	0	0	0	0	100	147	66	49	49	49	49		B	E				45	8	0	0	0
 Rotten Greataxe	Colossal Weapon	20	false	Endure	Standard	rot (65)															255	0	0	0	0	100	109	63	47	47	47	47		E	C				30	10	0	0	0
@@ -99,12 +99,12 @@ Nightrider Glaive	Halberd	12	false	Spinning Slash	Standard, Pierce														
 Pest's Glaive	Halberd	7	false	Spinning Slash	Standard, Pierce																294	0	0	0	0	100	114	47	33	33	33	33		D	C				13	13	0	0	0
 Ripple Crescent Halberd	Halberd	8.5	false	Spinning Slash	Standard, Pierce																210	0	0	0	0	100	124	51	35	35	35	35						S	12	12	0	0	20
 Vulgar Militia Saw	Halberd	8	false	Spinning Slash	Standard, Pierce	blood loss (55)															308	0	0	0	0	100	128	50	35	35	35	35		D	C				15	13	0	0	0
-Vulgar Militia Shotel	Halberd	8	false	Spinning Slash																	296	0	0	0	0	100	128	50	35	35	35	35		E	B				14	16	0	0	0
+Vulgar Militia Shotel	Halberd	8	false	Spinning Slash	Standard, Pierce																296	0	0	0	0	100	128	50	35	35	35	35		E	B				14	16	0	0	0
 Godslayer's Greatsword	Colossal Sword	17.5	true	The Queen's Black Flame	Standard																291	0	188	0	0	100	120	49	38	49	38	38		D	B		C		20	22	0	20	0
 Grafted Blade Greatsword	Colossal Sword	21	true	Oath of Vengeance	Standard																384	0	0	0	0	100	160	64	48	48	48	48		B	D				40	14	0	0	0
 Greatsword	Colossal Sword	23	false	Stamp (Upward Cut)	Standard																259	0	0	0	0	100	109	67	50	50	50	50		C	E				31	12	0	0	0
 Maliketh's Black Blade	Colossal Sword	22	true	Destined Death	Standard																311	0	0	0	200	100	156	51	36	36	36	49		B	D		B		34	12	0	20	0
-Royal Greatsword	Colossal Sword	20	true	Wolf´s Assault	Standard																274	328	0	0	0	100	150	55	63	44	44	44		C	D	C			26	18	22	0	0
+Royal Greatsword	Colossal Sword	20	true	Wolf's Assault	Standard																274	328	0	0	0	100	150	55	63	44	44	44		C	D	C			26	18	22	0	0
 Ruins Greatsword	Colossal Sword	23	true	Wave of Destruction	Standard				F.U.G.S.												303	90	0	0	0	100	168	65	56	50	50	50		S		D			50	0	16	0	0
 Starscourge Greatsword	Colossal Sword	20	true	Starcaller Cry	Standard																316	203	0	0	0	100	156	49	47	34	34	34		B	D	D			38	12	15	0	0
 Troll Knight's Sword	Colossal Sword	18	true	Troll's Roar	Standard																303	196	0	0	0	100	150	55	55	43	43	43		C	C	D			20	14	18	0	0
@@ -133,7 +133,6 @@ Serpent-God's Curved Sword	Curved Sword	4	false	Spinning Slash	Slash												
 Shamshir	Curved Sword	3.5	false	Spinning Slash	Slash																264	0	0	0	0	100	90	42	31	31	31	31		D	C				7	13	0	0	0
 Shotel	Curved Sword	2	false	Spinning Slash	Slash																235	0	0	0	0	100	86	37	27	27	27	27		D	C				9	19	0	0	0
 Wing of Astel	Curved Sword	2.5	true	Nebula	Slash																159	191	0	0	0	100	84	28	52	23	23	23		E	C	B			7	17	20	0	0
-Zamor Curved Sword	Curved Sword	9	true	Zamor Ice Storm	Slash	frostbite (65)					65										306	0	0	0	0	100	128	47	33	33	33	33		C	B				16	18	0	0	0
 Eleonora's Poleblade	Twinblade	6	true	Bloodblade Dance	Slash, Pierce	blood loss (83)				83											176	0	176	0	0	100	84	33	23	47	23	23		E	C			D	12	21	0	0	19
 Gargoyle's Black Blades	Twinblade	8.5	true	Spinning Slash	Slash, Pierce																198	0	0	0	237	100	100	32	26	26	26	59		B	E		D		18	15	0	22	0
 Gargoyle's Twinblade	Twinblade	8.5	false	Spinning Slash	Slash, Pierce																301	0	0	0	0	100	100	48	32	32	32	32		B	E				18	15	0	0	0
@@ -152,7 +151,7 @@ Crescent Moon Axe	Greataxe	12.5	false	War Cry	Standard																357	0	0	0	
 Executioner's Greataxe	Greataxe	15	false	War Cry	Standard																367	0	0	0	0	115	172	57	40	40	40	40		B	E				34	8	0	0	0
 Gargoyle's Black Axe	Greataxe	8.5	true	War Cry	Standard																245	0	0	0	294	100	150	36	27	27	27	54		C	E		D		24	8	0	22	0
 Gargoyle's Great Axe	Greataxe	8.5	false	War Cry	Standard																301	0	0	0	0	100	150	45	31	31	31	31		B	E				24	8	0	0	0
-Great Omenkiller Cleaver	Greataxe	11	false	Wild Strike	Standard	blood loss (55)				55											347	0	0	0	0	100	150	47	33	33	33	45		C	D				23	12	0	0	0
+Great Omenkiller Cleaver	Greataxe	11	false	Wild Strikes	Standard	blood loss (55)				55											347	0	0	0	0	100	150	47	33	33	33	45		C	D				23	12	0	0	0
 Greataxe	Greataxe	13	false	Barbaric Roar	Standard																369	0	0	0	0	100	168	53	37	37	37	37		C	D				30	8	0	0	0
 Longhaft Axe	Greataxe	12.5	false	War Cry	Standard																357	0	0	0	0	100	156	52	36	36	36	36		C	D				24	8	0	0	0
 Rusted Anchor	Greataxe	12.5	false	Barbaric Roar	Pierce																360	0	0	0	0	100	164	52	36	36	36	36		B	E				26	9	0	0	0
@@ -214,7 +213,7 @@ Mace	Hammer	4.5	false	Kick	Strike																281	0	0	0	0	100	112	45	30	30	30
 Marika's Hammer	Hammer	6	true	Gold Breaker	Strike																247	0	0	0	159	100	116	44	30	30	30	44		B	D		C		20	12	0	19	0
 Monk's Flamemace	Hammer	6	false	Kick	Strike																308	0	0	0	0	100	112	49	33	33	33	33		D	C				13	13	0	0	0
 Morning Star	Hammer	5	false	Kick	Strike	blood loss (50)				50											289	0	0	0	0	100	116	47	31	31	31	31		C	D				12	8	0	0	0
-Nox Flowing Hammer	Hammer	6.5	true	Silver Scourge	Strike																298	0	0	0	0	100	116	51	34	34	34	34		B	D				17	7	0	0	0
+Nox Flowing Hammer	Hammer	6.5	true	Flowing Form	Strike																298	0	0	0	0	100	116	51	34	34	34	34		B	D				17	7	0	0	0
 Ringed Finger	Hammer	4.5	true	Claw Flick	Strike																296	0	0	0	0	100	94	38	26	26	26	38		B	D				15	9	0	0	0
 Scepter of the All-Knowing	Hammer	4.5	true	Knowledge Above All	Strike, Pierce																242	156	0	0	0	100	84	36	36	25	25	25		D	C	C			12	18	21	0	0
 Spiked Club	Hammer	5	false	Barbaric Roar	Strike	blood loss (50)				50											279	0	0	0	0	100	106	45	30	30	30	30		C	C				12	7	0	0	0
@@ -268,7 +267,7 @@ Scythe	Reaper	7.5	false	Spinning Slash	Slash	blood loss (55)				55											306
 Winged Scythe	Reaper	7.5	true	Angel's Wings	Slash	blood loss (55)				55											213	0	0	0	254	100	110	30	25	25	25	55		D	C		C		16	16	0	24	0
 Caestus	Fist	1.5	false	Endure	Strike																220	0	0	0	0	100	100	35	20	20	20	20		C	C				8	8	0	0	0
 Cipher Pata	Fist	0	true	Unblockable Blade	Slash, Pierce																0	0	0	0	208	100	90	9	14	14	14	61					A		0	0	0	30	0
-Clinging Bone	Fist	3	true	Lifesteal	Standard, Pierce																196	58	0	0	0	100	94	31	36	17	17	17		E	B			C	8	22	0	0	16
+Clinging Bone	Fist	3	true	Lifesteal Fist	Standard, Pierce																196	58	0	0	0	100	94	31	36	17	17	17		E	B			C	8	22	0	0	16
 Grafted Dragon	Fist	2.5	true	Bear Witness!	Strike																218	0	139	0	0	100	104	27	18	44	18	18		C	D		D		20	14	0	16	0
 Iron Ball	Fist	2.5	false	Braggart's Roar	Strike																247	0	0	0	0	100	110	38	22	22	22	22		C	D				11	8	0	0	0
 Katar	Fist	2.5	false	Impaling Thrust	Standard, Pierce																237	0	0	0	0	110	100	36	21	21	21	21		D	C				8	10	0	0	0
@@ -303,7 +302,7 @@ Digger's Staff	Glintstone Staff	4.5	false	No Skill	Strike				Boosts Stonedigger 
 Gelmir Glintstone Staff	Glintstone Staff	2.5	false	No Skill	Strike				Boosts lava sorcery											??? (80 Int/80 Fth)	50	0	0	0	0	100	38	23	14	14	14	14		D		B	B		6	0	14	14	0
 Glintstone Staff	Glintstone Staff	3	false	No Skill	Strike														329	329 (80 Int)	43	0	0	0	0	100	40	25	15	15	15	15		D		S			6	0	10	0	0
 Lusat's Glintstone Staff	Glintstone Staff	4	true	No Skill	Strike				Has high innate sorcery scaling, but consumes additional FP										272	272 (80 Int)	58	0	0	0	0	100	42	25	15	15	15	15		C		S			10	0	52	0	0
-Meteorite Staff	Glintstone Staff	4.5	true	No Skill	Strike			0.3	Boosts the power of Gravity sorceries by 30%										413	413 (80 Int)														D		S			6	0	18	0	0
+Meteorite Staff	Glintstone Staff	4.5	true	No Skill	Strike		Gravity Sorceries	0.3	Boosts the power of Gravity sorceries by 30%										413	413 (80 Int)	28	0	0	0	0	100	-1	28	17	17	17	17	17	D		S			6	0	18	0	0
 Prince of Death's Staff	Glintstone Staff	3	false	No Skill	Strike				Boosts death sorcery										430	430 (80 Int/80 Fth)	43	0	0	0	0	100	40	25	15	15	15	15		D		A	A		6	0	18	18	0
 Rotten Crystal Staff	Glintstone Staff	4.5	true	No Skill	Strike	rot (50)			Boosts Crystalian sorcery, causes slight scarlet rot buildup (50)							50			367	367 (80 Int)	102	0	0	0	0	100	46	28	17	17	17	17		C		S			8	0	48	0	0
 Staff of Loss	Glintstone Staff	2.5	false	No Skill	Strike				Boosts Invisibility sorcery										339	339 (80 Int)	38	0	0	0	0	100	38	23	14	14	14	14		D	D	S			6	12	14	0	0
