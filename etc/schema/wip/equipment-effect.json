@@ -1,0 +1,77 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/equipment-effect.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Equipment Effect",
+    "type": "object",
+    "required": [
+        "effect_type",
+        "effect_method",
+        "affected_stat",
+        "value"
+    ],
+    "properties": {
+        "effect_type": {
+            "description": "Whether or not the effect is increases or decreases a stat.",
+            "type": "string",
+            "enum": [
+                "increase",
+                "decrease"
+            ]
+        },
+        "effect_method": {
+            "description": "The method by which the effect is calculated.",
+            "type": "string",
+            "enum": [
+                "flat",
+                "percentage"
+            ]
+        },
+        "affected_stat": {
+            "type": "string",
+            "enum": [
+                "Vigor",
+                "Mind",
+                "Endurance",
+                "Strength",
+                "Dexterity",
+                "Intelligence",
+                "Faith",
+                "Arcane",
+
+                "HP",
+                "FP",
+                "Stamina",
+                "Max Equip Load",
+                "Poise",
+                "Discovery",
+
+                "Immunity",
+                "Robustness",
+                "Focus",
+                "Vitality",
+
+                "Physical Defense",
+                "VS Strike Defense",
+                "VS Slash Defense",
+                "VS Pierce Defense",
+                "Magic Defense",
+                "Fire Defense",
+                "Lightning Defense",
+                "Holy Defense",
+
+                "Physical Damage Negation",
+                "VS Strike Damage Negation",
+                "VS Slash Damage Negation",
+                "VS Pierce Damage Negation",
+                "Magic Damage Negation",
+                "Fire Damage Negation",
+                "Lightning Damage Negation",
+                "Holy Damage Negation"
+            ]
+        },
+        "value": {
+            "type": "number"
+        }
+    }
+}
+

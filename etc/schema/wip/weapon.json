@@ -1,0 +1,64 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/weapon.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Weapon",
+    "type": "object",
+    "required": [
+        "name",
+        "weapon_type",
+        "weight",
+        "physical_damage_types",
+        "required_strength",
+        "required_dexterity",
+        "required_intelligence",
+        "required_faith",
+        "required_arcane"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "weapon_type": {
+            "$ref": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/physical-damage-type.json"
+        },
+        "weight": {
+            "type": "number"
+        },
+        "is_shield": {
+            "type": "boolean"
+        },
+        "special": {
+            "type": "boolean",
+            "default": false,
+            "description": "If true, the weapon requires Somber Smithing Stones to upgrade."
+        },
+        "physical_damage_types": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/physical-damage-type.json"
+            }
+        },
+        "required_strength": {
+            "type": "integer"
+        },
+        "required_dexterity": {
+            "type": "integer"
+        },
+        "required_intelligence": {
+            "type": "integer"
+        },
+        "required_faith": {
+            "type": "integer"
+        },
+        "required_arcane": {
+            "type": "integer"
+        },
+        "range": {
+            "type": "boolean",
+            "description": "TODO: weapon range description"
+        }
+    }
+}

@@ -1,4 +1,5 @@
 {
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/complete/constants/scaling-tier.json",
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Scaling Tier",
     "type": "string",

@@ -1,0 +1,34 @@
+{
+    // TODO: need to confirm these
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/spell-category.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "WIP Spell Category",
+    "type": "string",
+    "enum": [
+        "Bestial Incantations",
+        "Blood Incantations",
+        "Dragon Communion Incantations",
+        "Dragon Cult Incantations",
+        "Erdtree Incantations",
+        "Fire Giant Incantations",
+        "Fire Monk Incantations",
+        "Frenzied Flame Incantations",
+        "Godskin Apostle Incantations",
+        "Golden Order Incantations",
+        "Servants OF Rot Incantations",
+        "Two Fingers Incantations",
+        "Aberrant Sorceries",
+        "Carian Sorceries",
+        "Claymen Sorceries",
+        "Crystalian Sorceries",
+        "Death Sorceries",
+        "Full Moon Sorceries",
+        "Glintstone Sorceries",
+        "Gravity Sorceries",
+        "Loretta's Sorceries",
+        "Magma Sorceries",
+        "Night Sorceries",
+        "Primeval Sorceries",
+        "Cold Sorceries"
+    ]
+}

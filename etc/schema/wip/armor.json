@@ -1,0 +1,56 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/armor.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Armor",
+    "type": "object",
+    "required": [
+        "name",
+        "armor_type",
+        "weight",
+        "immunity",
+        "robustness",
+        "focus",
+        "vitality",
+        "poise"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "armor_type": {
+            "$ref": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/armor-type.json"
+        },
+        "weight": {
+            "type": "number"
+        },
+        "altered": {
+            "type": "boolean",
+            "default": false
+        },
+
+        "immunity":   { "type": "integer"},
+        "robustness": { "type": "integer"},
+        "focus":      { "type": "integer"},
+        "vitality":   { "type": "integer"},
+        "poise":      { "type": "integer"},
+
+        "physical":  { "type": "number", "format": "decimal"},
+        "vs_strike": { "type": "number", "format": "decimal"},
+        "vs_slash":  { "type": "number", "format": "decimal"},
+        "vs_pierce": { "type": "number", "format": "decimal"},
+        "magic":     { "type": "number", "format": "decimal"},
+        "fire":      { "type": "number", "format": "decimal"},
+        "lightning": { "type": "number", "format": "decimal"},
+        "holy":      { "type": "number", "format": "decimal"},
+
+        "effects": {
+            "type": "array",
+            "items": {
+                "$ref": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/equipment-effects.json"
+            }
+        }
+    }
+}

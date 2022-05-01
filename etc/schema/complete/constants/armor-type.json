@@ -1,0 +1,12 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/armor-type.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Armor Type",
+    "type": "string",
+    "enum": [
+        "Head",
+        "Chest",
+        "Arms",
+        "Legs"
+    ]
+}
