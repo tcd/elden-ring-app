@@ -2,9 +2,15 @@ import DataTable, { TableProps } from "react-data-table-component"
 import ArrowDownward from "@mui/icons-material/ArrowDownward"
 import { TableColumn } from "react-data-table-component"
 
+// These aren't exported from "react-data-table-component", but that's where they're from
+export declare type Primitive = string | number | boolean | bigint;
+export declare type Selector<T> = (row: T, rowIndex?: number) => Primitive;
+
 // =============================================================================
 // Types
 // =============================================================================
+
+export type Field<T> = keyof(T) | Selector<T>
 
 export type ColumnAlignment =
     | "left"
@@ -12,7 +18,7 @@ export type ColumnAlignment =
     | "right"
 
 export interface CustomTableColumn<T> {
-    field: keyof T
+    field: Field<T>
     header: string
     align?: ColumnAlignment
     sortable?: boolean
@@ -69,8 +75,13 @@ const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): TableColumn<
         const newColumn: TableColumn<T> = {}
         newColumn.sortable = customColumn.sortable ?? false
         newColumn.name = customColumn.header
-        // @ts-ignore:next-line
-        newColumn.selector = (row) => { return row[customColumn.field] }
+        if (typeof(customColumn.field) == "string") {
+            // @ts-ignore:next-line
+            newColumn.selector = (row) => { return row[customColumn.field] }
+        } else {
+            // @ts-ignore:next-line
+            newColumn.selector = customColumn.field
+        }
         if (customColumn.renderFunc) {
             newColumn.cell = (row) => customColumn.renderFunc(row)
         }
