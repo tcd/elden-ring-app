@@ -26,5 +26,6 @@ module Serializers
     field(:lightning) { |x| x.lightning&.to_f || 0.0 }
     field(:holy)      { |x| x.holy&.to_f      || 0.0 }
 
+    # association(:effects, blueprint: EquipmentEffectSerializer)
   end
 end

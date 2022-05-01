@@ -9,6 +9,8 @@ module Serializers
       :physical_damage_types,
       :sorcery_scaling,
       :incantation_scaling,
+      :weapon_type_id,
+      :weapon_skill_id,
     )
 
     field(:weapon_type) { |x| x.weapon_type.display_name }
@@ -54,5 +56,6 @@ module Serializers
     field(:defense_guard_boost) { |x| x.defense_guard_boost&.to_f || 0.0 }
 
     association(:weapon_skill, blueprint: WeaponSkillSerializer)
+    # association(:effects, blueprint: EquipmentEffectSerializer)
   end
 end
