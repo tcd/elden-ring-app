@@ -1,0 +1,172 @@
+id	name	spell_type	description	stamina_cost	fp_cost	alt_fp_cost	FP	slots_required	int	fai	arc	category	charge	jumping	horse	physical	magic	fire	lightning	holy	bleed	frost	madness	poison	sleep	death	rot
+149	Adula's Moonblade	Sorcery	Sweeping slash followed by cold blade projectile	22	26		26	1	32	0	0	Cold Sorceries															
+33	Agheel's Flame	Incantation	Spews flame breath ongheel from above	60	36		36	1	0	23	15	Dragon Communion Incantations	true														
+137	Ambush Shard	Sorcery	Strikes from behind with projectile fired from distance	15	16		16	1	23	0	0	Night Sorceries															
+27	Ancient Death Rancor	Sorcery	Summons horde of vengeful spirits that chase down foes	27	24		24	1	34	24	0	Death Sorceries															
+45	Ancient Dragons' Lightning Spear	Incantation	Stabs with red lightning spear from above	41	42		42	1	0	32	0	Dragon Cult Incantations							true								
+46	Ancient Dragons' Lightning Strike	Incantation	Summons red lightning that spreads from impact	31	36		36	1	0	26	0	Dragon Cult Incantations	true						true								
+57	Aspect of the Crucible: Breath	Incantation	Creates throat pouch to spew fire while walking	40	28		28	1	0	27	0	Erdtree Incantations	true					true									
+58	Aspect of the Crucible: Horns	Incantation	Creates shoulder horn to gore foes form low stance	49	30	4	30 (4)	1	0	27	0	Erdtree Incantations	true			true											
+59	Aspects of the Crucible: Tail	Incantation	Creates supple tail to sweep area before caster	42	32	30	32 (30)	1	0	27	0	Erdtree Incantations	true			true											
+157	Assassin's Approach	Incantation	Silences footsteps, reduces fall damage/sound	13	15		15	1	0	10	0	Two Fingers Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+60	Barrier of Gold	Incantation	Greatly increases magic damage negation for self 85 allies	13	30		30	1	0	24	0	Erdtree Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+3	Beast Claw	Incantation	Creates claws that tear through the land.	27	10		10	1	0	8	0	Bestial Incantations	true			true											
+4	Bestial Constitution	Incantation	Alleviates blood loss and frost buildup	10	10	18	10 (18)	1	0	9	0	Bestial Incantations															
+5	Bestial Sling	Incantation	Swiftly flings numerous sharp rock shards	19	7		7	1	0	10	0	Bestial Incantations															
+6	Bestial Vitality	Incantation	Heals HP over a period of time	10	18		18	1	0	12	0	Bestial Incantations															
+61	Black Blade	Incantation	Black blade spinning slash that emits wave of light	61	26	26	26 (26)	2	0	46	0	Erdtree Incantations	false		false					true							
+111	Black Flame	Incantation	Throws a ball of raging black fire	25	18		18	1	0	20	0	Godskin Apostle Incantations	true					true									
+112	Black Flame Blade	Incantation	Enchants right-hand armament with black flame	10	15		15	1	0	17	0	Godskin Apostle Incantations															
+113	Black Flame Ritual	Incantation	Summons circle of black flame pillars around caster.	39	36		36	1	0	42	0	Godskin Apostle Incantations	true					true									
+114	Black Flame's Protection	Incantation	Increases physical damage negation	13	30	20	30 (20)	1	0	30	0	Godskin Apostle Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+62	Blessing of the Erdtree	Incantation	Grants greater blessing to self and nearby allies	50	60		60	1	0	38	0	Erdtree Incantations															
+63	Blessing's Boon	Incantation	Grants blessing to self and nearby allies	30	30		30	1	0	24	0	Erdtree Incantations															
+9	Bloodboon	Incantation	Scatters bloodflame before caster to set area aflame.	34	15		15	1	0	14	17	Blood Incantations									true						
+10	Bloodflame Blade	Incantation	Enchants right-hand armament with bloodflame	10	20		20	1	0	12	10	Blood Incantations									true						
+11	Bloodflame Talons	Incantation	Creates bloodflame lacerations that then explode	21	18		18	1	0	13	15	Blood Incantations									true						
+34	Borealis's Mist	Incantation	Spews icy breath of Borealis from above	60	48	4	48 (4)	1	0	23	15	Dragon Communion Incantations		true			true					true					
+1	Briars of Punishment	Sorcery	Wounds caster to unleash trail of bloodthrorns	22	13	14	13 (14)	1	0	21	0	Aberrant Sorceries															
+2	Briars of Sin	Sorcery	Summons thorns from a whorl of own blood	26	9		9	1	0	24	0	Aberrant Sorceries					true										
+71	Burn, O Flame!	Incantation	Raises a series of flame pillars around caster	36	30	18	30 (18)	1	0	27	1	Fire Giant Incantations	true					true									
+89	Cannon of Haima	Sorcery	Lobs an explosive magic projectile in an arc	42	45	14	45 (14)	1	25	0	0	Glintstone Sorceries	true				true										
+13	Carian Greatsword	Sorcery	Performs sweeping slash using magical greatsword	22	14		14	1	24	0	0	Carian Sorceries															
+14	Carian Phalanx	Sorcery	Forms a defensive arch of numerous magic glintblades	16	26		26	1	34	0	0	Carian Sorceries															
+15	Carian Piercer	Sorcery	Impales foes with magical greatsword	25	19		19	1	27	0	0	Carian Sorceries															
+16	Carian Retaliation	Sorcery	Dispels enemy spells and retaliates with glintblades	15	8		8	1	17	0	0	Carian Sorceries															
+17	Carian Slicer	Sorcery	Performs swift sweeping slash using magical sword	12	4	23	4 (23)	1	14	0	0	Carian Sorceries															
+169	Catch Flame	Incantation	Momentarily sparks flame from hand	17	10	16	10 (16)	1	0	8	0	Fire Monk Incantations						true									
+126	Collapsing Stars	Sorcery	Pulls foes toward caster with gravity projectile volley	27	18	24	18 (24)	1	36	0	0	Gravity Sorceries															
+90	Comet	Sorcery	Fires a great magic comet	35	26	16	26 (16)	1	52	0	0	Glintstone Sorceries															
+91	Comet Azur	Sorcery	Fires a tremendous comet within a starry torrent	34	40	46	40 (46)	3	60	0	0	Glintstone Sorceries															
+92	Crystal Barrage	Sorcery	Fires a volley of glintstone crystal shards	26	14		14	1	23	0	0	Glintstone Sorceries															
+93	Crystal Burst	Sorcery	Fires a burst of glintstone crystal shards	9	14		14	1	18	0	0	Glintstone Sorceries															
+24	Crystal Release	Sorcery	Scours area with violent rain of crystal shards	26	38	6	38 (6)	1	41	0	0	Crystalian Sorceries															
+25	Crystal Torrent	Sorcery	Creates crystal mass that fires stream of crystal shards	30	24		24	1	47	0	0	Crystalian Sorceries															
+158	Cure Poison	Incantation	Cures poison ailment and reduces poison build-up.	10	7		7	1	0	10	0	Two Fingers Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+159	Darkness	Incantation	Creates area of darkness that conceals caster	24	34		34	1	0	18	0	Two Fingers Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+47	Death Lightning	Incantation	Strikes surroundings with storm of death lightning	32	46	12	46 (12)	2	0	47	0	Dragon Cult Incantations	true						true							true	
+117	Discus of Light	Incantation	Fires ring of light before the caster	20	11		11	1	13	13	0	Golden Order Incantations								true							
+160	Divine Fortification	Incantation	Increases holy damage negation	13	20		20	1	0	10	0	Two Fingers Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+48	Dragonbolt Blessing	Incantation	Bolsters caster's body with lightning	20	20	4	20 (4)	1	0	21	0	Dragon Cult Incantations															
+35	Dragonclaw	Incantation	Channels dragon to rend foes with dragon claws	50	42		42	1	0	17	13	Dragon Communion Incantations				true											
+36	Dragonfire	Incantation	Channels dragon to spew flame breath	40	28	6	28 (6)	1	0	15	12	Dragon Communion Incantations	true					true									
+37	Dragonice	Incantation	Channels dragon to spew icy breath	48	36	6	36 (6)	1	0	15	12	Dragon Communion Incantations	true				true					true					
+38	Dragonmaw	Incantation	Channels dragon to bite foes before caster	72	62		62	1	0	24	16	Dragon Communion Incantations				true											
+39	Ekzykes's Decay	Incantation	Spews scarlet rot breath of Ekzykes from above	60	48	4	48 (4)	1	0	23	15	Dragon Communion Incantations	true	true	false	true	true										true
+64	Elden Stars	Incantation	Creates a steam of golden shooting stars that assail the area.	48	47		47	2	0	50	0	Erdtree Incantations								true							
+49	Electrify Armament	Incantation	Enchants right-hand armament with lightning damage	10	27		27	1	0	15	0	Dragon Cult Incantations							true								
+65	Erdtree Heal	Incantation	Vastly heals HP for self and nearby allies	50	65		65	1	0	42	0	Erdtree Incantations															
+138	Eternal Darkness	Sorcery	Creates a dark space that draws in spells	15	25		25	1	35	0	0	Night Sorceries															
+28	Explosive Ghostflame	Sorcery	Causes ghostflame explosion that burns wide area	45	36	25	36 (25)	1	42	30	0	Death Sorceries										true					
+29	Fia's Mist	Sorcery	Release a mist of death before caster	13	25		25	1	23	18	0	Death Sorceries															
+170	Fire's Deadly Sin	Incantation	Sets area and self ablaze with raging flames	28	26		26	1	0	19	0		true					true									
+161	Flame Fortification	Incantation	Increases fire damage negation	13	20		20	1	0	10	0	Two Fingers Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+72	Flame of the Fell God	Incantation	Summons raging fireball that explodes and sets the area ablaze	42	50	30	50 (30)	2	0	41	0	Fire Giant Incantations	false					true									
+75	Flame Sling	Incantation	Throws balls of raging fire	22	11	24	11 (24)	1	0	10	0	Fire Monk Incantations	true					true									
+76	Flame, Cleanse Me	Incantation	Alleviates buildup and  & cures poison and scarlet rot	10	14		14	1	0	12	1	Fire Monk Incantations				false	false	false	false	false	false	false	false	false	false	false	false
+73	Flame, Fall Upon Them	Incantation	Hurls several balls of fire at once	40	24	21	24 (21)	1	0	28	1	Fire Giant Incantations	true					true									
+77	Flame, Grant me Strength	Incantation	Raises physical and fire-affinity attack power	16	28		28	1	0	15	1	Fire Monk Incantations															
+78	Flame, Protect Me	Incantation	Greatly increases fire damage negation	20	30	32	30 (32)	1	0	24	1	Fire Monk Incantations															
+50	Fortissax's Lightning Spear	Incantation	Stabs from above with two red lightning spears in tandem	52	64		64	1	0	46	0	Dragon Cult Incantations							true								
+143	Founding Rain of Stars	Sorcery	Releases a downpour of star rain for a while	37	32	50	32 (50)	2	52	0	0	Primeval Sorceries															
+150	Freezing Mist	Sorcery	Releases cold mist before caster	13	20		20	1	21	0	0	Snow Witch Sorceries	true									true					
+82	Frenzied Burst	Incantation	Emits concentrated blast of yellow flame of frenzy from eyes	33	24		24	1	0	22	0	Frenzied Flame Incantations	true					true									
+151	Frozen Armament	Sorcery	Enchants right-hand armament with frost	10	20	32	20 (32)	1	15	0	0	Cold Sorceries										true					
+51	Frozen Lightning Spear	Incantation	Stabs with ice lightning spear from above	45	36		36	1	0	34	0	Dragon Cult Incantations							true			true					
+94	Gavel of Haima	Sorcery	Attacks using a magic greathammer	46	25		25	1	25	0	0	Glintstone Sorceries															
+133	Gelmir's Fury	Sorcery	Covers area with surge of magma from the earth	38	27	32	27 (32)	1	28	15	0	Magma Sorceries	true					true									
+74	Giantsflame Take Thee	Incantation	Hurls massive ball of raging fire	43	32		32	2	0	30	0	Fire Giant Incantations															
+154	Glintblade Phalanx	Sorcery	Forms a defensive arch of magic glintblades	12	20		20	1	22	0	0	Sword															
+95	Glintstone Arc	Sorcery	Launches a horizontally-widening magic arc	18	10	45	10 (45)	1	13	0	0	Glintstone Sorceries															
+32	Glintstone Breath	Incantation	Channels dragon to spew magic breath	40	28	6	28 (6)	1	0	15	12	Dragon Communion															
+96	Glintstone Cometshard	Sorcery	Fires a magic comet with a trailing tail	30	19	38	19 (38)	1	36	0	0	Glintstone Sorceries															
+152	Glintstone Icecrag	Sorcery	Fires mass of cold magic from glintstone	26	12	22	12 (22)	1	15	0	0	Cold Sorceries															
+97	Glintstone Pebble	Sorcery	Fires magic projectiles from glintstone	20	7		7	1	10	0	0	Glintstone Sorceries															
+98	Glintstone Stars	Sorcery	Fires guided magic shooting stars	21	14	36	14 (36)	1	12	0	0	Glintstone Sorceries															
+66	Golden Lightning Fortification	Incantation	Greatly increases lightning resistance for self and allies	20	30		30	1	0	24	0	Erdtree Incantations															
+67	Golden Vow	Incantation	Increases attack and defense for self and allies	50	47		47	1	0	25	0	Erdtree Incantations															
+127	Gravity Well	Sorcery	Pulls foes toward caster with gravity projectile	20	12	18	12 (18)	1	17	0	0	Gravity Sorceries															
+99	Great Glintstone Shard	Sorcery	Fires larger magic projectiles from glintstone	26	12		12	1	16	0	0	Glintstone Sorceries															
+68	Great Heal	Incantation	Greatly Heals HP for self and nearby allies	40	45		45	1	0	15	0	Erdtree Incantations															
+22	Great Oracular Bubble	Sorcery	Launches a large magic bubble	27	16		16	1	25	0	18	Claymen Sorceries															
+18	Greatblade Phalanx	Sorcery	Forms a defensive arch of larger magic glintblades	20	35		35	1	29	0	0	Carian Sorceries															
+40	Greyoll's Roar	Incantation	Emits the roar of Elder Dragon Greyoll	80	75		75	2	0	28	17	Dragon Communion Incantations															
+7	Gurrang's Beast Claw	Incantation	Creates beast claws to rend surroundings with shockwaves	42	21		21	1	0	15	0	Bestial Incantations															
+162	Heal	Incantation	Heals HP for you and nearby allies.	35	32		32	1	0	12	0	Two Fingers Incantations															
+52	Honed Bolt	Incantation	Strikes foe with lightning bolt from above	29	12		12	1	0	24	0	Dragon Cult Incantations							true								
+83	Howl of Shabriri	Incantation	Shrieks, building up madness in nearby foes	38	21	32	21 (32)	1	0	33	0	Frenzied Flame Incantations											true				
+118	Immutable Shield	Incantation	Increases left-hand shield's affinity/ailment resistance	10	15		15	1	19	19	0	Golden Order Incantations															
+84	Inescapable Frenzy	Incantation	Latches onto foes to spread madness	31	32	16	32 (16)	1	0	21	0	Frenzied Flame Incantations															
+53	Lansseax's Glaive	Incantation	Swap form above with red lightning glaive	55	35		35	1	0	40	0	Dragon Cult Incantations							true								
+119	Law of Causality	Incantation	Retaliates upon receiving a number of blows	20	22		22	1	29	0	0	Golden Order Incantations															
+120	Law of Regression	Incantation	Heals all ailments and dispels all special effects	50	55		55	1	37	0	0	Golden Order Incantations															
+163	Lightning Fortification	Incantation	Increass lighting damage negation	13	20		20	1	0	10	0	Two Fingers Incantations															
+54	Lightning Spear	Incantation	Hurls lightning spear before caster	28	18	36	18 (36)	1	0	17	0	Dragon Cult Incantations	true						true								
+55	Lightning Strike	Incantation	Summons lightning bolt that spreads from impact	37	21		21	1	0	28	0	Dragon Cult Incantations							true								
+121	Litany of Proper Death	Incantation	Creates image of Order to deal holy damage	28	17		17	1	17	17	0	Golden Order Incantations								true							
+155	Lord's Aid	Incantation	Alleviates poison/ blood loss/ sleep buildup for self/ allies	10	12		12	1	0	12	0	Two Finger Incantations															
+156	Lord's Divine Fortification	Incantation	Greatly increases holy damage negation incl. allies	20	30	20	30 (20)	1	0	27	0	Two Finger Incantations															
+164	Lord's Heal	Incantation	Massively heals HP for self and nearby allies	45	55		55	1	0	20	0	Two Fingers Incantations															
+131	Loretta's Greatbow	Sorcery	Fires great arrow from a magic greatbow	30	28	50	28 (50)	1	26	0	0	Loretta's Sorceries															
+132	Loretta's Mastery	Sorcery	Fires four great arrow from a magic greatbow at once	33	43	12	43 (12)	1	46	0	0	Loretta's Sorceries															
+19	Lucidity	Sorcery	Alleviates buildup of sleep and madness	10	10		10	1	17	0	0	Carian Sorceries															
+20	Magic Downpour	Sorcery	Summon a magic mass that sprays projectiles over area	17	20	32	20 (32)	1	15	0	0	Carian Sorceries															
+165	Magic Fortification	Incantation	Increases magic damage negation	13	20		20	1	0	10	0	Two Fingers Incantations															
+21	Magic Glintblade	Sorcery	Creates sigil that forms a projectile glintblade after delay	22	12		12	1	14	0	0	Carian Sorceries															
+41	Magma Breath	Incantation	Channels wyrm to spew magma breath	40	30		30	1	0	14	10	Dragon Communion Incantations															
+134	Magma Shot	Sorcery	Fires lump of magma that explodes on contact	21	24	3	24 (3)	1	19	10	0	Magma Sorceries															
+128	Meteorite	Sorcery	Calls small meteors down from the sky	35	30	12	30 (12)	1	30	0	0	Gravity Sorceries															
+129	Meteorite of Astel	Sorcery	Calls a hail of small meteorites from the void.	40	60		60	2	55	0	0	Gravity Sorceries															
+139	Night Comet	Sorcery	Fires a semi-invisible magic comet	30	24		24	1	38	0	0	Night Sorceries															
+140	Night Maiden's Mist	Sorcery	Releases life-sapping silver mist before caster	20	20		20	1	14	0	0	Night Sorceries															
+141	Night Shard	Sorcery	Swiftly fires a semi-invisible magic projectile	9	7	32	7 (32)	1	18	0	0	Night Sorceries															
+115	Noble Presence	Incantation	Thrust out belly with gusto to unelash repelling shockwave	35	20		20	1	0	26	0	Godskin Apostle Incantations															
+81	O, Flame!	Incantation	Momentarily sparks roaring flame from hand	24	16	11	16 (11)	1	0	16	1	Fire Monks Incantations	true					true									
+23	Oracle Bubbles	Sorcery	Launches several small magic bubbles	18	12	16	12 (16)	1	19	0	15	Claymen Sorceries															
+122	Order Healing	Incantation	Alleviates death blight buildup	10	15		15	1	11	11	0	Golden Order Incantations															
+123	Order's Blade	Incantation	Enchanted right-hand armament with holy damage	10	22		22	1	13	13	0	Golden Order Incantations								true							
+145	Pest Threads	Incantation	Launches countless sticky threads before caster	35	19		19	1	0	11	0	Servants of Rot Incantations				true											
+171	Placidusax's Ruin	Incantation	Spews golden breath of Dragonlord Placidusax	600	80		80	3	0	36	0	Dragon Cult Incantations		true				true	true								
+146	Poison Armament	Incantation	Enchants right-hand armament with poison	10	15		15	1	0	10	0	Servants of Rot Incantations												true			
+147	Poison Mist	Incantation	Releases poison mist before caster	10	18		18	1	0	12	0	Servants of Rot Incantations												true			
+69	Protection of the Erdtree	Incantation	Increases affinity damage negation for self & allies	50	30		30	1	0	35	0	Erdtree Incantations															
+124	Radagon's Rings of Light	Incantation	Creates golden ring of light to attack wide area	37	29		29	1	31	31	0	Golden Order Incantations															
+30	Rancorcall	Sorcery	Summons vengeful spirits that chase down foes	21	14	24	14 (24)	1	16	14	0	Death Sorceries															
+87	Ranni's Dark Moon	Sorcery	Incarnate a cold, dark moon and launch it at foes.	32	62	25	62 (25)	2	68	0	0	Full Moon Sorceries															
+166	Rejection	Incantation	Produces a shockwave that pushes away foes.	24	9	40	9 (40)	1	0	12	0	Two Fingers Incantations															
+88	Rennala's Full Moon	Sorcery	Incarnate a full moon and launch it at foes	32	55		55	2	70	0	0	Full Moon Sorceries															
+100	Rock Blaster	Sorcery	Thrust staff into ground to emit a massive shockwave	35	25		25	1	21	0	0	Glintstone Sorceries															
+130	Rock Sling	Sorcery	Summons rocks from the earth and sends its flying	29	18	12	18 (12)	1	18	0	0	Gravity Sorceries															
+135	Roiling Magma	Sorcery	Fires lump of magma that explodes after delay	27	32		32	1	21	12	0	Magma Sorceries															
+42	Rotten Breath	Incantation	Channels dragon to spew scarlet rot breath	48	36	6	36 (6)	1	0	15	12	Dragon Communion Incantations	true			true											true
+136	Rykard's Rancor	Sorcery	Releases searing spirits that repeatedly explode after delay	36	35		35	2	40	18	0	Magma Sorceries															
+148	Scarlet Aeonia	Incantation	Creates a giant flower that explodes with scarlet rot	66	56		56	3	0	35	0	Servants of Rot Incantations															true
+101	Scholar's Armament	Sorcery	Enchants right-hand armament with magic damage	10	25		25	1	12	0	0	Glintstone Sorceries															
+102	Scholar's Shield	Sorcery	Enhances left-hand shield damage negation	10	30		30	1	12	0	0	Glintstone Sorceries															
+116	Scouring Black Flame	Incantation	Sweeps area before caster with black flame	36	27	36	27 (36)	1	0	28	0	Godskin Apostle Incantations						true									
+167	Shadow Bait	Incantation	Creates shadow that lures the aggression of foes of human build	14	15		15	1	0	13	0	Two Fingers Incantations															
+103	Shard Spiral	Sorcery	Fire twin spiraling projectiles	28	14	14	14 (14)	1	27	0	0	Glintstone Sorceries															
+104	Shatter Earth	Sorcery	Thrust staff into ground to emit a shockwave	22	12	5	12 (5)	1	15	0	0	Glintstone Sorceries															
+26	Shattering Crystal	Sorcery	Creates crystal mass that shatters in forward burst	35	32		32	1	38	0	0	Crystalian Sorceries															
+43	Smarag's Glintstone Breath	Incantation	Spews magic breath of Glintstone Dragon Smarag from above	60	36		36	1	0	23	15	Dragon Communion Incantations															
+105	Star Shower	Sorcery	Fires six shooting stars that pursue foes	26	23	2	23 (2)	1	24	0	0	Glintstone Sorceries															
+106	Starlight	Sorcery	Creates star light to illuminate surroundings	5	12	10	12 (10)	1	15	0	0	Glintstone Sorceries															
+144	Stars of Ruin	Sorcery	Fire twelve dark shooting stars that pursue foes	33	38		38	1	43	0	0	Primeval Sorceries															
+8	Stone of Gurranq	Incantation	Hurls a boulder before the caster	37	15	10	15 (10)	1	0	13	0	Bestial Incantations			true	true											
+79	Surge, O Flame!	Incantation	Incinerates area before caster with stream of fire	2	1	27	1 (27)	1	0	9	1	Fire Monk Incantations	true					true									
+12	Swarm of Flies	Incantation	Releases a swarm of bloodflies before caster	24	14		14	1	0	11	16	Blood Incantations									true						
+107	Swift Glintstone Shard	Sorcery	Swiftly fires magic projectiles from glintstone	9	5	25	5 (25)	1	12	0	0	Glintstone Sorceries															
+108	Terra Magica	Sorcery	Raises the magic strength of those within the sigil	12	20		20	1	20	0	0	Glintstone Sorceries															
+85	The Flame of Frenzy	Incantation	Emits burst of yellow flame of frenzy from eyes	30	16	6	16 (6)	1	0	16	0	Frenzied Flame Incantations															
+44	Theodorix's Magma	Incantation	Spews magma breath of Theodorix from above	60	45	4	45 (4)	1	0	21	14	Dragon Communion Incantations															
+109	Thops's Barrier	Sorcery	Erect a magic forcefield to deflect spells	10	7		7	1	18	0	0	Glintstone Sorceries															
+31	Tibia's Summons	Sorcery	Summons Those Who Live in Death	27	20	46	20 (46)	1	28	20	0	Death Sorceries															
+125	Triple Rings of Light	Incantation	Fire three rings of light before the caster	28	23	29	23 (29)	1	23	23	0	Golden Order Incantations								true							
+86	Unendurable Frenzy	Incantation	Emits violent burst of yellow flame of frenzy from eyes	40	42	24	42 (24)	1	0	31	0	Frenzied Flame Incantations	true					true					true				
+142	Unseen Blade	Sorcery	Makes right-hand armament completely invisible	10	18		18	1	12	0	0	Night Sorceries															
+110	Unseen Form	Sorcery	Makes the caster semi-invisible	10	20	10	20 (10)	1	16	0	0	Glintstone Sorceries															
+168	Urgent Heal	Incantation	Heals a small amount of HP	30	16		16	1	0	8	0	Two Fingers Incantations															
+56	Vyke's Dragonbolt	Incantation	Bolsters right-hand armament & body with red lightning	20	35		35	1	0	23	0	Dragon Cult Incantations															
+80	Whirl, O Flame!	Incantation	Sweeps area before caster with stream of fire	26	21		21	1	0	13	1	Fire Monk Incantations	true					true									
+70	Wrath of Gold	Incantation	Produces golden shockwave that knocks back foes	44	40		40	1	0	32	0	Erdtree Incantations	true							true							
+153	Zamor Ice Storm	Sorcery	Thrust staff into ground to create freezing tornado	27	22	20	22 (20)	1	36	0	0	Cold Sorceries	true									true					

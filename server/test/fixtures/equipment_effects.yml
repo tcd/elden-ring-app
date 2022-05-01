@@ -1,0 +1,6 @@
+Crimson_Amber_Medallion_plus_2_effect:
+  equipment: Crimson_Amber_Medallion_plus_2 (Talisman)
+  effect_method: percentage
+  effect_type: increase
+  affected_stat: HP
+  value: 0.075

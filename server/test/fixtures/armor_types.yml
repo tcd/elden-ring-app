@@ -1,0 +1,4 @@
+head:  { id: 1, name: "Head"  }
+chest: { id: 2, name: "Chest" }
+arms:  { id: 3, name: "Arms"  }
+legs:  { id: 4, name: "Legs"  }

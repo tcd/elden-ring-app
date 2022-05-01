@@ -1,0 +1,40 @@
+Crimson_Amber_Medallion: {
+  name: "Crimson Amber Medallion",
+  description: "Raises maximum HP",
+  long_description: "Raises maximum HP by 6%",
+  weight: 0.3,
+  restricts: ["Crimson Amber Medallion +1", "Crimson Amber Medallion +2"],
+  effects: [
+    { method: percentage, type: increase, stat: HP, value: 0.06 }
+  ],
+}
+
+Crimson_Amber_Medallion_plus_1: {
+  name: "Crimson Amber Medallion +1",
+  description: "Raises maximum HP",
+  long_description: "Raises maximum HP by 7%",
+  weight: 0.3,
+  restricts: ["Crimson Amber Medallion", "Crimson Amber Medallion +2"],
+  effects: [
+    { method: percentage, type: increase, stat: HP, value: 0.07 }
+  ],
+}
+
+Crimson_Amber_Medallion_plus_2: {
+  name: "Crimson Amber Medallion +2",
+  description: "Raises maximum HP",
+  long_description: "Raises maximum HP by 7.5%",
+  weight: 0.3,
+  restricts: ["Crimson Amber Medallion", "Crimson Amber Medallion +1"],
+  effects: [
+    { method: percentage, type: increase, stat: HP, value: 0.075 }
+  ],
+}
+
+Green_Turtle_Talisman: {
+  name: "Green Turtle Talisman",
+  description: "Raises stamina recovery speed.",
+  weight: 0.7,
+  restricts: [],
+  effects: [],
+}

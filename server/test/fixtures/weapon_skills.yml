@@ -1,0 +1,11 @@
+no_skill:
+  name: "No Skill"
+  description: "This armament has no skill. If the armament in the other hand has a skill, that skill will be used instead."
+  ash_of_war: true
+  is_chargeable: false
+  can_be_applied_to: [
+    "Small Shields",
+    "Medium Shields",
+    "Greatshields",
+    "Torches"
+  ]

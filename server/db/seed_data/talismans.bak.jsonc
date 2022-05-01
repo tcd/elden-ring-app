@@ -1,0 +1,1249 @@
+[
+    // =========================================================================
+    // Damage Negation
+    // =========================================================================
+    {
+        "name": "Dragoncrest Shield Talisman",
+        "description": "Boosts physical damage negation",
+        "longDescription": "Boosts physical damage negation by 10%",
+        "weight": 0.8,
+        "restricts": [
+            "Dragoncrest Shield Talisman +1",
+            "Dragoncrest Shield Talisman +2"
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Physical Damage Negation", "value": 0.10 }
+        ]
+    },
+    {
+        "name": "Dragoncrest Shield Talisman +1",
+        "description": "Boosts physical damage negation",
+        "longDescription": "Boosts physical damage negation by 13%",
+        "weight": 0.8,
+        "restricts": [
+            "Dragoncrest Shield Talisman",
+            "Dragoncrest Shield Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Physical Damage Negation", "value": 0.13 },
+        ],
+    },
+    {
+        "name": "Dragoncrest Shield Talisman +2",
+        "description": "Boosts physical damage negation",
+        "longDescription": "Boosts physical damage negation by 15%",
+        "weight": 0.8,
+        "restricts": [
+            "Dragoncrest Shield Talisman",
+            "Dragoncrest Shield Talisman +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Physical Damage Negation", "value": 0.15 },
+        ],
+    },
+    {
+        "name": "Dragoncrest Greatshield Talisman",
+        "description": "Enormously boosts physical damage negation",
+        "longDescription": "Boosts physical damage negation by 20%",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "At a building north to the Drainage Channel Site of Grace.",
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Physical Damage Negation", "value": 0.20 },
+        ],
+    },
+    {
+        "name": "Spelldrake Talisman",
+        "description": "Boosts magic damage negation",
+        "longDescription": "Boosts Magic damage negation by 13%",
+        "weight": 0.6,
+        "restricts": [
+            "Spelldrake Talisman +1",
+            "Spelldrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Magic Damage Negation", "value": 0.13 },
+        ],
+    },
+    {
+        "name": "Spelldrake Talisman +1",
+        "description": "Boosts magic damage negation",
+        "longDescription": "Boosts Magic damage negation by 17%",
+        "weight": 0.6,
+        "restricts": [
+            "Spelldrake Talisman",
+            "Spelldrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Magic Damage Negation", "value": 0.17 },
+        ],
+    },
+    {
+        "name": "Spelldrake Talisman +2",
+        "description": "Boosts magic damage negation",
+        "longDescription": "Boosts Magic damage negation by 20%",
+        "weight": 0.6,
+        "restricts": [
+            "Spelldrake Talisman",
+            "Spelldrake Talisman +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Magic Damage Negation", "value": 0.20 },
+        ],
+    },
+    {
+        "name": "Flamedrake Talisman",
+        "description": "Boosts fire damage negation",
+        "longDescription": "Boosts Fire damage negation by 13%",
+        "weight": 0.6,
+        "restricts": [
+            "Flamedrake Talisman +1",
+            "Flamedrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Fire Damage Negation", "value": 0.13 },
+        ],
+    },
+    {
+        "name": "Flamedrake Talisman +1",
+        "description": "Boosts fire damage negation",
+        "longDescription": "Boosts Fire damage negation by 17%",
+        "weight": 0.6,
+        "restricts": [
+            "Flamedrake Talisman",
+            "Flamedrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Fire Damage Negation", "value": 0.17 },
+        ],
+    },
+    {
+        "name": "Flamedrake Talisman +2",
+        "description": "Boosts fire damage negation",
+        "longDescription": "Boosts Fire damage negation by 20%",
+        "weight": 0.6,
+        "restricts": [
+            "Flamedrake Talisman",
+            "Flamedrake Talisman +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Fire Damage Negation", "value": 0.20 },
+        ],
+    },
+    {
+        "name": "Boltdrake Talisman",
+        "description": "Boosts lightning damage negation",
+        "longDescription": "Boosts Lightning damage negation by 13%",
+        "weight": 0.6,
+        "restricts": [
+            "Boltdrake Talisman +1",
+            "Boltdrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Lightning Damage Negation", "value": 0.13 },
+        ],
+    },
+    {
+        "name": "Boltdrake Talisman +1",
+        "description": "Boosts lightning damage negation",
+        "longDescription": "Boosts Lightning damage negation by 17%",
+        "weight": 0.6,
+        "restricts": [
+            "Boltdrake Talisman",
+            "Boltdrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Lightning Damage Negation", "value": 0.17 },
+        ],
+    },
+    {
+        "name": "Boltdrake Talisman +2",
+        "description": "Boosts lightning damage negation",
+        "longDescription": "Boosts Lightning damage negation by 20%",
+        "weight": 0.6,
+        "restricts": [
+            "Boltdrake Talisman",
+            "Boltdrake Talisman +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Lightning Damage Negation", "value": 0.20 },
+        ],
+    },
+    {
+        "name": "Haligdrake Talisman",
+        "description": "Boosts holy damage negation",
+        "longDescription": "Boosts Holy damage negation by 13%",
+        "weight": 0.6,
+        "restricts": [
+            "Haligdrake Talisman +1",
+            "Haligdrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Holy Damage Negation", "value": 0.13 },
+        ],
+    },
+    {
+        "name": "Haligdrake Talisman +1",
+        "description": "Boosts holy damage negation",
+        "longDescription": "Boosts Holy damage negation by 17%",
+        "weight": 0.6,
+        "restricts": [
+            "Haligdrake Talisman",
+            "Haligdrake Talisman +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Holy Damage Negation", "value": 0.17 },
+        ],
+    },
+    {
+        "name": "Haligdrake Talisman +2",
+        "description": "Boosts holy damage negation",
+        "longDescription": "Boosts Holy damage negation by 20%",
+        "weight": 0.6,
+        "restricts": [
+            "Haligdrake Talisman",
+            "Haligdrake Talisman +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Holy Damage Negation", "value": 0.20 },
+        ],
+    },
+    // =========================================================================
+    // Resistance
+    // =========================================================================
+    {
+        "name": "Immunizing Horn Charm",
+        "description": "Raises Immunity",
+        "longDescription": "Raises Immunity by 90",
+        "weight": 0.6,
+        "restricts": [
+            "Immunizing Horn Charm +1",
+        ],
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Immunity", "value": 90 },
+        ],
+        "tags": [ "resistance" ],
+    },
+    {
+        "name": "Immunizing Horn Charm +1",
+        "description": "Raises Immunity",
+        "longDescription": "Raises Immunity by 140",
+        "weight": 0.6,
+        "restricts": [
+            "Immunizing Horn Charm",
+        ],
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Immunity", "value": 140 },
+        ],
+        "tags": [ "resistance" ],
+    },
+    {
+        "name": "Clarifying Horn Charm",
+        "description": "Raises Focus",
+        "longDescription": "Raises Focus by 90",
+        "weight": 0.6,
+        "restricts": [
+            "Clarifying Horn Charm +1",
+        ],
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Focus", "value": 90 },
+        ],
+        "tags": [ "resistance" ],
+    },
+    {
+        "name": "Clarifying Horn Charm +1",
+        "description": "Raises Focus",
+        "longDescription": "Raises Focus by 140",
+        "weight": 0.6,
+        "restricts": [
+            "Clarifying Horn Charm",
+        ],
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Focus", "value": 140 },
+        ],
+        "tags": [ "resistance" ],
+    },
+    {
+        "name": "Stalwart Horn Charm",
+        "description": "Greatly raises robustness",
+        "weight": 0.6,
+        "restricts": [
+            "Stalwart Horn Charm +1",
+        ],
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Robustness", "value": 90 },
+        ],
+    },
+    {
+        "name": "Stalwart Horn Charm +1",
+        "description": "Greatly raises robustness",
+        "weight": 0.6,
+        "restricts": [
+            "Stalwart Horn Charm",
+        ],
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Robustness", "value": 140 },
+        ],
+    },
+    // =========================================================================
+    // Unsorted
+    // =========================================================================
+    {
+        "name": "Crimson Amber Medallion",
+        "description": "Raises maximum HP",
+        "longDescription": "Raises maximum HP by 6%",
+        "weight": 0.3,
+        "restricts": [
+            "Crimson Amber Medallion +1",
+            "Crimson Amber Medallion +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "HP", "value": 0.06 },
+        ],
+    },
+    {
+        "name": "Crimson Amber Medallion +1",
+        "description": "Raises maximum HP",
+        "longDescription": "Raises maximum HP by 7%",
+        "weight": 0.3,
+        "restricts": [
+            "Crimson Amber Medallion",
+            "Crimson Amber Medallion +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "HP", "value": 0.07 },
+        ],
+    },
+    {
+        "name": "Crimson Amber Medallion +2",
+        "description": "Raises maximum HP",
+        "longDescription": "Raises maximum HP by 7.5%",
+        "weight": 0.3,
+        "restricts": [
+            "Crimson Amber Medallion",
+            "Crimson Amber Medallion +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "HP", "value": 0.075 },
+        ],
+    },
+    {
+        "name": "Cerulean Amber Medallion",
+        "description": "Raises maximum FP",
+        "longDescription": "Raises maximum FP by 7%",
+        "weight": 0.3,
+        "restricts": [
+            "Cerulean Amber Medallion +1",
+            "Cerulean Amber Medallion +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "FP", "value": 0.07 },
+        ],
+    },
+    {
+        "name": "Cerulean Amber Medallion +1",
+        "description": "Raises maximum FP",
+        "longDescription": "Raises maximum FP by 9%",
+        "weight": 0.3,
+        "restricts": [
+            "Cerulean Amber Medallion",
+            "Cerulean Amber Medallion +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "FP", "value": 0.09 },
+        ],
+    },
+    {
+        "name": "Cerulean Amber Medallion +2",
+        "description": "Raises maximum FP",
+        "longDescription": "Raises maximum FP by 11%",
+        "weight": 0.3,
+        "restricts": [
+            "Cerulean Amber Medallion",
+            "Cerulean Amber Medallion +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "FP", "value": 0.11 },
+        ],
+    },
+    {
+        "name": "Viridian Amber Medallion",
+        "description": "Raises maximum stamina",
+        "longDescription": "Raises maximum stamina by 11%",
+        "weight": 0.3,
+        "restricts": [
+            "Viridian Amber Medallion +1",
+            "Viridian Amber Medallion +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Stamina", "value": 0.11 },
+        ],
+    },
+    {
+        "name": "Viridian Amber Medallion +1",
+        "description": "Raises maximum stamina",
+        "longDescription": "Raises maximum stamina by 13%",
+        "weight": 0.3,
+        "restricts": [
+            "Viridian Amber Medallion",
+            "Viridian Amber Medallion +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Stamina", "value": 0.13 },
+        ],
+    },
+    {
+        "name": "Viridian Amber Medallion +2",
+        "description": "Raises maximum stamina",
+        "longDescription": "Raises maximum stamina by 15%",
+        "weight": 0.3,
+        "restricts": [
+            "Viridian Amber Medallion",
+            "Viridian Amber Medallion +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Stamina", "value": 0.15 },
+        ],
+    },
+    {
+        "name": "Arsenal Charm",
+        "description": "Raises maximum equipment load",
+        "longDescription": "Raises maximum equipment load by 15%",
+        "weight": 1.5,
+        "restricts": [
+            "Arsenal Charm +1",
+            "Great-Jar's Arsenal",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Max Equip Load", "value": 0.15 },
+        ],
+    },
+    {
+        "name": "Arsenal Charm +1",
+        "description": "Raises maximum equipment load",
+        "longDescription": "Raises maximum equipment load by 17%",
+        "weight": 1.5,
+        "restricts": [
+            "Arsenal Charm",
+            "Great-Jar's Arsenal",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Max Equip Load", "value": 0.17 },
+        ],
+    },
+    {
+        "name": "Great-Jar's Arsenal",
+        "description": "Vastly raises maximum equip load",
+        "longDescription": "Raises maximum equip load by 19%",
+        "weight": 1.5,
+        "restricts": [
+            "Arsenal Charm",
+            "Arsenal Charm +1",
+        ],
+        "location": "Reward for completing the 3 duelist NPC invasions in Dragonbarrow (Caelid North) for the giant Living Jar in the area. You will only be able to access this area by coming up from Siofra Deep River Well in the underground. This area can also be accessed by climbing the roots above the large crystal at the bottom of the valley. However, this is most likely unintentional.",
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Max Equip Load", "value": 0.19 },
+        ],
+    },
+    {
+        "name": "Erdtree's Favor",
+        "description": "Raises maximum HP, Stamina, and Equip Load",
+        "longDescription": "Raises maximum HP (3%), Stamina (6.75%), and Equip Load (5%)",
+        "weight": 1.5,
+        "restricts": [
+            "Erdtree's Favor +1",
+            "Erdtree's Favor +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "HP",             "value": 0.03   },
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Stamina",        "value": 0.0675 },
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Max Equip Load", "value": 0.05   },
+        ],
+    },
+    {
+        "name": "Erdtree's Favor +1",
+        "description": "Raises maximum HP, Stamina, and Equip Load",
+        "longDescription": "Raises maximum HP (3.5%), Stamina (8.25%), and Equip Load (6.5%).",
+        "weight": 1.5,
+        "restricts": [
+            "Erdtree's Favor",
+            "Erdtree's Favor +2",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "HP",             "value": 0.035  },
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Stamina",        "value": 0.0825 },
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Max Equip Load", "value": 0.065  },
+        ],
+    },
+    {
+        "name": "Erdtree's Favor +2",
+        "description": "Raises maximum HP, Stamina, and Equip Load",
+        "longDescription": "Raises maximum HP (4%), Stamina (9.5%), and Equip Load (8%)",
+        "weight": 1.5,
+        "restricts": [
+            "Erdtree's Favor",
+            "Erdtree's Favor +1",
+        ],
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "HP",             "value": 0.04  },
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Stamina",        "value": 0.095 },
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Max Equip Load", "value": 0.08  },
+        ],
+    },
+    {
+        "name": "Radagon's Scarseal",
+        "description": "Raises attributes, but also increases damage taken",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Drops from the boss of Weeping Evergaol (Ancient Hero of Zamor) in the Weeping Peninsula. See map here.",
+        "effects": [
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Vigor",                     "value": 3    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Endurance",                 "value": 3    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Strength",                  "value": 3    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Dexterity",                 "value": 3    },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Physical Damage Negation",  "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Strike Damage Negation", "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Slash Damage Negation",  "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Pierce Damage Negation", "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Magic Damage Negation",     "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Fire Damage Negation",      "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Lightning Damage Negation", "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Holy Damage Negation",      "value": 0.10 },
+        ],
+    },
+    {
+        "name": "Radagon's Soreseal",
+        "description": "Greatly raises attributes, but also increases damage taken",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Fort Faroth, Caelid: Found on a corpse by dropping down the opening from the roof and exploring around the wooden walkways. [Map Link]",
+        "effects": [
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Vigor",                     "value": 5    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Endurance",                 "value": 5    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Strength",                  "value": 5    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Dexterity",                 "value": 5    },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Physical Damage Negation",  "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Strike Damage Negation", "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Slash Damage Negation",  "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Pierce Damage Negation", "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Magic Damage Negation",     "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Fire Damage Negation",      "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Lightning Damage Negation", "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Holy Damage Negation",      "value": 0.15 },
+        ],
+    },
+    {
+        "name": "Starscourge Heirloom",
+        "description": "Raises Strength",
+        "longDescription": "Raises Strength by 5 levels",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Can be found in Fort Gael.",
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Strength", "value": 5 },
+        ],
+    },
+    {
+        "name": "Prosthesis-Wearer Heirloom",
+        "description": "Raises Dexterity",
+        "longDescription": "Raises Dexterity by 5 levels",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Finish the sidequest given by Gowry in Caelid, then return to Millicent to receive the talisman.",
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Dexterity", "value": 5 },
+        ],
+    },
+    {
+        "name": "Stargazer Heirloom",
+        "description": "Raises Intelligence",
+        "longDescription": "Raises Intelligence by 5 levels",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Found on a body lying at the top of the Divine Tower of Liurnia.",
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Intelligence", "value": 5 },
+        ],
+    },
+    {
+        "name": "Two Fingers Heirloom",
+        "description": "Raises Faith",
+        "longDescription": "Raises Faith by 5 levels",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Can be found on the lower level of the Purified Ruins. It is on the chest in front of you as you descend.",
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Faith", "value": 5 },
+        ],
+    },
+    {
+        "name": "Silver Scarab",
+        "description": "Raises item discovery",
+        "weight": 1.2,
+        "restricts": [],
+        "location": "Found in a chest in Hidden Path to the Haligtree. In the large central room, there is a broken section of railing. There you can drop down to an invisible platform, and walk to a small room. The chest is past an illusory wall, behind the Grave Glovewort (9). Map Link",
+        "effects": [
+            { "effect_method": "flat", "effect_type": "increase", "affected_stat": "Discovery", "value": 75 },
+        ],
+    },
+    {
+        "name": "Bull-Goat's Talisman",
+        "description": "Raises Poise",
+        "longDescription": "Raises Poise by 33%",
+        "weight": 0.5,
+        "restricts": [],
+        "location": "In the back of Dragonbarrow Cave. From the entrance, take a left into the Giant Bear's patrol route. Search that side of the cave and it will be at the end of it on a corpse.",
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Poise", "value": 0.33 },
+        ],
+    },
+    {
+        "name": "Marika's Scarseal",
+        "description": "Raises attributes, but also increases damage taken",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Found on a corpse at the base of the waterfall found at the highest level of Siofra River.",
+        "effects": [
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Mind",                      "value": 3    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Intelligence",              "value": 3    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Faith",                     "value": 3    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Arcane",                    "value": 3    },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Physical Damage Negation",  "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Strike Damage Negation", "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Slash Damage Negation",  "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Pierce Damage Negation", "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Magic Damage Negation",     "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Fire Damage Negation",      "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Lightning Damage Negation", "value": 0.10 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Holy Damage Negation",      "value": 0.10 },
+        ],
+    },
+    {
+        "name": "Marika's Soreseal",
+        "description": "Greatly raises attributes, but also increases damage taken",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Found on an altar in a room requiring a Stonesword Key in Elphael, Brace of the Haligtree. Map Link. \nFrom the Elphael Inner Wall Site of Grace (Map Link), leave the area through the eastern door and head down the ladder to the south-east. After going through the arch, turn right and follow the path, circling the city until you get to the imp statue. Be careful of enemies along the way and inside the room as you pick up the talisman.",
+        "effects": [
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Mind",                      "value": 5    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Intelligence",              "value": 5    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Faith",                     "value": 5    },
+            { "effect_method": "flat",       "effect_type": "increase", "affected_stat": "Arcane",                    "value": 5    },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Physical Damage Negation",  "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Strike Damage Negation", "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Slash Damage Negation",  "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Pierce Damage Negation", "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Magic Damage Negation",     "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Fire Damage Negation",      "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Lightning Damage Negation", "value": 0.15 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Holy Damage Negation",      "value": 0.15 },
+        ],
+    },
+    {
+        "name": "Daedicar's Woe",
+        "description": "Increases damage taken",
+        "longDescription": "Increases damage taken by 50%",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "You get this at the end of Rya's questline if you do not give her the Tonic of Forgetfulness. (edit : Rya will still drop the talisman even if the potion was given to her. After completing the manor questlines, you will find her in the drawing room. Exhaust her dialogues, rest, and go back to her location. She will be gone, and the talisman will be dropped on the floor.)",
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Physical Damage Negation",  "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Strike Damage Negation", "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Slash Damage Negation",  "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "VS Pierce Damage Negation", "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Magic Damage Negation",     "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Fire Damage Negation",      "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Lightning Damage Negation", "value": 0.50 },
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Holy Damage Negation",      "value": 0.50 },
+        ],
+    },
+    {
+        "name": "Primal Glintstone Blade",
+        "description": "Spells consume less FP, but maximum HP is reduced",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Stargazer Ruins in Mountaintops of the Giants: Found in a chest in an underground area near the center of the ruins. The entrance is sealed by a barrier and there is a talking Jellyfish outside who is looking for her sister. Summon your Spirit Jellyfish that you acquired at the beginning of the game to unlock the seal.",
+        "effects": [
+            { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "FP", "value": 0.25 }, // FIXME: find a better way to represent this.
+            { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "HP", "value": 0.15 },
+        ],
+    },
+    // =========================================================================
+    // Unchecked
+    // =========================================================================
+    {
+        "name": "Gold Scarab",
+        "description": "Increases runes obtained from defeated enemies.",
+        "weight": 1.2,
+        "restricts": [],
+        "location": "Dropped by Cleanrot Knight (Sickle) & Cleanrot Knight (Spear) boss found in Abandoned Cave in Caelid.",
+        "effects": [],
+    },
+    {
+        "name": "Moon of Nokstella",
+        "description": "Increases memory slots",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Found in a chest underneath a massive throne in Nokstella, Eternal City.",
+        "effects": [],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Green Turtle Talisman",
+        "description": "Raises stamina recovery speed.",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Summonwater Village. In an underground area on the outskirts of the village.",
+        "effects": [],
+    },
+    {
+        "name": "Prince of Death's Pustule",
+        "description": "Raises Vitality",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Can be located at Stormveil Castle. \nNearest Site of Grace can be located at Liftside Chamber. \nLooted off a corpse that can be found at the pit of the castle's crypt. The body can be found next to a giant face that is structured from roots. It is guarded by a Root Monster, players will need to defeat the guardian to reach the spot.",
+        "effects": [],
+        "tags": [ "resistance" ],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Mottled Necklace",
+        "description": "Raises Robustness, Immunity, and Focus.",
+        "weight": 0.9,
+        "restricts": [
+            "Mottled Necklace +1",
+        ],
+        "effects": [],
+        "tags": [ "resistance" ],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Mottled Necklace +1",
+        "description": "Raises Robustness, Immunity, and Focus.",
+        "weight": 0.9,
+        "restricts": [
+            "Mottled Necklace",
+        ],
+        "effects": [],
+        "tags": [ "resistance" ],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Warrior Jar Shard",
+        "description": "Boosts the attack power of skills",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Drops from Iron Fist Alexander after completing his questline.",
+        "effects": [],
+    },
+    {
+        "name": "Shard of Alexander",
+        "description": "Greatly boosts the attack power of skills",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Drops from Iron Fist Alexander after completing his questline.",
+        "effects": [],
+    },
+    {
+        "name": "Millicent's Prosthesis",
+        "description": "Boosts dexterity, raises attack power with successive attacks",
+        "weight": 1.6,
+        "restricts": [],
+        "location": "When you are given the choice at the end of Millicent's questline between aiding or challenging her, choose to challenge her. When you kill her, you will automatically receive this talisman. Map Link \nAlternatively, to obtain both this and the Rotten Winged Sword Insignia (given when you assist her), kill Millicent after assisting her. Doing so will prevent you from obtaining Miquella's Needle.",
+        "effects": [],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Magic Scorpion Charm",
+        "description": "Raises Magic Damage, but lowers damage negation",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Obtained from talking to Preceptor Seluvis after obtaining the Fingerslayer Blade but before giving it to Ranni the Witch. \nObtained by giving Preceptor Seluvis the Amber Starlight after Seluvis tells you about his scheme.",
+        "effects": [],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Lightning Scorpion Charm",
+        "description": "Raises Lightning Damage, but lowers damage negation.",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Can be found in the Wyndham Catacombs in a room sealed by an Imp Statue, requires a Stonesword Key.",
+        // "effects": [
+        //     { "effect_method": "percentage", "effect_type": "increase", "stat": Stat.LIGHTNING_DAMAGE, "value": 0.12 },
+        //     { "effect_method": "percentage", "effect_type": "decrease", "affected_stat": "Physical Damage Negation", "value": 0.10 },
+        // ],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Fire Scorpion Charm",
+        "description": "Raises Fire Damage, but lowers damage negations",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Found up the ramparts on a wooden platform to the west in Fort Laiedd within Mt. Gelmir.",
+        "effects": [],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Sacred Scorpion Charm",
+        "description": "Raises Holy Damage, but lowers damage negation",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Dropped by invader Anastasia, Tarnished-Eater when defeated.",
+        "effects": [],
+        "metadata": { "notes": "this can be calculated" }
+    },
+    {
+        "name": "Red-Feathered Branchsword",
+        "description": "Raises attack power when HP is low",
+        "weight": 1.4,
+        "restricts": [],
+        "location": "Liurnia of the Lakes: Drops from a Deathbird boss that spawns directly north-east of Scenic Isle site of grace near collapsed structure at night. [Elden Ring",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Ritual Sword Talisman",
+        "description": "Raises attack power when HP is at maximum",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Located in Lux Ruins, in a chest down a set of stairs after the boss.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Spear Talisman",
+        "description": "Enhances counterattacks unique to thrusting weapons",
+        "weight": 0.5,
+        "restricts": [],
+        "location": "Found in a chest inside Lakeside Crystal Cave near a demi-human campfire. See it on the Elden Ring Map here.",
+        "effects": [],
+    },
+    {
+        "name": "Hammer Talisman",
+        "description": "Enhances stamina-reducing attacks against blockers",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Dropped by defeating Recusant Henricus North-East of Stormhill Shack.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Winged Sword Insignia",
+        "description": "Raises attack power with successive attacks",
+        "weight": 1.4,
+        "restricts": [],
+        "location": "Stillwater Cave: Dropped by the Cleanrot Knight boss upon defeat.",
+        "effects": [],
+    },
+    {
+        "name": "Rotten Winged Sword Insignia",
+        "description": "Greatly raises attack power with successive attacks",
+        "weight": 1.4,
+        "restricts": [],
+        "location": "Earned after choosing to assist Millicent and successfully defeat her sisters.",
+        "effects": [],
+    },
+    {
+        "name": "Dagger Talisman",
+        "description": "Enhances critical hits",
+        "weight": 1.1,
+        "restricts": [],
+        "location": "On a corpse. The closest Site of Grace is the Temple of Eiglay. Two Stonesword Keys are required to reach the item.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Arrow's Reach Talisman",
+        "description": "Increases bow effective range",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Inside the tower above Stormgate. It can be accesed by going up and turn left, all around until you get back to Stormgate but through the upper ground. Map Coordinates Link.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Blue Dancer Charm",
+        "description": "Raises attack power with lower equipment load",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Dropped by the Guardian Golem boss in the Highroad Cave.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Twinblade Talisman",
+        "description": "Enhances final hit of chain attacks.",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Castle Morne: From the \"Back of the Castle\" Site of Grace, drop down to the western end of the castle and follow the path along the outer walls. There is a tower section of the walls in the westernmost corner. Climb up the ladder and go around the tower to find a chest where the talisman can be found.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Axe Talisman",
+        "description": "Enhances charge attacks",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Found in a cellar underneath the Mistwood Ruins.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Lance Talisman",
+        "description": "Enhances attacks on horseback",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Northeast Stormhill.",
+        "effects": [],
+    },
+    {
+        "name": "Arrow's Sting Talisman",
+        "description": "Raises attack power of arrows and bolts",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Located in a chest on the top of the tower directly above Impassable Greatbridge (Grace), which is infront of the Redmane Castle in Caelid.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Lord of Blood's Exultation",
+        "description": "Blood loss in vicinity increases attack power",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Drops from Esgar, Priest of Blood in Leyndell Catacombs.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Kindred of Rot's Exultation",
+        "description": "Poisoning or rot in vicinity increases attack power",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Dropped by the Kindred of Rot in Seethewater Cave.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Claw Talisman",
+        "description": "Enhances jump attacks",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Located at Stormveil Castle, looted off a corpse situated on a watchtower.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Roar Medallion",
+        "description": "Enhances roars and breath attacks.",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Dropped by the Stonedigger Troll, located in the Limgrave Tunnels. He is found at the end of the dungeon.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Curved Sword Talisman",
+        "description": "Enhances guard counters",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Looted from a treasure chest inside the room where you fight the Banished Knight, located at the wine cellar of Stormveil Castle. You must use the secret back entrance that Gatekeeper Gostoc suggests to reach the said room.",
+        "effects": [],
+    },
+    {
+        "name": "Companion Jar",
+        "description": "Raises potency of throwing pots",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "After complete Jar Bairn's side quest at Jarburg, recieve from Jar Bairn's previous location.",
+        "effects": [],
+    },
+    {
+        "name": "Perfumer's Talisman",
+        "description": "Raises potency of perfume items",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Can be found in Perfumer's Ruins in a chest underground below stairs in the room with the yellow poison flower.",
+        "effects": [],
+    },
+    {
+        "name": "Graven-School Talisman",
+        "description": "Raises potency of sorceries",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Found up the ladder close to the Debate Hall Site of Grace in Raya Lucaria and then down the hole to another the room with potboys. \nBefore the Red Wolf of Radagon, hit the bookshelf next to the left stair-case which will lead to a secret room. Go up the ladder close to the left, near the entrance of the room. Run down the left side and then jump down the hole of the broken wooden structure to another room with Living Jars.",
+        "effects": [],
+    },
+    {
+        "name": "Graven-Mass Talisman",
+        "description": "Greatly raises potency of sorceries",
+        "weight": 1,
+        "restricts": [],
+        "location": "Albinauric Rise within the eastern Consecrated Snowfield, which can be accessed using both Haligtree Secret Medallion (Left) and Haligtree Secret Medallion (Right) at the Grand Lift of Rold.",
+        "effects": [],
+    },
+    {
+        "name": "Faithful's Canvas Talisman",
+        "description": "Raises potency of Incantations",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Sellia Crystal Tunnel. Located on a corpse guarded by two Prawn Miners.",
+        "effects": [],
+    },
+    {
+        "name": "Flock's Canvas Talisman",
+        "description": "Greatly raises the potency of Incantations",
+        "weight": 1,
+        "restricts": [],
+        "location": "Drops from Gowry after completing the Millicent questline and killing him.",
+        "effects": [],
+    },
+    {
+        "name": "Old Lord's Talisman",
+        "description": "Extends spell effect duration",
+        "weight": 0.5,
+        "restricts": [],
+        "location": "Found in a chest in Crumbling Farum Azula. Map Link. \nWhen you get on the large crumbling bridge, instead of going up to the boss, go the opposite way down to a building. Navigate through it and take the ladder down to a bridge connecting to the tower housing the chest.",
+        "effects": [],
+    },
+    {
+        "name": "Radagon Icon",
+        "description": "Shortens spell casting time",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Raya Lucaria Academy: Found inside a treasure chest on the second floor of the Debate Parlor Site of Grace. From the Debate Parlor Site of Grace, head forward leading to the courtyard. Make a hard right and jump over the fence. Climb up the ladder and head through the broken glass window. The treasure chest is on the east section.",
+        "effects": [],
+    },
+    {
+        "name": "Godfrey Icon",
+        "description": "Enhances charged spells and skills",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Drops from Godefrey the Grafted \nGolden Lineage Evergaol, east of Grand Lift of Dectus.",
+        "effects": [
+        ],
+    },
+
+    {
+        "name": "Pearldrake Talisman",
+        "description": "Boosts non-physical damage negation",
+        "weight": 0.9,
+        "restricts": [
+            "Pearldrake Talisman +1",
+            "Pearldrake Talisman +2",
+        ],
+        "effects": [],
+    },
+    {
+        "name": "Pearldrake Talisman +1",
+        "description": "Boosts non-physical damage negation",
+        "weight": 0.9,
+        "restricts": [
+            "Pearldrake Talisman",
+            "Pearldrake Talisman +2",
+        ],
+        "effects": [],
+    },
+    {
+        "name": "Pearldrake Talisman +2",
+        "description": "Boosts non-physical damage negation",
+        "weight": 0.9,
+        "restricts": [
+            "Pearldrake Talisman",
+            "Pearldrake Talisman +1",
+        ],
+        "effects": [],
+    },
+    {
+        "name": "Crucible Scale Talisman",
+        "description": "Reduces damage taken from critical hits by 30%.",
+        "weight": 1.1,
+        "restricts": [],
+        "location": "Can be found in Leyndell Catacombs.",
+        // "effects": [
+        //     { "effect_method": "percentage", "effect_type": "increase", "affected_stat": "Physical Damage Negation", "value": 0.30 },
+        // ],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Crucible Feather Talisman",
+        "description": "Improves dodge rolling but increases damage taken",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Auriza Hero's Grave.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Blue-Feathered Branchsword",
+        "description": "Raises defense when HP is low.",
+        "weight": 1.1,
+        "restricts": [],
+        "location": "Drops from a Deathbird east of the Warmaster's Shack near collapsed structure with Rune Fragments and Sanctuary stones on it.",
+        "effects": [],
+        "metadata": { "notes": "try pairing with Ritual Shield Talisman" }
+    },
+    {
+        "name": "Ritual Shield Talisman",
+        "description": "Raises defense when HP is at maximum.",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "From the West Capital Rampart site of grace in Leyndell, follow the marble stairway heading South-Southwest, past a Valiant Gargoyle near a Golden Seed and up the stair toward a giant Colloseum, the talisman is at the top of the hill, in front of the door of the Colloseum.",
+        "effects": [],
+        "metadata": { "notes": "try pairing with Blue-Feathered Branchsword" }
+    },
+    {
+        "name": "Greatshield Talisman",
+        "description": "Boosts guarding ability.",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Found in a chest on a Wagon East of Grace \"Erdtree-Gazing Hill\" behind Ancient Dragon Lansseax.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Crucible Knot Talisman",
+        "description": "Reduces damage and impact of headshots taken.",
+        "weight": 0.5,
+        "restricts": [],
+        "location": "Dropped by Omenkiller, located in the Village of the Albinaurics.",
+        "effects": [],
+    },
+    {
+        "name": "Crimson Seed Talisman",
+        "description": "Boosts HP regeneration from Flask of Crimson Tears",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Found in locked imp's room in Sainted Hero's Grave (Altus Plateau). This area is accessed after defeating Black Knife Assassin outside.",
+        "effects": [],
+    },
+    {
+        "name": "Cerulean Seed Talisman",
+        "description": "Boosts FP restoration from Flask of Cerulean Tears.",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Can be found in Carian Study Hall.",
+        "effects": [],
+    },
+    {
+        "name": "Blessed Dew Talisman",
+        "description": "Slowly restores HP.",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Leyndell: Found west of the Divine Bridge Site of Grace, guarded by a Golem.",
+        "effects": [],
+    },
+    {
+        "name": "Taker's Cameo",
+        "description": "Restores HP upon defeating enemies",
+        "weight": 1,
+        "restricts": [],
+        "location": "Awarded by Tanith at Volcano Manor after completing the third letter quest. This requires you to visit the Mountaintops of the Giants, invade and defeat Juno Hoslow, Knight of Blood.",
+        "effects": [],
+    },
+    {
+        "name": "Godskin Swaddling Cloth",
+        "description": "Successive attacks restore HP",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Spiritcaller's Cave: Dropped by the Godskin Apostle & Godskin Noble in a consecutive boss encounter.",
+        "effects": [],
+    },
+    {
+        "name": "Assassin's Crimson Dagger",
+        "description": "Critical hits restore HP.",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Dropped by Black Knife Assassin, found inside Deathtouched Catacombs.",
+        "effects": [],
+    },
+    {
+        "name": "Assassin's Cerulean Dagger",
+        "description": "Critical hits restores FP.",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Dropped by the Black Knife Assassin boss found in Black Knife Catacombs in the northeast of the Liurnia of the Lakes region.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Crepus's Vial",
+        "description": "Eliminates all sound made by the wearer during movement",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Obtained by the enemy you kill during the second assassination task in the Volcano Manor questline, Rileigh the Idle.",
+        "effects": [],
+    },
+    {
+        "name": "Concealing Veil",
+        "description": "Conceals wearer while crouching away from foes",
+        "weight": 0.9,
+        "restricts": [],
+        "location": "Dropped by the boss in Sage's Cave.",
+        "effects": [],
+    },
+    {
+        "name": "Carian Filigreed Crest",
+        "description": "Lowers FP consumed by skills",
+        "weight": 0.8,
+        "restricts": [],
+        "location": "Can be purchased from War Counselor Iji as part of Blaidd's questline.",
+        "effects": [],
+        "metadata": { "notes": "see if this can be calculated" }
+    },
+    {
+        "name": "Longtail Cat Talisman",
+        "description": "Renders the wearer immune to fall damage",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Raya Lucaria Academy: Looted off a corpse that can be found at the bottom section of the large rotating lift. Past the graveyard section of Raya Lucaria Academy, simply ride the lift down and defeat the single Pendulum Statue enemy.",
+        "effects": [],
+    },
+    {
+        "name": "Shabriri's Woe",
+        "description": "Constantly attracts enemies' aggression.",
+        "weight": 0.6,
+        "restricts": [],
+        "location": "Can be found on a body at the edge of the Frenzied Flame Village.",
+        "effects": [],
+    },
+    {
+        "name": "Sacrificial Twig",
+        "description": "Will be lost on death in place of runes.",
+        "weight": 1,
+        "restricts": [],
+        "location": "Sold by Patches at Murkwater Cave after he sets up shop. \n3 sold by the Isolated Merchant at the Weeping Peninsula for 3.000 runes each. \nLiurnia of the Lakes: Found on a corpse sitting by a stone platform jutting out of the cliffs in the southern landmass. This is accessible from the top of the long stretch of land where the Malefactor's Evergaol is located. \n3 sold by the Isolated Merchant in Dragonbarrow for 3,000 er runes each. \nGiven by Edgar when spoken to for the first time at Castle Morne.",
+        "effects": [],
+    },
+    {
+        "name": "Furled Finger's Trick-Mirror",
+        "description": "Take on appearance of a Host of Fingers.",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Can be purchased from Twin Maiden Husks at the Roundtable Hold for 5,000 Runes.",
+        "effects": [],
+    },
+    {
+        "name": "Host's Trick-Mirror",
+        "description": "Take on appearance of a cooperator.",
+        "weight": 0.7,
+        "restricts": [],
+        "location": "Can be purchased from Twin Maiden Husks at the Roundtable Hold for 5,000 Runes.",
+        "effects": [],
+    },
+    // {
+    //     "name": "Entwining Umbilical Cord",
+    //     "description": "Changes demeanour of wearer's actions",
+    //     "weight": 0.5,
+    //     "restricts": [],
+    //     "location": "It is currently unavailable in-game.",
+    //     "effects": [],
+    // },
+    {
+        "name": "Ancestral Spirit's Horn",
+        "description": "Restores FP upon defeating enemies",
+        "weight": 1.2,
+        "restricts": [],
+        "location": "Obtained when unlocking the Remembrance of the Regal Ancestor's power by handing it over to Enia at Roundtable Hold.",
+        "effects": [],
+    },
+]

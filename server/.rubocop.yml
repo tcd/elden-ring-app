@@ -1,0 +1,279 @@
+AllCops:
+  TargetRubyVersion: 3.1.1
+
+# Don't leave calls to pry lying around.
+Lint/Debugger:
+  Enabled: true
+
+# =====================================================================
+# Documentation
+# =====================================================================
+
+Style/Documentation:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+    - 'db/**/*.rb'
+
+Style/DocumentationMethod:
+  Enabled: true
+  Exclude:
+    - 'test/**/*.rb'
+    - 'db/**/*.rb'
+    - 'app/admin/**/*_admin.rb'
+
+# =====================================================================
+# Naming
+# =====================================================================
+
+Naming/MethodParameterName:
+  AllowedNames:
+    - id
+    - db
+
+Naming/PredicateName:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+  Exclude:
+    - 'test/**/*.rb'
+
+# =====================================================================
+# Layout
+# =====================================================================
+
+Metrics/LineLength:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+# https://unix.stackexchange.com/a/18789
+Layout/TrailingEmptyLines:
+  EnforcedStyle: final_newline
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+  Exclude:
+    - 'test/test_helper.rb'
+
+# =====================================================================
+# Strings
+# =====================================================================
+
+Style/StringLiterals:
+  # EnforcedStyle: double_quotes
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Style/FormatString:
+  EnforcedStyle: sprintf
+
+Style/FormatStringToken:
+  Enabled: false
+
+# =====================================================================
+# Numbers
+# =====================================================================
+
+Style/ZeroLengthPredicate:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+# preferably `EnforcedStyle: snake_case`, but it varies.
+Naming/VariableNumber:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+# =====================================================================
+# Braces, Brackets, and Parentheses
+# =====================================================================
+
+Style/DefWithParentheses:
+  Enabled: false
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: false
+
+Style/RedundantParentheses:
+  Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Layout/SpaceInsideBlockBraces:
+  enabled: true
+  EnforcedStyleForEmptyBraces: space
+  Exclude:
+    - "test/factories/**/*.rb"
+
+Layout/MultilineBlockLayout:
+  enabled: true
+  Exclude:
+    - "test/factories/**/*.rb"
+
+Style/BlockDelimiters:
+  enabled: true
+  Exclude:
+    - "test/factories/**/*.rb"
+
+Layout/BlockEndNewline:
+  enabled: true
+  Exclude:
+    - "test/factories/**/*.rb"
+
+# =====================================================================
+# Trailing Commas
+# =====================================================================
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+  Exclude:
+    - "test/factories/**/*.rb"
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+  Exclude:
+    - "test/factories/**/*.rb"
+
+# =====================================================================
+# Fewer lines doesn't mean better code
+# =====================================================================
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+# TODO: Look into adding an `EnforcedStyle` to not use guard clauses.
+Style/GuardClause:
+  Enabled: false
+
+# TODO: Look into adding an `EnforcedStyle` to not use if/unless modifiers.
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+# =====================================================================
+# Explicit, not redundant
+# =====================================================================
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+# =====================================================================
+# Exceptions
+# =====================================================================
+
+Lint/SuppressedException:
+  AllowComments: true
+
+Style/RaiseArgs:
+  EnforcedStyle: exploded
+
+# =====================================================================
+# Exclusions
+# =====================================================================
+
+Style/MultilineIfModifier:
+  enabled: true
+  Exclude:
+    - "app/admin/**/*.rb"
+
+Lint/UnusedMethodArgument:
+  enabled: true
+  Exclude:
+    - "app/jobs/**/*.rb"
+
+# =====================================================================
+# Unsorted
+# =====================================================================
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+# Default value (special_inside_parentheses) is ridiculous.
+# Look for yourself: https://www.rubydoc.info/gems/rubocop/0.69.0/RuboCop/Cop/Layout/IndentFirstHashElement
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+# Default value (special_inside_parentheses) is ridiculous.
+# Look for yourself: https://www.rubydoc.info/gems/rubocop/0.69.0/RuboCop/Cop/Layout/IndentFirstArrayElement
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  Enabled: false
+
+# `x&.y&.[](:argument)` isn't what I'd call "readable".
+# https://stackoverflow.com/questions/34794697/using-with-the-safe-navigation-operator-in-ruby
+Style/SafeNavigation:
+  Enabled: false
+
+Style/NegatedIf:
+  EnforcedStyle: postfix
+
+# TODO: File issue to ignore enums when using `EnforcedStyle: assign_inside_condition`.
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Style/CommentedKeyword:
+  Enabled: False
+
+Style/AsciiComments:
+  Enabled: false
+
+Lint/EmptyWhen:
+  Enabled: false

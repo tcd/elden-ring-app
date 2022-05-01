@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: elden_ring_development
+
+test:
+  <<: *default
+  database: elden_ring_test
+
+production:
+  <<: *default
+  database: elden_ring_production
+  # username: twop
+  # password: <%= ENV["TWOP_DATABASE_PASSWORD"] %>

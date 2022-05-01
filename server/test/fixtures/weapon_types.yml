@@ -1,0 +1,35 @@
+daggers:                { id:  1, name: "Daggers",                plural_name: "Daggers",                singular_name: "Dagger"                }
+straight_swords:        { id:  2, name: "Straight Swords",        plural_name: "Straight Swords",        singular_name: "Straight Sword"        }
+greatswords:            { id:  3, name: "Greatswords",            plural_name: "Greatswords",            singular_name: "Greatsword"            }
+colossal_swords:        { id:  4, name: "Colossal Swords",        plural_name: "Colossal Swords",        singular_name: "Colossal Sword"        }
+thrusting_swords:       { id:  5, name: "Thrusting Swords",       plural_name: "Thrusting Swords",       singular_name: "Thrusting Sword"       }
+heavy_thrusting_swords: { id:  6, name: "Heavy Thrusting Swords", plural_name: "Heavy Thrusting Swords", singular_name: "Heavy Thrusting Sword" }
+curved_swords:          { id:  7, name: "Curved Swords",          plural_name: "Curved Swords",          singular_name: "Curved Sword"          }
+curved_greatswords:     { id:  8, name: "Curved Greatswords",     plural_name: "Curved Greatswords",     singular_name: "Curved Greatsword"     }
+katanas:                { id:  9, name: "Katanas",                plural_name: "Katanas",                singular_name: "Katana"                }
+twinblades:             { id: 10, name: "Twinblades",             plural_name: "Twinblades",             singular_name: "Twinblade"             }
+axes:                   { id: 11, name: "Axes",                   plural_name: "Axes",                   singular_name: "Axe"                   }
+greataxes:              { id: 12, name: "Greataxes",              plural_name: "Greataxes",              singular_name: "Greataxe"              }
+hammers:                { id: 13, name: "Hammers",                plural_name: "Hammers",                singular_name: "Hammer"                }
+flails:                 { id: 14, name: "Flails",                 plural_name: "Flails",                 singular_name: "Flail"                 }
+great_hammers:          { id: 15, name: "Great Hammers",          plural_name: "Great Hammers",          singular_name: "Great Hammer"          }
+colossal_weapons:       { id: 16, name: "Colossal Weapons",       plural_name: "Colossal Weapons",       singular_name: "Colossal Weapon"       }
+spears:                 { id: 17, name: "Spears",                 plural_name: "Spears",                 singular_name: "Spear"                 }
+great_spears:           { id: 18, name: "Great Spears",           plural_name: "Great Spears",           singular_name: "Great Spear"           }
+halberds:               { id: 19, name: "Halberds",               plural_name: "Halberds",               singular_name: "Halberd"               }
+reapers:                { id: 20, name: "Reapers",                plural_name: "Reapers",                singular_name: "Reaper"                }
+whips:                  { id: 21, name: "Whips",                  plural_name: "Whips",                  singular_name: "Whip"                  }
+fists:                  { id: 22, name: "Fists",                  plural_name: "Fists",                  singular_name: "Fist"                  }
+claws:                  { id: 23, name: "Claws",                  plural_name: "Claws",                  singular_name: "Claw"                  }
+light_bows:             { id: 24, name: "Light Bows",             plural_name: "Light Bows",             singular_name: "Light Bow"             }
+bows:                   { id: 25, name: "Bows",                   plural_name: "Bows",                   singular_name: "Bow"                   }
+greatbows:              { id: 26, name: "Greatbows",              plural_name: "Greatbows",              singular_name: "Greatbow"              }
+crossbows:              { id: 27, name: "Crossbows",              plural_name: "Crossbows",              singular_name: "Crossbow"              }
+ballistae:              { id: 28, name: "Ballistae",              plural_name: "Ballistae",              singular_name: "Ballista"              }
+glintstone_staffs:      { id: 29, name: "Glintstone Staffs",      plural_name: "Glintstone Staves",      singular_name: "Glintstone Staff"      }
+sacred_seals:           { id: 30, name: "Sacred Seals",           plural_name: "Sacred Seals",           singular_name: "Sacred Seal"           }
+torches:                { id: 31, name: "Torches",                plural_name: "Torches",                singular_name: "Torch"                 }
+
+small_shields:          { id: 41, name: "Small Shields",          plural_name: "Small Shields",          singular_name: "Small Shield",  is_shield: true }
+medium_shields:         { id: 42, name: "Medium Shields",         plural_name: "Medium Shields",         singular_name: "Medium Shield", is_shield: true }
+greatshields:           { id: 43, name: "Greatshields",           plural_name: "Greatshields",           singular_name: "Greatshield",   is_shield: true }
