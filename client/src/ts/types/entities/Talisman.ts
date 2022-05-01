@@ -1,7 +1,6 @@
-import { EquipmentEffect } from "@types"
+import { BaseEntity, EquipmentEffect } from "@types"
 
-export interface Talisman {
-    id?: number
+export interface Talisman extends BaseEntity {
     name: string
     image_url: string
     description: string

@@ -11,7 +11,6 @@ export const WeaponMenu = (): JSX.Element => {
 
     const activeWeaponName = useSelector(Selectors.Weapons.activeWeaponName)
     const weapon = useSelector(Selectors.Weapons.activeWeapon)
-    // const weapons = useSelector(Selectors.Weapons.allWeapons)
     const weapons = useSelector(Selectors.Builder.api.weapons)
     const weaponTypes = useSelector(Selectors.Builder.api.weaponTypes)
 
@@ -20,7 +19,7 @@ export const WeaponMenu = (): JSX.Element => {
     }
 
     const sections = weaponTypes.map((weaponType) => {
-        const sectionWeapons = weapons.filter(x => x.weapon_type == weaponType.plural_name)
+        const sectionWeapons = weapons.filter(x => x.weapon_type_id == weaponType.id)
         const weaponCells = sectionWeapons.map((weapon) => {
             let classes = "weapon-menu-cell inactive"
             if (weapon.name === activeWeaponName) {

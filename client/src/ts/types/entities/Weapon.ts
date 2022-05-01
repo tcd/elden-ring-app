@@ -11,6 +11,8 @@ export interface Weapon extends BaseEntity {
     is_shield?: boolean
     weapon_type: WeaponTypePluralString
     weapon_skill: WeaponSkill
+    weapon_type_id: number
+    weapon_skill_id: number
     weight: number
     physical_damage_types: string[]
     range?: number

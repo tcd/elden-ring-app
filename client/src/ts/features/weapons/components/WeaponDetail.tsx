@@ -20,9 +20,6 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
         return null
     }
 
-    const folder = weapon.is_shield ? "shields" : "weapons"
-    const imagePath = `/public/images/${folder}/${weapon.name}.png`
-
     const defensePlaceholder = "?" // "0.0"
 
     return (
@@ -56,7 +53,7 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={imagePath} alt="weapon" />
+                                    <img className="img-fluid" src={weapon.image_url} alt="weapon" />
                                 </div>
                             </div>
                         </div>

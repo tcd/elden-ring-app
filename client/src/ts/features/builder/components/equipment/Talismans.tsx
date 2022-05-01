@@ -8,7 +8,6 @@ export const Talismans = (): JSX.Element => {
     const dispatch = useDispatch()
 
     const talismans = useSelector(Selectors.Builder.talismans)
-    console.log(talismans)
 
     const handleClick = (number: number) => {
         dispatch(Actions.Builder.openTalismanModal({ number }))

@@ -9,13 +9,11 @@ import {
 import { Selectors } from "@app/state"
 
 const renderImageCell = (weapon: Weapon): JSX.Element => {
-    const folder = weapon.is_shield ? "shields" : "weapons"
-    const imagePath = `/public/images/${folder}/${weapon.name}.png`
     return (
         <div style={{ width: "75px" }}>
             <img
                 className="img-fluid"
-                src={imagePath}
+                src={weapon.image_url}
                 alt="weapon"
             />
         </div>
@@ -27,7 +25,6 @@ const renderDamageTypesCell = (weapon: Weapon) => {
         <WeaponDamageTypes weapon={weapon} />
     )
 }
-
 
 const weapon_skill = (weapon: Weapon): string => weapon.weapon_skill.display_name
 

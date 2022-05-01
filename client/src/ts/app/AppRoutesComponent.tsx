@@ -8,6 +8,7 @@ import {
     BuilderPage,
     ChecklistPage,
 
+    TalismanMenu,
     TalismansPage,
     TalismanDetailPage,
 
@@ -38,6 +39,8 @@ const routes: RouteObject[] = [
             { path: "/checklist",        element: <ChecklistPage />      },
 
             { path: "/talismans",        element: <TalismansPage />      },
+            { path: "/talismans/menu",   element: <TalismanMenu />       },
+            { path: "/talismans/table",  element: <TalismansPage />      },
             { path: "/talismans/detail", element: <TalismanDetailPage /> },
 
             { path: "/armor",            element: <ArmorPage />          },
