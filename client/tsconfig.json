@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "jsx": "react-jsx",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true,
+        "downlevelIteration": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": false,
+        "noImplicitAny": false,
+        "target": "es5",
+        "baseUrl": "./",
+        "paths": {
+            "@app/*": ["./src/ts/*"],
+            // "@state": ["./src/ts/state/index.ts"],
+            "@util": ["./src/ts/util/index.ts"],
+            "@types": ["./src/ts/types/index.ts"],
+            "@assets/*": ["./src/assets/*"],
+            "@app/shared": ["./src/ts/features/core/components/shared/index.ts"],
+            // "@config": ["./src/ts/util/config.ts"],
+        },
+    },
+    "include": [
+        "src",
+    ]
+}

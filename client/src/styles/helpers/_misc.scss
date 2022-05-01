@@ -1,0 +1,9 @@
+@use "../variables"as v;
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-shadow {
+    text-shadow: v.$text-shadow-offset v.$text-shadow-offset black
+}

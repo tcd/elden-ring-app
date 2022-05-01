@@ -1,0 +1,115 @@
+$rdt-border-radius: 0.25rem !important;
+$table-fg-color: white;
+$table-border-color: #515151;
+
+@mixin rounded-top-border {
+    border-top-right-radius: $rdt-border-radius;
+    border-top-left-radius: $rdt-border-radius;
+};
+
+@mixin rounded-bottom-border {
+    // border-radius: $rdt-border-radius;
+    border-bottom-right-radius: $rdt-border-radius;
+    border-bottom-left-radius: $rdt-border-radius;
+};
+
+@mixin transparent-background {
+    background: transparent !important;
+    background-color: transparent !important;
+};
+
+@mixin table-border {
+    border: 1px solid $table-border-color;
+}
+
+.data-table-wrapper {
+    // position: relative;
+    height: 100%;
+    // overflow-y: scroll;
+    // max-height: 100vh;
+    position: relative;
+    border-collapse: collapse;
+    @include transparent-background;
+}
+
+.rdt_Table {
+    @include rounded-top-border;
+    @include rounded-bottom-border;
+    @include transparent-background;
+    @include table-border;
+    // position: relative;
+    // border-collapse: collapse;
+    * {
+        font-size: 16px;
+    }
+}
+.rdt_TableRow {
+    // @include rounded-bottom-border;
+    @include transparent-background;
+    // @include table-border;
+    // position: relative;
+}
+.rdt_TableCol {
+    @include transparent-background;
+}
+.rdt_TableCol_Sortable {
+    @include transparent-background;
+}
+.rdt_TableCell {
+    @include transparent-background;
+    color: $table-fg-color;
+    border-bottom: 1px solid $table-border-color;
+    border-left: 1px solid $table-border-color;
+    &:nth-child(1) {
+        border-left: none;
+    }
+}
+.rdt_TableHeader {
+    @include transparent-background;
+    // position: sticky;
+    // top: 0;
+    // z-index: 10;
+}
+.rdt_TableFooter {
+    @include transparent-background;
+}
+.rdt_TableHead {
+    @include transparent-background;
+    border-bottom: 1px solid $table-border-color;
+    font-weight: bold;
+    // position: sticky;
+    // top: 0;
+    // z-index: 10;
+}
+.rdt_TableHeadRow {
+    @include transparent-background;
+    @include rounded-top-border;
+    height: 56px;
+    color: $table-fg-color;
+    // position: sticky;
+    // top: 0;
+    // z-index: 10;
+}
+.rdt_TableBody {
+    @include transparent-background;
+}
+.rdt_ExpanderRow {
+    @include transparent-background;
+}
+.rdt_Pagination {
+    @include transparent-background;
+    // option,
+    // * {
+    //     color: white !important;
+    // }
+    span {
+        text-shadow: none;
+    }
+}
+
+#pagination-previous-page,
+#pagination-next-page,
+#pagination-first-page,
+#pagination-last-page {
+
+}

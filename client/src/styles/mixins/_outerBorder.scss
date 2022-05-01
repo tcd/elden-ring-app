@@ -1,0 +1,25 @@
+// https://cssgradient.io/
+
+@use "../variables" as v;
+@use "customGradient";
+
+$menu-background: #26221C;
+$menu-border: #4D4B3F;
+
+// $inner-border-1: #423E35;
+// $inner-border-2: #4C4A3F;
+// $inner-border-3: #454139;
+
+$top-bottom-border-stops: (
+     0%: 1.0,
+    10%: 0.0,
+    90%: 0.0,
+   100%: 1.0,
+);
+
+@mixin outerBorder {
+    height: 3px;
+    background:
+        customGradient(90deg, $menu-background, $top-bottom-border-stops),
+        $menu-border;
+}
