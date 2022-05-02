@@ -1,0 +1,14 @@
+blood:     { "name": "Blood"     }
+cold:      { "name": "Cold"      }
+fire:      { "name": "Fire"      }
+flame_art: { "name": "Flame Art" }
+heavy:     { "name": "Heavy"     }
+keen:      { "name": "Keen"      }
+lightning: { "name": "Lightning" }
+magic:     { "name": "Magic"     }
+none:      { "name": "None"      }
+occult:    { "name": "Occult"    }
+poison:    { "name": "Poison"    }
+quality:   { "name": "Quality"   }
+sacred:    { "name": "Sacred"    }
+standard:  { "name": "Standard"  }
