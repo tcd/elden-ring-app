@@ -30,6 +30,8 @@ class WeaponSkill < ApplicationRecord
   # - fp cost
   # - lasting effects
   # - damage type
+  # - affinity
+  # - compatible_affinities
 
   # @!endgroup Attributes
 
