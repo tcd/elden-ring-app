@@ -1,5 +1,6 @@
 claymore: {
   name:                  "Claymore",
+  weapon_skill:          lions_claw,
   weapon_type_id:        3,
   weight:                9,
   physical_damage_types: ["Standard", "Pierce"],

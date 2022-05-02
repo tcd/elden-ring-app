@@ -7,5 +7,26 @@ no_skill:
     "Small Shields",
     "Medium Shields",
     "Greatshields",
-    "Torches"
+    "Torches",
+  ]
+
+lions_claw:
+  name: "Lion's Claw"
+  description: "Lion's Claw: Skill of the Redmanes, who fought alongside General Radahn. Somersault forwards, striking foes with armament."
+  ash_of_war: true
+  is_chargeable: null
+  can_be_applied_to: [
+    "Straight Swords",
+    "Greatswords",
+    "Colossal Swords",
+    "Curved Swords",
+    "Curved Greatswords",
+    "Katanas",
+    "Twinblades",
+    "Hammers",
+    "Great Hammers",
+    "Axes",
+    "Greataxes",
+    "Flails",
+    "Colossal Weapons",
   ]
