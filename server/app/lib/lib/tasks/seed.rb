@@ -245,7 +245,7 @@ module Lib
             equipment_effects_attributes: (fx["effects"] || []),
 
             is_shield:             true,
-            is_special:            (fx["special"] == true || fx["special"] == "TRUE"),
+            is_special:            (fx["is_special"] == true || fx["is_special"] == "TRUE" || fx["is_special"] == "true"),
             name:                  fx["name"],
             weight:                fx["weight"],
             weapon_type_id:        type_ids[fx["weapon_type"]],
@@ -303,7 +303,7 @@ module Lib
             # equipment_effects_attributes: (fx["effects"] || []),
 
             is_shield:             false,
-            is_special:            (fx["special"] == true || fx["special"] == "TRUE"),
+            is_special:            (fx["special"] == true || fx["special"] == "TRUE" || fx["special"] == "true"),
             name:                  fx["name"],
             weight:                fx["weight"],
             weapon_type_id:        type_ids[fx["weapon_type"]],
