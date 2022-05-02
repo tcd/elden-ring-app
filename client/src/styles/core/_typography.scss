@@ -1,5 +1,12 @@
-// @import url("https://use.typekit.net/rnn3kbc.css");
+@use "../variables" as v;
 
+
+span.text-special {
+    color: v.$gold;
+}
+
+// @import url("https://use.typekit.net/rnn3kbc.css");
+//
 // * {
 //     font-family: garamond-premier-pro-display, serif;
 // }
