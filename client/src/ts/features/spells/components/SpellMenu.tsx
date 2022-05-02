@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Spell } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { WeaponsSelectors, BuilderSelectors } from "@app/features"
-import { SpellDetail } from "../SpellDetail"
+import { SpellDetail } from "./SpellDetail"
 import React from "react"
 
 const spellCategories = [
