@@ -30,7 +30,7 @@ export const Resistance = (): JSX.Element => {
     }
 
     return (
-        <ECard title="Resistance" iconPath={mdiHeartPulse} className="m-3">
+        <ECard title="Resistance" iconPath={mdiHeartPulse}>
             <ul>
                 {rows()}
             </ul>
