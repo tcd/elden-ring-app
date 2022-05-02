@@ -11,6 +11,18 @@ class WeaponAffinity < ApplicationRecord
 
   # @!endgroup Attributes
 
+  # # ============================================================================
+  # # Associations
+  # # ============================================================================
+  #
+  # # @!group Associations
+  #
+  # # @!attribute compatible_weapons_skills
+  # #   @return [Array<WeaponSkill>]
+  # has_many(:compatible_weapon_skills)
+  #
+  # # @!endgroup Associations
+
   # ============================================================================
   # Instance Methods
   # ============================================================================
