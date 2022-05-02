@@ -11,7 +11,7 @@ module Api
       armor         = Armor.includes(:armor_type).all().order(name: :asc)
       spells        = Spell.all().order(name: :asc)
       talismans     = Talisman.includes(:equipment_effects).all()
-      weapons       = Weapon.includes(:weapon_type).all().order(name: :asc)
+      weapons       = Weapon.includes(:weapon_type, :weapon_skill).all().order(name: :asc)
       weapon_skills = WeaponSkill.all().order(name: :asc)
       weapon_types  = WeaponType.all()
 

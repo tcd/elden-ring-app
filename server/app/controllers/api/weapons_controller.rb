@@ -8,7 +8,7 @@ module Api
     # @action GET
     # @response 200 Ok
     def index()
-      records = Weapon.includes(:weapon_type).all()
+      records = Weapon.includes(:weapon_type, :weapon_skill).all()
       data = Serializers::WeaponSerializer.render_as_json(records)
       render_json(data)
     end
