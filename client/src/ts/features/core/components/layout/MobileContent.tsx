@@ -6,7 +6,7 @@ import Divider from "@mui/material/Divider"
 import Drawer from "@mui/material/Drawer"
 import IconButton from "@mui/material/IconButton"
 import List from "@mui/material/List"
-import ListItem from "@mui/material/ListItem"
+import ListSubheader from "@mui/material/ListSubheader"
 import ListItemButton from "@mui/material/ListItemButton"
 import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
@@ -28,13 +28,13 @@ export const MobileContent = () => {
     // Event Handlers
     // =========================================================================
 
-    const handleIconClick = (event) => {
+    const handleIconClick = (_event) => {
         if (!sideNavOpened) {
             dispatch(Actions.Core.openSideNav())
         }
     }
 
-    const handleMenuClose = (event) => {
+    const handleMenuClose = (_event) => {
         if (sideNavOpened) {
             dispatch(Actions.Core.closeSideNav())
         }
@@ -56,6 +56,16 @@ export const MobileContent = () => {
     const listItems = SIDE_NAV_LINKS.map((route, index) => {
         const { title, url, icon } = route
         const active = (url == pathname)
+        if (route?.divider) {
+            return <Divider key={index}/>
+        }
+        if (route?.subtitle) {
+            return (
+                <ListSubheader key={index}>
+                    {route.subtitle}
+                </ListSubheader>
+            )
+        }
         return (
             <ListItemButton
                 key={index}
