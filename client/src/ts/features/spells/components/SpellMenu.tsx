@@ -1,10 +1,10 @@
+import React from "react"
 import { useSelector, useDispatch } from "react-redux"
 
-import { Spell } from "@app/types"
+import { Attributes, Spell } from "@app/types"
+import { meetsRequirements } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponsSelectors, BuilderSelectors } from "@app/features"
 import { SpellDetail } from "./SpellDetail"
-import React from "react"
 
 const spellCategories = [
     // Incantations
@@ -40,6 +40,7 @@ export const SpellMenu = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
+    const stats = useSelector(Selectors.Builder.attributes)
     const spell = useSelector(Selectors.Spells.activeSpell)
     const spells = useSelector(Selectors.Spells.all)
 
@@ -53,29 +54,29 @@ export const SpellMenu = (): JSX.Element => {
             return (
                 <div
                     key={`spell-${spell.id}`}
-                    className="weapon-menu-cell"
+                    className="equipment-menu-cell"
                     onClick={() => handleClick(spell.name)}
                 >
-                    {spellImage(spell)}
+                    {spellImage(spell, stats)}
                 </div>
             )
         })
 
         return (
             <React.Fragment key={spellCategory}>
-                <section id={spellCategory} className="weapon-menu-section">
+                <section id={spellCategory} className="equipment-menu-section">
                     {cells}
                 </section>
-                <div className="weapon-menu-section-border"></div>
+                <div className="equipment-menu-section-border"></div>
             </React.Fragment>
         )
     })
 
     return (
-        <div className="weapon-menu container">
+        <div className="equipment-menu container">
             <div className="row">
                 <div className="col-5">
-                    <div className="weapon-menu-grid-column">
+                    <div className="equipment-menu-grid-column">
                         {sections}
                     </div>
                 </div>
@@ -87,9 +88,14 @@ export const SpellMenu = (): JSX.Element => {
     )
 }
 
-const spellImage = (spell: Spell) => {
+const spellImage = (spell: Spell, stats: Attributes) => {
+    let cantUse = null
+    if (!meetsRequirements(stats, spell)) {
+        cantUse = <span className="requirements-not-met">X</span>
+    }
     return (
-        <div className="weapon-menu-image-wrapper">
+        <div className="equipment-menu-image-wrapper">
+            {cantUse}
             <img
                 className="img-fluid"
                 src={spell.image_url}

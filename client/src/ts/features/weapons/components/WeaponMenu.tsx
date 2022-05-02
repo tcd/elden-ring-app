@@ -1,14 +1,16 @@
 import { Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
-import { Weapon } from "@app/types"
+import { Attributes, Weapon } from "@app/types"
 import { Actions, Selectors } from "@app/state"
-import { WeaponDetail } from "../WeaponDetail"
+import { WeaponDetail } from "./WeaponDetail"
+import { meetsRequirements } from "@app/util"
 
 export const WeaponMenu = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
+    const stats = useSelector(Selectors.Builder.attributes)
     const activeWeaponName = useSelector(Selectors.Weapons.activeWeaponName)
     const weapon = useSelector(Selectors.Weapons.activeWeapon)
     const weapons = useSelector(Selectors.Builder.api.weapons)
@@ -21,9 +23,9 @@ export const WeaponMenu = (): JSX.Element => {
     const sections = weaponTypes.map((weaponType) => {
         const sectionWeapons = weapons.filter(x => x.weapon_type_id == weaponType.id)
         const weaponCells = sectionWeapons.map((weapon) => {
-            let classes = "weapon-menu-cell inactive"
+            let classes = "equipment-menu-cell inactive"
             if (weapon.name === activeWeaponName) {
-                classes = "weapon-menu-cell active"
+                classes = "equipment-menu-cell active"
             }
             return (
                 <div
@@ -31,27 +33,27 @@ export const WeaponMenu = (): JSX.Element => {
                     className={classes}
                     onClick={() => handleClick(weapon.name)}
                 >
-                    {weaponImage(weapon)}
+                    {weaponImage(weapon, stats)}
                 </div>
             )
         })
 
         return (
             <Fragment key={weaponType.plural_name}>
-                <section  id={weaponType.plural_name} className="weapon-menu-section">
+                <section  id={weaponType.plural_name} className="equipment-menu-section">
                     {/* {weaponType.plural_name} */}
                     {weaponCells}
                 </section>
-                <div className="weapon-menu-section-border"></div>
+                <div className="equipment-menu-section-border"></div>
             </Fragment>
         )
     })
 
     return (
-        <div className="weapon-menu container">
+        <div className="equipment-menu container">
             <div className="row">
                 <div className="col-5">
-                    <div className="weapon-menu-grid-column">
+                    <div className="equipment-menu-grid-column">
                         {sections}
                     </div>
                 </div>
@@ -64,28 +66,17 @@ export const WeaponMenu = (): JSX.Element => {
 }
 
 
-// const WeaponMenuRow = (weaponType: string, weapons: Weapon[]): JSX.Element => {
-//
-//     return (
-//         <div className="weapon-menu-row"></div>
-//     )
-// }
-
-// const WeaponMenuCell = (weapon: Weapon): JSX.Element => {
-//
-//     return (
-//         <div className="row"></div>
-//     )
-// }
-
-const weaponImage = (weapon: Weapon) => {
-    const folder = weapon.is_shield ? "shields" : "weapons"
-    const imagePath = `/public/images/${folder}/${weapon.name}.png`
+const weaponImage = (weapon: Weapon, stats: Attributes) => {
+    let cantUse = null
+    if (!meetsRequirements(stats, weapon)) {
+        cantUse = <span className="requirements-not-met">X</span>
+    }
     return (
-        <div className="weapon-menu-image-wrapper">
+        <div className="equipment-menu-image-wrapper">
+            {cantUse}
             <img
                 className="img-fluid"
-                src={imagePath}
+                src={weapon.image_url}
                 alt="weapon"
             />
         </div>
