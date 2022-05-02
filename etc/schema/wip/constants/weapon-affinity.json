@@ -1,0 +1,22 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/weapon-affinity.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "WIP Weapon Affinity",
+    "type": "string",
+    "enum": [
+        "None",
+        "Standard",
+        "Heavy",
+        "Keen",
+        "Quality",
+        "Blood",
+        "Flame Art",
+        "Magic",
+        "Poison",
+        "Sacred",
+        "Cold",
+        "Occult",
+        "Fire",
+        "Lightning"
+    ]
+}
