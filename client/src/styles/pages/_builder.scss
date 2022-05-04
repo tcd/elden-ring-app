@@ -35,6 +35,29 @@
     font-size: 15px;
 }
 
+li.stat-row-plus {
+    display: grid;
+    grid-template-columns: 30% 45% 10% 15%;
+    font-size: 15px;
+
+    span:nth-child(2) {
+        text-align: right;
+        box-sizing: border-box;
+        margin-right: 5px;
+    }
+    span:nth-child(3) {
+        text-align: left;
+    }
+    span:nth-child(4) {
+        text-align: right;
+    }
+
+    // span:nth-child(1) { background: red;    }
+    // span:nth-child(2) { background: yellow; }
+    // span:nth-child(3) { background: green;  }
+    // span:nth-child(4) { background: blue;   }
+}
+
 .attribute-control {
     display: flex;
     flex-direction: row;
@@ -61,22 +84,22 @@ section.armaments {
     // justify-content: space-around;
     // align-items: stretch;
 
-    div.armament {
-        // width: 30%;
-    }
+    // div.armament {
+    //     // width: 30%;
+    // }
 
     // div.armament:nth-child(1) { background-color: red;    }
     // div.armament:nth-child(2) { background-color: orange; }
     // div.armament:nth-child(3) { background-color: yellow; }
 }
 
-section.armor {
-    div.armor {
-        // width: 25%;
-    }
+// section.armor {
+//     div.armor {
+//         // width: 25%;
+//     }
 
-    // div.armor:nth-child(1) { background-color: red;    }
-    // div.armor:nth-child(2) { background-color: orange; }
-    // div.armor:nth-child(3) { background-color: yellow; }
-    // div.armor:nth-child(4) { background-color: green;  }
-}
+//     // div.armor:nth-child(1) { background-color: red;    }
+//     // div.armor:nth-child(2) { background-color: orange; }
+//     // div.armor:nth-child(3) { background-color: yellow; }
+//     // div.armor:nth-child(4) { background-color: green;  }
+// }
