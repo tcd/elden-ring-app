@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux"
 import { mdiAccount } from "@mdi/js"
-import Typography from "@mui/material/Typography"
 
 import { Selectors } from "@app/state"
 import { ECard } from "@app/shared"
+import { StatRow } from "./StatRow"
 
 export const Overview = (): JSX.Element => {
 
@@ -14,32 +14,11 @@ export const Overview = (): JSX.Element => {
     return (
         <ECard title="Overview" iconPath={mdiAccount}>
             <ul className="w-100">
-                <li className="flex-between">
-                    <Typography variant="body1" component="span">
-                        Starting Class
-                    </Typography>
-                    <Typography variant="body1" component="span">
-                        {baseClass}
-                    </Typography>
-                </li>
+                <StatRow title="Starting Class" value={baseClass} />
                 <br/>
-                <li className="flex-between">
-                    <Typography variant="body1" component="span">
-                        Level
-                    </Typography>
-                    <Typography variant="body1" component="span">
-                        {level}
-                    </Typography>
-                </li>
+                <StatRow title="Level" value={level} />
                 <br/>
-                <li className="flex-between">
-                    <Typography variant="body1" component="span">
-                        Runes Needed
-                    </Typography>
-                    <Typography variant="body1" component="span">
-                        {runes?.toLocaleString()}
-                    </Typography>
-                </li>
+                <StatRow title="Next Level" value={runes?.toLocaleString()} />
             </ul>
         </ECard>
     )

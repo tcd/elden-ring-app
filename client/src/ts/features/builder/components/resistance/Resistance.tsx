@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux"
-import { mdiHeartPulse } from "@mdi/js"
 
 import { Selectors } from "@app/state"
-import { ECard } from "@app/shared"
 
 export const Resistance = (): JSX.Element => {
 
@@ -30,10 +28,8 @@ export const Resistance = (): JSX.Element => {
     }
 
     return (
-        <ECard title="Resistance" iconPath={mdiHeartPulse}>
-            <ul>
-                {rows()}
-            </ul>
-        </ECard>
+        <ul>
+            {rows()}
+        </ul>
     )
 }

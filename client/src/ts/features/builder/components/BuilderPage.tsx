@@ -1,9 +1,11 @@
 import { Overview } from "./Overview"
 import { Attributes } from "./Attributes"
-import { BaseStats } from "./BaseStats"
-import { Resistance } from "./Resistance"
 import { Equipment } from "./equipment"
-import { Defense } from "./Defense"
+
+import { BaseStats } from "./BaseStats"
+import { ResistanceCard } from "./resistance"
+import { DefenseCard } from "./defense"
+import { CharacterStatus } from "./CharacterStatus"
 
 import {
     ArmorModal,
@@ -24,8 +26,9 @@ export const BuilderPage = (): JSX.Element => {
                 </div>
                 <div className="builder-column">
                     <BaseStats />
-                    <Defense />
-                    <Resistance />
+                    <DefenseCard />
+                    <ResistanceCard />
+                    {/* <CharacterStatus /> */}
                 </div>
             </div>
             <ArmorModal />

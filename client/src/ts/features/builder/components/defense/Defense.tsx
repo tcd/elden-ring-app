@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux"
-import { mdiShield } from "@mdi/js"
 
 import { Selectors } from "@app/state"
-import { ECard } from "@app/shared"
 
 export const Defense = (): JSX.Element => {
 
@@ -29,17 +27,15 @@ export const Defense = (): JSX.Element => {
     }
 
     return (
-        <ECard title="Defense/Dmg Negation" iconPath={mdiShield}>
-            <ul>
-                {row("Physical", physicalNegation) }
-                {row("VS Strike", strikeNegation) }
-                {row("VS Slash", slashNegation) }
-                {row("VS Pierce", pierceNegation) }
-                {row("Magic", magicNegation) }
-                {row("Fire", fireNegation) }
-                {row("Lightning", lightningNegation) }
-                {row("Holy", holyNegation) }
-            </ul>
-        </ECard>
+        <ul>
+            {row("Physical", physicalNegation) }
+            {row("VS Strike", strikeNegation) }
+            {row("VS Slash", slashNegation) }
+            {row("VS Pierce", pierceNegation) }
+            {row("Magic", magicNegation) }
+            {row("Fire", fireNegation) }
+            {row("Lightning", lightningNegation) }
+            {row("Holy", holyNegation) }
+        </ul>
     )
 }
