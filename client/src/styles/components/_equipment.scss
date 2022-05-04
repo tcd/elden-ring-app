@@ -4,13 +4,13 @@ $equipment-grid-cell-width:  150px;
 $equipment-grid-cell-height: 170px;
 
 $equipment-slot-images: (
-    "weapon-left":  "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/weapon-slot-left.png",
-    "weapon-right":  "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/weapon-slot-right.png",
-    "talisman":     "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/talisman-slot.png",
-    "armor-head":   "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/armor-head.png",
-    "armor-chest":  "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/armor-chest.png",
-    "armor-arms":   "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/armor-arms.png",
-    "armor-legs":   "https://raw.githubusercontent.com/dunstontc/assets/master/images/elden-ring/menu/armor-legs.png",
+    "weapon-left":  "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu/weapon-slot-left.png",
+    "weapon-right": "https://raw.githubusercontent.comctcd/elden-ring-app/master/etc/assets/images/menu/weapon-slot-right.png",
+    "talisman":     "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu/talisman-slot.png",
+    "armor-head":   "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu/armor-head.png",
+    "armor-chest":  "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu/armor-chest.png",
+    "armor-arms":   "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu/armor-arms.png",
+    "armor-legs":   "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu/armor-legs.png",
 );
 
 .equipment-slot {
@@ -28,7 +28,7 @@ $equipment-slot-images: (
     &.equipment-slot-talisman     { background-image: url(map-get($equipment-slot-images, "talisman"));     }
     &.equipment-slot-armor-head   { background-image: url(map-get($equipment-slot-images, "armor-head"));   }
     &.equipment-slot-armor-chest  { background-image: url(map-get($equipment-slot-images, "armor-chest"));  }
-    &.equipment-slot-armor-armor  { background-image: url(map-get($equipment-slot-images, "armor-arms"));   }
+    &.equipment-slot-armor-arms   { background-image: url(map-get($equipment-slot-images, "armor-arms"));   }
     &.equipment-slot-armor-legs   { background-image: url(map-get($equipment-slot-images, "armor-legs"));   }
 
     &.equipment-slot-filled {
