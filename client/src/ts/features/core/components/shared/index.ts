@@ -7,4 +7,7 @@ export * from "./DataTableBase"
 export * from "./MdiIcon"
 export * from "./MatCard"
 
+export * from "./MouseOverPopover"
+export * from "./HoverPopover"
+
 export * from "./renderNullableNumberCell"

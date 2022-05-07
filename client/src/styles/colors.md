@@ -33,3 +33,5 @@
         - #525145            (inside)
         - #4d4d3f / #504d41  (inside)
         - #26251e/ #25241c   (below)
+- Status Screen - Explain Popover
+    - BG - #181813;

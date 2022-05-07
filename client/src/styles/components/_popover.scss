@@ -1,0 +1,10 @@
+@use "../variables" as v;
+@use "../mixins/index" as m;
+
+.er-popover {
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax
+    /* top | right | bottom | left */
+    padding: 5px 3px 10px 3px;
+    border-radius: 5px;
+    background-color: v.$popover-color-bg;
+}

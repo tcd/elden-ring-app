@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 
-import { Weapon, WeaponSlotId, weaponSlotIdName } from "@types"
+import { Weapon, WeaponSlotId, weaponSlotIdName } from "@app/types"
+import { MouseOverPopover } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
 
 // =============================================================================
@@ -36,19 +37,21 @@ export interface WeaponSlotProps {
 
 export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
 
+    const dispatch = useDispatch()
+
     const slotId = props.slotId
     const weapon = props?.weapon
-
-    const dispatch = useDispatch()
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         // dispatch(Actions.Builder.set({ number }))
         dispatch(Actions.Builder.openWeaponModal({ id: slotId }))
     }
 
-    let weaponImageElement: JSX.Element = null
-    let titleString: string
+    const elementId = `weapon-slot-${slotId}`
     const classNames = ["equipment-slot"]
+    let titleString: string
+    let weaponImageElement: JSX.Element = null
+
 
     if (slotId.startsWith("L")) {
         classNames.push("equipment-slot-weapon-left")
@@ -71,15 +74,17 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     }
 
     return (
-        <li
-            key={`weapon_slot_${slotId}`}
-            id={`weapon-${slotId}`}
-            className={classNames.join(" ")}
-            title={titleString}
-            onClick={handleClick}
-        >
-            {weaponImageElement && weaponImageElement}
-        </li>
+        <MouseOverPopover id={elementId} popoverText={titleString}>
+            <li
+                key={elementId}
+                id={elementId}
+                className={classNames.join(" ")}
+                title={titleString}
+                onClick={handleClick}
+            >
+                {weaponImageElement && weaponImageElement}
+            </li>
+        </MouseOverPopover>
     )
 }
 
