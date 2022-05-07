@@ -1,0 +1,4 @@
+{
+    "terminal.integrated.defaultProfile.windows":"PowerShell",
+    // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
+}
