@@ -4,11 +4,11 @@ import { mdiAccount } from "@mdi/js"
 import { AttributeNames } from "@app/types"
 import { Selectors } from "@app/state"
 import { ECard } from "@app/shared"
-import { EquipLoad } from "./EquipLoad"
-import { StatRow } from "./StatRow"
-import { StatRowPlus } from "./StatRowPlus"
+import { EquipLoad } from "../EquipLoad"
+import { StatRow } from "../StatRow"
+import { StatRowPlus } from "../StatRowPlus"
 
-export const CharacterStatus = (): JSX.Element => {
+export const CharacterStatusA = (): JSX.Element => {
 
     const attributes = useSelector(Selectors.Builder.attributes)
     const level = useSelector(Selectors.Builder.level)
@@ -30,7 +30,7 @@ export const CharacterStatus = (): JSX.Element => {
     })
 
     return (
-        <ECard title="Character Status" iconPath={mdiAccount}>
+        <ECard title="Character Status (A)" iconPath={mdiAccount}>
             <ul>
                 <StatRow title="Level" value={level} />
                 <StatRow title="Runes Held" value="∞" />

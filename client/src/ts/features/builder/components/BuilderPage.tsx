@@ -5,7 +5,7 @@ import { Equipment } from "./equipment"
 import { BaseStats } from "./BaseStats"
 import { ResistanceCard } from "./resistance"
 import { DefenseCard } from "./defense"
-import { CharacterStatus } from "./CharacterStatus"
+import { CharacterStatusA as CharacterStatus } from "./right-side-panels"
 
 import {
     ArmorModal,
@@ -25,10 +25,10 @@ export const BuilderPage = (): JSX.Element => {
                     <Equipment />
                 </div>
                 <div className="builder-column">
-                    <BaseStats />
+                    {/* <BaseStats />
                     <DefenseCard />
-                    <ResistanceCard />
-                    {/* <CharacterStatus /> */}
+                    <ResistanceCard /> */}
+                    <CharacterStatus />
                 </div>
             </div>
             <ArmorModal />
