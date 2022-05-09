@@ -1,31 +1,31 @@
 @use "../variables" as v;
 @use "../mixins/index" as m;
 
-$er-popover-border-size: 4px;
-$er-popover-border-overlap: $er-popover-border-size;
+$er-popover-border-size: 2.5px;
+// $er-popover-border-overlap: $er-popover-border-size;
 
-$er-popover-border-x-height: calc(100% - $er-popover-border-size - $er-popover-border-size);
-$er-popover-border-y-width:  calc(100% - $er-popover-border-size - $er-popover-border-size);
+// $er-popover-border-x-height: calc(100% - $er-popover-border-size - $er-popover-border-size);
+// $er-popover-border-y-width:  calc(100% - $er-popover-border-size - $er-popover-border-size);
 
-$gradient-stops: (
-      0%: 0.00,
-     25%: 0.75,
-     50%: 1.00,
-     75%: 0.75,
-    100%: 0.00,
-);
+// $gradient-stops: (
+//       0%: 0.00,
+//      25%: 0.75,
+//      50%: 1.00,
+//      75%: 0.75,
+//     100%: 0.00,
+// );
 
-@mixin paddingPlus($plus, $top, $right, $bottom, $left) {
-    $top: $plus + $top;
-    $right: $plus + $right;
-    $bottom: $plus + $bottom;
-    $left: $plus + $left;
-
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
-}
+// @mixin paddingPlus($plus, $top, $right, $bottom, $left) {
+//     $top: $plus + $top;
+//     $right: $plus + $right;
+//     $bottom: $plus + $bottom;
+//     $left: $plus + $left;
+//
+//     padding-top: $top;
+//     padding-right: $right;
+//     padding-bottom: $bottom;
+//     padding-left: $left;
+// }
 
 // =============================================================================
 // V1
@@ -40,5 +40,5 @@ $gradient-stops: (
     color: v.$popover-color-fg;
     background-color: v.$popover-color-bg;
     opacity: 0.90;
-    border: 2px solid v.$popover-color-border;
+    border: $er-popover-border-size solid v.$popover-color-border;
 }
