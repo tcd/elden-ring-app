@@ -1,12 +1,19 @@
 @use "../variables" as v;
 @use "../mixins/index" as m;
 
-$popover-border-color: #938b7c;
 $er-popover-border-size: 4px;
 $er-popover-border-overlap: $er-popover-border-size;
 
 $er-popover-border-x-height: calc(100% - $er-popover-border-size - $er-popover-border-size);
 $er-popover-border-y-width:  calc(100% - $er-popover-border-size - $er-popover-border-size);
+
+$gradient-stops: (
+      0%: 0.00,
+     25%: 0.75,
+     50%: 1.00,
+     75%: 0.75,
+    100%: 0.00,
+);
 
 @mixin paddingPlus($plus, $top, $right, $bottom, $left) {
     $top: $plus + $top;
@@ -24,95 +31,14 @@ $er-popover-border-y-width:  calc(100% - $er-popover-border-size - $er-popover-b
 // V1
 // =============================================================================
 
-.er-popover {
+.er__popover {
+    box-sizing: border-box;
     // https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax
     /* top | right | bottom | left */
-    padding: 5px 3px 10px 3px;
-    border-radius: 5px;
+    padding: 5px 15px 5px 10px;
+    border-radius: 4px;
     color: v.$popover-color-fg;
     background-color: v.$popover-color-bg;
-    border: 2px solid $popover-border-color;
-}
-
-// =============================================================================
-// V2
-// =============================================================================
-
-.er-popover-2 {
-    z-index: 2010;
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax
-    /* top | right | bottom | left */
-    // padding: 5px 3px 10px 3px;
-    // padding: $er-popover-border-size;
-    @include paddingPlus($er-popover-border-size, 10px, 10px, 10px, 10px);
-    // border-radius: 5px;
-    color: v.$popover-color-fg;
-    background-color: v.$popover-color-bg;
-    // border: 2px solid $popover-border-color;
-    position: relative;
-
-    .er-popover-border {
-        z-index: 2020;
-        position: absolute;
-        box-sizing: border-box;
-        // width: 1px;
-        // background-color: rebeccapurple;
-        // content: " ";
-    }
-
-    .er-popover-border-top,
-    .er-popover-border-bottom {
-        width: $er-popover-border-y-width;
-        height: $er-popover-border-size;
-        left: $er-popover-border-size;
-    }
-
-    .er-popover-border-left,
-    .er-popover-border-right {
-        height: $er-popover-border-x-height;
-        width: $er-popover-border-size;
-        top: $er-popover-border-size;
-    }
-
-    .er-popover-border-top {
-        top: 0;
-    }
-    .er-popover-border-bottom {
-        bottom: 0;
-    }
-
-    .er-popover-border-left {
-        left: 0;
-    }
-    .er-popover-border-right {
-        right: 0;
-    }
-
-    .er-popover-border-top    { background-color: red;}
-    .er-popover-border-bottom { background-color: orange;}
-    .er-popover-border-left   { background-color: blue;}
-    .er-popover-border-right  { background-color: cyan;}
-}
-
-// =============================================================================
-// V3
-// =============================================================================
-
-.er-popover-3 {
-    z-index: 2010;
-    // https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax
-    /* top | right | bottom | left */
-    // padding: 5px 3px 10px 3px;
-    // padding: $er-popover-border-size;
-    @include paddingPlus($er-popover-border-size, 10px, 10px, 10px, 10px);
-    // border-radius: 5px;
-    color: v.$popover-color-fg;
-    background-color: v.$popover-color-bg;
-    // border: 2px solid $popover-border-color;
-    // position: relative;
-
-    border-top:    $er-popover-border-size solid red;
-    border-right:  $er-popover-border-size solid orange;
-    border-bottom: $er-popover-border-size solid blue;
-    border-left:   $er-popover-border-size solid cyan;
+    opacity: 0.90;
+    border: 2px solid v.$popover-color-border;
 }

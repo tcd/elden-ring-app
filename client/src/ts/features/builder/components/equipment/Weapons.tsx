@@ -49,8 +49,8 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
 
     const elementId = `weapon-slot-${slotId}`
     const classNames = ["equipment-slot"]
-    let titleString: string
     let weaponImageElement: JSX.Element = null
+    let titleString: string
 
 
     if (slotId.startsWith("L")) {
@@ -74,12 +74,11 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     }
 
     return (
-        <MouseOverPopover id={elementId} popoverText={titleString}>
+        <MouseOverPopover id={elementId} popoverContent={titleString}>
             <li
                 key={elementId}
                 id={elementId}
                 className={classNames.join(" ")}
-                title={titleString}
                 onClick={handleClick}
             >
                 {weaponImageElement && weaponImageElement}

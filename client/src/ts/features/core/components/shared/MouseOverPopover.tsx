@@ -2,10 +2,10 @@ import { useState } from "react"
 import {
     Typography,
     Box,
-    Button,
     Popover,
     PopoverOrigin,
 } from "@mui/material"
+import { EPopoverContent } from "@app/shared"
 
 /**
  * This is the point on the anchor where the popover's anchorEl will attach to.
@@ -26,7 +26,7 @@ const transformOrigin: PopoverOrigin = {
 
 export interface MouseOverPopoverProps {
     id: string
-    popoverText: string
+    popoverContent: string | JSX.Element | JSX.Element[] | never[]
     children: JSX.Element | JSX.Element[] | never[]
 }
 
@@ -46,6 +46,14 @@ export const MouseOverPopover = (props: MouseOverPopoverProps): JSX.Element => {
     }
 
     const open = Boolean(anchorEl)
+
+    if (!props.popoverContent) {
+        return (
+            <>
+                {props?.children}
+            </>
+        )
+    }
 
     return (
         <>
@@ -71,7 +79,12 @@ export const MouseOverPopover = (props: MouseOverPopoverProps): JSX.Element => {
                 onClose={handlePopoverClose}
                 disableRestoreFocus
             >
-                <Typography sx={{ p: 1 }}>{props.popoverText}</Typography>
+                {/* <Typography className="er__popover" sx={{ p: 1 }}>{props.popoverText}</Typography> */}
+                <EPopoverContent>
+                    <>
+                        {props.popoverContent}
+                    </>
+                </EPopoverContent>
             </Popover>
         </>
     )

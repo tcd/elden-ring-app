@@ -10,7 +10,7 @@
 // import { mdiHandFrontRight } from "@mdi/js"
 // import { mdiHandFrontRightOutline } from "@mdi/js"
 
-import { Heading, ECard } from "@app/shared"
+import { Heading, ECard, EPopoverContent } from "@app/shared"
 
 const boxStyle = {
     // width: "200px",
@@ -35,20 +35,30 @@ export const TestPage = (): JSX.Element => {
             <section className={className}>
                 <div></div>
 
-                <div className="er-popover">
+                <div className="er__popover__1">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, itaque nostrum! Numquam excepturi officia aliquid quasi nihil velit eum cum vero nesciunt inventore rem rerum asperiores corrupti, accusantium facilis voluptatibus.
                 </div>
 
-                <div className="er-popover-2">
-                    <div className="er-popover-border er-popover-border-top">&nbsp;</div>
-                    <div className="er-popover-border er-popover-border-bottom">&nbsp;</div>
-                    <div className="er-popover-border er-popover-border-left">&nbsp;</div>
-                    <div className="er-popover-border er-popover-border-right">&nbsp;</div>
+                <EPopoverContent>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, itaque nostrum! Numquam excepturi officia aliquid quasi nihil velit eum cum vero nesciunt inventore rem rerum asperiores corrupti, accusantium facilis voluptatibus.
+                </EPopoverContent>
+
+                <div className="er__popover__2">
+                    <div className="er__popover__border er__popover__border--top">&nbsp;</div>
+                    <div className="er__popover__border er__popover__border--bottom">&nbsp;</div>
+                    <div className="er__popover__border er__popover__border--left">&nbsp;</div>
+                    <div className="er__popover__border er__popover__border--right">&nbsp;</div>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, itaque nostrum! Numquam excepturi officia aliquid quasi nihil velit eum cum vero nesciunt inventore rem rerum asperiores corrupti, accusantium facilis voluptatibus.
                 </div>
 
-                <div className="er-popover-3">
+                <div className="er__popover__3">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, itaque nostrum! Numquam excepturi officia aliquid quasi nihil velit eum cum vero nesciunt inventore rem rerum asperiores corrupti, accusantium facilis voluptatibus.
+                </div>
+
+                <div className="er__popover__4">
+                    <div className="er__popover__content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, itaque nostrum! Numquam excepturi officia aliquid quasi nihil velit eum cum vero nesciunt inventore rem rerum asperiores corrupti, accusantium facilis voluptatibus.
+                    </div>
                 </div>
 
                 <div></div>
