@@ -100,7 +100,7 @@ export enum WeaponTypeSingular {
     SPEAR                 = "Spear",
     STRAIGHT_SWORD        = "Straight Sword",
     THRUSTING_SWORD       = "Thrusting Sword",
-    TORCHE                = "Torche",
+    TORCH                 = "Torch",
     TWINBLADE             = "Twinblade",
     WARHAMMER             = "Warhammer",
     WHIP                  = "Whip",

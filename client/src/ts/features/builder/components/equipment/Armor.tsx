@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from "react-redux"
 
-import { Armor as IArmor, ArmorType } from "@types"
+import { Armor as IArmor, ArmorType } from "@app/types"
 import { Actions, Selectors } from "@app/state"
+import { MouseOverPopover } from "@app/shared"
 
 const armorTypeCssClasses = {
     [ArmorType.Head]:  "equipment-slot-armor-head",
@@ -10,28 +11,40 @@ const armorTypeCssClasses = {
     [ArmorType.Legs]:  "equipment-slot-armor-legs",
 }
 
-interface ArmorSlotProps {
+export interface ArmorSlotProps {
     type: ArmorType
     armor?: IArmor
-    handleClick: any
 }
 
-const ArmorSlot = ({ type, armor, handleClick }: ArmorSlotProps) => {
+export const ArmorSlot = ({ type, armor }: ArmorSlotProps) => {
+
+    const dispatch = useDispatch()
+
+    const elementId = `armor-slot-${type}`
     const classNames = ["equipment-slot", armorTypeCssClasses[type]]
+    let titleString = type.toString()
     let armorImage = null
     if (armor) {
+        titleString = armor.name
         classNames.push("equipment-slot-filled")
         armorImage = <img className="img-fluid" src={armor.image_url} alt={armor.name} />
     }
+
+    const handleClick = () => {
+        dispatch(Actions.Builder.openArmorModal({ type: type }))
+    }
+
     return (
-        <li
-            id={`armor-${type}`}
-            className={classNames.join(" ")}
-            key={`armor_slot_${type}`}
-            onClick={() => handleClick(type)}
-        >
-            {armorImage}
-        </li>
+        <MouseOverPopover id={elementId} popoverContent={titleString}>
+            <li
+                id={elementId}
+                key={elementId}
+                className={classNames.join(" ")}
+                onClick={handleClick}
+            >
+                {armorImage}
+            </li>
+        </MouseOverPopover>
     )
 }
 
@@ -51,10 +64,10 @@ export const Armor = (): JSX.Element => {
     return (
         <>
             <section className="armor w-100">
-                <ArmorSlot type={ArmorType.Head} armor={head} handleClick={handleClick} />
-                <ArmorSlot type={ArmorType.Chest} armor={chest} handleClick={handleClick} />
-                <ArmorSlot type={ArmorType.Arms} armor={arms} handleClick={handleClick} />
-                <ArmorSlot type={ArmorType.Legs} armor={legs} handleClick={handleClick} />
+                <ArmorSlot type={ArmorType.Head} armor={head}   />
+                <ArmorSlot type={ArmorType.Chest} armor={chest} />
+                <ArmorSlot type={ArmorType.Arms} armor={arms}   />
+                <ArmorSlot type={ArmorType.Legs} armor={legs}   />
             </section>
         </>
     )
