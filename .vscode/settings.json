@@ -1,4 +1,26 @@
 {
-    "terminal.integrated.defaultProfile.windows":"PowerShell",
+    // "terminal.integrated.defaultProfile.windows": "PowerShell",
     // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
+    "cSpell.enabled": true,
+    "cSpell.caseSensitive": false,
+    "cSpell.flagWords": [
+        "Staffs",
+        "Glintstone Staffs",
+    ],
+    "cSpell.words": [
+        "equippable",
+        "Glintstone",
+        "Greataxe",
+        "Greataxes",
+        "Greatbow",
+        "Greatbows",
+        "Greatsword",
+        "Greatswords",
+        "Katana",
+        "Katanas",
+        "Twinblade",
+        "Twinblades",
+        "Warhammer",
+        "Warhammers",
+    ],
 }
