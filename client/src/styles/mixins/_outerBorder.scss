@@ -3,9 +3,6 @@
 @use "../variables" as v;
 @use "customGradient";
 
-$menu-background: #26221C;
-$menu-border: #4D4B3F;
-
 // $inner-border-1: #423E35;
 // $inner-border-2: #4C4A3F;
 // $inner-border-3: #454139;
@@ -20,6 +17,6 @@ $top-bottom-border-stops: (
 @mixin outerBorder {
     height: 3px;
     background:
-        customGradient(90deg, $menu-background, $top-bottom-border-stops),
-        $menu-border;
+        customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
+        v.$modal-color-border;
 }
