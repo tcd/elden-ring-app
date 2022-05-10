@@ -7,7 +7,7 @@ import { Armor as IArmor } from "@types"
 import * as Armor from "./armor"
 
 // =============================================================================
-// Resistence
+// Resistance
 // =============================================================================
 
 export const selectNegation = (state: RootState, key: keyof(IArmor)) => {

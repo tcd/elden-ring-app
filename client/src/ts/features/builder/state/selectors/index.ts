@@ -4,7 +4,7 @@ import * as Armor from "./armor"
 
 import * as Stats from "./stats"
 import * as Attributes from "./attributes"
-import * as Resistance from "./resistence"
+import * as Resistance from "./resistance"
 import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
 

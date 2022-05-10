@@ -6,7 +6,7 @@ import * as Attributes from "./attributes"
 import * as Armor from "./armor"
 
 // =============================================================================
-// Resistence
+// Resistance
 // =============================================================================
 
 export const selectImmunity = (state: RootState): number => {
