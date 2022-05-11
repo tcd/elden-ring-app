@@ -2,8 +2,6 @@ import { Stat } from "@app/types"
 
 const SHARED_BODY_DESCRIPTION_1 = "The higher the number, the lower your susceptibility."
 const SHARED_BODY_DESCRIPTION_2 = "Governed by your attributes as well as defensive gear and any additional effects."
-// Defense          Attribites
-// Damage Negation = Armor + anything else.
 /**
  * - Defense:
  *     - Determined by attributes
