@@ -23,7 +23,7 @@ export const DESCRIPTIONS = {
         // Level
         // =========================================================================
         [Stat.LEVEL]:        "A cumulative figure that represents overall attribute strength.\nYou can level up using runes.",
-        [Stat.RUNES_NEEDED]: "Number of runes required to raise a level.<br/>When you level up, you can choose an attribute to increase.",
+        [Stat.RUNES_NEEDED]: "Number of runes required to raise a level.\nWhen you level up, you can choose an attribute to increase.",
         // =========================================================================
         // Attributes
         // =========================================================================
@@ -83,7 +83,7 @@ export const DESCRIPTIONS_PLUS = {
         // Level
         // =========================================================================
         [Stat.LEVEL]:        { "description": "A cumulative figure that represents overall attribute strength.\nYou can level up using runes." },
-        [Stat.RUNES_NEEDED]: { "description": "Number of runes required to raise a level.<br/>When you level up, you can choose an attribute to increase." },
+        [Stat.RUNES_NEEDED]: { "description": "Number of runes required to raise a level.\nWhen you level up, you can choose an attribute to increase." },
         // =========================================================================
         // Attributes
         // =========================================================================
