@@ -1,4 +1,4 @@
-export * from "./defense-for-rune-level"
+export * from "./defense-from-rune-level"
 
 export * from "./physical-defense-from-strength"
 export * from "./magic-defense-from-intelligence"
