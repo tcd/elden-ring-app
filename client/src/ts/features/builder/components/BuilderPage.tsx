@@ -25,10 +25,10 @@ export const BuilderPage = (): JSX.Element => {
                     <Equipment />
                 </div>
                 <div className="builder-column">
-                    {/* <BaseStats />
+                    <BaseStats />
                     <DefenseCard />
-                    <ResistanceCard /> */}
-                    <CharacterStatus />
+                    <ResistanceCard />
+                    {/* <CharacterStatus /> */}
                 </div>
             </div>
             <ArmorModal />

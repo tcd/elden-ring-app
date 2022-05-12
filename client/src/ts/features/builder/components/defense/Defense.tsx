@@ -1,6 +1,9 @@
 import { useSelector } from "react-redux"
 
+import { Stat } from "@app/types"
 import { Selectors } from "@app/state"
+import { DESCRIPTIONS } from "@app/data"
+import { StatRow } from "../StatRow"
 
 export const Defense = (): JSX.Element => {
 
@@ -13,29 +16,33 @@ export const Defense = (): JSX.Element => {
     const lightningNegation = useSelector(Selectors.Builder.defense.negation.lightning)
     const holyNegation      = useSelector(Selectors.Builder.defense.negation.holy)
 
-    const row = (name: string, value: any) => {
+    const stats = [
+        { title: "Physical",  value: physicalNegation,   stat: Stat.PHYSICAL_DEFENSE  },
+        { title: "VS Strike", value: strikeNegation,     stat: Stat.VS_STRIKE_DEFENSE },
+        { title: "VS Slash",  value: slashNegation,      stat: Stat.VS_SLASH_DEFENSE  },
+        { title: "VS Pierce", value: pierceNegation,     stat: Stat.VS_PIERCE_DEFENSE },
+        { title: "Magic",     value: magicNegation,      stat: Stat.MAGIC_DEFENSE     },
+        { title: "Fire",      value: fireNegation,       stat: Stat.FIRE_DEFENSE      },
+        { title: "Lightning", value: lightningNegation,  stat: Stat.LIGHTNING_DEFENSE },
+        { title: "Holy",      value: holyNegation,       stat: Stat.HOLY_DEFENSE      },
+    ]
+
+    const statRows = stats.map(({ title, value, stat }) => {
+        const key = `stat-row-${title}`
+        const description = DESCRIPTIONS.LEVEL_UP_SCREEN[stat]
         return (
-            <li className="stat-row" key={`defense_${name}`}>
-                <span>{name}</span>
-                <div>
-                    <span className="mx-3">
-                        {value}
-                    </span>
-                </div>
-            </li>
+            <StatRow
+                key={key}
+                title={title}
+                value={value}
+                description={description}
+            />
         )
-    }
+    })
 
     return (
         <ul>
-            {row("Physical", physicalNegation) }
-            {row("VS Strike", strikeNegation) }
-            {row("VS Slash", slashNegation) }
-            {row("VS Pierce", pierceNegation) }
-            {row("Magic", magicNegation) }
-            {row("Fire", fireNegation) }
-            {row("Lightning", lightningNegation) }
-            {row("Holy", holyNegation) }
+            {statRows}
         </ul>
     )
 }

@@ -41,4 +41,6 @@ $er-popover-border-size: 2.5px;
     background-color: v.$popover-color-bg;
     opacity: 0.90;
     border: $er-popover-border-size solid v.$popover-color-border;
+    white-space: pre-wrap;
+    font-size: 18px;
 }

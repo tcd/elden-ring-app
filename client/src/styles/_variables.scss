@@ -167,6 +167,15 @@ $table-color-fg: $body-color-fg !default;
 $table-color-bg:    transparent !default;
 
 // ----------------------------------------------------------------------------
+// Data Table
+// ----------------------------------------------------------------------------
+
+$data-table-color-fg: white;
+$data-table-header-color-bg: #1c1c19;
+$data-table-border-radius: 0.25rem !important;
+$data-table-border-color: #515151;
+
+// ----------------------------------------------------------------------------
 // Modal
 // ----------------------------------------------------------------------------
 

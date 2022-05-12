@@ -41,6 +41,13 @@ export const BuilderSelectors = {
     talismanOptions: Talismans.selectTalismanOptions,
     talismanModalOpen: Talismans.selectTalismanModalOpen,
     defense: {
+        defense: {
+            physical:  Defense.selectPhysicalDefense,
+            magic:     Defense.selectMagicDefense,
+            fire:      Defense.selectFireDefense,
+            lightning: Defense.selectLightningDefense,
+            holy:      Defense.selectHolyDefense,
+        },
         negation: {
             physical:  Defense.selectPhysicalNegation,
             strike:    Defense.selectStrikeNegation,

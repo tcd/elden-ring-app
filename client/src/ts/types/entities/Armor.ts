@@ -28,9 +28,9 @@ export interface Armor extends BaseEntity {
     // }
     // damageNegation: {
         physical?: number
-        strike?: number
-        slash?: number
-        pierce?: number
+        vs_strike?: number
+        vs_slash?: number
+        vs_pierce?: number
         magic?: number
         fire?: number
         lightning?: number

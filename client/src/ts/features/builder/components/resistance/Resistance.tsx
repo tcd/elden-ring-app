@@ -1,28 +1,22 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
+import { StatRow } from "../StatRow"
 
 export const Resistance = (): JSX.Element => {
 
     const resistance = useSelector(Selectors.Builder.resistance)
 
-    const row = (name: string, value: any) => {
-        return (
-            <li className="resistance-row" key={`resistance_${name}`}>
-                <span className="text-capitalize">{name}</span>
-                <div>
-                    <span className="mx-3">
-                        {value}
-                    </span>
-                </div>
-            </li>
-        )
-    }
-
     const rows = () => {
         const rows = []
         for (const [key, value] of Object.entries(resistance)) {
-            rows.push(row(key, value))
+            rows.push(
+                <StatRow
+                    title={key}
+                    value={value}
+                    key={`resistance_${key}`}
+                />,
+            )
         }
         return rows
     }

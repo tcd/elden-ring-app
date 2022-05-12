@@ -59,8 +59,10 @@ export const CustomTable = <T,>(props: CustomTablePropsPlus<T>): JSX.Element => 
                 // pagination
                 // selectableRowsComponent={Checkbox}
                 // selectableRowsComponentProps={selectProps}
-                sortIcon={<ArrowDownward/>}
                 // dense
+                // fixedHeaderScrollHeight="200px"
+                fixedHeader={true}
+                sortIcon={<ArrowDownward/>}
                 data={rows}
                 columns={validColumns}
                 {...otherProps}

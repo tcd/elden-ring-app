@@ -26,6 +26,7 @@ const transformOrigin: PopoverOrigin = {
 
 export interface MouseOverPopoverProps {
     id: string
+    key?: any
     popoverContent: string | JSX.Element | JSX.Element[] | never[]
     children: JSX.Element | JSX.Element[] | never[]
 }
