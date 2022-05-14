@@ -7,6 +7,7 @@ import {
 } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 
+import { COLORS } from "@app/theme"
 import { AppDispatch, Actions, Selectors } from "@app/state"
 import { SideNavContent } from "./SideNavContent"
 
@@ -38,7 +39,7 @@ export const AppSideNav = () => {
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                sx={{ mr: 2, color: "#D6CDB8" }}
+                sx={{ mr: 2, color: COLORS.white }}
                 onClick={handleIconClick}
             >
                 <MenuIcon />

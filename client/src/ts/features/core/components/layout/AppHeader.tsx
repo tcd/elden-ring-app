@@ -1,13 +1,14 @@
 import { Link as RouterLink } from "react-router-dom"
+import {
+    AppBar,
+    Box,
+    Container,
+    Link,
+    Toolbar,
+} from "@mui/material"
 
-import AppBar from "@mui/material/AppBar"
-import Box from "@mui/material/Box"
-import Container from "@mui/material/Container"
-import Link from "@mui/material/Link"
-import Toolbar from "@mui/material/Toolbar"
-// import Typography from "@mui/material/Typography"
-
-import { AppSideNav  } from "./side-nav"
+import { COLORS } from "@app/theme"
+import { AppSideNav } from "./side-nav"
 
 export const AppHeader = (): JSX.Element => {
 
@@ -24,7 +25,7 @@ export const AppHeader = (): JSX.Element => {
                         component={RouterLink}
                         className="text-shadow"
                         to={"/"}
-                        sx={{ mr: 2, textDecoration: "none", color: "#D6CDB8" }}
+                        sx={{ mr: 2, textDecoration: "none", color: COLORS.white }}
                     >
                             Elden Ring
                     </Link>
