@@ -15,8 +15,8 @@ import {
     ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material"
 
-import { ILinkData } from "@types"
-import { MdiIcon } from "@app/features/core/components"
+import { ILinkData } from "@app/types"
+import { MdiIcon } from "@app/shared"
 import { AppDispatch, Actions, Selectors } from "@app/state"
 import { SIDE_NAV_LINKS } from "./side-nav-links"
 

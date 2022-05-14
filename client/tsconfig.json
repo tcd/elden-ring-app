@@ -25,9 +25,8 @@
             "@util": ["./src/ts/util/index.ts"],
             "@types": ["./src/ts/types/index.ts"],
             "@assets/*": ["./src/assets/*"],
-            "@app/shared": ["./src/ts/features/core/components/shared/index.ts"],
+            "@app/shared": ["./src/ts/features/common/components/index.ts"],
             "@app/theme": ["./src/ts/util/theme/index.ts"],
-            // "@config": ["./src/ts/util/config.ts"],
         },
     },
     "include": [

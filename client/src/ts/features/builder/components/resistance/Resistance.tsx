@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import { capitalize } from "lodash"
 
 import { Selectors } from "@app/state"
 import { StatRow } from "../StatRow"
@@ -12,7 +13,7 @@ export const Resistance = (): JSX.Element => {
         for (const [key, value] of Object.entries(resistance)) {
             rows.push(
                 <StatRow
-                    title={key}
+                    title={capitalize(key)}
                     value={value}
                     key={`resistance_${key}`}
                 />,

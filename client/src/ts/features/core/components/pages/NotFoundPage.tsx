@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { Heading } from "@app/features/core"
+import { Heading } from "@app/shared"
 
 export const NotFoundPage = () => (
     <>

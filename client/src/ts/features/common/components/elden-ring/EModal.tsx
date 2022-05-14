@@ -1,9 +1,5 @@
 import { ReactNode } from "react"
-
 import ReactModal from "react-modal"
-
-import Box from "@mui/material/Box"
-import Modal from "@mui/material/Modal"
 
 export interface EModalProps {
     title: string
@@ -59,23 +55,4 @@ export const EModal = (props: EModalProps): JSX.Element => {
             <div className="bottom-border"></div>
         </ReactModal>
     )
-
-    // return (
-    //     <Modal
-    //         open={props.isOpen}
-    //         onClose={props.onClose}
-    //     >
-    //         <Box className="elden-ring-modal-content">
-    //             <div className="top-border"></div>
-    //             <header>{props.title}</header>
-    //             <div className="inner-border"></div>
-    //             <section>
-    //                 <>{props?.children}</>
-    //             </section>
-    //             <div className="inner-border"></div>
-    //             <footer></footer>
-    //             <div className="bottom-border"></div>
-    //         </Box>
-    //     </Modal>
-    // )
 }

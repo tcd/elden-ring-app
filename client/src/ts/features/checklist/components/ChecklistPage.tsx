@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import Checkbox from "@mui/material/Checkbox"
 import MapIcon from "@mui/icons-material/Map"
 
-import { Heading, RawHtml } from "@app/features/core"
+import { Heading, RawHtml } from "@app/shared"
 import { Selectors, Actions } from "@app/state"
 
 export const ChecklistPage = () => {
