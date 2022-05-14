@@ -1,8 +1,11 @@
 import { createTheme, Components, ThemeOptions } from "@mui/material"
 
-import { palette } from "./palette"
-import { typography, typographyComponents } from "./typography"
 import { generalComponents } from "./components"
+import { paletteOptions } from "./paletteOptions"
+import {
+    typographyComponents,
+    typographyOptions,
+} from "./typography"
 
 const components: Components = {
     ...generalComponents,
@@ -10,8 +13,8 @@ const components: Components = {
 }
 
 const options: ThemeOptions = {
-    palette,
-    typography,
+    palette: paletteOptions,
+    typography: typographyOptions,
     components,
 }
 
@@ -21,10 +24,10 @@ const options: ThemeOptions = {
 
 const darkModeOptions: ThemeOptions = {
     palette: {
-        ...palette,
+        ...paletteOptions,
         mode: "dark",
     },
-    typography,
+    typography: typographyOptions,
     components,
 }
 
@@ -34,10 +37,10 @@ const darkModeOptions: ThemeOptions = {
 
 const lightModeOptions: ThemeOptions = {
     palette: {
-        ...palette,
+        ...paletteOptions,
         mode: "light",
     },
-    typography,
+    typography: typographyOptions,
     components,
 }
 

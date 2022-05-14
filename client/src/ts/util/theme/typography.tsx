@@ -2,25 +2,9 @@ import {
     TypographyVariantsOptions,
     Components,
 } from "@mui/material"
-
-// // import AgmenaProWoff2 from "../../../assets/fonts/AgmenaPro/woff/AgmenaPro-Regular.woff2"
-// import AgmenaProWoff2     from "@assets/fonts/AgmenaPro/woff/AgmenaPro-Regular.woff2"
-// // import AgmenaProBoldWoff2 from "@assets/fonts/AgmenaPro/woff/AgmenaPro-Bold.woff2"
-// import "../../../assets/fonts/AgmenaPro/woff/AgmenaPro-Regular.woff2"
-
-// const fontFolderPath = "../assets/fonts/AgmenaPro/woff/"
-
-export const typography: TypographyVariantsOptions = {
-    // allVariants: {
-    fontFamily: [
-        "garamond-premier-pro-display",
-        // "Agmena Pro",
-        // '"Helvetica Neue"',
-        // "Arial",
-        // "sans-serif",
-    ].join(","),
-    // },
-}
+import {
+    TypographyOptions,
+} from "@mui/material/styles/createTypography"
 
 const baseTypographyStyles = `
     @font-face {
@@ -34,5 +18,17 @@ const baseTypographyStyles = `
 export const typographyComponents: Components = {
     MuiCssBaseline: {
         styleOverrides: baseTypographyStyles,
+    },
+}
+
+export const typographyOptions: TypographyOptions = {
+    allVariants: {
+        fontFamily: [
+            "garamond-premier-pro-display",
+            // "Agmena Pro",
+            // '"Helvetica Neue"',
+            // "Arial",
+            // "sans-serif",
+        ].join(","),
     },
 }

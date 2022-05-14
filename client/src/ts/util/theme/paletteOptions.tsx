@@ -2,7 +2,7 @@ import { PaletteOptions } from "@mui/material"
 
 import { COLORS } from "."
 
-export const palette: PaletteOptions = {
+export const paletteOptions: PaletteOptions = {
     common: {
         black: COLORS.black,
         white: COLORS.white,

@@ -8,6 +8,7 @@ import {
     ListItemIcon,
     ListItemText,
     Collapse,
+    SxProps,
 } from "@mui/material"
 import {
     ExpandMore as ExpandMoreIcon,
@@ -101,9 +102,12 @@ export const SideNavContent = () => {
 
 export interface NavItemProps {
     linkData: ILinkData
+    inCollapse?: boolean
 }
 
-const NavItem_Link = ({ linkData }: NavItemProps): JSX.Element => {
+const NavItem_Link = (props: NavItemProps): JSX.Element => {
+
+    const { linkData } = props
 
     const dispatch: AppDispatch = useDispatch()
     const navigate = useNavigate()
@@ -112,6 +116,14 @@ const NavItem_Link = ({ linkData }: NavItemProps): JSX.Element => {
 
     const { title, url, icon } = linkData
     const active = (url == pathname)
+
+    let sx: SxProps = {}
+    if (props?.inCollapse === true) {
+        sx = {
+            // justifyContent: sideNavOpened ? "initial" : "center",
+            pl: 8.5,
+        }
+    }
 
     const handleClick = () => {
         if (sideNavOpened) {
@@ -126,6 +138,7 @@ const NavItem_Link = ({ linkData }: NavItemProps): JSX.Element => {
         <ListItemButton
             onClick={handleClick}
             selected={active}
+            sx={sx}
         >
             <ListItemIcon>
                 <MdiIcon path={icon}/>
@@ -146,7 +159,13 @@ const NavItemCollapse = ({ linkData, parentKey }: NavItemCollapseProps): JSX.Ele
     const open = expandedSections.includes(linkData.title)
 
     const children = linkData.links.map((childData, index) => {
-        return <NavItem_Link linkData={childData} key={`${parentKey}-collapse-child-${index}`}/>
+        return (
+            <NavItem_Link
+                key={`${parentKey}-collapse-child-${index}`}
+                linkData={childData}
+                inCollapse={true}
+            />
+        )
     })
 
     return (
