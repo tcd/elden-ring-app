@@ -16,6 +16,7 @@ const initialState: ChecklistState = {
         ...UpgradeMaterialsChecklist,
         "102": true,
         "103": true,
+        "105": true,
     },
 }
 
