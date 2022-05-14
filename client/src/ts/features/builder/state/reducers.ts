@@ -7,9 +7,6 @@ import {
     TalismanSlotId,
     WeaponSlotId,
 } from "@types"
-import {
-    STARTING_CLASSES,
-} from "@app/data"
 import { BuilderState } from "./state"
 
 import {

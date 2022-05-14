@@ -12,7 +12,9 @@ export enum EquipmentEffectType {
 }
 
 export interface EquipmentEffect extends BaseEntity {
+    /** Flat or Percentage */
     effect_method: EquipmentEffectMethod
+    /** Increase or Decrease */
     effect_type: EquipmentEffectType
     affected_stat: Stat
     value: number

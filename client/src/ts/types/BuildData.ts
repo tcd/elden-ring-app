@@ -3,6 +3,7 @@ import {
     Attributes,
     StartingClassName,
     TalismanSet,
+    WeaponSet,
 } from "@types"
 
 export interface BuildData {
@@ -10,5 +11,5 @@ export interface BuildData {
     attributes: Attributes
     armor_names: ArmorSet
     talisman_names: TalismanSet
-    weapon_names: any
+    weapon_names: WeaponSet
 }
