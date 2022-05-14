@@ -4,10 +4,10 @@ import {
     ArmorType,
     KitchenSink,
     StartingClassName,
+    TalismanSlotId,
     WeaponSlotId,
 } from "@types"
 import {
-    TALISMANS,
     STARTING_CLASSES,
 } from "@app/data"
 import { BuilderState } from "./state"
@@ -36,8 +36,8 @@ export const reducers = {
     removeTalisman(state: BuilderState) {
         state.talisman_names[state.talisman.active_number?.toString()] = null
     },
-    openTalismanModal(state: BuilderState, action: PayloadAction<{ number: number }>) {
-        state.talisman.active_number = action.payload.number
+    openTalismanModal(state: BuilderState, action: PayloadAction<{ id: TalismanSlotId }>) {
+        state.talisman.active_number = action.payload.id
         state.talisman.modal_open = true
     },
     closeTalismanModal(state: BuilderState) {
@@ -67,7 +67,7 @@ export const reducers = {
     setStartingClass(state: BuilderState, action: PayloadAction<{ name: string }>) {
         const className = action.payload.name as StartingClassName
         state.startingClassName = className
-        state.startingClass = STARTING_CLASSES.find(x => x.name == className)
+        // state.startingClass = STARTING_CLASSES.find(x => x.name == className)
     },
     // =========================================================================
     // Armor

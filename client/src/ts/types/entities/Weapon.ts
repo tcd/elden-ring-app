@@ -3,6 +3,7 @@ import {
     WeaponSkill,
     WeaponTypePluralString,
     ScalingTierString,
+    EquipmentEffect,
 } from "@types"
 
 export interface Weapon extends BaseEntity {
@@ -21,6 +22,8 @@ export interface Weapon extends BaseEntity {
     incantation_scaling?: number
     spell_boost_groups?: string[]
     spell_boost_percentage?: number
+
+    effects?: EquipmentEffect[]
 
     attack_physical: number
     attack_magic: number

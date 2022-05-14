@@ -2,6 +2,7 @@ export * from "./app"
 export * from "./entities"
 
 export * from "./Attributes"
+export * from "./BuildData"
 export * from "./Damage"
 export * from "./Encumbrance"
 export * from "./KitchenSink"

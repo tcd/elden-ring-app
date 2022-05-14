@@ -1,7 +1,14 @@
 import { useSelector, useDispatch } from "react-redux"
 
-import { Talisman } from "@types"
-import { Actions, Selectors } from "@app/state"
+import {
+    Talisman,
+    TalismanSlotId,
+    TalismanSlotIds,
+} from "@app/types"
+import {
+    Actions,
+    Selectors,
+} from "@app/state"
 
 export const Talismans = (): JSX.Element => {
 
@@ -9,27 +16,27 @@ export const Talismans = (): JSX.Element => {
 
     const talismans = useSelector(Selectors.Builder.talismans)
 
-    const handleClick = (number: number) => {
-        dispatch(Actions.Builder.openTalismanModal({ number }))
+    const handleClick = (id: TalismanSlotId) => {
+        dispatch(Actions.Builder.openTalismanModal({ id }))
     }
 
-    const slotWithTalisman = (number: number, talisman?: Talisman) => {
+    const slotWithTalisman = (id: TalismanSlotId, talisman?: Talisman) => {
         return (
-            <li className="equipment-slot equipment-slot-filled equipment-slot-talisman" key={`talisman_${number}`} onClick={() => handleClick(number)}>
+            <li className="equipment-slot equipment-slot-filled equipment-slot-talisman" key={`talisman_${id}`} onClick={() => handleClick(id)}>
                 {/* <span>{talisman.name}</span> */}
                 <img className="img-fluid" src={talisman.image_url} alt={talisman.name} />
             </li>
         )
     }
 
-    const slotWithoutTalisman = (number: number, _talisman?: Talisman) => {
-        const titleString = `Talisman ${number}`
+    const slotWithoutTalisman = (id: TalismanSlotId, _talisman?: Talisman) => {
+        const titleString = `Talisman ${id}`
         return (
             <li
                 className="equipment-slot equipment-slot-talisman"
-                key={`talisman_${number}`}
+                key={`talisman_${id}`}
                 title={titleString}
-                onClick={() => handleClick(number)}
+                onClick={() => handleClick(id)}
             >
                 {/* <img className="img-fluid" src={talismanImage} alt={`Talisman ${number}`} /> */}
             </li>
@@ -38,14 +45,13 @@ export const Talismans = (): JSX.Element => {
 
     const rows = () => {
         const rows = []
-        let number = 1
-        for (const t of talismans) {
-            if (t == null) {
-                rows.push(slotWithoutTalisman(number, t))
+        for (const [index, talisman] of talismans.entries()) {
+            const id = TalismanSlotIds[index]
+            if (talisman == null) {
+                rows.push(slotWithoutTalisman(id, talisman))
             } else {
-                rows.push(slotWithTalisman(number, t))
+                rows.push(slotWithTalisman(id, talisman))
             }
-            number++
         }
         return rows
     }

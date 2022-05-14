@@ -1,13 +1,10 @@
 import { sum } from "lodash"
 
-import { EquipmentEffect } from "@types"
 import { RootState } from "@app/state"
-import { isBlank } from "@app/util"
 import {
     LEVEL_HP_MAP,
     LEVEL_FP_MAP,
     LEVEL_STAMINA_MAP,
-    STARTING_CLASSES,
     LEVEL_RUNES_MAP,
 } from "@app/data"
 
@@ -16,22 +13,12 @@ import * as Talismans from "./talismans"
 import * as Armor from "./armor"
 
 import * as Attributes from "./attributes"
-import * as Resistance from "./resistance"
-import * as Defense from "./defense"
+// import * as Resistance from "./resistance"
+// import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
+import * as StartingClass from "./starting-class"
 
-const selectBuilderState = (state: RootState) => { return state?.Builder }
-
-export const selectStartingClassName = (state: RootState) => { return state?.Builder?.startingClassName }
-
-export const selectStartingClass = (state: RootState) => {
-    const startingClassName = state?.Builder?.startingClassName
-    if (isBlank(startingClassName)) {
-        return null
-    }
-    const startingClass = STARTING_CLASSES.find(x => x.name == startingClassName)
-    return startingClass
-}
+// const selectBuilderState = (state: RootState) => { return state?.Builder }
 
 // don't think this is performant.
 const selectLevelAlt = (state: RootState): number => {
@@ -41,7 +28,7 @@ const selectLevelAlt = (state: RootState): number => {
 
 export const selectLevel = (state: RootState): number => {
     const addedLevels = Attributes.selectTotalAttributes(state)
-    const startingClass = selectStartingClass(state)
+    const startingClass = StartingClass.selectStartingClass(state)
     const l = startingClass?.attributes?.level ?? 0
     const t = startingClass?.attributes?.total ?? 0
     return addedLevels - t + l

@@ -7,10 +7,13 @@ import * as Attributes from "./attributes"
 import * as Resistance from "./resistance"
 import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
+import * as StartingClass from "./starting-class"
 
 import * as Api from "./api"
+import { selectExportData } from "./export-data"
 
 export const BuilderSelectors = {
+    exportData: selectExportData,
     api: {
         loading:               Api.selectFetchingEverything,
         shouldFetchEverything: Api.selectShouldFetchEverything,
@@ -21,7 +24,8 @@ export const BuilderSelectors = {
         weaponTypes:           Api.selectWeaponTypes,
         weaponSkills:          Api.selectWeaponSkills,
     },
-    startingClassName: Stats.selectStartingClassName,
+    startingClassName: StartingClass.selectStartingClassName,
+    startingClass: StartingClass.selectStartingClass,
     level: Stats.selectLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
     stats: Stats.selectStats,
@@ -37,7 +41,14 @@ export const BuilderSelectors = {
         arcane:       Attributes.selectArcane,
     },
     resistance: Resistance.selectResistance,
+    /** Returns all talismans. */
     talismans: Talismans.selectTalismansArray,
+    /**
+     * Can't wear two of the same talisman.
+     * Some talismans restrict the use of others.
+     *
+     * This returns talismans available to equip in the active talisman slot.
+     */
     talismanOptions: Talismans.selectTalismanOptions,
     talismanModalOpen: Talismans.selectTalismanModalOpen,
     defense: {

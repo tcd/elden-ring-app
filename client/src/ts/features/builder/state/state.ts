@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 import {
-    ArmorType,
     ArmorSet,
+    ArmorType,
     Attributes,
     KitchenSink,
     RequestState,
     StartingClass,
     StartingClassName,
-    Talisman,
+    TalismanSet,
+    TalismanSlotId,
+    WeaponSet,
     WeaponSlotId,
 } from "@types"
 import { FEATURE_KEYS } from "@util"
@@ -23,31 +25,16 @@ export interface BuilderState {
     everythingRequest: RequestState<KitchenSink>
 
     startingClassName: StartingClassName,
-    startingClass: StartingClass,
+    // startingClass: StartingClass,
 
     attributes: Attributes
-
     armor_names: ArmorSet
-
-    talisman_names: {
-        "1"?: string
-        "2"?: string
-        "3"?: string
-        "4"?: string
-    }
-
-    weapon_names: {
-        R1?: string
-        R2?: string
-        R3?: string
-        L1?: string
-        L2?: string
-        L3?: string
-    }
+    talisman_names: TalismanSet
+    weapon_names: WeaponSet
 
     talisman: {
         modal_open: boolean
-        active_number: number
+        active_number: TalismanSlotId
     }
     weapon: {
         modal_open: boolean
@@ -70,7 +57,7 @@ const initialState: BuilderState = {
     },
 
     startingClassName: null,
-    startingClass: null,
+    // startingClass: null,
 
     attributes: {
         "vigor":        0,
@@ -124,7 +111,7 @@ const myBuild: BuilderState = {
     ...initialState,
 
     startingClassName: StartingClassName.Samurai,
-    startingClass: STARTING_CLASSES.find(x => x.name == "samurai"),
+    // startingClass: STARTING_CLASSES.find(x => x.name == "samurai"),
 
     attributes: {
         "vigor":        50,

@@ -11,6 +11,9 @@ export enum AttributeName {
 
 export const AttributeNames = Object.keys(AttributeName)
 
+/**
+ * Additional attribute points beyond those of a given starting class.
+ */
 export interface Attributes {
     [AttributeName.vigor]: number
     [AttributeName.mind]: number

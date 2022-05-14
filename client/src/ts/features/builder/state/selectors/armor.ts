@@ -8,41 +8,50 @@ export const selectChestName = (state: RootState): string => { return state?.Bui
 export const selectArmsName  = (state: RootState): string => { return state?.Builder?.armor_names.Arms  }
 export const selectLegsName  = (state: RootState): string => { return state?.Builder?.armor_names.Legs  }
 
-const selectName = (name: string, data: Armor[]) => {
+const selectArmorByName = (name: string, data: Armor[]) => {
     if (isBlank(name)) { return null }
     return data.find(x => x.name == name)
 }
 
-export const selectHead  = (state: RootState) => {
+/** Returns equipped Head armor. */
+export const selectHead  = (state: RootState): Armor => {
     const armor = Api.selectArmor(state)
     if (isBlank(armor)) {
         return null
     }
-    return selectName(selectHeadName(state), armor)
+    return selectArmorByName(selectHeadName(state), armor)
 }
-export const selectChest = (state: RootState) => {
+/** Returns equipped Chest armor. */
+export const selectChest = (state: RootState): Armor => {
     const armor = Api.selectArmor(state)
     if (isBlank(armor)) {
         return null
     }
-    return selectName(selectChestName(state), armor)
+    return selectArmorByName(selectChestName(state), armor)
 }
-export const selectArms  = (state: RootState) => {
+/** Returns equipped Arms armor. */
+export const selectArms  = (state: RootState): Armor => {
     const armor = Api.selectArmor(state)
     if (isBlank(armor)) {
         return null
     }
-    return selectName(selectArmsName(state), armor)
+    return selectArmorByName(selectArmsName(state), armor)
 }
-export const selectLegs  = (state: RootState) => {
+/** Returns equipped Legs armor. */
+export const selectLegs  = (state: RootState): Armor => {
     const armor = Api.selectArmor(state)
     if (isBlank(armor)) {
         return null
     }
-    return selectName(selectLegsName(state), armor)
+    return selectArmorByName(selectLegsName(state), armor)
 }
 
-export const selectArmorArray = (state: RootState) => {
+/**
+ * Returns an array of armor for each slot.
+ *
+ * **May contain null values.**
+ */
+export const selectArmorArray = (state: RootState): Armor[] => {
     return [
         selectHead(state),
         selectChest(state),
@@ -51,17 +60,18 @@ export const selectArmorArray = (state: RootState) => {
     ]
 }
 
-export const selectCompactArmor = (state: RootState) => {
+/**
+ * Returns an array of all equipped armor.
+ *
+ * Will not include null values.
+ */
+export const selectCompactArmor = (state: RootState): Armor[] => {
     return compactArray(selectArmorArray(state))
 }
 
-export const selectArmorModalOpen = (state: RootState) => {
-    return state.Builder.armor.modal_open
-}
+export const selectArmorModalOpen = (state: RootState): boolean => { return state.Builder.armor.modal_open }
 
-export const selectActiveArmorType = (state: RootState) => {
-    return state.Builder.armor.active_type
-}
+export const selectActiveArmorType = (state: RootState): ArmorType => { return state.Builder.armor.active_type }
 
 export const selectActiveArmorName = (state: RootState): string => {
     const activeType = selectActiveArmorType(state)

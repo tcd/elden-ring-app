@@ -1,4 +1,4 @@
-import { Talisman } from "@types"
+import { Talisman, TalismanSlotId } from "@types"
 import { RootState } from "@app/state"
 import { isBlank, compactArray } from "@app/util"
 import * as Api from "./api"
@@ -10,17 +10,17 @@ const selectTalisman = (state: RootState, name?: string) => {
     return talismans.find(x => x.name == name)
 }
 
-export const selectTalisman1Name = (state: RootState) => { return state?.Builder?.talisman_names["1"] }
-export const selectTalisman2Name = (state: RootState) => { return state?.Builder?.talisman_names["2"] }
-export const selectTalisman3Name = (state: RootState) => { return state?.Builder?.talisman_names["3"] }
-export const selectTalisman4Name = (state: RootState) => { return state?.Builder?.talisman_names["4"] }
+export const selectTalisman1Name = (state: RootState): string => { return state?.Builder?.talisman_names["1"] }
+export const selectTalisman2Name = (state: RootState): string => { return state?.Builder?.talisman_names["2"] }
+export const selectTalisman3Name = (state: RootState): string => { return state?.Builder?.talisman_names["3"] }
+export const selectTalisman4Name = (state: RootState): string => { return state?.Builder?.talisman_names["4"] }
 
-export const selectTalisman1 = (state: RootState) => { return selectTalisman(state, selectTalisman1Name(state)) }
-export const selectTalisman2 = (state: RootState) => { return selectTalisman(state, selectTalisman2Name(state)) }
-export const selectTalisman3 = (state: RootState) => { return selectTalisman(state, selectTalisman3Name(state)) }
-export const selectTalisman4 = (state: RootState) => { return selectTalisman(state, selectTalisman4Name(state)) }
+export const selectTalisman1 = (state: RootState): Talisman => { return selectTalisman(state, selectTalisman1Name(state)) }
+export const selectTalisman2 = (state: RootState): Talisman => { return selectTalisman(state, selectTalisman2Name(state)) }
+export const selectTalisman3 = (state: RootState): Talisman => { return selectTalisman(state, selectTalisman3Name(state)) }
+export const selectTalisman4 = (state: RootState): Talisman => { return selectTalisman(state, selectTalisman4Name(state)) }
 
-export const selectTalismansArray = (state: RootState) => {
+export const selectTalismansArray = (state: RootState): Talisman[] => {
     return [
         selectTalisman1(state),
         selectTalisman2(state),
@@ -29,15 +29,15 @@ export const selectTalismansArray = (state: RootState) => {
     ]
 }
 
-export const selectCompactTalismans = (state: RootState) => {
+export const selectCompactTalismans = (state: RootState): Talisman[] => {
     return compactArray(selectTalismansArray(state))
 }
 
-export const selectTalismanModalOpen = (state: RootState) => {
+export const selectTalismanModalOpen = (state: RootState): boolean => {
     return state.Builder.talisman.modal_open
 }
 
-export const selectActiveTalismanNumber = (state: RootState) => {
+export const selectActiveTalismanNumber = (state: RootState): TalismanSlotId => {
     return state.Builder.talisman.active_number
 }
 
@@ -63,7 +63,13 @@ export const selectActiveTalisman = (state: RootState): Talisman => {
     return activeTalisman
 }
 
-export const selectTalismanOptions = (state: RootState) => {
+/**
+ * Can't wear two of the same talisman.
+ * Some talismans restrict the use of others.
+ *
+ * This returns talismans available to equip in the active talisman slot.
+ */
+export const selectTalismanOptions = (state: RootState): Talisman[] => {
     let equipped = selectTalismansArray(state)
     equipped = compactArray(equipped)
     const talismans = Api.selectTalismans(state)
