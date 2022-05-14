@@ -72,9 +72,9 @@ export const selectMaxEquipLoad = (state: RootState): number => {
         for (const talisman of talismans) {
             if (talisman.effects) {
                 for (const effect of talisman.effects) {
-                    if (effect.stat == Stat.MAX_EQUIP_LOAD) {
+                    if (effect.affected_stat == Stat.MAX_EQUIP_LOAD) {
                         let adjustment = 0
-                        switch (effect.method) {
+                        switch (effect.effect_method) {
                             case EquipmentEffectMethod.flat:
                                 adjustment = effect.value
                                 break
@@ -84,7 +84,7 @@ export const selectMaxEquipLoad = (state: RootState): number => {
                             default:
                                 break
                         }
-                        if (effect.type == EquipmentEffectType.decrease) {
+                        if (effect.effect_type == EquipmentEffectType.decrease) {
                             adjustment  = adjustment * -1
                         }
                         equipLoad += adjustment
