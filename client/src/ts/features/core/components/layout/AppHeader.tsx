@@ -7,7 +7,7 @@ import Link from "@mui/material/Link"
 import Toolbar from "@mui/material/Toolbar"
 // import Typography from "@mui/material/Typography"
 
-import { MobileContent  } from "./MobileContent"
+import { AppSideNav  } from "./side-nav"
 
 export const AppHeader = (): JSX.Element => {
 
@@ -16,7 +16,7 @@ export const AppHeader = (): JSX.Element => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
 
-                    <MobileContent />
+                    <AppSideNav />
 
                     <Link
                         noWrap
