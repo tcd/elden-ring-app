@@ -9,6 +9,16 @@
 					"label": "[MUI] [function] createTypography"
 				}
 			]
+		},
+		{
+			"path": "client/node_modules/@mui/material/styles/createTypography.d.ts",
+			"bookmarks": [
+				{
+					"line": 40,
+					"column": 24,
+					"label": "TS wizardry?"
+				}
+			]
 		}
 	]
 }
