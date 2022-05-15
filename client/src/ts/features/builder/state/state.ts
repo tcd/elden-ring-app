@@ -6,7 +6,6 @@ import {
     Attributes,
     KitchenSink,
     RequestState,
-    StartingClass,
     StartingClassName,
     TalismanSet,
     TalismanSlotId,
@@ -14,7 +13,6 @@ import {
     WeaponSlotId,
 } from "@types"
 import { FEATURE_KEYS } from "@util"
-import { STARTING_CLASSES } from "@app/data"
 import { reducers, extraReducers } from "./reducers"
 
 // Define a type for the slice state
@@ -25,7 +23,6 @@ export interface BuilderState {
     everythingRequest: RequestState<KitchenSink>
 
     startingClassName: StartingClassName,
-    // startingClass: StartingClass,
 
     attributes: Attributes
     armor_names: ArmorSet
@@ -57,7 +54,6 @@ const initialState: BuilderState = {
     },
 
     startingClassName: null,
-    // startingClass: null,
 
     attributes: {
         "vigor":        0,
@@ -111,7 +107,6 @@ const myBuild: BuilderState = {
     ...initialState,
 
     startingClassName: StartingClassName.Samurai,
-    // startingClass: STARTING_CLASSES.find(x => x.name == "samurai"),
 
     attributes: {
         "vigor":        50,
@@ -119,9 +114,9 @@ const myBuild: BuilderState = {
         "endurance":    60,
         "strength":     80,
         "dexterity":    45,
-        "intelligence": 25,
+        "intelligence": 26,
         "faith":        80,
-        "arcane":       23,
+        "arcane":       24,
     },
 
     // talisman_names: {
