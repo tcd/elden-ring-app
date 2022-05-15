@@ -5,6 +5,7 @@ export type FiniteResourceType =
     | "Great Ghost Glovewort" // https://eldenring.wiki.fextralife.com/Great+Ghost+Glovewort
     | "Golden Seed" // https://eldenring.wiki.fextralife.com/Golden+Seed
     | "Sacred Tear" // https://eldenring.wiki.fextralife.com/Sacred+Tear
+    | "Bell Bearing" // https://eldenring.wiki.fextralife.com/Bell+Bearings
 
 export interface FiniteResource {
     obtained?: boolean
@@ -16,6 +17,8 @@ export interface FiniteResource {
     description: string
     mapLink?: string
     questLink?: string
+    unlocks?: string[]
+    metadata?: any
 }
 
 export type FiniteResourceChecklist = { [key: string]: boolean }
@@ -59,8 +62,8 @@ export const AncientDragonSmithingStones: FiniteResource[] = [
         id: 101,
         type: "Ancient Dragon Smithing Stone",
         quest: "Nepheli Loux",
-        location: "Godrick's Throneroom",
-        description: /*html*/`Obtained as a reward for completing <a href="https://eldenring.wiki.fextralife.com/Nepheli+Loux">Nepheli Loux</a>'s questline in Godrick's Throneroom.`,
+        location: "Godrick's Throne Room",
+        description: /*html*/`Obtained as a reward for completing <a href="https://eldenring.wiki.fextralife.com/Nepheli+Loux">Nepheli Loux</a>'s questline in Godrick's Throne Room.`,
         questLink: "https://eldenring.wiki.fextralife.com/Nepheli+Loux",
     },
     {
@@ -312,11 +315,46 @@ export const GreatGraveGlovewort: FiniteResource[] = [
     },
 ]
 
-
 export const GreatGhostGlovewort: FiniteResource[] = [
     {
         id: 401,
         type: "Great Ghost Glovewort",
+        quest: null,
+        location: "Ainsel River",
+        description: /*html*/`Can be obtained from a chest in a room underneath the massive skeleton and throne at Ainsel River, near the Dragonkin Soldier of Nokstella site of grace.`,
+        mapLink: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1408&lat=-123.585937&lng=63.293324&zoom=8&code=mapB",
+    },
+    {
+        id: 402,
+        type: "Great Ghost Glovewort",
+        quest: null,
+        location: "Night's Sacred Ground",
+        description: /*html*/`Found in a chest under the massive skeleton statue in Night's Sacred Ground.`,
+        mapLink: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=1957&lat=-181.10937&lng=129.1905&zoom=8&code=mapB",
+    },
+    {
+        id: 403,
+        type: "Great Ghost Glovewort",
+        quest: null,
+        location: "Nokstella, Eternal City",
+        description: /*html*/`Found in a chest at the back of a narrow room in Nokstella, Eternal City.<br/>Beware the Silver Tear disguised as a large iron ball hanging off of the ceiling waiting to ambush you.`,
+        mapLink: "https://eldenring.wiki.fextralife.com/Interactive+Map?id=2755&lat=-121.08438&lng=65.86085&zoom=8&code=mapB",
+    },
+    {
+        id: 404,
+        type: "Great Ghost Glovewort",
+        quest: null,
+        location: "Mohgwyn Dynasty Mausoleum",
+        description: /*html*/`In the cave-like room preceding the Dynasty Mausoleum Midpoint site of grace, in a lower section filled with walking corpses.`,
+        mapLink: "https://eldenring.wiki.fextralife.com/Interactive+map?id=4675&lat=-182.601562&lng=146.674613&zoom=8&code=mapB",
+    },
+]
+
+
+export const BellBearings: FiniteResource[] = [
+    {
+        id: 501,
+        type: "Bell Bearing",
         quest: null,
         location: "Ainsel River",
         description: /*html*/`Can be obtained from a chest in a room underneath the massive skeleton and throne at Ainsel River, near the Dragonkin Soldier of Nokstella site of grace.`,
