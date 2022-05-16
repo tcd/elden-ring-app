@@ -24,8 +24,8 @@ export const EModal = (props: EModalProps): JSX.Element => {
 
     return (
         <ReactModal
-            className="elden-ring-modal"
-            overlayClassName="elden-ring-modal-overlay"
+            className="er__modal"
+            overlayClassName="er__modal__overlay"
             isOpen={props.isOpen}
             onRequestClose={props.onClose}
             ariaHideApp={false}
@@ -40,7 +40,7 @@ export const EModal = (props: EModalProps): JSX.Element => {
                 <div className="inner-border"></div>
             </div>
 
-            <section className="elden-ring-modal-main flex-center">
+            <section className="er__modal__main flex-center">
                 <>{props?.children}</>
             </section>
 
@@ -48,7 +48,7 @@ export const EModal = (props: EModalProps): JSX.Element => {
                 <div className="inner-border">&nbsp;</div>
             </div>
 
-            <footer className="elden-ring-modal-footer flex-around">
+            <footer className="er__modal__footer flex-around">
                 {footerContent()}
             </footer>
 

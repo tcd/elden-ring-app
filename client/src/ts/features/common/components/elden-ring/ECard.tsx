@@ -28,7 +28,7 @@ export class ECard extends Component<ECardProps> {
     }
 
     private className(): string {
-        return "elden-ring-card m-3" + (this.props?.className ?? "")
+        return "er__card m-3" + (this.props?.className ?? "")
     }
 
     private headerClassName(): string {
@@ -54,7 +54,7 @@ export class ECard extends Component<ECardProps> {
             <article className={this.className()} style={this.style()}>
                 <header className={this.headerClassName()}>
                     {this.iconElement()}
-                    <Typography className="elden-ring-card__title" component="span">
+                    <Typography className="er__card__title" component="span">
                         {this.props.title}
                     </Typography>
                 </header>

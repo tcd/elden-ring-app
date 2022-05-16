@@ -40,12 +40,12 @@ $body-stops: (
     100%: 0.10,
 );
 
-.elden-ring-modal,
-.elden-ring-modal-overlay {
+.er__modal,
+.er__modal-overlay {
     outline: none !important;
 }
 
-.elden-ring-modal-overlay {
+.er__modal__overlay {
     z-index: v.$zindex-modal-backdrop;
     position: absolute;
     top: 0;
@@ -58,7 +58,7 @@ $body-stops: (
     background-color: v.$modal-backdrop-bg;
 }
 
-.elden-ring-modal {
+.er__modal {
     min-width: 45%;
     min-height: 50%;
 
@@ -86,7 +86,7 @@ $body-stops: (
         padding-bottom: 15px;
     }
 
-    .elden-ring-modal-main {
+    .er__modal__main {
         padding-top: 25px;
         padding-bottom: 25px;
     }

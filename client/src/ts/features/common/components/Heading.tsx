@@ -30,7 +30,7 @@ export const Heading = (props: HeadingProps): JSX.Element => {
 
     return (
 
-        <div className="er-heading row" style={style}>
+        <div className="er__heading row" style={style}>
             <div className="col">
                 <div className="d-flex justify-content-between">
                     <Typography variant="h4" gutterBottom component="div">

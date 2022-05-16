@@ -10,7 +10,7 @@ import {
 declare module "@mui/material/Typography" {
     interface TypographyPropsVariantOverrides {
       tcd: true;
-      h4: false;
+    //   h4: false;
     }
 }
 

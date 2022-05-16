@@ -23,7 +23,7 @@
     border-radius: 2px;
 }
 
-article.elden-ring-card {
+article.er__card {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -41,7 +41,7 @@ article.elden-ring-card {
             // drop-shadow(offset-x offset-y blur-radius color)
             filter: drop-shadow(v.$text-shadow-offset v.$text-shadow-offset 0.075px rgb(0, 0, 0));
         }
-        span.elden-ring-card__title {
+        span.er__card__title {
             color: v.$gold;
             font-size: 24px;
             margin-bottom: 0px;
@@ -51,14 +51,14 @@ article.elden-ring-card {
     }
 
     header.no-icon {
-        .elden-ring-card__title {
+        .er__card__title {
             font-size: 32px;
             color: #D3D3D3;
         }
     }
 
     header.small-title {
-        .elden-ring-card__title {
+        .er__card__title {
             font-size: 18px;
         }
         svg {
