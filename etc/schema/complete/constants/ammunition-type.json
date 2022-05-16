@@ -1,0 +1,12 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/ammunition-type.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Ammunition Type",
+    "type": "string",
+    "enum": [
+        "Arrow",
+        "Greatarrow",
+        "Bolt",
+        "Greatbolt"
+    ]
+}
