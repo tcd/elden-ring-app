@@ -1,6 +1,8 @@
-import DataTable, { TableProps } from "react-data-table-component"
+import ReactDataTable, {
+    TableProps as RdtTableProps,
+    TableColumn as RdtTableColumn,
+} from "react-data-table-component"
 import ArrowDownward from "@mui/icons-material/ArrowDownward"
-import { TableColumn } from "react-data-table-component"
 
 // These aren't exported from "react-data-table-component", but that's where they're from
 export declare type Primitive = string | number | boolean | bigint;
@@ -32,7 +34,7 @@ interface CustomTableProps<T> {
 }
 
 type TablePropsMinus<T> = Omit<
-    TableProps<T>,
+    RdtTableProps<T>,
     "columns" | "data"
 >
 
@@ -53,7 +55,7 @@ export const CustomTable = <T,>(props: CustomTablePropsPlus<T>): JSX.Element => 
     const validColumns = convertColumns(columns)
     return (
         <div className="data-table-wrapper">
-            <DataTable
+            <ReactDataTable
             // className="table table-bordered border-primary"
                 // highlightOnHover
                 // pagination
@@ -71,10 +73,10 @@ export const CustomTable = <T,>(props: CustomTablePropsPlus<T>): JSX.Element => 
     )
 }
 
-const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): TableColumn<T>[] => {
-    const newColumns: TableColumn<T>[] = []
+const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): RdtTableColumn<T>[] => {
+    const newColumns: RdtTableColumn<T>[] = []
     for (const customColumn of customColumns) {
-        const newColumn: TableColumn<T> = {}
+        const newColumn: RdtTableColumn<T> = {}
         newColumn.sortable = customColumn.sortable ?? false
         newColumn.name = customColumn.header
         if (typeof(customColumn.field) == "string") {

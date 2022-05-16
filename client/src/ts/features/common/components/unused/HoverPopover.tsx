@@ -36,7 +36,7 @@ export interface HoverPopoverProps {
 /**
  * Using [jcoreio/material-ui-popup-state](https://jcoreio.github.io/material-ui-popup-state/).
  */
-export const CustomPopover = (props: HoverPopoverProps): JSX.Element => {
+export const HoverPopover = (props: HoverPopoverProps): JSX.Element => {
     const popupState = usePopupState({
         variant: "popover",
         popupId: props.id,
