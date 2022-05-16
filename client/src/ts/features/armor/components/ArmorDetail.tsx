@@ -6,6 +6,7 @@ import {
 
 import { Armor } from "@app/types"
 import { ECard } from "@app/shared"
+import { isBlank } from "@app/util"
 
 export interface ArmorDetailProps {
     armor: Armor
@@ -13,7 +14,9 @@ export interface ArmorDetailProps {
 
 export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
 
-    const imagePath = `/public/images/armor/${armor.name}.png`
+    if (isBlank(armor)) {
+        return null
+    }
 
     const defensePlaceholder = "?" // "0.0"
     const resistancePlaceholder = "?" // "0"
@@ -38,7 +41,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={imagePath} alt="weapon" />
+                                    <img className="img-fluid" src={armor?.image_url} alt="weapon" />
                                 </div>
                             </div>
                         </div>
@@ -55,15 +58,15 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                             </li>
                             <li className="stat-row">
                                 <span>VS Strike</span>
-                                <span>{armor.strike?.toFixed(1) ?? defensePlaceholder}</span>
+                                <span>{armor.vs_strike?.toFixed(1) ?? defensePlaceholder}</span>
                             </li>
                             <li className="stat-row">
                                 <span>VS Slash</span>
-                                <span>{armor.slash?.toFixed(1) ?? defensePlaceholder}</span>
+                                <span>{armor.vs_slash?.toFixed(1) ?? defensePlaceholder}</span>
                             </li>
                             <li className="stat-row">
                                 <span>VS Pierce</span>
-                                <span>{armor.pierce?.toFixed(1) ?? defensePlaceholder}</span>
+                                <span>{armor.vs_pierce?.toFixed(1) ?? defensePlaceholder}</span>
                             </li>
                             <li className="stat-row">
                                 <span>Magic</span>

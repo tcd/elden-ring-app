@@ -3,6 +3,7 @@ import { createTheme, Components, ThemeOptions } from "@mui/material"
 import { generalComponents } from "./components"
 import { paletteOptions } from "./paletteOptions"
 import {
+    ExtendedTypographyOptions,
     typographyComponents,
     typographyOptions,
 } from "./typography"
@@ -14,7 +15,7 @@ const components: Components = {
 
 const options: ThemeOptions = {
     palette: paletteOptions,
-    typography: typographyOptions,
+    typography: typographyOptions as ExtendedTypographyOptions,
     components,
 }
 
@@ -27,7 +28,7 @@ const darkModeOptions: ThemeOptions = {
         ...paletteOptions,
         mode: "dark",
     },
-    typography: typographyOptions,
+    typography: typographyOptions as ExtendedTypographyOptions,
     components,
 }
 
@@ -40,7 +41,7 @@ const lightModeOptions: ThemeOptions = {
         ...paletteOptions,
         mode: "light",
     },
-    typography: typographyOptions,
+    typography: typographyOptions as ExtendedTypographyOptions,
     components,
 }
 

@@ -10,6 +10,7 @@ import {
     mdiFormatListChecks,
     mdiInformationOutline,
     mdiCog,
+    mdiDesktopMacDashboard,
 } from "@mdi/js"
 
 import { ILinkData } from "@types"
@@ -36,7 +37,7 @@ export const SIDE_NAV_LINKS: ILinkData[] = [
     { title: "Checklist", url: "/checklist", icon: mdiFormatListChecks },
     { title: "Settings", url: "/settings", icon: mdiCog },
     { divider: true },
-    { title: "Menus", icon: mdiTable, links: menuLinks },
+    { title: "Menus", icon: mdiDesktopMacDashboard, links: menuLinks },
     { divider: true },
     { title: "Tables", icon: mdiTable, links: tableLinks },
     { divider: true },
