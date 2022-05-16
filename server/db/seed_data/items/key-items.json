@@ -1,0 +1,1495 @@
+[
+    {
+        "id": 1,
+        "name": "Crafting Kit",
+        "type": "Feature Unlock",
+        "not_in_game": false,
+        "description": "Enables item crafting from the main menu.",
+        "locations": [
+            "Purchased from Merchant Kalé at the Church of Elleh in Limgrave."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "name": "Spirit Calling Bell",
+        "type": "Feature Unlock",
+        "not_in_game": false,
+        "description": "Bell that summons various spirits from ashen items",
+        "locations": [
+            "Received from Renna at the Church of Elleh in Limgrave after obtaining the Spectral Steed Whistle."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "name": "Whetstone Knife",
+        "type": "Feature Unlock",
+        "not_in_game": false,
+        "description": "Can add new battle arts and affinities to weapons",
+        "locations": [
+            "Found in the southeastern area of Gatefront Ruins. There is a set of stairs leading to a small room underground where a treasure chest can be found. Inside the chest is the *Whetstone Knife* and Ash of War: Storm Stomp."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "name": "Tailoring Tools",
+        "type": "Feature Unlock",
+        "not_in_game": false,
+        "description": "Enables armor adjustment at sites of grace.",
+        "locations": [
+            "Obtained by defeating the Demi-Human Chief boss, found at the Coastal Cave in Limgrave."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "name": "Golden Tailoring Tools",
+        "type": "Feature Unlock",
+        "not_in_game": false,
+        "description": "Allows demigod garb alteration at sites of grace.",
+        "locations": [
+            "Obtained in a chest at the Church of Vows in Liurnia."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "name": "Sewing Needle",
+        "type": "Feature Unlock / Quest",
+        "not_in_game": false,
+        "description": "A large sewing needle, curved like a fang. Boc the demi-human's prized possession.",
+        "locations": [
+            "Obtained by defeating the Demi-Human Chief boss, found at the Coastal Cave in Limgrave."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock",
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "name": "Gold Sewing Needle",
+        "type": "Feature Unlock / Quest",
+        "not_in_game": false,
+        "description": "Special sewing needle for demigod attire.",
+        "locations": [
+            "Obtained in a chest at the Church of Vows in Liurnia."
+        ],
+        "metadata": {
+            "tags": [
+                "Feature Unlock",
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "name": "Memory Stone",
+        "type": "Slot Increase",
+        "not_in_game": false,
+        "description": "Increases Memory Slots. A maximum of 8 can be held for a total of 10 memory slots.",
+        "locations": [
+            "See Memory Stone for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Slot Increase"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "name": "Talisman Pouch",
+        "type": "Slot Increase",
+        "not_in_game": false,
+        "description": "Increases Talisman equip slots. A maximum of 3 can be held for a total of 4 talisman equip slots.",
+        "locations": [
+            "Upon defeating *Margit, the Fell Omen* in Stormhill*or* *Morgott, the Omen King* in Leyndell, Royal Capital",
+            "After speaking to *Finger Reader Enia*, after acquiring two Great Runes.",
+            "Found in the *Twin Maiden Husks*' shop, if missed from Enia.",
+            "Upon defeating *Godfrey, First Elden Lord* in Leyndell, Royal Capital."
+        ],
+        "metadata": {
+            "tags": [
+                "Slot Increase"
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "name": "Cracked Pot",
+        "type": "Container",
+        "not_in_game": false,
+        "description": "Container required for crafting cracked pot items. A maximum of 20 can be held.",
+        "locations": [
+            "See Cracked Pot for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Container"
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "name": "Ritual Pot",
+        "type": "Container",
+        "not_in_game": false,
+        "description": "Container required for crafting ritual pot items. A maximum of 10 can be held.",
+        "locations": [
+            "See Ritual Pot for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Container"
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "name": "Perfume Bottle",
+        "type": "Container",
+        "not_in_game": false,
+        "description": "Container required for crafting perfume items. A maximum of 10 can be held.",
+        "locations": [
+            "See Perfume Bottle for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Container"
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "name": "Dectus Medallion (Left)",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Join medallions to operate Grand Lift of Dectus.",
+        "locations": [
+            "Mistwood: Found in a chest at Fort Haight. The chest can be reached by climbing the up the ladder in the tallest tower of the fort."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "name": "Dectus Medallion (Right)",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Join medallions to operate Grand Lift of Dectus.",
+        "locations": [
+            "Fort Faroth in Dragonbarrow: Found atop the eastern tower. Accessible via ladder past the bats in the bottom level."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "name": "Rold Medallion",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Activates the Grand Lift of Rold, connecting Leyndell to the Mountaintops of the Giants.",
+        "locations": [
+            "Given by Melina after you defeat Morgott, The Omen King. Talk to her at the Elden Throne site of grace after failing to enter the Erdtree. Once you do, she will give it to you."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "name": "Stonesword Key",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Use to break one imp statue seal",
+        "locations": [
+            "Purchased from Patches, Isolated Merchant and Nomadic Merchant",
+            "Found in various locations"
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "name": "Imbued Sword Key",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Unseals sending gate, but disappears upon use",
+        "locations": [
+            "One is found in a chest at The Four Belfries. The chest is located in front of the fourth belfry, at the very top of the hill.",
+            "It can be looted off a corpse found on the east side of the Raya Lucaria Academy rooftops.",
+            "One is found in Sellia, Town of Sorcery in a small building in the northeast section of town. This is initially sealed by a barrier that can be dispelled by lighting a brazier atop a tower in the southwest section of town."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "name": "Sewer-Gaol Key",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Unlocks sewer-gaol door beneath Leyndell.",
+        "locations": [
+            "Given by the Dung Eater in Roundtable Hold after acquiring at least one Seedbed Curse."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "name": "Rusty Key",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Opens a locked door in Stormveil Castle",
+        "locations": [
+            "Rusty Key is found in Stormveil Castle, to the left after the south entrance."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 20,
+        "name": "Drawing-Room Key",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Key to the Volcano Manor drawing room",
+        "locations": [
+            "Given by Tanith after pledging your services to the Volcano Manor.",
+            "Alternatively, if Rykard is killed before pledging your services, Tanith will disappear from the Manor, the key will be left in her chair."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 21,
+        "name": "Discarded Palace Key",
+        "type": "Exploration",
+        "not_in_game": false,
+        "description": "Opens a treasure chest passed down to Carian Princesses.",
+        "locations": [
+            "Given by Miniature Ranni after defeating the Baleful Shadow."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration"
+            ]
+        }
+    },
+    {
+        "id": 22,
+        "name": "Haligtree Secret Medallion (Left)",
+        "type": "Exploration / Quest",
+        "not_in_game": false,
+        "description": "Brandishing the medallion with both halves conjoined will activate the Grand Lift of Rold, granting access to a hidden path.",
+        "locations": [
+            "Castle Sol: Found on the roof of the tower in the northeast, accessible after defeating Commander Niall."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration",
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 23,
+        "name": "Haligtree Secret Medallion (Right)",
+        "type": "Exploration / Quest",
+        "not_in_game": false,
+        "description": "Brandishing the medallion with both halves conjoined will activate the Grand Lift of Rold, granting access to a hidden path.",
+        "locations": [
+            "Hit Albus, who is disguised as a pot past the Perfumer guarding the path up from the Village of the Albinaurics Site of Grace in the swamp caves west of Liurnia of the Lakes."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration",
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 24,
+        "name": "Academy Glintstone Key",
+        "type": "Exploration / Quest",
+        "not_in_game": false,
+        "description": "Key to open the academy's two sealed gates",
+        "locations": [
+            "Liurnia of the Lakes, south from Crystalline Woods site of grace, behind Glintstone Dragon Smarag.",
+            "Raya Lucaria Academy, looted off a corpse located on a chandelier hanging on the Church of the Cuckoo's ceiling. To reach the ceiling, you need to maneuver the rooftop section of the academy's buildings via the courtyard."
+        ],
+        "metadata": {
+            "tags": [
+                "Exploration",
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 25,
+        "name": "Serpent's Amnion",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Amnion from a womb that bore unintended offspring.",
+        "locations": [
+            "Obtained after the Godskin Apostle in Volcano Manor, through the secret passage leading to the cathedral."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 26,
+        "name": "Unalloyed Gold Needle",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Snapped intricate needle of unalloyed gold.",
+        "locations": [
+            "Dropped by the mini-boss Commander O’Neil located in a clearing of Aeonia Swamp in eastern Caelid."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 27,
+        "name": "Amber Starlight",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Used in the preparation of a peculiar drought.",
+        "locations": [
+            "Found in Altus Plateau, through a cave north to the southern bridge leading to Leyndell."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "name": "Amber Draught",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Given by Preceptor Seluvis during his questline, when choosing to betray Ranni the Witch.",
+        "locations": [
+            "Handed to the player by Preceptor Seluvis after finding the Amber Starlight and exhausting dialogue."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 29,
+        "name": "Alexander's innards",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Alexander's Innards can be given to the Jar-Bairn npc in Jarburg after the village is attacked by poachers.",
+        "locations": [
+            "Follow Iron Fist Alexander's questline until he is found in Crumbling Farum Azula. He will challenge the player to a duel, and upon victory the player will receive this along with a Warrior Jar Shard and a Shard of Alexander."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 30,
+        "name": "Irina's Letter",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Letter addressed to the commander of Castle Morne",
+        "locations": [
+            "Received through dialogue with Irina, found sitting on a rock on the side of the road just after entering the Weeping Peninsula."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 31,
+        "name": "Letter to Bernahl",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "This letter marks Vargram the Raging Wolf and Errant Sorcerer Wilhelm for assassination.",
+        "locations": [
+            "Given by Knight Bernahl after completing two Volcano Manor assassination quests."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 32,
+        "name": "Chrysalids' Memento",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Broach wrapped in red velvet.",
+        "locations": [
+            "Found in Stormveil Castle, atop a pile of corpses in a room adjacent to a Grafted Scion mini-boss."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 33,
+        "name": "Shabriri Grape",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Yellow, oozing eyeball of the infirm.",
+        "locations": [
+            "One can be found near a spirit NPC at Godrick's throne room at Stormveil Castle, You do not have to defeat Godrick in order to obtain it, you can enter from the back by going around the castle using the broken bridge route.",
+            "Can be found on the lower level of the Purified Ruins. The entrance to this area is blocked by a large plank of wood that can be destroyed with rolls or attacks.",
+            "One is dropped by Edgar the Revenger, an NPC invader found at the Revenger's Shack in western Liurnia."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 34,
+        "name": "Tonic of Forgetfulness",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Tonic that banishes distress and bitter memories.",
+        "locations": [
+            "Received from Tanith after giving the Serpent's Amnion to Rya and returning to the Volcano Manor."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 35,
+        "name": "Volcano Manor Invitation",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Letter of invitation to Volcano Manor.",
+        "locations": [
+            "Can be obtained by purchasing Rya's Necklace for 1000 Runes from Blackguard Big Boggart found at the Boilprawn Shack, then returning the necklace to Rya will earn you the invitation to the Volcano Manor."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 36,
+        "name": "Rya's Necklace",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Rya's necklace, stolen by a blackguard.",
+        "locations": [
+            "After speaking with Rya (Map link), you will get a quest to receive this stolen necklace. The necklace can be found at Blackguard Big Boggart's shack just a bit to the northwest. It can be bought for 1000 Runes or by killing Blackguard."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 37,
+        "name": "Lord of Blood's Favor",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Pure white oath-cloth given by Varré.",
+        "locations": [
+            "On a dead maiden at Chapel of Anticipation."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 38,
+        "name": "Dancer's Castanets",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Castanets used by dancers from distant lands.",
+        "locations": [
+            "Given by Patches in Shaded Castle, before the boss room, after killing Rykard, Lord of Blasphemy and talking to him in Volcano Manor."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 39,
+        "name": "Sellian Sealbreaker",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Can release Master Lusat from his confinement.",
+        "locations": [
+            "Obtained during Sorceress Sellen's questline. After finding Comet Azur on the body of Primeval Sorcerer Azur, speak with Sellen to further her quest. She will have an additional dialogue option, 'I have a favor to ask' that will give the player the Sellian Sealbreaker."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 40,
+        "name": "Iji's Confession",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Letter of confession found on Iji's corpse.",
+        "locations": [
+            "Found on Iji's corpse."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 41,
+        "name": "Celestial Dew",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Carry out Absolution at the Church of Vows.",
+        "locations": [
+            "See Celestial Dew for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 42,
+        "name": "Seedbed Curse",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Curse grown on a body defiled by the Dung Eater.",
+        "locations": [
+            "See Seedbed Curse for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 43,
+        "name": "Black Knifeprint",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Mark of the Night of the Black Knives ritual",
+        "locations": [
+            "Drops from Black Knife Assassin in Black Knife Catacombs."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 44,
+        "name": "Fingerprint Grape",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Eyeball of the knight Vyke, inflamed yellow",
+        "locations": [
+            "Dropped by Festering Fingerprint Vyke."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 45,
+        "name": "Seluvis's Potion",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Small flask received from Preceptor Seluvis",
+        "locations": [
+            "Acquired from Seluvis at Seluvis's Rise after being asked by Ranni the Witch to speak with him."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 46,
+        "name": "Valkyrie's Prosthesis",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Golden prosthesis used by the one-armed Valkyrie",
+        "locations": [
+            "Found in a chest in the room guarded by a single Cleanrot Knight on the North Western edge of The Shaded Castle."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 47,
+        "name": "Weathered Dagger",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Dagger received from Fia, Deathbed Companion",
+        "locations": [
+            "Roundtable Hold: Obtained from Fia after reaching Altus Plateau."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 48,
+        "name": "Seluvis's Introduction",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Letter of introduction addressed to Sellen",
+        "locations": [
+            "Given by Preceptor Seluvis at Seluvis's Rise in Liurnia of the Lakes."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 49,
+        "name": "Sellen's Primal Glintstone",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Glintstone from within Sellen's body.",
+        "locations": [
+            "Found beneath Witchbane Ruins."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 50,
+        "name": "Fingerslayer Blade",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Hidden treasure of the Eternal City of Nokron.",
+        "locations": [
+            "Found in a chest under the massive skeleton statue in Night's Sacred Ground."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 51,
+        "name": "Carian Inverted Statue",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Key revealing the hidden form of Carian Study Hall.",
+        "locations": [
+            "Given by Ranni in Ranni's Rise after giving her the Fingerslayer Blade."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 52,
+        "name": "Cursemark of Death",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Cursemark carved into Lunar Princess Ranni's discarded flesh.",
+        "locations": [
+            "Found on a body lying at the top of the Divine Tower of Liurnia."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 53,
+        "name": "Miniature Ranni",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Doll resembling Ranni the Witch.",
+        "locations": [
+            "Found in an open stone coffin in the waters of Ainsel River Main."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 54,
+        "name": "The Stormhawk King",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Ashes of a hawk which heeds no summons.",
+        "locations": [
+            "Chapel of Anticipation: Upon returning to this location later in the game, head towards the roof of the southern wing of the chapel. There is a corpse on this roof containing the item."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 55,
+        "name": "Dark Moon Ring",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Ring of Lunar Princess Ranni's cold oath.",
+        "locations": [
+            "Found in a locked chest next to the Raya Lucaria Grand Library Site of Grace. Unlocked using the Discarded Palace Key."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 56,
+        "name": "Beast Eye",
+        "type": "Quest",
+        "not_in_game": false,
+        "description": "Said to tremble when close to Deathroot.",
+        "locations": [
+            "Gurranq, Beast Clergyman rewards the player for bringing Deathroot."
+        ],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 57,
+        "name": "Lucent Baldachin's Blessing",
+        "type": "Quest",
+        "not_in_game": true,
+        "description": "Raise in prayer to gain protection.",
+        "locations": [],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 58,
+        "name": "Asimi, Silver Tear",
+        "type": "Quest",
+        "not_in_game": true,
+        "description": "Asimi that has infected a tarnished.",
+        "locations": [],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 59,
+        "name": "Burial Crow's Letter",
+        "type": "Quest",
+        "not_in_game": true,
+        "description": "Letter affixed to a graveyard crow's leg",
+        "locations": [],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 60,
+        "name": "Asimi's Husk",
+        "type": "Quest",
+        "not_in_game": true,
+        "description": "The shedding of an Asimi that infected a tarnished.",
+        "locations": [],
+        "metadata": {
+            "tags": [
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 61,
+        "name": "Deathroot",
+        "type": "Exchange",
+        "not_in_game": false,
+        "description": "Beast Clergyman seeks and devours these.",
+        "locations": [
+            "See Deathroot for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Exchange"
+            ]
+        }
+    },
+    {
+        "id": 62,
+        "name": "Lost Ashes of War",
+        "type": "Exchange",
+        "not_in_game": false,
+        "description": "Used to duplicate Ashes of War.",
+        "locations": [
+            "See Lost Ashes of War for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Exchange"
+            ]
+        }
+    },
+    {
+        "id": 63,
+        "name": "Dragon Heart",
+        "type": "Exchange",
+        "not_in_game": false,
+        "description": "Gain power of the dragon at the Dragon Communion altar.",
+        "locations": [
+            "See Dragon Heart for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Exchange"
+            ]
+        }
+    },
+    {
+        "id": 64,
+        "name": "Larval Tear",
+        "type": "Exchange",
+        "not_in_game": false,
+        "description": "Material needed by Rennala to grant rebirth.",
+        "locations": [
+            "See Larval Tear for an extensive list of item locations."
+        ],
+        "metadata": {
+            "tags": [
+                "Exchange"
+            ]
+        }
+    },
+    {
+        "id": 65,
+        "name": "Ancient Dragon Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Ancient Dragons' Lightning Spear and Ancient Dragons' Lightning Strike for purchase.",
+        "locations": [
+            "In the middle of the main hall after finding the Crumbling Beast Grave Depths Farum Azula Site of Grace, in Crumbling Farum Azula."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Ancient Dragons' Lightning Spear",
+                "Ancient Dragons' Lightning Strike"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 66,
+        "name": "Assassin's Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Assassin's Approach and Darkness for purchase.",
+        "locations": [
+            "Can be found behind the second Imp Statue door in Roundtable Hold, the first door will require one Key to open, and the second door behind the first requires two keys to open. So you will need three keys total to unlock this."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Assassin's Approach",
+                "Darkness"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 67,
+        "name": "Dragon Cult Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Lightning Spear, Honed Bolt, and Electrify Armament for purchase.",
+        "locations": [
+            "Dropped by a knight patrolling immediately south of the Liurnia of the Lakes Artist's Shack."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Lightning Spear",
+                "Honed Bolt",
+                "Electrify Armament"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 68,
+        "name": "Fire Monks' Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock O, Flame! and Surge, O Flame! for purchase.",
+        "locations": [
+            "Liurnia of the Lakes: Found on a corpse in a Fire Monk outpost in the southern landmass."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "O, Flame!",
+                "Surge, O Flame!"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 69,
+        "name": "Giant's Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Giantsflame Take Thee and Flame, Fall Upon Them for purchase.",
+        "locations": [
+            "Inside a chest at the very top of Guardian's Garrison in Mountaintops of the Giants. It's in a tower behind NPC mini-boss Chief Guardian Arghanthy, up a ladder."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Giantsflame Take Thee",
+                "Flame, Fall Upon The"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 70,
+        "name": "Godskin Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Black Flame and Black Flame Blade for purchase.",
+        "locations": [
+            "Stormveil Castle. From the Rampart Tower site of grace, head outside. Take a running jump onto the roof across. From the roof, drop down to the grassy courtyard. Descend down the nearby stairs and follow its path until you find a fog wall. Use a Stonesword Key to pass through it and the prayerbook will be in one of the two chests inside the room."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Black Flame",
+                "Black Flame Blade"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 71,
+        "name": "Two Fingers Prayerbook",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Lord's Heal and Lord's Aid for purchase.",
+        "locations": [
+            "Located nearby a fireplace in the Fortified Manor in Leyndell, Royal Capital."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Lord's Heal",
+                "Lord's Aid"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 72,
+        "name": "Golden Order Principia",
+        "type": "Spell Unlock / Quest",
+        "not_in_game": false,
+        "description": "Give to a learned cleric to unlock Radagon's Rings of Light and Law of Regression for purchase.",
+        "locations": [
+            "Located in a chair hanging from the ceiling directly above the Erdtree Sanctuary site in Leyndell, Royal Capital. From the Erdtree Sanctuary site in Leyndell, Royal Capital, exit the east side of the room. Once outside, climb up the root to the left that circles back into the building's 2nd floor. Once inside, exit the only door and immediately turn left to jump down to a nearby roof. Once on the roof, a broken window can be used to get back inside. After entering the broken window, climb the root crossing the room to reach the Golden Order Principia, which is located in the chair hanging from the ceiling."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Radagon's Rings of Light",
+                "Law of Regression"
+            ],
+            "tags": [
+                "Spell Unlock",
+                "Quest"
+            ]
+        }
+    },
+    {
+        "id": 73,
+        "name": "Conspectus Scroll",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned sorcerer to unlock Glintstone Cometshard and Star Shower for purchase.",
+        "locations": [
+            "Can be found near the Great Hall of the Raya Lucaria Academy. From the doorway, go left and you'll find a room, there is a body that you can loot to find the scroll."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Glintstone Cometshard",
+                "Star Shower"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 74,
+        "name": "Royal House Scroll",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned sorcerer to unlock Glintblade Phalanx and Carian Slicer for purchase.",
+        "locations": [
+            "Head southeast from the Agheel Lake South site of grace, head to the top of a cliff and you'll see a statue of an object that looks like the half piece of a bowl or a circle. Face the other way, to see a Knight. Keep going to a structure to see a man standing watching over the big structure, alongside a dead body. In that body, you will find the *Royal House Scroll*."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Glintblade Phalanx",
+                "Carian Slicer"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 75,
+        "name": "Academy Scroll",
+        "type": "Spell Unlock",
+        "not_in_game": false,
+        "description": "Give to a learned sorcerer to unlock Great Glintstone Shard and Swift Glintstone Shard for purchase.",
+        "locations": [
+            "Found at a Graveyard at the south of Liurnia of the Lakes, by a grave."
+        ],
+        "metadata": {
+            "unlocks_spells": [
+                "Great Glintstone Shard",
+                "Swift Glintstone Shard"
+            ],
+            "tags": [
+                "Spell Unlock"
+            ]
+        }
+    },
+    {
+        "id": 76,
+        "name": "Mirage Riddle",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Shows the location of three celestial signs that when activated open a door to the Mirage Tower where the riddle was originally found.",
+        "locations": [
+            "Found on an imp statue outside of a sealed church in the Altus Plateau."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 77,
+        "name": "Map (Limgrave, West)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Limgrave's western region.",
+        "locations": [
+            "Looted from a pillar in Gatefront Ruins, just south from Stormgate."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 78,
+        "name": "Map (Limgrave, East)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Limgrave's eastern region.",
+        "locations": [
+            "Can be found North-East of Mistwood Ruins, in front of a pillar containing what appears to be ancient writings."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 79,
+        "name": "Map (Weeping Peninsula)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Weeping peninsula.",
+        "locations": [
+            "The map for Weeping Peninsula is found by following the main road south from the Bridge of Sacrifice, past the Castle Morne Rampart site of Grace."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 80,
+        "name": "Map (Liurnia, East)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Liurnia's eastern region.",
+        "locations": [
+            "Found in the south of the swampy lake, in the middle by a monument with enlightened texts on it, in Liurnia of the Lakes."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 81,
+        "name": "Map (Liurnia, West)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Liurnia's western region.",
+        "locations": [
+            "On a monolith in the open field northeast of the *North Liurnia Lake Shore* Site of Grace in northern Liurnia."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 82,
+        "name": "Map (Liurnia, North)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Liurnia's northern region.",
+        "locations": [
+            "You can find the Liurnia North Map at the South Entrance to the Academy Gate Town, by the flooded roads leading to the Academy of Raya Lucaria."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 83,
+        "name": "Map (Mohgwyn Palace)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Mohgwyn Palace and environs.",
+        "locations": [
+            "Found soon after accessing the staircase to Mohgwyn Dynasty Mausoleum, in the underground of Mohgwyn Palace. It is past a group of blood Albinaurics that summon giant skeletons."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 84,
+        "name": "Map (Dragonbarrow)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Dragonbarrow and environs.",
+        "locations": [
+            "Found on a monolith directly east of the Dragonbarrow West Site of Grace, along the road."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 85,
+        "name": "Map (Ainsel River)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Ainsel River and environs.",
+        "locations": [
+            "Found inside a ruin next to the Nomadic Merchant in Ainsel River."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 86,
+        "name": "Map (Caelid)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Caelid and environs.",
+        "locations": [
+            "On a monolith near the middle of Caelid Highway South. Directly southeast of the *Caelid Highway South* Sites of Grace."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 87,
+        "name": "Map (Siofra River)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Siofra River and environs.",
+        "locations": [
+            "Found next to the staircase leading up to Hallowhorn Grounds."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 88,
+        "name": "Map (Mt. Gelmir)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Mt. Gelmir and environs.",
+        "locations": [
+            "Map (Mt. Gelmir) is found on a pillar in front of the Road of Iniquity Site of Grace."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 89,
+        "name": "Map (Altus Plateau)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Altus Plateau and environs.",
+        "locations": [
+            "Can be obtained north of the* Altus Highway Junction* site of grace."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 90,
+        "name": "Map (Leyndell, Royal Capital)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Leyndell Capital and environs.",
+        "locations": [
+            "Capital Outskirts: Found under a monolith near the Outer Wall Phantom Tree Site of Grace."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 91,
+        "name": "Map (Mountaintops of The Giants, West)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Western Mountaintops of the Giants.",
+        "locations": [
+            "Go up the Grand Lift of Rold from Leyndell, along the path."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 92,
+        "name": "Map (Mountaintops of The Giants, East)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Eastern Mountaintops of the Giants.",
+        "locations": [
+            "Mountaintops of the Giants: Found at the altar. You can arrive by walking on the chain from the enemy encampment."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 93,
+        "name": "Map (Consecrated Snowfield)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Consecrated Snowfield and environs.",
+        "locations": [
+            "Map for all of Consecrated Snowfield: find it by following the road north past the snowstorm until you go down and cross a frozen river, then you will spot the map pillar ahead."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 94,
+        "name": "Map (Deeproot Depths)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Deeproot Depths and environs.",
+        "locations": [
+            "Can be found on a corpse in a gazebo amid the destroyed ruins."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 95,
+        "name": "Map (Lake of Rot)",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Map of Lake of Rot and environs.",
+        "locations": [
+            "Found on a corpse by the water's edge at Lake of Rot, by the Lake Rot Shoreside Site of Grace."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    },
+    {
+        "id": 96,
+        "name": "Meeting Place Map",
+        "type": "Maps",
+        "not_in_game": false,
+        "description": "Simple map showing a meeting place",
+        "locations": [
+            "Can be found at the entrance of the Raya Lucarian academy, on lying corpse."
+        ],
+        "metadata": {
+            "tags": [
+                "Maps"
+            ]
+        }
+    }
+]

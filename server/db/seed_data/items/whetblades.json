@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Whetstone Knife",
+        "location": "Gatefront Ruins Near the center of the ruins, there is a set of stairs leading to a small room underground where a treasure chest can be found. Inside the chest is the *Whetstone Knife* and Ash of War: Storm Stomp.",
+        "affinities": [
+            "Standard"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Iron Whetblade",
+        "location": "Stormveil Castle Can be looted off a corpse found in the large armory room, through the north-western door in the hall with the Grafted Scion. You will need to use the Stonesword Key on the imp statue to dispel the white fog blocking the doorway.",
+        "affinities": [
+            "Quality",
+            "Keen",
+            "Heavy"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Glintstone Whetblade",
+        "location": "Raya Lucaria Academy Looted off a corpse that is hanging off the window ledge of an office balcony. From the fountain of the academy's courtyard, go left, and head up the slope of broken stairs. The room is guarded by three sorcerers, with one hiding inside.",
+        "affinities": [
+            "Magic",
+            "Cold"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Red-Hot Whetblade",
+        "location": "Redmane Castle From the Chamber Outside The Plaza site of grace, head out to the three flamethrower enemies and take a right. You should be face to face with another flamethrower. Go past them and towards the tower. An Iron Maiden will attack you as you're heading towards it. Once inside you'll find the whetblade and another enemy.",
+        "affinities": [
+            "Fire",
+            "Flame Art"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Sanctified Whetblade",
+        "location": "Fortified Manor, Leyndell You can enter the manor by climbing up the dragon's wing to the north-west of the Avenue Balcony grace. Outside the manor's front doors facing inward, take a left, then a right past the dogs and climb up the wooden structure on the side of the manor on your right, enter through the small doorway past the broken wall. Continue inwards and it will be on your left on a corpse laying on a wall next to an anvil.",
+        "affinities": [
+            "Lightning",
+            "Sacred"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Black Whetblade",
+        "location": "Nokron, Eternal City Found on a corpse slumped in front of an altar in Night's Sacred Ground.",
+        "affinities": [
+            "Poison",
+            "Blood",
+            "Occult"
+        ]
+    }
+]

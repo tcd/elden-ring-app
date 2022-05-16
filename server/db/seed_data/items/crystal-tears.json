@@ -1,0 +1,382 @@
+[
+    {
+        "id": 1,
+        "name": "Crimson Crystal Tear",
+        "duration": 0,
+        "description": "Restores half of total HP.",
+        "locations": [
+            "In front of the statue in Third Church of Marika.",
+            "Found on an altar guarded by enemies at the base of the Minor Erdtree in Capital Outskirts."
+        ],
+        "metadata": {
+            "type": "HP",
+            "in_game_quantity": 2
+        }
+    },
+    {
+        "id": 2,
+        "name": "Crimsonspill Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts max HP.",
+        "locations": [
+            "Dropped by Wormface in Altus Plateau."
+        ],
+        "metadata": {
+            "type": "HP",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 3,
+        "name": "Crimsonburst Crystal Tear",
+        "duration": 180,
+        "description": "Steadily restores HP for a time.",
+        "locations": [
+            "Weeping Peninsula beneath the Minor Erdtree: Dropped by the Erdtree Avatar boss upon defeat."
+        ],
+        "metadata": {
+            "type": "HP",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 4,
+        "name": "Crimson Bubbletear",
+        "duration": 180,
+        "description": "Restores HP when near death.",
+        "locations": [
+            "Dropped by the Erdtree Avatar guarding the Minor Erdtree in the east of the Mountaintops of the Giants."
+        ],
+        "metadata": {
+            "type": "HP",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 5,
+        "name": "Crimsonwhorl Bubbletear",
+        "duration": 15,
+        "description": "Converts damage received into HP.",
+        "locations": [
+            "Mountaintops of the Giants: On a cliff ledge south of Giants' Gravepost (above the grace point, the ledge is accessed by going north-east from the Foot of the Forge grace point, Just follow the edge of the cliff until you see the path going above Giant's Gravepost)."
+        ],
+        "metadata": {
+            "type": "HP",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 6,
+        "name": "Cerulean Crystal Tear",
+        "duration": 0,
+        "description": "Restores half of total FP.",
+        "locations": [
+            "One dropped by the Erdtree Avatar that resides in Liurnia of the Lakes.",
+            "One dropped by the Erdtree Avatar guarding the Minor Erdtree (Mountaintops East)."
+        ],
+        "metadata": {
+            "type": "FP",
+            "in_game_quantity": 2
+        }
+    },
+    {
+        "id": 7,
+        "name": "Cerulean Hidden Tear",
+        "duration": 15,
+        "description": "Eliminates all FP consumption.",
+        "locations": [
+            "Mt. Gelmir: Minor Erdtree, drops from Ulcerated Tree Spirit. Directly East of the Road of Iniquity Site of Grace."
+        ],
+        "metadata": {
+            "type": "FP",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 8,
+        "name": "Greenspill Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts max Stamina.",
+        "locations": [
+            "Mistwood: Found on an altar next to the Minor Erdtree in Mistwood along with the Spiked Cracked Tear."
+        ],
+        "metadata": {
+            "type": "Stamina",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 9,
+        "name": "Greenburst Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Stamina recovery speed.",
+        "locations": [
+            "Dropped by the Erdtree Avatar found at the Minor Erdtree in Caelid, east of Smoldering Church."
+        ],
+        "metadata": {
+            "type": "Stamina",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 10,
+        "name": "Strength-knot Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Strength.",
+        "locations": [
+            "Stormhill: Head Northeast from Stormhill Shack to the cliffs. Look for a small, stone receptacle on the ground."
+        ],
+        "metadata": {
+            "type": "Stats",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 11,
+        "name": "Dexterity-knot Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Dexterity.",
+        "locations": [
+            "Can be found at the top of a small island at Liurnia of the Lakes."
+        ],
+        "metadata": {
+            "type": "Stats",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 12,
+        "name": "Intelligence-knot Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Intelligence.",
+        "locations": [
+            "From Road to the Manor Site of Grace, head southeast down the slope and turn back towards north. Loot from a small, half-bowl structure guarded by a few Lesser Spider Hand and one Spider Hand."
+        ],
+        "metadata": {
+            "type": "Stats",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 13,
+        "name": "Faith-knot Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Faith.",
+        "locations": [
+            "North of the Demi-Human Forest Ruins. Directly east of the Church of Pilgrimage, just down the cliff. It's in a bowl under a tree and surrounded by poison flower enemies."
+        ],
+        "metadata": {
+            "type": "Stats",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 14,
+        "name": "Stonebarb Cracked Tear",
+        "duration": 30,
+        "description": "Makes attacks more likely to break enemy stances.",
+        "locations": [
+            "Obtained by defeating the Putrid Avatar near the second Minor Erdtreein Caelid."
+        ],
+        "metadata": {
+            "type": "Offensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 15,
+        "name": "Spiked Cracked Tear",
+        "duration": 180,
+        "description": "Enhances charged attacks for a time.",
+        "locations": [
+            "Found on an altar next to the Minor Erdtree in Mistwood along with the Greenspill Crystal Tear."
+        ],
+        "metadata": {
+            "type": "Offensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 16,
+        "name": "Thorny Cracked Tear",
+        "duration": 180,
+        "description": "Makes consecutive attacks grow stronger.",
+        "locations": [
+            "Dropped by the Putrid Avatar at the Minor Erdtree in the Consecrated Snowfield, east of Ordina, Liturgical Town."
+        ],
+        "metadata": {
+            "type": "Offensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 17,
+        "name": "Ruptured Crystal Tear",
+        "duration": 3,
+        "description": "Causes concoction to explode.",
+        "locations": [
+            "Dropped by the Erdtree Avatar that resides in Liurnia of the Lakes.",
+            "Dropped by the Putrid Avatar at the Minor Erdtree in the Consecrated Snowfield, east of Ordina, Liturgical Town."
+        ],
+        "metadata": {
+            "type": "Offensive",
+            "in_game_quantity": 2
+        }
+    },
+    {
+        "id": 18,
+        "name": "Magic-Shrouding Cracked Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Magic Damage.",
+        "locations": [
+            "Defeat the Erdtree Avatar found in Liurnia of the Lakes, under the Minor Erdtree (Liurnia Northeast) east of the Mausoleum Compound Site of Grace."
+        ],
+        "metadata": {
+            "type": "Offensive / Elemental DMG",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 19,
+        "name": "Flame-Shrouding Cracked Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Fire Damage.",
+        "locations": [
+            "Dropped by the Erdtree Avatar found at the Minor Erdtree in Caelid, east of Smoldering Church."
+        ],
+        "metadata": {
+            "type": "Offensive / Elemental DMG",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 20,
+        "name": "Lightning-Shrouding Cracked Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Lightning Damage.",
+        "locations": [
+            "Dropped by Erdtree Avatar in Northeastern Liurnia of the Lakes."
+        ],
+        "metadata": {
+            "type": "Offensive / Elemental DMG",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 21,
+        "name": "Holy-Shrouding Cracked Tear",
+        "duration": 180,
+        "description": "Temporarily boosts Holy Damage.",
+        "locations": [
+            "Dropped by Erdtree Avatar in Northeastern Liurnia of the Lakes."
+        ],
+        "metadata": {
+            "type": "Offensive / Elemental DMG",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 22,
+        "name": "Opaline Bubbletear",
+        "duration": 180,
+        "description": "Significantly negates next instance of damage.",
+        "locations": [
+            "Weeping Peninsula, beneath the Minor Erdtree: Dropped by the Erdtree Avatar boss upon defeat."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 23,
+        "name": "Opaline Hardtear",
+        "duration": 180,
+        "description": "Boosts elemental damage negation.",
+        "locations": [
+            "Dropped by Putrid Avatar in Northeastern Caelid."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 24,
+        "name": "Speckled Hardtear",
+        "duration": 180,
+        "description": "Boosts resistance and heals status.",
+        "locations": [
+            "Defeat Wormface at Minor Erdtree (Altus Plateau)."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 25,
+        "name": "Leaden Hardtear",
+        "duration": 10,
+        "description": "Temporarily boosts Poise.",
+        "locations": [
+            "Drops from Ulcerated Tree Spirit in Mt. Gelmir."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 26,
+        "name": "Windy Crystal Tear",
+        "duration": 180,
+        "description": "Enhances dodge rolls for a time.",
+        "locations": [
+            "The item can be found in Caelid in a pit southeast of the Nomadic Merchant. One of the birds watches over it, facing south."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 27,
+        "name": "Winged Crystal Tear",
+        "duration": 180,
+        "description": "Temporarily reduces Equip Load.",
+        "locations": [
+            "Found on an altar surrounded by Skull enemies just outside the Capital Outskirts."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 28,
+        "name": "Twiggy Cracked Tear",
+        "duration": 180,
+        "description": "Briefly stop rune loss on death. Takes precedence over Sacrificial Twig when active.",
+        "locations": [
+            "Found on an altar guarded by enemies at the base of the Minor Erdtree in Capital Outskirts."
+        ],
+        "metadata": {
+            "type": "Defensive",
+            "in_game_quantity": 1
+        }
+    },
+    {
+        "id": 29,
+        "name": "Purifying Crystal Tear",
+        "duration": 0,
+        "description": "Purifies the Lord of Blood's curse in a mixed physick.",
+        "locations": [
+            "It can be found at the Second Church of Marika after defeating the invader Bloody Finger Eleonora. (See questline for Bloody Finger Hunter Yura.)"
+        ],
+        "metadata": {
+            "type": "Boss Fight",
+            "in_game_quantity": 1
+        }
+    }
+]

@@ -1,0 +1,921 @@
+[
+    {
+        "id": 1,
+        "name": "Pidia's Bell Bearing",
+        "unlocks": [
+            "Budding Horn",
+            "Old Fang",
+            "Slumbering Egg",
+            "Ritual Pot",
+            "Celestial Dew",
+            "Larval Tear",
+            "Glintstone Craftsman's Cookbook [7]",
+            "Ash of War: Carian Retaliation",
+            "Ripple Blade Axe",
+            "Black Leather Shield",
+            "Weathered Map"
+        ],
+        "locations": [
+            "Caria Manor Church's upper mezzanine, upon Pidia's body after progressing through Ranni's Questline."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 2,
+        "name": "Seluvis's Bell Bearing",
+        "unlocks": [
+            "Carian Phalanx",
+            "Carian Retaliation",
+            "Glintstone Icecrag",
+            "Freezing Mist"
+        ],
+        "locations": [
+            "Found on Seluvis' body in Seluvis's Rise after reaching the end of Ranni's questline."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 3,
+        "name": "Patches' Bell Bearing",
+        "unlocks": [
+            "Gold-Pickled Fowl Foot",
+            "Fan Daggers",
+            "Margit's Shackle",
+            "Grace Mimic",
+            "Glass Shard",
+            "Furlcalling Finger Remedy",
+            "Festering Bloody Finger",
+            "Stonesword Key",
+            "Missionary Cookbook [2]",
+            "Parrying Dagger",
+            "Great Arrow",
+            "Ballista Bolt",
+            "Horse Crest Wooden Shield",
+            "Sacrificial Twig"
+        ],
+        "locations": [
+            "Found on Patches in Murkwater Cave."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 4,
+        "name": "Sellen's Bell Bearing",
+        "unlocks": [
+            "Glintstone Pebble",
+            "Glintstone Stars",
+            "Glintstone Arc",
+            "Crystal Barrage",
+            "Scholar's Armament",
+            "Scholar's Shield",
+            "Glintblade Phalanx",
+            "Carian Slicer",
+            "Great Glintstone Shard",
+            "Swift Glintstone Shard",
+            "Glintstone Cometshard",
+            "Star Shower"
+        ],
+        "locations": [
+            "Found on Sorceress Sellen's body at Witchbane Ruins."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 5,
+        "name": "D's Bell Bearing",
+        "unlocks": [
+            "Litany of Proper Death",
+            "Order's Blade"
+        ],
+        "locations": [
+            "Option 1: After you defeat the Fire Giant boss and approached the Forge of the Giants. Return to Roundtable Hold, found on D's corpse.",
+            "Option 2: Return the Weathered Dagger as part of Fia's questline and find the bell bearing on D's corpse in the Roundtable Hold."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 6,
+        "name": "Bernahl's Bell Bearing",
+        "unlocks": [
+            "Ash of War: Stamp (Upward Cut)",
+            "Ash of War: Kick",
+            "Ash of War: Endure",
+            "Ash of War: War Cry",
+            "Ash of War: Spinning Slash",
+            "Ash of War: Impaling Thrust",
+            "Ash of War: Quickstep",
+            "Ash of War: Storm Blade",
+            "Ash of War: Parry",
+            "Ash of War: No Skill"
+        ],
+        "locations": [
+            "Found on Bernahl, Warmasters Shack, Boilprawn Shack in Liurnia."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 7,
+        "name": "Miriel's Bell Bearing",
+        "unlocks": [
+            "Glintstone Cometshard",
+            "Star Shower",
+            "Magic Glintblade",
+            "Glintblade Phalanx",
+            "Carian Slicer",
+            "Carian Greatsword",
+            "Lord's Heal",
+            "Lord's Aid",
+            "Blessing's Boon",
+            "O, Flame!",
+            "Surge, O Flame!"
+        ],
+        "locations": [
+            "Found on Miriel, Pastor of Vows' body at the Church of Vows, a neglected house of worship on the East Isle of Liurna of The Lakes."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 8,
+        "name": "Gostoc's Bell Bearing",
+        "unlocks": [
+            "Silver-Pickled Fowl Foot",
+            "Caestus",
+            "Bandit Garb",
+            "Bandit Boots",
+            "Bandit Manchettes",
+            "Buckler",
+            "Ruin Fragment",
+            "Furlcalling Finger Remedy",
+            "Stormhawk Feather",
+            "Great Arrow",
+            "Ballista Bolt"
+        ],
+        "locations": [
+            "Found on Gatekeeper Gostoc, near Godrick the Grafted Site of Grace."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 9,
+        "name": "Thops's Bell Bearing",
+        "unlocks": [
+            "Glintstone Pebble",
+            "Glintstone Arc",
+            "Starlight",
+            ""
+        ],
+        "locations": [
+            "Looted from Thops's body. After receiving the Academy Glintstone Key, Thop will move from his original location. His corpse can be found near the Schoolhouse Classroom site of grace of Raya Lucaria Academy. Head outside and turn right, you'll find him, sitting in a chair."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 10,
+        "name": "Kalé's Bell Bearing",
+        "unlocks": [
+            "Throwing Dagger",
+            "Telescope",
+            "Furlcalling Finger Remedy",
+            "Cracked Pot",
+            "Crafting Kit",
+            "Nomadic Warrior's Cookbook [1]",
+            "Nomadic Warrior's Cookbook [2]",
+            "Missionary's Cookbook [1]",
+            "Arrow",
+            "Bolt",
+            "Torch",
+            "Large Leather Shield",
+            "Chain Coif",
+            "Chain Armor",
+            "Chain Gauntlets",
+            "Chain Leggings",
+            "Note: Flask of Wondrous Physic",
+            "Note: Waypoint Ruins"
+        ],
+        "locations": [
+            "Found on Kalé at Church of Elleh."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 11,
+        "name": "Nomadic Merchant's Bell Bearing [1]",
+        "unlocks": [
+            "Pickled Turtle Neck",
+            "Cracked Pot",
+            "Nomadic Warrior's Cookbook [3]",
+            "Short Sword",
+            "Halberd",
+            "Arrow",
+            "Bolt",
+            "Bandit Mask",
+            "Note: Flame Chariots"
+        ],
+        "locations": [
+            "Found on the Nomadic Merchant (North Limgrave), east of the Saintsbridge."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 12,
+        "name": "Nomadic Merchant's Bell Bearing [2]",
+        "unlocks": [
+            "Festering Bloody Finger",
+            "Sliver of Meat",
+            "Beast Liver",
+            "Lump of Flesh",
+            "Trina's Lily",
+            "Nomadic Warrior's Cookbook [5]",
+            "Armorer's Cookbook [3]",
+            "Hand Axe",
+            "Arrow",
+            "St. Trina's Arrow",
+            "Bolt",
+            "Riveted Wooden Shield",
+            "Blue-Gold Kite Shield"
+        ],
+        "locations": [
+            "Found on the Nomadic Merchant (East Limgrave), located on the road between the Mistwood Ruins and Fort Haight."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 13,
+        "name": "Nomadic Merchant's Bell Bearing [3]",
+        "unlocks": [
+            "Neutralizing Boluses",
+            "Stanching Boluses",
+            "Stimulating Boluses",
+            "Armorer's Cookbook [2]",
+            "Broadsword",
+            "Club",
+            "Shortbow",
+            "Arrow",
+            "Bolt",
+            "Iron Roundshield",
+            "Note: Land Squirts",
+            "Note: Stonedigger Trolls"
+        ],
+        "locations": [
+            "Found on the Nomadic Merchant (West Limgrave), found underneath the rock structure southeast of the Coastal Cave."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 14,
+        "name": "Nomadic Merchant's Bell Bearing [4]",
+        "unlocks": [
+            "Kukri",
+            "Cracked Pot",
+            "Stonesword Key",
+            "Bastard Sword",
+            "Light Crossbow",
+            "Arrow",
+            "Great Arrow",
+            "Bolt",
+            "Ballista Bolt",
+            "Red Thorn Roundshield",
+            "Round Shield",
+            "Iron Helmet",
+            "Scale Armor",
+            "Iron Gauntlets",
+            "Leather Trousers",
+            "Crimson Amber Medallion",
+            "Note: Demi-human Mobs"
+        ],
+        "locations": [
+            "Found on Nomadic Merchant (Castle Morne Rampart) at grace of the same name."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 15,
+        "name": "Nomadic Merchant's Bell Bearing [5]",
+        "unlocks": [
+            "Arrow",
+            "Astrologer Gloves",
+            "Astrologer Hood",
+            "Astrologer Robe",
+            "Astrologer Trousers",
+            "Astrologer's Staff",
+            "Bolt",
+            "Estoc",
+            "Kite Shield",
+            "Lantern",
+            "Nomadic Warrior's Cookbook [11]"
+        ],
+        "locations": [
+            "Found on the Nomadic Merchant (Liurnia of the Lakes) by the Liurnia Lake Shore site of grace."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 16,
+        "name": "Nomadic Merchant's Bell Bearing [6]",
+        "unlocks": [
+            "Arrow",
+            "Bewitching Branch",
+            "Blue Crest Heater Shield",
+            "Bolt",
+            "Clarifying White Cured Meat",
+            "Composite Bow",
+            "Immunizing Cured Meat",
+            "Invigorating White Cured Meat",
+            "Nomadic Warrior's Cookbook [13]",
+            "Rift Shield",
+            "Rune Arc"
+        ],
+        "locations": [
+            "Found under the rocky overpass just north of Bellum Church."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 17,
+        "name": "Nomadic Merchant's Bell Bearing [7]",
+        "unlocks": [
+            "Ancient Dragon Apostle's Cookbook [2]",
+            "Arrow",
+            "Bolt",
+            "Crossed-Tree Greatshield",
+            "Gravel Stone",
+            "Lightning Bolt",
+            "Note: Imp Shades",
+            "Note: Unseen Assassins",
+            "Red Crest Heater Shield",
+            "Scorpion Kite Shield",
+            "Stonesword Key",
+            "Tree Surcoat"
+        ],
+        "locations": [
+            "Drop by Nomadic Merchant (West Altus Plateau)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 18,
+        "name": "Nomadic Merchant's Bell Bearing [8]",
+        "unlocks": [
+            "Arrow",
+            "Ballista Bolt",
+            "Bolt",
+            "Confessor Armor",
+            "Confessor Boots",
+            "Confessor Gloves",
+            "Confessor Hood",
+            "Explosive Bolt",
+            "Explosive Greatbolt",
+            "Great Arrow",
+            "Guilty Hood",
+            "Nomadic Warrior's Cookbook [20]",
+            "Stonesword Key"
+        ],
+        "locations": [
+            "Found on the Nomadic Merchant in Mt. Gelmir."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 19,
+        "name": "Nomadic Merchant's Bell Bearing [9]",
+        "unlocks": [
+            "Aeonian Butterfly",
+            "Arrow",
+            "Bolt",
+            "Fire Arrow",
+            "Poisonbone Dart",
+            "Poisoned Stone",
+            "Poisoned Stone Clump",
+            "Preserving Boluses"
+        ],
+        "locations": [
+            "Drop by Wandering Merchant (Caelid Highway North)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 20,
+        "name": "Nomadic Merchant's Bell Bearing [10]",
+        "unlocks": [
+            "Arrow",
+            "Bolt",
+            "Champion Bracers",
+            "Champion Gaiters",
+            "Champion Headband",
+            "Champion Pauldron",
+            "Cracked Pot",
+            "Flaming Bolt",
+            "Greathelm",
+            "Nomadic Warrior's Cookbook [15]",
+            "Note: Gravity's Advantage",
+            "Stonesword Key"
+        ],
+        "locations": [
+            "Drop by Nomadic Merchant (Caelid South)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 21,
+        "name": "Nomadic Merchant's Bell Bearing [11]",
+        "unlocks": [],
+        "locations": [],
+        "not_in_game": true
+    },
+    {
+        "id": 22,
+        "name": "Isolated Merchant's Bell Bearing [1]",
+        "unlocks": [
+            "Lantern",
+            "Arteria Leaf",
+            "Stonesword",
+            "Lost Ashes of War",
+            "Zweihander",
+            "Arrow",
+            "Great Arrow",
+            "Bolt",
+            "Ballista Bolt",
+            "Sacrificial Twig",
+            "Note: Walking Mausoleum"
+        ],
+        "locations": [
+            "Weeping Peninsula."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 23,
+        "name": "Isolated Merchant's Bell Bearing [2]",
+        "unlocks": [
+            "Fanged Imp Ashes",
+            "Trina's Lily",
+            "Eye of Yelough",
+            "Stonesword Key",
+            "Lost Ashes of War",
+            "Fevor's Cookbook [2]",
+            "Saint Trina's Arrow",
+            "Meteor Bolt",
+            "Blue Cloth Cowl",
+            "Blue Cloth Vest",
+            "Warrior Gauntlets",
+            "Warrior Greaves",
+            "Sacrificial Twig",
+            "Note: Revenants",
+            "Note: Frenzied Flame Village"
+        ],
+        "locations": [
+            "Just outside the Raya Lucaria Academy in Liurnia of the Lakes."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 24,
+        "name": "Isolated Merchant's Bell Bearing [3]",
+        "unlocks": [
+            "Dragonwound Grease",
+            "Gravel Stone",
+            "Ritual Pot",
+            "Lost Ashes of War",
+            "Spiked Caestus",
+            "Arrow",
+            "Serpent Arrow",
+            "Bolt",
+            "Beast-Repellent Torch",
+            "Land of Reeds Helm",
+            "Land of Reeds Armor",
+            "Land of Reeds Gauntlets",
+            "Land of Reeds Greaves",
+            "Sacrificial Twig",
+            "Note: Gateway",
+            "Note: Hidden Cave"
+        ],
+        "locations": [
+            "Dragonbarrow."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 25,
+        "name": "Hermit Merchant's Bell Bearing [1]",
+        "unlocks": [
+            "Rune Arc",
+            "Golden Sunflower",
+            "Perfume Bottle",
+            "Sentry's Torch",
+            "Distinguished Greatshield",
+            "Prophet Blindfold",
+            "Prophet Robe",
+            "Upper-Class Robe",
+            "Prophet Trousers",
+            "Consort's Trousers",
+            "Arrow",
+            "Golden Arrow",
+            "Great Arrow",
+            "Golden Great Arrow",
+            "Bolt",
+            "Golden Bolt",
+            "Ballista Bolt"
+        ],
+        "locations": [
+            "Drop by Hermit Merchant (Leyndell)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 26,
+        "name": "Hermit Merchant's Bell Bearing [2]",
+        "unlocks": [
+            "Rune Arc",
+            "Thawfrost Boluses",
+            "Stonesword Key",
+            "Missionary's Cookbook [7]",
+            "Arrow",
+            "Great Arrow",
+            "Bolt",
+            "Ballista Bolt",
+            "Lightning Greatbolt",
+            "Vagabond Knight Helm",
+            "Vagabond Knight Armor",
+            "Vagabond Knight Gauntlets",
+            "Vagabond Knight Greaves"
+        ],
+        "locations": [
+            "Drop by Hermit Merchant (Mountaintops of the Giants)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 27,
+        "name": "Hermit Merchant's Bell Bearing [3]",
+        "unlocks": [
+            "Gravity Stone Fan",
+            "Gravity Stone Chunk",
+            "Lost Ashes of War",
+            "Celestial Dew",
+            "Nomadic Warrior's Cookbook [16]",
+            "Perfumer's Cookbook [4]",
+            "Prisoner Iron Mask",
+            "Prisoner Clothing",
+            "Prisoner Trousers"
+        ],
+        "locations": [
+            "Drop by Wandering Merchant (Ainsel River)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 28,
+        "name": "Abandoned Merchant's Bell Bearing",
+        "unlocks": [
+            "Soap",
+            "Nascent Butterfly",
+            "Stonesword Key",
+            "Larval Tear",
+            "Nomadic Warrior's Cookbook [17]",
+            "Nomadic Warrior's Cookbook [18]",
+            "Shotel",
+            "Arrow",
+            "Dwelling Arrow",
+            "Bolt"
+        ],
+        "locations": [
+            "Found playing music by an unlit campfire in the ruins of Siofra River."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 29,
+        "name": "Imprisoned Merchant's Bell Bearing",
+        "unlocks": [
+            "Rune Arc",
+            "Stanching Boluses",
+            "Festering Bloody Finger",
+            "Bloodrose",
+            "Stonesword Key",
+            "Lost Ashes of War",
+            "Dwelling Arrow",
+            "Burred Bolt"
+        ],
+        "locations": [
+            "Found on merchant inside the Mohgwyn Dynasty Mausoleum west of Mohgwyn Palace."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 30,
+        "name": "Iji's Bell Bearing",
+        "unlocks": [
+            "Somber Smithing Stone [1]",
+            "Somber Smithing Stone [2]",
+            "Somber Smithing Stone [3]",
+            "Somber Smithing Stone [4]",
+            "Carian Filigreed Crest"
+        ],
+        "locations": [
+            "Found on War Counselor Iji's anvil. Complete Blaidd's questline and defeat him, then speak to War Counselor Iji with the \"Blaidd's Death\" option. Leave the area and then return."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 31,
+        "name": "Rogier's Bell Bearing",
+        "unlocks": [
+            "Ash of War: Glintstone Pebble",
+            "Ash of War: Carian Greatsword",
+            "Ash of War: Spinning Weapon"
+        ],
+        "locations": [
+            "After Rogier dies, found on his body. \n*Rogier* can initially be found in Stormveil Castle by the altar of the Chapel in the northwest section.\nAfter defeating Godrick the Grafted, Rogier moves to the Roundtable Hold."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 32,
+        "name": "Blackguard's Bell Bearing",
+        "unlocks": [
+            "Boiled Prawn",
+            "Boiled Crab",
+            "Rya's Necklace"
+        ],
+        "locations": [
+            "Found on Blackguard Big Boggart.\nBlackguard Big Boggart can be initially found in the Liurnia of the Lakes swamps at the Boilprawn Shack.\nHe then later moves to Leyndell in the outer moat near the Capital Rampart."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 33,
+        "name": "Corhyn's Bell Bearing",
+        "unlocks": [
+            "Urgent Heal",
+            "Heal",
+            "Great Heal",
+            "Cure Poison",
+            "Magic Fortification",
+            "Flame Fortification",
+            "Lightning Fortification",
+            "Discus of Light",
+            "Immutable Shield",
+            "Rejection",
+            "Catch Flame",
+            "Flame Sling"
+        ],
+        "locations": [
+            "Altus Plateau, Leyndell, Royal Capital."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 34,
+        "name": "Gowry's Bell Bearing",
+        "unlocks": [
+            "Glintstone Stars",
+            "Night Shard",
+            "Night Maiden's Mist",
+            "Pest Threads"
+        ],
+        "locations": [
+            "Found at Gowry's Shack located in eastern Caelid."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 35,
+        "name": "Bone Peddler's Bell Bearing",
+        "unlocks": [
+            "Thin Animal Bones",
+            "Hefty Beast Bone"
+        ],
+        "locations": [
+            "Dropped by the Bell Bearing Hunter after nightly invasion at Warmaster's Shack, Stormhill (Limgrave)."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 36,
+        "name": "Meat Peddler's Bell Bearing",
+        "unlocks": [
+            "Sliver of Meat",
+            "Lump of Flesh",
+            "Turtle Neck Meat"
+        ],
+        "locations": [
+            "Dropped by the Bell Bearing Hunter after nightly invasion at the Church of Vows."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 37,
+        "name": "Medicine Peddler's Bell Bearing",
+        "unlocks": [
+            "Neutralizing Boluses",
+            "Stanching Boluses",
+            "Thawfrost Boluses",
+            "Stimulating Boluses"
+        ],
+        "locations": [
+            "Dropped by the Bell Bearing Hunter after nightly invasion at the Hermit Merchant's Shack in Altus Plateau."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 38,
+        "name": "Gravity Stone Peddler's Bell Bearing",
+        "unlocks": [
+            "Gravity Stone Fan",
+            "Gravity Stone Chunk"
+        ],
+        "locations": [
+            "Dropped by the Bell Bearing Hunter after nightly invasion at the Isolated Merchant's Shack in Dragonbarrow."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 39,
+        "name": "Smithing-Stone Miner's Bell Bearing [1]",
+        "unlocks": [
+            "Smithing Stone [1]",
+            "Smithing Stone [2]",
+            "Glintstone Scrap"
+        ],
+        "locations": [
+            "Dropped by the Crystalian Boss at the end of Raya Lucaria Crystal Tunnel."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 40,
+        "name": "Smithing-Stone Miner's Bell Bearing [2]",
+        "unlocks": [
+            "Smithing Stone [3]",
+            "Smithing Stone [4]",
+            "Explosive Stone"
+        ],
+        "locations": [
+            "Found in a chest at the first secret area inside the Sealed Tunnel."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 41,
+        "name": "Smithing-Stone Miner's Bell Bearing [3]",
+        "unlocks": [
+            "Smithing Stone [5]",
+            "Smithing Stone [6]"
+        ],
+        "locations": [
+            "The bell bearing is found in Zamor Ruins in the Mountaintop of the Giants area at the bottom of the stairs in a chest."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 42,
+        "name": "Smithing-Stone Miner's Bell Bearing [4]",
+        "unlocks": [
+            "Smithing Stone [7]",
+            "Smithing Stone [8]"
+        ],
+        "locations": [
+            "Obtained from defeating The Godskin Duo in Crumbling Farum Azula"
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 43,
+        "name": "Somberstone Miner's Bell Bearing [1]",
+        "unlocks": [
+            "Somber Smithing Stone [1]",
+            "Somber Smithing Stone [2]",
+            "Glintstone Scrap"
+        ],
+        "locations": [
+            "Sellia Crystal Tunnel: Dropped by the Fallingstar Beast upon defeat."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 44,
+        "name": "Somberstone Miner's Bell Bearing [2]",
+        "unlocks": [
+            "Somber Smithing Stone [3]",
+            "Somber Smithing Stone [4]"
+        ],
+        "locations": [
+            "Altus Tunnel: defeat Crystalian Spear and Ringblade boss"
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 45,
+        "name": "Somberstone Miner's Bell Bearing [3]",
+        "unlocks": [
+            "Somber Smithing Stone [5]",
+            "Somber Smithing Stone [6]"
+        ],
+        "locations": [
+            "Found on a body outside the First Church of Marika in Mountaintops of the Giants."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 46,
+        "name": "Somberstone Miner's Bell Bearing [4]",
+        "unlocks": [
+            "Somber Smithing Stone [7]",
+            "Somber Smithing Stone [8]",
+            "Sanctuary Stone"
+        ],
+        "locations": [
+            "Found on corpse next to Tempest-Facing Balcony Site of Grace located in Crumbling Farum Azula."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 47,
+        "name": "Somberstone Miner's Bell Bearing [5]",
+        "unlocks": [
+            "Somber Smithing Stone [9]"
+        ],
+        "locations": [
+            "Found on a body in the abandoned temple on the North side of Crumbling Farum Azula"
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 48,
+        "name": "Ghost-Glovewort Picker's Bell Bearing [1]",
+        "unlocks": [
+            "Ghost Glovewort [1]",
+            "Ghost Glovewort [2]",
+            "Ghost Glovewort [3]"
+        ],
+        "locations": [
+            "Found on a corpse lying at the base of a gazebo in Nokron, Eternal City."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 49,
+        "name": "Ghost-Glovewort Picker's Bell Bearing [2]",
+        "unlocks": [
+            "Ghost Glovewort [4]",
+            "Ghost Glovewort [5]",
+            "Ghost Glovewort [6]"
+        ],
+        "locations": [
+            "Found in a chest guarded by several Silver Tears with shields in the corner of a small room in Nokstella, Eternal City."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 50,
+        "name": "Ghost-Glovewort Picker's Bell Bearing [3]",
+        "unlocks": [
+            "Ghost Glovewort [7]",
+            "Ghost Glovewort [8]",
+            "Ghost Glovewort [9]"
+        ],
+        "locations": [
+            "Found in a graveyard in Elphael, Brace of the Haligtree. From the Haligtree Roots Grace, go back up the elevator, go straight to exit the church and then take a left down the slope filled with Lesser Kindred of Rot. The item will be next to a grave surrounded by more enemies."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 51,
+        "name": "Glovewort Picker's Bell Bearing [1]",
+        "unlocks": [
+            "Grave Glovewort [1]",
+            "Grave Glovewort [2]",
+            "Grave Glovewort [3]"
+        ],
+        "locations": [
+            "Altus Plateau: Dropped by Erdtree Burial Watchdog in Wyndham Catacombs."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 52,
+        "name": "Glovewort Picker's Bell Bearing [2]",
+        "unlocks": [
+            "Grave Glovewort [4]",
+            "Grave Glovewort [5]",
+            "Grave Glovewort [6]"
+        ],
+        "locations": [
+            "Dropped by Ulcerated Tree Spirit in Giants' Mountaintop Catacombs."
+        ],
+        "not_in_game": false
+    },
+    {
+        "id": 53,
+        "name": "Glovewort Picker's Bell Bearing [3]",
+        "unlocks": [
+            "Grave Glovewort [7]",
+            "Grave Glovewort [8]",
+            "Grave Glovewort [9]"
+        ],
+        "locations": [
+            "Can be found in the middle of a lake in Crumbling Farum Azula. From the Crumbling Beast Grave Depths Grace, go the big church to the northwest and exit outside to the southwest. Take the elevator going down and you should see a lake in the distance to your left. The Item is in a gazebo in front of the lake. You can take the item undetected by going stealth."
+        ],
+        "not_in_game": false
+    }
+]

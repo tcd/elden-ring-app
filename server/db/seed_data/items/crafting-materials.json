@@ -1,0 +1,1079 @@
+[
+    {
+        "id": 1,
+        "name": "Aeonian Butterfly",
+        "not_in_game": false,
+        "crafts": [
+            "Rot Pot",
+            "Rotbone Bolt",
+            "Rot Grease",
+            "Drawstring Rot Grease",
+            "Rotbone Arrow",
+            "Rotbone Arrow (Fletched)"
+        ],
+        "farming_locations": [
+            "Grand Cloister: From the Site of Grace, run along the south side of the Lake of Rot to find 4 Basilisks, then towards the ruins for 8 more. Roll around in the rot and then going back on land before it fully builds up to trigger a less damaging form of rot."
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Albinauric Bloodclot",
+        "not_in_game": false,
+        "crafts": [
+            "Albinauric Pot",
+            "Alluring Pot"
+        ],
+        "farming_locations": [
+            "Village of the Albinaurics: Kill the Albinauric behind the house and the ones on the bridge. These are easier to kill and have a better drop rate than the froglike second generation Albinaurics found elsewhere in Liurnia.",
+            "Volcano Manor: Kill the Albinaurics in the room accessible through the shortcut in the entry hall (where you found the Volcano Manor Seedbed Curse)."
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Altus Bloom",
+        "not_in_game": false,
+        "crafts": [
+            "Spark Aromatic",
+            "Uplifting Aromatic",
+            "Poison Spraymist",
+            "Acid Spraymist",
+            "Bloodboil Aromatic",
+            "Ironjar Aromatic"
+        ],
+        "farming_locations": [
+            "*Road of Iniquity Side Path* Site of Grace in Altus Plateau: There are 5 blooms in close proximity southwest of the Site of Grace."
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Arteria Leaf",
+        "not_in_game": false,
+        "crafts": [
+            "Exalted Flesh",
+            "Uplifting Aromatic",
+            "Bloodboil Aromatic"
+        ],
+        "farming_locations": [
+            "*Giant's Gravepost* Site of Grace in Mountaintops of the Giants: Kill the Troll just west of the grace."
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Beast Blood",
+        "not_in_game": false,
+        "crafts": [
+            "Cursed-Blood Pot",
+            "Beastlure Pot",
+            "Dragonwound Grease"
+        ],
+        "farming_locations": [
+            "Third Church of Marika Site of Grace in Limgrave: Travel south into the woods for a group of Boars and, further along, Lesser Runebears."
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Beast Liver",
+        "not_in_game": false,
+        "crafts": [
+            "Fireproof Dried Liver",
+            "Spellproof Dried Liver",
+            "Holyproof Dried Liver",
+            "Lightningproof Dried Liver"
+        ],
+        "farming_locations": [
+            "Church of Pilgrimage: Traveling southwest from the church towards the Walking Mausoleum, you run into three herds of Sheep.",
+            "Craftsman's Shack: Right next to the site of grace is a large herd of Sheep.",
+            "By *Ancestral Woods* Site of Grace in Siofra River Well: There are many beasts in this area."
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Bloodrose",
+        "not_in_game": false,
+        "crafts": [
+            "Cursed-Blood Pot",
+            "Blood Grease",
+            "Bloodbone Arrow (Fletched)",
+            "Bloodbone Arrow",
+            "Bloodbone Bolt"
+        ],
+        "farming_locations": [
+            "*Fort Haight:* 6 bushes can be farmed here: 1 at the entrance stairway, 2 behind the castle, and 3 within the fort's courtyard. After collecting them, teleporting back to the Site of Grace is faster than going back on foot, since the fort is a no riding zone.",
+            "Rose Church: 9 bushes (1 on the pathway leading up to the church, by the fallen tree) can be farmed here. The enemies are easily avoided on horseback. The total run from the Site of Grace to the church collecting all the bushes takes about 45 - 60 seconds, but you can die to respawn at the Stake of Marika in front of the church, making the process way faster."
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Blood-Tainted Excrement",
+        "not_in_game": false,
+        "crafts": [
+            "Swarm Pot",
+            "Roped Fly Pot"
+        ],
+        "farming_locations": [
+            "*Palace Approach Ledge Road* Site of Grace in Mohgwyn Palace: Ride downhill, run left of the single Albinauric next to the big rock pillar and grab one near the small tree, then run to the next small tree behind the circle of Albinaurics and grab another. Keep running straight to the smaller rock pillar and grab one, southwest to the next small pillar near the wall for another, then southeast to the tall weeds next to circling Albinaurics for two more. Go west from there to grab one behind three Albinaurics and another on a dead bird's head, then run into the area full of Giant Crows and follow the right wall grabbing as many as you can before the Crows kill you."
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Budding Cave Moss",
+        "not_in_game": false,
+        "crafts": [
+            "Uplifting Aromatic",
+            "Bloodboil Aromatic"
+        ],
+        "farming_locations": [
+            "Can be farmed in large quantities by spawning at *Subterranean Inquistion Chamber* and running towards the cave before the Abductor Virgins under Volcano Manor."
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Budding Horn",
+        "not_in_game": false,
+        "crafts": [
+            "Dappled Cured Meat",
+            "Dappled White Cured Meat"
+        ],
+        "farming_locations": [
+            "Grand Cloister: From the Site of Grace, run along the south side of the Lake of Rot to find 4 Basilisks, then towards the ruins for 8 more. Roll around in the rot and then going back on land before it fully builds up to trigger a less damaging form of rot."
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Cave Moss",
+        "not_in_game": false,
+        "crafts": [
+            "Stanching Boluses",
+            "Neutralizing Boluses",
+            "Thawfrost Boluses",
+            "Stimulating Boluses"
+        ],
+        "farming_locations": [
+            "Coastal Cave: Several available in this cave."
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Cracked Crystal",
+        "not_in_game": false,
+        "crafts": [
+            "Crystal Dart",
+            "Cuckoo Glintstone",
+            "Shattershard Arrow",
+            "Shattershard Arrow (Fletched)"
+        ],
+        "farming_locations": [
+            "Sellia Crystal Tunnel: Twenty in the first room, guarded by two Lesser Kindred of Rot."
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Crystal Cave Moss",
+        "not_in_game": false,
+        "crafts": [
+            "Preserving Boluses",
+            "Clarifying Boluses",
+            "Rejuvenating Boluses"
+        ],
+        "farming_locations": [
+            "Sellia Hideaway: One right next to the Site of Grace."
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Crab Eggs",
+        "not_in_game": false,
+        "crafts": [
+            "Invigorating Cured Meat",
+            "Invigorating White Cured Meat"
+        ],
+        "farming_locations": [
+            "*Agheel Lake South* Site of Grace in Limgrave: A large colony of Crabs, as well as one Giant Crab, can be found just northwest."
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Crystal Bud",
+        "not_in_game": false,
+        "crafts": [
+            "Cuckoo Glintstone",
+            "Magic Grease",
+            "Drawstring Magic Grease"
+        ],
+        "farming_locations": [
+            "Revenger's Shack: Two total, one about 12 steps southeast of the Site of Grace and another on the northwest side. If you walk around the shack, you can also find five Root Resin, as well as Rowa Fruit, Mushroom, Gold-Tinged Excrement, and an Erdleaf Flower in the area."
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Dewkissed Herba",
+        "not_in_game": false,
+        "crafts": [
+            "Preserving Boluses",
+            "Clarifying Boluses",
+            "Rejuvenating Boluses",
+            "Glowstone"
+        ],
+        "farming_locations": [
+            "*Siofra River Bank* Site of Grace in Siofra River: Seven grow slightly southeast."
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Erdleaf Flower",
+        "not_in_game": false,
+        "crafts": [
+            "Furlcalling Finger Remedy",
+            "Grace Mimic",
+            "Warming Stone"
+        ],
+        "farming_locations": [
+            "The Four Belfries: Three are next to the Site of Grace, and another is behind a nearby rock."
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Eye of Yelough",
+        "not_in_game": false,
+        "crafts": [
+            "Clarifying Boluses",
+            "Clarifying Cured Meat",
+            "Clarifying White Cured Meat"
+        ],
+        "farming_locations": [
+            "Yelough Anix Ruins: Kill all the Frenzied Troll Knights. Dying and respawning at the Stake of Marika is faster than going back to the Site of Grace."
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Faded Erdleaf Flower",
+        "not_in_game": false,
+        "crafts": [
+            "Rot Pot"
+        ],
+        "farming_locations": [
+            "Fort Faroth: A handful spawn just to the southwest."
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Fire Blossom",
+        "not_in_game": false,
+        "crafts": [
+            "Giantsflame Fire Pot"
+        ],
+        "farming_locations": [
+            "*Freezing Lake* Site of Grace in Mountaintops of the Giants: Head southwest along the right bank of the frozen river towards the Shack of the Lofty. Once you reach it, turn south and use the spiritspring to continue towards Nomadic Merchant Mountaintops East. This yields about 30 per run in about a minute."
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Flight Pinion",
+        "not_in_game": false,
+        "crafts": [
+            "Bone Arrow (Fletched)",
+            "Magicbone Arrow (Fletched)",
+            "Firebone Arrow (Fletched)",
+            "Lightningbone Arrow (Fletched)",
+            "Haligbone Arrow (Fletched)",
+            "Bloodbone Arrow (Fletched)",
+            "Rotbone Arrow (Fletched)",
+            "Shattershard Arrow (Fletched)"
+        ],
+        "farming_locations": [
+            "Church of Elleh: Travel directly west, killing Eagles along the way, until you reach a cliff. Safely drop down onto the square shaped ruin to find six Guillemots, then continue down the cliffs to the west to reach another square shaped ruin with seven Eagles. Continue northwest along the beach to find more birds. Use ranged attacks to prevent them from flying away.",
+            "*Below the Well* Site of Grace in Siofra River: Turn around, kill 4 eagles on the right, 2 eagles on the left, then walk back to the grace. Use ranged or AOE attacks."
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Formic Rock",
+        "not_in_game": false,
+        "crafts": [
+            "Acid Spraymist"
+        ],
+        "farming_locations": [
+            "*Deeproot Depths* Site of Grace in Deeproot Depths: Several Giant Ants are just east of the Site of Grace."
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Four-Toed Fowl Foot",
+        "not_in_game": false,
+        "crafts": [
+            "Gold-Pickled Fowl Foot",
+            "Silver-Pickled Fowl Foot"
+        ],
+        "farming_locations": [
+            "Church of Elleh: Travel directly west, killing Eagles along the way, until you reach a cliff. Safely drop down onto the square shaped ruin to find six Guillemots, then continue down the cliffs to the west to reach another square shaped ruin with seven Eagles. Continue northwest along the beach to find more birds. Use ranged attacks to prevent them from flying away.",
+            "Fourth Church of Marika: Drop down to the beach northwest of the Site of Grace and use ranged attacks to kill the many Guillemots there. A single run takes around 1 minute 30 seconds."
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Fulgurbloom",
+        "not_in_game": false,
+        "crafts": [
+            "Lightning Grease",
+            "Drawstring Lightning Grease",
+            "Lightningbone Arrow",
+            "Lightningbone Arrow (Fletched)",
+            "Lightningbone Bolt"
+        ],
+        "farming_locations": [
+            "*Rampart Side Path* Site of Grace in Altus Plateau: There are 10 to 12 up the hill where the lightning is striking."
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Glintstone Firefly",
+        "not_in_game": false,
+        "crafts": [
+            "Spellproof Dried Liver",
+            "Magicbone Arrow",
+            "Magicbone Arrow (Fletched)"
+        ],
+        "farming_locations": [
+            "*Scenic Isle* Site of Grace in Liurnia of the Lakes: Covering a massive crystal west of the Site of Grace.",
+            "*Royal Moongazing Grounds* Site of Grace in Liurnia of the Lakes: 4 on cystals just out the door to the Three Sisters."
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Gold Firefly",
+        "not_in_game": false,
+        "crafts": [
+            "Gold-Pickled Fowl Foot"
+        ],
+        "farming_locations": [
+            "*Mistwood Outskirts* Site of Grace in Limgrave: 9 is a pond to the southeast, near two Lesser Runebears."
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Gold-Tinged Excrement",
+        "not_in_game": false,
+        "crafts": [
+            "Fetid Pot",
+            "Roped Fetid Pot"
+        ],
+        "farming_locations": [
+            "Third Church of Marika: Travel south into the woods for a group of Boars, then grab more on the ground past them."
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Golden Centipede",
+        "not_in_game": false,
+        "crafts": [
+            "Rejuvenating Boluses",
+            "Sacred Order Pot"
+        ],
+        "farming_locations": [
+            "Minor Erdtree Church: Kill all the nearby Guardians."
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Golden Dung",
+        "not_in_game": true,
+        "crafts": [],
+        "farming_locations": []
+    },
+    {
+        "id": 30,
+        "name": "Golden Rowa",
+        "not_in_game": false,
+        "crafts": [
+            "Dappled Cured Meat",
+            "Dappled White Cured Meat",
+            "Invigorating Cured Meat",
+            "Invigorating White Cured Meat",
+            "Sweet Raisin"
+        ],
+        "farming_locations": [
+            "*Bower of Bounty* Site of Grace in Altus Plateau: Four in the immediate vicinity."
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Golden Sunflower",
+        "not_in_game": false,
+        "crafts": [
+            "Sacred Order Pot",
+            "Holy Grease",
+            "Haligbone Bolt",
+            "Drawstring Holy Grease",
+            "Haligbone Arrow",
+            "Haligbone Arrow (Fletched)",
+            "Holyproof Dried Liver"
+        ],
+        "farming_locations": [
+            "Found near Minor Erdtrees"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Grave Violet",
+        "not_in_game": false,
+        "crafts": [
+            "Rancor Pot"
+        ],
+        "farming_locations": [
+            "Jarburg: Along the main street along with Tarnished Golden Sunflowers, Poisonblooms, and Rowa Fruit."
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Gravel Stone",
+        "not_in_game": false,
+        "crafts": [
+            "Dragonwound Grease",
+            "Ancient Dragonbolt Pot"
+        ],
+        "farming_locations": [
+            "*Beside the Greatbridge* Site of Grace in Crumbling Farum Azula: Go down the elevator and into the watery room to find two lightning casting Azula Beastmen.",
+            "*Dragon Temple Lift* Site of Grace in Crumbling Farum Azula: Kill the Farum Azula Dragon to the south. Although this is much harder than the other farming run, it's guaranteed to drop 3 *Gravel Stone *each time."
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Great Dragonfly Head",
+        "not_in_game": false,
+        "crafts": [
+            "Neutralizing Boluses",
+            "Immunizing Cured Meat",
+            "Immunizing White Cured Meat"
+        ],
+        "farming_locations": [
+            "*Heart of Aeonia* Site of Grace in Caelid: Just east of the Site of Grace is a group of six Giant Dragonflies."
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Herba",
+        "not_in_game": false,
+        "crafts": [
+            "Staunching Boluses",
+            "Neutralizing Boluses",
+            "Thawfrost Boluses",
+            "Stimulating Boluses",
+            "Pickled Turtle Neck"
+        ],
+        "farming_locations": [
+            "The Four Belfries: Three can be found on the far side of the closest tower to the Site of Grace."
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Hidden Plumage",
+        "not_in_game": true,
+        "crafts": [],
+        "farming_locations": []
+    },
+    {
+        "id": 37,
+        "name": "Human Bone Shard",
+        "not_in_game": false,
+        "crafts": [
+            "Rancor Pot",
+            "Alluring Pot",
+            "Scriptstone",
+            "Grace Mimic"
+        ],
+        "farming_locations": [
+            "Windmill Village: A massive group of Celebrants is just uphill from the Site of Grace."
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Land Octopus Ovary",
+        "not_in_game": false,
+        "crafts": [
+            "Invigorating Cured Meat",
+            "Invigorating White Cured Meat",
+            "Stanching Boluses",
+            "Bloodboil Aromatic"
+        ],
+        "farming_locations": [
+            "Temple Quarter: Six Giant Land Octopi are just southwest of the Site of Grace."
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Living Jar Shard",
+        "not_in_game": false,
+        "crafts": [
+            "Ironjar Aromatic"
+        ],
+        "farming_locations": [
+            "*Secluded Cell* Site of Grace in Stormveil Castle: Walk straight forwards from the grace to find seven Living Jars and one Large Living Jar.",
+            "*Royal Moongazing Grounds* Site of Grace in Caria Manor: From the Site of Grace, go back into the manor and drop off a series of platforms to the south/southwest to find a large Living Jar and a number of small ones. After clearing this group out, you can keep descending the cliffside to find more Living Jars for a total of twelve small jars and three large ones."
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Lump of Flesh",
+        "not_in_game": false,
+        "crafts": [
+            "Exalted Flesh"
+        ],
+        "farming_locations": [
+            "Third Church of Marika: Travel south into the woods for a group of Boars and, further along, Bears."
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Melted Mushroom",
+        "not_in_game": false,
+        "crafts": [
+            "Oil Pot",
+            "Roped Oil Pot",
+            "Soap"
+        ],
+        "farming_locations": [
+            "*Siofra River Bank* Site of Grace in Siofra River: One north and above the grace, another west on the ledge above the Giant Crab, two more at the roots of the trees past the Crab."
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Miquella's Lily",
+        "not_in_game": false,
+        "crafts": [
+            "Bewitching Branch"
+        ],
+        "farming_locations": [
+            "*Elphael Inner Wall* Site of Grace in Elphael, Brace of the Haligtree: There are two Haligtree Knights right outside the large door."
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Miranda Powder",
+        "not_in_game": false,
+        "crafts": [
+            "Spark Aromatic",
+            "Poison Spraymist"
+        ],
+        "farming_locations": [
+            "Perfumer's Grotto: There are four Perfumers in the first room."
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Mushroom",
+        "not_in_game": false,
+        "crafts": [
+            "Holy Water Pot",
+            "Roped Holy Water Pot",
+            "Fire Pot",
+            "Roped Fire Pot",
+            "Sleep Pot",
+            "Sacred Order Pot",
+            "Fetid Pot",
+            "Cursed-Blood Pot",
+            "Roped Fetid Pot"
+        ],
+        "farming_locations": [
+            "Village of the Albinaurics: two by the tree east of the grace site, then one just north of the grace."
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Old Fang",
+        "not_in_game": false,
+        "crafts": [
+            "Redmane Fire Pot",
+            "Academy Magic Pot"
+        ],
+        "farming_locations": [
+            "Castle Morne: There are eight Misbegotten in the central courtyard."
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Nascent Butterfly",
+        "not_in_game": false,
+        "crafts": [
+            "Dappled Cured Meat",
+            "Dappled White Cured Meat"
+        ],
+        "farming_locations": [
+            "*Ancestral Woods* Site of Grace in Siofra River: Drops from Ancestral Follower Shamans in this area."
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Poisonbloom",
+        "not_in_game": false,
+        "crafts": [
+            "Poisonbone Arrow",
+            "Poisonbone Arrow (Fletched)",
+            "Poison Pot",
+            "Roped Poison Pot",
+            "Poison Spraymist",
+            "Poisonbone Dart",
+            "Poisonbone Bolt"
+        ],
+        "farming_locations": [
+            "Castle Morne: Eight in the swamp to the northeast.",
+            "Jarburg: Along the main street along with Tarnished Golden Sunflowers, Rowa Fruit, and Grave Violets."
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Rimed Crystal Bud",
+        "not_in_game": false,
+        "crafts": [
+            "Freezing Pot"
+        ],
+        "farming_locations": [
+            "Ordina Liturgical Town: Eleven to the west and slightly south, around a giant frozen tree trunk."
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Rimed Rowa",
+        "not_in_game": false,
+        "crafts": [
+            "Clarifying White Cured Meat",
+            "Clarifying Cured Meat",
+            "Frozen Raisin"
+        ],
+        "farming_locations": [
+            "*Ancient Snow Valley Ruins* Site of Grace in Mountaintops of the Giants: Four surrounding the Site of Grace."
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Root Resin",
+        "not_in_game": false,
+        "crafts": [
+            "Magic Grease",
+            "Fire Grease",
+            "Lightning Grease",
+            "Holy Grease",
+            "Poison Grease",
+            "Blood Grease",
+            "Freezing Grease",
+            "Rot Grease",
+            "Soporific Grease",
+            "Dragonwound Grease",
+            "Shield Grease",
+            "Drawstring Magic Grease",
+            "Drawstring Fire Grease",
+            "Drawstring Holy Grease",
+            "Drawstring Lightning Grease",
+            "Drawstring Poison Grease",
+            "Drawstring Blood Grease",
+            "Drawstring Rot Grease",
+            "Drawstring Soporific Grease"
+        ],
+        "farming_locations": [
+            "Warmaster's Shack: Ten feet northeast of the Site of Grace."
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Rowa Fruit",
+        "not_in_game": false,
+        "crafts": [
+            "Rowa Raisin",
+            "Gold",
+            "Pickled Fowl Foot",
+            "Silver",
+            "Pickled Fowl Foot",
+            "Pickled Turtle Neck",
+            "Fireproof Dried Liver",
+            "Cured Immunizing Meat",
+            "Exalted Flesh",
+            "Spellproof Dried Liver",
+            "Immunizing Cured Meat",
+            "Immunizing White Cured Meat",
+            "Soft Cotton"
+        ],
+        "farming_locations": [
+            "Jarburg: Along the main street along with Tarnished Golden Sunflowers, Poisonblooms, and Grave Violets."
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Ruin Fragment",
+        "not_in_game": false,
+        "crafts": [
+            "Rainbow Stone",
+            "Scriptstone",
+            "Glowstone",
+            "Rainbow Stone Arrow"
+        ],
+        "farming_locations": [
+            "*Liurnia Tower Bridge* Site of Grace in Divine Tower of Liurnia: Fourteen can be farmed in seconds (along with three Sanctuary Stones) by running across the bridge on horseback and either running or fast traveling back. (Carian Inverted Statue is required to reach this Site of Grace.)"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Sacramental Bud",
+        "not_in_game": false,
+        "crafts": [
+            "Preserving Boluses",
+            "Bewitching Branch"
+        ],
+        "farming_locations": [
+            "Writheblood Ruins: There are seven Rotten Strays and a Giant Skeletal Slime among the ruins."
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Sanctuary Stone",
+        "not_in_game": false,
+        "crafts": [
+            "Warming Stone",
+            "Frenzyflame Stone"
+        ],
+        "farming_locations": [
+            "*Scenic Isle* Site of Grace in Liurnia of the Lakes: Six on the ruins directly north."
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Silver Firefly",
+        "not_in_game": false,
+        "crafts": [
+            "Silver",
+            "Pickled Fowl Foot"
+        ],
+        "farming_locations": [
+            "*Ainsel River Main* Site of Grace in Ainsel River: Head north from the Site of Grave to find 4 on your right and 2 on your left that you can circle back for. Run back to the Site of Grace, rest, and repeat.",
+            "Groveside Cave: Travel directly forward through the cave to find a small waterfall with 5. Made easier by using the Beast-Repellant Torch to stop wolves from attacking."
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Sliver of Meat",
+        "not_in_game": false,
+        "crafts": [
+            "Immunizing Cured Meat",
+            "Invigorating Cured Meat",
+            "Dappled Cured Meat",
+            "Clarifying Cured Meat"
+        ],
+        "farming_locations": [
+            "Church of Pilgrimage: Traveling southwest from the church towards the Walking Mausoleum, you run into three herds of Sheep.",
+            "Craftsman's Shack: Right next to the site of grace is a large herd of Sheep."
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Slumbering Egg",
+        "not_in_game": false,
+        "crafts": [
+            "Clarifying White Cured Meat",
+            "Clarifying Cured Meat"
+        ],
+        "farming_locations": [
+            "Warmaster's Shack: Climb the small cliff to the east of the grace to find an Owl next to six Tarnished Golden Sunflowers.",
+            "*South of the Lookout Tower* Site of Grace in Weeping Peninsula: An Owl sits perched on a small cliff exactly northwest of the site of grace, about an 11 second horseback ride away."
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Smoldering Butterfly",
+        "not_in_game": false,
+        "crafts": [
+            "Fireproof Dried Liver",
+            "Fire Grease",
+            "Fire Pot",
+            "Drawstring Fire Grease",
+            "Immunizing Cured Meat",
+            "Immunizing White Cured Meat",
+            "Roped Fire Pot",
+            "Soft Cotton",
+            "Firebone Bolt"
+        ],
+        "farming_locations": [
+            "Warmaster's Shack: Eight north/northeast on a fire patch with two Burning Slugs."
+        ]
+    },
+    {
+        "id": 59,
+        "name": "String",
+        "not_in_game": false,
+        "crafts": [
+            "Drawstring Magic Grease",
+            "Drawstring Fire Grease",
+            "Drawstring Holy Grease",
+            "Drawstring Lightning Grease",
+            "Drawstring Poison Grease",
+            "Drawstring Blood Grease",
+            "Drawstring Rot Grease",
+            "Drawstring Soporific Grease",
+            "Roped Magic Pot",
+            "Roped Oil Pot",
+            "Roped Fire Pot",
+            "Roped Volcano Pot",
+            "Roped Lightning Pot",
+            "Roped Holy Water Pot",
+            "Roped Poison Pot",
+            "Roped Fetid Pot",
+            "Roped Fly Pot"
+        ],
+        "farming_locations": [
+            "Coastal Cave: Eight Demi-Humans in the first room."
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Strip of White Flesh",
+        "not_in_game": false,
+        "crafts": [
+            "Invigorating White Cured Meat",
+            "Clarifying White Cured Meat",
+            "Dappled White Cured Meat"
+        ],
+        "farming_locations": [
+            "Summonwater Village: Eight Turtles can be found in and around the basement where the Green Turtle Talisman can be found."
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Tarnished Golden Sunflower",
+        "not_in_game": false,
+        "crafts": [
+            "Holy Water Pot",
+            "Roped Holy Water Pot"
+        ],
+        "farming_locations": [
+            "Minor Erdtree (Mistwood): 21 around the tree.",
+            "Jarburg: Follow the main street to collect these as well as stocking up on Rowa Fruit, Poisonblooms, and Grave Violets."
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Thin Beast Bones",
+        "not_in_game": false,
+        "crafts": [
+            "Bone Knife",
+            "Bone Arrow",
+            "Firebone Bolt",
+            "Haligbone Bolt",
+            "Poisonbone Bolt",
+            "Lightningbone Bolt",
+            "Bloodbone Bolt",
+            "Rotbone Bolt",
+            "Rainbow Stone Arrow",
+            "Bone Arrow (Fletched)",
+            "Poisonbone Arrow",
+            "Poisonbone Arrow (Fletched)",
+            "Poisonbone Dart",
+            "Magicbone Arrow",
+            "Magicbone Arrow (Fletched)",
+            "Firebone Arrow",
+            "Firebone Arrow (Fletched)",
+            "Lightningbone Arrow",
+            "Lightningbone Arrow (Fletched)",
+            "Haligbone Arrow",
+            "Haligbone Arrow (Fletched)",
+            "Bloodbone Arrow",
+            "Bloodbone Arrow (Fletched)",
+            "Coldbone Arrow",
+            "Coldbone Arrow (Fletched)",
+            "Rotbone Arrow",
+            "Rotbone Arrow (Fletched)",
+            "Shattershard Arrow",
+            "Shattershard Arrow (Fletched)",
+            "Bone Bolt",
+            "Stormwing Bone Arrow"
+        ],
+        "farming_locations": [
+            "Craftsman's Shack: Right next to the Site of Grace is a large herd of Sheep. Use area of effect attacks for the highest efficiency."
+        ]
+    },
+    {
+        "needs_more_info": true,
+        "id": 63,
+        "name": "Hefty Beast Bone",
+        "not_in_game": false,
+        "crafts": [
+            "Exalted Flesh",
+            "Beastlure Pot",
+            "Bone Great Arrow",
+            "Bone Great Arrow (Fletched)",
+            "Bone Ballista Bolt"
+        ],
+        "farming_locations": [
+            "Third Church of Marika: Travel south into the woods for a group of Boars and, further along, Bears."
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Toxic Mushroom",
+        "not_in_game": false,
+        "crafts": [
+            "Poison Pot",
+            "Rot Pot",
+            "Roped Poison Pot"
+        ],
+        "farming_locations": [
+            "*Heart of Aeonia* Site of Grace in Caelid: Two behind the branch just to the southeast."
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Trina's Lily",
+        "not_in_game": false,
+        "crafts": [
+            "Soporific Grease",
+            "Drawstring Soporific Grease",
+            "Sleepbone Arrow",
+            "Sleepbone Arrow (Fletched)",
+            "Sleepbone Bolt",
+            "Sleep Pot"
+        ],
+        "farming_locations": [
+            "Apostate Derelict: Killing all the jellyfish around here takes about a minute."
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Turtle Neck Meat",
+        "not_in_game": false,
+        "crafts": [
+            "Pickled Turtle Neck"
+        ],
+        "farming_locations": [
+            "Summonwater Village: Eight Turtles can be found in and around the basement where the Green Turtle Talisman can be found."
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Volcanic Stone",
+        "not_in_game": false,
+        "crafts": [
+            "Volcano Pot",
+            "Roped Volcano Pot"
+        ],
+        "farming_locations": [
+            "*Seethewater Terminus* Site of Grace in Mt. Gelmir: Running from this Site of Grace to the *Seethewater River* and back the other way can net over 100 each leg."
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Yellow Ember",
+        "not_in_game": false,
+        "crafts": [
+            "Frenzyflame Stone"
+        ],
+        "farming_locations": [
+            "Cathedral of the Forsaken: Five or so found throughout the area above the Frenzied Flame Proscription.",
+            "Yelough Anix Ruins: On the ground throughout the ruins. Ten per run if you look hard, and easily six or seven if you run through. A Stake of Marika is nearby, so you can have the Rats respawn you rather than walk back from Yelough Anix Tunnel."
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Silver Tear Husk",
+        "not_in_game": false,
+        "crafts": [
+            "Uplifting Aromatic",
+            "Shield Grease"
+        ],
+        "farming_locations": [
+            "Northern Hallowhorn Grounds: One outside the entrance, seven just inside, and two are up the ladder to the northeast of the temple for a total of ten per run."
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Stormhawk Feather",
+        "not_in_game": false,
+        "crafts": [
+            "Stormwing Bone Arrow"
+        ],
+        "farming_locations": [
+            "*Rampart Tower* Site of Grace in Stormveil Castle: There are several Warhawks out the north door."
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Cracked Pot",
+        "not_in_game": false,
+        "crafts": [
+            "Magic Pot",
+            "Oil Pot",
+            "Fire Pot",
+            "Volcano Pot",
+            "Lightning Pot",
+            "Holy Water Pot",
+            "Poison Pot",
+            "Fetid Pot",
+            "Swarm Pot",
+            "Sleep Pot",
+            "Rancor Pot",
+            "Roped Magic Pot",
+            "Roped Oil Pot",
+            "Roped Fire Pot",
+            "Roped Volcano Pot",
+            "Roped Lightning Pot",
+            "Roped Holy Water Pot",
+            "Roped Poison Pot",
+            "Roped Fetid Pot",
+            "Roped Fly Pot"
+        ],
+        "farming_locations": [
+            "Can be purchased from Gatekeeper Gostoc for 200 Runes. Gostoc is located in: Stormveil Castle Entrance.",
+            "Can be purchased from Merchant Kalé for 300 Runes. He can be found at the Church of Elleh in Limgrave.",
+            "Can be purchased from the Nomadic Merchant in North Limgrave for 600 Runes.",
+            "Can be bought from the Nomadic Merchant at the eastern side of Weeping Peninsula, for 600 Runes.",
+            "Can be purchased from the Nomadic Merchant in south Caelid for 1,500 Runes."
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Ritual Pot",
+        "not_in_game": false,
+        "crafts": [
+            "Academy Magic Pot",
+            "Redmane Fire Pot",
+            "Giantsflame Fire Pot",
+            "Ancient Dragonbolt Pot",
+            "Sacred Order Pot",
+            "Freezing Pot",
+            "Rot Pot",
+            "Cursed-Blood Pot",
+            "Alluring Pot",
+            "Beastlure Pot",
+            "Albinauric Pot"
+        ],
+        "farming_locations": [
+            "Liurnia of the Lakes: Found on a corpse sitting in the northern section of the Laskyar Ruins, in front of a set of pillars.",
+            "Found inside a treasure chest, at the end of the hallway that is guarded by sorcerers and a giant Living Jar. The nearest site of grace is the Schoolhouse Classroom in Raya Lucaria Academy.",
+            "Sold by the Isolated Merchant in Dragonbarrow for 3,000 Runes.",
+            "Sold by Pidia, Carian Servant at Caria Manor: on a balcony above the Manor Lower Level bonfire. Only accessible by dropping down the cliffs from the southwestern side of the Three Sisters sub-area.",
+            "Jarburg in eastern Liurnia: Two can be found in the village. The first is found on the roof of a hut in the north, use the cliffs to get on top of the hut. The second can be found on top of a large decorative jar in the south.",
+            "Auriza Side Tomb: 2 found inside this tomb. First is found by following the main path to the trap chest, getting teleported. Then make your way down the path and take the secret room trap chest, at your new location go forward then drop down. Start making your way up the stairs and you should find the pot sitting in front a giant Living Jar.",
+            "Auriza Side Tomb: For the second one, from the first's location. Head back down the path until you get to the two trap chests, take the one in on the left (secret room position). Making your way forward there will be a small entrance on your left next to the second Imp, inside is a ladder. After going up, take the trap chest. At the end of the path will be the pot in a room with a giant Living Jar.",
+            "Subterranean Shunning-Grounds: Found at the end of the tunnel maze just before the elevator to the Forsaken Depths grace."
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Perfume Bottle",
+        "not_in_game": false,
+        "crafts": [
+            "Poison Spraymist",
+            "Acid Spraymist",
+            "Ironjar Aromatic",
+            "Bloodboil Aromatic",
+            "Spark Aromatic",
+            "Uplifting Aromatic"
+        ],
+        "farming_locations": [
+            "Sold by the Hermit Merchant at Hermit Merchant's Shack for 2,000 Runes.",
+            "One can be found after using the Drawing-Room Key at Volcano Manor.",
+            "Leyndell Royal Capital: Found inside a chest on the second floor.",
+            "One can be found on a body at the edge of a part of the inner east wall, below this body there is a large Poison Skeleton looking up.",
+            "Found on a corpse in Volcano Manor in a locked room unlocked using the Drawing-Room Key.",
+            "Leyndell Royal Capital: found guarded by normal enemy Leonine Misbegotten on the east side of the eastern pond.",
+            "Two (2) Found at Perfumer's Ruins, NW of Abandoned Coffin site in Altus Plateau. One is on a table, the other is in a chest.",
+            "One can be found in Street of Sages Ruins directly west of Inner Aeonia Grace, along with the Traveling Perfumers Attire, guarded by Miranda Flowers.",
+            "Perfumer's Grotto: in the second area after encountering the second Giant Poison Flower, turn back to the corner to find two chests with one contain a Perfume Bottle."
+        ]
+    }
+]

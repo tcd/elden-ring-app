@@ -1,0 +1,2889 @@
+[
+    {
+        "id": 1,
+        "name": "Flask of Crimson Tears",
+        "category": "Healing",
+        "craftable": false,
+        "effect_description": "Restores HP.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "- Automatically given to player - Replenished after resting at a site of grace"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Flask of Cerulean Tears",
+        "category": "Consumables",
+        "craftable": false,
+        "effect_description": "Restores FP.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "- Automatically given to player - Replenished after resting at a site of grace"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Flask of Wondrous Physick",
+        "category": "Consumables",
+        "craftable": false,
+        "effect_description": "Bestows various special effects, dependent on the specific mixture of Crystal Tears.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "- Found at Third Church of Marika - Replenished after resting at a site of grace"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Rune Arc",
+        "category": "Consumables",
+        "craftable": false,
+        "effect_description": "Grants the blessing of an equipped Great Rune upon use.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 5,
+        "name": "Rainbow Stone",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Shines with colored light when placed, serving as a guide.",
+        "not_in_game": false,
+        "cookbook": "No Cookbook Required",
+        "metadata": {
+            "notes": "No Cookbook Required"
+        },
+        "materials": [
+            {
+                "name": "Ruin Fragment",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Glowstone",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Emits a faint light from the location it is placed.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ruin Fragment",
+                "quantity": 1
+            },
+            {
+                "name": "Dewkissed Herba",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Scriptstone",
+        "category": "Multiplayer",
+        "craftable": true,
+        "effect_description": "Reveals more messages from other worlds",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ruin Fragment",
+                "quantity": 1
+            },
+            {
+                "name": "Human Bone Shard",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Furlcalling Finger Remedy",
+        "category": "Multiplayer",
+        "craftable": true,
+        "effect_description": "Reveals co-op and hostile summoning signs",
+        "not_in_game": false,
+        "cookbook": "No Cookbook Required",
+        "metadata": {
+            "notes": "No Cookbook Required"
+        },
+        "materials": [
+            {
+                "name": "Erdleaf Flower",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Festering Bloody Finger",
+        "category": "Multiplayer",
+        "craftable": false,
+        "effect_description": "Attempts invasion of other player's world. Made obsolete after obtaining Bloody Finger.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 10,
+        "name": "Magic Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to inflict Magic Damage.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Glinstone Firefly",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Oil Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to soak them in oil.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [17]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Melted Mushroom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Fire Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Explodes, dealing Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [7]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Volcano Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Creates heat cloud, causing continuous Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [20]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Volcanic Stone",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Lightning Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to inflict Lightning Damage.",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Fulgurbloom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Holy Water Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to inflict Holy Damage.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Tarnished Golden Sunflower",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Poison Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to cause buildup of Poison.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [14]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Toxic Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Poisonbloom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Fetid Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to cause buildup of Deadly Poison.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Gold-Tinged Excrement",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Swarm Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to cause buildup of Blood Loss.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [24]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Blood-Tainted Excrement",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Sleep Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to cause buildup of Sleep.",
+        "not_in_game": false,
+        "cookbook": "Fevor's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Trina's Lily",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Rancor Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to summon vengeful spirits.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [9]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Grave Violet",
+                "quantity": 2
+            },
+            {
+                "name": "Human Bone Shard",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Roped Magic Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw behind to inflict Magic Damage.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Glintstone Firefly",
+                "quantity": 2
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Roped Oil Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to douse enemies in oil.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [17]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Melted Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Roped Fire Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to inflict Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [7]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Roped Volcano Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to create a heat cloud, causing continuous Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [20]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Volcanic Stone",
+                "quantity": 2
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Roped Lightning Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to inflict Lightning Damage.",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Fulgurbloom",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Roped Holy Water Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw behind to inflict Holy Damage.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Tarnished Golden Sunflower",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Roped Poison Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to cause buildup of Poison.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [14]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Toxic Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Poisonbloom",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Roped Fetid Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to cause buildup of Deadly Poison.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Gold-Tinged Excrement",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Roped Fly Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw behind to cause buildup of Blood Loss.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [24]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Pot",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Blood-Tainted Excrement",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Roped Freezing Pot",
+        "category": "Throwing Pot",
+        "craftable": false,
+        "effect_description": "Throw behind to cause buildup of Frost.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Currently unobtainable content."
+        }
+    },
+    {
+        "id": 31,
+        "name": "Academy Magic Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw at enemies to inflict heavy Magic Damage.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [8]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Glinstone Firefly",
+                "quantity": 2
+            },
+            {
+                "name": "Old Fang",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Redmane Fire Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to inflict heavy Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            },
+            {
+                "name": "Old Fang",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Giantsflame Fire Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw at enemies to inflict heavy Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [7]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Fire Blossom",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Ancient Dragonbolt Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to inflict heavy Lightning Damage.",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 2
+            },
+            {
+                "name": "Fulgurbloom",
+                "quantity": 1
+            },
+            {
+                "name": "Gravel Stone",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Sacred Order Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw at enemies to inflict heavy Holy Damage.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [5]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 2
+            },
+            {
+                "name": "Golden Sunflower",
+                "quantity": 1
+            },
+            {
+                "name": "Golden Centipede",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Freezing Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to cause buildup of Frost.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [6]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Rimed Crystal Bud",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Rot Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw at enemies to cause buildup of Scarlet Rot.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [22]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Toxic Mushroom",
+                "quantity": 2
+            },
+            {
+                "name": "Faded Erdleaf Flower",
+                "quantity": 2
+            },
+            {
+                "name": "Aeonian Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Cursed-Blood Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Throw to douse enemy with accursed blood, causing summoned Spirit Ashes to assail them with a rabid fervor.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [12]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 2
+            },
+            {
+                "name": "Beast Blood",
+                "quantity": 1
+            },
+            {
+                "name": "Bloodrose",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Alluring Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to lure foes of human build only.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [21]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Albinauric Bloodclot",
+                "quantity": 1
+            },
+            {
+                "name": "Human Bone Shard",
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Beastlure Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to lure beasts only.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [5]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Beast Blood",
+                "quantity": 1
+            },
+            {
+                "name": "Hefty Beast Bone",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Albinauric Pot",
+        "category": "Throwing Pot",
+        "craftable": true,
+        "effect_description": "Consumes FP. Throw at enemies to impede recovery actions using a flask of tears for a certain duration.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [3]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Ritual Pot",
+                "quantity": 1
+            },
+            {
+                "name": "Mushroom",
+                "quantity": 2
+            },
+            {
+                "name": "Albinauric Bloodclot",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Magic Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Magic Damage.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [5]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Crystal Bud",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Fire Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats weapon, inflicting Fire Damage.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Lightning Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Lightning Damage.",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Fulgurbloom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Holy Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Holy Damage.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Golden Sunflower",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Poison Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Poison.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [8]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Poisonbloom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Blood Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Blood Loss.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [6]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Bloodrose",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Freezing Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Frost.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Rimed Crystal Bud",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Rot Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Scarlet Rot.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [22]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Aeonian Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Soporific Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, inflicting Sleep.",
+        "not_in_game": false,
+        "cookbook": "Fevor's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Trina's Lily",
+                "quantity": 1
+            },
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Dragonwound Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Coats armament, increasing damage against dragons.",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [3]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Beast Blood",
+                "quantity": 1
+            },
+            {
+                "name": "Gravel Stone",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Shield Grease",
+        "category": "Grease",
+        "craftable": true,
+        "effect_description": "Boosts guarding ability and all damage negation.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Silver Tear Husk",
+                "quantity": 1
+            },
+            {
+                "name": "Crystal Bud",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Holy Water Grease",
+        "category": "Grease",
+        "craftable": false,
+        "effect_description": "Coats armament, inflicting Holy.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Currently unobtainable content."
+        }
+    },
+    {
+        "id": 54,
+        "name": "Drawstring Magic Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Magic Damage, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [5]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Crystal Bud",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 55,
+        "name": "Drawstring Fire Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats weapon, inflicting Fire Damage, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Drawstring Holy Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Holy Damage, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Golden Sunflower",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Drawstring Lightning Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Lightning Damage, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Fulgurbloom",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Drawstring Poison Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Poison, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [8]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Poisonbloom",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Drawstring Blood Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Blood Loss, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [6]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "Bloodrose",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Drawstring Freezing Grease",
+        "category": "Drawstring Grease",
+        "craftable": false,
+        "effect_description": "Quickly coats weapon, inflicting Frostbite, but with a brief effect, owing to its small size.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Currently unobtainable content."
+        }
+    },
+    {
+        "id": 61,
+        "name": "Drawstring Rot Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Scarlet Rot, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [22]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            },
+            {
+                "name": "Aeonian Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Drawstring Soporific Grease",
+        "category": "Drawstring Grease",
+        "craftable": true,
+        "effect_description": "Quickly coats armament, inflicting Sleep, but with a brief effect, owing to its small size.",
+        "not_in_game": false,
+        "cookbook": "Fevor's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Root Resin",
+                "quantity": 1
+            },
+            {
+                "name": "String",
+                "quantity": 1
+            },
+            {
+                "name": "Trina's Lily",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Poison Spraymist",
+        "category": "Perfume Arts",
+        "craftable": true,
+        "effect_description": "Uses FP to release Poison mist from the mouth.",
+        "not_in_game": false,
+        "cookbook": "Perfumer's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Perfume Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Altus Bloom",
+                "quantity": 1
+            },
+            {
+                "name": "Miranda Powder",
+                "quantity": 1
+            },
+            {
+                "name": "Poisonbloom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Acid Spraymist",
+        "category": "Perfume Arts",
+        "craftable": true,
+        "effect_description": "Uses FP to release acid mist from the mouth.",
+        "not_in_game": false,
+        "cookbook": "Perfumer's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Perfume Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Altus Bloom",
+                "quantity": 1
+            },
+            {
+                "name": "Miranda Powder",
+                "quantity": 1
+            },
+            {
+                "name": "Formic Rock",
+                "quantity": 4
+            }
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Ironjar Aromatic",
+        "category": "Perfume Arts",
+        "craftable": true,
+        "effect_description": "Uses FP to temporarily turn wielder's body to steel.",
+        "not_in_game": false,
+        "cookbook": "Perfumer's Cookbook [3]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Perfume Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Altus Bloom",
+                "quantity": 2
+            },
+            {
+                "name": "Budding Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Living Jar Shard",
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Bloodboil Aromatic",
+        "category": "Perfume Arts",
+        "craftable": true,
+        "effect_description": "Uses FP to enter a temporary state of fervor.",
+        "not_in_game": false,
+        "cookbook": "Perfumer's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Perfume Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Altus Bloom",
+                "quantity": 2
+            },
+            {
+                "name": "Budding Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Land Octopus Ovary",
+                "quantity": 1
+            },
+            {
+                "name": "Arteria Leaf",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Spark Aromatic",
+        "category": "Perfume Arts",
+        "craftable": true,
+        "effect_description": "Uses FP to scatter sparks in a wide area.",
+        "not_in_game": false,
+        "cookbook": "Perfumer's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Perfume Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Altus Bloom",
+                "quantity": 1
+            },
+            {
+                "name": "Miranda Powder",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Uplifting Aromatic",
+        "category": "Perfume Arts",
+        "craftable": true,
+        "effect_description": "Boosts ally attack power and reduces incoming damage once.",
+        "not_in_game": false,
+        "cookbook": "Perfumer's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Perfume Bottle",
+                "quantity": 1
+            },
+            {
+                "name": "Altus Bloom",
+                "quantity": 1
+            },
+            {
+                "name": "Budding Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Silver Tear Husk",
+                "quantity": 1
+            },
+            {
+                "name": "Arteria Leaf",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Neutralizing Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates Poison buildup and cures poison.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Herba",
+                "quantity": 1
+            },
+            {
+                "name": "Great Dragonfly Head",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Stanching Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates buildup of Blood Loss.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Cookbook [7]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Herba",
+                "quantity": 1
+            },
+            {
+                "name": "Land Octopus Ovary",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Thawfrost Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates buildup of Frost.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [16]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Herba",
+                "quantity": 1
+            },
+            {
+                "name": "Crab Eggs",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Preserving Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates Scarlet Rot buildup and cures rot.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [6]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Crystal Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Dewkissed Herba",
+                "quantity": 2
+            },
+            {
+                "name": "Sacramental Bud",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Stimulating Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates buildup of Sleep.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [16]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Herba",
+                "quantity": 1
+            },
+            {
+                "name": "Slumbering Egg",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Clarifying Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates buildup of Madness.",
+        "not_in_game": false,
+        "cookbook": "Frenzied's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Crystal Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Dewkissed Herba",
+                "quantity": 2
+            },
+            {
+                "name": "Eye of Yelough",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Rejuvenating Boluses",
+        "category": "Medicine",
+        "craftable": true,
+        "effect_description": "Alleviates buildup of Death Blight.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [7]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Crystal Cave Moss",
+                "quantity": 1
+            },
+            {
+                "name": "Dewkissed Herba",
+                "quantity": 2
+            },
+            {
+                "name": "Golden Centipede",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Dappled Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Immunity, Robustness, and Focus.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [18]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Golden Rowa",
+                "quantity": 5
+            },
+            {
+                "name": "Sliver of Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Budding Horn",
+                "quantity": 1
+            },
+            {
+                "name": "Nascent Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Immunizing Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Immunity.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [5]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 5
+            },
+            {
+                "name": "Sliver of Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Great Dragonfly Head",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Invigorating Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Robustness",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Golden Rowa",
+                "quantity": 3
+            },
+            {
+                "name": "Sliver of Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Crab Eggs",
+                "quantity": 1
+            },
+            {
+                "name": "Land Octopus Ovary",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Clarifying Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Focus.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [23]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rimed Rowa",
+                "quantity": 5
+            },
+            {
+                "name": "Sliver of Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Slumbering Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Eye of Yelough",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Deathsbane Jerky",
+        "category": "Resistance",
+        "craftable": false,
+        "effect_description": "Temporarily boosts Vitality.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Currently unobtainable content."
+        }
+    },
+    {
+        "id": 81,
+        "name": "Dappled White Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Immunity, Robustness, and Focus. Lasts longer than traditional cured meat, but with reduced effectiveness.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [18]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Golden Rowa",
+                "quantity": 5
+            },
+            {
+                "name": "Strip of White Flesh",
+                "quantity": 1
+            },
+            {
+                "name": "Budding Horn",
+                "quantity": 1
+            },
+            {
+                "name": "Nascent Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Immunizing White Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Immunity. Lasts longer than traditional cured meat, but with reduced effectiveness.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [5]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Strip of White Flesh",
+                "quantity": 1
+            },
+            {
+                "name": "Great Dragonfly Head",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Invigorating White Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Robustness. Lasts longer than traditional cured meat, but with reduced effectiveness.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Golden Rowa",
+                "quantity": 3
+            },
+            {
+                "name": "Strip of White Flesh",
+                "quantity": 1
+            },
+            {
+                "name": "Crab Eggs",
+                "quantity": 1
+            },
+            {
+                "name": "Land Octopus Ovary",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Clarifying White Cured Meat",
+        "category": "Resistance",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Focus. Lasts longer than traditional cured meat, but with reduced effectiveness.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [23]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rimed Rowa",
+                "quantity": 5
+            },
+            {
+                "name": "Strip of White Flesh",
+                "quantity": 1
+            },
+            {
+                "name": "Slumbering Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Eye of Yelough",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Deathsbane White Jerky",
+        "category": "Resistance",
+        "craftable": false,
+        "effect_description": "Temporarily boosts Vitality. Lasts longer than traditional cured meat, but with reduced effectiveness.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Currently unobtainable content."
+        }
+    },
+    {
+        "id": 86,
+        "name": "Fireproof Dried Liver",
+        "category": "Damage Negation",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Fire Damage negation",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 5
+            },
+            {
+                "name": "Beast Liver",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Spellproof Dried Liver",
+        "category": "Damage Negation",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Magic Damage negation",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [11]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Beast Liver",
+                "quantity": 1
+            },
+            {
+                "name": "Glintstone Firefly",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Lightningproof Dried Liver",
+        "category": "Damage Negation",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Lightning Damage negation",
+        "not_in_game": false,
+        "cookbook": "Ancient Dragon Apostle's Cookbook [4]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Beast Liver",
+                "quantity": 1
+            },
+            {
+                "name": "Fulgurbloom",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Holyproof Dried Liver",
+        "category": "Damage Negation",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Holy Damage negation.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [6]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Golden Rowa",
+                "quantity": 5
+            },
+            {
+                "name": "Beast Liver",
+                "quantity": 1
+            },
+            {
+                "name": "Golden Sunflower",
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Boiled Prawn",
+        "category": "Damage Negation",
+        "craftable": false,
+        "effect_description": "Boosts Physical Damage negation for a certain amount of time.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Blackguard Big Boggart."
+        }
+    },
+    {
+        "id": 91,
+        "name": "Boiled Crab",
+        "category": "Damage Negation",
+        "craftable": false,
+        "effect_description": "Greatly boosts Physical Damage negation for a certain amount of time.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Blackguard Big Boggart."
+        }
+    },
+    {
+        "id": 92,
+        "name": "Soft Cotton",
+        "category": "Damage Negation",
+        "craftable": true,
+        "effect_description": "Temporarily reduces Fall Damage and sound.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [7]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Bone Dart",
+        "category": "Throwing Knife",
+        "craftable": true,
+        "effect_description": "Throw at enemies to inflict damage.",
+        "not_in_game": false,
+        "cookbook": "No Cookbook Required",
+        "metadata": {
+            "notes": "No Cookbook Required"
+        },
+        "materials": [
+            {
+                "name": "Thin Beast Bones",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Throwing Dagger",
+        "category": "Throwing Knife",
+        "craftable": false,
+        "effect_description": "Throw at enemy to inflict damage.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Merchant Kalé."
+        }
+    },
+    {
+        "id": 95,
+        "name": "Crystal Dart",
+        "category": "Throwing Knife",
+        "craftable": true,
+        "effect_description": "Uses FP. Throw to inflict Magic Damage.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [11]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Cracked Crystal",
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Fan Daggers",
+        "category": "Throwing Knife",
+        "craftable": false,
+        "effect_description": "Throw fanned-out knives at enemies to inflict damage.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Patches"
+        }
+    },
+    {
+        "id": 97,
+        "name": "Kukri",
+        "category": "Throwing Knife",
+        "craftable": false,
+        "effect_description": "Throw at enemies to inflict damage and build up onset of Blood Loss.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Nomadic Merchant Castle Morne Rampart."
+        }
+    },
+    {
+        "id": 98,
+        "name": "Poisonbone Dart",
+        "category": "Throwing Knife",
+        "craftable": true,
+        "effect_description": "Throw at enemies to inflict damage and build up Poison.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [14]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Thin Beast Bones",
+                "quantity": 2
+            },
+            {
+                "name": "Poisonbloom",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Explosive Stone",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Explodes when thrown at enemies, inflicting Fire Damage.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Twin Maiden Husks after giving them Smithing-Stone Miner's Bell Bearing [2]."
+        }
+    },
+    {
+        "id": 100,
+        "name": "Explosive Stone Clump",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Explodes when thrown together, inflicting Fire Damage.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Dropped by Miner."
+        }
+    },
+    {
+        "id": 101,
+        "name": "Glintstone Scrap",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Break gem, using FP to produce a magic bolt.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Twin Maiden Husks after giving them a bell bearing [1][2]."
+        }
+    },
+    {
+        "id": 102,
+        "name": "Large Glintstone Scrap",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Break gem and use FP to produce many magic bolts.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Drops from Sorcerer Miner."
+        }
+    },
+    {
+        "id": 103,
+        "name": "Cuckoo Glintstone",
+        "category": "Throwing Stone",
+        "craftable": true,
+        "effect_description": "Launched straight ahead, using FP. A magic bolt springs forth from the point of impact.",
+        "not_in_game": false,
+        "cookbook": "Glintstone Craftsman's Cookbook [1]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Crystal Bud",
+                "quantity": 1
+            },
+            {
+                "name": "Cracked Crystal",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "name": "Heavy Meteorite Fragment",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Consumes FP. Throw at the ground to create a gravitational shockwave.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 105,
+        "name": "Gravity Stone Chunk",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Uses FP to cause a gravitational explosion.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Twin Maiden Husks after giving them Gravity Stone Peddler's Bell Bearing."
+        }
+    },
+    {
+        "id": 106,
+        "name": "Gravity Stone Fan",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Uses FP to emit fan-shaped gravitational shockwave.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Twin Maiden Husks after giving them Gravity Stone Peddler's Bell Bearing."
+        }
+    },
+    {
+        "id": 107,
+        "name": "Poisoned Stone",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Throw at enemies to cause buildup of Poison.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Wandering Merchant Caelid Highway North."
+        }
+    },
+    {
+        "id": 108,
+        "name": "Poisoned Stone Clump",
+        "category": "Throwing Stone",
+        "craftable": false,
+        "effect_description": "Throw together to cause buildup of Poison.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Sold by Wandering Merchant Caelid Highway North."
+        }
+    },
+    {
+        "id": 109,
+        "name": "Raw Meat Dumpling",
+        "category": "Healing",
+        "craftable": false,
+        "effect_description": "Restores HP but causes Poison buildup.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "notes": "Drops from Living Jars"
+        }
+    },
+    {
+        "id": 110,
+        "name": "Warming Stone",
+        "category": "Healing",
+        "craftable": true,
+        "effect_description": "Uses FP to continuously heal nearby allies.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [19]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Erdleaf Flower",
+                "quantity": 1
+            },
+            {
+                "name": "Smoldering Butterfly",
+                "quantity": 1
+            },
+            {
+                "name": "Sanctuary Stone",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "name": "Frenzyflame Stone",
+        "category": "Healing",
+        "craftable": true,
+        "effect_description": "Uses FP to continuously heal chaos followers.",
+        "not_in_game": false,
+        "cookbook": "Frenzied’s Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Yellow Ember",
+                "quantity": 1
+            },
+            {
+                "name": "Sanctuary Stone",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Rowa Raisin",
+        "category": "Healing",
+        "craftable": true,
+        "effect_description": "On horseback, feed to Torrent to restore HP.",
+        "not_in_game": false,
+        "cookbook": "No Cookbook Required",
+        "metadata": {
+            "notes": "No Cookbook Required"
+        },
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "name": "Sweet Raisin",
+        "category": "Healing",
+        "craftable": true,
+        "effect_description": "On horseback, feed to Torrent to greatly restore HP.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [19] ",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Golden Rowa",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Frozen Raisin",
+        "category": "Healing",
+        "craftable": true,
+        "effect_description": "On horseback, feed to Torrent to vastly restore HP.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [23]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rimed Rowa",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 115,
+        "name": "Gold-Pickled Fowl Foot",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Boosts the amount of Runes obtained from defeating enemies for a certain duration.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Four-Toed Fowl Foot",
+                "quantity": 1
+            },
+            {
+                "name": "Gold Firefly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 116,
+        "name": "Silver-Pickled Fowl Foot",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Item Discovery.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [3]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Four-Toed Fowl Foot",
+                "quantity": 1
+            },
+            {
+                "name": "Silver Firefly",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Exalted Flesh",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Temporarily boosts physical attack.",
+        "not_in_game": false,
+        "cookbook": "Armorer's Cookbook (3) ",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 5
+            },
+            {
+                "name": "Lump of Flesh",
+                "quantity": 1
+            },
+            {
+                "name": "Hefty Beast Bone",
+                "quantity": 1
+            },
+            {
+                "name": "Arteria Leaf",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Fetid Flesh",
+        "category": "Consumables",
+        "craftable": false,
+        "effect_description": "Utterly entrances wild beasts.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 119,
+        "name": "Pickled Turtle Neck",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Temporarily boosts Stamina recovery.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [3]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Rowa Fruit",
+                "quantity": 3
+            },
+            {
+                "name": "Turtle Neck Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Herba",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Baldachin's Blessing",
+        "category": "Consumables",
+        "craftable": false,
+        "effect_description": "Uses FP to temporarily boost Poise.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 121,
+        "name": "Radiant Baldachin's Blessing",
+        "category": "Consumables",
+        "craftable": false,
+        "effect_description": "Uses FP to temporarily raise Poise. The effect lasts longer than a mere favor.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 122,
+        "name": "Bewitching Branch",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Uses FP to charm a pierced enemy and temporarily turn them into an ally.",
+        "not_in_game": false,
+        "cookbook": "Fevor's Cookbook [3]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Sacramental Bud",
+                "quantity": 1
+            },
+            {
+                "name": "Miquella's Lily",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 123,
+        "name": "Starlight Shards",
+        "category": "Consumables / Currency",
+        "craftable": false,
+        "effect_description": "Use to gradually recover FP, or as currency for Preceptor Seluvis' Puppet Ashes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 124,
+        "name": "Soap",
+        "category": "Consumables",
+        "craftable": true,
+        "effect_description": "Cleans off filth and other accumulations on the body while also slightly reducing Poison buildup.",
+        "not_in_game": false,
+        "cookbook": "Nomadic Warrior's Cookbook [17]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Melted Mushroom",
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Grace Mimic",
+        "category": "Multiplayer",
+        "craftable": true,
+        "effect_description": "Light shows the path, but without order.",
+        "not_in_game": false,
+        "cookbook": "Missionary's Cookbook [2]",
+        "metadata": {},
+        "materials": [
+            {
+                "name": "Erdleaf Flower",
+                "quantity": 1
+            },
+            {
+                "name": "Human Bone Shard",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 126,
+        "name": "Miquella's Needle",
+        "category": "Quest",
+        "craftable": false,
+        "effect_description": "Subdues a once-accepted frenzied flame.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {}
+    },
+    {
+        "id": 127,
+        "name": "Pauper's Rune",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 200 runes.",
+        "not_in_game": true,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 200
+        }
+    },
+    {
+        "id": 128,
+        "name": "Lands Between Rune",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Used to gain 3,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 3000
+        }
+    },
+    {
+        "id": 129,
+        "name": "Golden Rune [1]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 200 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 200
+        }
+    },
+    {
+        "id": 130,
+        "name": "Golden Rune [2]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 400 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 400
+        }
+    },
+    {
+        "id": 131,
+        "name": "Golden Rune [3]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 800 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 800
+        }
+    },
+    {
+        "id": 132,
+        "name": "Golden Rune [4]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 1,200 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 1200
+        }
+    },
+    {
+        "id": 133,
+        "name": "Golden Rune [5]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 1,600 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 1600
+        }
+    },
+    {
+        "id": 134,
+        "name": "Golden Rune [6]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 2,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 2000
+        }
+    },
+    {
+        "id": 135,
+        "name": "Golden Rune [7]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 2,500 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 2500
+        }
+    },
+    {
+        "id": 136,
+        "name": "Golden Rune [8]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 3,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 3000
+        }
+    },
+    {
+        "id": 137,
+        "name": "Golden Rune [9]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 3,800 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 3800
+        }
+    },
+    {
+        "id": 138,
+        "name": "Golden Rune [10]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 5,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 5000
+        }
+    },
+    {
+        "id": 139,
+        "name": "Golden Rune [11]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 6,200 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 6200
+        }
+    },
+    {
+        "id": 140,
+        "name": "Golden Rune [12]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 7500 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 7500
+        }
+    },
+    {
+        "id": 141,
+        "name": "Golden Rune [13]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 10,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 10000
+        }
+    },
+    {
+        "id": 142,
+        "name": "Numen's Rune",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 12,500 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 12500
+        }
+    },
+    {
+        "id": 143,
+        "name": "Hero's Rune [1]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 15,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 15000
+        }
+    },
+    {
+        "id": 144,
+        "name": "Hero's Rune [2]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 20,000 runes",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 20000
+        }
+    },
+    {
+        "id": 145,
+        "name": "Hero's Rune [3]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 25,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 25000
+        }
+    },
+    {
+        "id": 146,
+        "name": "Hero's Rune [4]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 30,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 30000
+        }
+    },
+    {
+        "id": 147,
+        "name": "Hero's Rune [5]",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 35,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 35000
+        }
+    },
+    {
+        "id": 148,
+        "name": "Lord's Rune",
+        "category": "Runes",
+        "craftable": false,
+        "effect_description": "Use to gain 50,000 runes.",
+        "not_in_game": false,
+        "cookbook": null,
+        "metadata": {
+            "rune_count": 50000
+        }
+    },
+    {
+        "id": 149,
+        "name": "Glass Shard",
+        "category": "Worthless Rubbish",
+        "craftable": false,
+        "effect_description": "Shard of filthy glass. Worthless rubbish.",
+        "not_in_game": false,
+        "metadata": {
+            "notes": "Sold by Patches"
+        }
+    }
+]
