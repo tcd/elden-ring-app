@@ -3,9 +3,8 @@ import { mdiAccount } from "@mdi/js"
 
 import { Stat } from "@app/types"
 import { Selectors } from "@app/state"
-import { ECard } from "@app/shared"
+import { ECard, StatRow } from "@app/shared"
 import { EquipLoad } from "./EquipLoad"
-import { StatRow } from "./StatRow"
 
 export const BaseStats = (): JSX.Element => {
 

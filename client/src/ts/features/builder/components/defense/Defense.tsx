@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Stat } from "@app/types"
 import { Selectors } from "@app/state"
 import { DESCRIPTIONS } from "@app/data"
-import { StatRow } from "../StatRow"
+import { StatRow } from "@app/shared"
 
 export const Defense = (): JSX.Element => {
 

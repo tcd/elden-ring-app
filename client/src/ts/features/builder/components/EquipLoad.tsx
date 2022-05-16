@@ -4,8 +4,7 @@ import Typography from "@mui/material/Typography"
 import { Encumbrance } from "@app/types"
 import { Selectors } from "@app/state"
 import { COLORS } from "@app/util"
-import { StatRow } from "./StatRow"
-import { StatRowPlus } from "./StatRowPlus"
+import { StatRow, StatRowPlus } from "@app/shared"
 
 const equipmentLoadColor = (load: Encumbrance) => {
     switch (load) {

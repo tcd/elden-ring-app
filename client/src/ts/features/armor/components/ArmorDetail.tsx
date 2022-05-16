@@ -5,8 +5,11 @@ import {
 } from "@mdi/js"
 
 import { Armor } from "@app/types"
-import { ECard } from "@app/shared"
 import { isBlank } from "@app/util"
+import {
+    ECard,
+    StatRow,
+} from "@app/shared"
 
 export interface ArmorDetailProps {
     armor: Armor
@@ -41,7 +44,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={armor?.image_url} alt="weapon" />
+                                    <img className="img-fluid" src={armor?.image_url} alt={armor.display_name + "image"} />
                                 </div>
                             </div>
                         </div>
@@ -50,7 +53,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield}>
+                    <ECard title="Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
                             <li className="stat-row">
                                 <span>Physical</span>

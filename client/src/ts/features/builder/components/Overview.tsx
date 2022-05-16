@@ -2,8 +2,7 @@ import { useSelector } from "react-redux"
 import { mdiAccount } from "@mdi/js"
 
 import { Selectors } from "@app/state"
-import { ECard } from "@app/shared"
-import { StatRow } from "./StatRow"
+import { ECard, StatRow } from "@app/shared"
 
 export const Overview = (): JSX.Element => {
 

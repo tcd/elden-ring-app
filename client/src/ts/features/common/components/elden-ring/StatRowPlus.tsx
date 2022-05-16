@@ -1,6 +1,6 @@
 import { MouseOverPopover } from "@app/shared"
 
-export interface StatRowProps {
+export interface StatRowPlusProps {
     title: string
     value_1: any
     value_2: any
@@ -8,7 +8,7 @@ export interface StatRowProps {
     description?: string
 }
 
-export const StatRowPlus = (props: StatRowProps): JSX.Element => {
+export const StatRowPlus = (props: StatRowPlusProps): JSX.Element => {
     const liProps: any = {}
     if (props?.key) {
         liProps.key = props?.key

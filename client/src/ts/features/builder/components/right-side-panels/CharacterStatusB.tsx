@@ -3,10 +3,8 @@ import { mdiAccount } from "@mdi/js"
 
 import { AttributeNames } from "@app/types"
 import { Selectors } from "@app/state"
-import { ECard } from "@app/shared"
+import { ECard, StatRow, StatRowPlus } from "@app/shared"
 import { EquipLoad } from "../EquipLoad"
-import { StatRow } from "../StatRow"
-import { StatRowPlus } from "../StatRowPlus"
 
 export const CharacterStatusB = (): JSX.Element => {
 

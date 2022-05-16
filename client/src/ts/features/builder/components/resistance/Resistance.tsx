@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { capitalize } from "lodash"
 
 import { Selectors } from "@app/state"
-import { StatRow } from "../StatRow"
+import { StatRow } from "@app/shared"
 
 export const Resistance = (): JSX.Element => {
 
