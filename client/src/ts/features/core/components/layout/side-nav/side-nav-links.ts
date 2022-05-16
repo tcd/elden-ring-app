@@ -8,6 +8,8 @@ import {
     mdiWrench,
     mdiTable,
     mdiFormatListChecks,
+    mdiInformationOutline,
+    mdiCog,
 } from "@mdi/js"
 
 import { ILinkData } from "@types"
@@ -32,8 +34,11 @@ export const SIDE_NAV_LINKS: ILinkData[] = [
     { title: "Builder", url: "/builder", icon: mdiWrench },
     { title: "Test", url: "/test", icon: mdiBeaker },
     { title: "Checklist", url: "/checklist", icon: mdiFormatListChecks },
+    { title: "Settings", url: "/settings", icon: mdiCog },
     { divider: true },
     { title: "Menus", icon: mdiTable, links: menuLinks },
     { divider: true },
     { title: "Tables", icon: mdiTable, links: tableLinks },
+    { divider: true },
+    { title: "About", url: "/about", icon: mdiInformationOutline },
 ]

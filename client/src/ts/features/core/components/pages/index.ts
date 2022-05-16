@@ -1,4 +1,5 @@
 export * from "./AboutPage"
 export * from "./HomePage"
 export * from "./NotFoundPage"
+export * from "./SettingsPage"
 export * from "./TestPage"

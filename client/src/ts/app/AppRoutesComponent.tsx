@@ -4,6 +4,8 @@ import {
     AppLayout,
 
     HomePage,
+    AboutPage,
+    SettingsPage,
     TestPage,
     BuilderPage,
     ChecklistPage,
@@ -34,9 +36,11 @@ const routes: RouteObject[] = [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },
             { path: "/",                 element: <BuilderPage />        },
-            { path: "/test",             element: <TestPage />           },
+            { path: "/about",            element: <AboutPage />          },
             { path: "/builder",          element: <BuilderPage />        },
             { path: "/checklist",        element: <ChecklistPage />      },
+            { path: "/test",             element: <TestPage />           },
+            { path: "/settings",         element: <SettingsPage />       },
 
             { path: "/talismans",        element: <TalismansPage />      },
             { path: "/talismans/menu",   element: <TalismanMenu />       },
