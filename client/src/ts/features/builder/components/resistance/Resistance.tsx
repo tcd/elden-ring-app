@@ -1,30 +1,33 @@
 import { useSelector } from "react-redux"
-import { capitalize } from "lodash"
 
 import { Selectors } from "@app/state"
-import { StatRow } from "@app/shared"
+import { StatRow, StatRowProps } from "@app/shared"
 
 export const Resistance = (): JSX.Element => {
 
-    const resistance = useSelector(Selectors.Builder.resistance)
+    const immunity = useSelector(Selectors.Builder.resistance.immunity)
+    const robustness = useSelector(Selectors.Builder.resistance.robustness)
+    const focus = useSelector(Selectors.Builder.resistance.focus)
+    const vitality = useSelector(Selectors.Builder.resistance.vitality)
 
-    const rows = () => {
-        const rows = []
-        for (const [key, value] of Object.entries(resistance)) {
-            rows.push(
-                <StatRow
-                    title={capitalize(key)}
-                    value={value}
-                    key={`resistance_${key}`}
-                />,
-            )
-        }
-        return rows
-    }
+    const resistanceData: StatRowProps[] = [
+        { title: "Immunity",   value: immunity   },
+        { title: "Robustness", value: robustness },
+        { title: "Focus",      value: focus      },
+        { title: "Vitality",   value: vitality   },
+    ]
+
+    const rows = resistanceData.map(({ title, value }) => {
+        return <StatRow
+            title={title}
+            value={value}
+            key={`resistance_${title}`}
+        />
+    })
 
     return (
         <ul>
-            {rows()}
+            {rows}
         </ul>
     )
 }
