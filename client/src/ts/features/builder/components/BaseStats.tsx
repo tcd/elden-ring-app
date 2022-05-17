@@ -8,19 +8,23 @@ import { EquipLoad } from "./EquipLoad"
 
 export const BaseStats = (): JSX.Element => {
 
-    const stats = useSelector(Selectors.Builder.stats)
+    const hp        = useSelector(Selectors.Builder.stat.hp)
+    const fp        = useSelector(Selectors.Builder.stat.fp)
+    const stamina   = useSelector(Selectors.Builder.stat.stamina)
+    const poise     = useSelector(Selectors.Builder.stat.poise)
+    const discovery = useSelector(Selectors.Builder.stat.discovery)
 
     return (
         <ECard title="Base Stats" iconPath={mdiAccount}>
             <ul>
-                <StatRow title={Stat.HP} value={stats.HP}/>
-                <StatRow title={Stat.FP} value={stats.FP}/>
-                <StatRow title={Stat.STAMINA} value={stats.Stamina}/>
+                <StatRow title={Stat.HP} value={hp}/>
+                <StatRow title={Stat.FP} value={fp}/>
+                <StatRow title={Stat.STAMINA} value={stamina}/>
                 <br/>
                 <EquipLoad />
                 {/* <br/> */}
-                <StatRow title={Stat.POISE} value={stats.Poise}/>
-                <StatRow title={Stat.DISCOVERY} value={stats.Discovery}/>
+                <StatRow title={Stat.POISE} value={poise}/>
+                <StatRow title={Stat.DISCOVERY} value={discovery}/>
             </ul>
         </ECard>
     )

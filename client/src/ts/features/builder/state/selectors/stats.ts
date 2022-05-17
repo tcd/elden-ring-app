@@ -49,18 +49,6 @@ const calculateStat = (level: number, map: number[]): number => {
     }
 }
 
-export const selectStats = (state: RootState) => {
-    return {
-        "HP": selectHp(state),
-        "FP": selectFp(state),
-        "Stamina": selectStamina(state),
-        "Current Equip Load": EquipLoad.selectCurrentEquipLoad(state),
-        "Max Equip Load": EquipLoad.selectMaxEquipLoad(state),
-        "Poise": selectPoise(state),
-        "Discovery": selectDiscovery(state),
-    }
-}
-
 // https://eldenring.wiki.fextralife.com/Discovery
 export const selectDiscovery = (state: RootState): string => {
     const level = Attributes.selectArcane(state)

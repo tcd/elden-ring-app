@@ -28,8 +28,6 @@ export const BuilderSelectors = {
     startingClass: StartingClass.selectStartingClass,
     level: Stats.selectLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
-    stats: Stats.selectStats,
-    attributes: Attributes.selectAttributes,
     attribute: {
         vigor:        Attributes.selectVigor,
         mind:         Attributes.selectMind,

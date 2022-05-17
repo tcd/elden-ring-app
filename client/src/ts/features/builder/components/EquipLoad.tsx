@@ -23,16 +23,14 @@ const equipmentLoadColor = (load: Encumbrance) => {
 
 export const EquipLoad = (): JSX.Element => {
 
-    const stats = useSelector(Selectors.Builder.stats)
+    const currentEquipLoad     = useSelector(Selectors.Builder.stat.currentEquipLoad)
+    const maxEquipLoad         = useSelector(Selectors.Builder.stat.maxEquipLoad)
     const equipLoadDescription = useSelector(Selectors.Builder.equipLoad.description)
     // const equipLoadPercentage  = useSelector(Selectors.Builder.equipLoad.percentage)
 
-    const value_1 = stats["Current Equip Load"].toFixed(1)
-    const value_2 = stats["Max Equip Load"].toFixed(1)
-
     return (
         <div>
-            <StatRowPlus title="Equip Load" value_1={value_1} value_2={value_2}/>
+            <StatRowPlus title="Equip Load" value_1={currentEquipLoad.toFixed(1)} value_2={maxEquipLoad.toFixed(1)}/>
             <div style={{ color: equipmentLoadColor(equipLoadDescription) }}>
                 <StatRow title="" value={equipLoadDescription} />
             </div>
