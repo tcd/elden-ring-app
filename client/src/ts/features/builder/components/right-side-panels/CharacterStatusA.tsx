@@ -7,11 +7,11 @@ import { EquipLoad } from "../EquipLoad"
 
 export const CharacterStatusA = (): JSX.Element => {
 
-    const level = useSelector(Selectors.Builder.level)
-    const hp = useSelector(Selectors.Builder.stat.hp)
-    const fp = useSelector(Selectors.Builder.stat.fp)
-    const stamina = useSelector(Selectors.Builder.stat.stamina)
-    const poise = useSelector(Selectors.Builder.stat.poise)
+    const level     = useSelector(Selectors.Builder.level)
+    const hp        = useSelector(Selectors.Builder.stat.hp)
+    const fp        = useSelector(Selectors.Builder.stat.fp)
+    const stamina   = useSelector(Selectors.Builder.stat.stamina)
+    const poise     = useSelector(Selectors.Builder.stat.poise)
     const discovery = useSelector(Selectors.Builder.stat.discovery)
 
     const vigor        = useSelector(Selectors.Builder.attribute.vigor)
