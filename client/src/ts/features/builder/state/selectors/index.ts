@@ -40,7 +40,12 @@ export const BuilderSelectors = {
         faith:        Attributes.selectFaith,
         arcane:       Attributes.selectArcane,
     },
-    resistance: Resistance.selectResistance,
+    resistance: {
+        immunity:   Resistance.selectImmunity,
+        robustness: Resistance.selectRobustness,
+        focus:      Resistance.selectFocus,
+        vitality:   Resistance.selectVitality,
+    },
     /** Returns all talismans. */
     talismans: Talismans.selectTalismansArray,
     /**
