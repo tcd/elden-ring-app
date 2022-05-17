@@ -1,5 +1,6 @@
 export * from "./DamageTypes"
 export * from "./ECard"
+export * from "./ErTallCard"
 export * from "./EModal"
 export * from "./EPopoverContent"
 export * from "./StatRow"

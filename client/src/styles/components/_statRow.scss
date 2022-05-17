@@ -1,16 +1,18 @@
+@use "../variables" as v;
+
 .er__stat-row {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
+    font-size: v.$stat-row-font-size;
 }
 
 .er__stat-row-plus {
     display: grid;
     grid-template-columns: 30% 45% 10% 15%;
-    font-size: 15px;
+    font-size: v.$stat-row-font-size;
 
     span:nth-child(2) {
         text-align: right;

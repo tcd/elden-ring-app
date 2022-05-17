@@ -6,3 +6,4 @@ x 2022-03-29 Spells @client @server
 2022-04-28 "https://css-tricks.com/grainy-gradients/" @client
 2022-05-01 Update stat map data for Elden Ring 1.04 @client
 2022-05-01 Separate weapon AR data from weapon model for easier maintanence & more flexible calculation @server @client
+2022-05-17 Consolidate ErCard styles.

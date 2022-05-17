@@ -1,5 +1,5 @@
 @use "../variables"as v;
-@use "../mixins/customGradient" as m;
+@use "../mixins/index" as m;
 
 // bottom left
 // #585949 L3
@@ -10,17 +10,7 @@
 // #646454 R2
 // #555447 R3
 .vertical-gradient {
-    background: linear-gradient(
-        180deg,
-        rgba(88,89,73,    0.40)   0%,
-        rgba(103,104,86,  0.70)  15%,
-        rgba(115,115,96,  0.80)  35%,
-        rgba(119,118,100, 0.90)  50%,
-        rgba(112,113,94,  0.80)  70%,
-        rgba(100,100,84,  0.70)  85%,
-        rgba(85,84,71,    0.40) 100%,
-    );
-    border-radius: 2px;
+    @include m.erCardSideBorder;
 }
 
 article.er__card {
