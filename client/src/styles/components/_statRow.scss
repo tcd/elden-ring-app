@@ -1,0 +1,31 @@
+.er__stat-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.er__stat-row-plus {
+    display: grid;
+    grid-template-columns: 30% 45% 10% 15%;
+    font-size: 15px;
+
+    span:nth-child(2) {
+        text-align: right;
+        box-sizing: border-box;
+        margin-right: 5px;
+    }
+    span:nth-child(3) {
+        text-align: left;
+    }
+    span:nth-child(4) {
+        text-align: right;
+    }
+
+    // span:nth-child(1) { background: red;    }
+    // span:nth-child(2) { background: yellow; }
+    // span:nth-child(3) { background: green;  }
+    // span:nth-child(4) { background: blue;   }
+}

@@ -5,7 +5,7 @@ import {
 
 import { Spell } from "@app/types"
 import { ECard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
-import { isBlank, numberOrDash, SpecialCharacters } from "@app/util"
+import { isBlank, numberOrDash } from "@app/util"
 
 export interface SpellDetailProps {
     spell: Spell
@@ -18,8 +18,8 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
     }
 
     const required_intelligence = numberOrDash(spell?.required_intelligence, "0")
-    const required_faith        = numberOrDash(spell?.required_faith, "0")
-    const required_arcane       = numberOrDash(spell?.required_arcane, "0")
+    const required_faith        = numberOrDash(spell?.required_faith,        "0")
+    const required_arcane       = numberOrDash(spell?.required_arcane,       "0")
 
     const requirementsData: StatRowProps[] = [
         { title: "Int", value: required_intelligence },
