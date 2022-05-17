@@ -1,14 +1,12 @@
 import { useSelector } from "react-redux"
 import { mdiAccount } from "@mdi/js"
 
-import { AttributeNames } from "@app/types"
 import { Selectors } from "@app/state"
-import { ECard, StatRow, StatRowPlus } from "@app/shared"
+import { ECard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 import { EquipLoad } from "../EquipLoad"
 
 export const CharacterStatusA = (): JSX.Element => {
 
-    const attributes = useSelector(Selectors.Builder.attributes)
     const level = useSelector(Selectors.Builder.level)
     const hp = useSelector(Selectors.Builder.stat.hp)
     const fp = useSelector(Selectors.Builder.stat.fp)
@@ -16,13 +14,32 @@ export const CharacterStatusA = (): JSX.Element => {
     const poise = useSelector(Selectors.Builder.stat.poise)
     const discovery = useSelector(Selectors.Builder.stat.discovery)
 
-    const attributeRows = AttributeNames.map((attributeName) => {
-        const name = attributeName.replace(/^\w/, (c) => c.toUpperCase())
+    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
+    const mind         = useSelector(Selectors.Builder.attribute.mind)
+    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
+    const strength     = useSelector(Selectors.Builder.attribute.strength)
+    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
+    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
+    const faith        = useSelector(Selectors.Builder.attribute.faith)
+    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+
+    const attributeData: StatRowProps[] = [
+        { title: "Vigor",        value: vigor        },
+        { title: "Mind",         value: mind         },
+        { title: "Endurance",    value: endurance    },
+        { title: "Strength",     value: strength     },
+        { title: "Dexterity",    value: dexterity    },
+        { title: "Intelligence", value: intelligence },
+        { title: "Faith",        value: faith        },
+        { title: "Arcane",       value: arcane       },
+    ]
+
+    const attributeRows = attributeData.map(({ title, value }) => {
         return (
             <StatRow
-                title={name}
-                value={attributes[attributeName]}
-                key={`attribute_${name}`}
+                key={`attribute_${title}`}
+                title={title}
+                value={value}
             />
         )
     })

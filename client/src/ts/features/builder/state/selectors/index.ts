@@ -34,7 +34,7 @@ export const BuilderSelectors = {
         vigor:        Attributes.selectVigor,
         mind:         Attributes.selectMind,
         endurance:    Attributes.selectEndurance,
-        strenght:     Attributes.selectStrength,
+        strength:     Attributes.selectStrength,
         dexterity:    Attributes.selectDexterity,
         intelligence: Attributes.selectIntelligence,
         faith:        Attributes.selectFaith,
