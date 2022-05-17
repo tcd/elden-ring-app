@@ -50,6 +50,7 @@ export const TalismanMenu = (): JSX.Element => {
     )
 }
 
+
 const talismanImage = (talisman: Talisman) => {
     return (
         <div className="equipment-menu-image-wrapper">

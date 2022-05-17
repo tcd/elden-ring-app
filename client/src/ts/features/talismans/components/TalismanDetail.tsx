@@ -5,7 +5,7 @@ import {
 
 import { Talisman } from "@app/types"
 import { equipmentEffectDescription, isBlank } from "@app/util"
-import { ECard } from "@app/shared"
+import { ECard, StatRow } from "@app/shared"
 
 export interface TalismanDetailProps {
     talisman: Talisman
@@ -32,10 +32,7 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
                             <div className="col">
                                 <ul className="h-100 flex-between-column">
                                     <br />
-                                    <li className="stat-row">
-                                        <span>Weight</span>
-                                        <span>{talisman.weight.toFixed(1)}</span>
-                                    </li>
+                                    <StatRow title="Weight" value={talisman.weight.toFixed(1)}/>
                                 </ul>
                             </div>
                             <div className="col-1"></div>

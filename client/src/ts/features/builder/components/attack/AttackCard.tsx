@@ -10,4 +10,3 @@ export const AttackCard = (): JSX.Element => {
         </ECard>
     )
 }
-

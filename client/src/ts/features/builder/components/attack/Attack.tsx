@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
+import { StatRow } from "@app/features/common"
 
 export const Attack = (): JSX.Element => {
 
@@ -20,12 +21,14 @@ export const Attack = (): JSX.Element => {
         { title: "L Armament 3", value: L3?.attack_physical ?? "-" },
     ]
 
-    const rows = attackPowerValues.map((x) => {
+    const rows = attackPowerValues.map(({ title, value}) => {
         return (
-            <li className="stat-row mx-3" key={x.title}>
-                <span>{x.title}</span>
-                <span>{x.value}</span>
-            </li>
+            <StatRow
+                key={title}
+                title={title}
+                value={value}
+                // className="mx-3"
+            />
         )
     })
 

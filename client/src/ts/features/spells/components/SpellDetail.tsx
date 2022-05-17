@@ -4,8 +4,8 @@ import {
 } from "@mdi/js"
 
 import { Spell } from "@app/types"
-import { ECard } from "@app/shared"
-import { isBlank, numberOrDash } from "@app/util"
+import { ECard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { isBlank, numberOrDash, SpecialCharacters } from "@app/util"
 
 export interface SpellDetailProps {
     spell: Spell
@@ -17,9 +17,24 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
         return null
     }
 
-    const required_intelligence = numberOrDash(spell?.required_intelligence)
-    const required_faith        = numberOrDash(spell?.required_faith)
-    const required_arcane       = numberOrDash(spell?.required_arcane)
+    const required_intelligence = numberOrDash(spell?.required_intelligence, "0")
+    const required_faith        = numberOrDash(spell?.required_faith, "0")
+    const required_arcane       = numberOrDash(spell?.required_arcane, "0")
+
+    const requirementsData: StatRowProps[] = [
+        { title: "Int", value: required_intelligence },
+        { title: "Fai", value: required_faith        },
+        { title: "Arc", value: required_arcane       },
+    ]
+
+    const requirementsElements = requirementsData.map(({ title, value }) => {
+        const key = `spell-detail-${title}-requirement`
+        return (
+            <div className="col-3" key={key}>
+                <StatRow title={title} value={value}/>
+            </div>
+        )
+    })
 
     return (
         <div className="weapon-detail">
@@ -29,21 +44,13 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
                         <div className="row">
                             <div className="col">
                                 <ul>
-                                    <li className="stat-row">
-                                        <span>{spell.spell_type}</span>
-                                    </li>
-                                    <li className="stat-row">
-                                        <span>{spell.bonus_category}</span>
-                                    </li>
+                                    <StatRow title={spell?.spell_type}     value={null} />
+                                    <StatRow title={spell?.bonus_category} value={null} />
                                     <br />
-                                    <li className="stat-row">
-                                        <span>FP Cost</span>
-                                        <span>{spell.fp_cost_alt}</span>
-                                    </li>
-                                    <li className="stat-row">
-                                        <span>Slots Used</span>
-                                        <span>{spell.slots_required}</span>
-                                    </li>
+                                    <StatRowPlus title="No. Held" value_1="1" value_2="99" />
+                                    <StatRowPlus title="Stored"   value_1="0" value_2="600" />
+                                    <StatRow title="FP Cost"    value={spell?.fp_cost} />
+                                    <StatRow title="Slots Used" value={spell?.slots_required} />
                                 </ul>
                             </div>
                             <div className="col-1"></div>
@@ -60,22 +67,9 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
                 <div className="col">
                     <ECard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
                         <div className="row">
-                            <div className="col">
-                                <div className="stat-row">
-                                    <span>Int</span>
-                                    <span>{required_intelligence}</span>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="stat-row">
-                                    <span>Fai</span>
-                                    <span>{required_faith}</span>
-                                </div>
-                            </div>
-                            <div className="col">
-                                <div className="stat-row">
-                                    <span>Arc</span>
-                                    <span>{required_arcane}</span>
+                            <div className="col-6">
+                                <div className="row">
+                                    {requirementsElements}
                                 </div>
                             </div>
                         </div>
@@ -95,5 +89,4 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
             </div>
         </div>
     )
-
 }

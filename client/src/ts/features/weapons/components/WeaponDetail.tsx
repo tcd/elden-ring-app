@@ -7,7 +7,7 @@ import {
 } from "@mdi/js"
 
 import { Weapon } from "@app/types"
-import { ECard } from "@app/shared"
+import { ECard, StatRow, StatRowProps } from "@app/shared"
 import { isBlank } from "@app/util"
 
 export interface WeaponDetailProps {
@@ -20,7 +20,37 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
         return null
     }
 
+    const attackPlaceholder = "0" // "0.0"
     const defensePlaceholder = "?" // "0.0"
+
+    const attackData: StatRowProps[] = [
+        { title: "Physical",    value: (weapon?.attack_physical  ?? attackPlaceholder) },
+        { title: "Magic",       value: (weapon?.attack_magic     ?? attackPlaceholder) },
+        { title: "Fire",        value: (weapon?.attack_fire      ?? attackPlaceholder) },
+        { title: "Lightning",   value: (weapon?.attack_lightning ?? attackPlaceholder) },
+        { title: "Holy",        value: (weapon?.attack_holy      ?? attackPlaceholder) },
+        { title: "Critical",    value: (weapon?.attack_critical  ?? attackPlaceholder) },
+    ]
+
+    const dmgNegationData: StatRowProps[] = [
+        { title: "Physical",    value: (weapon?.defense_physical?.toFixed(1)  ?? defensePlaceholder) },
+        { title: "Magic",       value: (weapon?.defense_magic?.toFixed(1)     ?? defensePlaceholder) },
+        { title: "Fire",        value: (weapon?.defense_fire?.toFixed(1)      ?? defensePlaceholder) },
+        { title: "Lightning",   value: (weapon?.defense_lightning?.toFixed(1) ?? defensePlaceholder) },
+        { title: "Holy",        value: (weapon?.defense_holy?.toFixed(1)      ?? defensePlaceholder) },
+        { title: "Guard Boost", value: (weapon?.defense_guard_boost           ?? defensePlaceholder) },
+    ]
+
+    const attackElements = attackData.map(({ title, value }) => {
+        const key = `weapon-attack-${title}`
+        return (<StatRow title={title} value={value} key={key}/>)
+    })
+
+    const dmgNegationElements = dmgNegationData.map(({ title, value }) => {
+        const key = `weapon-damage-negation-${title}`
+        return (<StatRow title={title} value={value} key={key}/>)
+    })
+
 
     return (
         <div className="weapon-detail">
@@ -30,24 +60,13 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                         <div className="row">
                             <div className="col">
                                 <ul>
-                                    <li className="stat-row">
-                                        <span>{weapon.weapon_type}</span>
-                                    </li>
-                                    <li className="stat-row">
-                                        <span>{weapon.physical_damage_types.join("/")}</span>
-                                    </li>
+                                    <StatRow title={weapon?.weapon_type}                    value={null} />
+                                    <StatRow title={weapon.physical_damage_types.join("/")} value={null} />
                                     <br />
-                                    <li className="stat-row">
-                                        <span>{weapon.weapon_skill.name}</span>
-                                    </li>
-                                    <li className="stat-row">
-                                        <span>FP Cost</span>
-                                        <span>{"TODO: weapon skill fp cost"}</span>
-                                    </li>
-                                    <li className="stat-row">
-                                        <span>Weight</span>
-                                        <span>{weapon.weight.toFixed(1)}</span>
-                                    </li>
+                                    <StatRow title={weapon?.weapon_skill?.name} value={null} />
+                                    <br />
+                                    <StatRow title="FP Cost" value="TODO" />
+                                    <StatRow title="Weight"  value={weapon.weight.toFixed(1)} />
                                 </ul>
                             </div>
                             <div className="col-1"></div>
@@ -64,60 +83,14 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                 <div className="col">
                     <ECard title="Attack Power" smallTitle={true} iconPath={mdiSword}>
                         <ul>
-                            <li className="stat-row">
-                                <span>Physical</span>
-                                <span>{weapon.attack_physical ?? 0}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Magic</span>
-                                <span>{weapon.attack_magic ?? 0}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Fire</span>
-                                <span>{weapon.attack_fire ?? 0}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Lightning</span>
-                                <span>{weapon.attack_lightning ?? 0}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Holy</span>
-                                <span>{weapon.attack_holy ?? 0}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Critical</span>
-                                <span>{weapon.attack_critical ?? 0}</span>
-                            </li>
+                            {attackElements}
                         </ul>
                     </ECard>
                 </div>
                 <div className="col">
                     <ECard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
-                            <li className="stat-row">
-                                <span>Physical</span>
-                                <span>{weapon.defense_physical?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Magic</span>
-                                <span>{weapon.defense_magic?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Fire</span>
-                                <span>{weapon.defense_fire?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Lightning</span>
-                                <span>{weapon.defense_lightning?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Holy</span>
-                                <span>{weapon.defense_holy?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Guard Boost</span>
-                                <span>{weapon.defense_guard_boost ?? defensePlaceholder}</span>
-                            </li>
+                            {dmgNegationElements}
                         </ul>
                     </ECard>
                 </div>
@@ -127,29 +100,14 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                     <ECard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
                         <div className="row">
                             <div className="col">
-                                <div className="stat-row">
-                                    <span>Str</span>
-                                    <span>{weapon.scaling_strength ?? "-"}</span>
-                                </div>
-                                <div className="stat-row">
-                                    <span>Int</span>
-                                    <span>{weapon.scaling_intelligence ?? "-"}</span>
-                                </div>
-                                <div className="stat-row">
-                                    <span>Arc</span>
-                                    <span>{weapon.scaling_arcane ?? "-"}</span>
-                                </div>
+                                <StatRow title="Str" value={weapon?.scaling_strength     ?? "-"} />
+                                <StatRow title="Int" value={weapon?.scaling_intelligence ?? "-"} />
+                                <StatRow title="Arc" value={weapon?.scaling_arcane       ?? "-"} />
                             </div>
                             <div className="col-1"></div>
                             <div className="col">
-                                <div className="stat-row">
-                                    <span>Dex</span>
-                                    <span>{weapon.scaling_dexterity ?? "-"}</span>
-                                </div>
-                                <div className="stat-row">
-                                    <span>Fai</span>
-                                    <span>{weapon.scaling_faith ?? "-"}</span>
-                                </div>
+                                <StatRow title="Dex" value={weapon?.scaling_dexterity ?? "-"} />
+                                <StatRow title="Fai" value={weapon?.scaling_faith     ?? "-"} />
                             </div>
                         </div>
                     </ECard>
@@ -158,29 +116,14 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                     <ECard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
                         <div className="row">
                             <div className="col">
-                                <div className="stat-row">
-                                    <span>Str</span>
-                                    <span>{weapon.required_strength ?? "-"}</span>
-                                </div>
-                                <div className="stat-row">
-                                    <span>Int</span>
-                                    <span>{weapon.required_intelligence ?? "-"}</span>
-                                </div>
-                                <div className="stat-row">
-                                    <span>Arc</span>
-                                    <span>{weapon.required_arcane ?? "-"}</span>
-                                </div>
+                                <StatRow title="Str" value={weapon?.required_strength     ?? "-"} />
+                                <StatRow title="Int" value={weapon?.required_intelligence ?? "-"} />
+                                <StatRow title="Arc" value={weapon?.required_arcane       ?? "-"} />
                             </div>
                             <div className="col-1"></div>
                             <div className="col">
-                                <div className="stat-row">
-                                    <span>Dex</span>
-                                    <span>{weapon.required_dexterity ?? "-"}</span>
-                                </div>
-                                <div className="stat-row">
-                                    <span>Fai</span>
-                                    <span>{weapon.required_faith ?? "-"}</span>
-                                </div>
+                                <StatRow title="Dex" value={weapon?.required_dexterity ?? "-"} />
+                                <StatRow title="Fai" value={weapon?.required_faith     ?? "-"} />
                             </div>
                         </div>
                     </ECard>

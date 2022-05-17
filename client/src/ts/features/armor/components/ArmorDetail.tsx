@@ -1,5 +1,6 @@
 import {
     mdiShield,
+    mdiShieldOutline,
     mdiTshirtCrew,
     mdiTshirtCrewOutline,
 } from "@mdi/js"
@@ -9,6 +10,8 @@ import { isBlank } from "@app/util"
 import {
     ECard,
     StatRow,
+    StatRowPlusProps,
+    StatRowProps,
 } from "@app/shared"
 
 export interface ArmorDetailProps {
@@ -24,6 +27,29 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
     const defensePlaceholder = "?" // "0.0"
     const resistancePlaceholder = "?" // "0"
 
+    const defenseRowData: StatRowProps[] = [
+        { title: "Physical",  value: (armor?.physical?.toFixed(1)  ?? defensePlaceholder) },
+        { title: "VS Strike", value: (armor?.vs_strike?.toFixed(1) ?? defensePlaceholder) },
+        { title: "VS Slash",  value: (armor?.vs_slash?.toFixed(1)  ?? defensePlaceholder) },
+        { title: "VS Pierce", value: (armor?.vs_pierce?.toFixed(1) ?? defensePlaceholder) },
+        { title: "Magic",     value: (armor?.magic?.toFixed(1)     ?? defensePlaceholder) },
+        { title: "Fire",      value: (armor?.fire?.toFixed(1)      ?? defensePlaceholder) },
+        { title: "Lightning", value: (armor?.lightning?.toFixed(1) ?? defensePlaceholder) },
+        { title: "Holy",      value: (armor?.holy?.toFixed(1)      ?? defensePlaceholder) },
+    ]
+
+    const resistanceRowData: StatRowProps[] = [
+        { title: "Immunity",   value: (armor?.immunity   ?? resistancePlaceholder) },
+        { title: "Robustness", value: (armor?.robustness ?? resistancePlaceholder) },
+        { title: "Focus",      value: (armor?.focus      ?? resistancePlaceholder) },
+        { title: "Vitality",   value: (armor?.vitality   ?? resistancePlaceholder) },
+        { title: "Poise",      value: (armor?.poise      ?? resistancePlaceholder) },
+    ]
+
+    const defenseRowElements    = defenseRowData.map(({ title, value })    => <StatRow key={title} title={title} value={value} />)
+    const resistanceRowElements = resistanceRowData.map(({ title, value }) => <StatRow key={title} title={title} value={value} />)
+
+
     return (
         <div className="weapon-detail">
             <div className="row">
@@ -32,13 +58,8 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                         <div className="row">
                             <div className="col">
                                 <ul className="h-100 flex-between-column">
-                                    <li className="stat-row">
-                                        <span>{armor.armor_type}</span>
-                                    </li>
-                                    <li className="stat-row">
-                                        <span>Weight</span>
-                                        <span>{armor.weight.toFixed(1)}</span>
-                                    </li>
+                                    <StatRow title={armor.armor_type} value={null}/>
+                                    <StatRow title="Weight" value={armor.weight.toFixed(1)}/>
                                 </ul>
                             </div>
                             <div className="col-1"></div>
@@ -55,64 +76,14 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                 <div className="col">
                     <ECard title="Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
-                            <li className="stat-row">
-                                <span>Physical</span>
-                                <span>{armor.physical?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>VS Strike</span>
-                                <span>{armor.vs_strike?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>VS Slash</span>
-                                <span>{armor.vs_slash?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>VS Pierce</span>
-                                <span>{armor.vs_pierce?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Magic</span>
-                                <span>{armor.magic?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Fire</span>
-                                <span>{armor.fire?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Lightning</span>
-                                <span>{armor.lightning?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Holy</span>
-                                <span>{armor.holy?.toFixed(1) ?? defensePlaceholder}</span>
-                            </li>
+                            {defenseRowElements}
                         </ul>
                     </ECard>
                 </div>
                 <div className="col">
-                    <ECard title="Attack Power" smallTitle={true} iconPath={mdiTshirtCrew}>
+                    <ECard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline}>
                         <ul>
-                            <li className="stat-row">
-                                <span>Immunity</span>
-                                <span>{armor.immunity ?? resistancePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Robustness</span>
-                                <span>{armor.robustness ?? resistancePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Focus</span>
-                                <span>{armor.focus ?? resistancePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Vitality</span>
-                                <span>{armor.vitality ?? resistancePlaceholder}</span>
-                            </li>
-                            <li className="stat-row">
-                                <span>Poise</span>
-                                <span>{armor.poise ?? resistancePlaceholder}</span>
-                            </li>
+                            {resistanceRowElements}
                         </ul>
                     </ECard>
                 </div>
