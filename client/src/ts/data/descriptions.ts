@@ -74,7 +74,7 @@ export const DESCRIPTIONS = {
     },
     ARMOR_SELECT_SCREEN: {
 
-    }
+    },
 }
 
 export const DESCRIPTIONS_PLUS = {
