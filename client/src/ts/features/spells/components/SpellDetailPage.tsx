@@ -1,20 +1,20 @@
 import { useSelector, useDispatch } from "react-redux"
 
 import { ErCard } from "@app/shared"
-import { WeaponsSelectors } from "@app/features"
+import { Selectors } from "@app/state"
 import {
     SpellDetail,
 } from "./SpellDetail"
 
 export const SpellDetailPage = (): JSX.Element => {
 
-    const weapon = useSelector(WeaponsSelectors.activeWeapon)
+    const spell = useSelector(Selectors.Spells.activeSpell)
 
     return (
         <div className="container">
             <div className="row">
                 <div className="col-7">
-                    <SpellDetail spell={weapon}/>
+                    <SpellDetail spell={spell}/>
                 </div>
                 <div className="col-5">
                     <ErCard title="Character Status">

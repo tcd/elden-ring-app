@@ -10,7 +10,27 @@ export const WeaponMenu = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const stats = useSelector(Selectors.Builder.attributes)
+    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
+    const mind         = useSelector(Selectors.Builder.attribute.mind)
+    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
+    const strength     = useSelector(Selectors.Builder.attribute.strength)
+    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
+    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
+    const faith        = useSelector(Selectors.Builder.attribute.faith)
+    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+
+    const stats = {
+        vigor,
+        mind,
+        endurance,
+        strength,
+        dexterity,
+        intelligence,
+        faith,
+        arcane,
+    }
+
+
     const activeWeaponName = useSelector(Selectors.Weapons.activeWeaponName)
     const weapon = useSelector(Selectors.Weapons.activeWeapon)
     const weapons = useSelector(Selectors.Builder.api.weapons)

@@ -40,7 +40,26 @@ export const SpellMenu = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const stats = useSelector(Selectors.Builder.attributes)
+    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
+    const mind         = useSelector(Selectors.Builder.attribute.mind)
+    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
+    const strength     = useSelector(Selectors.Builder.attribute.strength)
+    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
+    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
+    const faith        = useSelector(Selectors.Builder.attribute.faith)
+    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+
+    const attributes = {
+        vigor,
+        mind,
+        endurance,
+        strength,
+        dexterity,
+        intelligence,
+        faith,
+        arcane,
+    }
+
     const spell = useSelector(Selectors.Spells.activeSpell)
     const spells = useSelector(Selectors.Spells.all)
 
@@ -57,7 +76,7 @@ export const SpellMenu = (): JSX.Element => {
                     className="equipment-menu-cell"
                     onClick={() => handleClick(spell.name)}
                 >
-                    {spellImage(spell, stats)}
+                    {spellImage(spell, attributes)}
                 </div>
             )
         })
@@ -65,7 +84,7 @@ export const SpellMenu = (): JSX.Element => {
         return (
             <React.Fragment key={spellCategory}>
                 <section id={spellCategory} className="equipment-menu-section">
-                    {cells}
+                    {cells.length > 0 ? cells : spellCategory}
                 </section>
                 <div className="equipment-menu-section-border"></div>
             </React.Fragment>

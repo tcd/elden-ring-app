@@ -15,7 +15,7 @@ const selectActiveSpell = (state: RootState) => {
     if (isBlank(activeName)) {
         return null
     }
-    return spells.find(x => x.name == activeName)
+    return spells.find(x => x.name == activeName) ?? null
 }
 
 // =============================================================================
