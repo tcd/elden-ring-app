@@ -83,7 +83,7 @@ declare namespace React {
         }[keyof JSX.IntrinsicElements] |
         ComponentType<P>;
     /**
-     * @deprecated Please use `ElementType`
+     * @deprecated Please use {@link ElementType}
      * @template P props
      */
     type ReactType<P = any> = ElementType<P>;
@@ -99,12 +99,23 @@ declare namespace React {
         | ((props: P) => ReactElement<any, any> | null)
         | (new (props: P) => Component<any, any>);
 
+    /**
+     * @template T component/element type
+     */
     interface RefObject<T> {
         readonly current: T | null;
     }
-    // Bivariance hack for consistent unsoundness with RefObject
+    /**
+     * Bivariance hack for consistent unsoundness with RefObject
+     */
     type RefCallback<T> = { bivarianceHack(instance: T | null): void }["bivarianceHack"];
+    /**
+     * @template T component/element type
+     */
     type Ref<T> = RefCallback<T> | RefObject<T> | null;
+    /**
+     * @template T component/element type
+     */
     type LegacyRef<T> = string | Ref<T>;
     /**
      * Gets the instance type for a React element. The instance will be different for various component types:
@@ -219,14 +230,14 @@ declare namespace React {
 
     /**
      * ReactHTML for ReactHTMLElement
-     * @template T element type
+     * @template T component/element type
      */
     interface ReactHTMLElement<T extends HTMLElement> extends DetailedReactHTMLElement<AllHTMLAttributes<T>, T> { }
 
     /**
      * ReactHTML for ReactHTMLElement
      * @template P props
-     * @template T element type
+     * @template T component/element type
      */
     interface DetailedReactHTMLElement<P extends HTMLAttributes<T>, T extends HTMLElement> extends DOMElement<P, T> {
         type: keyof ReactHTML;
@@ -246,26 +257,51 @@ declare namespace React {
     // Factories
     // ----------------------------------------------------------------------
 
+    /**
+     * @template P props
+     */
     type Factory<P> = (props?: Attributes & P, ...children: ReactNode[]) => ReactElement<P>;
 
     /**
-     * @deprecated Please use `FunctionComponentFactory`
+     * @deprecated Please use {@link FunctionComponentFactory}
+     * @template P props
      */
     type SFCFactory<P> = FunctionComponentFactory<P>;
 
+    /**
+     * @template P props
+     */
     type FunctionComponentFactory<P> = (props?: Attributes & P, ...children: ReactNode[]) => FunctionComponentElement<P>;
 
+    /**
+     * @template P props
+     * @template T component/element type
+     */
     type ComponentFactory<P, T extends Component<P, ComponentState>> =
         (props?: ClassAttributes<T> & P, ...children: ReactNode[]) => CElement<P, T>;
 
+    /**
+     * @template P props
+     * @template T component/element type
+     */
     type CFactory<P, T extends Component<P, ComponentState>> = ComponentFactory<P, T>;
+    /**
+     * @template P props
+     */
     type ClassicFactory<P> = CFactory<P, ClassicComponent<P, ComponentState>>;
 
     type DOMFactory<P extends DOMAttributes<T>, T extends Element> =
         (props?: ClassAttributes<T> & P | null, ...children: ReactNode[]) => DOMElement<P, T>;
 
+    /**
+     * @template T component/element type
+     */
     interface HTMLFactory<T extends HTMLElement> extends DetailedHTMLFactory<AllHTMLAttributes<T>, T> {}
 
+    /**
+     * @template P props
+     * @template T component/element type
+     */
     interface DetailedHTMLFactory<P extends HTMLAttributes<T>, T extends HTMLElement> extends DOMFactory<P, T> {
         (props?: ClassAttributes<T> & P | null, ...children: ReactNode[]): DetailedReactHTMLElement<P, T>;
     }
@@ -293,23 +329,49 @@ declare namespace React {
     // Top Level API
     // ----------------------------------------------------------------------
 
+    //
     // DOM Elements
-    function createFactory<T extends HTMLElement>(
-        type: keyof ReactHTML): HTMLFactory<T>;
-    function createFactory(
-        type: keyof ReactSVG): SVGFactory;
-    function createFactory<P extends DOMAttributes<T>, T extends Element>(
-        type: string): DOMFactory<P, T>;
+    // ----------------------------------------------------------------------
+    /**
+     * @template T HTML element type
+     */
+    function createFactory<T extends HTMLElement>(type: keyof ReactHTML): HTMLFactory<T>;
+    function createFactory(type: keyof ReactSVG): SVGFactory;
+    /**
+     * @template P props
+     * @template T element type
+     */
+    function createFactory<P extends DOMAttributes<T>, T extends Element>(type: string): DOMFactory<P, T>;
 
+    //
     // Custom components
+    // ----------------------------------------------------------------------
+    /**
+     * @template P props
+     */
     function createFactory<P>(type: FunctionComponent<P>): FunctionComponentFactory<P>;
-    function createFactory<P>(
-        type: ClassType<P, ClassicComponent<P, ComponentState>, ClassicComponentClass<P>>): CFactory<P, ClassicComponent<P, ComponentState>>;
-    function createFactory<P, T extends Component<P, ComponentState>, C extends ComponentClass<P>>(
-        type: ClassType<P, T, C>): CFactory<P, T>;
+    /**
+     * @template P props
+     */
+    function createFactory<P>(type: ClassType<P, ClassicComponent<P, ComponentState>, ClassicComponentClass<P>>): CFactory<P, ClassicComponent<P, ComponentState>>;
+    /**
+     * @template P props
+     * @template T element type
+     * @template C component type
+     */
+    function createFactory<
+        P,
+        T extends Component<P, ComponentState>,
+        C extends ComponentClass<P>
+    >(type: ClassType<P, T, C>): CFactory<P, T>;
+    /**
+     * @template P props
+     */
     function createFactory<P>(type: ComponentClass<P>): Factory<P>;
 
     // DOM Elements
+    // ----------------------------------------------------------------------
+
     // TODO: generalize this to everything in `keyof ReactHTML`, not just "input"
     function createElement(
         type: "input",
@@ -329,6 +391,7 @@ declare namespace React {
         ...children: ReactNode[]): DOMElement<P, T>;
 
     // Custom components
+    // ----------------------------------------------------------------------
 
     function createElement<P extends {}>(
         type: FunctionComponent<P>,
@@ -385,7 +448,7 @@ declare namespace React {
 
     /**
      * Context via RenderProps
-     *
+     * @template T element type
      */
     interface ProviderProps<T> {
         value: T;
@@ -396,28 +459,35 @@ declare namespace React {
         children: (value: T) => ReactNode;
     }
 
-    // TODO: similar to how Fragment is actually a symbol, the values returned from createContext,
-    // forwardRef and memo are actually objects that are treated specially by the renderer; see:
-    // https://github.com/facebook/react/blob/v16.6.0/packages/react/src/ReactContext.js#L35-L48
-    // https://github.com/facebook/react/blob/v16.6.0/packages/react/src/forwardRef.js#L42-L45
-    // https://github.com/facebook/react/blob/v16.6.0/packages/react/src/memo.js#L27-L31
-    // However, we have no way of telling the JSX parser that it's a JSX element type or its props other than
-    // by pretending to be a normal component.
-    //
-    // We don't just use ComponentType or FunctionComponent types because you are not supposed to attach statics to this
-    // object, but rather to the original function.
+    /**
+     * TODO: similar to how `Fragment` is actually a symbol, the values returned from `createContext`,
+     * `forwardRef` and `memo` are actually objects that are treated specially by the renderer.
+     * See:
+     * - https://github.com/facebook/react/blob/v16.6.0/packages/react/src/ReactContext.js#L35-L48
+     * - https://github.com/facebook/react/blob/v16.6.0/packages/react/src/forwardRef.js#L42-L45
+     * - https://github.com/facebook/react/blob/v16.6.0/packages/react/src/memo.js#L27-L31
+     *
+     * We don't just use ComponentType or FunctionComponent types because you are not supposed to attach statics to this object, but rather to the original function.
+     * @template P props
+     */
     interface ExoticComponent<P = {}> {
         /**
-         * **NOTE**: Exotic components are not callable.
+         * NOTE: Exotic components are not callable.
          */
         (props: P): (ReactElement|null);
         readonly $$typeof: symbol;
     }
 
+    /**
+     * @template P props
+     */
     interface NamedExoticComponent<P = {}> extends ExoticComponent<P> {
         displayName?: string | undefined;
     }
 
+    /**
+     * @template P props
+     */
     interface ProviderExoticComponent<P> extends ExoticComponent<P> {
         propTypes?: WeakValidationMap<P> | undefined;
     }
@@ -457,10 +527,11 @@ declare namespace React {
         fallback: NonNullable<ReactNode>|null;
     }
 
-    // TODO(react18): Updated JSDoc to reflect that Suspense works on the server.
     /**
      * This feature is not yet available for server-side rendering.
      * Suspense support will be added in a later release.
+     *
+     * TODO(react18): Updated JSDoc to reflect that Suspense works on the server.
      */
     const Suspense: ExoticComponent<SuspenseProps>;
     const version: string;
@@ -616,6 +687,7 @@ declare namespace React {
      * longer be considered 'stateless'. Please use `FunctionComponent` instead.
      *
      * @see [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+     * @template P props
      */
     type SFC<P = {}> = FunctionComponent<P>;
 
@@ -624,9 +696,14 @@ declare namespace React {
      * longer be considered 'stateless'. Please use `FunctionComponent` instead.
      *
      * @see [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+     * @template P props
      */
     type StatelessComponent<P = {}> = FunctionComponent<P>;
 
+    /**
+     * Function Component?
+     * @template P props
+     */
     type FC<P = {}> = FunctionComponent<P>;
 
     /**
@@ -901,6 +978,10 @@ declare namespace React {
         UNSAFE_componentWillUpdate?(nextProps: Readonly<P>, nextState: Readonly<S>, nextContext: any): void;
     }
 
+    /**
+     * @template P props
+     * @template S state
+     */
     interface Mixin<P, S> extends ComponentLifecycle<P, S> {
         mixins?: Array<Mixin<P, S>> | undefined;
         statics?: {
@@ -916,12 +997,19 @@ declare namespace React {
         getInitialState?(): S;
     }
 
+    /**
+     * @template P props
+     * @template S state
+     */
     interface ComponentSpec<P, S> extends Mixin<P, S> {
         render(): ReactNode;
 
         [propertyName: string]: any;
     }
 
+    /**
+     * @template T component/element type
+     */
     function createRef<T>(): RefObject<T>;
 
     // will show `ForwardRef(${Component.displayName || Component.name})` in devtools by default,
@@ -953,8 +1041,9 @@ declare namespace React {
     type PropsWithChildren<P> = P & { children?: ReactNode | undefined };
 
     /**
-     * NOTE: prefer ComponentPropsWithRef, if the ref is forwarded,
-     * or ComponentPropsWithoutRef when refs are not supported.
+     * NOTE: prefer {@link ComponentPropsWithRef}, if the ref is forwarded,
+     * or {@link ComponentPropsWithoutRef} when refs are not supported.
+     * @template T component/element type
      */
     type ComponentProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> =
         T extends JSXElementConstructor<infer P>
@@ -1467,6 +1556,9 @@ declare namespace React {
     interface SVGProps<T> extends SVGAttributes<T>, ClassAttributes<T> {
     }
 
+    /**
+     * @template T element type
+     */
     interface DOMAttributes<T> {
         children?: ReactNode | undefined;
         dangerouslySetInnerHTML?: {
@@ -1938,6 +2030,9 @@ declare namespace React {
         | 'treeitem'
         | (string & {});
 
+    /**
+     * @template T element type
+     */
     interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
         // React-specific Attributes
         defaultChecked?: boolean | undefined;
@@ -2006,6 +2101,9 @@ declare namespace React {
         is?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface AllHTMLAttributes<T> extends HTMLAttributes<T> {
         // Standard HTML Attributes
         accept?: string | undefined;
@@ -2134,6 +2232,9 @@ declare namespace React {
         | '_top'
         | (string & {});
 
+    /**
+     * @template T element type
+     */
     interface AnchorHTMLAttributes<T> extends HTMLAttributes<T> {
         download?: any;
         href?: string | undefined;
@@ -2391,6 +2492,9 @@ declare namespace React {
         type?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface MediaHTMLAttributes<T> extends HTMLAttributes<T> {
         autoPlay?: boolean | undefined;
         controls?: boolean | undefined;
@@ -2404,6 +2508,9 @@ declare namespace React {
         src?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface MetaHTMLAttributes<T> extends HTMLAttributes<T> {
         charSet?: string | undefined;
         content?: string | undefined;
@@ -2412,6 +2519,9 @@ declare namespace React {
         media?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface MeterHTMLAttributes<T> extends HTMLAttributes<T> {
         form?: string | undefined;
         high?: number | undefined;
@@ -2422,10 +2532,16 @@ declare namespace React {
         value?: string | ReadonlyArray<string> | number | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface QuoteHTMLAttributes<T> extends HTMLAttributes<T> {
         cite?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface ObjectHTMLAttributes<T> extends HTMLAttributes<T> {
         classID?: string | undefined;
         data?: string | undefined;
@@ -2438,17 +2554,26 @@ declare namespace React {
         wmode?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface OlHTMLAttributes<T> extends HTMLAttributes<T> {
         reversed?: boolean | undefined;
         start?: number | undefined;
         type?: '1' | 'a' | 'A' | 'i' | 'I' | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface OptgroupHTMLAttributes<T> extends HTMLAttributes<T> {
         disabled?: boolean | undefined;
         label?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface OptionHTMLAttributes<T> extends HTMLAttributes<T> {
         disabled?: boolean | undefined;
         label?: string | undefined;
@@ -2456,26 +2581,41 @@ declare namespace React {
         value?: string | ReadonlyArray<string> | number | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface OutputHTMLAttributes<T> extends HTMLAttributes<T> {
         form?: string | undefined;
         htmlFor?: string | undefined;
         name?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface ParamHTMLAttributes<T> extends HTMLAttributes<T> {
         name?: string | undefined;
         value?: string | ReadonlyArray<string> | number | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface ProgressHTMLAttributes<T> extends HTMLAttributes<T> {
         max?: number | string | undefined;
         value?: string | ReadonlyArray<string> | number | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface SlotHTMLAttributes<T> extends HTMLAttributes<T> {
         name?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface ScriptHTMLAttributes<T> extends HTMLAttributes<T> {
         async?: boolean | undefined;
         /** @deprecated */
@@ -2490,6 +2630,9 @@ declare namespace React {
         type?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface SelectHTMLAttributes<T> extends HTMLAttributes<T> {
         autoComplete?: string | undefined;
         autoFocus?: boolean | undefined;
@@ -2503,6 +2646,9 @@ declare namespace React {
         onChange?: ChangeEventHandler<T> | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface SourceHTMLAttributes<T> extends HTMLAttributes<T> {
         height?: number | string | undefined;
         media?: string | undefined;
@@ -2513,6 +2659,9 @@ declare namespace React {
         width?: number | string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface StyleHTMLAttributes<T> extends HTMLAttributes<T> {
         media?: string | undefined;
         nonce?: string | undefined;
@@ -2520,6 +2669,9 @@ declare namespace React {
         type?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface TableHTMLAttributes<T> extends HTMLAttributes<T> {
         cellPadding?: number | string | undefined;
         cellSpacing?: number | string | undefined;
@@ -2527,6 +2679,9 @@ declare namespace React {
         width?: number | string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface TextareaHTMLAttributes<T> extends HTMLAttributes<T> {
         autoComplete?: string | undefined;
         autoFocus?: boolean | undefined;
@@ -2547,6 +2702,9 @@ declare namespace React {
         onChange?: ChangeEventHandler<T> | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface TdHTMLAttributes<T> extends HTMLAttributes<T> {
         align?: "left" | "center" | "right" | "justify" | "char" | undefined;
         colSpan?: number | undefined;
@@ -2559,6 +2717,9 @@ declare namespace React {
         valign?: "top" | "middle" | "bottom" | "baseline" | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface ThHTMLAttributes<T> extends HTMLAttributes<T> {
         align?: "left" | "center" | "right" | "justify" | "char" | undefined;
         colSpan?: number | undefined;
@@ -2568,10 +2729,16 @@ declare namespace React {
         abbr?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface TimeHTMLAttributes<T> extends HTMLAttributes<T> {
         dateTime?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface TrackHTMLAttributes<T> extends HTMLAttributes<T> {
         default?: boolean | undefined;
         kind?: string | undefined;
@@ -2580,6 +2747,9 @@ declare namespace React {
         srcLang?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface VideoHTMLAttributes<T> extends MediaHTMLAttributes<T> {
         height?: number | string | undefined;
         playsInline?: boolean | undefined;
@@ -2597,6 +2767,9 @@ declare namespace React {
     //   - "number | string"
     //   - "string"
     //   - union of string literals
+    /**
+     * @template T element type
+     */
     interface SVGAttributes<T> extends AriaAttributes, DOMAttributes<T> {
         // Attributes which also defined in HTMLAttributes
         // See comment in SVGDOMPropertyConfig.js
@@ -2866,6 +3039,9 @@ declare namespace React {
         zoomAndPan?: string | undefined;
     }
 
+    /**
+     * @template T element type
+     */
     interface WebViewHTMLAttributes<T> extends HTMLAttributes<T> {
         allowFullScreen?: boolean | undefined;
         allowpopups?: boolean | undefined;
@@ -3165,7 +3341,9 @@ type IsExactlyAny<T> = boolean extends (T extends never ? true : false) ? true :
 type ExactlyAnyPropertyKeys<T> = { [K in keyof T]: IsExactlyAny<T[K]> extends true ? K : never }[keyof T];
 type NotExactlyAnyPropertyKeys<T> = Exclude<keyof T, ExactlyAnyPropertyKeys<T>>;
 
-// Try to resolve ill-defined props like for JS users: props can be any, or sometimes objects with properties of type any
+/**
+ * Try to resolve ill-defined props like for JS users: props can be any, or sometimes objects with properties of type any
+ */
 type MergePropTypes<P, T> =
     // Distribute over P in case it is a union type
     P extends any
@@ -3218,6 +3396,9 @@ declare global {
             : ReactManagedAttributes<C, P>;
 
         interface IntrinsicAttributes extends React.Attributes { }
+        /**
+         * @template T component/element type
+         */
         interface IntrinsicClassAttributes<T> extends React.ClassAttributes<T> { }
 
         interface IntrinsicElements {
