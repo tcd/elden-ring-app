@@ -4,19 +4,41 @@ import Typography from "@mui/material/Typography"
 import { MdiIcon } from "@app/shared"
 import { isBlank } from "@app/util"
 
-export interface ECardProps {
+export type MarginOption =
+    | "none"
+    | "all"
+    | "vertical"
+    | "horizontal"
+    // | "left"
+    // | "right"
+    // | "top"
+    // | "bottom"
+
+export interface ErCardProps {
     title: string
     /** SVG path content */
     iconPath?: string
     content?: any
     className?: string
+    /** CSS properties to apply to the card. */
     style?: CSSProperties
     smallTitle?: boolean
+    /** If true, add margin to all sides of the card. */
+    margined?: boolean
+    /** Sides of the card to which margin should be added. */
+    margin?: MarginOption
 }
 
-export class ECard extends Component<ECardProps> {
+export class ErCard extends Component<ErCardProps> {
 
-    constructor(props: ECardProps) {
+    // Set default props
+    static defaultProps: Partial<ErCardProps> = {
+        margined: true,
+        margin: "all",
+        style: {},
+    }
+
+    constructor(props: ErCardProps) {
         super(props)
     }
 
@@ -28,7 +50,29 @@ export class ECard extends Component<ECardProps> {
     }
 
     private className(): string {
-        return "er__card m-3" + (this.props?.className ?? "")
+        const names = ["er__card"]
+        if (this.props?.margined == true) {
+            names.push(this.marginClass())
+        }
+        if (this.props?.className) {
+            names.push(this.props.className)
+        }
+        return names.join(" ")
+    }
+
+    private marginClass(): string {
+        switch (this.props?.margin) {
+            case "all":
+                return "m-3"
+            case "vertical":
+                return "my-3"
+            case "horizontal":
+                return "mx-3"
+            case "none":
+                return "m-0"
+            default:
+                return ""
+        }
     }
 
     private headerClassName(): string {

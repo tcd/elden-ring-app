@@ -3,7 +3,7 @@ import { mdiAccount } from "@mdi/js"
 
 import { Stat } from "@app/types"
 import { Selectors } from "@app/state"
-import { ECard, StatRow } from "@app/shared"
+import { ErCard, StatRow } from "@app/shared"
 import { EquipLoad } from "./EquipLoad"
 
 export const BaseStats = (): JSX.Element => {
@@ -15,7 +15,7 @@ export const BaseStats = (): JSX.Element => {
     const discovery = useSelector(Selectors.Builder.stat.discovery)
 
     return (
-        <ECard title="Base Stats" iconPath={mdiAccount}>
+        <ErCard title="Base Stats" iconPath={mdiAccount}>
             <ul>
                 <StatRow title={Stat.HP} value={hp}/>
                 <StatRow title={Stat.FP} value={fp}/>
@@ -26,6 +26,6 @@ export const BaseStats = (): JSX.Element => {
                 <StatRow title={Stat.POISE} value={poise}/>
                 <StatRow title={Stat.DISCOVERY} value={discovery}/>
             </ul>
-        </ECard>
+        </ErCard>
     )
 }

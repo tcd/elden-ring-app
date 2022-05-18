@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux"
 
-import { ECard } from "@app/shared"
+import { ErCard } from "@app/shared"
 import { WeaponsSelectors } from "@app/features"
 import {
     SpellDetail,
@@ -17,7 +17,7 @@ export const SpellDetailPage = (): JSX.Element => {
                     <SpellDetail spell={weapon}/>
                 </div>
                 <div className="col-5">
-                    <ECard title="Character Status">
+                    <ErCard title="Character Status">
                         <div className="row">
                             <div className="col">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem dicta vero nulla illo assumenda! Facere voluptatibus deserunt quidem minima saepe, aliquam fuga officiis sunt quasi natus, reiciendis harum eaque.
@@ -48,7 +48,7 @@ export const SpellDetailPage = (): JSX.Element => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem dicta vero nulla illo assumenda! Facere voluptatibus deserunt quidem minima saepe, aliquam fuga officiis sunt quasi natus, reiciendis harum eaque.
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import {
 
 import { Talisman } from "@app/types"
 import { equipmentEffectDescription, isBlank } from "@app/util"
-import { ECard, StatRow } from "@app/shared"
+import { ErCard, StatRow } from "@app/shared"
 
 export interface TalismanDetailProps {
     talisman: Talisman
@@ -27,7 +27,7 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
         <div className="weapon-detail">
             <div className="row">
                 <div className="col">
-                    <ECard title={talisman.name}>
+                    <ErCard title={talisman.name}>
                         <div className="row">
                             <div className="col">
                                 <ul className="h-100 flex-between-column">
@@ -42,23 +42,23 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
                                 </div>
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Description" smallTitle={true} iconPath={mdiScript}>
+                    <ErCard title="Description" smallTitle={true} iconPath={mdiScript}>
                         <p>{talisman.description}</p>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Item Effect" smallTitle={true} iconPath={mdiFileCode}>
+                    <ErCard title="Item Effect" smallTitle={true} iconPath={mdiFileCode}>
                         <ul className="normal">
                             {effects}
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
         </div>

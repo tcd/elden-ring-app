@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 
 import { Armor } from "@app/types"
-import { ECard } from "@app/shared"
+import { ErCard } from "@app/shared"
 import { ArmorSelectors } from "@app/features"
 import {
     ArmorDetail,
@@ -18,7 +18,7 @@ export const ArmorDetailPage = (): JSX.Element => {
                     <ArmorDetail armor={armor}/>
                 </div>
                 <div className="col-5">
-                    <ECard title="Character Status">
+                    <ErCard title="Character Status">
                         <div className="row">
                             <div className="col">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem dicta vero nulla illo assumenda! Facere voluptatibus deserunt quidem minima saepe, aliquam fuga officiis sunt quasi natus, reiciendis harum eaque.
@@ -49,7 +49,7 @@ export const ArmorDetailPage = (): JSX.Element => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorem dicta vero nulla illo assumenda! Facere voluptatibus deserunt quidem minima saepe, aliquam fuga officiis sunt quasi natus, reiciendis harum eaque.
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ import {
 
 import {
     Heading,
-    ECard,
+    ErCard,
     ErTallCard,
     EPopoverContent,
     ErTallCardSection,

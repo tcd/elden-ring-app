@@ -4,7 +4,7 @@ import {
 } from "@mdi/js"
 
 import { Spell } from "@app/types"
-import { ECard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 import { isBlank, numberOrDash } from "@app/util"
 
 export interface SpellDetailProps {
@@ -40,7 +40,7 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
         <div className="weapon-detail">
             <div className="row">
                 <div className="col">
-                    <ECard title={spell.name} className="mt-0">
+                    <ErCard title={spell.name} className="mt-0">
                         <div className="row">
                             <div className="col">
                                 <ul>
@@ -60,12 +60,12 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
                                 </div>
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
+                    <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
                         <div className="row">
                             <div className="col-6">
                                 <div className="row">
@@ -73,18 +73,18 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
                                 </div>
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew}>
+                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew}>
                         <ul>
                             <li> - </li>
                             <li> - </li>
                             <li> - </li>
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
         </div>

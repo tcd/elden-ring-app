@@ -1,5 +1,5 @@
 export * from "./DamageTypes"
-export * from "./ECard"
+export * from "./ErCard"
 export * from "./ErTallCard"
 export * from "./EModal"
 export * from "./EPopoverContent"

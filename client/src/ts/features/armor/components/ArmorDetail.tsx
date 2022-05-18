@@ -8,7 +8,7 @@ import {
 import { Armor } from "@app/types"
 import { isBlank } from "@app/util"
 import {
-    ECard,
+    ErCard,
     StatRow,
     StatRowPlusProps,
     StatRowProps,
@@ -54,7 +54,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
         <div className="weapon-detail">
             <div className="row">
                 <div className="col">
-                    <ECard title={armor.name}>
+                    <ErCard title={armor.name}>
                         <div className="row">
                             <div className="col">
                                 <ul className="h-100 flex-between-column">
@@ -69,34 +69,34 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                                 </div>
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Damage Negation" smallTitle={true} iconPath={mdiShield}>
+                    <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
                             {defenseRowElements}
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
                 <div className="col">
-                    <ECard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline}>
+                    <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline}>
                         <ul>
                             {resistanceRowElements}
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline}>
+                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline}>
                         <ul>
                             <li> - </li>
                             <li> - </li>
                             <li> - </li>
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
         </div>

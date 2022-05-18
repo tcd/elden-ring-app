@@ -7,7 +7,7 @@ import {
 } from "@mdi/js"
 
 import { Weapon } from "@app/types"
-import { ECard, StatRow, StatRowProps } from "@app/shared"
+import { ErCard, StatRow, StatRowProps } from "@app/shared"
 import { isBlank } from "@app/util"
 
 export interface WeaponDetailProps {
@@ -56,7 +56,7 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
         <div className="weapon-detail">
             <div className="row">
                 <div className="col">
-                    <ECard title={weapon?.name} className="mt-0">
+                    <ErCard title={weapon?.name} className="mt-0">
                         <div className="row">
                             <div className="col">
                                 <ul>
@@ -76,28 +76,28 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                                 </div>
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Attack Power" smallTitle={true} iconPath={mdiSword}>
+                    <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword}>
                         <ul>
                             {attackElements}
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
                 <div className="col">
-                    <ECard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield}>
+                    <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
                             {dmgNegationElements}
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
+                    <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
                         <div className="row">
                             <div className="col">
                                 <StatRow title="Str" value={weapon?.scaling_strength     ?? "-"} />
@@ -110,10 +110,10 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                                 <StatRow title="Fai" value={weapon?.scaling_faith     ?? "-"} />
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
                 <div className="col">
-                    <ECard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
+                    <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
                         <div className="row">
                             <div className="col">
                                 <StatRow title="Str" value={weapon?.required_strength     ?? "-"} />
@@ -126,18 +126,18 @@ export const WeaponDetail = ({ weapon }: WeaponDetailProps): JSX.Element => {
                                 <StatRow title="Fai" value={weapon?.required_faith     ?? "-"} />
                             </div>
                         </div>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <ECard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew}>
+                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew}>
                         <ul>
                             <li> - </li>
                             <li> - </li>
                             <li> - </li>
                         </ul>
-                    </ECard>
+                    </ErCard>
                 </div>
             </div>
         </div>

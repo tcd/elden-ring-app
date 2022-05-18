@@ -6,7 +6,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
 
 import { AttributeNames } from "@types"
 import { Actions, Selectors } from "@app/state"
-import { ECard } from "@app/shared"
+import { ErCard } from "@app/shared"
 
 export interface AttributeRowProps {
     name: string
@@ -74,10 +74,10 @@ export const Attributes = (): JSX.Element => {
     })
 
     return (
-        <ECard title="Attribute Points" iconPath={mdiArmFlex}>
+        <ErCard title="Attribute Points" iconPath={mdiArmFlex}>
             <ul>
                 {attributeRows}
             </ul>
-        </ECard>
+        </ErCard>
     )
 }
