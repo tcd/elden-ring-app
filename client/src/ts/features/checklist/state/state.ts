@@ -17,6 +17,7 @@ const initialState: ChecklistState = {
         "102": true,
         "103": true,
         "105": true,
+        "106": true,
     },
 }
 
