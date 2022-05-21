@@ -1,8 +1,42 @@
 export interface WeaponType {
     id: number
-    singular_name: WeaponTypeSingular
+    name: WeaponTypeSingular
     plural_name: WeaponTypePlural
     is_shield: boolean
+}
+
+export enum WeaponTypeSingular {
+    AXE                   = "Axe",
+    BALLISTA              = "Ballista",
+    BOW                   = "Bow",
+    CLAW                  = "Claw",
+    COLOSSAL_SWORD        = "Colossal Sword",
+    COLOSSAL_WEAPON       = "Colossal Weapon",
+    CROSSBOW              = "Crossbow",
+    CURVED_GREATSWORD     = "Curved Greatsword",
+    CURVED_SWORD          = "Curved Sword",
+    DAGGER                = "Dagger",
+    FIST                  = "Fist",
+    FLAIL                 = "Flail",
+    GLINTSTONE_STAFF      = "Glintstone Staff",
+    GREAT_SPEAR           = "Great Spear",
+    GREAT_HAMMER          = "Great Hammer",
+    GREATAXE              = "Greataxe",
+    GREATBOW              = "Greatbow",
+    GREATSWORD            = "Greatsword",
+    HALBERD               = "Halberd",
+    HAMMER                = "Hammer",
+    HEAVY_THRUSTING_SWORD = "Heavy Thrusting Sword",
+    KATANA                = "Katana",
+    LIGHT_BOW             = "Light Bow",
+    REAPER                = "Reaper",
+    SPEAR                 = "Spear",
+    STRAIGHT_SWORD        = "Straight Sword",
+    THRUSTING_SWORD       = "Thrusting Sword",
+    TORCH                 = "Torch",
+    TWINBLADE             = "Twinblade",
+    WARHAMMER             = "Warhammer",
+    WHIP                  = "Whip",
 }
 
 export enum WeaponTypePlural {
@@ -71,37 +105,3 @@ export type WeaponTypePluralString =
     | "Twinblades"
     | "Warhammers"
     | "Whips"
-
-export enum WeaponTypeSingular {
-    AXE                   = "Axe",
-    BALLISTA              = "Ballista",
-    BOW                   = "Bow",
-    CLAW                  = "Claw",
-    COLOSSAL_SWORD        = "Colossal Sword",
-    COLOSSAL_WEAPON       = "Colossal Weapon",
-    CROSSBOW              = "Crossbow",
-    CURVED_GREATSWORD     = "Curved Greatsword",
-    CURVED_SWORD          = "Curved Sword",
-    DAGGER                = "Dagger",
-    FIST                  = "Fist",
-    FLAIL                 = "Flail",
-    GLINTSTONE_STAFF      = "Glintstone Staff",
-    GREAT_SPEAR           = "Great Spear",
-    GREAT_HAMMER          = "Great Hammer",
-    GREATAXE              = "Greataxe",
-    GREATBOW              = "Greatbow",
-    GREATSWORD            = "Greatsword",
-    HALBERD               = "Halberd",
-    HAMMER                = "Hammer",
-    HEAVY_THRUSTING_SWORD = "Heavy Thrusting Sword",
-    KATANA                = "Katana",
-    LIGHT_BOW             = "Light Bow",
-    REAPER                = "Reaper",
-    SPEAR                 = "Spear",
-    STRAIGHT_SWORD        = "Straight Sword",
-    THRUSTING_SWORD       = "Thrusting Sword",
-    TORCH                 = "Torch",
-    TWINBLADE             = "Twinblade",
-    WARHAMMER             = "Warhammer",
-    WHIP                  = "Whip",
-}

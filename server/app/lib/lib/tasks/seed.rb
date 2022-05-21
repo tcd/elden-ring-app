@@ -134,7 +134,6 @@ module Lib
           _args = {
             id:            fx["id"],
             name:          fx["name"],
-            singular_name: fx["singular_name"],
             plural_name:   fx["plural_name"],
             is_shield:     (fx["is_shield"] == true),
           }
@@ -297,7 +296,7 @@ module Lib
         Weapon.where(is_shield: false).each(&:destroy)
         type_ids = {}
         skill_ids = {}
-        WeaponType.all.each { |wt| type_ids[wt.singular_name] = wt.id }
+        WeaponType.all.each { |wt| type_ids[wt.name] = wt.id }
         WeaponSkill.all.each { |ws| skill_ids[ws.name] = ws.id }
         invalid = self.from_tsv("weapons.tsv", Weapon) do |fx|
           _args = {

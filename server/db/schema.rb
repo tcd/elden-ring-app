@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_02_211144) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_21_183221) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -137,7 +137,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_211144) do
 
   create_table "weapon_types", force: :cascade do |t|
     t.string "name", null: false
-    t.string "singular_name", null: false
     t.string "plural_name", null: false
     t.boolean "is_shield", default: false
     t.jsonb "metadata", default: {}
@@ -145,7 +144,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_211144) do
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_weapon_types_on_name", unique: true
     t.index ["plural_name"], name: "index_weapon_types_on_plural_name", unique: true
-    t.index ["singular_name"], name: "index_weapon_types_on_singular_name", unique: true
   end
 
   create_table "weapons", force: :cascade do |t|

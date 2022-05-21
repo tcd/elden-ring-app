@@ -10,10 +10,6 @@ class WeaponType < ApplicationRecord
   #   @return [String]
   validates(:name, presence: true, uniqueness: true)
 
-  # @!attribute singular_name
-  #   @return [String]
-  validates(:singular_name, presence: true)
-
   # @!attribute plural_name
   #   @return [String]
   validates(:plural_name, presence: true)
@@ -41,12 +37,12 @@ class WeaponType < ApplicationRecord
 
   # @return [String]
   def display_name()
-    return self.singular_name
+    return self.name
   end
 
   # @return [String]
   def image_url()
-    return "/public/images/weapon-types/#{self.singular_name}.png"
+    return "/public/images/weapon-types/#{self.name}.png"
   end
 
 end
