@@ -22,4 +22,9 @@
         "Booleanish",
         "zindex"
     ],
+    "search.exclude": {
+        ".vscode/**":  true,
+        "**/coverage": true,
+        "**/log/**": true,
+    },
 }
