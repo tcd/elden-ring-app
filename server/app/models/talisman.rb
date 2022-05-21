@@ -1,6 +1,6 @@
 class Talisman < ApplicationRecord
 
-  EFFECTS_SCHEMA = Rails.root.join("app", "schema", "effects.json_schema")
+  EFFECTS_SCHEMA = Rails.root.join("app", "schema", "effects.schema.json")
 
   # ============================================================================
   # Attributes
