@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_195452) do
     t.index ["name"], name: "index_armor_types_on_name", unique: true
   end
 
-  create_table "attack_element_correct_params", force: :cascade do |t|
+  create_table "attack_element_correct_params", id: :serial, force: :cascade do |t|
     t.boolean "isStrengthCorrect_byPhysics", null: false
     t.boolean "isDexterityCorrect_byPhysics", null: false
     t.boolean "isMagicCorrect_byPhysics", null: false
@@ -126,6 +126,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_195452) do
     t.integer "InfluenceLuckCorrectRate_byDark", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id"], name: "index_attack_element_correct_params_on_id", unique: true
   end
 
   create_table "equipment_effects", force: :cascade do |t|

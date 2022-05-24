@@ -1,6 +1,8 @@
 class CreateAttackElementCorrectParams < ActiveRecord::Migration[7.0]
   def change
-    create_table(:attack_element_correct_params) do |t|
+    create_table(:attack_element_correct_params, id: false) do |t|
+
+      t.integer(:id, primary_key: true, null: false, index: { unique: true })
 
       t.boolean(:isStrengthCorrect_byPhysics,  null: false) # default: false
       t.boolean(:isDexterityCorrect_byPhysics, null: false) # default: false
