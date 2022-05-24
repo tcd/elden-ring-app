@@ -11,6 +11,7 @@
     ],
     "properties": {
         "effect_type": {
+            "title": "Effect Type",
             "description": "Whether or not the effect is increases or decreases a stat.",
             "type": "string",
             "enum": [
@@ -19,6 +20,7 @@
             ]
         },
         "effect_method": {
+            "title": "Effect Method",
             "description": "The method by which the effect is calculated.",
             "type": "string",
             "enum": [
@@ -26,7 +28,14 @@
                 "percentage"
             ]
         },
+        "value": {
+            "title": "Value",
+            "description": "Numeric value used to calculate the effect.",
+            "type": "number"
+        },
         "affected_stat": {
+            "title": "Affected Stat",
+            "description": "Stat to which the effect should be applied.",
             "type": "string",
             "enum": [
                 "Vigor",
@@ -66,11 +75,10 @@
                 "Magic Damage Negation",
                 "Fire Damage Negation",
                 "Lightning Damage Negation",
-                "Holy Damage Negation"
+                "Holy Damage Negation",
+
+                "Guard Boost"
             ]
-        },
-        "value": {
-            "type": "number"
         }
     }
 }

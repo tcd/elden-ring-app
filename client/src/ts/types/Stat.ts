@@ -93,6 +93,13 @@ export enum Stat {
     HOLY_DEFENSE              = "Holy Defense",
     HOLY_DAMAGE_NEGATION      = "Holy Damage Negation",
 
+    /**
+     * The stability of character's defense.
+     *
+     * The higher this value, the smaller the amount of stamina consumed when guarding attacks.
+     */
+    GUARD_BOOST               = "Guard Boost",
+
     // -------------------------------------------------------------------------
     // Equipment
     // -------------------------------------------------------------------------

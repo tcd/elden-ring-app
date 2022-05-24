@@ -44,6 +44,16 @@
                 "percentage"
             ]
         },
+        "value": {
+            "title": "Value",
+            "description": "Numeric value used to calculate the effect.",
+            "type": "number"
+        },
+        "metadata": {
+            "title": "Metadata",
+            "description": "Optional",
+            "type": "object"
+        },
         "affected_stat": {
             "title": "Affected Stat",
             "description": "Stat to which the effect should be applied.",
@@ -82,18 +92,9 @@
                 "Magic Damage Negation",
                 "Fire Damage Negation",
                 "Lightning Damage Negation",
-                "Holy Damage Negation"
+                "Holy Damage Negation",
+                "Guard Boost"
             ]
-        },
-        "value": {
-            "title": "Value",
-            "description": "Numeric value used to calculate the effect.",
-            "type": "number"
-        },
-        "metadata": {
-            "title": "Metadata",
-            "description": "Optional",
-            "type": "object"
         }
     }
 }

@@ -2266,7 +2266,16 @@
         "weight": 0.9,
         "restricts": [],
         "location": "Found in a chest on a Wagon East of Grace \"Erdtree-Gazing Hill\" behind Ancient Dragon Lansseax.",
-        "effects": [],
+        "effects": [
+            {
+                "model": "Talisman",
+                "model_name": "Greatshield Talisman",
+                "affected_stat": "Guard Boost",
+                "effect_method": "percentage",
+                "effect_type": "increase",
+                "value": 0.10
+            }
+        ],
         "metadata": {
             "notes": "see if this can be calculated"
         }

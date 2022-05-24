@@ -38,7 +38,8 @@
         "Magic Damage Negation",
         "Fire Damage Negation",
         "Lightning Damage Negation",
-        "Holy Damage Negation"
+        "Holy Damage Negation",
+        "Guard Boost"
     ],
     "definitions": {
         "WIP Affectable Stat Constants": {
@@ -78,6 +79,7 @@
                 { "const": "Fire Damage Negation",      "title": "Fire Damage Negation",      "description": "Fire Damage Negation",      "$comment": "Referenced in TypeScript as `Stat.FIRE_DAMAGE_NEGATION`",      },
                 { "const": "Lightning Damage Negation", "title": "Lightning Damage Negation", "description": "Lightning Damage Negation", "$comment": "Referenced in TypeScript as `Stat.LIGHTNING_DAMAGE_NEGATION`", },
                 { "const": "Holy Damage Negation",      "title": "Holy Damage Negation",      "description": "Holy Damage Negation",      "$comment": "Referenced in TypeScript as `Stat.HOLY_DAMAGE_NEGATION`"       },
+                { "const": "Guard Boost",               "title": "Guard Boost",               "description": "Guard Boost",               "$comment": "Referenced in TypeScript as `Stat.GUARD_BOOST`",               },
             ]
         }
     }
