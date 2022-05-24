@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/equipment-effect.json",
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/wip/equipment-effect.json",
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Equipment Effect",
     "type": "object",
