@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_24_184239) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_192127) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -292,6 +292,148 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_184239) do
     t.index ["weapon_id"], name: "index_weapon_attack_stats_on_weapon_id"
   end
 
+  create_table "weapon_scaling_stats", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "weapon_id", null: false
+    t.integer "weapon_affinity_id", null: false
+    t.decimal "strength__00", default: "0.0", null: false
+    t.decimal "strength__01", default: "0.0", null: false
+    t.decimal "strength__02", default: "0.0", null: false
+    t.decimal "strength__03", default: "0.0", null: false
+    t.decimal "strength__04", default: "0.0", null: false
+    t.decimal "strength__05", default: "0.0", null: false
+    t.decimal "strength__06", default: "0.0", null: false
+    t.decimal "strength__07", default: "0.0", null: false
+    t.decimal "strength__08", default: "0.0", null: false
+    t.decimal "strength__09", default: "0.0", null: false
+    t.decimal "strength__10", default: "0.0", null: false
+    t.decimal "strength__11", default: "0.0", null: false
+    t.decimal "strength__12", default: "0.0", null: false
+    t.decimal "strength__13", default: "0.0", null: false
+    t.decimal "strength__14", default: "0.0", null: false
+    t.decimal "strength__15", default: "0.0", null: false
+    t.decimal "strength__16", default: "0.0", null: false
+    t.decimal "strength__17", default: "0.0", null: false
+    t.decimal "strength__18", default: "0.0", null: false
+    t.decimal "strength__19", default: "0.0", null: false
+    t.decimal "strength__20", default: "0.0", null: false
+    t.decimal "strength__21", default: "0.0", null: false
+    t.decimal "strength__22", default: "0.0", null: false
+    t.decimal "strength__23", default: "0.0", null: false
+    t.decimal "strength__24", default: "0.0", null: false
+    t.decimal "strength__25", default: "0.0", null: false
+    t.decimal "dexterity__00", default: "0.0", null: false
+    t.decimal "dexterity__01", default: "0.0", null: false
+    t.decimal "dexterity__02", default: "0.0", null: false
+    t.decimal "dexterity__03", default: "0.0", null: false
+    t.decimal "dexterity__04", default: "0.0", null: false
+    t.decimal "dexterity__05", default: "0.0", null: false
+    t.decimal "dexterity__06", default: "0.0", null: false
+    t.decimal "dexterity__07", default: "0.0", null: false
+    t.decimal "dexterity__08", default: "0.0", null: false
+    t.decimal "dexterity__09", default: "0.0", null: false
+    t.decimal "dexterity__10", default: "0.0", null: false
+    t.decimal "dexterity__11", default: "0.0", null: false
+    t.decimal "dexterity__12", default: "0.0", null: false
+    t.decimal "dexterity__13", default: "0.0", null: false
+    t.decimal "dexterity__14", default: "0.0", null: false
+    t.decimal "dexterity__15", default: "0.0", null: false
+    t.decimal "dexterity__16", default: "0.0", null: false
+    t.decimal "dexterity__17", default: "0.0", null: false
+    t.decimal "dexterity__18", default: "0.0", null: false
+    t.decimal "dexterity__19", default: "0.0", null: false
+    t.decimal "dexterity__20", default: "0.0", null: false
+    t.decimal "dexterity__21", default: "0.0", null: false
+    t.decimal "dexterity__22", default: "0.0", null: false
+    t.decimal "dexterity__23", default: "0.0", null: false
+    t.decimal "dexterity__24", default: "0.0", null: false
+    t.decimal "dexterity__25", default: "0.0", null: false
+    t.decimal "intelligence__00", default: "0.0", null: false
+    t.decimal "intelligence__01", default: "0.0", null: false
+    t.decimal "intelligence__02", default: "0.0", null: false
+    t.decimal "intelligence__03", default: "0.0", null: false
+    t.decimal "intelligence__04", default: "0.0", null: false
+    t.decimal "intelligence__05", default: "0.0", null: false
+    t.decimal "intelligence__06", default: "0.0", null: false
+    t.decimal "intelligence__07", default: "0.0", null: false
+    t.decimal "intelligence__08", default: "0.0", null: false
+    t.decimal "intelligence__09", default: "0.0", null: false
+    t.decimal "intelligence__10", default: "0.0", null: false
+    t.decimal "intelligence__11", default: "0.0", null: false
+    t.decimal "intelligence__12", default: "0.0", null: false
+    t.decimal "intelligence__13", default: "0.0", null: false
+    t.decimal "intelligence__14", default: "0.0", null: false
+    t.decimal "intelligence__15", default: "0.0", null: false
+    t.decimal "intelligence__16", default: "0.0", null: false
+    t.decimal "intelligence__17", default: "0.0", null: false
+    t.decimal "intelligence__18", default: "0.0", null: false
+    t.decimal "intelligence__19", default: "0.0", null: false
+    t.decimal "intelligence__20", default: "0.0", null: false
+    t.decimal "intelligence__21", default: "0.0", null: false
+    t.decimal "intelligence__22", default: "0.0", null: false
+    t.decimal "intelligence__23", default: "0.0", null: false
+    t.decimal "intelligence__24", default: "0.0", null: false
+    t.decimal "intelligence__25", default: "0.0", null: false
+    t.decimal "faith__00", default: "0.0", null: false
+    t.decimal "faith__01", default: "0.0", null: false
+    t.decimal "faith__02", default: "0.0", null: false
+    t.decimal "faith__03", default: "0.0", null: false
+    t.decimal "faith__04", default: "0.0", null: false
+    t.decimal "faith__05", default: "0.0", null: false
+    t.decimal "faith__06", default: "0.0", null: false
+    t.decimal "faith__07", default: "0.0", null: false
+    t.decimal "faith__08", default: "0.0", null: false
+    t.decimal "faith__09", default: "0.0", null: false
+    t.decimal "faith__10", default: "0.0", null: false
+    t.decimal "faith__11", default: "0.0", null: false
+    t.decimal "faith__12", default: "0.0", null: false
+    t.decimal "faith__13", default: "0.0", null: false
+    t.decimal "faith__14", default: "0.0", null: false
+    t.decimal "faith__15", default: "0.0", null: false
+    t.decimal "faith__16", default: "0.0", null: false
+    t.decimal "faith__17", default: "0.0", null: false
+    t.decimal "faith__18", default: "0.0", null: false
+    t.decimal "faith__19", default: "0.0", null: false
+    t.decimal "faith__20", default: "0.0", null: false
+    t.decimal "faith__21", default: "0.0", null: false
+    t.decimal "faith__22", default: "0.0", null: false
+    t.decimal "faith__23", default: "0.0", null: false
+    t.decimal "faith__24", default: "0.0", null: false
+    t.decimal "faith__25", default: "0.0", null: false
+    t.decimal "arcane__00", default: "0.0", null: false
+    t.decimal "arcane__01", default: "0.0", null: false
+    t.decimal "arcane__02", default: "0.0", null: false
+    t.decimal "arcane__03", default: "0.0", null: false
+    t.decimal "arcane__04", default: "0.0", null: false
+    t.decimal "arcane__05", default: "0.0", null: false
+    t.decimal "arcane__06", default: "0.0", null: false
+    t.decimal "arcane__07", default: "0.0", null: false
+    t.decimal "arcane__08", default: "0.0", null: false
+    t.decimal "arcane__09", default: "0.0", null: false
+    t.decimal "arcane__10", default: "0.0", null: false
+    t.decimal "arcane__11", default: "0.0", null: false
+    t.decimal "arcane__12", default: "0.0", null: false
+    t.decimal "arcane__13", default: "0.0", null: false
+    t.decimal "arcane__14", default: "0.0", null: false
+    t.decimal "arcane__15", default: "0.0", null: false
+    t.decimal "arcane__16", default: "0.0", null: false
+    t.decimal "arcane__17", default: "0.0", null: false
+    t.decimal "arcane__18", default: "0.0", null: false
+    t.decimal "arcane__19", default: "0.0", null: false
+    t.decimal "arcane__20", default: "0.0", null: false
+    t.decimal "arcane__21", default: "0.0", null: false
+    t.decimal "arcane__22", default: "0.0", null: false
+    t.decimal "arcane__23", default: "0.0", null: false
+    t.decimal "arcane__24", default: "0.0", null: false
+    t.decimal "arcane__25", default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_weapon_scaling_stats_on_name", unique: true
+    t.index ["weapon_affinity_id"], name: "index_weapon_scaling_stats_on_weapon_affinity_id"
+    t.index ["weapon_id", "weapon_affinity_id"], name: "index_weapon_scaling_stats_on_weapon_and_affinity", unique: true
+    t.index ["weapon_id"], name: "index_weapon_scaling_stats_on_weapon_id"
+  end
+
   create_table "weapon_skills", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
@@ -368,6 +510,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_184239) do
   add_foreign_key "armor", "armor_types", on_delete: :restrict
   add_foreign_key "weapon_attack_stats", "weapon_affinities", on_delete: :cascade
   add_foreign_key "weapon_attack_stats", "weapons", on_delete: :cascade
+  add_foreign_key "weapon_scaling_stats", "weapon_affinities", on_delete: :cascade
+  add_foreign_key "weapon_scaling_stats", "weapons", on_delete: :cascade
   add_foreign_key "weapons", "weapon_skills", on_delete: :restrict
   add_foreign_key "weapons", "weapon_types", on_delete: :restrict
 end

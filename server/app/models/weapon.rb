@@ -173,6 +173,13 @@ class Weapon < ApplicationRecord
     class_name: "WeaponAttackStat",
   )
 
+  # @!attribute weapon_scaling_stats
+  #   @return [Array<WeaponScalingStat>]
+  has_many(
+    :weapon_scaling_stats,
+    class_name: "WeaponScalingStat",
+  )
+
   # @!endgroup Associations
 
   # ============================================================================
