@@ -89,6 +89,11 @@
             "title": "Value",
             "description": "Numeric value used to calculate the effect.",
             "type": "number"
+        },
+        "metadata": {
+            "title": "Metadata",
+            "description": "Optional",
+            "type": "object"
         }
     }
 }

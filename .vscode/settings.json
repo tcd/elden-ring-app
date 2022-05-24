@@ -31,9 +31,10 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "**/talismans-with-effects.bak.jsonc"
+                // "**/talismans-with-effects.bak.jsonc",
+                "**/talismans-and-effects.v4.json",
             ],
-            "url": "./server/db/seed_data/effects/talismans-with-effects.schema.json"
-        }
+            "url": "./server/db/seed_data/effects/schema/talismans-with-effects.schema.json",
+        },
     ]
 }
