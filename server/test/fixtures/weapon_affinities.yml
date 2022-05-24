@@ -1,14 +1,13 @@
-blood:     { "name": "Blood"     }
-cold:      { "name": "Cold"      }
-fire:      { "name": "Fire"      }
-flame_art: { "name": "Flame Art" }
+standard:  { "name": "Standard"  }
 heavy:     { "name": "Heavy"     }
 keen:      { "name": "Keen"      }
-lightning: { "name": "Lightning" }
-magic:     { "name": "Magic"     }
-none:      { "name": "None"      }
-occult:    { "name": "Occult"    }
-poison:    { "name": "Poison"    }
 quality:   { "name": "Quality"   }
+fire:      { "name": "Fire"      }
+flame_art: { "name": "Flame Art" }
+lightning: { "name": "Lightning" }
 sacred:    { "name": "Sacred"    }
-standard:  { "name": "Standard"  }
+magic:     { "name": "Magic"     }
+cold:      { "name": "Cold"      }
+poison:    { "name": "Poison"    }
+blood:     { "name": "Blood"     }
+occult:    { "name": "Occult"    }
