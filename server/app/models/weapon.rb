@@ -166,6 +166,13 @@ class Weapon < ApplicationRecord
     allow_destroy: true,
   )
 
+  # @!attribute weapon_attack_stats
+  #   @return [Array<WeaponAttackStat>]
+  has_many(
+    :weapon_attack_stats,
+    class_name: "WeaponAttackStat",
+  )
+
   # @!endgroup Associations
 
   # ============================================================================

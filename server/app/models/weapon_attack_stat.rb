@@ -1,4 +1,5 @@
-class WeaponAffinity < ApplicationRecord
+class WeaponAttackStat < ApplicationRecord
+
   # ============================================================================
   # Attributes
   # ============================================================================
@@ -17,16 +18,13 @@ class WeaponAffinity < ApplicationRecord
 
   # @!group Associations
 
-  # # @!attribute compatible_weapons_skills
-  # #   @return [Array<WeaponSkill>]
-  # has_many(:compatible_weapon_skills)
+  # @!attribute weapon
+  #   @return [Weapon]
+  belongs_to(:weapon)
 
-  # @!attribute weapon_attack_stats
-  #   @return [Array<WeaponAttackStat>]
-  has_many(
-    :weapon_attack_stats,
-    class_name: "WeaponAttackStat",
-  )
+  # @!attribute weapon_affinity
+  #   @return [WeaponAffinity]
+  belongs_to(:weapon_affinity)
 
   # @!endgroup Associations
 
@@ -34,8 +32,4 @@ class WeaponAffinity < ApplicationRecord
   # Instance Methods
   # ============================================================================
 
-  # @return [String]
-  def image_url()
-    return "/public/images/weapon-affinities/#{self.name}.png"
-  end
 end
