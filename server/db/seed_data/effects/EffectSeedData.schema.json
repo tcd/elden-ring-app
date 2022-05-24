@@ -1,0 +1,94 @@
+{
+    "title": "Equipment Effect Seed Data",
+    "description": "Seed data for creating `EquipmentEffect` records.",
+    "type": "object",
+    "required": [
+        "model",
+        "model_name",
+        "effect_type",
+        "effect_method",
+        "affected_stat",
+        "value"
+    ],
+    "properties": {
+        "model": {
+            "title": "Model",
+            "description": "Rails model name. (Used for polymorphic foreign key)",
+            "type": "string",
+            "enum": [
+                "Talisman",
+                "Weapon",
+                "Armor"
+            ]
+        },
+        "model_name": {
+            "title": "Model Name",
+            "type": "string",
+            "description": "`name` of the model instance. (Used for polymorphic foreign key)"
+        },
+        "effect_type": {
+            "title": "Effect Type",
+            "description": "Whether or not the effect is increases or decreases a stat.",
+            "type": "string",
+            "enum": [
+                "increase",
+                "decrease"
+            ]
+        },
+        "effect_method": {
+            "title": "Effect Method",
+            "description": "The method by which the effect is calculated.",
+            "type": "string",
+            "enum": [
+                "flat",
+                "percentage"
+            ]
+        },
+        "affected_stat": {
+            "title": "Affected Stat",
+            "description": "Stat to which the effect should be applied.",
+            "type": "string",
+            "enum": [
+                "Vigor",
+                "Mind",
+                "Endurance",
+                "Strength",
+                "Dexterity",
+                "Intelligence",
+                "Faith",
+                "Arcane",
+                "HP",
+                "FP",
+                "Stamina",
+                "Max Equip Load",
+                "Poise",
+                "Discovery",
+                "Immunity",
+                "Robustness",
+                "Focus",
+                "Vitality",
+                "Physical Defense",
+                "VS Strike Defense",
+                "VS Slash Defense",
+                "VS Pierce Defense",
+                "Magic Defense",
+                "Fire Defense",
+                "Lightning Defense",
+                "Holy Defense",
+                "Physical Damage Negation",
+                "VS Strike Damage Negation",
+                "VS Slash Damage Negation",
+                "VS Pierce Damage Negation",
+                "Magic Damage Negation",
+                "Fire Damage Negation",
+                "Lightning Damage Negation",
+                "Holy Damage Negation"
+            ]
+        },
+        "value": {
+            "title": "Value",
+            "description": "Numeric value used to calculate the effect.",
+            "type": "number"
+        }
+    }
+}

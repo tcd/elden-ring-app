@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Scratch Data",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/ScratchTalismanData"
+    },
+    "definitions": {
+        "ScratchTalismanData": {
+            "type": "object",
+            "required": [
+                "effects"
+            ],
+            "additionalProperties": true,
+            "properties": {
+                "effects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./EffectSeedData.schema.json"
+                    }
+                }
+            }
+        }
+    }
+}

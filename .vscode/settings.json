@@ -28,4 +28,12 @@
         "**/coverage": true,
         "**/log/**": true,
     },
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "**/talismans-with-effects.bak.jsonc"
+            ],
+            "url": "./server/db/seed_data/effects/talismans-with-effects.schema.json"
+        }
+    ]
 }

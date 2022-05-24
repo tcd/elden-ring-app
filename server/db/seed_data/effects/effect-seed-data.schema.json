@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Equipment Effect Seed Data",
+    "type": "object",
+    "required": [
+        "seeds"
+    ],
+    "properties": {
+        "seeds": {
+            "title": "Seeds",
+            "description": "Seed data for creating `EquipmentEffect` records.",
+            "type": "array",
+            "items": {
+                "$ref": "./EffectSeedData.schema.json"
+            }
+        }
+    }
+}

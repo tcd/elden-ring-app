@@ -1,0 +1,29 @@
+{
+    "$schema": "./effect-seed-data.schema.json",
+    "seeds": [
+        {
+            "model": "Talisman",
+            "model_name": "Crimson Amber Medallion",
+            "affected_stat": "HP",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "value": 0
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Crimson Amber Medallion +1",
+            "affected_stat": "HP",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "value": 0.07
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Crimson Amber Medallion +2",
+            "affected_stat": "HP",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "value": 0.075
+        }
+    ]
+}
