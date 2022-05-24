@@ -9,3 +9,4 @@ x 2022-03-29 Spells @client @server
 2022-05-17 Consolidate ErCard styles.
 2022-05-18 Rename `weapon-detail` css classes.
 2022-05-23 Include checklist(s) in build/state export
+2022-05-24 Completely rewrite AR calculation @client
