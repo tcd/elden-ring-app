@@ -1,4 +1,5 @@
 {
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/server/app/schema/effects.schema.json",
     "title": "Effects",
     "type": "array",
     "items": {
