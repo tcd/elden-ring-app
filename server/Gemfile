@@ -28,6 +28,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "rails-erd", "~> 1.6" # Generate an entity-relationship diagram (ERD) from Rails models
 #   gem "redcarpet", "~> 3.5" # A fast, safe and extensible Markdown to (X)HTML parser (for YARD docs)
 #   gem "rubocop", "~> 1.25" # Linter
 #   gem "solargraph", "~> 0.44.3" # Ruby language server

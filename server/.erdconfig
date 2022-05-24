@@ -1,0 +1,56 @@
+warn: true
+filetype: png
+filename: docs/elden-ring-app
+title: Elden Ring
+# Display entities without relationships.
+disconnected: true
+# Display indirect relationships (through other entities).
+indirect: true
+# Set to true to include specializations, which correspond to Rails single table inheritance.
+inheritance: false
+# Enable markup for enhanced compatibility of .dot output with other applications.
+markup: true
+# Diagram notation style, one of simple, bachman, uml, or crowsfoot.
+notation: bachman
+# Orientation of diagram, either horizontal or vertical.
+orientation: horizontal
+# Display polymorphic and abstract entities.
+polymorphism: false
+# When set to false, no warnings are printed to the command line while processing the domain model.
+only_recursion_depth: null
+# Display models in subgraphs based on their namespace.
+cluster: true
+# Control how edges are represented.
+# See http://www.graphviz.org/doc/info/attrs.html#d:splines for values.
+# - spline
+# - curved
+# - line
+# - none
+# - ortho
+# - polyline
+splines: spline
+# Ensure primary key is at start of attribute list.
+prepend_primary: true
+# Sort attribute list alphabetically.
+sort: true
+# Attribute groups to display:
+# - false
+# - content
+# - primary_keys
+# - foreign_keys
+# - timestamps
+# - inheritance
+attributes: false
+# Filter to only include listed models in diagram.
+only: null
+# Filter to exclude listed models in diagram.
+# exclude: "
+#     ActiveStorage::Attachment,
+#     ActiveStorage::Blob,
+#     ActionText::RichText,
+#     ActionMailbox::InboundEmail,
+#     PaperTrail::Version,
+#     ActsAsTaggableOn::Tagging,
+#     ActsAsTaggableOn::Tag,
+#     Hyperlink,
+#   "
