@@ -9,6 +9,10 @@ class WeaponAffinity < ApplicationRecord
   #   @return [String]
   validates(:name, presence: true, uniqueness: true)
 
+  # @!attribute sort_order
+  #   @return [String]
+  validates(:sort_order, presence: true, uniqueness: true)
+
   # @!endgroup Attributes
 
   # ============================================================================

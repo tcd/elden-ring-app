@@ -1,13 +1,13 @@
-standard:  { "name": "Standard"  }
-heavy:     { "name": "Heavy"     }
-keen:      { "name": "Keen"      }
-quality:   { "name": "Quality"   }
-fire:      { "name": "Fire"      }
-flame_art: { "name": "Flame Art" }
-lightning: { "name": "Lightning" }
-sacred:    { "name": "Sacred"    }
-magic:     { "name": "Magic"     }
-cold:      { "name": "Cold"      }
-poison:    { "name": "Poison"    }
-blood:     { "name": "Blood"     }
-occult:    { "name": "Occult"    }
+standard:  { "name": "Standard",  "sort_order":  1 }
+heavy:     { "name": "Heavy",     "sort_order":  2 }
+keen:      { "name": "Keen",      "sort_order":  3 }
+quality:   { "name": "Quality",   "sort_order":  4 }
+fire:      { "name": "Fire",      "sort_order":  5 }
+flame_art: { "name": "Flame Art", "sort_order":  6 }
+lightning: { "name": "Lightning", "sort_order":  7 }
+sacred:    { "name": "Sacred",    "sort_order":  8 }
+magic:     { "name": "Magic",     "sort_order":  9 }
+cold:      { "name": "Cold",      "sort_order": 10 }
+poison:    { "name": "Poison",    "sort_order": 11 }
+blood:     { "name": "Blood",     "sort_order": 12 }
+occult:    { "name": "Occult",    "sort_order": 13 }
