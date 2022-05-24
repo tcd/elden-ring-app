@@ -5,7 +5,7 @@ import { Actions, Selectors } from "@app/state"
 import { ArmorDetail } from "./ArmorDetail"
 import { CharacterStatusB } from "@app/features/builder/components/right-side-panels"
 
-export const ArmorMenu = (props: unknown): JSX.Element => {
+export const ArmorMenu = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
