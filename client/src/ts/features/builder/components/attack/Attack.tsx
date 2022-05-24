@@ -21,7 +21,7 @@ export const Attack = (): JSX.Element => {
         { title: "L Armament 3", value: L3?.attack_physical ?? "-" },
     ]
 
-    const rows = attackPowerValues.map(({ title, value}) => {
+    const rows = attackPowerValues.map(({ title, value }) => {
         return (
             <StatRow
                 key={title}
