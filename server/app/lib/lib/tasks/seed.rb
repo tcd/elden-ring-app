@@ -15,14 +15,15 @@ module Lib
       # @return [Hash]
       def self.all()
         invalid = {}
-        # invalid["armor_types"] = self.armor_types()
-        # invalid["weapon_types"] = self.weapon_types()
-        # invalid["weapon_skills"] = self.weapon_skills()
-        # invalid["talismans"] = self.talismans()
-        # invalid["armor"] = self.armor()
+        invalid["armor_types"] = self.armor_types()
+        invalid["weapon_types"] = self.weapon_types()
+        invalid["weapon_affinities"] = self.weapon_affinities()
+        invalid["weapon_skills"] = self.weapon_skills()
+        invalid["talismans"] = self.talismans()
+        invalid["armor"] = self.armor()
         invalid["weapons"] = self.weapons()
         invalid["shields"] = self.shields()
-        # invalid["spells"] = self.spells()
+        invalid["spells"] = self.spells()
         error_file = Lib::Util.save_to_file(invalid, "seed-errors.json", add_timestamp: true)
         puts("#{invalid.values.flatten.length} errors; see file '#{error_file}'")
         return invalid
@@ -148,6 +149,19 @@ module Lib
           _args = {
             id:   fx["id"],
             name: fx["name"],
+          }
+        end
+        return invalid
+      end
+
+      # @return [void]
+      def self.weapon_affinities()
+        # WeaponAffinity.destroy_all()
+        invalid = self.from_fixture("weapon_affinities.yml", WeaponAffinity) do |fx|
+          _args = {
+            id:         fx["sort_order"],
+            name:       fx["name"],
+            sort_order: fx["sort_order"],
           }
         end
         return invalid
