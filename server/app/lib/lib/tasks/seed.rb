@@ -25,7 +25,7 @@ module Lib
         invalid["weapons"]                       = Lib::Tasks::Seed::Weapons.seed()
         invalid["shields"]                       = Lib::Tasks::Seed::Shields.seed()
         invalid["spells"]                        = Lib::Tasks::Seed::Spells.seed()
-        # invalid["attack_element_correct_params"] = Lib::Tasks::Seed::AttackElementCorrectParams.seed()
+        invalid["attack_element_correct_params"] = Lib::Tasks::Seed::AttackElementCorrectParams.seed()
         # invalid["weapon_attack_stats"]           = Lib::Tasks::Seed::WeaponAttackStats.seed()
         error_file = Lib::Util.save_to_file(invalid, "seed-errors.json", add_timestamp: true)
         puts("#{invalid.values.flatten.length} errors; see file '#{error_file}'")
