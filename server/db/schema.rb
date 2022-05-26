@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_24_195452) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_26_173144) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -538,6 +538,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_195452) do
     t.index ["plural_name"], name: "index_weapon_types_on_plural_name", unique: true
   end
 
+  create_table "weapon_with_affinities", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "weapon_id", null: false
+    t.integer "weapon_affinity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_weapon_with_affinities_on_name", unique: true
+    t.index ["weapon_affinity_id"], name: "index_weapon_with_affinities_on_weapon_affinity_id"
+    t.index ["weapon_id", "weapon_affinity_id"], name: "index_weapon_with_affinities_on_weapon_and_affinity", unique: true
+    t.index ["weapon_id"], name: "index_weapon_with_affinities_on_weapon_id"
+  end
+
   create_table "weapons", force: :cascade do |t|
     t.string "name", null: false
     t.integer "weapon_type_id", null: false
@@ -593,6 +605,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_24_195452) do
   add_foreign_key "weapon_attack_stats", "weapons", on_delete: :cascade
   add_foreign_key "weapon_scaling_stats", "weapon_affinities", on_delete: :cascade
   add_foreign_key "weapon_scaling_stats", "weapons", on_delete: :cascade
+  add_foreign_key "weapon_with_affinities", "weapon_affinities", on_delete: :cascade
+  add_foreign_key "weapon_with_affinities", "weapons", on_delete: :cascade
   add_foreign_key "weapons", "weapon_skills", on_delete: :restrict
   add_foreign_key "weapons", "weapon_types", on_delete: :restrict
 end
