@@ -68,5 +68,4 @@
     { "input": "Knight's Poison Greatsword",          "output": { "weapon_name": "Knight's Greatsword",       "affinity_name": "Poison"    } },
     { "input": "Knight's Blood Greatsword",           "output": { "weapon_name": "Knight's Greatsword",       "affinity_name": "Blood"     } },
     { "input": "Knight's Occult Greatsword",          "output": { "weapon_name": "Knight's Greatsword",       "affinity_name": "Occult"    } }
-
 ]
