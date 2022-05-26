@@ -1,7 +1,5 @@
 number_10_000:
-
-  id: 10_000
-
+  # id: 10_000
   isStrengthCorrect_byPhysics:  true
   isDexterityCorrect_byPhysics: true
   isMagicCorrect_byPhysics:     false
@@ -27,7 +25,6 @@ number_10_000:
   isMagicCorrect_byDark:        false
   isFaithCorrect_byDark:        true
   isLuckCorrect_byDark:         false
-
   overwriteStrengthCorrectRate_byPhysics:  -1
   overwriteDexterityCorrectRate_byPhysics: -1
   overwriteMagicCorrectRate_byPhysics:     -1
@@ -53,7 +50,6 @@ number_10_000:
   overwriteMagicCorrectRate_byDark:        -1
   overwriteFaithCorrectRate_byDark:        -1
   overwriteLuckCorrectRate_byDark:         -1
-
   InfluenceStrengthCorrectRate_byPhysics:  100
   InfluenceDexterityCorrectRate_byPhysics: 100
   InfluenceMagicCorrectRate_byPhysics:     100
