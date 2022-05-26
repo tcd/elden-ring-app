@@ -4,10 +4,111 @@ module Lib
       # Code for filling up our database.
       class WeaponAttackStats
 
+        # This will match weapon names with affinities with the following exceptions:
+        #
+        # - `Rivers of Blood`
+        # - `Sacred Relic Sword`
+        # - `Moonveil`
+        # - `Bloody Helice`
+        # - `Mohgwyn's Sacred Spear`
+        # - `Heavy Crossbow`
+        #
+        # @return [Regexp]
+        WEAPON_WITH_AFFINITY_PATTERN = %r{
+            ^
+            (?<weapon_name_1>(?:[a-zA-Z\'\- ]+))?
+            (?<affinity>
+                (?:
+                    (?:Heavy)
+                    |(?:Keen)
+                    |(?:Quality)
+                    |(?:Fire)
+                    |(?:Flame\sArt)
+                    |(?:Lightning)
+                    |(?:Sacred)
+                    |(?:Magic)
+                    |(?:Cold)
+                    |(?:Poison)
+                    |(?:Bloody?)
+                    |(?:Occult)
+                )
+                (?:\s{1})
+            )
+            (?<weapon_name_2>(?:[a-zA-Z\'\- ]+))?
+            $
+        }x.freeze()
+
+        # @return [Array<String>]
+        PATTERN_EXCEPTIONS = [
+          "Bloody Helice",
+          "Heavy Crossbow",
+          "Mohgwyn's Sacred Spear",
+          "Moonveil",
+          "Rivers of Blood",
+          "Sacred Relic Sword",
+        ].freeze()
+
+        # @return [Array<String>]
+        WEAPONS_WITH_ABNORMAL_NAMES = [
+          "Bandit's Curved Sword",
+          "Banished Knight's Greatsword",
+          "Banished Knight's Greatsword",
+          "Banished Knight's Halberd",
+          "Banished Knight's Shield",
+          "Beastman's Cleaver",
+          "Beastman's Curved Sword",
+          "Beastman's Jar-Shield",
+          "Carian Knight's Shield",
+          "Celebrant's Cleaver",
+          "Celebrant's Rib-Rake",
+          "Celebrant's Sickle",
+          "Celebrant's Skull",
+          "Clayman's Harpoon",
+          "Cleanrot Knight's Sword",
+          "Distinguished Greatshield",
+          "Executioner's Greataxe",
+          "Flowing Curved Sword",
+          "Gargoyle's Great Axe",
+          "Gargoyle's Greatsword",
+          "Gargoyle's Halberd",
+          "Gargoyle's Twinblade",
+          "Gilded Iron Shield",
+          "Golem's Halberd",
+          "Guardian's Swordspear",
+          "Hoslow's Petal Whip",
+          "Knight's Greatsword",
+          "Lordsworn's Greatsword",
+          "Lordsworn's Straight Sword",
+          "Man-Serpent's Shield",
+          "Marred Leather Shield",
+          "Marred Wooden Shield",
+          "Monk's Flameblade",
+          "Monk's Flamemace",
+          "Noble's Estoc",
+          "Noble's Slender Sword",
+          "Perfumer's Shield",
+          "Pest's Glaive",
+          "Prelate's Inferno Crozier",
+          "Rogier's Rapier",
+          "Scavenger's Curved Sword",
+          "Serpent-God's Curved Sword",
+          "Troll's Golden Sword",
+          "Warhawk's Talon",
+          "Watchdog's Greatsword",
+          "Weathered Straight Sword",
+        ].freeze()
+
         # @return [void]
         def self.seed()
           # WeaponAttackStat.destroy_all()
-          invalid = Lib::Tasks::Seed.from_tsv("calculation/Attack.tsv", WeaponAttackStat) do |fx|
+
+          weapon_affinity_ids = {}
+          WeaponAffinity.all.each { |x| weapon_affinity_ids[x.name] = x.id }
+
+          weapon_ids = {}
+          Weapon.all.each { |x| weapon_ids[x.name] = x.id }
+
+          invalid = Lib::Tasks::Seed.from_tsv("calculation/Attack.test.tsv", WeaponAttackStat) do |fx|
             name = fx["Name"]
 
             _args = {
