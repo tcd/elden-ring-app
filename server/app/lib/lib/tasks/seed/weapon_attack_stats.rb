@@ -6,7 +6,7 @@ module Lib
 
         # @return [void]
         def self.seed()
-          # WeaponAttackStat.destroy_all()
+          WeaponAttackStat.destroy_all()
 
           weapon_affinity_ids = {}
           WeaponAffinity.all.each { |x| weapon_affinity_ids[x.name] = x.id }
@@ -14,7 +14,7 @@ module Lib
           weapon_ids = {}
           Weapon.all.each { |x| weapon_ids[x.name] = x.id }
 
-          invalid = Lib::Tasks::Seed.from_tsv("calculation/Attack.test.tsv", WeaponAttackStat) do |fx|
+          invalid = Lib::Tasks::Seed.from_tsv("calculation/Attack.tsv", WeaponAttackStat) do |fx|
             name = fx["Name"]
             weapon_name, affinity_name = Lib::WeaponNameWithAffinity.process_name(name)
 
