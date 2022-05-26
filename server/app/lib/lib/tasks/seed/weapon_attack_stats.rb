@@ -16,7 +16,7 @@ module Lib
 
           invalid = Lib::Tasks::Seed.from_tsv("calculation/Attack.tsv", WeaponAttackStat) do |fx|
             name = fx["Name"]
-            weapon_name, affinity_name = Lib::WeaponNameWithAffinity.process_name(name)
+            weapon_name, affinity_name = Lib::WeaponNameProcessing.process_name(name)
 
             _args = {
               name: name,

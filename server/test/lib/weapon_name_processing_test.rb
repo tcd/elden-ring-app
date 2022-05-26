@@ -2,10 +2,10 @@ require "test_helper"
 
 module Test
   module Lib
-    class WeaponNameWithAffinityTest < ActiveSupport::TestCase
+    class WeaponNameProcessingTest < ActiveSupport::TestCase
 
       setup do
-        @module = ::Lib::WeaponNameWithAffinity
+        @module = ::Lib::WeaponNameProcessing
       end
 
       test_cases = json_file_fixture("weapon-names-with-affinities.json", symbolize: true)

@@ -1,6 +1,6 @@
 module Lib
   # Code for processing weapon names that may or may not include a weapon affinity.
-  module WeaponNameWithAffinity
+  module WeaponNameProcessing
 
     # This will match weapon names with affinities with the following exceptions:
     #
