@@ -11,7 +11,7 @@ class ActiveSupport::TestCase
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-  fixtures(:none)
+  fixtures(:all)
 
   # Return the path to a file in `test/support/file_fixtures/`.
   #
