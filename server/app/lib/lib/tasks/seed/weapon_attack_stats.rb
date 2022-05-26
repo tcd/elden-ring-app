@@ -98,6 +98,13 @@ module Lib
           "Weathered Straight Sword",
         ].freeze()
 
+        # @param name [String] Weapon name, possibly with an affinity.
+        # @return [Hash]
+        def self.process_name(name)
+          result = {}
+          return result
+        end
+
         # @return [void]
         def self.seed()
           # WeaponAttackStat.destroy_all()
