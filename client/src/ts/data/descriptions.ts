@@ -65,7 +65,7 @@ export const DESCRIPTIONS = {
         [Stat.WEAPON_R3]: `Attack power of the armament${MLB}equipped in right hand slot 3`,
         [Stat.WEAPON_L1]: `Attack power of the armament${MLB}equipped in left hand slot 1`,
         [Stat.WEAPON_L2]: `Attack power of the armament${MLB}equipped in left hand slot 2`,
-        [Stat.WEAPON_L3]: `Attack power of the armament${MLB}equipped in left hand slot 4`,
+        [Stat.WEAPON_L3]: `Attack power of the armament${MLB}equipped in left hand slot 3`,
         // =========================================================================
         // Defense Power
         // =========================================================================
