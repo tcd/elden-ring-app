@@ -19,23 +19,24 @@ export interface Armor extends BaseEntity {
     image_url: string
     armor_type: ArmorType
     weight: number
-    // resistance: {
-        immunity?: number
-        robustness?: number
-        focus?: number
-        vitality?: number
-        poise?: number
-    // }
-    // damageNegation: {
-        physical?: number
-        vs_strike?: number
-        vs_slash?: number
-        vs_pierce?: number
-        magic?: number
-        fire?: number
-        lightning?: number
-        holy?: number
-    // }
+    poise?: number
+
     effects?: EquipmentEffect[]
-    tags?: string[]
+    // tags?: string[]
+
+    // Resistance
+    immunity?: number
+    robustness?: number
+    focus?: number
+    vitality?: number
+
+    // Damage Negation
+    physical?: number
+    vs_strike?: number
+    vs_slash?: number
+    vs_pierce?: number
+    magic?: number
+    fire?: number
+    lightning?: number
+    holy?: number
 }

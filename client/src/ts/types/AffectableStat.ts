@@ -1,21 +1,16 @@
-export enum Stat {
+/**
+ * Any Stat that can be affected by an `Equipment Effect`.
+ * These effects can come from Spells, Talismans, & passive effects on Armor or Weapons.
+ *
+ * It is important to note that these are stats that can currently be included in calculations.
+ */
+export enum AffectableStat {
 
     // -------------------------------------------------------------------------
     // Level
     // -------------------------------------------------------------------------
 
-    /**
-     * A cumulative figure that represents overall attribute strength.
-     *
-     * You can level up using runes.
-     */
     LEVEL = "Level",
-    /**
-     * Number of runes required to raise a level.
-     *
-     * When you level up, you can choose an attribute to increase.
-     */
-    RUNES_NEEDED = "Runes Needed",
 
     // -------------------------------------------------------------------------
     // Attributes
@@ -78,13 +73,21 @@ export enum Stat {
     // Resistance
     // -------------------------------------------------------------------------
 
-    /** Your resistance to various poisons and rot. */
+    /**
+     * Your resistance to various poisons and rot.
+     */
     IMMUNITY = "Immunity",
-    /** Your resistance to blood loss and frostbite. */
+    /**
+     * Your resistance to blood loss and frostbite.
+     */
     ROBUSTNESS = "Robustness",
-    /** Your resistance to sleep and bouts of madness. */
+    /**
+     * Your resistance to sleep and bouts of madness.
+     */
     FOCUS = "Focus",
-    /** Your resistance to death. */
+    /**
+     * Your resistance to death.
+     */
     VITALITY = "Vitality",
 
     // -------------------------------------------------------------------------
@@ -134,20 +137,4 @@ export enum Stat {
     FIRE_ATTACK_POWER      = "Fire Attack Power",
     LIGHTNING_ATTACK_POWER = "Lightning Attack Power",
     HOLY_ATTACK_POWER      = "Holy Attack Power",
-
-    // -------------------------------------------------------------------------
-    // Equipment
-    // -------------------------------------------------------------------------
-
-    WEAPON_R1 = "Right Hand Armament 1",
-    WEAPON_R2 = "Right Hand Armament 2",
-    WEAPON_R3 = "Right Hand Armament 3",
-    WEAPON_L1 = "Left Hand Armament 1",
-    WEAPON_L2 = "Left Hand Armament 2",
-    WEAPON_L3 = "Left Hand Armament 3",
-
-    ARMOR_HEAD = "Head",
-    ARMOR_CHEST = "Chest",
-    ARMOR_ARMS = "Arms",
-    ARMOR_LEGS = "Legs",
 }

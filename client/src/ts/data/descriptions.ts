@@ -18,7 +18,7 @@ const ARMOR_STATS = [
 ]
 
 /**
- * Maybe Line Break.
+ * *Maybe* Line Break.
  *
  * Text breaks lines here in the game,
  * I feel like breaking in the app would

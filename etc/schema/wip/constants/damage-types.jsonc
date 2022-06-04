@@ -2,7 +2,7 @@
     "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/constants/damage-types.json",
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Damage Types",
-    "description": "Describes the damage types and status effects are caused by a weapon, spell, consumable, etc.",
+    "description": "Describes the damage types and status effects caused by a weapon, spell, consumable, etc.",
     "type": "object",
     "required": [
         "inflicts_physical",
