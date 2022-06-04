@@ -180,6 +180,20 @@ class Weapon < ApplicationRecord
     class_name: "WeaponScalingStat",
   )
 
+  # @!attribute weapon_with_affinities
+  #   @return [Array<WeaponWithAffinity>]
+  has_many(
+    :weapon_with_affinities,
+    class_name: "WeaponWithAffinity",
+  )
+
+  # @!attribute weapon_stats
+  #   @return [Array<WeaponStat>]
+  has_many(
+    :weapon_stats,
+    class_name: "WeaponStat",
+  )
+
   # @!endgroup Associations
 
   # ============================================================================
