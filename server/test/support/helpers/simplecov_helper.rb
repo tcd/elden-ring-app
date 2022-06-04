@@ -18,13 +18,15 @@ SimpleCov.start do
   add_filter("/tmp/")
   add_filter("/vendor/")
   add_filter("app/admin")
+  add_filter("app/lib")
 
   add_group("Controllers", "app/controllers")
   add_group("Jobs", ["app/jobs", "app/workers"])
-  add_group("Lib", "app/lib")
-  # add_group("Mailers", "app/mailers")
+  # add_group("Lib", "app/lib")
+  add_group("Mailers", "app/mailers")
   add_group("Models", "app/models")
-  add_group("Services", "app/services")
+  # add_group("Services", "app/services")
+  add_group("Serializers", "app/serializers")
 
   track_files("app/**/*.rb")
 
