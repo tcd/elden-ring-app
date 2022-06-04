@@ -1,4 +1,5 @@
 class WeaponStat < ApplicationRecord
+
   # ============================================================================
   # Attributes
   # ============================================================================
@@ -9,578 +10,578 @@ class WeaponStat < ApplicationRecord
   #   @return [String]
   validates(:name, presence: true, uniqueness: true)
 
-  # @!attribute attack_physical__0
+  # @!attribute attack_physical_0
   #   @return [Decimal]
-  # @!attribute attack_physical__1
+  # @!attribute attack_physical_1
   #   @return [Decimal]
-  # @!attribute attack_physical__2
+  # @!attribute attack_physical_2
   #   @return [Decimal]
-  # @!attribute attack_physical__3
+  # @!attribute attack_physical_3
   #   @return [Decimal]
-  # @!attribute attack_physical__4
+  # @!attribute attack_physical_4
   #   @return [Decimal]
-  # @!attribute attack_physical__5
+  # @!attribute attack_physical_5
   #   @return [Decimal]
-  # @!attribute attack_physical__6
+  # @!attribute attack_physical_6
   #   @return [Decimal]
-  # @!attribute attack_physical__7
+  # @!attribute attack_physical_7
   #   @return [Decimal]
-  # @!attribute attack_physical__8
+  # @!attribute attack_physical_8
   #   @return [Decimal]
-  # @!attribute attack_physical__9
+  # @!attribute attack_physical_9
   #   @return [Decimal]
-  # @!attribute attack_physical__10
+  # @!attribute attack_physical_10
   #   @return [Decimal]
-  # @!attribute attack_physical__11
+  # @!attribute attack_physical_11
   #   @return [Decimal]
-  # @!attribute attack_physical__12
+  # @!attribute attack_physical_12
   #   @return [Decimal]
-  # @!attribute attack_physical__13
+  # @!attribute attack_physical_13
   #   @return [Decimal]
-  # @!attribute attack_physical__14
+  # @!attribute attack_physical_14
   #   @return [Decimal]
-  # @!attribute attack_physical__15
+  # @!attribute attack_physical_15
   #   @return [Decimal]
-  # @!attribute attack_physical__16
+  # @!attribute attack_physical_16
   #   @return [Decimal]
-  # @!attribute attack_physical__17
+  # @!attribute attack_physical_17
   #   @return [Decimal]
-  # @!attribute attack_physical__18
+  # @!attribute attack_physical_18
   #   @return [Decimal]
-  # @!attribute attack_physical__19
+  # @!attribute attack_physical_19
   #   @return [Decimal]
-  # @!attribute attack_physical__20
+  # @!attribute attack_physical_20
   #   @return [Decimal]
-  # @!attribute attack_physical__21
+  # @!attribute attack_physical_21
   #   @return [Decimal]
-  # @!attribute attack_physical__22
+  # @!attribute attack_physical_22
   #   @return [Decimal]
-  # @!attribute attack_physical__23
+  # @!attribute attack_physical_23
   #   @return [Decimal]
-  # @!attribute attack_physical__24
+  # @!attribute attack_physical_24
   #   @return [Decimal]
-  # @!attribute attack_physical__25
+  # @!attribute attack_physical_25
   #   @return [Decimal]
-  # @!attribute attack_magic__0
+  # @!attribute attack_magic_0
   #   @return [Decimal]
-  # @!attribute attack_magic__1
+  # @!attribute attack_magic_1
   #   @return [Decimal]
-  # @!attribute attack_magic__2
+  # @!attribute attack_magic_2
   #   @return [Decimal]
-  # @!attribute attack_magic__3
+  # @!attribute attack_magic_3
   #   @return [Decimal]
-  # @!attribute attack_magic__4
+  # @!attribute attack_magic_4
   #   @return [Decimal]
-  # @!attribute attack_magic__5
+  # @!attribute attack_magic_5
   #   @return [Decimal]
-  # @!attribute attack_magic__6
+  # @!attribute attack_magic_6
   #   @return [Decimal]
-  # @!attribute attack_magic__7
+  # @!attribute attack_magic_7
   #   @return [Decimal]
-  # @!attribute attack_magic__8
+  # @!attribute attack_magic_8
   #   @return [Decimal]
-  # @!attribute attack_magic__9
+  # @!attribute attack_magic_9
   #   @return [Decimal]
-  # @!attribute attack_magic__10
+  # @!attribute attack_magic_10
   #   @return [Decimal]
-  # @!attribute attack_magic__11
+  # @!attribute attack_magic_11
   #   @return [Decimal]
-  # @!attribute attack_magic__12
+  # @!attribute attack_magic_12
   #   @return [Decimal]
-  # @!attribute attack_magic__13
+  # @!attribute attack_magic_13
   #   @return [Decimal]
-  # @!attribute attack_magic__14
+  # @!attribute attack_magic_14
   #   @return [Decimal]
-  # @!attribute attack_magic__15
+  # @!attribute attack_magic_15
   #   @return [Decimal]
-  # @!attribute attack_magic__16
+  # @!attribute attack_magic_16
   #   @return [Decimal]
-  # @!attribute attack_magic__17
+  # @!attribute attack_magic_17
   #   @return [Decimal]
-  # @!attribute attack_magic__18
+  # @!attribute attack_magic_18
   #   @return [Decimal]
-  # @!attribute attack_magic__19
+  # @!attribute attack_magic_19
   #   @return [Decimal]
-  # @!attribute attack_magic__20
+  # @!attribute attack_magic_20
   #   @return [Decimal]
-  # @!attribute attack_magic__21
+  # @!attribute attack_magic_21
   #   @return [Decimal]
-  # @!attribute attack_magic__22
+  # @!attribute attack_magic_22
   #   @return [Decimal]
-  # @!attribute attack_magic__23
+  # @!attribute attack_magic_23
   #   @return [Decimal]
-  # @!attribute attack_magic__24
+  # @!attribute attack_magic_24
   #   @return [Decimal]
-  # @!attribute attack_magic__25
+  # @!attribute attack_magic_25
   #   @return [Decimal]
-  # @!attribute attack_fire__0
+  # @!attribute attack_fire_0
   #   @return [Decimal]
-  # @!attribute attack_fire__1
+  # @!attribute attack_fire_1
   #   @return [Decimal]
-  # @!attribute attack_fire__2
+  # @!attribute attack_fire_2
   #   @return [Decimal]
-  # @!attribute attack_fire__3
+  # @!attribute attack_fire_3
   #   @return [Decimal]
-  # @!attribute attack_fire__4
+  # @!attribute attack_fire_4
   #   @return [Decimal]
-  # @!attribute attack_fire__5
+  # @!attribute attack_fire_5
   #   @return [Decimal]
-  # @!attribute attack_fire__6
+  # @!attribute attack_fire_6
   #   @return [Decimal]
-  # @!attribute attack_fire__7
+  # @!attribute attack_fire_7
   #   @return [Decimal]
-  # @!attribute attack_fire__8
+  # @!attribute attack_fire_8
   #   @return [Decimal]
-  # @!attribute attack_fire__9
+  # @!attribute attack_fire_9
   #   @return [Decimal]
-  # @!attribute attack_fire__10
+  # @!attribute attack_fire_10
   #   @return [Decimal]
-  # @!attribute attack_fire__11
+  # @!attribute attack_fire_11
   #   @return [Decimal]
-  # @!attribute attack_fire__12
+  # @!attribute attack_fire_12
   #   @return [Decimal]
-  # @!attribute attack_fire__13
+  # @!attribute attack_fire_13
   #   @return [Decimal]
-  # @!attribute attack_fire__14
+  # @!attribute attack_fire_14
   #   @return [Decimal]
-  # @!attribute attack_fire__15
+  # @!attribute attack_fire_15
   #   @return [Decimal]
-  # @!attribute attack_fire__16
+  # @!attribute attack_fire_16
   #   @return [Decimal]
-  # @!attribute attack_fire__17
+  # @!attribute attack_fire_17
   #   @return [Decimal]
-  # @!attribute attack_fire__18
+  # @!attribute attack_fire_18
   #   @return [Decimal]
-  # @!attribute attack_fire__19
+  # @!attribute attack_fire_19
   #   @return [Decimal]
-  # @!attribute attack_fire__20
+  # @!attribute attack_fire_20
   #   @return [Decimal]
-  # @!attribute attack_fire__21
+  # @!attribute attack_fire_21
   #   @return [Decimal]
-  # @!attribute attack_fire__22
+  # @!attribute attack_fire_22
   #   @return [Decimal]
-  # @!attribute attack_fire__23
+  # @!attribute attack_fire_23
   #   @return [Decimal]
-  # @!attribute attack_fire__24
+  # @!attribute attack_fire_24
   #   @return [Decimal]
-  # @!attribute attack_fire__25
+  # @!attribute attack_fire_25
   #   @return [Decimal]
-  # @!attribute attack_lightning__0
+  # @!attribute attack_lightning_0
   #   @return [Decimal]
-  # @!attribute attack_lightning__1
+  # @!attribute attack_lightning_1
   #   @return [Decimal]
-  # @!attribute attack_lightning__2
+  # @!attribute attack_lightning_2
   #   @return [Decimal]
-  # @!attribute attack_lightning__3
+  # @!attribute attack_lightning_3
   #   @return [Decimal]
-  # @!attribute attack_lightning__4
+  # @!attribute attack_lightning_4
   #   @return [Decimal]
-  # @!attribute attack_lightning__5
+  # @!attribute attack_lightning_5
   #   @return [Decimal]
-  # @!attribute attack_lightning__6
+  # @!attribute attack_lightning_6
   #   @return [Decimal]
-  # @!attribute attack_lightning__7
+  # @!attribute attack_lightning_7
   #   @return [Decimal]
-  # @!attribute attack_lightning__8
+  # @!attribute attack_lightning_8
   #   @return [Decimal]
-  # @!attribute attack_lightning__9
+  # @!attribute attack_lightning_9
   #   @return [Decimal]
-  # @!attribute attack_lightning__10
+  # @!attribute attack_lightning_10
   #   @return [Decimal]
-  # @!attribute attack_lightning__11
+  # @!attribute attack_lightning_11
   #   @return [Decimal]
-  # @!attribute attack_lightning__12
+  # @!attribute attack_lightning_12
   #   @return [Decimal]
-  # @!attribute attack_lightning__13
+  # @!attribute attack_lightning_13
   #   @return [Decimal]
-  # @!attribute attack_lightning__14
+  # @!attribute attack_lightning_14
   #   @return [Decimal]
-  # @!attribute attack_lightning__15
+  # @!attribute attack_lightning_15
   #   @return [Decimal]
-  # @!attribute attack_lightning__16
+  # @!attribute attack_lightning_16
   #   @return [Decimal]
-  # @!attribute attack_lightning__17
+  # @!attribute attack_lightning_17
   #   @return [Decimal]
-  # @!attribute attack_lightning__18
+  # @!attribute attack_lightning_18
   #   @return [Decimal]
-  # @!attribute attack_lightning__19
+  # @!attribute attack_lightning_19
   #   @return [Decimal]
-  # @!attribute attack_lightning__20
+  # @!attribute attack_lightning_20
   #   @return [Decimal]
-  # @!attribute attack_lightning__21
+  # @!attribute attack_lightning_21
   #   @return [Decimal]
-  # @!attribute attack_lightning__22
+  # @!attribute attack_lightning_22
   #   @return [Decimal]
-  # @!attribute attack_lightning__23
+  # @!attribute attack_lightning_23
   #   @return [Decimal]
-  # @!attribute attack_lightning__24
+  # @!attribute attack_lightning_24
   #   @return [Decimal]
-  # @!attribute attack_lightning__25
+  # @!attribute attack_lightning_25
   #   @return [Decimal]
-  # @!attribute attack_holy__0
+  # @!attribute attack_holy_0
   #   @return [Decimal]
-  # @!attribute attack_holy__1
+  # @!attribute attack_holy_1
   #   @return [Decimal]
-  # @!attribute attack_holy__2
+  # @!attribute attack_holy_2
   #   @return [Decimal]
-  # @!attribute attack_holy__3
+  # @!attribute attack_holy_3
   #   @return [Decimal]
-  # @!attribute attack_holy__4
+  # @!attribute attack_holy_4
   #   @return [Decimal]
-  # @!attribute attack_holy__5
+  # @!attribute attack_holy_5
   #   @return [Decimal]
-  # @!attribute attack_holy__6
+  # @!attribute attack_holy_6
   #   @return [Decimal]
-  # @!attribute attack_holy__7
+  # @!attribute attack_holy_7
   #   @return [Decimal]
-  # @!attribute attack_holy__8
+  # @!attribute attack_holy_8
   #   @return [Decimal]
-  # @!attribute attack_holy__9
+  # @!attribute attack_holy_9
   #   @return [Decimal]
-  # @!attribute attack_holy__10
+  # @!attribute attack_holy_10
   #   @return [Decimal]
-  # @!attribute attack_holy__11
+  # @!attribute attack_holy_11
   #   @return [Decimal]
-  # @!attribute attack_holy__12
+  # @!attribute attack_holy_12
   #   @return [Decimal]
-  # @!attribute attack_holy__13
+  # @!attribute attack_holy_13
   #   @return [Decimal]
-  # @!attribute attack_holy__14
+  # @!attribute attack_holy_14
   #   @return [Decimal]
-  # @!attribute attack_holy__15
+  # @!attribute attack_holy_15
   #   @return [Decimal]
-  # @!attribute attack_holy__16
+  # @!attribute attack_holy_16
   #   @return [Decimal]
-  # @!attribute attack_holy__17
+  # @!attribute attack_holy_17
   #   @return [Decimal]
-  # @!attribute attack_holy__18
+  # @!attribute attack_holy_18
   #   @return [Decimal]
-  # @!attribute attack_holy__19
+  # @!attribute attack_holy_19
   #   @return [Decimal]
-  # @!attribute attack_holy__20
+  # @!attribute attack_holy_20
   #   @return [Decimal]
-  # @!attribute attack_holy__21
+  # @!attribute attack_holy_21
   #   @return [Decimal]
-  # @!attribute attack_holy__22
+  # @!attribute attack_holy_22
   #   @return [Decimal]
-  # @!attribute attack_holy__23
+  # @!attribute attack_holy_23
   #   @return [Decimal]
-  # @!attribute attack_holy__24
+  # @!attribute attack_holy_24
   #   @return [Decimal]
-  # @!attribute attack_holy__25
+  # @!attribute attack_holy_25
   #   @return [Decimal]
-  # @!attribute attack_stamina__0
+  # @!attribute attack_stamina_0
   #   @return [Decimal]
-  # @!attribute attack_stamina__1
+  # @!attribute attack_stamina_1
   #   @return [Decimal]
-  # @!attribute attack_stamina__2
+  # @!attribute attack_stamina_2
   #   @return [Decimal]
-  # @!attribute attack_stamina__3
+  # @!attribute attack_stamina_3
   #   @return [Decimal]
-  # @!attribute attack_stamina__4
+  # @!attribute attack_stamina_4
   #   @return [Decimal]
-  # @!attribute attack_stamina__5
+  # @!attribute attack_stamina_5
   #   @return [Decimal]
-  # @!attribute attack_stamina__6
+  # @!attribute attack_stamina_6
   #   @return [Decimal]
-  # @!attribute attack_stamina__7
+  # @!attribute attack_stamina_7
   #   @return [Decimal]
-  # @!attribute attack_stamina__8
+  # @!attribute attack_stamina_8
   #   @return [Decimal]
-  # @!attribute attack_stamina__9
+  # @!attribute attack_stamina_9
   #   @return [Decimal]
-  # @!attribute attack_stamina__10
+  # @!attribute attack_stamina_10
   #   @return [Decimal]
-  # @!attribute attack_stamina__11
+  # @!attribute attack_stamina_11
   #   @return [Decimal]
-  # @!attribute attack_stamina__12
+  # @!attribute attack_stamina_12
   #   @return [Decimal]
-  # @!attribute attack_stamina__13
+  # @!attribute attack_stamina_13
   #   @return [Decimal]
-  # @!attribute attack_stamina__14
+  # @!attribute attack_stamina_14
   #   @return [Decimal]
-  # @!attribute attack_stamina__15
+  # @!attribute attack_stamina_15
   #   @return [Decimal]
-  # @!attribute attack_stamina__16
+  # @!attribute attack_stamina_16
   #   @return [Decimal]
-  # @!attribute attack_stamina__17
+  # @!attribute attack_stamina_17
   #   @return [Decimal]
-  # @!attribute attack_stamina__18
+  # @!attribute attack_stamina_18
   #   @return [Decimal]
-  # @!attribute attack_stamina__19
+  # @!attribute attack_stamina_19
   #   @return [Decimal]
-  # @!attribute attack_stamina__20
+  # @!attribute attack_stamina_20
   #   @return [Decimal]
-  # @!attribute attack_stamina__21
+  # @!attribute attack_stamina_21
   #   @return [Decimal]
-  # @!attribute attack_stamina__22
+  # @!attribute attack_stamina_22
   #   @return [Decimal]
-  # @!attribute attack_stamina__23
+  # @!attribute attack_stamina_23
   #   @return [Decimal]
-  # @!attribute attack_stamina__24
+  # @!attribute attack_stamina_24
   #   @return [Decimal]
-  # @!attribute attack_stamina__25
+  # @!attribute attack_stamina_25
   #   @return [Decimal]
 
-  # @!attribute scaling_strength__0
+  # @!attribute scaling_strength_0
   #   @return [Decimal]
-  # @!attribute scaling_strength__1
+  # @!attribute scaling_strength_1
   #   @return [Decimal]
-  # @!attribute scaling_strength__2
+  # @!attribute scaling_strength_2
   #   @return [Decimal]
-  # @!attribute scaling_strength__3
+  # @!attribute scaling_strength_3
   #   @return [Decimal]
-  # @!attribute scaling_strength__4
+  # @!attribute scaling_strength_4
   #   @return [Decimal]
-  # @!attribute scaling_strength__5
+  # @!attribute scaling_strength_5
   #   @return [Decimal]
-  # @!attribute scaling_strength__6
+  # @!attribute scaling_strength_6
   #   @return [Decimal]
-  # @!attribute scaling_strength__7
+  # @!attribute scaling_strength_7
   #   @return [Decimal]
-  # @!attribute scaling_strength__8
+  # @!attribute scaling_strength_8
   #   @return [Decimal]
-  # @!attribute scaling_strength__9
+  # @!attribute scaling_strength_9
   #   @return [Decimal]
-  # @!attribute scaling_strength__10
+  # @!attribute scaling_strength_10
   #   @return [Decimal]
-  # @!attribute scaling_strength__11
+  # @!attribute scaling_strength_11
   #   @return [Decimal]
-  # @!attribute scaling_strength__12
+  # @!attribute scaling_strength_12
   #   @return [Decimal]
-  # @!attribute scaling_strength__13
+  # @!attribute scaling_strength_13
   #   @return [Decimal]
-  # @!attribute scaling_strength__14
+  # @!attribute scaling_strength_14
   #   @return [Decimal]
-  # @!attribute scaling_strength__15
+  # @!attribute scaling_strength_15
   #   @return [Decimal]
-  # @!attribute scaling_strength__16
+  # @!attribute scaling_strength_16
   #   @return [Decimal]
-  # @!attribute scaling_strength__17
+  # @!attribute scaling_strength_17
   #   @return [Decimal]
-  # @!attribute scaling_strength__18
+  # @!attribute scaling_strength_18
   #   @return [Decimal]
-  # @!attribute scaling_strength__19
+  # @!attribute scaling_strength_19
   #   @return [Decimal]
-  # @!attribute scaling_strength__20
+  # @!attribute scaling_strength_20
   #   @return [Decimal]
-  # @!attribute scaling_strength__21
+  # @!attribute scaling_strength_21
   #   @return [Decimal]
-  # @!attribute scaling_strength__22
+  # @!attribute scaling_strength_22
   #   @return [Decimal]
-  # @!attribute scaling_strength__23
+  # @!attribute scaling_strength_23
   #   @return [Decimal]
-  # @!attribute scaling_strength__24
+  # @!attribute scaling_strength_24
   #   @return [Decimal]
-  # @!attribute scaling_strength__25
+  # @!attribute scaling_strength_25
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__0
+  # @!attribute scaling_dexterity_0
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__1
+  # @!attribute scaling_dexterity_1
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__2
+  # @!attribute scaling_dexterity_2
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__3
+  # @!attribute scaling_dexterity_3
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__4
+  # @!attribute scaling_dexterity_4
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__5
+  # @!attribute scaling_dexterity_5
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__6
+  # @!attribute scaling_dexterity_6
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__7
+  # @!attribute scaling_dexterity_7
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__8
+  # @!attribute scaling_dexterity_8
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__9
+  # @!attribute scaling_dexterity_9
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__10
+  # @!attribute scaling_dexterity_10
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__11
+  # @!attribute scaling_dexterity_11
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__12
+  # @!attribute scaling_dexterity_12
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__13
+  # @!attribute scaling_dexterity_13
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__14
+  # @!attribute scaling_dexterity_14
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__15
+  # @!attribute scaling_dexterity_15
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__16
+  # @!attribute scaling_dexterity_16
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__17
+  # @!attribute scaling_dexterity_17
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__18
+  # @!attribute scaling_dexterity_18
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__19
+  # @!attribute scaling_dexterity_19
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__20
+  # @!attribute scaling_dexterity_20
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__21
+  # @!attribute scaling_dexterity_21
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__22
+  # @!attribute scaling_dexterity_22
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__23
+  # @!attribute scaling_dexterity_23
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__24
+  # @!attribute scaling_dexterity_24
   #   @return [Decimal]
-  # @!attribute scaling_dexterity__25
+  # @!attribute scaling_dexterity_25
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__0
+  # @!attribute scaling_intelligence_0
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__1
+  # @!attribute scaling_intelligence_1
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__2
+  # @!attribute scaling_intelligence_2
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__3
+  # @!attribute scaling_intelligence_3
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__4
+  # @!attribute scaling_intelligence_4
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__5
+  # @!attribute scaling_intelligence_5
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__6
+  # @!attribute scaling_intelligence_6
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__7
+  # @!attribute scaling_intelligence_7
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__8
+  # @!attribute scaling_intelligence_8
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__9
+  # @!attribute scaling_intelligence_9
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__10
+  # @!attribute scaling_intelligence_10
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__11
+  # @!attribute scaling_intelligence_11
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__12
+  # @!attribute scaling_intelligence_12
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__13
+  # @!attribute scaling_intelligence_13
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__14
+  # @!attribute scaling_intelligence_14
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__15
+  # @!attribute scaling_intelligence_15
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__16
+  # @!attribute scaling_intelligence_16
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__17
+  # @!attribute scaling_intelligence_17
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__18
+  # @!attribute scaling_intelligence_18
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__19
+  # @!attribute scaling_intelligence_19
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__20
+  # @!attribute scaling_intelligence_20
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__21
+  # @!attribute scaling_intelligence_21
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__22
+  # @!attribute scaling_intelligence_22
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__23
+  # @!attribute scaling_intelligence_23
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__24
+  # @!attribute scaling_intelligence_24
   #   @return [Decimal]
-  # @!attribute scaling_intelligence__25
+  # @!attribute scaling_intelligence_25
   #   @return [Decimal]
-  # @!attribute scaling_faith__0
+  # @!attribute scaling_faith_0
   #   @return [Decimal]
-  # @!attribute scaling_faith__1
+  # @!attribute scaling_faith_1
   #   @return [Decimal]
-  # @!attribute scaling_faith__2
+  # @!attribute scaling_faith_2
   #   @return [Decimal]
-  # @!attribute scaling_faith__3
+  # @!attribute scaling_faith_3
   #   @return [Decimal]
-  # @!attribute scaling_faith__4
+  # @!attribute scaling_faith_4
   #   @return [Decimal]
-  # @!attribute scaling_faith__5
+  # @!attribute scaling_faith_5
   #   @return [Decimal]
-  # @!attribute scaling_faith__6
+  # @!attribute scaling_faith_6
   #   @return [Decimal]
-  # @!attribute scaling_faith__7
+  # @!attribute scaling_faith_7
   #   @return [Decimal]
-  # @!attribute scaling_faith__8
+  # @!attribute scaling_faith_8
   #   @return [Decimal]
-  # @!attribute scaling_faith__9
+  # @!attribute scaling_faith_9
   #   @return [Decimal]
-  # @!attribute scaling_faith__10
+  # @!attribute scaling_faith_10
   #   @return [Decimal]
-  # @!attribute scaling_faith__11
+  # @!attribute scaling_faith_11
   #   @return [Decimal]
-  # @!attribute scaling_faith__12
+  # @!attribute scaling_faith_12
   #   @return [Decimal]
-  # @!attribute scaling_faith__13
+  # @!attribute scaling_faith_13
   #   @return [Decimal]
-  # @!attribute scaling_faith__14
+  # @!attribute scaling_faith_14
   #   @return [Decimal]
-  # @!attribute scaling_faith__15
+  # @!attribute scaling_faith_15
   #   @return [Decimal]
-  # @!attribute scaling_faith__16
+  # @!attribute scaling_faith_16
   #   @return [Decimal]
-  # @!attribute scaling_faith__17
+  # @!attribute scaling_faith_17
   #   @return [Decimal]
-  # @!attribute scaling_faith__18
+  # @!attribute scaling_faith_18
   #   @return [Decimal]
-  # @!attribute scaling_faith__19
+  # @!attribute scaling_faith_19
   #   @return [Decimal]
-  # @!attribute scaling_faith__20
+  # @!attribute scaling_faith_20
   #   @return [Decimal]
-  # @!attribute scaling_faith__21
+  # @!attribute scaling_faith_21
   #   @return [Decimal]
-  # @!attribute scaling_faith__22
+  # @!attribute scaling_faith_22
   #   @return [Decimal]
-  # @!attribute scaling_faith__23
+  # @!attribute scaling_faith_23
   #   @return [Decimal]
-  # @!attribute scaling_faith__24
+  # @!attribute scaling_faith_24
   #   @return [Decimal]
-  # @!attribute scaling_faith__25
+  # @!attribute scaling_faith_25
   #   @return [Decimal]
-  # @!attribute scaling_arcane__0
+  # @!attribute scaling_arcane_0
   #   @return [Decimal]
-  # @!attribute scaling_arcane__1
+  # @!attribute scaling_arcane_1
   #   @return [Decimal]
-  # @!attribute scaling_arcane__2
+  # @!attribute scaling_arcane_2
   #   @return [Decimal]
-  # @!attribute scaling_arcane__3
+  # @!attribute scaling_arcane_3
   #   @return [Decimal]
-  # @!attribute scaling_arcane__4
+  # @!attribute scaling_arcane_4
   #   @return [Decimal]
-  # @!attribute scaling_arcane__5
+  # @!attribute scaling_arcane_5
   #   @return [Decimal]
-  # @!attribute scaling_arcane__6
+  # @!attribute scaling_arcane_6
   #   @return [Decimal]
-  # @!attribute scaling_arcane__7
+  # @!attribute scaling_arcane_7
   #   @return [Decimal]
-  # @!attribute scaling_arcane__8
+  # @!attribute scaling_arcane_8
   #   @return [Decimal]
-  # @!attribute scaling_arcane__9
+  # @!attribute scaling_arcane_9
   #   @return [Decimal]
-  # @!attribute scaling_arcane__10
+  # @!attribute scaling_arcane_10
   #   @return [Decimal]
-  # @!attribute scaling_arcane__11
+  # @!attribute scaling_arcane_11
   #   @return [Decimal]
-  # @!attribute scaling_arcane__12
+  # @!attribute scaling_arcane_12
   #   @return [Decimal]
-  # @!attribute scaling_arcane__13
+  # @!attribute scaling_arcane_13
   #   @return [Decimal]
-  # @!attribute scaling_arcane__14
+  # @!attribute scaling_arcane_14
   #   @return [Decimal]
-  # @!attribute scaling_arcane__15
+  # @!attribute scaling_arcane_15
   #   @return [Decimal]
-  # @!attribute scaling_arcane__16
+  # @!attribute scaling_arcane_16
   #   @return [Decimal]
-  # @!attribute scaling_arcane__17
+  # @!attribute scaling_arcane_17
   #   @return [Decimal]
-  # @!attribute scaling_arcane__18
+  # @!attribute scaling_arcane_18
   #   @return [Decimal]
-  # @!attribute scaling_arcane__19
+  # @!attribute scaling_arcane_19
   #   @return [Decimal]
-  # @!attribute scaling_arcane__20
+  # @!attribute scaling_arcane_20
   #   @return [Decimal]
-  # @!attribute scaling_arcane__21
+  # @!attribute scaling_arcane_21
   #   @return [Decimal]
-  # @!attribute scaling_arcane__22
+  # @!attribute scaling_arcane_22
   #   @return [Decimal]
-  # @!attribute scaling_arcane__23
+  # @!attribute scaling_arcane_23
   #   @return [Decimal]
-  # @!attribute scaling_arcane__24
+  # @!attribute scaling_arcane_24
   #   @return [Decimal]
-  # @!attribute scaling_arcane__25
+  # @!attribute scaling_arcane_25
   #   @return [Decimal]
 
   # @!endgroup Attributes
