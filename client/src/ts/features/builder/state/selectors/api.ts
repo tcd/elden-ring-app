@@ -1,7 +1,5 @@
 import { RootState } from "@app/state"
 
-const selectBuilderState = (state: RootState) => { return state?.Builder }
-
 export const selectFetchingEverything = (state: RootState) => {
     const requestState = state.Builder.everythingRequest
     return (requestState.status === "pending")
@@ -40,4 +38,8 @@ export const selectWeaponSkills = (state: RootState) => {
 
 export const selectWeaponTypes = (state: RootState) => {
     return selectEverythingResponse(state)?.weapon_types ?? []
+}
+
+export const selectAttackElementCorrectParams = (state: RootState) => {
+    return selectEverythingResponse(state)?.attack_element_correct_params ?? []
 }
