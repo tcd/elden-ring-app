@@ -7,14 +7,19 @@ module Lib
         # @return [void]
         def self.seed()
           # WeaponAffinity.destroy_all()
-          invalid = Lib::Tasks::Seed.from_fixture("weapon_affinities.yml", WeaponAffinity) do |fx|
-            _args = {
-              id:         fx["sort_order"],
-              name:       fx["name"],
-              sort_order: fx["sort_order"],
-            }
-          end
+          invalid = Lib::Tasks::Seed.from_fixture("weapon_affinities.yml", WeaponAffinity) { |x| process(x) }
           return invalid
+        end
+
+        # @param input [Hash]
+        # @return [Hash]
+        def self.process(input)
+          output = {
+            id:         input["sort_order"],
+            name:       input["name"],
+            sort_order: input["sort_order"],
+          }
+          return output
         end
 
       end

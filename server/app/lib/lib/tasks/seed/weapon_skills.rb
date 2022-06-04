@@ -8,16 +8,24 @@ module Lib
         def self.seed()
           # Weapon.destroy_all()
           # WeaponSkill.destroy_all()
-          invalid = Lib::Tasks::Seed.from_tsv("weapon-skills.tsv", WeaponSkill) do |fx|
-            _args = {
-              name:              fx["name"],
-              description:       fx["Effect"],
-              is_chargeable:     fx["is_chargeable"],
-              ash_of_war:        (fx["ash_of_war"] == true || fx["ash_of_war"] == "TRUE" || fx["ash_of_war"] == "true"),
-              can_be_applied_to: (fx["can_be_applied_to"] || "").split(/,\s*/),
-            }
-          end
+          invalid = Lib::Tasks::Seed.from_tsv("weapon-skills.tsv", WeaponSkill) { |x| process(x) }
           return invalid
+        end
+
+        # @param input [Hash]
+        # @return [Hash]
+        def self.process(input)
+          output = {
+            name:              input["name"],
+            description:       input["Effect"],
+            is_chargeable:     input["is_chargeable"],
+          }
+
+          output[:ash_of_war] = (input["ash_of_war"] == true || input["ash_of_war"] == "TRUE" || input["ash_of_war"] == "true")
+
+          output[:can_be_applied_to] = (input["can_be_applied_to"] || "").split(/,\s*/)
+
+          return output
         end
 
       end

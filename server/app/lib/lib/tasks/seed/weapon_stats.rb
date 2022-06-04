@@ -22,8 +22,6 @@ module Lib
 
         # @return [void]
         def initialize()
-          WeaponStat.destroy_all()
-
           self.weapon_affinity_ids = {}
           WeaponAffinity.all.each { |x| weapon_affinity_ids[x.name] = x.id }
 
@@ -36,6 +34,7 @@ module Lib
 
         # @return [void]
         def seed()
+          # WeaponStat.destroy_all()
           invalid = Lib::Tasks::Seed.from_json("weapon-with-affinity.json", WeaponStat) { |x| process(x) }
           return invalid
         end
