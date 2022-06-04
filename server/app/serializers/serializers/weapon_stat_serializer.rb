@@ -1,13 +1,16 @@
 module Serializers
-  class WeaponStatSerializer < BaseSerializer
+  class WeaponStatSerializer < Blueprinter::Base
 
     # @param attribute_name [Symbol]
     # @return [void]
     def self.float_field(attribute_name)
-      field(attribute_name) { |x| x[attribute_name]to_f }
+      field(attribute_name) { |x| x[attribute_name].to_f }
     end
 
+    identifier(:id)
+
     fields(
+      :display_name,
       :name,
       :weapon_id,
       :weapon_affinity_id,
