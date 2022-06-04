@@ -3,8 +3,9 @@ import { useSelector, useDispatch } from "react-redux"
 
 import { Attributes, Weapon } from "@app/types"
 import { Actions, Selectors } from "@app/state"
-import { WeaponDetail } from "./WeaponDetail"
 import { meetsRequirements } from "@app/util"
+import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
+import { WeaponDetail } from "./WeaponDetail"
 
 export const WeaponMenu = (): JSX.Element => {
 
@@ -29,7 +30,6 @@ export const WeaponMenu = (): JSX.Element => {
         faith,
         arcane,
     }
-
 
     const activeWeaponName = useSelector(Selectors.Weapons.activeWeaponName)
     const weapon = useSelector(Selectors.Weapons.activeWeapon)
@@ -72,13 +72,16 @@ export const WeaponMenu = (): JSX.Element => {
     return (
         <div className="equipment-menu container">
             <div className="row">
-                <div className="col-5">
+                <div className="col-4">
                     <div className="equipment-menu-grid-column">
                         {sections}
                     </div>
                 </div>
-                <div className="col-7">
+                <div className="col-4">
                     <WeaponDetail weapon={weapon} />
+                </div>
+                <div className="col-3">
+                    <CharacterStatus />
                 </div>
             </div>
         </div>

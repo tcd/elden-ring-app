@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 
 import { Talisman } from "@app/types"
 import { Actions, Selectors } from "@app/state"
+import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
 import { TalismanDetail } from "./TalismanDetail"
 
 export const TalismanMenu = (): JSX.Element => {
@@ -35,15 +36,18 @@ export const TalismanMenu = (): JSX.Element => {
     return (
         <div className="equipment-menu container">
             <div className="row">
-                <div className="col-5">
+                <div className="col-4">
                     <div className="equipment-menu-grid-column">
                         <section className="equipment-menu-section">
                             {cells}
                         </section>
                     </div>
                 </div>
-                <div className="col-7">
+                <div className="col-4">
                     <TalismanDetail talisman={talisman} />
+                </div>
+                <div className="col-3">
+                    <CharacterStatus />
                 </div>
             </div>
         </div>

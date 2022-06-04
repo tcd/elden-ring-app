@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Attributes, Spell } from "@app/types"
 import { meetsRequirements } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
 import { SpellDetail } from "./SpellDetail"
 
 const spellCategories = [
@@ -94,13 +95,16 @@ export const SpellMenu = (): JSX.Element => {
     return (
         <div className="equipment-menu container">
             <div className="row">
-                <div className="col-5">
+                <div className="col-4">
                     <div className="equipment-menu-grid-column">
                         {sections}
                     </div>
                 </div>
-                <div className="col-7">
+                <div className="col-4">
                     <SpellDetail spell={spell} />
+                </div>
+                <div className="col-3">
+                    <CharacterStatus />
                 </div>
             </div>
         </div>

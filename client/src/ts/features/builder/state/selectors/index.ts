@@ -9,6 +9,8 @@ import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
 import * as StartingClass from "./starting-class"
 
+import * as Misc from "./misc"
+
 import * as Api from "./api"
 import { selectExportData } from "./export-data"
 
@@ -23,6 +25,9 @@ export const BuilderSelectors = {
         weapons:               Api.selectWeapons,
         weaponTypes:           Api.selectWeaponTypes,
         weaponSkills:          Api.selectWeaponSkills,
+    },
+    misc: {
+        whichCharacterStatus: Misc.selectWhichCharacterStatus,
     },
     startingClassName: StartingClass.selectStartingClassName,
     startingClass: StartingClass.selectStartingClass,
