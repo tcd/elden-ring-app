@@ -1,4 +1,3 @@
-import * as Weapons from "./weapons"
 import * as Talismans from "./talismans"
 import * as Armor from "./armor"
 
@@ -101,24 +100,11 @@ export const BuilderSelectors = {
         activeName: Talismans.selectActiveTalismanName,
         activeNumber: Talismans.selectActiveTalismanNumber,
     },
-    weapons: {
-        modalOpen: Weapons.selectWeaponModalOpen,
-        activeSlotId: Weapons.selectActiveWeaponSlotId,
-        active: Weapons.selectActiveWeapon,
-        bySlot: {
-            R1: Weapons.selectRightWeapon1,
-            R2: Weapons.selectRightWeapon2,
-            R3: Weapons.selectRightWeapon3,
-            L1: Weapons.selectLeftWeapon1,
-            L2: Weapons.selectLeftWeapon2,
-            L3: Weapons.selectLeftWeapon3,
-        },
-    },
     armor: {
         modalOpen: Armor.selectArmorModalOpen,
         activeType: Armor.selectActiveArmorType,
         activeName: Armor.selectActiveArmorName,
-        activbeOptions: Armor.selectArmorOptions,
+        activeOptions: Armor.selectArmorOptions,
         head: Armor.selectHead,
         chest: Armor.selectChest,
         arms: Armor.selectArms,
@@ -130,14 +116,4 @@ export const BuilderSelectors = {
             legs: Armor.selectLegsName,
         },
     },
-    // attribute: {
-    //     vigor:        selectVigor,
-    //     mind:         selectMind,
-    //     endurance:    selectEndurance,
-    //     strength:     selectStrength,
-    //     dexterity:    selectDexterity,
-    //     intelligence: selectIntelligence,
-    //     faith:        selectFaith,
-    //     arcane:       selectArcane,
-    // },
 }

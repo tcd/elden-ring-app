@@ -6,12 +6,12 @@ import { DESCRIPTIONS } from "@app/data"
 
 export const Attack = (): JSX.Element => {
 
-    const R1 = useSelector(Selectors.Builder.weapons.bySlot.R1)
-    const R2 = useSelector(Selectors.Builder.weapons.bySlot.R2)
-    const R3 = useSelector(Selectors.Builder.weapons.bySlot.R3)
-    const L1 = useSelector(Selectors.Builder.weapons.bySlot.L1)
-    const L2 = useSelector(Selectors.Builder.weapons.bySlot.L2)
-    const L3 = useSelector(Selectors.Builder.weapons.bySlot.L3)
+    const R1 = useSelector(Selectors.Weapons.bySlot.R1)
+    const R2 = useSelector(Selectors.Weapons.bySlot.R2)
+    const R3 = useSelector(Selectors.Weapons.bySlot.R3)
+    const L1 = useSelector(Selectors.Weapons.bySlot.L1)
+    const L2 = useSelector(Selectors.Weapons.bySlot.L2)
+    const L3 = useSelector(Selectors.Weapons.bySlot.L3)
 
     const attackPowerValues = [
         { title: "R Armament 1", value: R1?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 1"] },

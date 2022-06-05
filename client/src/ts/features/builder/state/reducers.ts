@@ -6,7 +6,6 @@ import {
     StartingClassName,
     TalismanSlotId,
     WeaponSlotId,
-    DEFAULT_WEAPON_SETTINGS,
 } from "@types"
 import {
     BuilderState,
@@ -81,17 +80,6 @@ export const reducers = {
     // =========================================================================
     // Weapons
     // =========================================================================
-    setWeapon(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.weapons[state.weapon.active_slot] = {
-            ...DEFAULT_WEAPON_SETTINGS,
-            weapon_name: action.payload.name,
-        }
-    },
-    removeWeapon(state: BuilderState) {
-        state.weapons[state.weapon.active_slot] = {
-            ...DEFAULT_WEAPON_SETTINGS,
-        }
-    },
     openWeaponModal(state: BuilderState, action: PayloadAction<{ id: WeaponSlotId }>) {
         state.weapon.active_slot = action.payload.id
         state.weapon.modal_open = true

@@ -17,7 +17,7 @@ export const WeaponActionMenu = (): JSX.Element => {
     }
 
     const handleRequestClear = () => {
-        dispatch(Actions.Builder.removeWeapon())
+        dispatch(Actions.Weapons.removeWeapon())
         dispatch(Actions.Builder.closeWeaponModal())
     }
 

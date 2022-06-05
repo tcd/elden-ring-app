@@ -27,8 +27,8 @@ export const WeaponMenu = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const activeWeaponName = useSelector(Selectors.Weapons.activeWeaponName)
-    const weapon = useSelector(Selectors.Weapons.activeWeapon)
+    const activeWeaponName = useSelector(Selectors.Weapons.active.weaponName)
+    const weapon = useSelector(Selectors.Weapons.active.weapon)
     const weapons = useSelector(Selectors.Builder.api.weapons)
     const weaponTypes = useSelector(Selectors.Builder.api.weaponTypes)
 
@@ -54,7 +54,6 @@ export const WeaponMenu = (): JSX.Element => {
 
     const handleClick = (name: string) => {
         dispatch(Actions.Weapons.setActiveName({ name }))
-        dispatch(Actions.Builder.setWeapon({ name }))
     }
 
     const sections = weaponTypes.map((weaponType) => {

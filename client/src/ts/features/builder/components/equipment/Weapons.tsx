@@ -93,12 +93,12 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
 
 export const Weapons = (_props: unknown): JSX.Element => {
 
-    const R1 = useSelector(Selectors.Builder.weapons.bySlot.R1)
-    const R2 = useSelector(Selectors.Builder.weapons.bySlot.R2)
-    const R3 = useSelector(Selectors.Builder.weapons.bySlot.R3)
-    const L1 = useSelector(Selectors.Builder.weapons.bySlot.L1)
-    const L2 = useSelector(Selectors.Builder.weapons.bySlot.L2)
-    const L3 = useSelector(Selectors.Builder.weapons.bySlot.L3)
+    const R1 = useSelector(Selectors.Weapons.bySlot.R1)
+    const R2 = useSelector(Selectors.Weapons.bySlot.R2)
+    const R3 = useSelector(Selectors.Weapons.bySlot.R3)
+    const L1 = useSelector(Selectors.Weapons.bySlot.L1)
+    const L2 = useSelector(Selectors.Weapons.bySlot.L2)
+    const L3 = useSelector(Selectors.Weapons.bySlot.L3)
 
     return (
         <>
