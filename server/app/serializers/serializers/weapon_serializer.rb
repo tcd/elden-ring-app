@@ -57,5 +57,6 @@ module Serializers
 
     association(:weapon_skill, blueprint: WeaponSkillSerializer)
     # association(:effects, blueprint: EquipmentEffectSerializer)
+    association(:weapon_stats, name: :stats, blueprint: WeaponStatSerializer)
   end
 end
