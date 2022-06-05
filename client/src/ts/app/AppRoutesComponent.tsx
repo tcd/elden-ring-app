@@ -12,19 +12,15 @@ import {
 
     TalismanMenu,
     TalismansPage,
-    TalismanDetailPage,
 
     ArmorMenu,
     ArmorPage,
-    ArmorDetailPage,
 
     WeaponMenu,
     WeaponsPage,
-    WeaponDetailPage,
 
     SpellMenu,
     SpellsPage,
-    SpellDetailPage,
 } from "@app/features"
 
 export const AppRoutesComponent = () => useRoutes(routes)
@@ -46,21 +42,17 @@ const routes: RouteObject[] = [
             { path: "/talismans",        element: <TalismansPage />      },
             { path: "/talismans/menu",   element: <TalismanMenu />       },
             { path: "/talismans/table",  element: <TalismansPage />      },
-            { path: "/talismans/detail", element: <TalismanDetailPage /> },
 
             { path: "/armor",            element: <ArmorPage />          },
-            { path: "/armor/detail",     element: <ArmorDetailPage />    },
             { path: "/armor/menu",       element: <ArmorMenu />          },
 
             { path: "/weapons",          element: <WeaponMenu />         },
             { path: "/weapons/menu",     element: <WeaponMenu />         },
             { path: "/weapons/table",    element: <WeaponsPage />        },
-            { path: "/weapons/detail",   element: <WeaponDetailPage />   },
 
             { path: "/spells",          element: <SpellsPage />          },
             { path: "/spells/menu",     element: <SpellMenu />           },
             { path: "/spells/table",    element: <SpellsPage />          },
-            { path: "/spells/detail",   element: <SpellDetailPage />     },
         ],
     },
 ]
