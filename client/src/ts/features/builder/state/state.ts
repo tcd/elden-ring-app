@@ -22,6 +22,8 @@ export interface BuilderState {
 
     everythingRequest: RequestState<KitchenSink>
 
+    whichCharacterStatus: "A" | "B"
+
     startingClassName: StartingClassName,
 
     attributes: Attributes
@@ -52,6 +54,8 @@ const initialState: BuilderState = {
         status: "idle",
         response: null,
     },
+
+    whichCharacterStatus: "B",
 
     startingClassName: null,
 

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Armor } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { ArmorDetail } from "./ArmorDetail"
-import { CharacterStatusB } from "@app/features/builder/components/right-side-panels"
+import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
 
 export const ArmorMenu = (_props: unknown): JSX.Element => {
 
@@ -47,7 +47,7 @@ export const ArmorMenu = (_props: unknown): JSX.Element => {
                     <ArmorDetail armor={activeArmor} />
                 </div>
                 <div className="col-3">
-                    <CharacterStatusB />
+                    <CharacterStatus />
                 </div>
             </div>
         </div>

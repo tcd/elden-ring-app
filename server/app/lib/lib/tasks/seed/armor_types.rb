@@ -7,13 +7,18 @@ module Lib
         # @return [void]
         def self.seed()
           # ArmorType.destroy_all()
-          invalid = Lib::Tasks::Seed.from_fixture("armor_types.yml", ArmorType) do |fx|
-            _args = {
-              id:   fx["id"],
-              name: fx["name"],
-            }
-          end
+          invalid = Lib::Tasks::Seed.from_fixture("armor_types.yml", ArmorType) { |x| process(x) }
           return invalid
+        end
+
+        # @param input [Hash]
+        # @return [Hash]
+        def self.process(input)
+          output = {
+            id:   input["id"],
+            name: input["name"],
+          }
+          return output
         end
 
       end

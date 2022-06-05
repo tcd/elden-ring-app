@@ -5,6 +5,7 @@ import { Encumbrance } from "@app/types"
 import { Selectors } from "@app/state"
 import { COLORS } from "@app/util"
 import { StatRow, StatRowPlus } from "@app/shared"
+import { DESCRIPTIONS } from "@app/data"
 
 const equipmentLoadColor = (load: Encumbrance) => {
     switch (load) {
@@ -30,7 +31,12 @@ export const EquipLoad = (): JSX.Element => {
 
     return (
         <div>
-            <StatRowPlus title="Equip Load" value_1={currentEquipLoad.toFixed(1)} value_2={maxEquipLoad.toFixed(1)}/>
+            <StatRowPlus
+                title="Equip Load"
+                value_1={currentEquipLoad.toFixed(1)}
+                value_2={maxEquipLoad.toFixed(1)}
+                description={DESCRIPTIONS.LEVEL_UP_SCREEN["Max Equip Load"]}
+            />
             <div style={{ color: equipmentLoadColor(equipLoadDescription) }}>
                 <StatRow title="" value={equipLoadDescription} />
             </div>

@@ -8,7 +8,7 @@ import { Resistance } from "@app/features/builder/components/resistance"
 import { DefensePlus } from "@app/features/builder/components/defense"
 import { Attack } from "@app/features/builder/components/attack"
 
-const attackSection     = <ErTallCardSection title="Attack Power"          content={<Attack/>} />
+const attackSection     = <ErTallCardSection title="Attack Power"         content={<Attack/>} />
 const defenseSection    = <ErTallCardSection title="Defense/Dmg Negation" content={<DefensePlus/>} />
 const resistanceSection = <ErTallCardSection title="Resistance"           content={<Resistance/>} />
 

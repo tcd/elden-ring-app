@@ -7,52 +7,60 @@ module Lib
         # @return [void]
         def self.seed()
           Spell.destroy_all()
-          invalid = Lib::Tasks::Seed.from_tsv("spells.tsv", Spell) do |fx|
-            _args = {
-                metadata: {
-                  fp:             fx["FP"],
-                  bonus_category: fx["bonus_category"],
-                },
-                name:                    fx["name"],
-                spell_type:              fx["spell_type"],
-                description:             fx["description"],
-                slots_required:          fx["slots_required"],
-                stamina_cost:            fx["stamina_cost"],
-                fp_cost:                 fx["fp_cost"],
-                fp_cost_alt:             fx["fp_cost_alt"],
-                # fp_cost_alt_description: fx["fp_cost_alt_description"],
-                bonus_category:          fx["category"],
-
-                required_intelligence:   fx["int"],
-                required_faith:          fx["fai"],
-                required_arcane:         fx["arc"],
-
-                is_chargeable:           fx["chargeable"],
-                is_usable_while_jumping: fx["jumping"],
-                is_usable_on_horse:      fx["horse"],
-
-                # damage_blood_loss:   fx["damage_blood_loss"],
-                # damage_frost:        fx["damage_frost"],
-                # damage_madness:      fx["damage_madness"],
-                # damage_poison:       fx["damage_poison"],
-                # damage_sleep:        fx["damage_sleep"],
-                # damage_death_blight: fx["damage_death_blight"],
-                # damage_scarlet_rot:  fx["damage_scarlet_rot"],
-                inflicts_physical:     fx["physical"],
-                inflicts_magic:        fx["magic"],
-                inflicts_fire:         fx["fire"],
-                inflicts_lightning:    fx["lightning"],
-                inflicts_holy:         fx["holy"],
-                inflicts_blood_loss:   fx["bleed"],
-                inflicts_frost:        fx["frost"],
-                inflicts_madness:      fx["madness"],
-                inflicts_poison:       fx["poison"],
-                inflicts_sleep:        fx["sleep"],
-                inflicts_death_blight: fx["death"],
-                inflicts_scarlet_rot:  fx["rot"],
-            }
-          end
+          invalid = Lib::Tasks::Seed.from_tsv("spells.tsv", Spell) { |x| process(x) }
           return invalid
+        end
+
+
+        # @param input [Hash]
+        # @return [Hash]
+        def self.process(input)
+          output = {
+            name:                    input["name"],
+            spell_type:              input["spell_type"],
+            description:             input["description"],
+            slots_required:          input["slots_required"],
+            stamina_cost:            input["stamina_cost"],
+            fp_cost:                 input["fp_cost"],
+            fp_cost_alt:             input["fp_cost_alt"],
+            # fp_cost_alt_description: input["fp_cost_alt_description"],
+            bonus_category:          input["category"],
+
+            required_intelligence:   input["int"],
+            required_faith:          input["fai"],
+            required_arcane:         input["arc"],
+
+            is_chargeable:           input["chargeable"],
+            is_usable_while_jumping: input["jumping"],
+            is_usable_on_horse:      input["horse"],
+
+            # damage_blood_loss:   input["damage_blood_loss"],
+            # damage_frost:        input["damage_frost"],
+            # damage_madness:      input["damage_madness"],
+            # damage_poison:       input["damage_poison"],
+            # damage_sleep:        input["damage_sleep"],
+            # damage_death_blight: input["damage_death_blight"],
+            # damage_scarlet_rot:  input["damage_scarlet_rot"],
+            inflicts_physical:     input["physical"],
+            inflicts_magic:        input["magic"],
+            inflicts_fire:         input["fire"],
+            inflicts_lightning:    input["lightning"],
+            inflicts_holy:         input["holy"],
+            inflicts_blood_loss:   input["bleed"],
+            inflicts_frost:        input["frost"],
+            inflicts_madness:      input["madness"],
+            inflicts_poison:       input["poison"],
+            inflicts_sleep:        input["sleep"],
+            inflicts_death_blight: input["death"],
+            inflicts_scarlet_rot:  input["rot"],
+          }
+
+          output[:metadata] = {
+            fp:             input["FP"],
+            bonus_category: input["bonus_category"],
+          }
+
+          return output
         end
 
       end

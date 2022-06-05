@@ -1,0 +1,29 @@
+{
+    "$schema": "../schema/effect-seed-data.schema.json",
+    "seeds": [
+
+        {
+            "model": "Armor",
+            "model_name": "Silver Tear Mask",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Arcane",
+            "value": 8.0,
+            "metadata": {
+                "description": "Greatly increases arcane to the detriment of physical attack power."
+            }
+        },
+        {
+            "model": "Armor",
+            "model_name": "Silver Tear Mask",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Physical Attack Power",
+            "value": 0.05,
+            "metadata": {
+                "description": "Greatly increases arcane to the detriment of physical attack power.",
+                "wiki_link": "https://eldenring.wiki.fextralife.com/Silver+Tear+Mask"
+            }
+        }
+    ]
+}
