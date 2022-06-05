@@ -54,6 +54,7 @@ export const WeaponMenu = (): JSX.Element => {
 
     const handleClick = (name: string) => {
         dispatch(Actions.Weapons.setActiveName({ name }))
+        dispatch(Actions.Builder.setWeapon({ name }))
     }
 
     const sections = weaponTypes.map((weaponType) => {
@@ -92,8 +93,6 @@ export const WeaponMenu = (): JSX.Element => {
                 </div>
             </div>
             <div>
-                {/* <span>weapon detail here</span> */}
-                { console.log(weapon) }
                 <WeaponDetail weapon={weapon} />
             </div>
         </div>
