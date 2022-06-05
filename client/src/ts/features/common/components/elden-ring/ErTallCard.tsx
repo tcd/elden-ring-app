@@ -30,6 +30,16 @@ export interface ErTallCardProps {
 }
 
 export const ErTallCard = (props: ErTallCardProps): JSX.Element => {
+
+    const sections = props.sections.map((section, index) => {
+        const key = `${props.title}--section--${index}`
+        return (
+            <div key={key}>
+                {section}
+            </div>
+        )
+    })
+
     return (
         <article className="er__tall-card">
             <header className="er__tall-card__header">
@@ -45,7 +55,7 @@ export const ErTallCard = (props: ErTallCardProps): JSX.Element => {
                     <div className="left-border-inner vertical-gradient"></div>
                 </div>
                 <div className="content">
-                    {props.sections && props.sections.map(section => section)}
+                    {props.sections && sections}
                 </div>
             </div>
         </article>
