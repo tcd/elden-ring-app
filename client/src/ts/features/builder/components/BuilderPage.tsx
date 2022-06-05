@@ -5,20 +5,14 @@ import {
     Attributes,
     Overview,
 } from "./level-up"
-import { Equipment } from "./equipment"
-import { ActionMenu } from "./action-menu"
-import { CharacterStatus } from "./right-side-panels"
-import {
-    ArmorModal,
-    TalismanModal,
-    WeaponModal,
-} from "./modals"
-
 import {
     ArmorMenu,
     TalismanMenu,
     WeaponMenu,
 } from "@app/features"
+import { CharacterStatus } from "./right-side-panels"
+import { ActionMenu } from "./action-menu"
+import { Equipment } from "./equipment"
 
 export const BuilderPage = (): JSX.Element => {
 
