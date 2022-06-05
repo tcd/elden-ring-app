@@ -1,15 +1,15 @@
 import { RootState } from "@app/state"
-import { Weapon, WeaponSlotId } from "@app/types"
+import { Weapon, WeaponSettings, WeaponSlotId } from "@app/types"
 import { isBlank, compactArray } from "@app/util"
 
 import * as Api from "./api"
 
-export const selectRightWeapon1Name = (state: RootState): string => { return state?.Builder?.weapon_names.R1 }
-export const selectRightWeapon2Name = (state: RootState): string => { return state?.Builder?.weapon_names.R2 }
-export const selectRightWeapon3Name = (state: RootState): string => { return state?.Builder?.weapon_names.R3 }
-export const selectLeftWeapon1Name  = (state: RootState): string => { return state?.Builder?.weapon_names.L1 }
-export const selectLeftWeapon2Name  = (state: RootState): string => { return state?.Builder?.weapon_names.L2 }
-export const selectLeftWeapon3Name  = (state: RootState): string => { return state?.Builder?.weapon_names.L3 }
+export const selectRightWeapon1Name = (state: RootState): string => { return state?.Builder?.weapons?.R1?.weapon_name }
+export const selectRightWeapon2Name = (state: RootState): string => { return state?.Builder?.weapons?.R2?.weapon_name }
+export const selectRightWeapon3Name = (state: RootState): string => { return state?.Builder?.weapons?.R3?.weapon_name }
+export const selectLeftWeapon1Name  = (state: RootState): string => { return state?.Builder?.weapons?.L1?.weapon_name }
+export const selectLeftWeapon2Name  = (state: RootState): string => { return state?.Builder?.weapons?.L2?.weapon_name }
+export const selectLeftWeapon3Name  = (state: RootState): string => { return state?.Builder?.weapons?.L3?.weapon_name }
 
 const selectWeapon = (state: RootState, name?: string): Weapon => {
     const weapons = Api.selectWeapons(state)
@@ -93,4 +93,16 @@ export const selectActiveWeapon = (state: RootState): Weapon => {
         default:
             return null
     }
+}
+
+// =============================================================================
+// WeaponSettings
+// =============================================================================
+
+export const selectActiveWeaponSettings = (state: RootState): WeaponSettings => {
+    const slotId = selectActiveWeaponSlotId(state)
+    if (isBlank(slotId)) {
+        return null
+    }
+    return state.Builder.weapons[slotId]
 }

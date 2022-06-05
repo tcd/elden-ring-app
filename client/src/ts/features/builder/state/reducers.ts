@@ -6,8 +6,12 @@ import {
     StartingClassName,
     TalismanSlotId,
     WeaponSlotId,
+    DEFAULT_WEAPON_SETTINGS,
 } from "@types"
-import { BuilderState } from "./state"
+import {
+    BuilderState,
+    BuilderMenu,
+} from "./state"
 
 import {
     fetchEverything,
@@ -24,6 +28,23 @@ export const reducers = {
             state.attributes[action.payload.name]--
         }
     },
+    cycleCharacterStatus(state: BuilderState, action?: PayloadAction<"A" | "B">) {
+        state.whichCharacterStatus = action.payload
+    },
+    setCurrentMenu(state: BuilderState, action: PayloadAction<BuilderMenu>) {
+        state.currentMenu = action.payload
+    },
+    clearCurrentMenu(state: BuilderState) {
+        state.currentMenu = null
+    },
+    // =========================================================================
+    // Starting Class
+    // =========================================================================
+    setStartingClass(state: BuilderState, action: PayloadAction<{ name: string }>) {
+        const className = action.payload.name as StartingClassName
+        state.startingClassName = className
+        // state.startingClass = STARTING_CLASSES.find(x => x.name == className)
+    },
     // =========================================================================
     // Talisman
     // =========================================================================
@@ -36,35 +57,36 @@ export const reducers = {
     openTalismanModal(state: BuilderState, action: PayloadAction<{ id: TalismanSlotId }>) {
         state.talisman.active_number = action.payload.id
         state.talisman.modal_open = true
+        state.currentMenu = "talisman"
     },
     closeTalismanModal(state: BuilderState) {
         state.talisman.active_number = null
         state.talisman.modal_open = false
+        state.currentMenu = null
     },
     // =========================================================================
     // Weapons
     // =========================================================================
     setWeapon(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.weapon_names[state.weapon.active_slot] = action.payload.name
+        state.weapons[state.weapon.active_slot] = {
+            ...DEFAULT_WEAPON_SETTINGS,
+            weapon_name: action.payload.name,
+        }
     },
     removeWeapon(state: BuilderState) {
-        state.weapon_names[state.weapon.active_slot] = null
+        state.weapons[state.weapon.active_slot] = {
+            ...DEFAULT_WEAPON_SETTINGS,
+        }
     },
     openWeaponModal(state: BuilderState, action: PayloadAction<{ id: WeaponSlotId }>) {
         state.weapon.active_slot = action.payload.id
         state.weapon.modal_open = true
+        state.currentMenu = "weapon"
     },
     closeWeaponModal(state: BuilderState) {
         state.weapon.active_slot = null
         state.weapon.modal_open = false
-    },
-    // =========================================================================
-    // Starting Class
-    // =========================================================================
-    setStartingClass(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        const className = action.payload.name as StartingClassName
-        state.startingClassName = className
-        // state.startingClass = STARTING_CLASSES.find(x => x.name == className)
+        state.currentMenu = null
     },
     // =========================================================================
     // Armor
@@ -78,10 +100,12 @@ export const reducers = {
     openArmorModal(state: BuilderState, action: PayloadAction<{ type: ArmorType }>) {
         state.armor.active_type = action.payload.type
         state.armor.modal_open = true
+        state.currentMenu = "armor"
     },
     closeArmorModal(state: BuilderState) {
         state.armor.active_type = null
         state.armor.modal_open = false
+        state.currentMenu = null
     },
 }
 

@@ -9,17 +9,29 @@
     display: flex;
     flex-grow: 1;
 
-    div.builder-column:nth-child(1) {
-        width: 25%;
+    #variable-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        width: 75%;
+
+        & > :nth-child(1) {
+            width: 50%;
+        }
+
+        & > :nth-child(2) {
+            width: 50%;
+        }
     }
 
-    div.builder-column:nth-child(2) {
-        width: 40%;
-        margin-left:  5%;
-        margin-right: 5%;
-    }
+    // div.builder-column:nth-child(2) {
+    //     width: 40%;
+    //     margin-left:  5%;
+    //     margin-right: 5%;
+    // }
 
-    div.builder-column:nth-child(3) {
+    #character-status {
         width: 25%;
     }
 }
@@ -56,25 +68,4 @@ section.armaments {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    // justify-content: space-around;
-    // align-items: stretch;
-
-    // div.armament {
-    //     // width: 30%;
-    // }
-
-    // div.armament:nth-child(1) { background-color: red;    }
-    // div.armament:nth-child(2) { background-color: orange; }
-    // div.armament:nth-child(3) { background-color: yellow; }
 }
-
-// section.armor {
-//     div.armor {
-//         // width: 25%;
-//     }
-
-//     // div.armor:nth-child(1) { background-color: red;    }
-//     // div.armor:nth-child(2) { background-color: orange; }
-//     // div.armor:nth-child(3) { background-color: yellow; }
-//     // div.armor:nth-child(4) { background-color: green;  }
-// }

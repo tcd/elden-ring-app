@@ -34,21 +34,16 @@ export const TalismanMenu = (): JSX.Element => {
     })
 
     return (
-        <div className="equipment-menu container">
-            <div className="row">
-                <div className="col-4">
-                    <div className="equipment-menu-grid-column">
-                        <section className="equipment-menu-section">
-                            {cells}
-                        </section>
-                    </div>
+        <div id="variable-menu">
+            <div className="equipment-menu">
+                <div className="equipment-menu-grid-column">
+                    <section className="equipment-menu-section">
+                        {cells}
+                    </section>
                 </div>
-                <div className="col-4">
-                    <TalismanDetail talisman={talisman} />
-                </div>
-                <div className="col-3">
-                    <CharacterStatus />
-                </div>
+            </div>
+            <div>
+                <TalismanDetail talisman={talisman} />
             </div>
         </div>
     )

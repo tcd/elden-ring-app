@@ -40,10 +40,12 @@
     // Styles
     // ======================================================================
 
+    width: 50%;
+
     @include m.customScrollbar();
 
     .equipment-menu-grid-column {
-        height: 90vh;
+        height: 80vh;
         overflow-y: scroll;
         padding: 20px;
         border-radius: 5px;

@@ -9,11 +9,14 @@ import {
     StartingClassName,
     TalismanSet,
     TalismanSlotId,
-    WeaponSet,
+    WeaponSlots,
     WeaponSlotId,
+    DEFAULT_WEAPON_SETTINGS,
 } from "@types"
 import { FEATURE_KEYS } from "@util"
 import { reducers, extraReducers } from "./reducers"
+
+export type BuilderMenu = null |  "armor" | "weapon" | "talisman" | "spell"
 
 // Define a type for the slice state
 export interface BuilderState {
@@ -24,12 +27,16 @@ export interface BuilderState {
 
     whichCharacterStatus: "A" | "B"
 
+    currentMenu?: BuilderMenu
+
+    actionMenuDescription: string
+
     startingClassName: StartingClassName,
 
     attributes: Attributes
     armor_names: ArmorSet
     talisman_names: TalismanSet
-    weapon_names: WeaponSet
+    weapons: WeaponSlots
 
     talisman: {
         modal_open: boolean
@@ -56,6 +63,9 @@ const initialState: BuilderState = {
     },
 
     whichCharacterStatus: "B",
+
+    currentMenu: "weapon",
+    actionMenuDescription: "",
 
     startingClassName: null,
 
@@ -84,13 +94,13 @@ const initialState: BuilderState = {
         "4": null,
     },
 
-    weapon_names: {
-        R1: null,
-        R2: null,
-        R3: null,
-        L1: null,
-        L2: null,
-        L3: null,
+    weapons: {
+        R1: { ...DEFAULT_WEAPON_SETTINGS },
+        R2: { ...DEFAULT_WEAPON_SETTINGS },
+        R3: { ...DEFAULT_WEAPON_SETTINGS },
+        L1: { ...DEFAULT_WEAPON_SETTINGS },
+        L2: { ...DEFAULT_WEAPON_SETTINGS },
+        L3: { ...DEFAULT_WEAPON_SETTINGS },
     },
 
     talisman: {
@@ -117,10 +127,10 @@ const myBuild: BuilderState = {
         "mind":         40,
         "endurance":    60,
         "strength":     80,
-        "dexterity":    45,
-        "intelligence": 26,
+        "dexterity":    50,
+        "intelligence": 29,
         "faith":        80,
-        "arcane":       24,
+        "arcane":       30,
     },
 
     // talisman_names: {
@@ -144,12 +154,12 @@ const myBuild: BuilderState = {
         Legs:  "Knight Greaves",
     },
 
-    weapon_names: {
-        ...initialState.weapon_names,
-        R1: "Maliketh's Black Blade",
-        R3: "Erdtree Seal",
-        L1: "Fingerprint Stone Shield",
-        L3: "Erdtree Seal",
+    weapons: {
+        ...initialState.weapons,
+        R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
+        R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
+        L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
+        L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
     },
 
 //     weapon: {

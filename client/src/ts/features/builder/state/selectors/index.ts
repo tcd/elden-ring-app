@@ -28,6 +28,7 @@ export const BuilderSelectors = {
     },
     misc: {
         whichCharacterStatus: Misc.selectWhichCharacterStatus,
+        currentMenu: Misc.selectCurrentMenu,
     },
     startingClassName: StartingClass.selectStartingClassName,
     startingClass: StartingClass.selectStartingClass,

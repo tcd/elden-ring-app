@@ -1,19 +1,50 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { Weapon } from "@types"
-import { FEATURE_KEYS } from "@util"
-import { reducers } from "./reducers"
+import {
+    WeaponSlots,
+    DEFAULT_WEAPON_SETTINGS,
+    WeaponSlotId,
+} from "@app/types"
+import { FEATURE_KEYS } from "@app/util"
+import {
+    reducers,
+    extraReducers,
+} from "./reducers"
 
 export interface WeaponsState {
-    activeName: string
+    activeSlotId: WeaponSlotId
+    customizingWeapon: boolean
+    slots: WeaponSlots
 }
 
 const initialState: WeaponsState = {
-    activeName: "Claymore",
+    activeSlotId: null,
+    customizingWeapon: false,
+    slots: {
+        R1: { ...DEFAULT_WEAPON_SETTINGS },
+        R2: { ...DEFAULT_WEAPON_SETTINGS },
+        R3: { ...DEFAULT_WEAPON_SETTINGS },
+        L1: { ...DEFAULT_WEAPON_SETTINGS },
+        L2: { ...DEFAULT_WEAPON_SETTINGS },
+        L3: { ...DEFAULT_WEAPON_SETTINGS },
+    },
+}
+
+const devState: WeaponsState = {
+    ...initialState,
+    activeSlotId: "R1",
+    slots: {
+        ...initialState.slots,
+        R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
+        R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
+        L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
+        L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
+    },
 }
 
 export const WeaponsSlice = createSlice({
     name: FEATURE_KEYS.Weapons,
-    initialState,
+    initialState: devState,
     reducers: reducers,
+    extraReducers: extraReducers,
 })

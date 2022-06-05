@@ -1,3 +1,5 @@
+import { WeaponSettings } from "@app/types"
+
 export type WeaponSlotId =
     | "R1"
     | "R2"
@@ -6,13 +8,13 @@ export type WeaponSlotId =
     | "L2"
     | "L3"
 
-export interface WeaponSet {
-    R1?: string
-    R2?: string
-    R3?: string
-    L1?: string
-    L2?: string
-    L3?: string
+export interface WeaponSlots {
+    R1?: WeaponSettings
+    R2?: WeaponSettings
+    R3?: WeaponSettings
+    L1?: WeaponSettings
+    L2?: WeaponSettings
+    L3?: WeaponSettings
 }
 
 export const weaponSlotIdName = (slotId: WeaponSlotId): string => {

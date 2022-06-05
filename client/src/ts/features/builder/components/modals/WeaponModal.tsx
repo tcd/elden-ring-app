@@ -27,6 +27,10 @@ export const WeaponModal = (): JSX.Element => {
         dispatch(Actions.Builder.closeWeaponModal())
     }
 
+    const handleRequestCustomize = () => {
+        // dispatch(Actions.Builder.closeWeaponModal())
+    }
+
     const options = weapons.map((option) => {
         return {
             value: option.name,
@@ -48,6 +52,7 @@ export const WeaponModal = (): JSX.Element => {
         <>
             <button type="button" className="elden-ring-button" onClick={handleRequestClose}>Close</button>
             <button type="button" className="elden-ring-button" onClick={handleRequestClear}>Clear</button>
+            <button type="button" className="elden-ring-button" onClick={handleRequestCustomize}>Customize</button>
         </>
     )
 
