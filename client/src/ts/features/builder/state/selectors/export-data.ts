@@ -5,7 +5,7 @@ import {
     AttributeName,
 } from "@app/types"
 
-import * as Weapons from "./weapons"
+import { WeaponsSelectors as Weapons } from "@app/features/weapons"
 import * as Talismans from "./talismans"
 import * as Armor from "./armor"
 import * as StartingClass from "./starting-class"
@@ -27,12 +27,12 @@ export const selectExportData = (state: RootState): BuildData => {
             "4": Talismans.selectTalisman4Name(state),
         },
         weapon_names: {
-            R1: Weapons.selectRightWeapon1Name(state),
-            R2: Weapons.selectRightWeapon2Name(state),
-            R3: Weapons.selectRightWeapon3Name(state),
-            L1: Weapons.selectLeftWeapon1Name(state),
-            L2: Weapons.selectLeftWeapon2Name(state),
-            L3: Weapons.selectLeftWeapon3Name(state),
+            R1: Weapons.bySlot.R1(state).name,
+            R2: Weapons.bySlot.R2(state).name,
+            R3: Weapons.bySlot.R3(state).name,
+            L1: Weapons.bySlot.L1(state).name,
+            L2: Weapons.bySlot.L2(state).name,
+            L3: Weapons.bySlot.L3(state).name,
         },
         attributes: {
             [AttributeName.vigor]:        Attributes.selectVigor(state),

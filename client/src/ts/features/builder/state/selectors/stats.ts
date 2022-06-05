@@ -8,9 +8,9 @@ import {
     LEVEL_RUNES_MAP,
 } from "@app/data"
 
-import * as Weapons from "./weapons"
 import * as Talismans from "./talismans"
 import * as Armor from "./armor"
+import { WeaponsSelectors as Weapons } from "@app/features/weapons"
 
 import * as Attributes from "./attributes"
 // import * as Resistance from "./resistance"

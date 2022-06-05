@@ -4,6 +4,7 @@ import {
     WeaponSlots,
     DEFAULT_WEAPON_SETTINGS,
     WeaponSlotId,
+    WeaponSettings,
 } from "@app/types"
 import { FEATURE_KEYS } from "@app/util"
 import {
@@ -15,6 +16,7 @@ export interface WeaponsState {
     activeSlotId: WeaponSlotId
     customizingWeapon: boolean
     slots: WeaponSlots
+    oldWeapon: WeaponSettings
 }
 
 const initialState: WeaponsState = {
@@ -28,6 +30,7 @@ const initialState: WeaponsState = {
         L2: { ...DEFAULT_WEAPON_SETTINGS },
         L3: { ...DEFAULT_WEAPON_SETTINGS },
     },
+    oldWeapon: null,
 }
 
 const devState: WeaponsState = {
@@ -36,8 +39,10 @@ const devState: WeaponsState = {
     slots: {
         ...initialState.slots,
         R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
+        // R2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "" },
         R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
         L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
+        // L2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "" },
         L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
     },
 }

@@ -4,9 +4,26 @@ import {
     WeaponTypePluralString,
     ScalingTierString,
     EquipmentEffect,
+    WeaponStat,
 } from "@types"
 
-export interface Weapon extends BaseEntity {
+export interface DeprecatedWeapon extends BaseEntity {
+    attack_physical: number
+    attack_magic: number
+    attack_fire: number
+    attack_lightning: number
+    attack_holy: number
+    attack_critical: number
+    attack_stamina_damage?: number
+
+    scaling_strength?: ScalingTierString
+    scaling_dexterity?: ScalingTierString
+    scaling_intelligence?: ScalingTierString
+    scaling_faith?: ScalingTierString
+    scaling_arcane?: ScalingTierString
+}
+
+export interface Weapon extends DeprecatedWeapon {
     name: string
     image_url: string
     is_shield?: boolean
@@ -24,14 +41,7 @@ export interface Weapon extends BaseEntity {
     spell_boost_percentage?: number
 
     effects?: EquipmentEffect[]
-
-    attack_physical: number
-    attack_magic: number
-    attack_fire: number
-    attack_lightning: number
-    attack_holy: number
-    attack_critical: number
-    attack_stamina_damage?: number
+    stats?: WeaponStat[]
 
     defense_magic: number
     defense_fire: number
@@ -39,12 +49,6 @@ export interface Weapon extends BaseEntity {
     defense_lightning: number
     defense_holy: number
     defense_guard_boost: number
-
-    scaling_strength?: ScalingTierString
-    scaling_dexterity?: ScalingTierString
-    scaling_intelligence?: ScalingTierString
-    scaling_faith?: ScalingTierString
-    scaling_arcane?: ScalingTierString
 
     required_strength?: number
     required_dexterity?: number

@@ -46,40 +46,33 @@ module Models
       # @return [void]
       def initialize()
 
-        self.armor =
-          Armor
-            .includes(:armor_type)
-            .all()
-            .order(name: :asc)
+        self.armor = Armor
+                     .includes(:armor_type)
+                     .all()
+                     .order(name: :asc)
 
-        self.spells =
-          Spell
-            .all()
-            .order(name: :asc)
+        self.spells = Spell
+                      .all()
+                      .order(name: :asc)
 
-        self.talismans =
-          Talisman
-            .includes(:equipment_effects)
-            .all()
+        self.talismans = Talisman
+                         .includes(:equipment_effects)
+                         .all()
 
-        self.weapons =
-          Weapon
-            .includes(:weapon_type, :weapon_skill)
-            .all()
-            .order(name: :asc)
+        self.weapons = Weapon
+                       .includes(:weapon_type, :weapon_skill, :weapon_stats)
+                       .all()
+                       .order(name: :asc)
 
-        self.weapon_skills =
-          WeaponSkill
-            .all()
-            .order(name: :asc)
+        self.weapon_skills = WeaponSkill
+                             .all()
+                             .order(name: :asc)
 
-        self.weapon_types =
-          WeaponType
-            .all()
+        self.weapon_types = WeaponType
+                            .all()
 
-        self.attack_element_correct_params =
-          AttackElementCorrectParam
-            .all()
+        self.attack_element_correct_params = AttackElementCorrectParam
+                                             .all()
 
       end
 
