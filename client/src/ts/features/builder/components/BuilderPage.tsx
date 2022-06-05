@@ -6,6 +6,7 @@ import {
     Overview,
 } from "./level-up"
 import { Equipment } from "./equipment"
+import { ActionMenu } from "./action-menu"
 import { CharacterStatus } from "./right-side-panels"
 import {
     ArmorModal,
@@ -21,7 +22,7 @@ import {
 
 export const BuilderPage = (): JSX.Element => {
 
-    const dispatch = useDispatch
+    // const dispatch = useDispatch
 
     const currentMenu = useSelector(Selectors.Builder.misc.currentMenu)
 
@@ -56,6 +57,7 @@ export const BuilderPage = (): JSX.Element => {
             {/* <ArmorModal />
             <TalismanModal />
             <WeaponModal /> */}
+            <ActionMenu />
         </main>
     )
 }

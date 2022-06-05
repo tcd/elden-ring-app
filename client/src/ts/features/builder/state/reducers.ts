@@ -29,7 +29,21 @@ export const reducers = {
         }
     },
     cycleCharacterStatus(state: BuilderState, action?: PayloadAction<"A" | "B">) {
-        state.whichCharacterStatus = action.payload
+        switch (state.whichCharacterStatus) {
+            case null:
+                state.whichCharacterStatus = "A"
+                break
+            case "A":
+                state.whichCharacterStatus = "B"
+                break
+            case "B":
+                state.whichCharacterStatus = "A"
+                break
+            default:
+                state.whichCharacterStatus = "A"
+                break
+        }
+        // state.whichCharacterStatus = action.payload
     },
     setCurrentMenu(state: BuilderState, action: PayloadAction<BuilderMenu>) {
         state.currentMenu = action.payload
