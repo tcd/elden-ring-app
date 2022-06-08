@@ -1,0 +1,53 @@
+{
+    "$schema": "../schema/effect-seed-data.schema.json",
+    "seeds": [
+        {
+            "model": "Weapon",
+            "model_name": "Ant's Skull Plate",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Immunity",
+            "value": 60,
+        },
+        {
+            "model": "Weapon",
+            "model_name": "Coil Shield",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Immunity",
+            "value": 40,
+        },
+        {
+            "model": "Weapon",
+            "model_name": "Eclipse Crest Greatshield",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Immunity",
+            "value": 50,
+        },
+        {
+            "model": "Weapon",
+            "model_name": "Eclipse Crest Greatshield",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Robustness",
+            "value": 50,
+        },
+        {
+            "model": "Weapon",
+            "model_name": "Eclipse Crest Greatshield",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Focus",
+            "value": 50,
+        },
+        {
+            "model": "Weapon",
+            "model_name": "Shield of the Guilty",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Focus",
+            "value": 40,
+        },
+    ]
+}

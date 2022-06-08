@@ -128,7 +128,7 @@ const myBuild: BuilderState = {
         "endurance":    60,
         "strength":     80,
         "dexterity":    50,
-        "intelligence": 29,
+        "intelligence": 30,
         "faith":        80,
         "arcane":       30,
     },
