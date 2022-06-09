@@ -1,5 +1,6 @@
-export * from "./ILinkData"
+export * from "./ComparisonColor"
 export * from "./Encumbrance"
+export * from "./ILinkData"
 export * from "./Request"
 export * from "./WeaponSlotId"
 export * from "./WeaponSettings"

@@ -1,7 +1,21 @@
-import { Weapon, WeaponSettings } from "@app/types"
-import { isBlank, compactArray } from "@app/util"
+import {
+    CalculatedWeaponStats,
+    Weapon,
+    WeaponAffinity,
+    WeaponSettings,
+    WeaponStat,
+    SlimWeaponStatData,
+    AttackElementCorrectParam,
+    Attributes,
+} from "@app/types"
+import {
+    isBlank,
+    compactArray,
+    getSlimWeaponStatData,
+} from "@app/util"
 import { RootState } from "@app/state"
-import { selectWeapons } from "@app/features/builder/state/selectors/api"
+import { selectWeapons, selectAttackElementCorrectParams } from "@app/features/builder/state/selectors/api"
+import { WEAPON_AFFINITIES } from "@app/data"
 
 // const selectWeaponsState = (state: RootState) => { return state?.Weapons }
 
@@ -79,3 +93,51 @@ export const selectActiveWeapon = (state: RootState) => {
     }
     return weapons.find(x => x?.name == activeName)
 }
+
+// =============================================================================
+// Stats
+// =============================================================================
+
+const _selectSlimWeaponStatData = (weapon: Weapon, weaponSettings: WeaponSettings): SlimWeaponStatData => {
+    const affinityId = WEAPON_AFFINITIES.find(x => x.name == weaponSettings.affinity_name)?.id
+    const stat = weapon.stats.find(x => x.weapon_affinity_id == affinityId)
+    const result = getSlimWeaponStatData(stat, weaponSettings?.level)
+    return result
+}
+
+const selectSlimWeaponStatData = (state: RootState): SlimWeaponStatData => {
+    const weapon = selectActiveWeapon(state)
+    const weaponSettings = selectActiveWeaponSettings(state)
+    const result = _selectSlimWeaponStatData(weapon, weaponSettings)
+    return result
+}
+
+// const selectCalculatedWeaponStats = (state: RootState): CalculatedWeaponStats => {
+//     const stats = selectSlimWeaponStatData(state)
+//     const allAdjustmentParams = selectAttackElementCorrectParams(state)
+//     const adjustmentParams = allAdjustmentParams.find(x => x.id == stats.attack_element_correct_param_id)
+//     return new WeaponStatsCalculator({}).calculate()
+// }
+
+// const calculateWeaponStats = (
+//     weapon: Weapon,
+//     slimData: SlimWeaponStatData,
+//     adjustmentParams: AttackElementCorrectParam,
+//     attributes: Attributes
+// ): CalculatedWeaponStats => {
+//     return {
+//         attack: {
+//             base: {
+//                 physical:  slimData.attack.physical,
+//                 magic:     slimData.attack.magic,
+//                 fire:      slimData.attack.fire,
+//                 lightning: slimData.attack.lightning,
+//                 holy:      slimData.attack.holy,
+//                 critical:  null,
+//             },
+//             scaled: {
+//             },
+//         },
+//     }
+// }
+

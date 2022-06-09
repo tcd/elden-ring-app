@@ -1,3 +1,5 @@
 export * from "./AttackElementCorrectParam"
+export * from "./CalculatedWeaponStats"
 export * from "./WeaponStatData"
+export * from "./SlimWeaponStatData"
 export * from "./WeaponStat"

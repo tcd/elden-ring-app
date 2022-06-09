@@ -24,6 +24,7 @@ export const BuilderSelectors = {
         weapons:               Api.selectWeapons,
         weaponTypes:           Api.selectWeaponTypes,
         weaponSkills:          Api.selectWeaponSkills,
+        adjustmentParams:      Api.selectAttackElementCorrectParams,
     },
     misc: {
         whichCharacterStatus: Misc.selectWhichCharacterStatus,
