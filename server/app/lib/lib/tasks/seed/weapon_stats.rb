@@ -20,6 +20,10 @@ module Lib
         #   @return [Array<Hash>]
         attr_accessor :scaling_data
 
+        # @!attribute calc_correct_data
+        #   @return [Array<Hash>]
+        attr_accessor :calc_correct_data
+
         # @return [void]
         def initialize()
           self.weapon_affinity_ids = {}
@@ -28,13 +32,14 @@ module Lib
           self.weapon_ids = {}
           Weapon.all.each { |x| weapon_ids[x.name] = x.id }
 
-          self.attack_data  = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Attack.tsv"))
-          self.scaling_data = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Scaling.tsv"))
+          self.attack_data       = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Attack.tsv"))
+          self.scaling_data      = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Scaling.tsv"))
+          self.calc_correct_data = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "CalcCorrectGraph_ID.tsv"))
         end
 
         # @return [void]
         def seed()
-          # WeaponStat.destroy_all()
+          WeaponStat.destroy_all()
           invalid = Lib::Tasks::Seed.from_json("weapon-with-affinity.json", WeaponStat) { |x| process(x) }
           return invalid
         end
@@ -52,19 +57,34 @@ module Lib
           attack_data_output  = self.process_attack(attack_data_input)
           scaling_data_output = self.process_scaling(scaling_data_input)
 
+          calc_correct_data_input = self.calc_correct_data.first { |x| x["weapon_attack_stat_name"] == name }
+          calc_correct_data_output = self.process_calc_correct(calc_correct_data_input)
+
           output = {
             name: name,
-
-            attack_element_correct_param_id: input["attack_element_correct_id"],
 
             weapon_id:          self.weapon_ids[weapon_name],
             weapon_affinity_id: self.weapon_affinity_ids[affinity_name],
 
             **attack_data_output,
             **scaling_data_output,
+            **calc_correct_data_output,
           }
 
           return output
+        end
+
+        # @param input [Hash]
+        # @return [Hash]
+        def process_calc_correct(input)
+          return {
+            attack_element_correct_param_id: input["attack_element_correct_id"],
+            calc_correct_physical:           input["physical"],
+            calc_correct_magic:              input["magic"],
+            calc_correct_fire:               input["fire"],
+            calc_correct_lightning:          input["lightning"],
+            calc_correct_holy:               input["holy"],
+          }
         end
 
         # @param input [Hash]
