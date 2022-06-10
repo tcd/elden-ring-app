@@ -39,7 +39,7 @@ const devState: WeaponsState = {
     slots: {
         ...initialState.slots,
         R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
-        // R2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "" },
+        R2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Blasphemous Blade"        },
         R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
         L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
         // L2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "" },

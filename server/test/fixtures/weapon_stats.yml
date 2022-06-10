@@ -3,6 +3,11 @@ heavy_claymore:
   weapon_affinity: "heavy"
   attack_element_correct_param: "number_10_000"
   name: "Heavy Claymore"
+  calc_correct_physical:  1
+  calc_correct_magic:     0
+  calc_correct_fire:      0
+  calc_correct_lightning: 0
+  calc_correct_holy:      0
   attack_physical_0:   126.35
   attack_magic_0:      0
   attack_fire_0:       0

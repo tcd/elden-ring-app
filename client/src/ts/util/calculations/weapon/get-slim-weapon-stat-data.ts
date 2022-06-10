@@ -20,6 +20,13 @@ export const getSlimWeaponStatData = (statData: WeaponStat, level: number): Slim
             faith:        statData[`scaling_faith_${level}`],
             arcane:       statData[`scaling_arcane_${level}`],
         },
+        calc_correct: {
+            physical:  statData["calc_correct_physical"],
+            magic:     statData["calc_correct_magic"],
+            fire:      statData["calc_correct_fire"],
+            lightning: statData["calc_correct_lightning"],
+            holy:      statData["calc_correct_holy"],
+        },
         attack_element_correct_param_id: statData.attack_element_correct_param_id,
     }
     return result

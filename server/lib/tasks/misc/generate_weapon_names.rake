@@ -6,12 +6,11 @@ namespace(:misc) do
     input.each do |row|
       name_with_affinity = row["weapon_attack_stat_name"]&.strip()
       weapon_name, affinity_name = Lib::WeaponNameProcessing.process_name(name_with_affinity)
-      calc_id = row["attack_element_correct_id"]&.strip().to_i
       results.push({
         weapon: weapon_name,
         affinity: affinity_name,
         name_with_affinity: name_with_affinity,
-        attack_element_correct_id: calc_id,
+        # attack_element_correct_id: row["attack_element_correct_id"]&.strip().to_i,
       })
       pb.increment()
     end

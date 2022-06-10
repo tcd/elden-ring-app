@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_26_193432) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_10_175352) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -820,6 +820,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_26_193432) do
     t.decimal "scaling_arcane_25", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "calc_correct_physical", null: false
+    t.integer "calc_correct_magic", null: false
+    t.integer "calc_correct_fire", null: false
+    t.integer "calc_correct_lightning", null: false
+    t.integer "calc_correct_holy", null: false
     t.index ["attack_element_correct_param_id"], name: "index_weapon_stats_on_attack_element_correct_param_id"
     t.index ["name"], name: "index_weapon_stats_on_name", unique: true
     t.index ["weapon_affinity_id"], name: "index_weapon_stats_on_weapon_affinity_id"

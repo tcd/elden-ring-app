@@ -123,15 +123,26 @@ const myBuild: BuilderState = {
     startingClassName: StartingClassName.Samurai,
 
     attributes: {
-        "vigor":        50,
-        "mind":         40,
-        "endurance":    60,
-        "strength":     80,
-        "dexterity":    50,
+        "vigor":        30,
+        "mind":         30,
+        "endurance":    30,
+        "strength":     30,
+        "dexterity":    30,
         "intelligence": 30,
-        "faith":        80,
+        "faith":        30,
         "arcane":       30,
     },
+
+    // attributes: {
+    //     "vigor":        50,
+    //     "mind":         40,
+    //     "endurance":    60,
+    //     "strength":     80,
+    //     "dexterity":    50,
+    //     "intelligence": 30,
+    //     "faith":        80,
+    //     "arcane":       30,
+    // },
 
     // talisman_names: {
     //     "1": "Silver Scarab",

@@ -15,5 +15,12 @@ export interface SlimWeaponStatData {
         faith:        number
         arcane:       number
     }
+    calc_correct: {
+        physical:  Integer
+        magic:     Integer
+        fire:      Integer
+        lightning: Integer
+        holy:      Integer
+    }
     attack_element_correct_param_id: number
 }
