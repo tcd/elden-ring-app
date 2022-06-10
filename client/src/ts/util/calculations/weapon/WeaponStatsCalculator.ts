@@ -7,7 +7,7 @@ import {
 } from "@app/types"
 
 import {
-    AttributeChecklist,
+    AttrMap,
 } from "./sheets"
 
 export interface WeaponStatsCalculatorOptions {
@@ -25,7 +25,7 @@ export class WeaponStatsCalculator {
     private adjustmentParams: AttackElementCorrectParam
     private attributes: Attributes
 
-    private attributeRequirementsMet: AttributeChecklist
+    private attributeRequirementsMet: AttrMap<boolean>
 
     public stats: CalculatedWeaponStats
 
@@ -56,11 +56,4 @@ export class WeaponStatsCalculator {
     public calculate(): void {
         return null
     }
-
-    // private get CalcCorrectGraph_ID() { return this.weapon.calc}
-
 }
-
-// =============================================================================
-// Requirements
-// =============================================================================

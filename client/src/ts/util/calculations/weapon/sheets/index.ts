@@ -1,4 +1,4 @@
-export * from "./checklists"
+export * from "./types"
 
-export * from "./DamageType__Attribute__RequirementMet"
-export * from "./DamageType__ScalesOn__Attribute"
+export * from "./Dmg_ScalesOn_Attr"
+export * from "./Dmg_Attr_RequirementMet"
