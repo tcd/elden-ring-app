@@ -10,7 +10,7 @@ export interface CalculatedWeaponStats {
             fire:      number
             lightning: number
             holy:      number
-            critical:  number
+            // critical:  number
         }
         scaled: {
             physical:  number
@@ -18,7 +18,14 @@ export interface CalculatedWeaponStats {
             fire:      number
             lightning: number
             holy:      number
-            critical:  number
+            // critical:  number
+        }
+        total: {
+            physical:  number
+            magic:     number
+            fire:      number
+            lightning: number
+            holy:      number
         }
     }
     defense: {
