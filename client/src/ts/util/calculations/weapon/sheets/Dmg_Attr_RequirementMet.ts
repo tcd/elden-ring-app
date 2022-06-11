@@ -3,13 +3,9 @@ import {
     Dmg,
     AttrMap,
     DmgAttrMap,
-    Dmg_ScalesOn_Attr,
 } from "."
 
-// {dmg} {stat} Requirement Met?
-export type Dmg_Attr_RequirementMet = DmgAttrMap<boolean>
-
-export const damageTypeAttributeRequirementMet = (attrMet: AttrMap<boolean>, scalesOn: Dmg_ScalesOn_Attr): Dmg_Attr_RequirementMet => {
+export const damageTypeAttributeRequirementMet = (attrMet: AttrMap<boolean>, scalesOn: DmgAttrMap<boolean>): DmgAttrMap<boolean> => {
     return {
         [Dmg.physical]: {
             [Attr.strength]:     scalesOn.physical.strength      && attrMet.strength,

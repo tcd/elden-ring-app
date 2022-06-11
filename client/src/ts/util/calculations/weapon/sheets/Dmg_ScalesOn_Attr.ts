@@ -8,10 +8,7 @@ import {
     DmgAttrMap,
 } from "."
 
-// {dmg} Scales on {stat}?
-export type Dmg_ScalesOn_Attr = DmgAttrMap<boolean>
-
-export const damageTypeScalesOnAttribute = (adjustmentParam: AttackElementCorrectParam): Dmg_ScalesOn_Attr => {
+export const damageTypeScalesOnAttribute = (adjustmentParam: AttackElementCorrectParam): DmgAttrMap<boolean> => {
     return {
         [Dmg.physical]: {
             [Attr.strength]:     adjustmentParam.isStrengthCorrect_byPhysics,
@@ -26,7 +23,6 @@ export const damageTypeScalesOnAttribute = (adjustmentParam: AttackElementCorrec
             [Attr.intelligence]: adjustmentParam.isMagicCorrect_byMagic,
             [Attr.faith]:        adjustmentParam.isFaithCorrect_byMagic,
             [Attr.arcane]:       adjustmentParam.isLuckCorrect_byMagic,
-
         },
         [Dmg.fire]: {
             [Attr.strength]:     adjustmentParam.isStrengthCorrect_byFire,
