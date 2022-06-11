@@ -9,42 +9,42 @@ import {
 // {dmg} {stat} Requirement Met?
 export type Dmg_Attr_RequirementMet = DmgAttrMap<boolean>
 
-export const damageTypeAttributeRequirementMet = (attributeMet: AttrMap<boolean>, scales: Dmg_ScalesOn_Attr): Dmg_Attr_RequirementMet => {
+export const damageTypeAttributeRequirementMet = (attrMet: AttrMap<boolean>, scalesOn: Dmg_ScalesOn_Attr): Dmg_Attr_RequirementMet => {
     return {
         [Dmg.physical]: {
-            [Attr.strength]:     scales.physical.strength      && attributeMet.strength,
-            [Attr.dexterity]:    scales.physical.dexterity     && attributeMet.dexterity,
-            [Attr.intelligence]: scales.physical.intelligence  && attributeMet.intelligence,
-            [Attr.faith]:        scales.physical.faith         && attributeMet.faith,
-            [Attr.arcane]:       scales.physical.arcane        && attributeMet.arcane,
+            [Attr.strength]:     scalesOn.physical.strength      && attrMet.strength,
+            [Attr.dexterity]:    scalesOn.physical.dexterity     && attrMet.dexterity,
+            [Attr.intelligence]: scalesOn.physical.intelligence  && attrMet.intelligence,
+            [Attr.faith]:        scalesOn.physical.faith         && attrMet.faith,
+            [Attr.arcane]:       scalesOn.physical.arcane        && attrMet.arcane,
         },
         [Dmg.magic]: {
-            [Attr.strength]:     scales.magic.strength         && attributeMet.strength,
-            [Attr.dexterity]:    scales.magic.dexterity        && attributeMet.dexterity,
-            [Attr.intelligence]: scales.magic.intelligence     && attributeMet.intelligence,
-            [Attr.faith]:        scales.magic.faith            && attributeMet.faith,
-            [Attr.arcane]:       scales.magic.arcane           && attributeMet.arcane,
+            [Attr.strength]:     scalesOn.magic.strength         && attrMet.strength,
+            [Attr.dexterity]:    scalesOn.magic.dexterity        && attrMet.dexterity,
+            [Attr.intelligence]: scalesOn.magic.intelligence     && attrMet.intelligence,
+            [Attr.faith]:        scalesOn.magic.faith            && attrMet.faith,
+            [Attr.arcane]:       scalesOn.magic.arcane           && attrMet.arcane,
         },
         [Dmg.fire]: {
-            [Attr.strength]:     scales.lightning.strength     && attributeMet.strength,
-            [Attr.dexterity]:    scales.lightning.dexterity    && attributeMet.dexterity,
-            [Attr.intelligence]: scales.lightning.intelligence && attributeMet.intelligence,
-            [Attr.faith]:        scales.lightning.faith        && attributeMet.faith,
-            [Attr.arcane]:       scales.lightning.arcane       && attributeMet.arcane,
+            [Attr.strength]:     scalesOn.lightning.strength     && attrMet.strength,
+            [Attr.dexterity]:    scalesOn.lightning.dexterity    && attrMet.dexterity,
+            [Attr.intelligence]: scalesOn.lightning.intelligence && attrMet.intelligence,
+            [Attr.faith]:        scalesOn.lightning.faith        && attrMet.faith,
+            [Attr.arcane]:       scalesOn.lightning.arcane       && attrMet.arcane,
         },
         [Dmg.lightning]: {
-            [Attr.strength]:     scales.holy.strength          && attributeMet.strength,
-            [Attr.dexterity]:    scales.holy.dexterity         && attributeMet.dexterity,
-            [Attr.intelligence]: scales.holy.intelligence      && attributeMet.intelligence,
-            [Attr.faith]:        scales.holy.faith             && attributeMet.faith,
-            [Attr.arcane]:       scales.holy.arcane            && attributeMet.arcane,
+            [Attr.strength]:     scalesOn.holy.strength          && attrMet.strength,
+            [Attr.dexterity]:    scalesOn.holy.dexterity         && attrMet.dexterity,
+            [Attr.intelligence]: scalesOn.holy.intelligence      && attrMet.intelligence,
+            [Attr.faith]:        scalesOn.holy.faith             && attrMet.faith,
+            [Attr.arcane]:       scalesOn.holy.arcane            && attrMet.arcane,
         },
         [Dmg.holy]: {
-            [Attr.strength]:     scales.fire.strength          && attributeMet.strength,
-            [Attr.dexterity]:    scales.fire.dexterity         && attributeMet.dexterity,
-            [Attr.intelligence]: scales.fire.intelligence      && attributeMet.intelligence,
-            [Attr.faith]:        scales.fire.faith             && attributeMet.faith,
-            [Attr.arcane]:       scales.fire.arcane            && attributeMet.arcane,
+            [Attr.strength]:     scalesOn.fire.strength          && attrMet.strength,
+            [Attr.dexterity]:    scalesOn.fire.dexterity         && attrMet.dexterity,
+            [Attr.intelligence]: scalesOn.fire.intelligence      && attrMet.intelligence,
+            [Attr.faith]:        scalesOn.fire.faith             && attrMet.faith,
+            [Attr.arcane]:       scalesOn.fire.arcane            && attrMet.arcane,
         },
     }
 }

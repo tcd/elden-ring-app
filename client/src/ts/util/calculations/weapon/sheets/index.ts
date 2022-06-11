@@ -1,3 +1,4 @@
+export * from "./google-sheets-math-functions"
 export * from "./types"
 
 export * from "./Dmg_ScalesOn_Attr"
