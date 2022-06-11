@@ -75,12 +75,9 @@ export class WeaponStatsCalculator {
     public calculate(): void {
         this.dmg_scalesOn_attr       = damageTypeScalesOnAttribute(this.adjustmentParams)
         this.dmg_attr_requirementMet = damageTypeAttributeRequirementMet(this.attr_requirementsMet, this.dmg_scalesOn_attr)
-        this.calculateCalcCorrect()
+        this.set_dmg_attr_calcCorrect()
+        this.set_dmg_requirementsMet()
         return null
-    }
-
-    private areDmgRequirementsMet(dmg: DmgValue): boolean {
-        return Object.values(this.dmg_attr_requirementMet[dmg]).every(x => x == true)
     }
 
     private calcCorrect = (dmg: DmgValue, attr: AttrValue): Decimal => {
@@ -94,7 +91,7 @@ export class WeaponStatsCalculator {
         return calcCorrect(level, calcCorrectId)
     }
 
-    private calculateCalcCorrect(): void {
+    private set_dmg_attr_calcCorrect(): void {
         this.dmg_attr_calcCorrect = newDmgAttrMap<Decimal>()
         for (const dmg in Object.values(Dmg)) {
             for (const attr in Object.values(Attr)) {
@@ -102,42 +99,12 @@ export class WeaponStatsCalculator {
             }
         }
         return null
-        // this.dmg_attr_calcCorrect = {
-        //     [Dmg.physical]: {
-        //         [Attr.strength]:     this.calcCorrect(Dmg.physical, Attr.strength),
-        //         [Attr.dexterity]:    this.calcCorrect(Dmg.physical, Attr.dexterity),
-        //         [Attr.intelligence]: this.calcCorrect(Dmg.physical, Attr.intelligence),
-        //         [Attr.faith]:        this.calcCorrect(Dmg.physical, Attr.faith),
-        //         [Attr.arcane]:       this.calcCorrect(Dmg.physical, Attr.arcane),
-        //     },
-        //     [Dmg.magic]: {
-        //         [Attr.strength]:     null,
-        //         [Attr.dexterity]:    null,
-        //         [Attr.intelligence]: null,
-        //         [Attr.faith]:        null,
-        //         [Attr.arcane]:       null,
-        //     },
-        //     [Dmg.fire]: {
-        //         [Attr.strength]:     null,
-        //         [Attr.dexterity]:    null,
-        //         [Attr.intelligence]: null,
-        //         [Attr.faith]:        null,
-        //         [Attr.arcane]:       null,
-        //     },
-        //     [Dmg.lightning]: {
-        //         [Attr.strength]:     null,
-        //         [Attr.dexterity]:    null,
-        //         [Attr.intelligence]: null,
-        //         [Attr.faith]:        null,
-        //         [Attr.arcane]:       null,
-        //     },
-        //     [Dmg.holy]: {
-        //         [Attr.strength]:     null,
-        //         [Attr.dexterity]:    null,
-        //         [Attr.intelligence]: null,
-        //         [Attr.faith]:        null,
-        //         [Attr.arcane]:       null,
-        //     },
-        // }
+    }
+
+    private set_dmg_requirementsMet(): void {
+        this.dmg_requirementsMet = {} as DmgMap<boolean>
+        for (const [key, value] of Object.entries(this.dmg_attr_requirementMet)) {
+            this.dmg_requirementsMet[key] = Object.values(value).every(x => x == true)
+        }
     }
 }
