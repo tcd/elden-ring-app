@@ -1,3 +1,5 @@
+import { WeaponStatsCalculator } from "elden-ring-calculator"
+
 import {
     CalculatedWeaponStats,
     Weapon,
@@ -12,9 +14,11 @@ import {
     isBlank,
     compactArray,
     getSlimWeaponStatData,
+    getRequirements,
 } from "@app/util"
 import { RootState } from "@app/state"
 import { selectWeapons, selectAttackElementCorrectParams } from "@app/features/builder/state/selectors/api"
+import { selectAttributes } from "@app/features/builder/state/selectors/attributes"
 import { WEAPON_AFFINITIES } from "@app/data"
 
 // const selectWeaponsState = (state: RootState) => { return state?.Weapons }
@@ -112,32 +116,19 @@ const selectSlimWeaponStatData = (state: RootState): SlimWeaponStatData => {
     return result
 }
 
-// const selectCalculatedWeaponStats = (state: RootState): CalculatedWeaponStats => {
-//     const stats = selectSlimWeaponStatData(state)
-//     const allAdjustmentParams = selectAttackElementCorrectParams(state)
-//     const adjustmentParams = allAdjustmentParams.find(x => x.id == stats.attack_element_correct_param_id)
-//     return new WeaponStatsCalculator({}).calculate()
-// }
+export const selectCalculatedWeaponStats = (state: RootState): CalculatedWeaponStats => {
+    const attributes = selectAttributes(state)
+    const weapon = selectActiveWeapon(state)
+    const stats = selectSlimWeaponStatData(state)
+    const allAdjustmentParams = selectAttackElementCorrectParams(state)
 
-// const calculateWeaponStats = (
-//     weapon: Weapon,
-//     slimData: SlimWeaponStatData,
-//     adjustmentParams: AttackElementCorrectParam,
-//     attributes: Attributes
-// ): CalculatedWeaponStats => {
-//     return {
-//         attack: {
-//             base: {
-//                 physical:  slimData.attack.physical,
-//                 magic:     slimData.attack.magic,
-//                 fire:      slimData.attack.fire,
-//                 lightning: slimData.attack.lightning,
-//                 holy:      slimData.attack.holy,
-//                 critical:  null,
-//             },
-//             scaled: {
-//             },
-//         },
-//     }
-// }
+    const adjustmentParams = allAdjustmentParams.find(x => x.id == stats.attack_element_correct_param_id)
+    const requirements = getRequirements(weapon)
+    return new WeaponStatsCalculator({
+        slimData: stats,
+        adjustmentParams: adjustmentParams,
+        requirements: requirements,
+        attributes: attributes,
+    }).calculate()
+}
 

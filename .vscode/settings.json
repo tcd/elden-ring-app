@@ -1,6 +1,6 @@
 {
     // "terminal.integrated.defaultProfile.windows": "PowerShell",
-    // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
+    "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
     "eslint.format.enable": true,
     "[javascript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
     "[typescript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },

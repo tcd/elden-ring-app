@@ -28,20 +28,20 @@ export interface CalculatedWeaponStats {
             holy:      number
         }
     }
-    defense: {
-        physical:   number
-        magic:      number
-        fire:       number
-        lightning:  number
-        holy:       number
-        guardBoost: number
-    }
+    // defense: {
+    //     physical:   number
+    //     magic:      number
+    //     fire:       number
+    //     lightning:  number
+    //     holy:       number
+    //     guardBoost: number
+    // }
     scaling: {
-        strength:     number
-        dexterity:    number
-        intelligence: number
-        faith:        number
-        arcane:       number
+        strength:     string
+        dexterity:    string
+        intelligence: string
+        faith:        string
+        arcane:       string
     }
     // requirements: {
     //     strength:     number

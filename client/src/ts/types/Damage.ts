@@ -16,9 +16,9 @@ export type StatusEffect =
     | typeof SCARLET_ROT
 
 export const PHYSICAL_DAMAGE  = "Physical"
-export const STRIKE_DAMAGE    = "Strike"
-export const SLASH_DAMAGE     = "Slash"
-export const PIERCE_DAMAGE    = "Pierce"
+// export const STRIKE_DAMAGE    = "Strike"
+// export const SLASH_DAMAGE     = "Slash"
+// export const PIERCE_DAMAGE    = "Pierce"
 export const MAGIC_DAMAGE     = "Magic"
 export const FIRE_DAMAGE      = "Fire"
 export const LIGHTNING_DAMAGE = "Lightning"
@@ -26,9 +26,9 @@ export const HOLY_DAMAGE      = "Holy"
 
 export type DamageType =
     | typeof PHYSICAL_DAMAGE
-    | typeof STRIKE_DAMAGE
-    | typeof SLASH_DAMAGE
-    | typeof PIERCE_DAMAGE
+    // | typeof STRIKE_DAMAGE
+    // | typeof SLASH_DAMAGE
+    // | typeof PIERCE_DAMAGE
     | typeof MAGIC_DAMAGE
     | typeof FIRE_DAMAGE
     | typeof LIGHTNING_DAMAGE
