@@ -1,19 +1,19 @@
 export interface SlimWeaponStatData {
     attack: {
-        physical:  number
-        magic:     number
-        fire:      number
-        lightning: number
-        holy:      number
+        physical:  Decimal
+        magic:     Decimal
+        fire:      Decimal
+        lightning: Decimal
+        holy:      Decimal
         // critical:  number
         // stamina:  number
     }
     scaling: {
-        strength:     number
-        dexterity:    number
-        intelligence: number
-        faith:        number
-        arcane:       number
+        strength:     Decimal
+        dexterity:    Decimal
+        intelligence: Decimal
+        faith:        Decimal
+        arcane:       Decimal
     }
     calc_correct: {
         physical:  Integer
@@ -22,5 +22,5 @@ export interface SlimWeaponStatData {
         lightning: Integer
         holy:      Integer
     }
-    attack_element_correct_param_id: number
+    attack_element_correct_param_id: Integer
 }
