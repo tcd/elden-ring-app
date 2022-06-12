@@ -31,6 +31,8 @@ export const WeaponMenu = (): JSX.Element => {
     const weapon = useSelector(Selectors.Weapons.active.weapon)
     const weapons = useSelector(Selectors.Builder.api.weapons)
     const weaponTypes = useSelector(Selectors.Builder.api.weaponTypes)
+    const newStats = useSelector(Selectors.Weapons.active.calculatedStats)
+    const oldStats = useSelector(Selectors.Weapons.oldWeaponStats)
 
     const vigor        = useSelector(Selectors.Builder.attribute.vigor)
     const mind         = useSelector(Selectors.Builder.attribute.mind)
@@ -92,7 +94,11 @@ export const WeaponMenu = (): JSX.Element => {
                 </div>
             </div>
             <div>
-                <WeaponDetail weapon={weapon} />
+                <WeaponDetail
+                    weapon={weapon}
+                    newStats={newStats}
+                    oldStats={oldStats}
+                />
             </div>
         </div>
     )

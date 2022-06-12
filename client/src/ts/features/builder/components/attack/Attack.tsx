@@ -13,13 +13,16 @@ export const Attack = (): JSX.Element => {
     const L2 = useSelector(Selectors.Weapons.bySlot.L2)
     const L3 = useSelector(Selectors.Weapons.bySlot.L3)
 
+    const actieSlotId     = useSelector(Selectors.Weapons.activeSlotId)
+    const calculatedStats = useSelector(Selectors.Weapons.active.calculatedStats)
+
     const attackPowerValues = [
-        { title: "R Armament 1", value: R1?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 1"] },
-        { title: "R Armament 2", value: R2?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 2"] },
-        { title: "R Armament 3", value: R3?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 3"] },
-        { title: "L Armament 1", value: L1?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Left Hand Armament 1"]  },
-        { title: "L Armament 2", value: L2?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Left Hand Armament 2"]  },
-        { title: "L Armament 3", value: L3?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Left Hand Armament 3"]  },
+        { id: "R1", title: "R Armament 1", value: R1?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 1"] },
+        { id: "R2", title: "R Armament 2", value: R2?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 2"] },
+        { id: "R3", title: "R Armament 3", value: R3?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 3"] },
+        { id: "L1", title: "L Armament 1", value: L1?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Left Hand Armament 1"]  },
+        { id: "L2", title: "L Armament 2", value: L2?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Left Hand Armament 2"]  },
+        { id: "L3", title: "L Armament 3", value: L3?.attack_physical ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Left Hand Armament 3"]  },
     ]
 
     const rows = attackPowerValues.map(({ title, value, description }) => {

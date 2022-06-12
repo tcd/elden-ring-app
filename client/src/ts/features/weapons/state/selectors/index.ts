@@ -9,6 +9,7 @@ export const WeaponsSelectors = {
         weapon: Core.selectActiveWeapon,
         weaponName: Core.selectActiveWeaponName,
         weaponSettings: Core.selectActiveWeaponSettings,
+        calculatedStats: Core.selectCalculatedWeaponStats,
     },
     bySlot: {
         R1: Core.selectR1Weapon,
@@ -18,6 +19,7 @@ export const WeaponsSelectors = {
         L2: Core.selectL2Weapon,
         L3: Core.selectL3Weapon,
     },
+    oldWeaponStats: Core.selectOldWeaponStats,
     /**
     * Returns an array of all equipped weapons.
     *
