@@ -17,6 +17,14 @@ module Serializers
       :attack_element_correct_param_id,
     )
 
+    fields(
+      :calc_correct_physical,
+      :calc_correct_magic,
+      :calc_correct_fire,
+      :calc_correct_lightning,
+      :calc_correct_holy,
+    )
+
     float_field(:attack_physical_0)
     float_field(:attack_physical_1)
     float_field(:attack_physical_2)

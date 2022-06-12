@@ -57,7 +57,7 @@ module Lib
           attack_data_output  = self.process_attack(attack_data_input)
           scaling_data_output = self.process_scaling(scaling_data_input)
 
-          calc_correct_data_input = self.calc_correct_data.first { |x| x["weapon_attack_stat_name"] == name }
+          calc_correct_data_input = self.calc_correct_data.find { |x| x["weapon_attack_stat_name"] == name }
           calc_correct_data_output = self.process_calc_correct(calc_correct_data_input)
 
           output = {
