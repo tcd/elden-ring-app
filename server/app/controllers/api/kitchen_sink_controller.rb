@@ -1,6 +1,9 @@
 module Api
   # Everything
   class KitchenSinkController < ApiController
+    prepend Lib::Helpers::Cacheable
+
+    caches_action(:index, layout: false)
 
     # Returns information about everything
     #
@@ -8,7 +11,7 @@ module Api
     # @action GET
     # @response 200 Ok
     def index()
-      data = Models::Transient::KitchenSink.create()
+      @data = Models::Transient::KitchenSink.create()
       # armor         = Armor.includes(:armor_type).all().order(name: :asc)
       # spells        = Spell.all().order(name: :asc)
       # talismans     = Talisman.includes(:equipment_effects).all()
@@ -27,7 +30,7 @@ module Api
       #   attack_element_correct_params: aec_params,
       # }
 
-      render_json(data)
+      render_json(@data)
     end
 
   end
