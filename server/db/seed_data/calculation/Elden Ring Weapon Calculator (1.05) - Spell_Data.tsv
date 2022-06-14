@@ -1,0 +1,408 @@
+Type	Name	AtkID	Physical MV	Magic MV	Fire MV	Lightning MV	Holy MV	Stamina Damage	Poise Damage PvE	Poise Damage PvP	PhysAtkAttribute	Shield Chip	Damage Level	Other			PvP Alter	Duration	Status	Buildup	Heal Multiplier	Damage Boosted By 1	Damage Boosted By 2	Damage Boost Multiplier	Status Effect
+Sorcery	Glintstone Pebble	40000	0	152	0	0	0	20	3	30	Standard	0	1											1	
+Sorcery	Swift Glintstone Shard	40100	0	114	0	0	0	17	2	20	Standard	0	8											1	
+Sorcery	Great Glintstone Shard	40010	0	202	0	0	0	45	5.5	55	Standard	0	1											1	
+Sorcery	Glintstone Cometshard	40200	0	238	0	0	0	40	5.5	55	Standard	0	1											1	
+Sorcery	Glintstone Cometshard - Charged	40201	0	287	0	0	0	45	10.175	101.75	Standard	0	1											1	
+Sorcery	Comet	40210	0	267	0	0	0	50	7	70	Standard	0	1											1	
+Sorcery	Comet - Charged	40211	0	320	0	0	0	65	12.95	129.5	Standard	0	2											1	
+Sorcery	Comet - Charged (AoE)	40212	0	320	0	0	0	65	12.95	129.5	Standard	0	2											1	
+Sorcery	Shard Spiral	40300	0	87	0	0	0	20	2	20	Standard	0	1											1	
+Sorcery	Shard Spiral - Charged	40301	0	102	0	0	0	26	3.7	37	Standard	0	1											1	
+Sorcery	Glintstone Stars	40400	0	85	0	0	0	12	2	20	Standard	0	1											1	
+Sorcery	Glintstone Stars	40401	0	75	0	0	0	12	2	20	Standard	0	1											1	
+Sorcery	Glintstone Stars	40402	0	65	0	0	0	12	2	20	Standard	0	1											1	
+Sorcery	Glintstone Stars - Charged	40405	0	95	0	0	0	15	3.7	37	Standard	0	1											1	
+Sorcery	Glintstone Stars - Charged	40406	0	85	0	0	0	15	3.7	37	Standard	0	1											1	
+Sorcery	Glintstone Stars - Charged	40407	0	75	0	0	0	15	3.7	37	Standard	0	1											1	
+Sorcery	Star Shower	40500	0	79	0	0	0	12	1	10	Standard	0	1											1	
+Sorcery	Star Shower	40501	0	69	0	0	0	12	1	10	Standard	0	1											1	
+Sorcery	Star Shower	40502	0	69	0	0	0	12	1	10	Standard	0	1											1	
+Sorcery	Star Shower	40503	0	59	0	0	0	12	1	10	Standard	0	1											1	
+Sorcery	Star Shower	40504	0	49	0	0	0	12	1	10	Standard	0	1											1	
+Sorcery	Star Shower	40505	0	44	0	0	0	12	1	10	Standard	0	1											1	
+Sorcery	Star Shower - Charged	40510	0	88	0	0	0	15	1.85	18.5	Standard	0	1											1	
+Sorcery	Star Shower - Charged	40511	0	78	0	0	0	15	1.85	18.5	Standard	0	1											1	
+Sorcery	Star Shower - Charged	40512	0	68	0	0	0	15	1.85	18.5	Standard	0	1											1	
+Sorcery	Star Shower - Charged	40513	0	63	0	0	0	15	1.85	18.5	Standard	0	1											1	
+Sorcery	Star Shower - Charged	40514	0	58	0	0	0	15	1.85	18.5	Standard	0	1											1	
+Sorcery	Star Shower - Charged	40515	0	53	0	0	0	15	1.85	18.5	Standard	0	1											1	
+Sorcery	Glintstone Arc	40070	0	148	0	0	0	18	5	50	Standard	0	1											1	
+Sorcery	Crystal Barrage	40600	0	36	0	0	0	5	0.5	5	Standard	0	0											1	
+Sorcery	Crystal Burst	40900	0	40	0	0	0	17	1	10	Standard	0	8											1	
+Sorcery	Crystal Burst - Charged	40905	0	45	0	0	0	17	1.85	18.5	Standard	0	8											1	
+Sorcery	Cannon of Haima	40801	0	270	0	0	0	200	16.114	161.14	Standard	0	7											1	
+Sorcery	Cannon of Haima - Charged	40806	0	312	0	0	0	260	19.296	192.96	Standard	0	7											1	
+Sorcery	Gavel of Haima 1	41200	0	282	0	0	0	230	22.512	225.12	Standard	0	6											1	
+Sorcery	Gavel of Haima 1 (AoE)	41205	0	242	0	0	0	180	16.114	161.14	Standard	0	6											1	
+Sorcery	Gavel of Haima 2	41201	0	282	0	0	0	230	22.512	225.12	Standard	0	6											1	
+Sorcery	Gavel of Haima 2 (AoE)	41206	0	242	0	0	0	180	16.114	161.14	Standard	0	6											1	
+Sorcery	Shatter Earth (Bullet)	41000	0	182	0	0	0	50	10.175	101.75	Standard	0	2									Digger's Staff		1.2	
+Sorcery	Shatter Earth (Bullet)	41001	0	205	0	0	0	50	10.175	101.75	Standard	0	3									Digger's Staff		1.2	
+Sorcery	Shatter Earth (Bullet)	41002	0	52	0	0	0	30	1	10	Standard	0	8									Digger's Staff		1.2	
+Sorcery	Shatter Earth	41003	0	68	0	0	0	5	0.1	1	Standard	0	1									Digger's Staff		1.2	
+Sorcery	Shatter Earth	41004	0	68	0	0	0	5	0.1	1	Standard	0	1									Digger's Staff		1.2	
+Sorcery	Rock Blaster	41100	0	64	0	0	0	5	0.1	1	Standard	0	1									Digger's Staff		1.2	
+Sorcery	Rock Blaster	41101	0	212	0	0	0	50	5	50	Standard	0	2									Digger's Staff		1.2	
+Sorcery	Rock Blaster	41102	0	64	0	0	0	5	0.1	1	Standard	0	0									Digger's Staff		1.2	
+Sorcery	Rock Blaster	41103	0	64	0	0	0	5	0.1	1	Standard	0	0									Digger's Staff		1.2	
+Sorcery	Scholar's Armament		0	0	0	0	0	0	0	0	Standard	0	0	Adds magic AR to weapon (only uses int scaling)				90						1	
+Sorcery	Scholar's Shield		0	0	0	0	0	0	0	0	Standard	0	0	Increases shield magic damage negation by 70%, other damage negation by 30%, and stability by 1.2x				60						1	
+Sorcery	Starlight		0	0	0	0	0	0	0	0	Standard	0	0	Creates orb of light that follows the caster				60						1	
+Sorcery	Terra Magica	41300	0	0	0	0	0	0	0	0	Standard	0	0	1.35x magic damage while standing in sigil				30						1	
+Sorcery	Thops's Barrier	79984	0	0	0	0	0	0	0	0	Standard	0	0											1	
+Sorcery	Comet Azur	42000	0	55	0	0	0	10	1	10	Standard	0	2											1	
+Sorcery	Comet Azur	42002	0	75	0	0	0	10	0.5	5	Standard	0	0											1	
+Sorcery	Comet Azur	42003	0	100	0	0	0	20	5	50	Standard	0	7											1	
+Sorcery	Comet Azur	42004	0	55	0	0	0	20	5	50	Standard	0	7											1	
+Sorcery	Comet Azur	42001	0	90	0	0	0	10	0.5	5	Standard	0	1											1	
+Sorcery	Stars of Ruin	42200	0	52	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42201	0	52	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42202	0	49	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42203	0	49	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42204	0	45	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42205	0	45	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42206	0	43	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin	42207	0	43	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42210	0	60	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42211	0	60	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42212	0	55	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42213	0	55	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42214	0	52	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42215	0	52	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42216	0	49	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Stars of Ruin - Charged	42217	0	49	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Founding Rain of Stars	42100	0	49	0	0	0	15	0.5	5	Standard	0	0											1	
+Sorcery	Founding Rain of Stars - Charged	42105	0	54	0	0	0	20	0.925	9.25	Standard	0	0											1	
+Sorcery	Magic Glintblade	43900	0	182	0	0	0	20	5	50	Standard	0	1									Carian Glintblade Staff		1.15	
+Sorcery	Magic Glintblade - Charged	43905	0	203	0	0	0	26	9.25	92.5	Standard	0	1									Carian Glintblade Staff		1.15	
+Sorcery	Glintblade Phalanx (above head)	43000	0	60	0	0	0	25	1	10	Standard	0	1									Carian Glintblade Staff		1.15	
+Sorcery	Glintblade Phalanx	43001	0	60	0	0	0	25	1	10	Standard	0	2									Carian Glintblade Staff		1.15	
+Sorcery	Carian Phalanx (above head)	43010	0	48	0	0	0	25	1	10	Standard	0	1											1	
+Sorcery	Carian Phalanx	43011	0	48	0	0	0	25	1	10	Standard	0	2									Carian Glintblade Staff		1.15	
+Sorcery	Greatblade Phalanx (above head)	43020	0	100	0	0	0	80	10.175	101.75	Standard	0	2									Carian Glintblade Staff		1.15	
+Sorcery	Greatblade Phalanx	43021	0	100	0	0	0	80	10.175	101.75	Standard	0	3									Carian Glintblade Staff		1.15	
+Sorcery	Magic Downpour	43702	0	58	0	0	0	40	0.5	5	Standard	0	8											1	
+Sorcery	Magic Downpour	43705	0	58	0	0	0	40	0.5	5	Standard	0	8											1	
+Sorcery	Magic Downpour - Charged	43708	0	58	0	0	0	40	0.5	5	Standard	0	8											1	
+Sorcery	Magic Downpour - Charged	43711	0	58	0	0	0	40	0.5	5	Standard	0	8											1	
+Sorcery	Loretta's Greatbow	43801	0	270	0	0	0	180	7	70	Standard	0	3											1	
+Sorcery	Loretta's Greatbow - Charged	43806	0	330	0	0	0	234	12.95	129.5	Standard	0	3											1	
+Sorcery	Loretta's Mastery	43811	0	108	0	0	0	120	5	50	Standard	0	3											1	
+Sorcery	Loretta's Mastery - Charged	43816	0	127	0	0	0	156	9.25	92.5	Standard	0	3											1	
+Sorcery	Rennala's Full Moon	43600	0	360	0	0	0	200	13.634	136.34	Standard	0	3	Decreases target magic damage negation by -20%			-10%	60				Carian Regal Scepter		1.1	
+Sorcery	Ranni's Dark Moon	43610	0	330	0	0	0	200	13.634	136.34	Standard	0	3	Decreases target magic damage negation by -20%			-10%	60	Frost	270		Carian Regal Scepter		1.1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Carian Slicer	44400	0	180	0	0	0	40	3	30	Standard	0	1									Carian Glintstone Staff		1.15	
+Sorcery	Carian Slicer	44401	0	180	0	0	0	40	3	30	Standard	0	1									Carian Glintstone Staff		1.15	
+Sorcery	Carian Slicer - Running	44405	0	180	0	0	0	40	3	30	Standard	0	1									Carian Glintstone Staff		1.15	
+Sorcery	Carian Slicer - Rolling	44406	0	180	0	0	0	40	3	30	Standard	0	1									Carian Glintstone Staff		1.15	
+Sorcery	Carian Slicer - Mounted	44407	0	184	0	0	0	40	3	30	Standard	0	1									Carian Glintstone Staff		1.15	
+Sorcery	Carian Slicer - Mounted	44408	0	184	0	0	0	40	3	30	Standard	0	1									Carian Glintstone Staff		1.15	
+Sorcery	Carian Greatsword	44300	0	256	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Greatsword	44301	0	256	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Greatsword - Running	44305	0	256	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Greatsword - Rolling	44306	0	256	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Greatsword - Mounted	44307	0	260	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Greatsword - Mounted	44308	0	260	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Piercer	44500	0	272	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Piercer	44501	0	272	0	0	0	120	10.175	101.75	Standard	0	3									Carian Glintstone Staff		1.15	
+Sorcery	Carian Piercer - Charged	44505	0	312	0	0	0	156	12.95	129.5	Standard	0	7									Carian Glintstone Staff		1.15	
+Sorcery	Carian Piercer - Charged	44506	0	312	0	0	0	156	12.95	129.5	Standard	0	7									Carian Glintstone Staff		1.15	
+Sorcery	Adula's Moonblade	44310	0	133	0	0	0	90	7	70	Standard	0	3						Frost	90		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Adula's Moonblade	44311	0	133	0	0	0	90	7	70	Standard	0	3						Frost	90		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Adula's Moonblade	44315	0	133	0	0	0	90	7	70	Standard	0	3						Frost	90		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Adula's Moonblade	44316	0	133	0	0	0	90	7	70	Standard	0	3						Frost	90		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Adula's Moonblade - Mounted	44317	0	137	0	0	0	90	7	70	Standard	0	3						Frost	90		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Adula's Moonblade - Mounted	44318	0	137	0	0	0	90	7	70	Standard	0	3						Frost	90		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Adula's Moonblade (Projectile)	44319	0	189	0	0	0	30	3.5	35	Standard	0	2						Frost	35		Carian Glintstone Staff		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Lucidity	44800	0	0	0	0	0	0	0	0	Standard	0	0	Removes madness and sleep buildup from caster										1	
+Sorcery	Carian Retaliation 1 (above head)	46400	0	115	0	0	0	25	2	20	Standard	0	1											1	
+Sorcery	Carian Retaliation 1	46401	0	115	0	0	0	25	2	20	Standard	0	2											1	
+Sorcery	Carian Retaliation 2 (above head)	46410	0	165	0	0	0	25	2	20	Standard	0	1											1	
+Sorcery	Carian Retaliation 2	46411	0	165	0	0	0	25	2	20	Standard	0	2											1	
+Sorcery	Carian Retaliation 3 (above head)	46420	0	245	0	0	0	25	2	20	Standard	0	1											1	
+Sorcery	Carian Retaliation 3	46421	0	245	0	0	0	25	2	20	Standard	0	2											1	
+Sorcery	Ambush Shard	46000	0	146	0	0	0	20	3	30	Standard	0	8											1	
+Sorcery	Night Shard	46100	0	111	0	0	0	20	2	20	Standard	0	8									Staff of Loss		1.3	
+Sorcery	Night Comet	46200	0	230	0	0	0	40	5.5	55	Standard	0	1									Staff of Loss		1.3	
+Sorcery	Night Comet - Charged	46201	0	276	0	0	0	45	10.175	101.75	Standard	0	1									Staff of Loss		1.3	
+Sorcery	Night Maiden's Mist	65001	20	0	0	0	0	0	0	0	Standard	0	0											1	
+Sorcery	Night Maiden's Mist - Charged	65006	20	0	0	0	0	0	0	0	Standard	0	0											1	
+Sorcery	Unseen Blade		0	0	0	0	0	0	0	0	Standard	0	0	Makes weapon invisible				45				Staff of Loss		1.3	
+Sorcery	Unseen Form	46701	0	0	0	0	0	0	0	0	Standard	0	0	Makes caster transparent				30				Staff of Loss		1.3	
+Sorcery	Eternal Darkness	79982	0	0	0	0	0	0	0	0	Standard	0	0											1	
+Sorcery	Magma Shot	48000	0	0	198	0	0	54	5	50	Standard	0	3									Gelmir Glintstone Staff		1.15	
+Sorcery	Magma Shot	48003	0	0	43	0	0	0	0	0	Standard	0	0									Gelmir Glintstone Staff		1.15	
+Sorcery	Magma Shot - Charged	48005	0	0	234	0	0	65	9.25	92.5	Standard	0	3									Gelmir Glintstone Staff		1.15	
+Sorcery	Magma Shot - Charged	48007	0	0	48	0	0	0	0	0	Standard	0	0									Gelmir Glintstone Staff		1.15	
+Sorcery	Roiling Magma	48200	0	0	234	0	0	30	5	50	Standard	0	1									Gelmir Glintstone Staff		1.15	
+Sorcery	Roiling Magma	48204	0	0	318	0	0	150	10.175	101.75	Standard	0	3									Gelmir Glintstone Staff		1.15	
+Sorcery	Roiling Magma	48206	0	0	43	0	0	0	0	0	Standard	0	0									Gelmir Glintstone Staff		1.15	
+Sorcery	Roiling Magma - Charged	48210	0	0	325	0	0	39	9.25	92.5	Standard	0	1									Gelmir Glintstone Staff		1.15	
+Sorcery	Roiling Magma - Charged	48214	0	0	390	0	0	195	18	180	Standard	0	3									Gelmir Glintstone Staff		1.15	
+Sorcery	Roiling Magma - Charged	48216	0	0	48	0	0	0	0	0	Standard	0	0									Gelmir Glintstone Staff		1.15	
+Sorcery	Gelmir's Fury	48100	0	0	125	0	0	20	3	30	Standard	0	2									Gelmir Glintstone Staff		1.15	
+Sorcery	Gelmir's Fury	48107	0	0	125	0	0	0	0	0	Standard	0	0									Gelmir Glintstone Staff		1.15	
+Sorcery	Rykard's Rancor	48300	0	0	150	0	0	80	5	50	Standard	0	2									Gelmir Glintstone Staff		1.15	
+Sorcery	Glintstone Icecrag	44000	0	199	0	0	0	45	5.5	55	Standard	0	1						Frost	80				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Freezing Mist	44200	0	0	0	0	0	0	0	0	Standard	0	0					15	Frost	18				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Freezing Mist - Charged	44205	0	0	0	0	0	0	0	0	Standard	0	0					15	Frost	18				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Frozen Armament		0	0	0	0	0	0	0	0	Standard	0	0	Adds frost buildup to weapon				60	Frost	48				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Zamor Ice Storm	44100	0	64	0	0	0	45	2	20	Standard	0	8						Frost	50				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Zamor Ice Storm	44101	0	64	0	0	0	45	2	20	Standard	0	8						Frost	50				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Zamor Ice Storm - Charged	44105	0	66	0	0	0	59	3.7	37	Standard	0	8						Frost	50				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Zamor Ice Storm - Charged	44106	0	66	0	0	0	59	3.7	37	Standard	0	8						Frost	50				1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Shattering Crystal	45000	0	127	0	0	0	15	2	20	Standard	0	1									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Shattering Crystal	45001	0	60	0	0	0	20	2	20	Standard	0	2									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Shattering Crystal	45002	0	51	0	0	0	10	2	20	Standard	0	8									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Shattering Crystal - Charged	45005	0	145	0	0	0	20	3.7	37	Standard	0	1									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Shattering Crystal - Charged	45006	0	65	0	0	0	25	3.7	37	Standard	0	2									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Shattering Crystal - Charged	45007	0	57	0	0	0	15	3.7	37	Standard	0	8									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Crystal Torrent	45200	0	57	0	0	0	17	0.5	5	Standard	0	8									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Crystal Torrent	45201	0	57	0	0	0	17	0.5	5	Standard	0	0									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Crystal Release	45101	0	125	0	0	0	17	2	20	Standard	0	1									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Crystal Release	45100	0	100	0	0	0	17	2	20	Standard	0	8									Crystal Staff	Rotten Crystal Staff	1.1	
+Sorcery	Gravity Well	47200	0	148	0	0	0	70	5	50	Standard	0	2	Pulls target towards caster								Meteorite Staff		1.3	
+Sorcery	Gravity Well - Charged	47205	0	180	0	0	0	91	9.25	92.5	Standard	0	2	Pulls target towards caster								Meteorite Staff		1.3	
+Sorcery	Collapsing Stars	47210	0	44	0	0	0	30	1.5	15	Standard	0	1	Pulls target towards caster								Meteorite Staff		1.3	
+Sorcery	Collapsing Stars	47211	0	44	0	0	0	30	1.5	15	Standard	0	1	Pulls target towards caster								Meteorite Staff		1.3	
+Sorcery	Collapsing Stars - Charged	47215	0	49	0	0	0	30	1.7	17	Standard	0	1	Pulls target towards caster								Meteorite Staff		1.3	
+Sorcery	Collapsing Stars - Charged	47216	0	49	0	0	0	30	1.7	17	Standard	0	1	Pulls target towards caster								Meteorite Staff		1.3	
+Sorcery	Rock Sling	47100	102	0	0	0	0	150	9.5	95	Standard	0	2									Meteorite Staff		1.3	
+Sorcery	Rock Sling - Charged	47100	102	0	0	0	0	150	9.5	95	Standard	0	2									Meteorite Staff		1.3	
+Sorcery	Meteorite	47000	180	100	0	0	0	230	10.175	101.75	Standard	0	7									Meteorite Staff		1.3	
+Sorcery	Meteorite	47001	180	100	0	0	0	230	10.175	101.75	Standard	0	7									Meteorite Staff		1.3	
+Sorcery	Meteorite of Astel	47010	185	105	0	0	0	230	10.175	101.75	Standard	0	7									Meteorite Staff		1.3	
+Sorcery	Meteorite of Astel	47011	185	105	0	0	0	230	10.175	101.75	Standard	0	7									Meteorite Staff		1.3	
+Sorcery	Oracle Bubbles	51000	0	54	0	0	0	25	2	20	Standard	0	1											1	
+Sorcery	Oracle Bubbles - Charged	51005	0	59	0	0	0	32	2.6	26	Standard	0	1											1	
+Sorcery	Great Oracular Bubble	51010	0	268	0	0	0	170	10.175	101.75	Standard	0	3											1	
+Sorcery	Great Oracular Bubble - Charged	51015	0	315	0	0	0	221	18	180	Standard	0	3											1	
+Sorcery	Briars of Sin	49000	0	200	0	0	0	70	7	70	Standard	0	2	Damages caster for 80 HP					Bleed	90		Staff of the Guilty		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Sorcery	Briars of Sin	49001	0	232	0	0	0	65	7.5	75	Standard	0	2	Damages caster for 80 HP					Bleed	90		Staff of the Guilty		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Sorcery	Briars of Sin	49002	0	233	0	0	0	70	8	80	Standard	0	2	Damages caster for 80 HP					Bleed	90		Staff of the Guilty		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Sorcery	Briars of Punishment	49100	0	212	0	0	0	70	7	70	Standard	0	2	Damages caster for 50 HP					Bleed	60		Staff of the Guilty		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Sorcery	Rancorcall	50000	0	54	0	0	0	11	1	10	Standard	0	1									Prince of Death's Staff		1.1	
+Sorcery	Rancorcall - Charged	50005	0	57	0	0	0	14	1.5	15	Standard	0	1									Prince of Death's Staff		1.1	
+Sorcery	Ancient Death Rancor	50011	0	49	0	0	0	12	1.5	15	Standard	0	3									Prince of Death's Staff		1.1	
+Sorcery	Ancient Death Rancor - Charged	50016	0	52	0	0	0	15	2	20	Standard	0	3									Prince of Death's Staff		1.1	
+Sorcery	Explosive Ghostflame	50100	0	282	0	0	0	230	10	100	Standard	0	7						Frost	50		Prince of Death's Staff		1.1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Explosive Ghostflame	50101	0	50	0	0	0	10	1	10	Standard	0	0						Frost	28		Prince of Death's Staff		1.1	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Sorcery	Fia's Mist	50200	0	0	0	0	0	0	0	0	Standard	0	0						Death	20		Prince of Death's Staff		1.1	Target dies on proc; only works on player-model entities
+Sorcery	Fia's Mist - Charged	50205	0	0	0	0	0	0	0	0	Standard	0	0						Death	20		Prince of Death's Staff		1.1	Target dies on proc; only works on player-model entities
+Sorcery	Tibia's Summons	50300	0	105	0	0	0	30	5	50	Slash	0	2									Prince of Death's Staff		1.1	
+Incantation	Urgent Heal	64200	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 1.15x spell buff (only uses faith scaling)							1.15			1	
+Incantation	Heal	64210	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 2.3x spell buff (only uses faith scaling)							2.3			1	
+Incantation	Heal (AoE)	64211	0	0	0	0	0	0	0	0	Standard	0	0	Heals friendly targets in range for 1.15x spell buff (only uses faith scaling); also damages undead for ⌊MaxHP * 0.5⌋ + 300							1.15			1	
+Incantation	Great Heal	64220	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 3.64x spell buff (only uses faith scaling)							3.64			1	
+Incantation	Great Heal (AoE)	64221	0	0	0	0	0	0	0	0	Standard	0	0	Heals friendly targets in range for 2.07x spell buff (only uses faith scaling); also damages undead for ⌊MaxHP * 0.5⌋ + 300							2.07			1	
+Incantation	Lord's Heal	64230	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 4.2x spell buff (only uses faith scaling)							4.2			1	
+Incantation	Lord's Heal (AoE)	64231	0	0	0	0	0	0	0	0	Standard	0	0	Heals friendly targets in range for 2.1x spell buff (only uses faith scaling); also damages undead for ⌊MaxHP * 0.5⌋ + 300							2.1			1	
+Incantation	Cure Poison	64400	0	0	0	0	0	0	0	0	Standard	0	0	Removes any buildup for and cures poison										1	
+Incantation	Lord's Aid	64410	0	0	0	0	0	0	0	0	Standard	0	0	Removes any buildup for and cures poison, bleed, and sleep										1	
+Incantation	Lord's Aid (AoE)	64411	0	0	0	0	0	0	0	0	Standard	0	0	Removes any buildup for and cures poison, bleed, and sleep for allies in range										1	
+Incantation	Magic Fortification		0	0	0	0	0	0	0	0	Standard	0	0	Increases magic damage negation by 35%				90						1	
+Incantation	Flame Fortification		0	0	0	0	0	0	0	0	Standard	0	0	Increases fire damage negation by 35%				90						1	
+Incantation	Lightning Fortification		0	0	0	0	0	0	0	0	Standard	0	0	Increases lightning damage negation by 35%				90						1	
+Incantation	Divine Fortification		0	0	0	0	0	0	0	0	Standard	0	0	Increases holy damage negation by 35%				90						1	
+Incantation	Lord's Divine Fortification		0	0	0	0	0	0	0	0	Standard	0	0	Increases holy damage negation by 60%				70						1	
+Incantation	Lord's Divine Fortification (AoE)		0	0	0	0	0	0	0	0	Standard	0	0	Increases holy damage negation by 60% for allies in range				70						1	
+Incantation	Rejection	64000	0	0	0	0	0	150	10.175	101.75	Standard	0	7											1	
+Incantation	Rejection - Charged	64005	0	0	0	0	0	180	14.4	144	Standard	0	7											1	
+Incantation	Shadow Bait	65200	0	0	0	0	0	0	0	0	Standard	0	0											1	
+Incantation	Shadow Bait	65201	0	0	0	0	0	0	0	0	Standard	0	0											1	
+Incantation	Darkness	65300	0	0	0	0	0	0	0	0	Standard	0	0											1	
+Incantation	Darkness	65301	0	0	0	0	0	0	0	0	Standard	0	1											1	
+Incantation	Assassin's Approach	65101	0	0	0	0	0	0	0	0	Standard	0	0	Makes caster transparent and makes footsteps silent				20						1	
+Incantation	Golden Vow	66000	0	0	0	0	0	0	0	0	Standard	0	0	1.15x damage and increases damage negation by 10%			1.075x/5%	80						1	
+Incantation	Barrier of Gold	63300	0	0	0	0	0	0	0	0	Standard	0	0	Increases magic damage negation by 60%				70						1	
+Incantation	Barrier of Gold (AoE)	63301	0	0	0	0	0	0	0	0	Standard	0	0	Increases magic damage negation by 60% for allies in range				70						1	
+Incantation	Golden Lightning Fortification	79030	0	0	0	0	0	0	0	0	Standard	0	0	Increases lightning damage negation by 60%				70						1	
+Incantation	Golden Lightning Fortification (AoE)	79031	0	0	0	0	0	0	0	0	Standard	0	0	Increases lightning damage negation by 60% for allies in range				70						1	
+Incantation	Protection of the Erdtree	63400	0	0	0	0	0	0	0	0	Standard	0	0	Increases magic, fire, lightning, and holy damage negation by 30%				70						1	
+Incantation	Protection of the Erdtree (AoE)	63401	0	0	0	0	0	0	0	0	Standard	0	0	Increases magic, fire, lightning, and holy damage negation by 30% for allies in range				70						1	
+Incantation	Wrath of Gold	64100	0	0	0	0	350	221	12.025	120.25	Standard	0	7											1	
+Incantation	Wrath of Gold (Charged)	64105	0	0	0	0	420	251	16.8	168	Standard	0	7											1	
+Incantation	Erdtree Heal	64240	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 5.9x spell buff (only uses faith scaling)							5.9			1	
+Incantation	Erdtree Heal (AoE)	64241	0	0	0	0	0	0	0	0	Standard	0	0	Heals friendly targets in range for 3.98x spell buff (only uses faith scaling); also damages undead for ⌊MaxHP * 0.5⌋ + 300							3.98			1	
+Incantation	Blessing's Boon	64300	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 8 HP/s				90						1	
+Incantation	Blessing's Boon (AoE)	64301	0	0	0	0	0	0	0	0	Standard	0	0	Heals friendly targets in range for 8 HP/s. Also damages unead for ⌊MaxHP * 0.03⌋ + 10 per second for 30 seconds				90						1	
+Incantation	Blessing of the Erdtree	64310	0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 12 HP/s				90						1	
+Incantation	Blessing of the Erdtree (AoE)	64311	0	0	0	0	0	0	0	0	Standard	0	0	Heals friendly targets in range for 12 HP/s. Also damages unead for ⌊MaxHP * 0.03⌋ + 10 per second for 30 seconds				90						1	
+Incantation	Aspects of the Crucible: Breath	75200	0	0	98	0	0	70	4	40	Standard	0	2											1	
+Incantation	Aspects of the Crucible: Tail	75000	202	0	0	0	0	180	13	130	Standard	0	2											1	
+Incantation	Aspects of the Crucible: Tail	75005	274	0	0	0	0	240	39	390	Standard	0	7											1	
+Incantation	Aspects of the Crucible: Horns	75100	277	0	0	0	0	200	16.114	161.14	Standard	0	3											1	
+Incantation	Aspects of the Crucible: Horns	75101	277	0	0	0	0	200	16.114	161.14	Standard	0	3											1	
+Incantation	Aspects of the Crucible: Horns (Charged)	75105	327	0	0	0	0	260	30	300	Standard	0	9											1	
+Incantation	Aspects of the Crucible: Horns (Charged)	75106	327	0	0	0	0	260	30	300	Standard	0	9											1	
+Incantation	Elden Stars	67202	0	0	0	0	61	5	0.5	5	Standard	0	1											1	
+Incantation	Elden Stars	67200	0	0	0	0	20	5	0.5	5	Standard	0	0											1	
+Incantation	Elden Stars	67201	0	0	0	0	199	230	14.4	144	Standard	0	3											1	
+Incantation	Black Blade	75300	0	0	0	0	290	190	10	100	Standard	0	3											1	
+Incantation	Black Blade (Bullet)	75301	0	0	0	0	252	150	7	70	Standard	0	3	Damages target for ⌊MaxHP * 0.001⌋ + 1 10 times a second for 2 seconds; reduces target max HP by 0.9x for 15 seconds										1	
+Incantation	Black Blade	75302	0	0	0	0	297	220	10	100	Standard	0	3											1	
+Incantation	Black Blade (Bullet)	75303	0	0	0	0	260	150	7	70	Standard	0	3	Damages target for ⌊MaxHP * 0.001⌋ + 1 10 times a second for 2 seconds; reduces target max HP by 0.9x for 15 seconds										1	
+Incantation	Black Blade	75304	0	0	0	0	290	190	10	100	Standard	0	3											1	
+Incantation	Black Blade (Bullet)	75305	0	0	0	0	252	150	7	70	Standard	0	3	Damages target for ⌊MaxHP * 0.001⌋ + 1 10 times a second for 2 seconds; reduces target max HP by 0.9x for 15 seconds										1	
+Incantation	Black Blade	75306	0	0	0	0	297	220	10	100	Standard	0	3											1	
+Incantation	Black Blade (Bullet)	75307	0	0	0	0	260	150	7	70	Standard	0	3	Damages target for ⌊MaxHP * 0.001⌋ + 1 10 times a second for 2 seconds; reduces target max HP by 0.9x for 15 seconds										1	
+Incantation	Discus of Light	67000	0	0	0	0	150	40	2	20	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Discus of Light	67001	0	0	0	0	150	40	2	20	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Discus of Light	67002	0	0	0	0	150	40	2	20	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Discus of Light	67003	0	0	0	0	150	40	2	20	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Triple Rings of Light	67010	0	0	0	0	155	50	3	30	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Triple Rings of Light	67011	0	0	0	0	155	50	3	30	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Triple Rings of Light	67012	0	0	0	0	155	50	3	30	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Triple Rings of Light	67013	0	0	0	0	155	50	3	30	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Triple Rings of Light	67014	0	0	0	0	155	50	3	30	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Radagon's Rings of Light	67100	0	0	0	0	310	170	10.175	101.75	Standard	0	3									Golden Order Seal		1.1	
+Incantation	Radagon's Rings of Light (Charged)	67105	0	0	0	0	395	221	14.4	144	Standard	0	7									Golden Order Seal		1.1	
+Incantation	Litany of Proper Death	67500	0	0	0	0	56	60	5	50	Standard	0	1									Golden Order Seal		1.1	
+Incantation	Order Healing	67800	0	0	0	0	0	0	0	0	Standard	0	0	Removes death buildup								Golden Order Seal		1.1	
+Incantation	Order's Blade		0	0	0	0	0	0	0	0	Standard	0	0	Adds holy AR to weapon and does 2x damage to undead enemies (only uses faith scaling)				90				Golden Order Seal		1.1	
+Incantation	Immutable Shield		0	0	0	0	0	0	0	0	Standard	0	0					30				Golden Order Seal		1.1	
+Incantation	Law of Causality	67601	0	0	0	0	0	0	0	0	Standard	0	0					60				Golden Order Seal		1.1	
+Incantation	Law of Regression	67300	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Law of Regression	67300	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Law of Regression	67300	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Law of Regression	67301	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Law of Regression	67301	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Law of Regression	67301	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Law of Regression	67301	0	0	0	0	0	0	0	0	Standard	0	0									Golden Order Seal		1.1	
+Incantation	Lightning Spear	69000	0	0	0	234	0	50	5	50	Standard	0	2									Gravel Stone Seal		1.15	
+Incantation	Lightning Spear - Water AoE	69001	0	0	0	50	0	40	2	20	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Lightning Spear (Charged)	69005	0	0	0	273	0	60	9.25	92.5	Standard	0	3									Gravel Stone Seal		1.15	
+Incantation	Lightning Spear (Charged) - Water AoE	69006	0	0	0	50	0	40	2	20	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Lightning Strike	69200	0	0	0	246	0	70	5	50	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Lightning Strike - Water AoE	69201	0	0	0	50	0	40	2	20	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Honed Bolt	69300	0	0	0	205	0	60	5	50	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Honed Bolt - Water AoE	69301	0	0	0	50	0	40	2	20	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Spear	69400	0	0	0	360	0	100	16.8	168	Standard	0	7									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Spear	69402	0	0	0	285	0	100	16.8	168	Standard	0	7									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Spear	69401	0	0	0	122	0	60	5	50	Standard	0	2									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Strike	69100	0	0	0	317	0	70	5	50	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Strike - Water AoE	69101	0	0	0	50	0	40	2	20	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Strike (Charged)	69105	0	0	0	379	0	91	9.25	92.5	Standard	0	2									Gravel Stone Seal		1.15	
+Incantation	Ancient Dragons' Lightning Strike (Charged) - Water AoE	69106	0	0	0	50	0	40	2	20	Standard	0	1									Gravel Stone Seal		1.15	
+Incantation	Lansseax's Glaive (Bullet)	69502	0	0	0	167	0	60	5	50	Standard	0	2									Gravel Stone Seal		1.15	
+Incantation	Lansseax's Glaive	69500	0	0	0	325	0	230	12	120	Standard	0	7									Gravel Stone Seal		1.15	
+Incantation	Lansseax's Glaive	69501	0	0	0	325	0	230	12	120	Standard	0	7									Gravel Stone Seal		1.15	
+Incantation	Fortissax's Lightning Spear 1	69410	0	0	0	367	0	100	16.8	168	Standard	0	3											1	
+Incantation	Fortissax's Lightning Spear 1	69412	0	0	0	288	0	100	16.8	168	Standard	0	3											1	
+Incantation	Fortissax's Lightning Spear 1	69411	0	0	0	122	0	60	5	50	Standard	0	2											1	
+Incantation	Fortissax's Lightning Spear 2	69415	0	0	0	374	0	120	16.8	168	Standard	0	7											1	
+Incantation	Fortissax's Lightning Spear 2	69417	0	0	0	292	0	120	16.8	168	Standard	0	7											1	
+Incantation	Fortissax's Lightning Spear 2	69416	0	0	0	123	0	60	5	50	Standard	0	2											1	
+Incantation	Frozen Lightning Spear	69210	0	0	0	240	0	90	5	50	Standard	0	2						Frost	90		Gravel Stone Seal		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Incantation	Frozen Lightning Spear	69211	0	0	0	307	0	70	5	50	Standard	0	1						Frost	90		Gravel Stone Seal		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Incantation	Death Lightning	50400	0	0	0	513	0	70	5	50	Standard	0	2						Death	50		Gravel Stone Seal		1.15	Target dies on proc; only works on player-model entities
+Incantation	Death Lightning	50401	0	0	0	0	0	0	0	0	Standard	0	0						Death	30		Gravel Stone Seal		1.15	Target dies on proc; only works on player-model entities
+Incantation	Death Lightning (Charged)	50405	0	0	0	564	0	91	9.25	92.5	Standard	0	2						Death	50		Gravel Stone Seal		1.15	Target dies on proc; only works on player-model entities
+Incantation	Death Lightning (Charged)	50406	0	0	0	0	0	0	0	0	Standard	0	0						Death	30		Gravel Stone Seal		1.15	Target dies on proc; only works on player-model entities
+Incantation	Electrify Armament		0	0	0	0	0	0	0	0	Standard	0	0	Adds lightning AR to weapon (only uses faith scaling)				90				Gravel Stone Seal		1.15	
+Incantation	Dragonbolt Blessing		0	0	0	0	0	0	0	0	Standard	0	0	defFlickPower 70 (some attacks are deflected), increases resistances by 30, reduces lightning damage negation by -35%				70				Gravel Stone Seal		1.15	
+Incantation	Vyke's Dragonbolt		0	0	0	0	0	0	0	0	Standard	0	0	Adds lightning AR to weapon (only uses faith scaling), increases equip load by 1.15x, reduces lightning damage negation by -35%				70				Gravel Stone Seal		1.15	
+Incantation	Catch Flame	60001	0	0	225	0	0	30	7	70	Standard	0	1											1	
+Incantation	O, Flame!	60011	0	0	280	0	0	100	10.175	101.75	Standard	0	2									Giant's Seal		1.2	
+Incantation	O, Flame! (Charged)	60016	0	0	385	0	0	135	14.4	144	Standard	0	3									Giant's Seal		1.2	
+Incantation	Flame Sling	60100	0	0	202	0	0	45	5	50	Standard	0	2											1	
+Incantation	Flame Sling	60101	0	0	202	0	0	45	5	50	Standard	0	2											1	
+Incantation	Flame Sling (Charged)	60102	0	0	240	0	0	59	9.25	92.5	Standard	0	2											1	
+Incantation	Flame Sling (Charged)	60103	0	0	240	0	0	59	9.25	92.5	Standard	0	2											1	
+Incantation	Giantsflame Take Thee	61000	0	0	325	0	0	210	13.634	136.34	Standard	0	7									Giant's Seal		1.2	
+Incantation	Giantsflame Take Thee	61005	0	0	389	0	0	273	15	150	Standard	0	7									Giant's Seal		1.2	
+Incantation	Flame, Fall Upon Them	60200	0	0	115	0	0	25	4	40	Standard	0	2									Giant's Seal		1.2	
+Incantation	Flame, Fall Upon Them	60201	0	0	115	0	0	25	4	40	Standard	0	2									Giant's Seal		1.2	
+Incantation	Flame, Fall Upon Them	60202	0	0	115	0	0	25	4	40	Standard	0	2									Giant's Seal		1.2	
+Incantation	Flame, Fall Upon Them (Charged)	60205	0	0	140	0	0	34	6	60	Standard	0	2									Giant's Seal		1.2	
+Incantation	Flame, Fall Upon Them (Charged)	60206	0	0	140	0	0	34	6	60	Standard	0	2									Giant's Seal		1.2	
+Incantation	Flame, Fall Upon Them (Charged)	60207	0	0	140	0	0	34	6	60	Standard	0	2									Giant's Seal		1.2	
+Incantation	Flame of the Fell God	61100	0	0	415	0	0	190	13.634	136.34	Standard	0	7									Giant's Seal		1.2	
+Incantation	Flame of the Fell God	61101	0	0	35	0	0	20	0	0	Standard	0	8									Giant's Seal		1.2	
+Incantation	Surge, O Flame!	62200	0	0	51	0	0	20	1	10	Standard	0	8									Giant's Seal		1.2	
+Incantation	Whirl, O Flame!	60300	0	0	96	0	0	15	1	10	Standard	0	8									Giant's Seal		1.2	
+Incantation	Whirl, O Flame!	60305	0	0	121	0	0	20	1.85	18.5	Standard	0	8									Giant's Seal		1.2	
+Incantation	Burn, O Flame!	61203	0	0	288	0	0	180	9.25	92.5	Standard	0	9									Giant's Seal		1.2	
+Incantation	Flame, Cleanse Me	60400	0	0	0	0	0	0	0	0	Standard	0	0	Removes buildup and cures poison and scarlet rot; damages caster for 5 HP								Giant's Seal		1.2	
+Incantation	Flame, Cleanse Me	60400	0	0	0	0	0	0	0	0	Standard	0	0	Removes buildup and cures poison and scarlet rot; damages caster for 5 HP								Giant's Seal		1.2	
+Incantation	Flame, Cleanse Me	60400	0	0	0	0	0	0	0	0	Standard	0	0	Removes buildup and cures poison and scarlet rot; damages caster for 5 HP								Giant's Seal		1.2	
+Incantation	Flame, Protect Me		0	0	0	0	0	0	0	0	Standard	0	0	Increases fire damage negation by 60%				70				Giant's Seal		1.2	
+Incantation	Flame, Grant Me Strength		0	0	0	0	0	0	0	0	Standard	0	0	1.2x physical and fire damage			1.15x	30				Giant's Seal		1.2	
+Incantation	Fire's Deadly Sin		0	0	0	0	0	0	0	0	Standard	0	0					40						1	
+Incantation	Fire's Deadly Sin (Charged		0	0	0	0	0	0	0	0	Standard	0	0					40						1	
+Incantation	Black Flame	62101	0	0	244	0	0	100	9.1	91	Standard	0	2	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Black Flame (Charged)	62106	0	0	300	0	0	160	11.83	118.3	Standard	0	2	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Scouring Black Flame	62300	0	0	255	0	0	65	9.25	92.5	Standard	0	8	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Scouring Black Flame (Charged)	62305	0	0	299	0	0	84	12.025	120.25	Standard	0	8	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Black Flame Ritual	62502	0	0	106	0	0	91	5	50	Standard	0	2	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Black Flame Ritual	62503	0	0	106	0	0	91	5	50	Standard	0	2	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Black Flame Ritual (Charged)	62507	0	0	109	0	0	118	6.5	65	Standard	0	2	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Black Flame Ritual (Charged)	62508	0	0	109	0	0	118	6.5	65	Standard	0	2	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds								Godslayer's Seal		1.1	
+Incantation	Black Flame Blade		0	0	0	0	0	0	0	0	Standard	0	0	Adds fire AR to weapon (only uses faith scaling); damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds				7				Godslayer's Seal		1.1	
+Incantation	Black Flame's Protection		0	0	0	0	0	0	0	0	Standard	0	0	Increases physical absortpions by 35%; reduces healing by 0.8x				70				Godslayer's Seal		1.1	
+Incantation	Noble Presence	62401	0	0	239	0	0	180	16.8	168	Standard	0	3	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds										1	
+Incantation	Noble Presence (Charged)	62406	0	0	279	0	0	234	21.84	218.4	Standard	0	9	Damages target for ⌊MaxHP * 0.001⌋ + 1 health 10 times a second for 2 seconds										1	
+Incantation	Beast Claw	68200	193	0	0	0	0	130	7	70	Standard	0	2									Clawmark Seal		1.1	
+Incantation	Beast Claw (Charged)	68205	222	0	0	0	0	170	12.95	129.5	Standard	0	2									Clawmark Seal		1.1	
+Incantation	Gurranq's Beast Claw	68300	225	0	0	0	0	180	12	120	Standard	0	2									Clawmark Seal		1.1	
+Incantation	Bestial Sling	68000	87	0	0	0	0	40	5	50	Standard	0	8									Clawmark Seal		1.1	
+Incantation	Stone of Gurranq	68100	220	0	0	0	0	260	14.4	144	Standard	0	3									Clawmark Seal		1.1	
+Incantation	Bestial Constitution	68600	0	0	0	0	0	0	0	0	Standard	0	0									Clawmark Seal		1.1	
+Incantation	Bestial Vitality		0	0	0	0	0	0	0	0	Standard	0	0	Heals caster for 5 HP/s				120				Clawmark Seal		1.1	
+Incantation	Swarm of Flies	72100	52	0	0	0	0	15	1	10	Standard	0	2											1	
+Incantation	Swarm of Flies	72101	15	0	0	0	0	15	1	10	Standard	0	0						Bleed	4				1	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Incantation	Bloodflame Talons	63000	0	0	236	0	0	100	10.175	101.75	Standard	0	2						Bleed	5				1	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Incantation	Bloodboon	63100	0	0	152	0	0	80	5	50	Standard	0	2						Bleed	3				1	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Incantation	Bloodboon	63101	0	0	40	0	0	10	1	10	Standard	0	8						Bleed	3				1	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Incantation	Bloodflame Blade		0	0	0	0	0	0	0	0	Standard	0	0	Adds fire AR (only uses faith scaling) and bleed buildup to weapon				60	Bleed	2				1	Target loses ⌊MaxHP * 0.15⌋ + 100 health on proc
+Incantation	Poison Mist	72200	0	0	0	0	0	0	0	0	Standard	0	0					15	Poison	10				1	Target loses ⌊MaxHP * 0.0007⌋ + 7 health per second for 90 seconds on proc
+Incantation	Poison Armament		0	0	0	0	0	0	0	0	Standard	0	0	Adds poison buildup to weapon					Poison	45				1	Target loses ⌊MaxHP * 0.0007⌋ + 7 health per second for 90 seconds on proc
+Incantation	Pest Threads	72000	60	0	0	0	0	40	1	10	Standard	0	8											1	
+Incantation	Scarlet Aeonia	72400	0	0	0	0	0	40	2	20	Standard	0	2											1	
+Incantation	Scarlet Aeonia	72401	362	0	0	0	0	200	10	100	Standard	0	7											1	
+Incantation	Scarlet Aeonia	72402	60	0	0	0	0	0	0	0	Standard	0	0					4.2	Rot	150				1	Target loses ⌊MaxHP * 0.0033⌋ + 13 health per second for 90 seconds on proc
+Incantation	The Flame of Frenzy	73100	0	0	107	0	0	50	5	50	Standard	0	2						Madness	21		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	The Flame of Frenzy	73101	0	0	107	0	0	50	5	50	Standard	0	2						Madness	21		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	The Flame of Frenzy - Self-Madness	73109	0	0	0	0	0	0	0	0	Standard	0	0						Madness	4		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	The Flame of Frenzy (Charged)	73105	0	0	124	0	0	65	9.25	92.5	Standard	0	2						Madness	28		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	The Flame of Frenzy (Charged)	73106	0	0	124	0	0	65	9.25	92.5	Standard	0	2						Madness	28		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	The Flame of Frenzy - Self-Madness (Charged)	73109	0	0	0	0	0	0	0	0	Standard	0	0						Madness	4		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Unendurable Frenzy	73110	0	0	125	0	0	60	5	50	Standard	0	2						Madness	40		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Unendurable Frenzy	73111	0	0	125	0	0	60	5	50	Standard	0	2						Madness	40		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Unendurable Frenzy - Self-Madness	73112	0	0	0	0	0	0	0	0	Standard	0	0						Madness	3		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Frenzied Burst	73200	0	0	250	0	0	50	5	50	Standard	0	2						Madness	90		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Frenzied Burst - Self-Madness		0	0	0	0	0	0	0	0	Standard	0	0						Madness	20		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Frenzied Burst (Charged)	73205	0	0	292	0	0	65	9.25	92.5	Standard	-70	3						Madness	105		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Frenzied Burst -Self-Madness (Charged)		0	0	0	0	0	0	0	0	Standard	0	0						Madness	30		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Howl of Shabriri	73300	22	0	0	0	0	20	0	0	Standard	-100	0	Caster does 1.3x damage (1.25x PvP) and has reduced damage negation by -30% (-25% PvP) for 20 seconds with additional -20% damage negation during cast					Madness	35		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Howl of Shabriri - Self-Madness	73301	0	0	0	0	0	0	0	0	Standard	-100	0	Madness from the above is also applied to caster					Madness	6		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Inescapable Frenzy	73000	70	0	0	0	0	10	0	0	Standard	0	3						Madness	50		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Inescapable Frenzy	73002	70	0	0	0	0	10	0	0	Standard	0	3						Madness	50		Frenzied Flame Seal		1.2	Target loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Inescapable Frenzy - Self-Madness	73010	0	0	0	0	0	0	0	0	Standard	0	0						Madness	14		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Inescapable Frenzy - Self-Madness	73010	0	0	0	0	0	0	0	0	Standard	0	0						Madness	9		Frenzied Flame Seal		1.2	Caster loses ⌊MaxHP * 0.15⌋ + 100 health and ⌊MaxFP * 0.1⌋ + 30 FP on proc; only works on player-model entities
+Incantation	Dragonfire	70000	0	0	144	0	0	70	4	40	Standard	0	2									Dragon Communion Seal		1.15	
+Incantation	Agheel's Flame	70010	0	0	169	0	0	90	4	40	Standard	0	2									Dragon Communion Seal		1.15	
+Incantation	Magma Breath	70100	0	0	223	0	0	180	12.025	120.25	Standard	0	2									Dragon Communion Seal		1.15	
+Incantation	Magma Breath	70101	0	0	34	0	0	20	0	0	Standard	0	0									Dragon Communion Seal		1.15	
+Incantation	Magma Breath	70102	0	0	223	0	0	180	12.025	120.25	Standard	0	2									Dragon Communion Seal		1.15	
+Incantation	Theodorix's Magma	70110	0	0	315	0	0	240	16.8	168	Standard	0	3									Dragon Communion Seal		1.15	
+Incantation	Theodorix's Magma	70111	0	0	40	0	0	20	0	0	Standard	0	0									Dragon Communion Seal		1.15	
+Incantation	Theodorix's Magma	70112	0	0	315	0	0	240	16.8	168	Standard	0	3									Dragon Communion Seal		1.15	
+Incantation	Glintstone Breath	70400	0	159	0	0	0	70	4	40	Standard	0	2									Dragon Communion Seal		1.15	
+Incantation	Smarag's Glintstone Breath	70410	0	188	0	0	0	90	4	40	Standard	0	2									Dragon Communion Seal		1.15	
+Incantation	Rotten Breath	70300	131	0	0	0	0	60	4	40	Standard	0	2						Rot	110		Dragon Communion Seal		1.15	Target loses ⌊MaxHP * 0.0033⌋ + 13 health per second for 90 seconds on proc
+Incantation	Ekzykes's Decay	70310	155	0	0	0	0	80	4	40	Standard	0	2						Rot	110		Dragon Communion Seal		1.15	Target loses ⌊MaxHP * 0.0033⌋ + 13 health per second for 90 seconds on proc
+Incantation	Dragonice	70200	0	135	0	0	0	70	4	40	Standard	0	2						Frost	110		Dragon Communion Seal		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Incantation	Borealis's Mist	70210	0	158	0	0	0	90	4	40	Standard	0	2						Frost	110		Dragon Communion Seal		1.15	Target loses ⌊MaxHP * 0.1⌋ + 30 health on proc; target damage negation reduced by -20% for 30 seconds
+Incantation	Placidusax's Ruin	70500	0	0	356	0	0	400	20	200	Standard	0	7											1	
+Incantation	Placidusax's Ruin	70501	0	0	356	0	0	400	20	200	Standard	0	9											1	
+Incantation	Placidusax's Ruin	70502	0	0	0	241	0	100	10	100	Standard	0	7											1	
+Incantation	Dragonclaw	70600	395	0	0	0	0	260	30	300	Standard	0	3									Dragon Communion Seal		1.15	
+Incantation	Dragonclaw	70601	410	0	0	0	0	260	30	300	Standard	0	7									Dragon Communion Seal		1.15	
+Incantation	Dragonclaw	70602	395	0	0	0	0	260	30	300	Standard	0	3									Dragon Communion Seal		1.15	
+Incantation	Dragonclaw	70603	410	0	0	0	0	260	30	300	Standard	0	7									Dragon Communion Seal		1.15	
+Incantation	Dragonclaw	70605	253	0	0	0	0	180	16.114	161.14	Standard	0	3									Dragon Communion Seal		1.15	
+Incantation	Dragonclaw	70606	263	0	0	0	0	180	16.114	161.14	Standard	0	3									Dragon Communion Seal		1.15	
+Incantation	Dragonmaw	70800	628	0	0	0	0	300	45	450	Standard	0	7									Dragon Communion Seal		1.15	
+Incantation	Greyoll's Roar	70900	320	0	0	0	0	220	16.114	161.14	Standard	-40	7	Reduces target(s) damage by 0.85x and damage negation by -10%				60				Dragon Communion Seal		1.15	
