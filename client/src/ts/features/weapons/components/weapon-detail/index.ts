@@ -1,4 +1,5 @@
 export * from "./ComparableWeaponProps"
-export * from "./WeaponDetail"
 export * from "./WeaponAttackStats"
+export * from "./WeaponDefenseStats"
+export * from "./WeaponDetail"
 export * from "./WeaponScalingStats"

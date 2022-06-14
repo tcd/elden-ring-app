@@ -10,12 +10,14 @@
     justify-content: space-between;
     align-items: center;
     font-size: v.$stat-row-font-size;
+    color: v.$body-color-fg;
 }
 
 .er__stat-row-plus {
     display: grid;
     grid-template-columns: 30% 45% 10% 15%;
     font-size: v.$stat-row-font-size;
+    color: v.$body-color-fg;
 
     span:nth-child(2) {
         text-align: right;
@@ -38,6 +40,7 @@
     display: grid;
     grid-template-columns: 30% 20% 5% 20% 25%;
     font-size: v.$stat-row-font-size;
+    color: v.$body-color-fg;
 
     // Damage Type
     span:nth-child(1) {

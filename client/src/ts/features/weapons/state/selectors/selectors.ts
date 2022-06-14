@@ -134,16 +134,29 @@ export const selectCalculatedWeaponStats = (state: RootState): CalculatedWeaponS
 // Old Weapon
 // -----------------------------------------------------------------------------
 
+export const selectOldWeapon = (state: RootState): Weapon => {
+    const oldWeaponSettings = state?.Weapons?.oldWeapon
+    if (isBlank(oldWeaponSettings)) {
+        return null
+    }
+    const allWeapons = selectWeapons(state)
+
+    const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
+
+    return oldWeapon
+}
+
 export const selectOldWeaponStats = (state: RootState): CalculatedWeaponStats => {
+    const allAdjustmentParams = selectAttackElementCorrectParams(state)
+    if (isBlank(allAdjustmentParams)) {
+        return null
+    }
+
     const oldWeaponSettings = state?.Weapons?.oldWeapon
     if (isBlank(oldWeaponSettings)) {
         return null
     }
 
-    const allAdjustmentParams = selectAttackElementCorrectParams(state)
-    if (isBlank(allAdjustmentParams)) {
-        return null
-    }
     const attributes = selectAttributes(state)
     const allWeapons = selectWeapons(state)
 

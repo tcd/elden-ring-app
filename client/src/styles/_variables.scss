@@ -122,7 +122,7 @@ $zindex-modal:                      1055 !default;
 // ----------------------------------------------------------------------------
 
 $body-color-bg: $black !default;
-$body-color-fg: $white !default;
+$body-color-fg: #d3d3d3 !default;
 
 // ----------------------------------------------------------------------------
 // Typography
@@ -175,7 +175,7 @@ $table-color-bg:    transparent !default;
 // Data Table
 // ----------------------------------------------------------------------------
 
-$data-table-color-fg: white;
+$data-table-color-fg: $body-color-fg;
 $data-table-header-color-bg: #1c1c19;
 $data-table-border-radius: 0.25rem !important;
 $data-table-border-color: #515151;

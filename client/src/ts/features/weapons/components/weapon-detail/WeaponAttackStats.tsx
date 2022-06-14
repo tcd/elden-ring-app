@@ -12,7 +12,7 @@ import {
 } from "@app/shared"
 import { ComparableWeaponProps } from "."
 
-export const WeaponAttackStats = (props: Partial<ComparableWeaponProps>): JSX.Element => {
+export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => {
 
     if (isBlank(props?.newStats)) {
         return null

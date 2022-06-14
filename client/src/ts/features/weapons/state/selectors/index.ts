@@ -19,7 +19,10 @@ export const WeaponsSelectors = {
         L2: Core.selectL2Weapon,
         L3: Core.selectL3Weapon,
     },
-    oldWeaponStats: Core.selectOldWeaponStats,
+    old: {
+        weapon: Core.selectOldWeapon,
+        stats: Core.selectOldWeaponStats,
+    },
     /**
     * Returns an array of all equipped weapons.
     *

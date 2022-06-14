@@ -19,10 +19,12 @@ import {
 import {
     WeaponAttackStats,
     WeaponScalingStats,
+    WeaponDefenseStats,
 } from "."
 
 export interface WeaponDetailProps {
     weapon: Weapon
+    oldWeapon?: Weapon
     newStats?: CalculatedWeaponStats
     oldStats?: CalculatedWeaponStats
 }
@@ -92,7 +94,10 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                 <div className="col">
                     <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
-                            {dmgNegationElements}
+                            <WeaponDefenseStats
+                                newWeapon={weapon}
+                                oldWeapon={props?.oldWeapon}
+                            />
                         </ul>
                     </ErCard>
                 </div>

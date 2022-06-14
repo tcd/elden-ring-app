@@ -11,7 +11,7 @@ import {
 } from "@app/shared"
 import { ComparableWeaponProps } from "."
 
-export const WeaponScalingStats = (props: Partial<ComparableWeaponProps>): JSX.Element => {
+export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element => {
 
     const newStats = props?.newStats
     const oldStats = props?.oldStats
@@ -37,7 +37,6 @@ export const WeaponScalingStats = (props: Partial<ComparableWeaponProps>): JSX.E
         }
 
         if (haveOldStats) {
-            debugger
             // eslint-disable-next-line indent
                  if (newValue >  oldValue) { attrProps.color = "blue"    }
             else if (newValue == oldValue) { attrProps.color = "default" }
