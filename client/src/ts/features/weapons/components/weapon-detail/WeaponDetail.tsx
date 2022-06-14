@@ -1,3 +1,4 @@
+import { CalculatedWeaponStats } from "elden-ring-calculator"
 import {
     mdiSword,
     mdiShield,
@@ -6,10 +7,7 @@ import {
     mdiTshirtCrew,
 } from "@mdi/js"
 
-import {
-    CalculatedWeaponStats,
-    Weapon,
-} from "@app/types"
+import { Weapon } from "@app/types"
 import {
     isBlank,
 } from "@app/util"
@@ -20,6 +18,7 @@ import {
 } from "@app/shared"
 import {
     WeaponAttackStats,
+    WeaponScalingStats,
 } from "."
 
 export interface WeaponDetailProps {
@@ -101,18 +100,10 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
             <div className="row">
                 <div className="col">
                     <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
-                        <div className="row">
-                            <div className="col">
-                                <StatRow title="Str" value={weapon?.scaling_strength     ?? "-"} />
-                                <StatRow title="Int" value={weapon?.scaling_intelligence ?? "-"} />
-                                <StatRow title="Arc" value={weapon?.scaling_arcane       ?? "-"} />
-                            </div>
-                            <div className="col-1"></div>
-                            <div className="col">
-                                <StatRow title="Dex" value={weapon?.scaling_dexterity ?? "-"} />
-                                <StatRow title="Fai" value={weapon?.scaling_faith     ?? "-"} />
-                            </div>
-                        </div>
+                        <WeaponScalingStats
+                            newStats={props?.newStats}
+                            oldStats={props?.oldStats}
+                        />
                     </ErCard>
                 </div>
                 <div className="col">

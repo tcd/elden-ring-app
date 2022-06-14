@@ -1,19 +1,18 @@
 import {
     CalculatedWeaponStats,
-    Weapon,
-    WeaponAffinity,
-    WeaponSettings,
-    WeaponStat,
     SlimWeaponStatData,
-    AttackElementCorrectParam,
-    Attributes,
+    WeaponStatsCalculator,
+} from "elden-ring-calculator"
+
+import {
+    Weapon,
+    WeaponSettings,
 } from "@app/types"
 import {
     isBlank,
     compactArray,
     getSlimWeaponStatData,
     getRequirements,
-    WeaponStatsCalculator,
 } from "@app/util"
 import { RootState } from "@app/state"
 import { selectWeapons, selectAttackElementCorrectParams } from "@app/features/builder/state/selectors/api"

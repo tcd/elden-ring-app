@@ -3,7 +3,7 @@ import {
     DmgMap,
     AttrDmgMap,
     DmgAttrMap,
-} from "@app/types"
+} from "elden-ring-calculator"
 
 export const buildAttrMap = <T>(defaultValue: T, values: Partial<AttrMap<T>> = {}): AttrMap<T> => {
     return {
