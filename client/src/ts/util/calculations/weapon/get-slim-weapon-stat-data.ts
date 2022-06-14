@@ -1,7 +1,5 @@
-import {
-    WeaponStat,
-    SlimWeaponStatData,
-} from "@app/types"
+import { SlimWeaponStatData } from "elden-ring-calculator"
+import { WeaponStat } from "@app/types"
 
 export const getSlimWeaponStatData = (statData: WeaponStat, level: number): SlimWeaponStatData => {
     const result: SlimWeaponStatData = {

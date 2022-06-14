@@ -18,7 +18,7 @@ const webpackConfig = {
         publicPath: "/",
         filename: "bundle.js",
     },
-    // devtool: "inline-source-map",
+    devtool: "inline-source-map",
     /** @type {import("webpack").Configuration} */
     devServer: {
         static: [
