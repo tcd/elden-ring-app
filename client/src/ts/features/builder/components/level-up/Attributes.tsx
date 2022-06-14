@@ -4,7 +4,6 @@ import IconButton from "@mui/material/IconButton"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
 
-import { AttributeNames } from "@types"
 import { Actions, Selectors } from "@app/state"
 import { ErCard } from "@app/shared"
 
