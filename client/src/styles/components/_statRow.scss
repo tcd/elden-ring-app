@@ -1,5 +1,8 @@
 @use "../variables" as v;
 
+.er__stat-row__column--color-blue { color: v.$blue; }
+.er__stat-row__column--color-red  { color: v.$red;  }
+
 .er__stat-row {
     display: flex;
     flex-direction: row;
@@ -31,6 +34,45 @@
     // span:nth-child(3) { background: green;  }
     // span:nth-child(4) { background: blue;   }
 }
+.er__stat-row-plus-plus {
+    display: grid;
+    grid-template-columns: 30% 20% 5% 20% 25%;
+    font-size: v.$stat-row-font-size;
 
-.er__stat-row-plus--color-blue { color: v.$blue; }
-.er__stat-row-plus--color-red  { color: v.$red;  }
+    // Damage Type
+    span:nth-child(1) {
+        text-align: left;
+        box-sizing: border-box;
+        // margin-right: 5px;
+    }
+    // Base Damage
+    span:nth-child(2) {
+        text-align: right;
+        box-sizing: border-box;
+        // margin-right: 5px;
+    }
+    // // Plus Sign
+    span:nth-child(3) {
+        margin-left: 5px;
+    }
+    // Scaled Damage
+    span:nth-child(4) {
+        text-align: right;
+    }
+    // Total Damage
+    span:nth-child(5) {
+        text-align: right;
+    }
+
+    span.no-margins {
+        span {
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        span:nth-child(1),
+        span:nth-child(3) {
+            color: gray;
+        }
+        // span:nth-child(2) {}
+    }
+}
