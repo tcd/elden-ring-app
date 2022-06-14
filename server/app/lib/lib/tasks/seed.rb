@@ -52,6 +52,11 @@ module Lib
           args.compact!()
           model = model_class.new(args)
           model.save!()
+          # TODO: implement updates instead of just creates
+          if false
+            model = model_class.find_by(name: args[:name])
+            model.update!(args)
+          end
           pb.increment()
         rescue StandardError => e
           invalid << {

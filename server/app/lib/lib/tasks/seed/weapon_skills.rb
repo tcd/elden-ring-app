@@ -25,6 +25,11 @@ module Lib
 
           output[:can_be_applied_to] = (input["can_be_applied_to"] || "").split(/,\s*/)
 
+          output[:metadata] = {
+            basic_fp_cost: input["basic_fp_cost"].to_i(),
+            complex_fp_cost: input["FP"],
+          }
+
           return output
         end
 
