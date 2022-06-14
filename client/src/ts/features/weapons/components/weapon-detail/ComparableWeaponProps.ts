@@ -1,4 +1,4 @@
-import { CalculatedWeaponStats } from "@app/types"
+import { CalculatedWeaponStats } from "elden-ring-calculator"
 
 export interface ComparableWeaponProps {
     newStats?: CalculatedWeaponStats
