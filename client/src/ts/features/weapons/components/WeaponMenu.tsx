@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Attributes, Weapon } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { meetsRequirements } from "@app/util"
-import { WeaponDetail } from "./WeaponDetail"
+import { WeaponDetail } from "./weapon-detail"
 
 const weaponImage = (weapon: Weapon, stats: Attributes) => {
     let cantUse = null

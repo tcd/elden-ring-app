@@ -20,12 +20,24 @@ export interface ErCardProps {
     iconPath?: string
     content?: any
     className?: string
-    /** CSS properties to apply to the card. */
+    /**
+     * CSS properties to apply to the card.
+     * @default {}
+     */
     style?: CSSProperties
+    /**
+     * @default false
+     */
     smallTitle?: boolean
-    /** If true, add margin to all sides of the card. */
+    /**
+     * If `true`, add margin to all sides of the card.
+     * @default true
+     */
     margined?: boolean
-    /** Sides of the card to which margin should be added. */
+    /**
+     * Sides of the card to which margin should be added.
+     * @default "all"
+     */
     margin?: MarginOption
 }
 
@@ -35,6 +47,7 @@ export class ErCard extends Component<ErCardProps> {
     static defaultProps: Partial<ErCardProps> = {
         margined: true,
         margin: "all",
+        smallTitle: false,
         style: {},
     }
 
