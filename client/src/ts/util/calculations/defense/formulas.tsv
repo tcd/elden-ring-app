@@ -1,0 +1,11 @@
+name	formula
+Player Defense on Rune Level	=IF(Calculator!$O$2+79>240, ADD(135,MULTIPLY(20,DIVIDE(MINUS(Calculator!$O$2+79,240),552))), IF(Calculator!$O$2+79>170, ADD(120,MULTIPLY(15,DIVIDE(MINUS(Calculator!$O$2+79,170),70))), IF(Calculator!$O$2+79>150, ADD(100,MULTIPLY(20,DIVIDE(MINUS(Calculator!$O$2+79,150),20))), ADD(40,MULTIPLY(60,DIVIDE(MINUS(Calculator!$O$2+79,1),149))))))
+Fire Defense	=TRUNC(($G$34+J$34)*1000)/1000
+Holy Defense	=TRUNC(($G$34+K$34)*1000)/1000
+Lightning Defense	=TRUNC($G$34*1000)/1000
+Magic Defense	=TRUNC(($G$34+I$34)*1000)/1000
+Physical Defense	=TRUNC(($G$34+H$34)*1000)/1000
+Fire Defense on Vigor	=IF(Calculator!$L$2>60, ADD(60,MULTIPLY(10,DIVIDE(MINUS(Calculator!$L$2,60),39))), IF(Calculator!$L$2>40, ADD(40,MULTIPLY(20,DIVIDE(MINUS(Calculator!$L$2,40),20))), IF(Calculator!$L$2>30, ADD(20,MULTIPLY(20,DIVIDE(MINUS(Calculator!$L$2,30),10))), MULTIPLY(20,DIVIDE(Calculator!$L$2,30)))))
+Holy Defense on Arc	=IF($E$2>60, ADD(60,MULTIPLY(10,DIVIDE(MINUS($E$2,60),39))), IF($E$2>35, ADD(50,MULTIPLY(10,DIVIDE(MINUS($E$2,35),25))), IF($E$2>20, ADD(40,MULTIPLY(10,DIVIDE(MINUS($E$2,20),15))), MULTIPLY(40,DIVIDE($E$2,20)))))
+Magic Defense on Int	=IF($C$2>60, ADD(60,MULTIPLY(10,DIVIDE(MINUS($C$2,60),39))), IF($C$2>35, ADD(50,MULTIPLY(10,DIVIDE(MINUS($C$2,35),25))), IF($C$2>20, ADD(40,MULTIPLY(10,DIVIDE(MINUS($C$2,20),15))), MULTIPLY(40,DIVIDE($C$2,20)))))
+Physical Defense on Str	=IF(Calculator!$B$2>60, ADD(30,MULTIPLY(10,DIVIDE(MINUS(Calculator!$B$2,60),39))), IF(Calculator!$B$2>40, ADD(15,MULTIPLY(15,DIVIDE(MINUS(Calculator!$B$2,40),20))), IF(Calculator!$B$2>30, ADD(10,MULTIPLY(5,DIVIDE(MINUS(Calculator!$B$2,30),10))), MULTIPLY(10,DIVIDE(Calculator!$B$2,30)))))
