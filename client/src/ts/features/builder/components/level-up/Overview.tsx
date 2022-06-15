@@ -11,12 +11,12 @@ export const Overview = (): JSX.Element => {
     const baseClass = useSelector(Selectors.Builder.startingClassName)
 
     return (
-        <ErCard title="Overview" iconPath={mdiAccount}>
-            <ul className="w-100">
+        <ErCard title="Overview" iconPath={mdiAccount} className={"mr-5"}>
+            <ul>
                 <StatRow title="Starting Class" value={baseClass} />
-                <br/>
+                {/* <br/> */}
                 <StatRow title="Level" value={level} />
-                <br/>
+                {/* <br/> */}
                 <StatRow title="Next Level" value={runes?.toLocaleString()} />
             </ul>
         </ErCard>

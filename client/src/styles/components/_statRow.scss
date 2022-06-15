@@ -3,21 +3,28 @@
 .er__stat-row__column--color-blue { color: v.$blue; }
 .er__stat-row__column--color-red  { color: v.$red;  }
 
+@mixin stat-row-styles {
+    font-size: v.$stat-row-font-size;
+    color: v.$body-color-fg;
+
+    span {
+        font-size: v.$stat-row-font-size;
+    }
+}
+
 .er__stat-row {
+    @include stat-row-styles;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    font-size: v.$stat-row-font-size;
-    color: v.$body-color-fg;
 }
 
 .er__stat-row-plus {
+    @include stat-row-styles;
     display: grid;
     grid-template-columns: 30% 45% 10% 15%;
-    font-size: v.$stat-row-font-size;
-    color: v.$body-color-fg;
 
     span:nth-child(2) {
         text-align: right;
@@ -37,10 +44,9 @@
     // span:nth-child(4) { background: blue;   }
 }
 .er__stat-row-plus-plus {
+    @include stat-row-styles;
     display: grid;
     grid-template-columns: 30% 20% 5% 20% 25%;
-    font-size: v.$stat-row-font-size;
-    color: v.$body-color-fg;
 
     // Damage Type
     span:nth-child(1) {

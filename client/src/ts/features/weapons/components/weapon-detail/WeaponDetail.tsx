@@ -14,7 +14,7 @@ import {
 import {
     ErCard,
     StatRow,
-    StatRowProps,
+    StatRowColor,
 } from "@app/shared"
 import {
     WeaponAttackStats,
@@ -37,21 +37,15 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
         return null
     }
 
-    const defensePlaceholder = "?" // "0.0"
-
-    const dmgNegationData: StatRowProps[] = [
-        { title: "Physical",    value: (weapon?.defense_physical?.toFixed(1)  ?? defensePlaceholder) },
-        { title: "Magic",       value: (weapon?.defense_magic?.toFixed(1)     ?? defensePlaceholder) },
-        { title: "Fire",        value: (weapon?.defense_fire?.toFixed(1)      ?? defensePlaceholder) },
-        { title: "Lightning",   value: (weapon?.defense_lightning?.toFixed(1) ?? defensePlaceholder) },
-        { title: "Holy",        value: (weapon?.defense_holy?.toFixed(1)      ?? defensePlaceholder) },
-        { title: "Guard Boost", value: (weapon?.defense_guard_boost           ?? defensePlaceholder) },
-    ]
-
-    const dmgNegationElements = dmgNegationData.map(({ title, value }) => {
-        const key = `weapon-damage-negation-${title}`
-        return (<StatRow title={title} value={value} key={key}/>)
-    })
+    let weightColor: StatRowColor = "default"
+    if (props?.oldWeapon) {
+        const newWeight = props.weapon.weight
+        const oldWeight = props.oldWeapon.weight
+        // eslint-disable-next-line indent
+             if (newWeight >  oldWeight) { weightColor = "blue"    }
+        else if (newWeight == oldWeight) { weightColor = "default" }
+        else if (newWeight <  oldWeight) { weightColor = "red"     }
+    }
 
     return (
         <div className="weapon-detail">
@@ -67,7 +61,7 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                                     <StatRow title={weapon?.weapon_skill?.name} value={null} />
                                     <br />
                                     <StatRow title="FP Cost" value={weapon?.weapon_skill?.metadata?.complex_fp_cost ?? weapon?.weapon_skill?.metadata?.basic_fp_cost} />
-                                    <StatRow title="Weight"  value={weapon.weight.toFixed(1)} />
+                                    <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color={weightColor} />
                                 </ul>
                             </div>
                             <div className="col-1"></div>

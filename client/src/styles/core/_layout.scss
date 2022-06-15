@@ -1,5 +1,6 @@
 @use "../variables" as v;
 @use "../mixins/customGradient" as m;
+@use "../helpers/index" as h;
 
 html, body {
     height: 100%;
@@ -25,9 +26,10 @@ $main-height: calc(100vh - $header-height);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    // background-color: v.$offWhite;
-    // background: linear-gradient(180deg, rgba(13,14,9,1) 0%, rgba(85,85,73,1) 100%);
-    background: linear-gradient(0deg, rgba(68,68,59,1) 0%, rgba(18,18,17,1) $main-height, rgba(0,0,0,1) 100%);
+    background-image: url(h.$main-menu-encoded-background);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #outlet-wrapper {
