@@ -1,0 +1,13 @@
+bestial:          { spell_type: "Incantation", name: "Bestial",                                                           }
+golden_order:     { spell_type: "Incantation", name: "Golden Order", alt_name: "Golden Order Fundamentalist Incantations" }
+dragon_cult:      { spell_type: "Incantation", name: "Dragon Cult"                                                        }
+dragon_communion: { spell_type: "Incantation", name: "Dragon Communion"                                                   }
+
+# # Sorceries
+# "Full Moon Sorcery",
+# "Invisibility Sorcery",
+# "Crystalian Sorcery",
+# "Gravity Sorcery",
+# "Thorn Sorcery",
+# # Incantations
+# "Godslayer Incantations",

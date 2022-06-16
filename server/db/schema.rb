@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_10_175352) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_16_002316) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -140,6 +140,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_175352) do
     t.datetime "updated_at", null: false
     t.jsonb "metadata", default: {}
     t.index ["equipment_type", "equipment_id"], name: "index_equipment_effects_on_equipment"
+  end
+
+  create_table "spell_groups", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "alt_name"
+    t.string "spell_type", null: false
+    t.jsonb "metadata", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["alt_name"], name: "index_spell_groups_on_alt_name", unique: true, where: "(alt_name IS NOT NULL)"
+    t.index ["name"], name: "index_spell_groups_on_name", unique: true
   end
 
   create_table "spells", force: :cascade do |t|
