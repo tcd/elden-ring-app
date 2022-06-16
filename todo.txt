@@ -11,3 +11,5 @@ x 2022-04-27 Add Staves to rails seed data @server
 2022-05-23 Include checklist(s) in build/state export
 2022-05-24 Completely rewrite AR calculation @client
 2022-06-05 Fix custom scrollbar @client
+2022-06-15 Épée
+2022-06-15 Miséricorde
