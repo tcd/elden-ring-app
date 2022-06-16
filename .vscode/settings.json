@@ -1,6 +1,6 @@
 {
     // "terminal.integrated.defaultProfile.windows": "PowerShell",
-    "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
+    // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
     "eslint.format.enable": true,
     "[javascript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
     "[typescript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
@@ -37,5 +37,8 @@
             ],
             "url": "./server/db/seed_data/effects/schema/talismans-with-effects.schema.json",
         },
-    ]
+    ],
+    "solargraph.commandPath": "C:\\Ruby31-x64\\bin\\solargraph.bat",
+    "solargraph.checkGemVersion": false,
+    "solargraph.useBundler": false,
 }
