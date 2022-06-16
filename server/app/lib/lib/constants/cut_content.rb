@@ -25,6 +25,18 @@ module Lib
         "Ragged Loincloth",
       ].freeze()
 
+      # @return [Array<String>]
+      CONSUMABLES = [
+        "Deathsbane Jerky",
+        "Deathsbane White Jerky",
+        "Drawstring Freezing Grease",
+        "Fetid Flesh",
+        "Heavy Meteorite Fragment",
+        "Holy Water Grease",
+        "Pauper's Rune",
+        "Roped Freezing Pot",
+      ].freeze()
+
     end
   end
 end

@@ -16,8 +16,10 @@ module Lib
         def self.seed()
           Armor.destroy_all()
           invalid = Lib::Tasks::Seed.from_json("armor.json", Armor) do |fx|
+            name = fx["name"]
+            next if Lib::Constants::CutContent::ARMOR.include?(name)
             _args = {
-              name:          fx["name"],
+              name:          name,
               armor_type_id: ARMOR_TYPES[fx["type"]],
               weight:        fx["weight"],
               physical:      fx["physical"],
