@@ -4010,6 +4010,27 @@
         }
     },
     {
+        "name": "Fia's (Altered)",
+        "weight": 3.2,
+        "type": "Chest",
+        "physical": 2.7,
+        "strike": 4.2,
+        "slash": 2.7,
+        "pierce": 2.7,
+        "magic": 11.9,
+        "fire": 11.4,
+        "lightning": 11.9,
+        "holy": 12.6,
+        "immunity": 34,
+        "robustness": 10,
+        "focus": 57,
+        "vitality": 93,
+        "poise": 0,
+        "metadata": {
+            "location": "- Found on Fia after progressing her questline and defeating Lichdragon     Fortissax."
+        }
+    },
+    {
         "name": "Fell Omen Cloak",
         "weight": 5.1,
         "type": "Chest",

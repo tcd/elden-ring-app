@@ -4,26 +4,29 @@ def obtained_assets(folder_name)
   return Dir.children(assets_path).map { |x| x.gsub(".png", "").strip }
 end
 
-def check_assets(model_class, folder_name)
+def check_assets(model_class, folder_name, reverse: false)
   record_names = model_class.all.order(:name).pluck(:name).map { |x| x.strip }
   asset_file_names = obtained_assets(folder_name)
   results = []
-  # record_names.each do |record_name|
-  #   next if Lib::Constants::CutContent::ARMOR.include?(record_name)
-  #   unless asset_file_names.include?(record_name)
-  #     results << record_name
-  #   end
-  # end
-  asset_file_names.each do |asset_file_name|
-    next if Lib::Constants::CutContent::ARMOR.include?(asset_file_name)
-    unless record_names.include?(asset_file_name)
-      results << asset_file_name
+  if (reverse)
+    asset_file_names.each do |asset_file_name|
+      next if Lib::Constants::CutContent::ARMOR.include?(asset_file_name)
+      unless record_names.include?(asset_file_name)
+        results << asset_file_name
+      end
+    end
+  else
+    record_names.each do |record_name|
+      next if Lib::Constants::CutContent::ARMOR.include?(record_name)
+      unless asset_file_names.include?(record_name)
+        results << record_name
+      end
     end
   end
   return results
 end
 
-def spells()
+def spells(reverse: false)
   record_names = Spell.all.order(:name).pluck(:name).map { |x| x.strip }
   incantations = obtained_assets("Spells/Incantations")
   sorceries = obtained_assets("Spells/Sorceries")
@@ -32,15 +35,19 @@ def spells()
     *sorceries,
   ]
   results = []
-  # record_names.each do |record_name|
-  #   unless asset_file_names.include?(record_name)
-  #     results << record_name
-  #   end
-  # end
-  asset_file_names.each do |asset_file_name|
-    next if Lib::Constants::CutContent::ARMOR.include?(asset_file_name)
-    unless record_names.include?(asset_file_name)
-      results << asset_file_name
+  if (reverse)
+    asset_file_names.each do |asset_file_name|
+      next if Lib::Constants::CutContent::ARMOR.include?(asset_file_name)
+      unless record_names.include?(asset_file_name)
+        results << asset_file_name
+      end
+    end
+  else
+    record_names.each do |record_name|
+      next if Lib::Constants::CutContent::ARMOR.include?(record_name)
+      unless asset_file_names.include?(record_name)
+        results << record_name
+      end
     end
   end
   return results
@@ -53,7 +60,7 @@ namespace(:misc) do
       Lib::Util.save_to_file(results, "missing-weapon-assets.json", add_timestamp: true)
     end
     task(armor: [:environment]) do
-      results = check_assets(Armor, "Armor")
+      results = check_assets(Armor, "Armor", reverse: true)
       Lib::Util.save_to_file(results, "missing-armor-assets.json", add_timestamp: true)
     end
     task(talismans: [:environment]) do
