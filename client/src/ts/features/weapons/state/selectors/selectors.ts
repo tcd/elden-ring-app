@@ -77,6 +77,9 @@ export const selectActiveWeapon = (state: RootState) => {
         return null
     }
     const activeName = state?.Weapons?.slots[slotId]?.weapon_name
+    if (isBlank(activeName)) {
+        return null
+    }
     const weapons = selectWeapons(state)
     if (isBlank(weapons)) {
         return null
