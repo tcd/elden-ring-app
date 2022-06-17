@@ -2,15 +2,6 @@
 class Weapon < ApplicationRecord
 
   # @return [Array<String>]
-  PHYSICAL_DAMAGE_TYPES = [
-    "Standard",
-    "Strike",
-    "Slash",
-    "Pierce",
-    "None",
-  ].freeze()
-
-  # @return [Array<String>]
   SCALING_TIERS = [
     "S",
     "A",
@@ -53,19 +44,19 @@ class Weapon < ApplicationRecord
 
   # @!attribute scaling_strength
   #   @return [String]
-  validates(:scaling_strength, inclusion: { in: SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
+  validates(:scaling_strength, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
   # @!attribute scaling_dexterity
   #   @return [String]
-  validates(:scaling_dexterity, inclusion: { in: SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
+  validates(:scaling_dexterity, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
   # @!attribute scaling_intelligence
   #   @return [String]
-  validates(:scaling_intelligence, inclusion: { in: SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
+  validates(:scaling_intelligence, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
   # @!attribute scaling_faith
   #   @return [String]
-  validates(:scaling_faith, inclusion: { in: SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
+  validates(:scaling_faith, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
   # @!attribute scaling_arcane
   #   @return [String]
-  validates(:scaling_arcane, inclusion: { in: SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
+  validates(:scaling_arcane, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
 
   # @!attribute attack_physical
   #   @return [Integer]
