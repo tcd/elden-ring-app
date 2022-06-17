@@ -43,8 +43,9 @@ const routes: RouteObject[] = [
             { path: "/talismans/menu",   element: <TalismanMenu />       },
             { path: "/talismans/table",  element: <TalismansPage />      },
 
-            { path: "/armor",            element: <ArmorPage />          },
+            { path: "/armor",            element: <ArmorMenu />          },
             { path: "/armor/menu",       element: <ArmorMenu />          },
+            { path: "/armor/table",      element: <ArmorPage />          },
 
             { path: "/weapons",          element: <WeaponMenu />         },
             { path: "/weapons/menu",     element: <WeaponMenu />         },
