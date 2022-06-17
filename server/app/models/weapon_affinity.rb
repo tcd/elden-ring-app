@@ -1,3 +1,10 @@
+# Affinities in Elden Ring determine the following Weapon properties:
+#
+# - attribute scaling
+# - attack power
+# - guard boost
+# - guarded damage negation
+# - passive damage
 class WeaponAffinity < ApplicationRecord
   # ============================================================================
   # Attributes
@@ -24,27 +31,6 @@ class WeaponAffinity < ApplicationRecord
   # # @!attribute compatible_weapons_skills
   # #   @return [Array<WeaponSkill>]
   # has_many(:compatible_weapon_skills)
-
-  # @!attribute weapon_attack_stats
-  #   @return [Array<WeaponAttackStat>]
-  has_many(
-    :weapon_attack_stats,
-    class_name: "WeaponAttackStat",
-  )
-
-  # @!attribute weapon_scaling_stats
-  #   @return [Array<WeaponScalingStat>]
-  has_many(
-    :weapon_scaling_stats,
-    class_name: "WeaponScalingStat",
-  )
-
-  # @!attribute weapon_with_affinities
-  #   @return [Array<WeaponWithAffinity>]
-  has_many(
-    :weapon_with_affinities,
-    class_name: "WeaponWithAffinity",
-  )
 
   # @!attribute weapon_stats
   #   @return [Array<WeaponStat>]

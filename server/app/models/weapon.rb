@@ -1,3 +1,4 @@
+# Weapons in Elden Ring are pieces of offensive equipment that are used by the player's character to inflict damage against Enemies and Bosses.
 class Weapon < ApplicationRecord
 
   # @return [Array<String>]
@@ -167,27 +168,6 @@ class Weapon < ApplicationRecord
     allow_destroy: true,
   )
 
-  # @!attribute weapon_attack_stats
-  #   @return [Array<WeaponAttackStat>]
-  has_many(
-    :weapon_attack_stats,
-    class_name: "WeaponAttackStat",
-  )
-
-  # @!attribute weapon_scaling_stats
-  #   @return [Array<WeaponScalingStat>]
-  has_many(
-    :weapon_scaling_stats,
-    class_name: "WeaponScalingStat",
-  )
-
-  # @!attribute weapon_with_affinities
-  #   @return [Array<WeaponWithAffinity>]
-  has_many(
-    :weapon_with_affinities,
-    class_name: "WeaponWithAffinity",
-  )
-
   # @!attribute weapon_stats
   #   @return [Array<WeaponStat>]
   has_many(
@@ -205,10 +185,10 @@ class Weapon < ApplicationRecord
   def damage_types()
     types = []
 
-    types.push(Lib::Constants::DamageTypes::PHYSICAL) if self.attack_physical > 0
-    types.push(Lib::Constants::DamageTypes::FIRE) if self.attack_fire > 0
+    types.push(Lib::Constants::DamageTypes::PHYSICAL)  if self.attack_physical  > 0
+    types.push(Lib::Constants::DamageTypes::FIRE)      if self.attack_fire      > 0
     types.push(Lib::Constants::DamageTypes::LIGHTNING) if self.attack_lightning > 0
-    types.push(Lib::Constants::DamageTypes::HOLY) if self.attack_holy > 0
+    types.push(Lib::Constants::DamageTypes::HOLY)      if self.attack_holy      > 0
 
     return types
   end
