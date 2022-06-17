@@ -17,6 +17,7 @@ class Weapon < ApplicationRecord
     "C",
     "D",
     "E",
+    "-",
   ].freeze()
 
   validates_with(Lib::Validators::PhysicalDamageTypeValidator)
@@ -214,8 +215,7 @@ class Weapon < ApplicationRecord
 
   # @return [String]
   def image_url()
-    folder = self.is_shield ? "shields" : "weapons"
-    return "/public/images/#{folder}/#{self.name}.png"
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Weapons/#{self.name}/public"
   end
 
 end

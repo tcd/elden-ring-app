@@ -20,4 +20,13 @@ class SpellGroup < ApplicationRecord
 
   # @!endgroup Attributes
 
+  # ============================================================================
+  # Instance Methods
+  # ============================================================================
+
+  # @return [String]
+  def image_url()
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Spell Groups/#{self.name}/public"
+  end
+
 end

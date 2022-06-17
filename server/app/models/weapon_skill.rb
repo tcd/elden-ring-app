@@ -16,6 +16,7 @@ class WeaponSkill < ApplicationRecord
 
   # @!attribute ash_of_war
   #   @return [Boolean]
+  # validates(:ash_of_war, inclusion: { in: [ true, false ] })
 
   # @!attribute is_chargeable
   #   @return [Boolean]
@@ -23,9 +24,7 @@ class WeaponSkill < ApplicationRecord
   # @!attribute can_be_applied_to
   #   @return [Array<String>]
 
-  # ============================================================================
   # TODO: add these fields
-  # ============================================================================
   #
   # - fp cost
   # - lasting effects
@@ -48,12 +47,25 @@ class WeaponSkill < ApplicationRecord
   # @!endgroup Associations
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.ashes_of_war()
+  #   @return [WeaponSkill::ActiveRecord_Relation]
+  scope(:ashes_of_war, -> { where(ash_of_war: true) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 
   # @return [String]
   def image_url()
-    return "/public/images/weapon-skills/#{self.name}.png"
+    return nil unless self.ash_of_war
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Ashes of War/#{self.name}/public"
   end
 
 end

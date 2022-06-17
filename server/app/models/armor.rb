@@ -92,7 +92,7 @@ class Armor < ApplicationRecord
 
   # @return [String]
   def image_url()
-    return "/public/images/armor/#{self.name}.png"
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Armor/#{self.name}/public"
   end
 
 end

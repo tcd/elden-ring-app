@@ -63,7 +63,7 @@ class Talisman < ApplicationRecord
 
   # @return [String]
   def image_url()
-    return "/public/images/talismans/#{self.name.gsub(/\s*\+\d$/, '')}.png"
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Talismans/#{self.name}/public"
   end
 
 end

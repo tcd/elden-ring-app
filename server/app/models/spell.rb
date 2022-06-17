@@ -125,7 +125,7 @@ class Spell < ApplicationRecord
 
   # @return [String]
   def image_url()
-    return "/public/images/spells/#{self.name.gsub(':', '_')}.png"
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Spells/#{self.name.gsub(':', '_')}/public"
   end
 
 end

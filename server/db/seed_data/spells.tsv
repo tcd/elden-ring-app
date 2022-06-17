@@ -5,8 +5,8 @@ id	name	spell_type	description	stamina_cost	fp_cost	alt_fp_cost	FP	slots_require
 27	Ancient Death Rancor	Sorcery	Summons horde of vengeful spirits that chase down foes	27	24		24	1	34	24	0	Death Sorceries															
 45	Ancient Dragons' Lightning Spear	Incantation	Stabs with red lightning spear from above	41	42		42	1	0	32	0	Dragon Cult Incantations							true								
 46	Ancient Dragons' Lightning Strike	Incantation	Summons red lightning that spreads from impact	31	36		36	1	0	26	0	Dragon Cult Incantations	true						true								
-57	Aspect of the Crucible: Breath	Incantation	Creates throat pouch to spew fire while walking	40	28		28	1	0	27	0	Erdtree Incantations	true					true									
-58	Aspect of the Crucible: Horns	Incantation	Creates shoulder horn to gore foes form low stance	49	30	4	30 (4)	1	0	27	0	Erdtree Incantations	true			true											
+57	Aspects of the Crucible: Breath	Incantation	Creates throat pouch to spew fire while walking	40	28		28	1	0	27	0	Erdtree Incantations	true					true									
+58	Aspects of the Crucible: Horns	Incantation	Creates shoulder horn to gore foes form low stance	49	30	4	30 (4)	1	0	27	0	Erdtree Incantations	true			true											
 59	Aspects of the Crucible: Tail	Incantation	Creates supple tail to sweep area before caster	42	32	30	32 (30)	1	0	27	0	Erdtree Incantations	true			true											
 157	Assassin's Approach	Incantation	Silences footsteps, reduces fall damage/sound	13	15		15	1	0	10	0	Two Fingers Incantations				false	false	false	false	false	false	false	false	false	false	false	false
 60	Barrier of Gold	Incantation	Greatly increases magic damage negation for self 85 allies	13	30		30	1	0	24	0	Erdtree Incantations				false	false	false	false	false	false	false	false	false	false	false	false
