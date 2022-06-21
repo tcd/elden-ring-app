@@ -2205,42 +2205,6 @@
         "poise": 4
     },
     {
-        "name": "Brave's Cord Circlet",
-        "weight": 1,
-        "type": "Head",
-        "physical": 0.9,
-        "strike": 0.9,
-        "slash": 0.9,
-        "pierce": 0.2,
-        "magic": 4.4,
-        "fire": 4,
-        "lightning": 4.2,
-        "holy": 4.4,
-        "immunity": 15,
-        "robustness": 8,
-        "focus": 0,
-        "vitality": 26,
-        "poise": 0
-    },
-    {
-        "name": "Brave's Leather Helm",
-        "weight": 3.8,
-        "type": "Head",
-        "physical": 4.2,
-        "strike": 3.4,
-        "slash": 4.2,
-        "pierce": 4,
-        "magic": 2.8,
-        "fire": 3.4,
-        "lightning": 2.3,
-        "holy": 2.8,
-        "immunity": 11,
-        "robustness": 20,
-        "focus": 0,
-        "vitality": 8,
-        "poise": 0
-    },
-    {
         "name": "Cleanrot Helm (Altered)",
         "weight": 5.5,
         "type": "Head",
@@ -5367,48 +5331,6 @@
         "holy": 7.3,
         "immunity": 21,
         "robustness": 52,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
-        "metadata": {
-            "location": "-"
-        }
-    },
-    {
-        "name": "Brave's Battlewear",
-        "weight": 4.1,
-        "type": "Chest",
-        "physical": 5.3,
-        "strike": 5.3,
-        "slash": 5.3,
-        "pierce": 4.2,
-        "magic": 12.8,
-        "fire": 12.4,
-        "lightning": 12.6,
-        "holy": 12.8,
-        "immunity": 42,
-        "robustness": 23,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
-        "metadata": {
-            "location": "-"
-        }
-    },
-    {
-        "name": "Brave's Battlewear (Altered)",
-        "weight": 4.1,
-        "type": "Chest",
-        "physical": 5.3,
-        "strike": 5.3,
-        "slash": 5.3,
-        "pierce": 4.2,
-        "magic": 12.8,
-        "fire": 12.4,
-        "lightning": 12.6,
-        "holy": 12.8,
-        "immunity": 38,
-        "robustness": 21,
         "focus": 0,
         "vitality": 0,
         "poise": 0,
@@ -8865,27 +8787,6 @@
         }
     },
     {
-        "name": "Brave's Bracer",
-        "weight": 0.8,
-        "type": "Arms",
-        "physical": 0.6,
-        "strike": 0.6,
-        "slash": 0.6,
-        "pierce": 0.1,
-        "magic": 3.1,
-        "fire": 2.8,
-        "lightning": 2.9,
-        "holy": 3.1,
-        "immunity": 12,
-        "robustness": 6,
-        "focus": 0,
-        "vitality": 20,
-        "poise": 0,
-        "metadata": {
-            "location": "- The *Brave's Bracer *Armor Gauntlets piece is currently unobtainable."
-        }
-    },
-    {
         "name": "Cuckoo Knight Gauntlets",
         "weight": 3.9,
         "type": "Arms",
@@ -11475,27 +11376,6 @@
         "effects": []
     },
     {
-        "name": "Brave's Legwraps",
-        "weight": 3.1,
-        "type": "Legs",
-        "physical": 3.4,
-        "strike": 3.4,
-        "slash": 3.4,
-        "pierce": 3,
-        "magic": 7.4,
-        "fire": 7.2,
-        "lightning": 7.3,
-        "holy": 7.4,
-        "immunity": 29,
-        "robustness": 15,
-        "focus": 0,
-        "vitality": 47,
-        "poise": 0,
-        "metadata": {
-            "location": "- The *Brave's Legwraps* Leg Armor is currently unobtainable."
-        }
-    },
-    {
         "name": "Malenia's Greaves",
         "weight": 5.7,
         "type": "Legs",
@@ -11808,27 +11688,6 @@
         "poise": 0,
         "metadata": {
             "location": "- Haligtree Knights drop the Haligtree Knight Armor, Haligtree Knight     Gauntlets, and Haligtree Knight Greaves. They can be found in the latter     areas of Elphael, Brace of the Haligtree."
-        }
-    },
-    {
-        "name": "Deathbed Smalls",
-        "weight": 2,
-        "type": "Legs",
-        "physical": 1.5,
-        "strike": 2.3,
-        "slash": 1.5,
-        "pierce": 1.5,
-        "magic": 6.8,
-        "fire": 6.5,
-        "lightning": 6.8,
-        "holy": 7.2,
-        "immunity": 24,
-        "robustness": 7,
-        "focus": 0,
-        "vitality": 66,
-        "poise": 0,
-        "metadata": {
-            "location": "- Deathbed Smalls are apparently *CUT CONTENT* and cannot be found     in-game"
         }
     }
 ]
