@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_001203) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_21_150021) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -638,19 +638,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_001203) do
     t.integer "required_intelligence"
     t.integer "required_faith"
     t.integer "required_arcane"
-    t.string "scaling_strength"
-    t.string "scaling_dexterity"
-    t.string "scaling_intelligence"
-    t.string "scaling_faith"
-    t.string "scaling_arcane"
-    t.integer "attack_physical"
-    t.integer "attack_magic"
-    t.integer "attack_fire"
-    t.integer "attack_lightning"
-    t.integer "attack_holy"
-    t.integer "attack_critical"
-    t.integer "sorcery_scaling"
-    t.integer "incantation_scaling"
     t.decimal "defense_physical", null: false
     t.decimal "defense_magic", null: false
     t.decimal "defense_fire", null: false
@@ -662,16 +649,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_001203) do
     t.datetime "updated_at", null: false
     t.boolean "is_special"
     t.integer "range"
-    t.integer "attack_stamina_damage"
     t.string "spell_boost_groups", default: [], array: true
     t.decimal "spell_boost_percentage"
-    t.integer "damage_blood_loss", default: 0
-    t.integer "damage_frost", default: 0
-    t.integer "damage_madness", default: 0
-    t.integer "damage_poison", default: 0
-    t.integer "damage_sleep", default: 0
-    t.integer "damage_death_blight", default: 0
-    t.integer "damage_scarlet_rot", default: 0
     t.integer "weapon_skill_id", null: false
     t.index ["name"], name: "index_weapons_on_name", unique: true
     t.index ["weapon_type_id"], name: "index_weapons_on_weapon_type_id"

@@ -2,28 +2,11 @@ import {
     BaseEntity,
     WeaponSkill,
     WeaponTypePluralString,
-    ScalingTierString,
     EquipmentEffect,
     WeaponStat,
 } from "@types"
 
-export interface DeprecatedWeapon extends BaseEntity {
-    attack_physical: number
-    attack_magic: number
-    attack_fire: number
-    attack_lightning: number
-    attack_holy: number
-    attack_critical: number
-    attack_stamina_damage?: number
-
-    scaling_strength?: ScalingTierString
-    scaling_dexterity?: ScalingTierString
-    scaling_intelligence?: ScalingTierString
-    scaling_faith?: ScalingTierString
-    scaling_arcane?: ScalingTierString
-}
-
-export interface Weapon extends DeprecatedWeapon {
+export interface Weapon extends BaseEntity {
     name: string
     image_url: string
     is_shield?: boolean
@@ -35,8 +18,6 @@ export interface Weapon extends DeprecatedWeapon {
     weight: number
     physical_damage_types: string[]
     range?: number
-    sorcery_scaling?: number
-    incantation_scaling?: number
     spell_boost_groups?: string[]
     spell_boost_percentage?: number
 
@@ -55,12 +36,4 @@ export interface Weapon extends DeprecatedWeapon {
     required_intelligence?: number
     required_faith?: number
     required_arcane?: number
-
-    damage_blood_loss?: number
-    damage_frost?: number
-    damage_madness?: number
-    damage_poison?: number
-    damage_sleep?: number
-    damage_death_blight?: number
-    damage_scarlet_rot?: number
 }

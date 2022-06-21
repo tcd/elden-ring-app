@@ -1,17 +1,6 @@
 # Weapons in Elden Ring are pieces of offensive equipment that are used by the player's character to inflict damage against Enemies and Bosses.
 class Weapon < ApplicationRecord
 
-  # @return [Array<String>]
-  SCALING_TIERS = [
-    "S",
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "-",
-  ].freeze()
-
   validates_with(Lib::Validators::PhysicalDamageTypeValidator)
 
   # ============================================================================
@@ -42,35 +31,6 @@ class Weapon < ApplicationRecord
   # @!attribute required_arcane
   #   @return [Integer]
 
-  # @!attribute scaling_strength
-  #   @return [String]
-  validates(:scaling_strength, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
-  # @!attribute scaling_dexterity
-  #   @return [String]
-  validates(:scaling_dexterity, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
-  # @!attribute scaling_intelligence
-  #   @return [String]
-  validates(:scaling_intelligence, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
-  # @!attribute scaling_faith
-  #   @return [String]
-  validates(:scaling_faith, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
-  # @!attribute scaling_arcane
-  #   @return [String]
-  validates(:scaling_arcane, inclusion: { in: Lib::Constants::SCALING_TIERS, message: "%{value} is not a valid scaling tier", allow_blank: true })
-
-  # @!attribute attack_physical
-  #   @return [Integer]
-  # @!attribute attack_magic
-  #   @return [Integer]
-  # @!attribute attack_fire
-  #   @return [Integer]
-  # @!attribute attack_lightning
-  #   @return [Integer]
-  # @!attribute attack_holy
-  #   @return [Integer]
-  # @!attribute attack_critical
-  #   @return [Integer]
-
   # @!attribute defense_physical
   #   @return [Decimal]
   validates(:defense_physical, presence: true)
@@ -90,21 +50,6 @@ class Weapon < ApplicationRecord
   #   @return [Decimal]
   validates(:defense_guard_boost, presence: true)
 
-  # @!attribute damage_blood_loss
-  #   @return [Integer]
-  # @!attribute damage_frost
-  #   @return [Integer]
-  # @!attribute damage_madness
-  #   @return [Integer]
-  # @!attribute damage_poison
-  #   @return [Integer]
-  # @!attribute damage_sleep
-  #   @return [Integer]
-  # @!attribute damage_death_blight
-  #   @return [Integer]
-  # @!attribute damage_scarlet_rot
-  #   @return [Integer]
-
   # @!attribute is_shield
   #   @return [Boolean]
 
@@ -112,15 +57,6 @@ class Weapon < ApplicationRecord
   #   @return [Boolean]
 
   # @!attribute range
-  #   @return [Integer]
-
-  # @!attribute sorcery_scaling
-  #   @return [Integer]
-
-  # @!attribute incantation_scaling
-  #   @return [Integer]
-
-  # @!attribute attack_stamina_damage
   #   @return [Integer]
 
   # @!attribute spell_boost_groups
