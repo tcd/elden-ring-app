@@ -1,3 +1,6 @@
+# In Elden Ring, Armor are protective items worn by the player's character which grant
+# protections, resistances, and various bonus effects against damage and status effects,
+# as well as influencing statistics such as carry load and poise.
 class Armor < ApplicationRecord
 
   # ============================================================================
