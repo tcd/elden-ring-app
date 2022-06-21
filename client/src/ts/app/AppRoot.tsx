@@ -8,7 +8,7 @@ import CircularProgress from "@mui/material/CircularProgress"
 import {
     EldenRingMaterialThemeDark,
     // EldenRingMaterialThemeLight,
-} from "@util"
+} from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { AppRoutesComponent } from "./AppRoutesComponent"
 
@@ -18,7 +18,7 @@ const backdropSx: SxProps = {
     zIndex: 50,
 }
 
-export const AppRoot = (_props: never): JSX.Element => {
+export const AppRoot = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
