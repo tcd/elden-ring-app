@@ -2551,24 +2551,6 @@
         "poise": 1
     },
     {
-        "name": "Grass Hair Ornament",
-        "weight": 1.4,
-        "type": "Head",
-        "physical": 1.4,
-        "strike": 1.4,
-        "slash": 1.4,
-        "pierce": 0.9,
-        "magic": 4.5,
-        "fire": 4.2,
-        "lightning": 4.4,
-        "holy": 4.5,
-        "immunity": 16,
-        "robustness": 9,
-        "focus": 0,
-        "vitality": 27,
-        "poise": 0
-    },
-    {
         "name": "Greathood",
         "weight": 5.1,
         "type": "Head",
@@ -2975,42 +2957,6 @@
         "focus": 9,
         "vitality": 10,
         "poise": 5
-    },
-    {
-        "name": "Ragged Hat",
-        "weight": 3.3,
-        "type": "Head",
-        "physical": 3.1,
-        "strike": 3.4,
-        "slash": 3.1,
-        "pierce": 3.1,
-        "magic": 3.6,
-        "fire": 3.8,
-        "lightning": 4,
-        "holy": 3.6,
-        "immunity": 26,
-        "robustness": 16,
-        "focus": 0,
-        "vitality": 22,
-        "poise": 0
-    },
-    {
-        "name": "Ragged Hat (Altered)",
-        "weight": 3.3,
-        "type": "Head",
-        "physical": 3.1,
-        "strike": 3.4,
-        "slash": 3.1,
-        "pierce": 3.1,
-        "magic": 3.6,
-        "fire": 3.8,
-        "lightning": 4,
-        "holy": 3.6,
-        "immunity": 23,
-        "robustness": 14,
-        "focus": 0,
-        "vitality": 20,
-        "poise": 0
     },
     {
         "name": "Raya Lucarian Helm",
@@ -3885,9 +3831,7 @@
         "focus": 23,
         "vitality": 0,
         "poise": 16,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Errant Sorcerer Robe",
@@ -4368,9 +4312,7 @@
         "focus": 55,
         "vitality": 0,
         "poise": 8,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Malformed Dragon Armor",
@@ -4389,9 +4331,7 @@
         "focus": 38,
         "vitality": 0,
         "poise": 26,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Maliketh's Armor",
@@ -4410,9 +4350,7 @@
         "focus": 24,
         "vitality": 0,
         "poise": 19,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Marais Robe",
@@ -4431,51 +4369,7 @@
         "focus": 71,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
-    },
-    {
-        "name": "Millicent's Robe",
-        "weight": 3.2,
-        "type": "Chest",
-        "physical": 4.2,
-        "strike": 4.2,
-        "slash": 4.2,
-        "pierce": 2.7,
-        "magic": 12.6,
-        "fire": 11.9,
-        "lightning": 12.4,
-        "holy": 12.6,
-        "immunity": 38,
-        "robustness": 21,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
-        "metadata": {
-            "location": "- Location go here."
-        }
-    },
-    {
-        "name": "Millicent's Tunic",
-        "weight": 8.3,
-        "type": "Chest",
-        "physical": 6.1,
-        "strike": 6.1,
-        "slash": 6.1,
-        "pierce": 5.3,
-        "magic": 13,
-        "fire": 12.6,
-        "lightning": 12.8,
-        "holy": 13,
-        "immunity": 46,
-        "robustness": 24,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
-        "metadata": {
-            "location": "- Location Go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Mushroom Body",
@@ -4557,9 +4451,7 @@
         "focus": 46,
         "vitality": 0,
         "poise": 6,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Perfumer's Traveling Garb",
@@ -4578,9 +4470,7 @@
         "focus": 76,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Preceptor's Long Gown",
@@ -4599,9 +4489,7 @@
         "focus": 83,
         "vitality": 0,
         "poise": 3,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Prisoner Clothing",
@@ -4683,9 +4571,7 @@
         "focus": 42,
         "vitality": 0,
         "poise": 28,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Raging Wolf Armor",
@@ -4704,9 +4590,7 @@
         "focus": 18,
         "vitality": 0,
         "poise": 15,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Raya Lucarian Robe",
@@ -4746,9 +4630,7 @@
         "focus": 42,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Ruler's Robe",
@@ -4767,9 +4649,7 @@
         "focus": 67,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Sage Robe",
@@ -4809,9 +4689,7 @@
         "focus": 83,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Scale Armor",
@@ -4851,9 +4729,7 @@
         "focus": 37,
         "vitality": 0,
         "poise": 27,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Snow Witch Robe",
@@ -4872,9 +4748,7 @@
         "focus": 71,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Traveling Maiden Robe",
@@ -4893,9 +4767,7 @@
         "focus": 76,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Twinned Armor",
@@ -4914,9 +4786,7 @@
         "focus": 24,
         "vitality": 0,
         "poise": 21,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Upper-Class Robe",
@@ -4935,9 +4805,7 @@
         "focus": 67,
         "vitality": 0,
         "poise": 2,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Vagabond Knight Armor",
@@ -4977,9 +4845,7 @@
         "focus": 46,
         "vitality": 0,
         "poise": 37,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "White Reed Armor",
@@ -4998,9 +4864,7 @@
         "focus": 55,
         "vitality": 0,
         "poise": 8,
-        "metadata": {
-            "location": "- How to Acquire go here."
-        }
+        "metadata": {}
     },
     {
         "name": "Zamor Armor",
@@ -6864,48 +6728,6 @@
         "holy": 13.5,
         "immunity": 52,
         "robustness": 82,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
-        "metadata": {
-            "location": "-"
-        }
-    },
-    {
-        "name": "Ragged Armor",
-        "weight": 9.2,
-        "type": "Chest",
-        "physical": 9.5,
-        "strike": 10.2,
-        "slash": 9.5,
-        "pierce": 9.5,
-        "magic": 10.9,
-        "fire": 11.4,
-        "lightning": 11.9,
-        "holy": 10.9,
-        "immunity": 63,
-        "robustness": 42,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
-        "metadata": {
-            "location": "-"
-        }
-    },
-    {
-        "name": "Ragged Armor (Altered)",
-        "weight": 8.3,
-        "type": "Chest",
-        "physical": 9.5,
-        "strike": 10.2,
-        "slash": 9.5,
-        "pierce": 9.5,
-        "magic": 10.9,
-        "fire": 11.4,
-        "lightning": 11.9,
-        "holy": 10.9,
-        "immunity": 57,
-        "robustness": 38,
         "focus": 0,
         "vitality": 0,
         "poise": 0,
@@ -9144,27 +8966,6 @@
         }
     },
     {
-        "name": "Millicent's Gloves",
-        "weight": 1.1,
-        "type": "Arms",
-        "physical": 1,
-        "strike": 1,
-        "slash": 1,
-        "pierce": 0.6,
-        "magic": 3.1,
-        "fire": 2.9,
-        "lightning": 3.1,
-        "holy": 3.1,
-        "immunity": 13,
-        "robustness": 7,
-        "focus": 0,
-        "vitality": 21,
-        "poise": 0,
-        "metadata": {
-            "location": "- The *Millicent's Gloves *Armor Gauntlets piece is not currently     obtainable."
-        }
-    },
-    {
         "name": "Night's Cavalry Gauntlets",
         "weight": 4.3,
         "type": "Arms",
@@ -9246,27 +9047,6 @@
         "poise": 0,
         "metadata": {
             "location": "- Chace to drop from Radahn Soldiers, easily found in large numbers     around Fort Gael."
-        }
-    },
-    {
-        "name": "Ragged Gloves",
-        "weight": 2.9,
-        "type": "Arms",
-        "physical": 2.3,
-        "strike": 2.5,
-        "slash": 2.3,
-        "pierce": 2.3,
-        "magic": 2.7,
-        "fire": 2.8,
-        "lightning": 2.9,
-        "holy": 2.7,
-        "immunity": 21,
-        "robustness": 14,
-        "focus": 0,
-        "vitality": 18,
-        "poise": 0,
-        "metadata": {
-            "location": "- Not currently obtainable."
         }
     },
     {
@@ -10322,27 +10102,6 @@
         }
     },
     {
-        "name": "Millicent's Boots",
-        "weight": 2,
-        "type": "Legs",
-        "physical": 2.3,
-        "strike": 2.3,
-        "slash": 2.3,
-        "pierce": 1.5,
-        "magic": 7.2,
-        "fire": 6.8,
-        "lightning": 7.1,
-        "holy": 7.2,
-        "immunity": 24,
-        "robustness": 13,
-        "focus": 0,
-        "vitality": 39,
-        "poise": 0,
-        "metadata": {
-            "location": "- This piece is not currently obtainable."
-        }
-    },
-    {
         "name": "Mushroom Legs",
         "weight": 3.1,
         "type": "Legs",
@@ -11308,27 +11067,6 @@
         "poise": 0,
         "metadata": {
             "location": "- The Depraved Perfumer Set pieces can be farmed from the Depraved     Perfumer enemies located around The Shaded Castle."
-        }
-    },
-    {
-        "name": "Ragged Loincloth",
-        "weight": 3.1,
-        "type": "Legs",
-        "physical": 4,
-        "strike": 4.5,
-        "slash": 4,
-        "pierce": 4,
-        "magic": 5,
-        "fire": 5.4,
-        "lightning": 5.8,
-        "holy": 5,
-        "immunity": 34,
-        "robustness": 20,
-        "focus": 0,
-        "vitality": 26,
-        "poise": 0,
-        "metadata": {
-            "location": "- Not currently obtainable."
         }
     },
     {
