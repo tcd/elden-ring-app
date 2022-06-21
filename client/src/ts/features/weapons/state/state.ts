@@ -38,14 +38,17 @@ const devState: WeaponsState = {
     activeSlotId: "R1",
     slots: {
         ...initialState.slots,
-        R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Blasphemous Blade", level: 10 },
-        // R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
-        // R2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Blasphemous Blade"        },
-        // R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
-        // L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
-        // // L2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: ""                      },
-        // L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
+        R1: { weapon_name: "Blasphemous Blade", level: 10, affinity_name: "Standard" },
+        L1: { weapon_name: "Rotten Greataxe",   level: 25, affinity_name: "Cold"     },
     },
+    // slots: {
+    //     R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
+    //     R2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Blasphemous Blade"        },
+    //     R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
+    //     L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
+    //     L2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: ""                      },
+    //     L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
+    // },
     oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
 }
 

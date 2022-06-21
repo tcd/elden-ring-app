@@ -20,6 +20,10 @@ module Lib
         #   @return [Array<Hash>]
         attr_accessor :scaling_data
 
+        # @!attribute passive_data
+        #   @return [Array<Hash>]
+        attr_accessor :passive_data
+
         # @!attribute calc_correct_data
         #   @return [Array<Hash>]
         attr_accessor :calc_correct_data
@@ -34,6 +38,7 @@ module Lib
 
           self.attack_data       = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Attack.tsv"))
           self.scaling_data      = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Scaling.tsv"))
+          self.passive_data      = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "Passive.tsv"))
           self.calc_correct_data = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "calculation", "CalcCorrectGraph_ID.tsv"))
         end
 
@@ -53,11 +58,13 @@ module Lib
 
           attack_data_input  = self.attack_data.find  { |x| x["Name"] == name }
           scaling_data_input = self.scaling_data.find { |x| x["Name"] == name }
+          passive_data_input = self.passive_data.find { |x| x["Name"] == name }
 
           attack_data_output  = self.process_attack(attack_data_input)
           scaling_data_output = self.process_scaling(scaling_data_input)
+          passive_data_output = self.process_passive(passive_data_input)
 
-          calc_correct_data_input = self.calc_correct_data.find { |x| x["weapon_attack_stat_name"] == name }
+          calc_correct_data_input  = self.calc_correct_data.find { |x| x["weapon_attack_stat_name"] == name }
           calc_correct_data_output = self.process_calc_correct(calc_correct_data_input)
 
           output = {
@@ -68,6 +75,7 @@ module Lib
 
             **attack_data_output,
             **scaling_data_output,
+            **passive_data_output,
             **calc_correct_data_output,
           }
 
@@ -247,6 +255,97 @@ module Lib
             attack_lightning_25: input["Ligh +25"],
             attack_holy_25:      input["Holy +25"],
             attack_stamina_25:   input["Stam +25"],
+          }
+        end
+
+        # @param input [Hash]
+        # @return [Hash]
+        def process_passive(input)
+          return {
+            passive_type_1:        item["Type 1"],
+            passive_type_2:        item["Type 2"],
+
+            passive_scarlet_rot_0: item["Scarlet Rot +0"],
+            passive_madness_0:     item["Madness +0"],
+            passive_sleep_0:       item["Sleep +0"],
+            passive_frost_0:       item["Frost +0"],
+            passive_poison_0:      item["Poison +0"],
+            passive_blood_loss_0:  item["Blood +0"],
+            passive_frost_1:       item["Frost +1"],
+            passive_poison_1:      item["Poison +1"],
+            passive_blood_loss_1:  item["Blood +1"],
+            passive_frost_2:       item["Frost +2"],
+            passive_poison_2:      item["Poison +2"],
+            passive_blood_loss_2:  item["Blood +2"],
+            passive_frost_3:       item["Frost +3"],
+            passive_poison_3:      item["Poison +3"],
+            passive_blood_loss_3:  item["Blood +3"],
+            passive_frost_4:       item["Frost +4"],
+            passive_poison_4:      item["Poison +4"],
+            passive_blood_loss_4:  item["Blood +4"],
+            passive_frost_5:       item["Frost +5"],
+            passive_poison_5:      item["Poison +5"],
+            passive_blood_loss_5:  item["Blood +5"],
+            passive_frost_6:       item["Frost +6"],
+            passive_poison_6:      item["Poison +6"],
+            passive_blood_loss_6:  item["Blood +6"],
+            passive_frost_7:       item["Frost +7"],
+            passive_poison_7:      item["Poison +7"],
+            passive_blood_loss_7:  item["Blood +7"],
+            passive_frost_8:       item["Frost +8"],
+            passive_poison_8:      item["Poison +8"],
+            passive_blood_loss_8:  item["Blood +8"],
+            passive_frost_9:       item["Frost +9"],
+            passive_poison_9:      item["Poison +9"],
+            passive_blood_loss_9:  item["Blood +9"],
+            passive_frost_10:      item["Frost +10"],
+            passive_poison_10:     item["Poison +10"],
+            passive_blood_loss_10: item["Blood +10"],
+            passive_frost_11:      item["Frost +11"],
+            passive_poison_11:     item["Poison +11"],
+            passive_blood_loss_11: item["Blood +11"],
+            passive_frost_12:      item["Frost +12"],
+            passive_poison_12:     item["Poison +12"],
+            passive_blood_loss_12: item["Blood +12"],
+            passive_frost_13:      item["Frost +13"],
+            passive_poison_13:     item["Poison +13"],
+            passive_blood_loss_13: item["Blood +13"],
+            passive_frost_14:      item["Frost +14"],
+            passive_poison_14:     item["Poison +14"],
+            passive_blood_loss_14: item["Blood +14"],
+            passive_frost_15:      item["Frost +15"],
+            passive_poison_15:     item["Poison +15"],
+            passive_blood_loss_15: item["Blood +15"],
+            passive_frost_16:      item["Frost +16"],
+            passive_poison_16:     item["Poison +16"],
+            passive_blood_loss_16: item["Blood +16"],
+            passive_frost_17:      item["Frost +17"],
+            passive_poison_17:     item["Poison +17"],
+            passive_blood_loss_17: item["Blood +17"],
+            passive_frost_18:      item["Frost +18"],
+            passive_poison_18:     item["Poison +18"],
+            passive_blood_loss_18: item["Blood +18"],
+            passive_frost_19:      item["Frost +19"],
+            passive_poison_19:     item["Poison +19"],
+            passive_blood_loss_19: item["Blood +19"],
+            passive_frost_20:      item["Frost +20"],
+            passive_poison_20:     item["Poison +20"],
+            passive_blood_loss_20: item["Blood +20"],
+            passive_frost_21:      item["Frost +21"],
+            passive_poison_21:     item["Poison +21"],
+            passive_blood_loss_21: item["Blood +21"],
+            passive_frost_22:      item["Frost +22"],
+            passive_poison_22:     item["Poison +22"],
+            passive_blood_loss_22: item["Blood +22"],
+            passive_frost_23:      item["Frost +23"],
+            passive_poison_23:     item["Poison +23"],
+            passive_blood_loss_23: item["Blood +23"],
+            passive_frost_24:      item["Frost +24"],
+            passive_poison_24:     item["Poison +24"],
+            passive_blood_loss_24: item["Blood +24"],
+            passive_frost_25:      item["Frost +25"],
+            passive_poison_25:     item["Poison +25"],
+            passive_blood_loss_25: item["Blood +25"],
           }
         end
 

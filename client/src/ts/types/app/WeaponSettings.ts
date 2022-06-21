@@ -1,8 +1,10 @@
+import { WeaponAffinityName } from "@app/types"
+
 export interface WeaponSettings {
     // weapon_id: number
     weapon_name: string
     level: number
-    affinity_name: string
+    affinity_name: WeaponAffinityName
 }
 
 export const DEFAULT_WEAPON_SETTINGS: WeaponSettings = {

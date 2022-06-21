@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_16_002316) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_21_001203) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -526,6 +526,89 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_16_002316) do
     t.integer "calc_correct_fire", null: false
     t.integer "calc_correct_lightning", null: false
     t.integer "calc_correct_holy", null: false
+    t.string "passive_type_1"
+    t.string "passive_type_2"
+    t.integer "passive_scarlet_rot_0", default: 0, null: false
+    t.integer "passive_madness_0", default: 0, null: false
+    t.integer "passive_sleep_0", default: 0, null: false
+    t.integer "passive_frost_0", default: 0, null: false
+    t.integer "passive_poison_0", default: 0, null: false
+    t.integer "passive_blood_loss_0", default: 0, null: false
+    t.integer "passive_frost_1", default: 0, null: false
+    t.integer "passive_poison_1", default: 0, null: false
+    t.integer "passive_blood_loss_1", default: 0, null: false
+    t.integer "passive_frost_2", default: 0, null: false
+    t.integer "passive_poison_2", default: 0, null: false
+    t.integer "passive_blood_loss_2", default: 0, null: false
+    t.integer "passive_frost_3", default: 0, null: false
+    t.integer "passive_poison_3", default: 0, null: false
+    t.integer "passive_blood_loss_3", default: 0, null: false
+    t.integer "passive_frost_4", default: 0, null: false
+    t.integer "passive_poison_4", default: 0, null: false
+    t.integer "passive_blood_loss_4", default: 0, null: false
+    t.integer "passive_frost_5", default: 0, null: false
+    t.integer "passive_poison_5", default: 0, null: false
+    t.integer "passive_blood_loss_5", default: 0, null: false
+    t.integer "passive_frost_6", default: 0, null: false
+    t.integer "passive_poison_6", default: 0, null: false
+    t.integer "passive_blood_loss_6", default: 0, null: false
+    t.integer "passive_frost_7", default: 0, null: false
+    t.integer "passive_poison_7", default: 0, null: false
+    t.integer "passive_blood_loss_7", default: 0, null: false
+    t.integer "passive_frost_8", default: 0, null: false
+    t.integer "passive_poison_8", default: 0, null: false
+    t.integer "passive_blood_loss_8", default: 0, null: false
+    t.integer "passive_frost_9", default: 0, null: false
+    t.integer "passive_poison_9", default: 0, null: false
+    t.integer "passive_blood_loss_9", default: 0, null: false
+    t.integer "passive_frost_10", default: 0, null: false
+    t.integer "passive_poison_10", default: 0, null: false
+    t.integer "passive_blood_loss_10", default: 0, null: false
+    t.integer "passive_frost_11", default: 0, null: false
+    t.integer "passive_poison_11", default: 0, null: false
+    t.integer "passive_blood_loss_11", default: 0, null: false
+    t.integer "passive_frost_12", default: 0, null: false
+    t.integer "passive_poison_12", default: 0, null: false
+    t.integer "passive_blood_loss_12", default: 0, null: false
+    t.integer "passive_frost_13", default: 0, null: false
+    t.integer "passive_poison_13", default: 0, null: false
+    t.integer "passive_blood_loss_13", default: 0, null: false
+    t.integer "passive_frost_14", default: 0, null: false
+    t.integer "passive_poison_14", default: 0, null: false
+    t.integer "passive_blood_loss_14", default: 0, null: false
+    t.integer "passive_frost_15", default: 0, null: false
+    t.integer "passive_poison_15", default: 0, null: false
+    t.integer "passive_blood_loss_15", default: 0, null: false
+    t.integer "passive_frost_16", default: 0, null: false
+    t.integer "passive_poison_16", default: 0, null: false
+    t.integer "passive_blood_loss_16", default: 0, null: false
+    t.integer "passive_frost_17", default: 0, null: false
+    t.integer "passive_poison_17", default: 0, null: false
+    t.integer "passive_blood_loss_17", default: 0, null: false
+    t.integer "passive_frost_18", default: 0, null: false
+    t.integer "passive_poison_18", default: 0, null: false
+    t.integer "passive_blood_loss_18", default: 0, null: false
+    t.integer "passive_frost_19", default: 0, null: false
+    t.integer "passive_poison_19", default: 0, null: false
+    t.integer "passive_blood_loss_19", default: 0, null: false
+    t.integer "passive_frost_20", default: 0, null: false
+    t.integer "passive_poison_20", default: 0, null: false
+    t.integer "passive_blood_loss_20", default: 0, null: false
+    t.integer "passive_frost_21", default: 0, null: false
+    t.integer "passive_poison_21", default: 0, null: false
+    t.integer "passive_blood_loss_21", default: 0, null: false
+    t.integer "passive_frost_22", default: 0, null: false
+    t.integer "passive_poison_22", default: 0, null: false
+    t.integer "passive_blood_loss_22", default: 0, null: false
+    t.integer "passive_frost_23", default: 0, null: false
+    t.integer "passive_poison_23", default: 0, null: false
+    t.integer "passive_blood_loss_23", default: 0, null: false
+    t.integer "passive_frost_24", default: 0, null: false
+    t.integer "passive_poison_24", default: 0, null: false
+    t.integer "passive_blood_loss_24", default: 0, null: false
+    t.integer "passive_frost_25", default: 0, null: false
+    t.integer "passive_poison_25", default: 0, null: false
+    t.integer "passive_blood_loss_25", default: 0, null: false
     t.index ["attack_element_correct_param_id"], name: "index_weapon_stats_on_attack_element_correct_param_id"
     t.index ["name"], name: "index_weapon_stats_on_name", unique: true
     t.index ["weapon_affinity_id"], name: "index_weapon_stats_on_weapon_affinity_id"
