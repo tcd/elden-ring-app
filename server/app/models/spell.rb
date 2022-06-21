@@ -33,7 +33,7 @@ class Spell < ApplicationRecord
 
   # @!attribute spell_type
   #   @return [String]
-  validates(:spell_type, inclusion: { in: Lib::Constants::SpellTypes, message: "%{value} is not a valid spell_type" })
+  validates(:spell_type, inclusion: { in: Lib::Constants::SpellTypes::ALL, message: "%{value} is not a valid spell_type" })
 
   # @!attribute description
   #   @return [String]
