@@ -29,9 +29,9 @@ module Lib
       error_file = Lib::Util.save_to_file(invalid, "seed-errors.json", add_timestamp: true)
       puts("#{invalid.values.flatten.length} errors; see file '#{error_file}'")
       return invalid
-    rescue SignalException, SystemExit, Interrupt
-      error_file = Lib::Util.save_to_file(invalid, "seed-errors.json", add_timestamp: true)
-      puts("#{invalid.values.flatten.length} errors; see file '#{error_file}'")
+    # rescue SignalException, SystemExit, Interrupt
+    #   error_file = Lib::Util.save_to_file(invalid, "seed-errors.json", add_timestamp: true)
+    #   puts("#{invalid.values.flatten.length} errors; see file '#{error_file}'")
     end
 
     # @param model_class [Class] ActiveRecord model to create.

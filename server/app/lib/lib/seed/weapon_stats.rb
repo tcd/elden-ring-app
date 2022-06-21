@@ -261,8 +261,8 @@ module Lib
       # @return [Hash]
       def process_passive(input)
         return {
-          passive_type_1:        input["Type 1"],
-          passive_type_2:        input["Type 2"],
+          passive_type_1:        input.dig("Type 1"),
+          passive_type_2:        input.dig("Type 2"),
 
           passive_scarlet_rot_0: input["Scarlet Rot +0"],
           passive_madness_0:     input["Madness +0"],
