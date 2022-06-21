@@ -5,39 +5,33 @@ export const selectFetchingEverything = (state: RootState) => {
     return (requestState.status === "pending")
 }
 
-export const selectShouldFetchEverything = (state: RootState) => {
-    const requestState = state.Builder.everythingRequest
-    if (requestState.status === "idle") {
-        return true
-    }
+const selectEverythingResponse = (rootState: RootState) => {
+    return rootState?.Builder?.everythingRequest?.response
 }
 
-export const selectArmor = (state: RootState) => {
-    return selectEverythingResponse(state)?.armor ?? []
+export const selectArmor = (rootState: RootState) => {
+    return selectEverythingResponse(rootState)?.armor ?? []
 }
 
-export const selectSpells = (state: RootState) => {
-    return selectEverythingResponse(state)?.spells ?? []
+export const selectSpells = (rootState: RootState) => {
+    return selectEverythingResponse(rootState)?.spells ?? []
 }
 
-export const selectTalismans = (state: RootState) => {
-    return selectEverythingResponse(state)?.talismans ?? []
+export const selectTalismans = (rootState: RootState) => {
+    return selectEverythingResponse(rootState)?.talismans ?? []
 }
 
-const selectEverythingResponse = (state: RootState) => {
-    return state?.Builder?.everythingRequest?.response
+
+export const selectWeapons = (rootState: RootState) => {
+    return selectEverythingResponse(rootState)?.weapons ?? []
 }
 
-export const selectWeapons = (state: RootState) => {
-    return selectEverythingResponse(state)?.weapons ?? []
+export const selectWeaponSkills = (rootState: RootState) => {
+    return selectEverythingResponse(rootState)?.weapon_skills ?? []
 }
 
-export const selectWeaponSkills = (state: RootState) => {
-    return selectEverythingResponse(state)?.weapon_skills ?? []
-}
-
-export const selectWeaponTypes = (state: RootState) => {
-    return selectEverythingResponse(state)?.weapon_types ?? []
+export const selectWeaponTypes = (rootState: RootState) => {
+    return selectEverythingResponse(rootState)?.weapon_types ?? []
 }
 
 export const selectAttackElementCorrectParams = (state: RootState) => {
