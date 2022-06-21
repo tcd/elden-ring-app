@@ -1,5 +1,12 @@
 import { RootState } from "@app/state"
 
+export const selectShouldFetchEverything = (state: RootState) => {
+    const requestState = state.Builder.everythingRequest
+    if (requestState.status === "idle") {
+        return true
+    }
+}
+
 export const selectFetchingEverything = (state: RootState) => {
     const requestState = state.Builder.everythingRequest
     return (requestState.status === "pending")
@@ -20,7 +27,6 @@ export const selectSpells = (rootState: RootState) => {
 export const selectTalismans = (rootState: RootState) => {
     return selectEverythingResponse(rootState)?.talismans ?? []
 }
-
 
 export const selectWeapons = (rootState: RootState) => {
     return selectEverythingResponse(rootState)?.weapons ?? []

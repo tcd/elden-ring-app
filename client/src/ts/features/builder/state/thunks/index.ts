@@ -1,1 +1,1 @@
-export * from "./fetchEverything"
+export * from "./fetch-everything"
