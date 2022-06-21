@@ -46,33 +46,13 @@ module Models
       # @return [void]
       def initialize()
 
-        self.armor = Armor
-                     .includes(:armor_type)
-                     .all()
-                     .order(name: :asc)
-
-        self.spells = Spell
-                      .all()
-                      .order(name: :asc)
-
-        self.talismans = Talisman
-                         .includes(:equipment_effects)
-                         .all()
-
-        self.weapons = Weapon
-                       .includes(:weapon_type, :weapon_skill, :weapon_stats)
-                       .all()
-                       .order(name: :asc)
-
-        self.weapon_skills = WeaponSkill
-                             .all()
-                             .order(name: :asc)
-
-        self.weapon_types = WeaponType
-                            .all()
-
-        self.attack_element_correct_params = AttackElementCorrectParam
-                                             .all()
+        self.armor                         = Armor.includes(:armor_type).all().order(name: :asc)
+        self.spells                        = Spell.all().order(name: :asc)
+        self.talismans                     = Talisman.includes(:equipment_effects).all()
+        self.weapons                       = Weapon.includes(:weapon_type, :weapon_skill, :weapon_stats).all().order(name: :asc)
+        self.weapon_skills                 = WeaponSkill.all().order(name: :asc)
+        self.weapon_types                  = WeaponType.all()
+        self.attack_element_correct_params = AttackElementCorrectParam.all()
 
       end
 
@@ -91,7 +71,7 @@ module Models
           armor:                         Serializers::ArmorSerializer.render_as_json(self.armor),
           spells:                        Serializers::SpellSerializer.render_as_json(self.spells),
           talismans:                     Serializers::TalismanSerializer.render_as_json(self.talismans),
-          weapons:                       Serializers::WeaponSerializer.render_as_json(self.weapons),
+          weapons:                       Serializers::WeaponSerializer.render_as_json(self.weapons, view: :with_stats),
           weapon_skills:                 Serializers::WeaponSkillSerializer.render_as_json(self.weapon_skills),
           weapon_types:                  Serializers::WeaponTypeSerializer.render_as_json(self.weapon_types),
           attack_element_correct_params: self.attack_element_correct_params,
