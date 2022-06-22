@@ -1,18 +1,28 @@
 module Serializers
   class WeaponStatSerializer < Blueprinter::Base
 
+    IS_POSITIVE = ->(field_name, weapon_stat, _options) { weapon_stat[field_name]&.positive?() }
+
     # @param attribute_name [Symbol]
     # @return [void]
     def self.float_field(attribute_name)
       field(attribute_name) { |x| x[attribute_name].to_f }
+      # field(attribute_name, if: IS_POSITIVE) { |x| x[attribute_name].to_f }
+    end
+
+    # @param attribute_name [Symbol]
+    # @return [void]
+    def self.nullable_field(attribute_name)
+      field(attribute_name)
+      # field(attribute_name, if: IS_POSITIVE)
     end
 
     identifier(:id)
 
     fields(
-      :display_name,
-      :name,
-      :weapon_id,
+      # :display_name,
+      # :name,
+      # :weapon_id,
       :weapon_affinity_id,
       :attack_element_correct_param_id,
     )
@@ -324,91 +334,91 @@ module Serializers
     end
 
     view(:passive) do
-      fields(
-        # :passive_type_1,
-        # :passive_type_2,
-        :passive_scarlet_rot_0,
-        :passive_madness_0,
-        :passive_sleep_0,
-        :passive_frost_0,
-        :passive_poison_0,
-        :passive_blood_loss_0,
-        :passive_frost_1,
-        :passive_poison_1,
-        :passive_blood_loss_1,
-        :passive_frost_2,
-        :passive_poison_2,
-        :passive_blood_loss_2,
-        :passive_frost_3,
-        :passive_poison_3,
-        :passive_blood_loss_3,
-        :passive_frost_4,
-        :passive_poison_4,
-        :passive_blood_loss_4,
-        :passive_frost_5,
-        :passive_poison_5,
-        :passive_blood_loss_5,
-        :passive_frost_6,
-        :passive_poison_6,
-        :passive_blood_loss_6,
-        :passive_frost_7,
-        :passive_poison_7,
-        :passive_blood_loss_7,
-        :passive_frost_8,
-        :passive_poison_8,
-        :passive_blood_loss_8,
-        :passive_frost_9,
-        :passive_poison_9,
-        :passive_blood_loss_9,
-        :passive_frost_10,
-        :passive_poison_10,
-        :passive_blood_loss_10,
-        :passive_frost_11,
-        :passive_poison_11,
-        :passive_blood_loss_11,
-        :passive_frost_12,
-        :passive_poison_12,
-        :passive_blood_loss_12,
-        :passive_frost_13,
-        :passive_poison_13,
-        :passive_blood_loss_13,
-        :passive_frost_14,
-        :passive_poison_14,
-        :passive_blood_loss_14,
-        :passive_frost_15,
-        :passive_poison_15,
-        :passive_blood_loss_15,
-        :passive_frost_16,
-        :passive_poison_16,
-        :passive_blood_loss_16,
-        :passive_frost_17,
-        :passive_poison_17,
-        :passive_blood_loss_17,
-        :passive_frost_18,
-        :passive_poison_18,
-        :passive_blood_loss_18,
-        :passive_frost_19,
-        :passive_poison_19,
-        :passive_blood_loss_19,
-        :passive_frost_20,
-        :passive_poison_20,
-        :passive_blood_loss_20,
-        :passive_frost_21,
-        :passive_poison_21,
-        :passive_blood_loss_21,
-        :passive_frost_22,
-        :passive_poison_22,
-        :passive_blood_loss_22,
-        :passive_frost_23,
-        :passive_poison_23,
-        :passive_blood_loss_23,
-        :passive_frost_24,
-        :passive_poison_24,
-        :passive_blood_loss_24,
-        :passive_frost_25,
-        :passive_poison_25,
-        :passive_blood_loss_25,
-      )
+      # fields(
+      #   # :passive_type_1,
+      #   # :passive_type_2,
+      # )
+      nullable_field(:passive_scarlet_rot_0)
+      nullable_field(:passive_madness_0)
+      nullable_field(:passive_sleep_0)
+      nullable_field(:passive_frost_0)
+      nullable_field(:passive_poison_0)
+      nullable_field(:passive_blood_loss_0)
+      nullable_field(:passive_frost_1)
+      nullable_field(:passive_poison_1)
+      nullable_field(:passive_blood_loss_1)
+      nullable_field(:passive_frost_2)
+      nullable_field(:passive_poison_2)
+      nullable_field(:passive_blood_loss_2)
+      nullable_field(:passive_frost_3)
+      nullable_field(:passive_poison_3)
+      nullable_field(:passive_blood_loss_3)
+      nullable_field(:passive_frost_4)
+      nullable_field(:passive_poison_4)
+      nullable_field(:passive_blood_loss_4)
+      nullable_field(:passive_frost_5)
+      nullable_field(:passive_poison_5)
+      nullable_field(:passive_blood_loss_5)
+      nullable_field(:passive_frost_6)
+      nullable_field(:passive_poison_6)
+      nullable_field(:passive_blood_loss_6)
+      nullable_field(:passive_frost_7)
+      nullable_field(:passive_poison_7)
+      nullable_field(:passive_blood_loss_7)
+      nullable_field(:passive_frost_8)
+      nullable_field(:passive_poison_8)
+      nullable_field(:passive_blood_loss_8)
+      nullable_field(:passive_frost_9)
+      nullable_field(:passive_poison_9)
+      nullable_field(:passive_blood_loss_9)
+      nullable_field(:passive_frost_10)
+      nullable_field(:passive_poison_10)
+      nullable_field(:passive_blood_loss_10)
+      nullable_field(:passive_frost_11)
+      nullable_field(:passive_poison_11)
+      nullable_field(:passive_blood_loss_11)
+      nullable_field(:passive_frost_12)
+      nullable_field(:passive_poison_12)
+      nullable_field(:passive_blood_loss_12)
+      nullable_field(:passive_frost_13)
+      nullable_field(:passive_poison_13)
+      nullable_field(:passive_blood_loss_13)
+      nullable_field(:passive_frost_14)
+      nullable_field(:passive_poison_14)
+      nullable_field(:passive_blood_loss_14)
+      nullable_field(:passive_frost_15)
+      nullable_field(:passive_poison_15)
+      nullable_field(:passive_blood_loss_15)
+      nullable_field(:passive_frost_16)
+      nullable_field(:passive_poison_16)
+      nullable_field(:passive_blood_loss_16)
+      nullable_field(:passive_frost_17)
+      nullable_field(:passive_poison_17)
+      nullable_field(:passive_blood_loss_17)
+      nullable_field(:passive_frost_18)
+      nullable_field(:passive_poison_18)
+      nullable_field(:passive_blood_loss_18)
+      nullable_field(:passive_frost_19)
+      nullable_field(:passive_poison_19)
+      nullable_field(:passive_blood_loss_19)
+      nullable_field(:passive_frost_20)
+      nullable_field(:passive_poison_20)
+      nullable_field(:passive_blood_loss_20)
+      nullable_field(:passive_frost_21)
+      nullable_field(:passive_poison_21)
+      nullable_field(:passive_blood_loss_21)
+      nullable_field(:passive_frost_22)
+      nullable_field(:passive_poison_22)
+      nullable_field(:passive_blood_loss_22)
+      nullable_field(:passive_frost_23)
+      nullable_field(:passive_poison_23)
+      nullable_field(:passive_blood_loss_23)
+      nullable_field(:passive_frost_24)
+      nullable_field(:passive_poison_24)
+      nullable_field(:passive_blood_loss_24)
+      nullable_field(:passive_frost_25)
+      nullable_field(:passive_poison_25)
+      nullable_field(:passive_blood_loss_25)
     end
 
 

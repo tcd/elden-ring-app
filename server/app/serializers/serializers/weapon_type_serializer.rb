@@ -3,7 +3,7 @@ module Serializers
 
     fields(
       :name,
-      :image_url,
+      # :image_url,
       :plural_name,
       :is_shield,
     )
