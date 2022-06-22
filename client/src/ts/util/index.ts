@@ -4,6 +4,7 @@ export * from "./srk"
 
 export * from "./ApiClient"
 export * from "./build-maps"
+export * from "./Config"
 export * from "./constants"
 export * from "./equipment-effect-description"
 export * from "./export-file"

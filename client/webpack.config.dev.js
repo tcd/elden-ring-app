@@ -4,6 +4,7 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
+const dotEnv = require("dotenv-webpack")
 
 /**
  * See [Webpack Configuration docs](https://webpack.js.org/configuration/) for more information.
@@ -36,6 +37,7 @@ const webpackConfig = {
         hot: true,
     },
     plugins: [
+        new dotEnv(),
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             hash: true,
