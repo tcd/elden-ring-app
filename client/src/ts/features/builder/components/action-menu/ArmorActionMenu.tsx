@@ -8,16 +8,16 @@ export const ArmorActionMenu = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const modalOpen  = useSelector(Selectors.Builder.armor.modalOpen)
-    const activeType = useSelector(Selectors.Builder.armor.activeType)
+    // const modalOpen  = useSelector(Selectors.Builder.armor.modalOpen)
+    // const activeType = useSelector(Selectors.Armor.activeType)
 
     const handleRequestClose = () => {
-        dispatch(Actions.Builder.closeArmorModal())
+        dispatch(Actions.Armor.closeArmorMenu())
     }
 
     const handleRequestClear = () => {
-        dispatch(Actions.Builder.removeArmor())
-        dispatch(Actions.Builder.closeArmorModal())
+        dispatch(Actions.Armor.removeArmor())
+        dispatch(Actions.Armor.closeArmorMenu())
     }
 
     return (

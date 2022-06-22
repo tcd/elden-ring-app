@@ -1,20 +1,19 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import {
-    ArmorType,
     KitchenSink,
     StartingClassName,
     TalismanSlotId,
-    WeaponSlotId,
-} from "@types"
+} from "@app/types"
 import {
     BuilderState,
     BuilderMenu,
 } from "./state"
-
 import {
     fetchEverything,
 } from "./thunks"
+import { ArmorActions } from "@app/features/armor"
+import { WeaponsActions } from "@app/features/weapons"
 
 export const reducers = {
     incrementAttribute(state: BuilderState, action: PayloadAction<{ name: string }>) {
@@ -77,38 +76,6 @@ export const reducers = {
         state.talisman.modal_open = false
         state.currentMenu = null
     },
-    // =========================================================================
-    // Weapons
-    // =========================================================================
-    openWeaponModal(state: BuilderState, action: PayloadAction<{ id: WeaponSlotId }>) {
-        state.weapon.active_slot = action.payload.id
-        state.weapon.modal_open = true
-        state.currentMenu = "weapon"
-    },
-    closeWeaponModal(state: BuilderState) {
-        state.weapon.active_slot = null
-        state.weapon.modal_open = false
-        state.currentMenu = null
-    },
-    // =========================================================================
-    // Armor
-    // =========================================================================
-    setArmor(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.armor_names[state.armor.active_type] = action.payload.name
-    },
-    removeArmor(state: BuilderState) {
-        state.armor_names[state.armor.active_type] = null
-    },
-    openArmorModal(state: BuilderState, action: PayloadAction<{ type: ArmorType }>) {
-        state.armor.active_type = action.payload.type
-        state.armor.modal_open = true
-        state.currentMenu = "armor"
-    },
-    closeArmorModal(state: BuilderState) {
-        state.armor.active_type = null
-        state.armor.modal_open = false
-        state.currentMenu = null
-    },
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) => {
@@ -127,4 +94,11 @@ export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) =>
             state.everythingRequest.status = "fulfilled"
             state.everythingRequest.response = action.payload
         })
+        // ---------------------------------------------------------------------
+        // From Other Slices
+        // ---------------------------------------------------------------------
+        .addCase(ArmorActions.openArmorMenu,      (state) => { state.currentMenu = "armor"  })
+        .addCase(ArmorActions.closeArmorMenu,     (state) => { state.currentMenu = null     })
+        .addCase(WeaponsActions.openWeaponsMenu,  (state) => { state.currentMenu = "weapon" })
+        .addCase(WeaponsActions.closeWeaponsMenu, (state) => { state.currentMenu = null     })
 }

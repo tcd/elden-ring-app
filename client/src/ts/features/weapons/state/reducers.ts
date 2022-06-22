@@ -1,14 +1,24 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import {
-    // WeaponSlotId,
+    WeaponSlotId,
+    WeaponAffinityName,
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"
 import { isBlank } from "@app/util"
-import { BuilderActions } from "@app/features/builder"
 import { WeaponsState } from "./state"
 
 export const reducers = {
+    openWeaponsMenu(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
+        state.oldWeapon = {
+            ...state.slots[action.payload.id],
+        }
+        state.activeSlotId = action.payload.id
+    },
+    closeWeaponsMenu(state: WeaponsState) {
+        state.activeSlotId = null
+        state.oldWeapon = null
+    },
     removeWeapon(state: WeaponsState) {
         state.slots[state.activeSlotId] = {
             ...DEFAULT_WEAPON_SETTINGS,
@@ -35,16 +45,6 @@ export const reducers = {
         state.oldWeapon = {
             ...state.slots[activeSlotId],
         }
-        state.slots[activeSlotId].affinity_name = action.payload.name
+        state.slots[activeSlotId].affinity_name = action.payload.name as WeaponAffinityName
     },
-}
-
-export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
-    builder
-        .addCase(BuilderActions.openWeaponModal, (state, action) => {
-            state.oldWeapon = {
-                ...state.slots[action.payload.id],
-            }
-            state.activeSlotId = action.payload.id
-        })
 }

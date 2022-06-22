@@ -9,8 +9,8 @@ import {
 } from "@app/data"
 
 import * as Talismans from "./talismans"
-import * as Armor from "./armor"
 import { WeaponsSelectors as Weapons } from "@app/features/weapons"
+import { ArmorSelectors as Armor } from "@app/features/armor"
 
 import * as Attributes from "./attributes"
 // import * as Resistance from "./resistance"
@@ -56,7 +56,7 @@ export const selectDiscovery = (state: RootState): string => {
 }
 
 export const selectPoise = (state: RootState): number => {
-    const armor       = Armor.selectCompactArmor(state)
+    const armor       = Armor.compactArray(state)
     const armorPoise = sum(armor.map(x => x?.poise ?? 0))
     return sum([armorPoise].flat())
 }

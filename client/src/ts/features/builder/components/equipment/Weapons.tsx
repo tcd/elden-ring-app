@@ -43,8 +43,7 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     const weapon = props?.weapon
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        // dispatch(Actions.Builder.set({ number }))
-        dispatch(Actions.Builder.openWeaponModal({ id: slotId }))
+        dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
     }
 
     const elementId = `weapon-slot-${slotId}`

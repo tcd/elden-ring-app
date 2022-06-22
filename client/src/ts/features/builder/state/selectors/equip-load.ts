@@ -12,9 +12,9 @@ import {
 } from "@app/data"
 
 import * as Attributes from "./attributes"
-import * as Armor from "./armor"
 import * as Talismans from "./talismans"
 import { WeaponsSelectors as Weapons } from "@app/features/weapons"
+import { ArmorSelectors as Armor } from "@app/features/armor"
 
 // =============================================================================
 // Equip Load
@@ -51,7 +51,7 @@ export const selectCurrentEquipLoad = (state: RootState) => {
     const weapons      = Weapons.compactArray(state)
     const weaponWeight = sum(weapons.map(x => x?.weight ?? 0))
 
-    const armor       = Armor.selectCompactArmor(state)
+    const armor       = Armor.compactArray(state)
     const armorWeight = sum(armor.map(x => x?.weight ?? 0))
 
 

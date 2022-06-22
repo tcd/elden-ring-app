@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 import {
-    ArmorSet,
     ArmorType,
     Attributes,
     KitchenSink,
@@ -9,9 +8,7 @@ import {
     StartingClassName,
     TalismanSet,
     TalismanSlotId,
-    WeaponSlots,
     WeaponSlotId,
-    DEFAULT_WEAPON_SETTINGS,
 } from "@types"
 import { FEATURE_KEYS } from "@util"
 import { reducers, extraReducers } from "./reducers"
@@ -34,9 +31,7 @@ export interface BuilderState {
     startingClassName: StartingClassName,
 
     attributes: Attributes
-    armor_names: ArmorSet
     talisman_names: TalismanSet
-    weapons: WeaponSlots
 
     talisman: {
         modal_open: boolean
@@ -64,7 +59,7 @@ const initialState: BuilderState = {
 
     whichCharacterStatus: "B",
 
-    currentMenu: "weapon",
+    currentMenu: null,
     actionMenuDescription: "",
 
     startingClassName: null,
@@ -80,27 +75,11 @@ const initialState: BuilderState = {
         "arcane":       0,
     },
 
-    armor_names: {
-        Head:  null,
-        Chest: null,
-        Arms:  null,
-        Legs:  null,
-    },
-
     talisman_names: {
         "1": null,
         "2": null,
         "3": null,
         "4": null,
-    },
-
-    weapons: {
-        R1: { ...DEFAULT_WEAPON_SETTINGS },
-        R2: { ...DEFAULT_WEAPON_SETTINGS },
-        R3: { ...DEFAULT_WEAPON_SETTINGS },
-        L1: { ...DEFAULT_WEAPON_SETTINGS },
-        L2: { ...DEFAULT_WEAPON_SETTINGS },
-        L3: { ...DEFAULT_WEAPON_SETTINGS },
     },
 
     talisman: {
@@ -156,21 +135,6 @@ const myBuild: BuilderState = {
         "2": "Ritual Sword Talisman",
         "3": "Blue-Feathered Branchsword",
         "4": "Ritual Shield Talisman",
-    },
-
-    armor_names: {
-        // Head:  "Banished Knight Helm (Altered)",
-        Chest: "Knight Armor",
-        Arms:  "Knight Gauntlets",
-        Legs:  "Knight Greaves",
-    },
-
-    weapons: {
-        ...initialState.weapons,
-        R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },
-        R3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
-        L1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Fingerprint Stone Shield" },
-        L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
     },
 
 //     weapon: {

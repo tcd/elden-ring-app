@@ -1,7 +1,6 @@
 export * from "./select-builder-state"
 
 import * as Talismans from "./talismans"
-import * as Armor from "./armor"
 
 import * as Stats from "./stats"
 import * as Attributes from "./attributes"
@@ -102,21 +101,5 @@ export const BuilderSelectors = {
         modalOpen: Talismans.selectTalismanModalOpen,
         activeName: Talismans.selectActiveTalismanName,
         activeNumber: Talismans.selectActiveTalismanNumber,
-    },
-    armor: {
-        modalOpen: Armor.selectArmorModalOpen,
-        activeType: Armor.selectActiveArmorType,
-        activeName: Armor.selectActiveArmorName,
-        activeOptions: Armor.selectArmorOptions,
-        head: Armor.selectHead,
-        chest: Armor.selectChest,
-        arms: Armor.selectArms,
-        legs: Armor.selectLegs,
-        names: {
-            head: Armor.selectHeadName,
-            chest: Armor.selectChestName,
-            arms: Armor.selectArmsName,
-            legs: Armor.selectLegsName,
-        },
     },
 }

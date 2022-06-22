@@ -6,8 +6,8 @@ import {
 } from "@app/types"
 
 import { WeaponsSelectors as Weapons } from "@app/features/weapons"
+import { ArmorSelectors as Armor } from "@app/features/armor"
 import * as Talismans from "./talismans"
-import * as Armor from "./armor"
 import * as StartingClass from "./starting-class"
 import * as Attributes from "./attributes"
 
@@ -15,10 +15,10 @@ export const selectExportData = (state: RootState): BuildData => {
     return {
         startingClassName: StartingClass.selectStartingClassName(state),
         armor_names: {
-            [ArmorType.Head]: Armor.selectHeadName(state),
-            [ArmorType.Chest]: Armor.selectChestName(state),
-            [ArmorType.Arms]: Armor.selectArmsName(state),
-            [ArmorType.Legs]: Armor.selectLegsName(state),
+            [ArmorType.Head]:  Armor.equippedNames.head(state),
+            [ArmorType.Chest]: Armor.equippedNames.chest(state),
+            [ArmorType.Arms]:  Armor.equippedNames.arms(state),
+            [ArmorType.Legs]:  Armor.equippedNames.legs(state),
         },
         talisman_names: {
             "1": Talismans.selectTalisman1Name(state),

@@ -2,14 +2,14 @@ import { RootState } from "@app/state"
 import { EquipmentEffect } from "@app/types"
 
 import * as Talismans from "./talismans"
-import * as Armor from "./armor"
 import { WeaponsSelectors as Weapons } from "@app/features/weapons"
+import { ArmorSelectors as Armor } from "@app/features/armor"
 
 /**
  * Returns EquipmentEffects from any equipped Armor.
  */
 export const selectArmorEffects = (state: RootState): EquipmentEffect[] => {
-    const equipped = Armor.selectCompactArmor(state)
+    const equipped = Armor.compactArray(state)
     if (equipped.length == 0) {
         return []
     }

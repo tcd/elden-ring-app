@@ -12,7 +12,7 @@ import {
 
 import * as Attributes from "./attributes"
 import * as Stats from "./stats"
-import * as Armor from "./armor"
+import { ArmorSelectors as Armor } from "@app/features/armor"
 
 // =============================================================================
 // Defense
@@ -61,7 +61,7 @@ export const selectHolyDefense = (state: RootState) => {
 // =============================================================================
 
 export const selectNegation = (state: RootState, key: keyof(IArmor)) => {
-    const armor       = Armor.selectCompactArmor(state)
+    const armor       = Armor.compactArray(state)
     const armorPoints = sum(armor.map(x => x[key] ?? 0))
     return sum([armorPoints].flat()).toFixed(1)
 }

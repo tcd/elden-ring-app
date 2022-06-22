@@ -31,7 +31,7 @@ export const ArmorSlot = ({ type, armor }: ArmorSlotProps) => {
     }
 
     const handleClick = () => {
-        dispatch(Actions.Builder.openArmorModal({ type: type }))
+        dispatch(Actions.Armor.openArmorMenu({ type: type }))
     }
 
     return (
@@ -52,13 +52,13 @@ export const Armor = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const head  = useSelector(Selectors.Builder.armor.head)
-    const chest = useSelector(Selectors.Builder.armor.chest)
-    const arms  = useSelector(Selectors.Builder.armor.arms)
-    const legs  = useSelector(Selectors.Builder.armor.legs)
+    const head  = useSelector(Selectors.Armor.equipped.head)
+    const chest = useSelector(Selectors.Armor.equipped.chest)
+    const arms  = useSelector(Selectors.Armor.equipped.arms)
+    const legs  = useSelector(Selectors.Armor.equipped.legs)
 
     const handleClick = (armorType: ArmorType) => {
-        dispatch(Actions.Builder.openArmorModal({ type: armorType }))
+        dispatch(Actions.Armor.openArmorMenu({ type: armorType }))
     }
 
     return (

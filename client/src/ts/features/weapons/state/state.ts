@@ -9,7 +9,6 @@ import {
 import { FEATURE_KEYS } from "@app/util"
 import {
     reducers,
-    extraReducers,
 } from "./reducers"
 
 export interface WeaponsState {
@@ -56,5 +55,4 @@ export const WeaponsSlice = createSlice({
     name: FEATURE_KEYS.Weapons,
     initialState: devState,
     reducers: reducers,
-    extraReducers: extraReducers,
 })

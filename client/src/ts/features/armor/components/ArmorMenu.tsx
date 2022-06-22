@@ -8,15 +8,15 @@ export const ArmorMenu = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const filteredArmor  = useSelector(Selectors.Armor.allFiltered)
+    const armor       = useSelector(Selectors.Armor.options)
     const activeName  = useSelector(Selectors.Armor.activeName)
     const activeArmor = useSelector(Selectors.Armor.active)
 
     const handleClick = (armorName: string) => {
-        dispatch(Actions.Armor.setActiveName({ name: armorName }))
+        dispatch(Actions.Armor.equipArmor({ name: armorName }))
     }
 
-    const cells = filteredArmor.map((armor) => {
+    const cells = armor.map((armor) => {
         let classes = "equipment-menu-cell inactive"
         if (armor.name === activeName) {
             classes = "equipment-menu-cell active"

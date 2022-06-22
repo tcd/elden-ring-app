@@ -13,16 +13,16 @@ export const WeaponActionMenu = (): JSX.Element => {
     // const weapons = useSelector(Selectors.Builder.api.weapons)
 
     const handleRequestClose = () => {
-        dispatch(Actions.Builder.closeWeaponModal())
+        dispatch(Actions.Weapons.closeWeaponsMenu())
     }
 
     const handleRequestClear = () => {
         dispatch(Actions.Weapons.removeWeapon())
-        dispatch(Actions.Builder.closeWeaponModal())
+        dispatch(Actions.Weapons.closeWeaponsMenu())
     }
 
     const handleRequestCustomize = () => {
-        // dispatch(Actions.Builder.closeWeaponModal())
+        // dispatch(Actions.Weapons.closeWeaponsMenu())
     }
 
     return (
