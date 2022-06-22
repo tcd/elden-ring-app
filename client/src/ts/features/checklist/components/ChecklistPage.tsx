@@ -2,18 +2,19 @@ import { useSelector, useDispatch } from "react-redux"
 import Checkbox from "@mui/material/Checkbox"
 import MapIcon from "@mui/icons-material/Map"
 
+import { CONFIG } from "@app/util"
 import { Heading, RawHtml } from "@app/shared"
 import { Selectors, Actions } from "@app/state"
-
-const cloudflare_hash = ""
 
 export const ChecklistPage = () => {
     const dispatch = useDispatch()
 
     const resources = useSelector(Selectors.Checklist.resources)
 
+    const cloudflareHash = CONFIG.cloudflareHash
+
     const rows = resources.map((r) => {
-        const src = `https://imagedelivery.net/${cloudflare_hash}/Upgrade Materials/${r.type}/public`
+        const src = `https://imagedelivery.net/${cloudflareHash}/Upgrade Materials/${r.type}/public`
         const img = <img src={src} alt={r.type} title={r.type} style={{ width: "50px" }} />
         const mapLink = r.mapLink ? <a href={r.mapLink}><MapIcon/></a> : null
         const quest = r.questLink ? <a href={r.questLink}>{r.quest}</a> : null
