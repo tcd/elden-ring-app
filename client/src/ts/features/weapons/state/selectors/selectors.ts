@@ -19,40 +19,46 @@ import { selectWeapons, selectAttackElementCorrectParams } from "@app/features/b
 import { selectAttributes } from "@app/features/builder/state/selectors/attributes"
 import { WEAPON_AFFINITIES } from "@app/data"
 
-// const selectWeaponsState = (state: RootState) => { return state?.Weapons }
+const selectWeaponsSlice = (rootState: RootState) => {
+    return rootState?.Weapons
+}
 
-const selectWeapon = (state: RootState, name?: string): Weapon => {
-    const weapons = selectWeapons(state)
+const selectWeapon = (rootState: RootState, name?: string): Weapon => {
+    const weapons = selectWeapons(rootState)
     if (isBlank(name)) { return null }
     return weapons.find(x => x.name == name)
 }
 
-const selectR1Name = (state: RootState): string => { return state?.Weapons?.slots?.R1?.weapon_name }
-const selectR2Name = (state: RootState): string => { return state?.Weapons?.slots?.R2?.weapon_name }
-const selectR3Name = (state: RootState): string => { return state?.Weapons?.slots?.R3?.weapon_name }
-const selectL1Name = (state: RootState): string => { return state?.Weapons?.slots?.L1?.weapon_name }
-const selectL2Name = (state: RootState): string => { return state?.Weapons?.slots?.L2?.weapon_name }
-const selectL3Name = (state: RootState): string => { return state?.Weapons?.slots?.L3?.weapon_name }
+const selectWeaponSlots = (rootState: RootState) => {
+    return selectWeaponsSlice(rootState)?.slots
+}
 
-export const selectR1Weapon = (state: RootState): Weapon => { return selectWeapon(state, selectR1Name(state)) }
-export const selectR2Weapon = (state: RootState): Weapon => { return selectWeapon(state, selectR2Name(state)) }
-export const selectR3Weapon = (state: RootState): Weapon => { return selectWeapon(state, selectR3Name(state)) }
-export const selectL1Weapon = (state: RootState): Weapon => { return selectWeapon(state, selectL1Name(state)) }
-export const selectL2Weapon = (state: RootState): Weapon => { return selectWeapon(state, selectL2Name(state)) }
-export const selectL3Weapon = (state: RootState): Weapon => { return selectWeapon(state, selectL3Name(state)) }
+const selectR1Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R1?.weapon_name
+const selectR2Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R2?.weapon_name
+const selectR3Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R3?.weapon_name
+const selectL1Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.L1?.weapon_name
+const selectL2Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.L2?.weapon_name
+const selectL3Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.L3?.weapon_name
 
-export const selectActiveSlotId = (state: RootState) => { return state?.Weapons?.activeSlotId }
+export const selectR1Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectR1Name(rootState))
+export const selectR2Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectR2Name(rootState))
+export const selectR3Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectR3Name(rootState))
+export const selectL1Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL1Name(rootState))
+export const selectL2Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL2Name(rootState))
+export const selectL3Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL3Name(rootState))
 
-export const selectActiveWeaponSettings = (state: RootState): WeaponSettings => {
-    const slotId = selectActiveSlotId(state)
+export const selectActiveSlotId = (rootState: RootState) => selectWeaponsSlice(rootState)?.activeSlotId
+
+export const selectActiveWeaponSettings = (rootState: RootState): WeaponSettings => {
+    const slotId = selectActiveSlotId(rootState)
     if (isBlank(slotId)) {
         return null
     }
-    return state.Weapons.slots[slotId]
+    return rootState.Weapons.slots[slotId]
 }
 
-export const selectActiveWeaponName = (state: RootState) => {
-    return selectActiveWeaponSettings(state)?.weapon_name
+export const selectActiveWeaponName = (rootState: RootState) => {
+    return selectActiveWeaponSettings(rootState)?.weapon_name
 }
 
 /**
@@ -60,27 +66,23 @@ export const selectActiveWeaponName = (state: RootState) => {
  *
  * Will not include null values.
  */
-export const selectCompactWeaponsArray = (state: RootState): Weapon[] => {
+export const selectCompactWeaponsArray = (rootState: RootState): Weapon[] => {
     return compactArray([
-        selectR1Weapon(state),
-        selectR2Weapon(state),
-        selectR3Weapon(state),
-        selectL1Weapon(state),
-        selectL2Weapon(state),
-        selectL3Weapon(state),
+        selectR1Weapon(rootState),
+        selectR2Weapon(rootState),
+        selectR3Weapon(rootState),
+        selectL1Weapon(rootState),
+        selectL2Weapon(rootState),
+        selectL3Weapon(rootState),
     ])
 }
 
-export const selectActiveWeapon = (state: RootState) => {
-    const slotId = selectActiveSlotId(state)
-    if (isBlank(slotId)) {
-        return null
-    }
-    const activeName = state?.Weapons?.slots[slotId]?.weapon_name
+export const selectActiveWeapon = (rootState: RootState) => {
+    const activeName = selectActiveWeaponName(rootState)
     if (isBlank(activeName)) {
         return null
     }
-    const weapons = selectWeapons(state)
+    const weapons = selectWeapons(rootState)
     if (isBlank(weapons)) {
         return null
     }
@@ -101,24 +103,24 @@ const _selectSlimWeaponStatData = (weapon: Weapon, weaponSettings: WeaponSetting
     return result
 }
 
-const selectSlimWeaponStatData = (state: RootState): SlimWeaponStatData => {
-    const weapon = selectActiveWeapon(state)
+const selectSlimWeaponStatData = (rootState: RootState): SlimWeaponStatData => {
+    const weapon = selectActiveWeapon(rootState)
     if (isBlank(weapon)) {
         return null
     }
-    const weaponSettings = selectActiveWeaponSettings(state)
+    const weaponSettings = selectActiveWeaponSettings(rootState)
     const result = _selectSlimWeaponStatData(weapon, weaponSettings)
     return result
 }
 
-export const selectCalculatedWeaponStats = (state: RootState): CalculatedWeaponStats => {
-    const attributes = selectAttributes(state)
-    const weapon = selectActiveWeapon(state)
-    const stats = selectSlimWeaponStatData(state)
+export const selectCalculatedWeaponStats = (rootState: RootState): CalculatedWeaponStats => {
+    const attributes = selectAttributes(rootState)
+    const weapon = selectActiveWeapon(rootState)
+    const stats = selectSlimWeaponStatData(rootState)
     if (isBlank(stats)) {
         return null
     }
-    const allAdjustmentParams = selectAttackElementCorrectParams(state)
+    const allAdjustmentParams = selectAttackElementCorrectParams(rootState)
 
     const adjustmentParams = allAdjustmentParams.find(x => x.id == stats.attack_element_correct_param_id)
     if (isBlank(adjustmentParams)) {
@@ -137,31 +139,31 @@ export const selectCalculatedWeaponStats = (state: RootState): CalculatedWeaponS
 // Old Weapon
 // -----------------------------------------------------------------------------
 
-export const selectOldWeapon = (state: RootState): Weapon => {
-    const oldWeaponSettings = state?.Weapons?.oldWeapon
+export const selectOldWeapon = (rootState: RootState): Weapon => {
+    const oldWeaponSettings = rootState?.Weapons?.oldWeapon
     if (isBlank(oldWeaponSettings)) {
         return null
     }
-    const allWeapons = selectWeapons(state)
+    const allWeapons = selectWeapons(rootState)
 
     const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
 
     return oldWeapon
 }
 
-export const selectOldWeaponStats = (state: RootState): CalculatedWeaponStats => {
-    const allAdjustmentParams = selectAttackElementCorrectParams(state)
+export const selectOldWeaponStats = (rootState: RootState): CalculatedWeaponStats => {
+    const allAdjustmentParams = selectAttackElementCorrectParams(rootState)
     if (isBlank(allAdjustmentParams)) {
         return null
     }
 
-    const oldWeaponSettings = state?.Weapons?.oldWeapon
+    const oldWeaponSettings = rootState?.Weapons?.oldWeapon
     if (isBlank(oldWeaponSettings)) {
         return null
     }
 
-    const attributes = selectAttributes(state)
-    const allWeapons = selectWeapons(state)
+    const attributes = selectAttributes(rootState)
+    const allWeapons = selectWeapons(rootState)
 
     const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
 
