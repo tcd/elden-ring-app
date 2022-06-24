@@ -16,14 +16,14 @@
         flex-direction: row;
         flex-wrap: nowrap;
 
-        width: 75%;
+        width: 70%;
 
         & > :nth-child(1) {
-            width: 50%;
+            width: 45%;
         }
 
         & > :nth-child(2) {
-            width: 50%;
+            width: 55%;
         }
     }
 
@@ -34,7 +34,7 @@
     // }
 
     #character-status {
-        width: 25%;
+        width: 30%;
     }
 }
 
