@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_150021) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_23_012629) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_150021) do
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sort_order", default: 9999, null: false
+    t.integer "sort_group", default: 99, null: false
     t.index ["armor_type_id"], name: "index_armor_on_armor_type_id"
     t.index ["name"], name: "index_armor_on_name", unique: true
   end
@@ -204,6 +206,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_150021) do
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sort_order", default: 9999, null: false
+    t.integer "sort_group", default: 99, null: false
     t.index ["name"], name: "index_talismans_on_name", unique: true
   end
 
@@ -652,6 +656,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_150021) do
     t.string "spell_boost_groups", default: [], array: true
     t.decimal "spell_boost_percentage"
     t.integer "weapon_skill_id", null: false
+    t.integer "sort_order", default: 9999, null: false
     t.index ["name"], name: "index_weapons_on_name", unique: true
     t.index ["weapon_type_id"], name: "index_weapons_on_weapon_type_id"
   end

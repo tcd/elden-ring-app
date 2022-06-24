@@ -1,0 +1,378 @@
+name	weapon_type	sort_group	sort_order
+Dagger	Dagger	1	101
+Parrying Dagger	Dagger	1	102
+Misericorde	Dagger	1	103
+Great Knife	Dagger	1	104
+Bloodstained Dagger	Dagger	1	105
+Erdsteel Dagger	Dagger	1	106
+Wakizashi	Dagger	1	107
+Celebrant's Sickle	Dagger	1	108
+Ivory Sickle	Dagger	1	109
+Crystal Knife	Dagger	1	110
+Scorpion's Stinger	Dagger	1	111
+Cinquedea	Dagger	1	112
+Glintstone Kris	Dagger	1	113
+Reduvia	Dagger	1	114
+Blade of Calling	Dagger	1	115
+Black Knife	Dagger	1	116
+Short Sword	Straight Sword	2	201
+Longsword	Straight Sword	2	202
+Broadsword	Straight Sword	2	203
+Weathered Straight Sword	Straight Sword	2	204
+Lordsworn's Straight Sword	Straight Sword	2	205
+Noble's Slender Sword	Straight Sword	2	206
+Cane Sword	Straight Sword	2	207
+Warhawk's Talon	Straight Sword	2	208
+Lazuli Glintstone Sword	Straight Sword	2	209
+Carian Knight's Sword	Straight Sword	2	210
+Crystal Sword	Straight Sword	2	211
+Rotten Crystal Sword	Straight Sword	2	212
+Miquellan Knight's Sword	Straight Sword	2	213
+Ornamental Straight Sword	Straight Sword	2	214
+Golden Epitaph	Straight Sword	2	215
+Sword of St. Trina	Straight Sword	2	216
+Regalia of Eochaid	Straight Sword	2	217
+Coded Sword	Straight Sword	2	218
+Sword of Night and Flame	Straight Sword	2	219
+Bastard Sword	Greatsword	3	301
+Claymore	Greatsword	3	302
+Iron Greatsword	Greatsword	3	303
+Lordsworn's Greatsword	Greatsword	3	304
+Knight's Greatsword	Greatsword	3	305
+Banished Knight's Greatsword	Greatsword	3	306
+Forked Greatsword	Greatsword	3	307
+Flamberge	Greatsword	3	308
+Gargoyle's Greatsword	Greatsword	3	309
+Gargoyle's Blackblade	Greatsword	3	310
+Inseparable Sword	Greatsword	3	311
+Sword of Milos	Greatsword	3	312
+Marais Executioner's Sword	Greatsword	3	313
+Ordovis's Greatsword	Greatsword	3	314
+Alabaster Lord's Sword	Greatsword	3	315
+Death's Poker	Greatsword	3	316
+Helphen's Steeple	Greatsword	3	317
+Blasphemous Blade	Greatsword	3	318
+Golden Order Greatsword	Greatsword	3	319
+Dark Moon Greatsword	Greatsword	3	320
+Sacred Relic Sword	Greatsword	3	321
+Zweihander	Colossal Sword	4	401
+Greatsword	Colossal Sword	4	402
+Watchdog's Greatsword	Colossal Sword	4	403
+Troll's Golden Sword	Colossal Sword	4	404
+Troll Knight's Sword	Colossal Sword	4	405
+Royal Greatsword	Colossal Sword	4	406
+Grafted Blade Greatsword	Colossal Sword	4	407
+Ruins Greatsword	Colossal Sword	4	408
+Starscourge Greatsword	Colossal Sword	4	409
+Godslayer's Greatsword	Colossal Sword	4	410
+Maliketh's Black Blade	Colossal Sword	4	411
+Rapier	Thrusting Sword	5	501
+Estoc	Thrusting Sword	5	502
+Noble's Estoc	Thrusting Sword	5	503
+Cleanrot Knight's Sword	Thrusting Sword	5	504
+Rogier's Rapier	Thrusting Sword	5	505
+Antspur Rapier	Thrusting Sword	5	506
+Frozen Needle	Thrusting Sword	5	507
+Great Epee	Heavy Thrusting Sword	6	601
+Godskin Stitcher	Heavy Thrusting Sword	6	602
+Bloody Helice	Heavy Thrusting Sword	6	603
+Dragon King's Cragblade	Heavy Thrusting Sword	6	604
+Scimitar	Curved Sword	7	701
+Falchion	Curved Sword	7	702
+Shamshir	Curved Sword	7	703
+Grossmesser	Curved Sword	7	704
+Bandit's Curved Sword	Curved Sword	7	705
+Shotel	Curved Sword	7	706
+Scavenger's Curved Sword	Curved Sword	7	707
+Mantis Blade	Curved Sword	7	708
+Beastman's Curved Sword	Curved Sword	7	709
+Flowing Curved Sword	Curved Sword	7	710
+Serpent-God's Curved Sword	Curved Sword	7	711
+Magma Blade	Curved Sword	7	712
+Nox Flowing Sword	Curved Sword	7	713
+Wing of Astel	Curved Sword	7	714
+Eclipse Shotel	Curved Sword	7	715
+Dismounter	Curved Greatsword	8	801
+Omen Cleaver	Curved Greatsword	8	802
+Monk's Flameblade	Curved Greatsword	8	803
+Beastman's Cleaver	Curved Greatsword	8	804
+Bloodhound's Fang	Curved Greatsword	8	805
+Onyx Lord's Greatsword	Curved Greatsword	8	806
+Zamor Curved Sword	Curved Greatsword	8	807
+Magma Wyrm's Scalesword	Curved Greatsword	8	808
+Morgott's Cursed Sword	Curved Greatsword	8	809
+Uchigatana	Katana	9	901
+Nagakiba	Katana	9	902
+Serpentbone Blade	Katana	9	903
+Meteoric Ore Blade	Katana	9	904
+Moonveil	Katana	9	905
+Rivers of Blood	Katana	9	906
+Dragonscale Blade	Katana	9	907
+Hand of Malenia	Katana	9	908
+Twinblade	Twinblade	10	1001
+Twinned Knight Swords	Twinblade	10	1002
+Godskin Peeler	Twinblade	10	1003
+Gargoyle's Twinblade	Twinblade	10	1004
+Gargoyle's Black Blades	Twinblade	10	1005
+Eleonora's Poleblade	Twinblade	10	1006
+Hand Axe	Axe	11	1101
+Forked Hatchet	Axe	11	1102
+Battle Axe	Axe	11	1103
+Warped Axe	Axe	11	1104
+Jawbone Axe	Axe	11	1105
+Iron Cleaver	Axe	11	1106
+Highland Axe	Axe	11	1107
+Celebrant's Cleaver	Axe	11	1108
+Sacrificial Axe	Axe	11	1109
+Icerind Hatchet	Axe	11	1110
+Ripple Blade	Axe	11	1111
+Stormhawk Axe	Axe	11	1112
+Rosus' Axe	Axe	11	1113
+Greataxe	Greataxe	12	1201
+Crescent Moon Axe	Greataxe	12	1202
+Longhaft Axe	Greataxe	12	1203
+Executioner's Greataxe	Greataxe	12	1204
+Great Omenkiller Cleaver	Greataxe	12	1205
+Rusted Anchor	Greataxe	12	1206
+Butchering Knife	Greataxe	12	1207
+Gargoyle's Great Axe	Greataxe	12	1208
+Gargoyle's Black Axe	Greataxe	12	1209
+Winged Greathorn	Greataxe	12	1210
+Axe of Godrick	Greataxe	12	1211
+Club	Hammer	13	1301
+Curved Club	Hammer	13	1302
+Spiked Club	Hammer	13	1303
+Stone Club	Hammer	13	1304
+Mace	Hammer	13	1305
+Morning Star	Hammer	13	1306
+Warpick	Hammer	13	1307
+Hammer	Hammer	13	1308
+Monk's Flamemace	Hammer	13	1309
+Varre's Bouquet	Hammer	13	1310
+Envoy's Horn	Hammer	13	1311
+Nox Flowing Hammer	Hammer	13	1312
+Ringed Finger	Hammer	13	1313
+Scepter of the All-Knowing	Hammer	13	1314
+Marika's Hammer	Hammer	13	1315
+Flail	Flail	14	1401
+Nightrider Flail	Flail	14	1402
+Chainlink Flail	Flail	14	1403
+Family Heads	Flail	14	1404
+Bastard's Stars	Flail	14	1405
+Large Club	Great Hammer	15	1501
+Curved Great Club	Great Hammer	15	1502
+Great Mace	Great Hammer	15	1503
+Pickaxe	Great Hammer	15	1504
+Brick Hammer	Great Hammer	15	1505
+Battle Hammer	Great Hammer	15	1506
+Rotten Battle Hammer	Great Hammer	15	1507
+Celebrant's Skull	Great Hammer	15	1508
+Great Stars	Great Hammer	15	1509
+Greathorn Hammer	Great Hammer	15	1510
+Envoy's Long Horn	Great Hammer	15	1511
+Cranial Vessel Candlestand	Great Hammer	15	1512
+Beastclaw Greathammer	Great Hammer	15	1513
+Devourer's Scepter	Great Hammer	15	1514
+Duelist Greataxe	Colossal Weapon	16	1601
+Rotten Greataxe	Colossal Weapon	16	1602
+Golem's Halberd	Colossal Weapon	16	1603
+Giant-Crusher	Colossal Weapon	16	1604
+Prelate's Inferno Crozier	Colossal Weapon	16	1605
+Great Club	Colossal Weapon	16	1606
+Troll's Hammer	Colossal Weapon	16	1607
+Dragon Greatclaw	Colossal Weapon	16	1608
+Watchdog's Staff	Colossal Weapon	16	1609
+Staff of the Avatar	Colossal Weapon	16	1610
+Rotten Staff	Colossal Weapon	16	1611
+Envoy's Greathorn	Colossal Weapon	16	1612
+Ghiza's Wheel	Colossal Weapon	16	1613
+Fallingstar Beast Jaw	Colossal Weapon	16	1614
+Axe of Godfrey	Colossal Weapon	16	1615
+Short Spear	Spear	17	1701
+Iron Spear	Spear	17	1702
+Spear	Spear	17	1703
+Partisan	Spear	17	1704
+Pike	Spear	17	1705
+Spiked Spear	Spear	17	1706
+Cross-Naginata	Spear	17	1707
+Clayman's Harpoon	Spear	17	1708
+Celebrant's Rib-Rake	Spear	17	1709
+Torchpole	Spear	17	1710
+Inquisitor's Girandole	Spear	17	1711
+Crystal Spear	Spear	17	1712
+Rotten Crystal Spear	Spear	17	1713
+Cleanrot Spear	Spear	17	1714
+Death Ritual Spear	Spear	17	1715
+Bolt of Gransax	Spear	17	1716
+Lance	Great Spear	18	1801
+Treespear	Great Spear	18	1802
+Serpent-Hunter	Great Spear	18	1803
+Siluria's Tree	Great Spear	18	1804
+Vyke's War Spear	Great Spear	18	1805
+Mohgwyn's Sacred Spear	Great Spear	18	1806
+Halberd	Halberd	19	1901
+Banished Knight's Halberd	Halberd	19	1902
+Lucerne	Halberd	19	1903
+Glaive	Halberd	19	1904
+Vulgar Militia Shotel	Halberd	19	1905
+Vulgar Militia Saw	Halberd	19	1906
+Guardian's Swordspear	Halberd	19	1907
+Gargoyle's Halberd	Halberd	19	1908
+Gargoyle's Black Halberd	Halberd	19	1909
+Nightrider Glaive	Halberd	19	1910
+Pest's Glaive	Halberd	19	1911
+Ripple Crescent Halberd	Halberd	19	1912
+Golden Halberd	Halberd	19	1913
+Dragon Halberd	Halberd	19	1914
+Loretta's War Sickle	Halberd	19	1915
+Commander's Standard	Halberd	19	1916
+Scythe	Reaper	20	2001
+Grave Scythe	Reaper	20	2002
+Halo Scythe	Reaper	20	2003
+Winged Scythe	Reaper	20	2004
+Whip	Whip	21	2101
+Urumi	Whip	21	2102
+Hoslow's Petal Whip	Whip	21	2103
+Magma Whip Candlestick	Whip	21	2104
+Giant's Red Braid	Whip	21	2105
+Thorned Whip	Whip	21	2100
+Caestus	Fist	22	2201
+Spiked Caestus	Fist	22	2202
+Katar	Fist	22	2203
+Iron Ball	Fist	22	2204
+Star Fist	Fist	22	2205
+Clinging Bone	Fist	22	2206
+Veteran's Prosthesis	Fist	22	2207
+Cipher Pata	Fist	22	2208
+Grafted Dragon	Fist	22	2209
+Hookclaws	Claw	23	2301
+Bloodhound Claws	Claw	23	2302
+Venomous Fang	Claw	23	2303
+Raptor Talons	Claw	23	2304
+Shortbow	Light Bow	24	2401
+Composite Bow	Light Bow	24	2402
+Red Branch Shortbow	Light Bow	24	2403
+Misbegotten Shortbow	Light Bow	24	2404
+Harp Bow	Light Bow	24	2405
+Longbow	Bow	25	2501
+Albinauric Bow	Bow	25	2502
+Black Bow	Bow	25	2503
+Pulley Bow	Bow	25	2504
+Horn Bow	Bow	25	2505
+Serpent Bow	Bow	25	2506
+Erdtree Bow	Bow	25	2507
+Greatbow	Greatbow	26	2601
+Golem Greatbow	Greatbow	26	2602
+Erdtree Greatbow	Greatbow	26	2603
+Lion Greatbow	Greatbow	26	2604
+Soldier's Crossbow	Crossbow	27	2701
+Light Crossbow	Crossbow	27	2702
+Heavy Crossbow	Crossbow	27	2703
+Arbalest	Crossbow	27	2704
+Crepus's Black-Key Crossbow	Crossbow	27	2705
+Pulley Crossbow	Crossbow	27	2706
+Full Moon Crossbow	Crossbow	27	2707
+Hand Ballista	Ballista	28	2801
+Jar Cannon	Ballista	28	2802
+Astrologer's Staff	Glintstone Staff	29	2901
+Glintstone Staff	Glintstone Staff	29	2902
+Academy Glintstone Staff	Glintstone Staff	29	2903
+Digger's Staff	Glintstone Staff	29	2904
+Demi-Human Queen's Staff	Glintstone Staff	29	2905
+Azur's Glintstone Staff	Glintstone Staff	29	2906
+Lusat's Glintstone Staff	Glintstone Staff	29	2907
+Carian Glintstone Staff	Glintstone Staff	29	2908
+Carian Glintblade Staff	Glintstone Staff	29	2909
+Carian Regal Scepter	Glintstone Staff	29	2910
+Albinauric Staff	Glintstone Staff	29	2911
+Staff of Loss	Glintstone Staff	29	2912
+Gelmir Glintstone Staff	Glintstone Staff	29	2913
+Crystal Staff	Glintstone Staff	29	2914
+Rotten Crystal Staff	Glintstone Staff	29	2915
+Meteorite Staff	Glintstone Staff	29	2916
+Staff of the Guilty	Glintstone Staff	29	2917
+Prince of Death's Staff	Glintstone Staff	29	2918
+Finger Seal	Sacred Seal	30	3001
+Erdtree Seal	Sacred Seal	30	3002
+Golden Order Seal	Sacred Seal	30	3003
+Gravel Stone Seal	Sacred Seal	30	3004
+Giant's Seal	Sacred Seal	30	3005
+Godslayer's Seal	Sacred Seal	30	3006
+Clawmark Seal	Sacred Seal	30	3007
+Frenzied Flame Seal	Sacred Seal	30	3008
+Dragon Communion Seal	Sacred Seal	30	3009
+Torch	Torch	31	3101
+Beast-Repellent Torch	Torch	31	3102
+Steel-Wire Torch	Torch	31	3103
+Sentry's Torch	Torch	31	3104
+Ghostflame Torch	Torch	31	3105
+St. Trina's Torch	Torch	31	3106
+Wooden Greatshield	Greatshield	43	4301
+Lordsworn's Shield	Greatshield	43	4302
+Briar Greatshield	Greatshield	43	4303
+Spiked Palisade Shield	Greatshield	43	4304
+Icon Shield	Greatshield	43	4305
+Golden Beast Crest Shield	Greatshield	43	4306
+Manor Towershield	Greatshield	43	4307
+Crossed-Tree Towershield	Greatshield	43	4308
+Inverted Hawk Towershield	Greatshield	43	4309
+Dragon Towershield	Greatshield	43	4310
+Distinguished Greatshield	Greatshield	43	4311
+Gilded Greatshield	Greatshield	43	4312
+Cuckoo Greatshield	Greatshield	43	4313
+Redmane Greatshield	Greatshield	43	4314
+Golden Greatshield	Greatshield	43	4315
+Haligtree Crest Greatshield	Greatshield	43	4316
+Crucible Hornshield	Greatshield	43	4317
+Dragonclaw Shield	Greatshield	43	4318
+Fingerprint Stone Shield	Greatshield	43	4319
+Eclipse Crest Greatshield	Greatshield	43	4320
+Ant's Skull Plate	Greatshield	43	4321
+Erdtree Greatshield	Greatshield	43	4322
+Jellyfish Shield	Greatshield	43	4323
+Visage Shield	Greatshield	43	4324
+One-Eyed Shield	Greatshield	43	4325
+Hawk Crest Wooden Shield	Medium Shield	42	4201
+Horse Crest Wooden Shield	Medium Shield	42	4202
+Candletree Wooden Shield	Medium Shield	42	4203
+Flame Crest Wooden Shield	Medium Shield	42	4204
+Marred Wooden Shield	Medium Shield	42	4205
+Sun Realm Shield	Medium Shield	42	4206
+Round Shield	Medium Shield	42	4207
+Large Leather Shield	Medium Shield	42	4208
+Black Leather Shield	Medium Shield	42	4209
+Marred Leather Shield	Medium Shield	42	4210
+Heater Shield	Medium Shield	42	4211
+Blue Crest Heater Shield	Medium Shield	42	4212
+Red Crest Heater Shield	Medium Shield	42	4213
+Beast Crest Heater Shield	Medium Shield	42	4214
+Inverted Hawk Heater Shield	Medium Shield	42	4215
+Eclipse Crest Heater Shield	Medium Shield	42	4216
+Kite Shield	Medium Shield	42	4217
+Blue-Gold Kite Shield	Medium Shield	42	4218
+Scorpion Kite Shield	Medium Shield	42	4219
+Twinbird Kite Shield	Medium Shield	42	4220
+Brass Shield	Medium Shield	42	4221
+Banished Knight's Shield	Medium Shield	42	4222
+Albinauric Shield	Medium Shield	42	4223
+Beastman's Jar-Shield	Medium Shield	42	4224
+Carian Knight's Shield	Medium Shield	42	4225
+Silver Mirrorshield	Medium Shield	42	4226
+Great Turtle Shell	Medium Shield	42	4227
+Rickety Shield	Small Shield	41	4101
+Riveted Wooden Shield	Small Shield	41	4102
+Blue-White Wooden Shield	Small Shield	41	4103
+Scripture Wooden Shield	Small Shield	41	4104
+Red Thorn Roundshield	Small Shield	41	4105
+Pillory Shield	Small Shield	41	4106
+Buckler	Small Shield	41	4107
+Iron Roundshield	Small Shield	41	4108
+Gilded Iron Shield	Small Shield	41	4109
+Man-Serpent's Shield	Small Shield	41	4110
+Ice Crest Shield	Small Shield	41	4111
+Rift Shield	Small Shield	41	4112
+Perfumer's Shield	Small Shield	41	4113
+Shield of the Guilty	Small Shield	41	4114
+Spiralhorn Shield	Small Shield	41	4115
+Smoldering Shield	Small Shield	41	4116
+Coil Shield	Small Shield	41	4117

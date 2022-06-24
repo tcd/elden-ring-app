@@ -40,6 +40,11 @@ class WeaponType < ApplicationRecord
     return self.name
   end
 
+  # @return [Integer]
+  def sort_order()
+    return self.id
+  end
+
   # @return [String]
   def image_url()
     return "/public/images/weapon-types/#{self.name}.png"

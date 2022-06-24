@@ -28,7 +28,7 @@ module Lib
 
       # @return [void]
       def seed()
-        # Weapon.where(is_shield: true).each(&:destroy)
+        Weapon.where(is_shield: true).destroy_all()
         invalid = Lib::Seed.from_json("shields.json", Weapon) { |x| process(x) }
         return invalid
       end
@@ -53,33 +53,12 @@ module Lib
           required_faith:        input["required_faith"],
           required_arcane:       input["required_arcane"],
 
-          attack_physical:       input["attack_physical"],
-          attack_magic:          input["attack_magic"],
-          attack_fire:           input["attack_fire"],
-          attack_lightning:      input["attack_lightning"],
-          attack_holy:           input["attack_holy"],
-          attack_critical:       input["attack_critical"],
-
           defense_physical:      input["defense_physical"],
           defense_magic:         input["defense_magic"],
           defense_fire:          input["defense_fire"],
           defense_lightning:     input["defense_lightning"],
           defense_holy:          input["defense_holy"],
           defense_guard_boost:   input["defense_guard_boost"],
-
-          scaling_strength:      input["scaling_strength"],
-          scaling_intelligence:  input["scaling_intelligence"],
-          scaling_dexterity:     input["scaling_dexterity"],
-          scaling_faith:         input["scaling_faith"],
-          scaling_arcane:        input["scaling_arcane"],
-
-          damage_blood_loss:   input["damage_blood_loss"],
-          damage_frost:        input["damage_frost"],
-          damage_madness:      input["damage_madness"],
-          damage_poison:       input["damage_poison"],
-          damage_sleep:        input["damage_sleep"],
-          damage_death_blight: input["damage_death_blight"],
-          damage_scarlet_rot:  input["damage_scarlet_rot"],
         }
 
         output[:is_special] = (input["is_special"] == true || input["is_special"] == "TRUE" || input["is_special"] == "true")

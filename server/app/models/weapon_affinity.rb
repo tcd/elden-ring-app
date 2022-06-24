@@ -17,7 +17,7 @@ class WeaponAffinity < ApplicationRecord
   validates(:name, presence: true, uniqueness: true)
 
   # @!attribute sort_order
-  #   @return [String]
+  #   @return [Integer]
   validates(:sort_order, presence: true, uniqueness: true)
 
   # @!endgroup Attributes
@@ -44,6 +44,11 @@ class WeaponAffinity < ApplicationRecord
   # ============================================================================
   # Instance Methods
   # ============================================================================
+
+  # @return [Integer]
+  def display_order()
+    return "/public/images/weapon-affinities/#{self.name}.png"
+  end
 
   # @return [String]
   def image_url()

@@ -3,6 +3,10 @@ module Lib
     # Code for filling up our database.
     class Armors
 
+      # @!attribute sort_order_data
+      #   @return [Array<Hash>]
+      attr_accessor :sort_order_data
+
       # @return [Hash{String => Integer}]
       ARMOR_TYPES = {
         "Head"  => 1,
@@ -11,8 +15,13 @@ module Lib
         "Legs"  => 4,
       }.freeze()
 
+      # @return [void]
+      def initialize()
+        self.sort_order_data = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "sort_order", "armor-sort-order.tsv"))
+      end
+
       #  @return [void]
-      def self.seed()
+      def seed()
         Armor.destroy_all()
         invalid = Lib::Seed.from_json("armor.json", Armor) do |fx|
           name = fx["name"]
@@ -20,6 +29,8 @@ module Lib
             nil
           end
           _args = process(fx)
+        rescue StandardError => ex
+          binding.pry
         end
         return invalid
       end
@@ -27,8 +38,8 @@ module Lib
       # Given input data, return args for creating a new record.
       #
       # @return [Hash]
-      def self.process(input)
-        return {
+      def process(input)
+        output = {
           name:          input["name"],
           armor_type_id: ARMOR_TYPES[input["type"]],
           weight:        input["weight"],
@@ -50,6 +61,12 @@ module Lib
             **(input["metadata"] || {}),
           },
         }
+
+        sorting             = sort_order_data.find { |x| x["name"] == input["name"] }
+        output[:sort_order] = sorting["sort_order"]
+        output[:sort_group] = sorting["sort_group"]
+
+        return output
       end
 
     end

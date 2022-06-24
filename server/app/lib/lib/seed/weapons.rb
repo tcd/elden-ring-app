@@ -11,18 +11,24 @@ module Lib
       #   @return [Hash{String => Integer}]
       attr_accessor :weapon_skill_ids
 
+      # @!attribute sort_order_data
+      #   @return [Hash{String => Integer}]
+      attr_accessor :sort_order_data
+
       # @return [void]
       def initialize()
-        self.weapon_type_ids = {}
+        self.weapon_type_ids  = {}
         self.weapon_skill_ids = {}
 
         WeaponType.all.each  { |wt| self.weapon_type_ids[wt.name]  = wt.id }
         WeaponSkill.all.each { |ws| self.weapon_skill_ids[ws.name] = ws.id }
+
+        self.sort_order_data = Lib::FlatFile::Json.from_file(Rails.root.join("db", "seed_data", "sort_order", "weapons-sort-order.json"))
       end
 
       # @return [void]
       def seed()
-        # Weapon.where(is_shield: false).each(&:destroy)
+        Weapon.where(is_shield: false).destroy_all()
         invalid = Lib::Seed.from_tsv("weapons.tsv", Weapon) { |x| self.process(x) }
         return invalid
       end
@@ -38,6 +44,7 @@ module Lib
           is_special:            (input["special"] == true || input["special"] == "TRUE" || input["special"] == "true"),
           name:                  input["name"],
           weight:                input["weight"],
+          sort_order:            self.sort_order_data[input["name"]],
           weapon_type_id:        self.weapon_type_ids[input["weapon_type"]],
           weapon_skill_id:       self.weapon_skill_ids[input["skill_name"]],
           physical_damage_types: input["physical_damage_types"].split(/,\s*/),
@@ -49,19 +56,9 @@ module Lib
           },
           # FIXME: seeding weapons, defense_guard_boost
           defense_guard_boost:    input["defense_guard_boost"] || -1,
-          attack_critical:        input["attack_critical"],
-          attack_stamina_damage:  input["attack_stamina_damage"],
           range:                  input["range"],
-          incantation_scaling:    input["incantation_scaling"],
-          sorcery_scaling:        input["sorcery_scaling"],
           spell_boost_groups:     input["spell_boost_groups"] || [],
           spell_boost_percentage: input["spell_boost_percentage"],
-
-          attack_physical:       input["attack_physical"],
-          attack_magic:          input["attack_magic"],
-          attack_fire:           input["attack_fire"],
-          attack_lightning:      input["attack_lightning"],
-          attack_holy:           input["attack_holy"],
 
           defense_physical:      input["defense_physical"],
           defense_magic:         input["defense_magic"],
@@ -69,25 +66,11 @@ module Lib
           defense_lightning:     input["defense_lightning"],
           defense_holy:          input["defense_holy"],
 
-          scaling_strength:      input["scaling_strength"],
-          scaling_intelligence:  input["scaling_intelligence"],
-          scaling_dexterity:     input["scaling_dexterity"],
-          scaling_faith:         input["scaling_faith"],
-          scaling_arcane:        input["scaling_arcane"],
-
           required_strength:     input["required_strength"],
           required_dexterity:    input["required_dexterity"],
           required_intelligence: input["required_intelligence"],
           required_faith:        input["required_faith"],
           required_arcane:       input["required_arcane"],
-
-          damage_blood_loss:   input["damage_blood_loss"],
-          damage_frost:        input["damage_frost"],
-          damage_madness:      input["damage_madness"],
-          damage_poison:       input["damage_poison"],
-          damage_sleep:        input["damage_sleep"],
-          damage_death_blight: input["damage_death_blight"],
-          damage_scarlet_rot:  input["damage_scarlet_rot"],
         }
 
         if ["Bows", "Light Bows", "Greatbows", "Crossbows", "Ballistae"].include?(input["weapon_type"])

@@ -3,8 +3,17 @@ module Lib
     # Code for filling up our database.
     class Talismans
 
+      # @!attribute sort_order_data
+      #   @return [Array<Hash>]
+      attr_accessor :sort_order_data
+
       # @return [void]
-      def self.seed()
+      def initialize()
+        self.sort_order_data = Lib::FlatFile::Tsv.from_file(Rails.root.join("db", "seed_data", "sort_order", "talismans-sort-order.tsv"))
+      end
+
+      # @return [void]
+      def seed()
         Talisman.destroy_all()
         invalid = Lib::Seed.from_json("talismans.json", Talisman) { |x| process(x) }
         return invalid
@@ -12,9 +21,9 @@ module Lib
 
       # @param input [Hash]
       # @return [Hash]
-      def self.process(input)
-        output = {
+      def process(input)
 
+        output = {
           name:             input["name"],
           weight:           input["weight"],
           description:      input["description"],
@@ -24,6 +33,10 @@ module Lib
 
           equipment_effects_attributes: input["effects"],
         }
+
+        sorting             = sort_order_data.find { |x| x["name"] == input["name"] }
+        output[:sort_order] = sorting["sort_order"]
+        output[:sort_group] = sorting["sort_group"]
 
         output[:metadata] = {
           location: input["location"],

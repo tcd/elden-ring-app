@@ -3918,7 +3918,7 @@
         }
     },
     {
-        "name": "Fia's (Altered)",
+        "name": "Fia's Robe (Altered)",
         "weight": 3.2,
         "type": "Chest",
         "physical": 2.7,
@@ -8987,7 +8987,7 @@
         }
     },
     {
-        "name": "Nox Monk Bracelets",
+        "name": "Nox Bracelets",
         "weight": 2.6,
         "type": "Arms",
         "physical": 2.1,
@@ -10860,7 +10860,7 @@
         }
     },
     {
-        "name": "Nox Monk Greaves",
+        "name": "Nox Greaves",
         "weight": 5.1,
         "type": "Legs",
         "physical": 5.4,
