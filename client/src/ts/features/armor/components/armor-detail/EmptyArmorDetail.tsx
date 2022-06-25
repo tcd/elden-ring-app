@@ -11,48 +11,41 @@ import { getImageSrc, isBlank } from "@app/util"
 import {
     ErCard,
     StatRow,
-    StatRowColor,
 } from "@app/shared"
 import { Selectors } from "@app/state"
 import {
+    ArmorDetailProps,
     ArmorDefenseStats,
     ArmorResistanceStats,
-    EmptyArmorDetail,
+    ARMOR_DEFENSE_STATS,
+    ARMOR_RESISTANCE_STATS,
 } from "."
 
-export const ArmorDetail = (_props: unknown): JSX.Element => {
+export const EmptyArmorDetail = (props: unknown): JSX.Element => {
 
-    const armor     = useSelector(Selectors.Armor.active)
-    const _oldArmor = useSelector(Selectors.Armor.oldArmor)
+    const defenseRows = ARMOR_DEFENSE_STATS.map(({ title }) => {
+        return (<StatRow key={title} title={title} value="-" />)
+    })
 
-    const oldArmor = _oldArmor ?? NO_ARMOR
-
-    if (isBlank(armor)) {
-        return <EmptyArmorDetail />
-    }
-
-    const imageSrc = getImageSrc("Armor", armor.name, "256")
-
-    let weightColor: StatRowColor = "default"
-    if      (armor.weight > oldArmor.weight) { weightColor = "red" }
-    else if (armor.weight < oldArmor.weight) { weightColor = "blue" }
+    const resistanceRows = ARMOR_RESISTANCE_STATS.map(({ title }) => {
+        return (<StatRow key={title} title={title} value="-" />)
+    })
 
     return (
         <div className="equipment-detail">
             <div className="row">
                 <div className="col">
-                    <ErCard title={armor.name}>
+                    <ErCard title="-">
                         <div className="row">
                             <div className="col">
                                 <ul className="h-100 flex-between-column">
                                     <span></span>
-                                    <StatRow title="Weight" value={armor.weight.toFixed(1)} color={weightColor} />
+                                    <StatRow title="Weight" value="-"/>
                                 </ul>
                             </div>
                             <div className="col-1"></div>
                             <div className="col equipment-image-column">
-                                <div className="equipment-image-wrapper">
-                                    <img className="img-fluid" src={imageSrc} alt="armor" />
+                                <div className="equipment-image-wrapper empty">
                                 </div>
                             </div>
                         </div>
@@ -63,20 +56,14 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
                 <div className="col">
                     <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield}>
                         <ul>
-                            <ArmorDefenseStats
-                                armor={armor}
-                                oldArmor={oldArmor}
-                            />
+                            {defenseRows}
                         </ul>
                     </ErCard>
                 </div>
                 <div className="col">
                     <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline}>
                         <ul>
-                            <ArmorResistanceStats
-                                armor={armor}
-                                oldArmor={oldArmor}
-                            />
+                            {resistanceRows}
                         </ul>
                     </ErCard>
                 </div>

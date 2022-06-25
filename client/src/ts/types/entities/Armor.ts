@@ -1,10 +1,10 @@
 import { BaseEntity, EquipmentEffect } from "@types"
 
 export enum ArmorType {
-    Head = "Head",
+    Head  = "Head",
     Chest = "Chest",
-    Arms = "Arms",
-    Legs = "Legs",
+    Arms  = "Arms",
+    Legs  = "Legs",
 }
 
 export interface ArmorSet {

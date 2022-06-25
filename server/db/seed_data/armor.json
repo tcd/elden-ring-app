@@ -4843,7 +4843,7 @@
         "immunity": 63,
         "robustness": 90,
         "focus": 46,
-        "vitality": 0,
+        "vitality": 46,
         "poise": 37,
         "metadata": {}
     },
@@ -6371,9 +6371,9 @@
         "holy": 12.6,
         "immunity": 38,
         "robustness": 57,
-        "focus": 0,
-        "vitality": 0,
-        "poise": 0,
+        "focus": 24,
+        "vitality": 24,
+        "poise": 21,
         "metadata": {
             "location": "-"
         }

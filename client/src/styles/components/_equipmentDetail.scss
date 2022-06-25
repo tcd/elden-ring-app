@@ -1,6 +1,7 @@
 @use "../variables"as v;
 
 .equipment-detail {
+    $equipment-detail-image-size: 155px;
     .equipment-image-column {
         display: flex;
         flex-direction: row;
@@ -23,7 +24,13 @@
             inset 0px 0px 3px 3px rgba(v.$equipment-slot-overlay-color, 0.35),
                   0px 0px 2px 2px rgba(v.$equipment-slot-overlay-color, 0.35);
         img {
-            width: 155px;
+            width: $equipment-detail-image-size;
+            height: $equipment-detail-image-size;
+        }
+
+        &.empty {
+            width: $equipment-detail-image-size;
+            height: $equipment-detail-image-size;
         }
     }
 }
