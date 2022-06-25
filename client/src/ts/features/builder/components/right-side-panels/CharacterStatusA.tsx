@@ -48,7 +48,7 @@ export const CharacterStatusA = (): JSX.Element => {
     })
 
     return (
-        <ErCard title="Character Status" iconPath={mdiAccount}>
+        <ErCard title="Character Status" iconPath={mdiAccount} margin="none">
             <ul>
                 <StatRow title="Level" value={level} description={DESCRIPTIONS.LEVEL_UP_SCREEN.Level} />
                 <StatRow title="Runes Held" value="∞" description={DESCRIPTIONS.LEVEL_UP_SCREEN.RUNES_HELD} />
