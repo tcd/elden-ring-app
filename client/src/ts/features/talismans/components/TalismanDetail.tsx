@@ -17,7 +17,7 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
         return null
     }
 
-    const imageSrc = getImageSrc("Talisman", talisman.name, "1024")
+    const imageSrc = getImageSrc("Talisman", talisman.name, "256")
 
     const effects = talisman.effects.map((effect, i) => {
         return (
@@ -26,7 +26,7 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
     })
 
     return (
-        <div className="weapon-detail">
+        <div className="equipment-detail">
             <div className="row">
                 <div className="col">
                     <ErCard title={talisman.name}>
@@ -38,8 +38,8 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col weapon-image-column">
-                                <div className="weapon-image-wrapper">
+                            <div className="col equipment-image-column">
+                                <div className="equipment-image-wrapper">
                                     <img className="img-fluid" src={imageSrc} alt="talisman image" />
                                 </div>
                             </div>

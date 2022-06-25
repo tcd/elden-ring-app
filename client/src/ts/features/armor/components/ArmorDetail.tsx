@@ -24,7 +24,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
         return null
     }
 
-    const imageSrc = getImageSrc("Armor", armor.name, "1024")
+    const imageSrc = getImageSrc("Armor", armor.name, "256")
 
     const defensePlaceholder = "?" // "0.0"
     const resistancePlaceholder = "?" // "0"
@@ -53,8 +53,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
 
 
     return (
-        // FIXME: ArmorDetail uses `weapon-detail` css classes.
-        <div className="weapon-detail">
+        <div className="equipment-detail">
             <div className="row">
                 <div className="col">
                     <ErCard title={armor.name}>
@@ -66,8 +65,8 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col weapon-image-column">
-                                <div className="weapon-image-wrapper">
+                            <div className="col equipment-image-column">
+                                <div className="equipment-image-wrapper">
                                     <img className="img-fluid" src={imageSrc} alt="armor" />
                                 </div>
                             </div>
@@ -104,5 +103,4 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
             </div>
         </div>
     )
-
 }
