@@ -19,11 +19,14 @@
         width: 70%;
 
         & > :nth-child(1) {
-            width: 45%;
+            box-sizing: border-box;
+            width: 40%;
+            margin-left:  v.$variable-menu-horizontal-margin;
+            margin-right: v.$variable-menu-horizontal-margin;
         }
 
         & > :nth-child(2) {
-            width: 55%;
+            width: 50%;
         }
     }
 

@@ -7,6 +7,7 @@ $scrollbar-width: 10px;
 @mixin customScrollbar {
     // width
     ::-webkit-scrollbar {
+        cursor: pointer;
         // box-sizing: border-box;
         width: $scrollbar-width;
         // padding-left: 4px;
@@ -15,6 +16,7 @@ $scrollbar-width: 10px;
 
     // Track
     ::-webkit-scrollbar-track {
+        cursor: pointer;
         border-radius: inherit;
         // background: #f1f1f1;
         // background-color: #444339;
@@ -23,6 +25,7 @@ $scrollbar-width: 10px;
 
     // Handle
     ::-webkit-scrollbar-thumb {
+        cursor: pointer;
         background: $scrollbar-thumb-color;
         border-radius: $scrollbar-thumb-border-radius;
     }
