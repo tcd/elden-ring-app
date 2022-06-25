@@ -16,8 +16,8 @@ const selectArmorSlice = (rootState: RootState) => {
 }
 
 const selectMenuHasScrolled  = (rootState: RootState): boolean => selectArmorSlice(rootState)?.menuHasScrolled
-const selectActiveType = (rootState: RootState) => selectArmorSlice(rootState)?.activeType
-const selectOldName    = (rootState: RootState): string => selectArmorSlice(rootState)?.oldName
+const selectActiveType       = (rootState: RootState) => selectArmorSlice(rootState)?.activeType
+const selectOldName          = (rootState: RootState): string => selectArmorSlice(rootState)?.oldName
 
 export const selectArmorNames = (rootState: RootState): ArmorSet => selectArmorSlice(rootState)?.armorNames
 

@@ -1,3 +1,3 @@
 export * from "./armor-menu"
-export * from "./ArmorDetail"
+export * from "./armor-detail"
 export * from "./ArmorPage"

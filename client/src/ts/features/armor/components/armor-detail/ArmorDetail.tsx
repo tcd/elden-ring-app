@@ -10,7 +10,6 @@ import { getImageSrc, isBlank } from "@app/util"
 import {
     ErCard,
     StatRow,
-    StatRowPlusProps,
     StatRowProps,
 } from "@app/shared"
 
@@ -50,7 +49,6 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
 
     const defenseRowElements    = defenseRowData.map(({ title, value })    => <StatRow key={title} title={title} value={value} />)
     const resistanceRowElements = resistanceRowData.map(({ title, value }) => <StatRow key={title} title={title} value={value} />)
-
 
     return (
         <div className="equipment-detail">

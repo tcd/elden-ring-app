@@ -42,23 +42,19 @@ export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => 
             value_3_color: "default",
         }
 
-        // eslint-disable-next-line indent
-             if (newBase >  oldBase) { row.value_1_color = "blue"    }
+        if      (newBase >  oldBase) { row.value_1_color = "blue"    }
         else if (newBase == oldBase) { row.value_1_color = "default" }
         else if (newBase <  oldBase) { row.value_1_color = "red"     }
 
-        // eslint-disable-next-line indent
-             if (newScaled >  oldScaled) { row.value_2_color = "blue"    }
+        if      (newScaled >  oldScaled) { row.value_2_color = "blue"    }
         else if (newScaled == oldScaled) { row.value_2_color = "default" }
         else if (newScaled <  oldScaled) { row.value_2_color = "red"     }
 
-        // eslint-disable-next-line indent
-             if (newTotal >  oldTotal) { row.value_3_color = "blue"    }
+        if      (newTotal >  oldTotal) { row.value_3_color = "blue"    }
         else if (newTotal == oldTotal) { row.value_3_color = "default" }
         else if (newTotal <  oldTotal) { row.value_3_color = "red"     }
 
-        // eslint-disable-next-line indent
-             if (newTotal >  oldTotal) { row.divider_color = "blue"    }
+        if      (newTotal >  oldTotal) { row.divider_color = "blue"    }
         else if (newTotal == oldTotal) { row.divider_color = "default" }
         else if (newTotal <  oldTotal) { row.divider_color = "red"     }
 

@@ -38,8 +38,7 @@ export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element =>
         }
 
         if (haveOldStats) {
-            // eslint-disable-next-line indent
-                 if (newValue >  oldValue) { attrProps.color = "blue"    }
+            if      (newValue >  oldValue) { attrProps.color = "blue"    }
             else if (newValue == oldValue) { attrProps.color = "default" }
             else if (newValue <  oldValue) { attrProps.color = "red"     }
         }

@@ -18,7 +18,7 @@ export interface Armor extends BaseEntity {
     name: string
     image_url: string
     armor_type: ArmorType
-    weight: number
+    weight: Decimal
     poise?: number
     sort_group?: ArmorSortGroup
 
@@ -26,20 +26,20 @@ export interface Armor extends BaseEntity {
     // tags?: string[]
 
     // Resistance
-    immunity?: number
-    robustness?: number
-    focus?: number
-    vitality?: number
+    immunity?: Integer
+    robustness?: Integer
+    focus?: Integer
+    vitality?: Integer
 
     // Damage Negation
-    physical?: number
-    vs_strike?: number
-    vs_slash?: number
-    vs_pierce?: number
-    magic?: number
-    fire?: number
-    lightning?: number
-    holy?: number
+    physical?: Decimal
+    vs_strike?: Decimal
+    vs_slash?: Decimal
+    vs_pierce?: Decimal
+    magic?: Decimal
+    fire?: Decimal
+    lightning?: Decimal
+    holy?: Decimal
 }
 
 export type ArmorSortGroup =

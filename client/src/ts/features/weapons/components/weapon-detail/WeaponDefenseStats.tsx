@@ -41,8 +41,7 @@ export const WeaponDefenseStats = (props: WeaponDefenseStatsProps): JSX.Element 
         }
 
         if (haveOldWeapon) {
-            // eslint-disable-next-line indent
-                 if (newValue >  oldValue) { dmgProps.color = "blue"    }
+            if      (newValue >  oldValue) { dmgProps.color = "blue"    }
             else if (newValue == oldValue) { dmgProps.color = "default" }
             else if (newValue <  oldValue) { dmgProps.color = "red"     }
         } else {
