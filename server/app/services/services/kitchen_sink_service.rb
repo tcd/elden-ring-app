@@ -16,10 +16,10 @@ module Services
     @@result = nil
 
     def initialize()
-      @@armor                         = Armor.includes(:armor_type).all().order(name: :asc)
+      @@armor                         = Armor.includes(:armor_type).all().order(sort_order: :asc)
       @@spells                        = Spell.all().order(name: :asc)
-      @@talismans                     = Talisman.includes(:equipment_effects).all()
-      @@weapons                       = Weapon.includes(:weapon_type, :weapon_skill, :weapon_stats).all().order(name: :asc)
+      @@talismans                     = Talisman.includes(:equipment_effects).all().order(sort_order: :asc)
+      @@weapons                       = Weapon.includes(:weapon_type, :weapon_skill, :weapon_stats).all().order(sort_order: :asc)
       @@weapon_skills                 = WeaponSkill.all().order(name: :asc)
       @@weapon_types                  = WeaponType.all()
       @@attack_element_correct_params = AttackElementCorrectParam.all()

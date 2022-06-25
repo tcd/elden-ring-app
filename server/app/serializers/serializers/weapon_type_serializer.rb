@@ -5,7 +5,7 @@ module Serializers
       :name,
       # :image_url,
       :plural_name,
-      :is_shield,
+      # :is_shield,
     )
 
   end
