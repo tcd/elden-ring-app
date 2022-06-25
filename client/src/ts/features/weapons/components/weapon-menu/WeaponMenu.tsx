@@ -3,8 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 
 import { Attributes, Weapon } from "@app/types"
 import { Actions, Selectors } from "@app/state"
-import { meetsRequirements, getImageSrc } from "@app/util"
-import { WeaponDetail } from "./weapon-detail"
+import { WeaponDetail, WeaponMenuImage } from "@app/features/weapons/components"
 
 export const WeaponMenu = (): JSX.Element => {
 
@@ -55,7 +54,7 @@ export const WeaponMenu = (): JSX.Element => {
                     className={classes}
                     onClick={() => handleClick(weapon.name)}
                 >
-                    <WeaponImage weapon={weapon} stats={stats} />
+                    <WeaponMenuImage weapon={weapon} stats={stats} />
                 </div>
             )
         })
@@ -91,24 +90,3 @@ export const WeaponMenu = (): JSX.Element => {
     )
 }
 
-export interface WeaponImageProps {
-    weapon: Weapon
-    stats: Attributes
-}
-const WeaponImage = ({ weapon, stats }: WeaponImageProps): JSX.Element => {
-    const src = getImageSrc("Weapon", weapon.name, "256")
-    let cantUse = null
-    if (!meetsRequirements(stats, weapon)) {
-        cantUse = <span className="requirements-not-met">X</span>
-    }
-    return (
-        <div className="equipment-menu-image-wrapper">
-            {cantUse}
-            <img
-                className="img-fluid"
-                src={src}
-                alt="weapon"
-            />
-        </div>
-    )
-}
