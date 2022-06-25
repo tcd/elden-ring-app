@@ -102,6 +102,7 @@ export const ArmorSelectors = {
     compactArray: selectCompactArmor,
     options: selectArmorOptions,
     menuHasScrolled: selectMenuHasScrolled,
+    oldArmor: selectOldArmor,
     equipped: {
         head: selectHead,
         chest: selectChest,
