@@ -15,8 +15,10 @@ const selectArmorSlice = (rootState: RootState) => {
     return rootState?.Armor
 }
 
+const selectMenuHasScrolled  = (rootState: RootState): boolean => selectArmorSlice(rootState)?.menuHasScrolled
 const selectActiveType = (rootState: RootState) => selectArmorSlice(rootState)?.activeType
-const selectOldName    = (rootState: RootState) => selectArmorSlice(rootState)?.oldName
+const selectOldName    = (rootState: RootState): string => selectArmorSlice(rootState)?.oldName
+
 export const selectArmorNames = (rootState: RootState): ArmorSet => selectArmorSlice(rootState)?.armorNames
 
 const selectActiveName = (rootState: RootState) => {
@@ -99,6 +101,7 @@ export const ArmorSelectors = {
     activeType: selectActiveType,
     compactArray: selectCompactArmor,
     options: selectArmorOptions,
+    menuHasScrolled: selectMenuHasScrolled,
     equipped: {
         head: selectHead,
         chest: selectChest,

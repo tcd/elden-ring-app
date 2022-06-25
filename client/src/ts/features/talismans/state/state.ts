@@ -5,20 +5,26 @@ import { FEATURE_KEYS } from "@app/util"
 import { reducers } from "./reducers"
 
 export interface TalismansState {
+    talismanNames: TalismanSet
     activeSlotId: TalismanSlotId
     oldTalismanName?: string
-    talismanNames: TalismanSet
+    menuHasScrolled: boolean
 }
 
 const initialState: TalismansState = {
+    talismanNames: {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+    },
     activeSlotId: null,
     oldTalismanName: null,
-    // talismanNames: {
-    //     "1": null,
-    //     "2": null,
-    //     "3": null,
-    //     "4": null,
-    // },
+    menuHasScrolled: false,
+}
+
+const initialDevState: TalismansState = {
+    ...initialState,
     talismanNames: {
         "1": "Red-Feathered Branchsword",
         "2": "Ritual Sword Talisman",
@@ -29,6 +35,6 @@ const initialState: TalismansState = {
 
 export const TalismansSlice = createSlice({
     name: FEATURE_KEYS.Talismans,
-    initialState,
+    initialState: initialDevState,
     reducers: reducers,
 })

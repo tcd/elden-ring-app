@@ -1,18 +1,25 @@
-import { Fragment } from "react"
+import { createRef, useEffect, useRef, Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
-import { Armor, ARMOR_SORT_GROUPS } from "@app/types"
+import { ARMOR_SORT_GROUPS, RefMap } from "@app/types"
+import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { ArmorDetail } from "./ArmorDetail"
-import { getImageSrc } from "@app/util"
+import { ArmorMenuImage } from "@app/features/armor/components"
 
-export const ArmorMenu = (_props: unknown): JSX.Element => {
+export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const armor       = useSelector(Selectors.Armor.options)
-    const activeName  = useSelector(Selectors.Armor.activeName)
-    const activeArmor = useSelector(Selectors.Armor.active)
+    const armor           = useSelector(Selectors.Armor.options)
+    const activeName      = useSelector(Selectors.Armor.activeName)
+    const menuHasScrolled = useSelector(Selectors.Armor.menuHasScrolled)
+
+    const menuRef = createRef<HTMLDivElement>()
+
+    const refs: RefMap = armor.reduce((acc, value) => {
+        acc[value.name] = useRef<HTMLDivElement>(null)
+        return acc
+    }, {})
 
     const handleClick = (armorName: string) => {
         dispatch(Actions.Armor.equipArmor({ name: armorName }))
@@ -28,10 +35,11 @@ export const ArmorMenu = (_props: unknown): JSX.Element => {
             return (
                 <div
                     key={`armor-${armor.name}`}
+                    ref={refs[armor.name]}
                     className={classes}
                     onClick={() => handleClick(armor.name)}
                 >
-                    <ArmorImage armor={armor} />
+                    <ArmorMenuImage armor={armor} />
                 </div>
             )
         })
@@ -47,33 +55,19 @@ export const ArmorMenu = (_props: unknown): JSX.Element => {
         )
     })
 
-    return (
-        <div id="variable-menu">
-            <div className="equipment-menu">
-                <div className="equipment-menu-grid-column">
-                    {sections}
-                </div>
-            </div>
-            <div>
-                <ArmorDetail armor={activeArmor} />
-            </div>
-        </div>
-    )
-}
+    useEffect(() => {
+        scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
+            dispatch(Actions.Armor.scrollMenu())
+        })
+    }, [menuHasScrolled, activeName, refs, menuRef])
 
-interface ArmorImageProps {
-    armor: Armor
-}
 
-const ArmorImage = ({ armor }: ArmorImageProps) => {
-    const src = getImageSrc("Armor", armor.name, "256")
     return (
-        <div className="equipment-menu-image-wrapper">
-            <img
-                className="img-fluid"
-                src={src}
-                alt={armor.name}
-            />
+        <div
+            ref={menuRef}
+            className="equipment-menu-grid-column"
+        >
+            {sections}
         </div>
     )
 }

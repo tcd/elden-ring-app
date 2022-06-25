@@ -1,4 +1,4 @@
-import { Talisman, TalismanSlotId } from "@app/types"
+import { Talisman, TalismanSlotId, TalismanSet } from "@app/types"
 import { compactArray, isBlank } from "@app/util"
 import { RootState } from "@app/state"
 import { selectTalismans } from "@app/features/builder/state/selectors/api"
@@ -12,8 +12,9 @@ const _selectTalisman = (rootState: RootState, name?: string) => {
     return selectTalismans(rootState).find(x => x.name == name)
 }
 
-const selectActiveSlotId  = (rootState: RootState) => selectTalismansSlice(rootState).activeSlotId
-const selectTalismanNames = (rootState: RootState) => selectTalismansSlice(rootState).talismanNames
+const selectActiveSlotId    = (rootState: RootState): TalismanSlotId => selectTalismansSlice(rootState).activeSlotId
+const selectTalismanNames   = (rootState: RootState): TalismanSet => selectTalismansSlice(rootState).talismanNames
+const selectHasMenuScrolled = (rootState: RootState): boolean => selectTalismansSlice(rootState).menuHasScrolled
 
 const _selectTalismanNameBySlotId = (rootState: RootState, slotId: TalismanSlotId) => {
     return selectTalismanNames(rootState)?.[slotId]
@@ -58,7 +59,6 @@ const selectActiveTalisman = (rootState: RootState) => {
     const talismans = selectTalismans(rootState)
     return talismans.find(x => x.name == activeName)
 }
-
 
 /**
  * Can't wear two of the same talisman.
@@ -108,4 +108,5 @@ export const TalismansSelectors = {
      * This returns talismans available to equip in the active talisman slot.
      */
     options: selectTalismanOptions,
+    menuHasScrolled: selectHasMenuScrolled,
 }

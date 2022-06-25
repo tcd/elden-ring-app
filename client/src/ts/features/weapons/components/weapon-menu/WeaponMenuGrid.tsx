@@ -7,18 +7,18 @@ import {
 import { useSelector, useDispatch } from "react-redux"
 
 import { RefMap } from "@app/types"
-import { Actions, Selectors } from "@app/state"
 import { scrollToEquipmentCell } from "@app/util"
+import { Actions, Selectors } from "@app/state"
 import { WeaponMenuImage } from "@app/features/weapons/components"
 
 export const WeaponMenuGrid = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const activeWeaponName = useSelector(Selectors.Weapons.active.weaponName)
+    const activeName       = useSelector(Selectors.Weapons.active.weaponName)
     const weapons          = useSelector(Selectors.Weapons.allWeapons)
     const weaponTypes      = useSelector(Selectors.Builder.api.weaponTypes)
-    const hasMenuScrolled  = useSelector(Selectors.Weapons.hasMenuScrolled)
+    const menuHasScrolled  = useSelector(Selectors.Weapons.menuHasScrolled)
 
     const vigor        = useSelector(Selectors.Builder.attribute.vigor)
     const mind         = useSelector(Selectors.Builder.attribute.mind)
@@ -39,6 +39,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
         faith,
         arcane,
     }
+
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = weapons.reduce((acc, value) => {
@@ -55,7 +56,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
         const sectionWeapons = weapons.filter(x => x.weapon_type_id == weaponType.id)
         const weaponCells = sectionWeapons.map((weapon) => {
             let classes = "equipment-menu-cell inactive"
-            if (weapon.name === activeWeaponName) {
+            if (weapon.name === activeName) {
                 classes = "equipment-menu-cell active"
             }
             return (
@@ -86,10 +87,10 @@ export const WeaponMenuGrid = (): JSX.Element => {
     })
 
     useEffect(() => {
-        scrollToEquipmentCell(activeWeaponName, hasMenuScrolled, refs, menuRef, () => {
+        scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
             dispatch(Actions.Weapons.scrollMenu())
         })
-    }, [hasMenuScrolled, activeWeaponName, refs, menuRef])
+    }, [menuHasScrolled, activeName, refs, menuRef])
 
     return (
         <div

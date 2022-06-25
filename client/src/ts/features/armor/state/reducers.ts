@@ -5,13 +5,18 @@ import { isBlank } from "@app/util"
 import { ArmorState } from "./state"
 
 export const reducers = {
+    scrollMenu(state: ArmorState) {
+        state.menuHasScrolled = true
+    },
     openArmorMenu(state: ArmorState, action: PayloadAction<{ type: ArmorType }>) {
         state.activeType = action.payload.type
         state.oldName = state.armorNames[action.payload.type]
+        state.menuHasScrolled = false
     },
     closeArmorMenu(state: ArmorState) {
         state.activeType = null
         state.oldName = null
+        state.menuHasScrolled = true
     },
     setActiveType(state: ArmorState, action: PayloadAction<{ type: "all" | ArmorType }>) {
         state.activeType = action.payload.type

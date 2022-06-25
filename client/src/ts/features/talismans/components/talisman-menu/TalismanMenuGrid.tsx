@@ -1,18 +1,25 @@
-import { Fragment } from "react"
+import { createRef, useEffect, useRef, Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
-import { Talisman, TALISMAN_SORT_GROUPS } from "@app/types"
+import { TALISMAN_SORT_GROUPS, RefMap } from "@app/types"
+import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { getImageSrc } from "@app/util"
-import { TalismanDetail } from "./TalismanDetail"
+import { TalismanMenuImage } from "@app/features/talismans/components"
 
-export const TalismanMenu = (): JSX.Element => {
+export const TalismanMenuGrid = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const activeName = useSelector(Selectors.Talismans.activeName)
-    const talisman   = useSelector(Selectors.Talismans.active)
-    const talismans  = useSelector(Selectors.Builder.api.talismans)
+    const activeName      = useSelector(Selectors.Talismans.activeName)
+    const talismans       = useSelector(Selectors.Builder.api.talismans)
+    const menuHasScrolled = useSelector(Selectors.Talismans.menuHasScrolled)
+
+    const menuRef = createRef<HTMLDivElement>()
+
+    const refs: RefMap = talismans.reduce((acc, value) => {
+        acc[value.name] = useRef<HTMLDivElement>(null)
+        return acc
+    }, {})
 
     const handleClick = (name: string) => {
         dispatch(Actions.Talismans.setActiveName({ name }))
@@ -28,10 +35,11 @@ export const TalismanMenu = (): JSX.Element => {
             return (
                 <div
                     key={`talisman-${talisman.name}`}
+                    ref={refs[talisman.name]}
                     className={classes}
                     onClick={() => handleClick(talisman.name)}
                 >
-                    <TalismanImage talisman={talisman}/>
+                    <TalismanMenuImage talisman={talisman}/>
                 </div>
             )
         })
@@ -47,33 +55,18 @@ export const TalismanMenu = (): JSX.Element => {
         )
     })
 
-    return (
-        <div id="variable-menu">
-            <div className="equipment-menu">
-                <div className="equipment-menu-grid-column">
-                    {sections}
-                </div>
-            </div>
-            <div>
-                <TalismanDetail talisman={talisman} />
-            </div>
-        </div>
-    )
-}
+    useEffect(() => {
+        scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
+            dispatch(Actions.Talismans.scrollMenu())
+        })
+    }, [menuHasScrolled, activeName, refs, menuRef])
 
-export interface TalismanImageProps {
-    talisman: Talisman
-}
-
-const TalismanImage = ({ talisman }: TalismanImageProps) => {
-    const src = getImageSrc("Talisman", talisman.name, "256")
     return (
-        <div className="equipment-menu-image-wrapper">
-            <img
-                className="img-fluid"
-                src={src}
-                alt={talisman.name}
-            />
+        <div
+            ref={menuRef}
+            className="equipment-menu-grid-column"
+        >
+            {sections}
         </div>
     )
 }

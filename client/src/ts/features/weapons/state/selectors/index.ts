@@ -4,7 +4,7 @@ export const WeaponsSelectors = {
     slots: Core.selectWeaponSlots,
     allWeapons: Core.selectAllWeapons,
     activeSlotId: Core.selectActiveSlotId,
-    hasMenuScrolled: Core.selectHasMenuScrolled,
+    menuHasScrolled: Core.selectHasMenuScrolled,
     active: {
         weapon: Core.selectActiveWeapon,
         weaponName: Core.selectActiveWeaponName,
