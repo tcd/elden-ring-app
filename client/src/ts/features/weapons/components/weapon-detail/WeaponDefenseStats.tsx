@@ -36,7 +36,7 @@ export const WeaponDefenseStats = (props: WeaponDefenseStatsProps): JSX.Element 
         const newValue = newWeapon?.[`defense_${dmg}`]
 
         const dmgProps: StatRowProps = {
-            title: capitalize(dmg).slice(0, 3),
+            title: capitalize(dmg),
             value: round(newValue, 1),
         }
 
