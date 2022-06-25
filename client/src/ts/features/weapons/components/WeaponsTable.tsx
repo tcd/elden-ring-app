@@ -1,19 +1,21 @@
 import { useSelector } from "react-redux"
 
 import { Weapon } from "@app/types"
+import { getImageSrc } from "@app/util"
+import { Selectors } from "@app/state"
 import {
     WeaponDamageTypes,
     CustomTable,
     CustomTableColumn,
 } from "@app/shared"
-import { Selectors } from "@app/state"
 
 const renderImageCell = (weapon: Weapon): JSX.Element => {
+    const src = getImageSrc("Weapon", weapon.name, "128")
     return (
         <div style={{ width: "75px" }}>
             <img
                 className="img-fluid"
-                src={weapon.image_url}
+                src={src}
                 alt="weapon"
             />
         </div>
@@ -23,6 +25,7 @@ const renderImageCell = (weapon: Weapon): JSX.Element => {
 const renderWeaponSkillCell = (weapon: Weapon) => {
     const skill = weapon?.weapon_skill
     if (skill?.ash_of_war) {
+        const src = getImageSrc("Weapon Skill", skill.name, "128")
         return (
             <div className="flex-between">
                 <span className="align-self-center">
@@ -31,7 +34,7 @@ const renderWeaponSkillCell = (weapon: Weapon) => {
                 <div style={{ width: "50px" }}>
                     <img
                         className="img-fluid"
-                        src={skill.image_url}
+                        src={src}
                         alt={skill.name}
                         title={skill.name}
                     />

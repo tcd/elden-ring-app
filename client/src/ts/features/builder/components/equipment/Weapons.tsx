@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Weapon, WeaponSlotId, weaponSlotIdName } from "@app/types"
 import { MouseOverPopover } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
+import { getImageSrc } from "@app/util"
 
 // =============================================================================
 // Ammunition
@@ -61,10 +62,11 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     if (weapon) {
         classNames.push("equipment-slot-filled")
         titleString = weapon.name
+        const src = getImageSrc("Weapon", weapon.name, "256")
         weaponImageElement = (
             <img
                 className="img-fluid"
-                src={weapon.image_url}
+                src={src}
                 alt={`${weapon.name} image`}
             />
         )

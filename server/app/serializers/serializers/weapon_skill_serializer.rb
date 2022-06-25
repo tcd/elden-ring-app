@@ -3,7 +3,7 @@ module Serializers
 
     fields(
       :name,
-      :image_url,
+      # :image_url,
       :description,
       :ash_of_war,
       :is_chargeable,

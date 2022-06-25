@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Armor, ARMOR_SORT_GROUPS } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { ArmorDetail } from "./ArmorDetail"
+import { getImageSrc } from "@app/util"
 
 export const ArmorMenu = (_props: unknown): JSX.Element => {
 
@@ -65,11 +66,12 @@ interface ArmorImageProps {
 }
 
 const ArmorImage = ({ armor }: ArmorImageProps) => {
+    const src = getImageSrc("Armor", armor.name, "256")
     return (
         <div className="equipment-menu-image-wrapper">
             <img
                 className="img-fluid"
-                src={armor.image_url}
+                src={src}
                 alt={armor.name}
             />
         </div>

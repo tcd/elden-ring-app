@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Armor as IArmor, ArmorType } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { MouseOverPopover } from "@app/shared"
+import { getImageSrc } from "@app/util"
 
 const armorTypeCssClasses = {
     [ArmorType.Head]:  "equipment-slot-armor-head",
@@ -27,7 +28,8 @@ export const ArmorSlot = ({ type, armor }: ArmorSlotProps) => {
     if (armor) {
         titleString = armor.name
         classNames.push("equipment-slot-filled")
-        armorImage = <img className="img-fluid" src={armor.image_url} alt={armor.name} />
+        const src = getImageSrc("Armor", armor.name, "256")
+        armorImage = <img className="img-fluid" src={src} alt={armor.name} />
     }
 
     const handleClick = () => {
@@ -64,10 +66,10 @@ export const Armor = (): JSX.Element => {
     return (
         <>
             <section className="armor w-100">
-                <ArmorSlot type={ArmorType.Head} armor={head}   />
+                <ArmorSlot type={ArmorType.Head}  armor={head}  />
                 <ArmorSlot type={ArmorType.Chest} armor={chest} />
-                <ArmorSlot type={ArmorType.Arms} armor={arms}   />
-                <ArmorSlot type={ArmorType.Legs} armor={legs}   />
+                <ArmorSlot type={ArmorType.Arms}  armor={arms}  />
+                <ArmorSlot type={ArmorType.Legs}  armor={legs}  />
             </section>
         </>
     )

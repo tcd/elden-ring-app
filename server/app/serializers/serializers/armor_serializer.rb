@@ -5,7 +5,7 @@ module Serializers
 
     fields(
       :name,
-      :image_url,
+      # :image_url,
       # :is_altered,
       :sort_group,
       :poise,

@@ -1,9 +1,10 @@
+import { Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { Talisman, TALISMAN_SORT_GROUPS } from "@app/types"
 import { Actions, Selectors } from "@app/state"
+import { getImageSrc } from "@app/util"
 import { TalismanDetail } from "./TalismanDetail"
-import { Fragment } from "react"
 
 export const TalismanMenu = (): JSX.Element => {
 
@@ -30,7 +31,7 @@ export const TalismanMenu = (): JSX.Element => {
                     className={classes}
                     onClick={() => handleClick(talisman.name)}
                 >
-                    {talismanImage(talisman)}
+                    <TalismanImage talisman={talisman}/>
                 </div>
             )
         })
@@ -60,13 +61,17 @@ export const TalismanMenu = (): JSX.Element => {
     )
 }
 
+export interface TalismanImageProps {
+    talisman: Talisman
+}
 
-const talismanImage = (talisman: Talisman) => {
+const TalismanImage = ({ talisman }: TalismanImageProps) => {
+    const src = getImageSrc("Talisman", talisman.name, "256")
     return (
         <div className="equipment-menu-image-wrapper">
             <img
                 className="img-fluid"
-                src={talisman.image_url}
+                src={src}
                 alt={talisman.name}
             />
         </div>

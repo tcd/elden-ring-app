@@ -6,7 +6,7 @@ import {
 } from "@mdi/js"
 
 import { Armor } from "@app/types"
-import { isBlank } from "@app/util"
+import { getImageSrc, isBlank } from "@app/util"
 import {
     ErCard,
     StatRow,
@@ -23,6 +23,8 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
     if (isBlank(armor)) {
         return null
     }
+
+    const imageSrc = getImageSrc("Armor", armor.name, "1024")
 
     const defensePlaceholder = "?" // "0.0"
     const resistancePlaceholder = "?" // "0"
@@ -66,7 +68,7 @@ export const ArmorDetail = ({ armor }: ArmorDetailProps): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={armor?.image_url} alt={armor.name + "image"} />
+                                    <img className="img-fluid" src={imageSrc} alt="armor" />
                                 </div>
                             </div>
                         </div>

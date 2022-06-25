@@ -31,20 +31,6 @@ export interface BuilderState {
     startingClassName: StartingClassName,
 
     attributes: Attributes
-    talisman_names: TalismanSet
-
-    talisman: {
-        modal_open: boolean
-        active_number: TalismanSlotId
-    }
-    weapon: {
-        modal_open: boolean
-        active_slot: WeaponSlotId
-    }
-    armor: {
-        modal_open: boolean
-        active_type: ArmorType
-    }
 }
 
 // Define the initial state using that type
@@ -74,26 +60,6 @@ const initialState: BuilderState = {
         "faith":        0,
         "arcane":       0,
     },
-
-    talisman_names: {
-        "1": null,
-        "2": null,
-        "3": null,
-        "4": null,
-    },
-
-    talisman: {
-        modal_open: false,
-        active_number: null,
-    },
-    weapon: {
-        modal_open: false,
-        active_slot: null,
-    },
-    armor: {
-        modal_open: false,
-        active_type: null,
-    },
 }
 
 const myBuild: BuilderState = {
@@ -122,25 +88,6 @@ const myBuild: BuilderState = {
     //     "faith":        80,
     //     "arcane":       30,
     // },
-
-    // talisman_names: {
-    //     "1": "Silver Scarab",
-    //     "2": "Bull-Goat's Talisman",
-    //     "3": "Gold Scarab",
-    //     "4": "Great-Jar's Arsenal",
-    // },
-
-    talisman_names: {
-        "1": "Red-Feathered Branchsword",
-        "2": "Ritual Sword Talisman",
-        "3": "Blue-Feathered Branchsword",
-        "4": "Ritual Shield Talisman",
-    },
-
-//     weapon: {
-//         active_slot: "R1",
-//         modal_open: true,
-//     },
 }
 
 export const BuilderSlice = createSlice({

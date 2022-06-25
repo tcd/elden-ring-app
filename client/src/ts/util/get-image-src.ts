@@ -40,9 +40,10 @@ const IMAGE_FOLDERS: ImageableFolderMap = {
     "Weapon":           "Weapons",
 }
 
-export const getImageSrc = (type: ImageableString, name: string): string => {
+export type CloudflareVariant = "128" | "256" | "512" | "1024"
+
+export const getImageSrc = (type: ImageableString, name: string, variant: CloudflareVariant = "1024"): string => {
     const folder  = IMAGE_FOLDERS[type]
-    const variant = "public"
     if (type == "Spell") {
         name = name.replaceAll(":", "_")
     }

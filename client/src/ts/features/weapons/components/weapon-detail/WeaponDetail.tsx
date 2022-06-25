@@ -9,6 +9,7 @@ import {
 
 import { Weapon } from "@app/types"
 import {
+    getImageSrc,
     isBlank,
 } from "@app/util"
 import {
@@ -36,6 +37,8 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
     if (isBlank(weapon)) {
         return null
     }
+
+    const weaponImgSrc = getImageSrc("Weapon", weapon.name, "256")
 
     let weightColor: StatRowColor = "default"
     if (props?.oldWeapon) {
@@ -67,7 +70,7 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={weapon.image_url} alt="weapon" />
+                                    <img className="img-fluid" src={weaponImgSrc} alt="weapon image" />
                                 </div>
                             </div>
                         </div>

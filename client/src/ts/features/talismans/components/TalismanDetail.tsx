@@ -4,7 +4,7 @@ import {
 } from "@mdi/js"
 
 import { Talisman } from "@app/types"
-import { equipmentEffectDescription, isBlank } from "@app/util"
+import { equipmentEffectDescription, getImageSrc, isBlank } from "@app/util"
 import { ErCard, StatRow } from "@app/shared"
 
 export interface TalismanDetailProps {
@@ -16,6 +16,8 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
     if (isBlank(talisman)) {
         return null
     }
+
+    const imageSrc = getImageSrc("Talisman", talisman.name, "1024")
 
     const effects = talisman.effects.map((effect, i) => {
         return (
@@ -38,7 +40,7 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={talisman.image_url} alt="weapon" />
+                                    <img className="img-fluid" src={imageSrc} alt="talisman image" />
                                 </div>
                             </div>
                         </div>
