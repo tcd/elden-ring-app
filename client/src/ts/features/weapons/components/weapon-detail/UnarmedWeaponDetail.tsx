@@ -1,4 +1,3 @@
-import { CalculatedWeaponStats } from "elden-ring-calculator"
 import {
     mdiSword,
     mdiShield,
@@ -7,12 +6,10 @@ import {
     mdiTshirtCrew,
 } from "@mdi/js"
 
-import { Unarmed, UnarmedStats } from "@app/data"
-import { Weapon } from "@app/types"
 import {
-    getImageSrc,
-    isBlank,
-} from "@app/util"
+    Unarmed,
+    UnarmedStats,
+} from "@app/data"
 import {
     ErCard,
     StatRow,
@@ -22,33 +19,17 @@ import {
     WeaponAttackStats,
     WeaponScalingStats,
     WeaponDefenseStats,
-    // UnarmedWeaponDetail,
-    EmptyWeaponDetail,
+    WeaponDetailProps,
 } from "."
 
-export interface WeaponDetailProps {
-    weapon: Weapon
-    oldWeapon?: Weapon
-    newStats?: CalculatedWeaponStats
-    oldStats?: CalculatedWeaponStats
-}
+export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
 
-export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
-    props = {
-        weapon:    props.weapon,
-        newStats:  props.newStats,
-        oldWeapon: props?.oldWeapon ?? Unarmed,
-        oldStats:  props?.oldStats  ?? UnarmedStats,
+    const weapon = Unarmed
+
+    const props: WeaponDetailProps = {
+        weapon: Unarmed,
+        newStats: UnarmedStats,
     }
-
-    const { weapon } = props
-
-    if (isBlank(weapon)) {
-        // return <UnarmedWeaponDetail />
-        return <EmptyWeaponDetail />
-    }
-
-    const weaponImgSrc = getImageSrc("Weapon", weapon.name, "256")
 
     let weightColor: StatRowColor = "default"
     if (props?.oldWeapon) {
@@ -73,14 +54,14 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                                     <br />
                                     <StatRow title={weapon?.weapon_skill?.name} value={null} />
                                     <br />
-                                    <StatRow title="FP Cost" value={weapon?.weapon_skill?.metadata?.complex_fp_cost ?? weapon?.weapon_skill?.metadata?.basic_fp_cost} />
+                                    <StatRow title="FP Cost" value={<span>-&nbsp;(&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;)</span>} />
                                     <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color={weightColor} />
                                 </ul>
                             </div>
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={weaponImgSrc} alt="weapon image" />
+                                    <img className="img-fluid" src="" />
                                 </div>
                             </div>
                         </div>
@@ -148,5 +129,4 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
             </div>
         </div>
     )
-
 }

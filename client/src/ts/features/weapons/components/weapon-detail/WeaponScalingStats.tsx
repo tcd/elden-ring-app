@@ -1,6 +1,7 @@
 import { capitalize } from "lodash"
 import { AttrMap } from "elden-ring-calculator"
 
+import { UnarmedStats } from "@app/data"
 import {
     Attr,
 } from "@app/types"
@@ -14,7 +15,7 @@ import { ComparableWeaponProps } from "."
 export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element => {
 
     const newStats = props?.newStats
-    const oldStats = props?.oldStats
+    const oldStats = props?.oldStats ?? UnarmedStats
 
     const haveNewStats = !isBlank(newStats)
     const haveOldStats = !isBlank(oldStats?.scaling?.values)

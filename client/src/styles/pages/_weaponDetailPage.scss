@@ -1,6 +1,7 @@
 @use "../variables"as v;
 
 .weapon-detail {
+    $weapon-detail-weapon-image-size: 155px;
     .weapon-image-column {
         display: flex;
         flex-direction: row;
@@ -23,7 +24,13 @@
             inset 0px 0px 3px 3px rgba(v.$equipment-slot-overlay-color, 0.35),
                   0px 0px 2px 2px rgba(v.$equipment-slot-overlay-color, 0.35);
         img {
-            width: 155px;
+            width:  $weapon-detail-weapon-image-size;
+            height: $weapon-detail-weapon-image-size;
+        }
+
+        &.empty {
+            width:  $weapon-detail-weapon-image-size;
+            height: $weapon-detail-weapon-image-size;
         }
     }
 }

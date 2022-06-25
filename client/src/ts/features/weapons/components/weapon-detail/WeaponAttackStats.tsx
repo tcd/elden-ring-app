@@ -1,11 +1,8 @@
 import { capitalize } from "lodash"
 
-import {
-    Dmg,
-} from "@app/types"
-import {
-    isBlank,
-} from "@app/util"
+import { UnarmedStats } from "@app/data"
+import { Dmg } from "@app/types"
+import { isBlank } from "@app/util"
 import {
     StatRowPlusPlus,
     StatRowPlusPlusProps,
@@ -20,7 +17,7 @@ export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => 
 
     const { newStats } = props
 
-    const oldStats = props?.oldStats
+    const oldStats = props?.oldStats ?? UnarmedStats
 
     const attackPlaceholder = "0" // "0.0"
     const data: StatRowPlusPlusProps[] = []
@@ -92,6 +89,15 @@ export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => 
             value_3_color={value_3_color}
         />)
     })
+
+    // rows.push(<StatRowPlusPlus
+    //     key={"critical"}
+    //     title="Critical"
+    //     divider=""
+    //     value_1={100}
+    //     value_2=""
+    //     value_3={0}
+    // />)
 
     return <>{rows}</>
 }

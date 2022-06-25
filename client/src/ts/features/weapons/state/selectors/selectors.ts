@@ -98,7 +98,7 @@ export const selectActiveWeapon = (rootState: RootState) => {
 
 const _selectSlimWeaponStatData = (weapon: Weapon, weaponSettings: WeaponSettings): SlimWeaponStatData => {
     const affinityId = WEAPON_AFFINITIES.find(x => x.name == weaponSettings.affinity_name)?.id
-    const stat = weapon.stats.find(x => x.weapon_affinity_id == affinityId)
+    const stat = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)
     if (isBlank(stat)) {
         return null
     }
