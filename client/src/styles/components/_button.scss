@@ -6,14 +6,18 @@ $button-bg-color: #14120F;
 $button-fg-color: #D3D3D3;
 $button-border-color: #999999;
 
+$button-horizontal-padding: 75px;
+$button-vertical-padding:   5px;
+
 .elden-ring-button {
     border-radius: 0px;
     border: 1px solid $button-border-color;
 
-    padding-top:     5px;
-    padding-bottom:  5px;
-    padding-left:   10%;
-    padding-right:  10%;
+    padding-top:    $button-vertical-padding;
+    padding-bottom: $button-vertical-padding;
+
+    padding-left:  $button-horizontal-padding;
+    padding-right: $button-horizontal-padding;
 
     text-transform: uppercase;
 

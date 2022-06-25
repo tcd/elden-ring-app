@@ -10,7 +10,8 @@ export const WeaponMenuImage = ({ weapon, stats }: WeaponMenuImageProps): JSX.El
     const src = getImageSrc("Weapon", weapon.name, "256")
     let cantUse = null
     if (!meetsRequirements(stats, weapon)) {
-        cantUse = <span className="requirements-not-met">X</span>
+        // cantUse = <span className="requirements-not-met">X</span>
+        cantUse = <span className="requirements-not-met"></span>
     }
     return (
         <div className="equipment-menu-image-wrapper">
