@@ -1,7 +1,5 @@
 export * from "./select-builder-state"
 
-import * as Talismans from "./talismans"
-
 import * as Stats from "./stats"
 import * as Attributes from "./attributes"
 import * as Resistance from "./resistance"
@@ -51,16 +49,6 @@ export const BuilderSelectors = {
         focus:      Resistance.selectFocus,
         vitality:   Resistance.selectVitality,
     },
-    /** Returns all talismans. */
-    talismans: Talismans.selectTalismansArray,
-    /**
-     * Can't wear two of the same talisman.
-     * Some talismans restrict the use of others.
-     *
-     * This returns talismans available to equip in the active talisman slot.
-     */
-    talismanOptions: Talismans.selectTalismanOptions,
-    talismanModalOpen: Talismans.selectTalismanModalOpen,
     defense: {
         defense: {
             physical:  Defense.selectPhysicalDefense,
@@ -94,12 +82,5 @@ export const BuilderSelectors = {
         current:     EquipLoad.selectCurrentEquipLoad,
         percentage:  EquipLoad.selectEquipLoadPercentage,
         description: EquipLoad.selectEquipLoadDescription,
-    },
-    talisman: {
-        all: Talismans.selectTalismansArray,
-        options: Talismans.selectTalismanOptions,
-        modalOpen: Talismans.selectTalismanModalOpen,
-        activeName: Talismans.selectActiveTalismanName,
-        activeNumber: Talismans.selectActiveTalismanNumber,
     },
 }

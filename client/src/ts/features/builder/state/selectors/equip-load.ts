@@ -12,7 +12,7 @@ import {
 } from "@app/data"
 
 import * as Attributes from "./attributes"
-import * as Talismans from "./talismans"
+import { TalismansSelectors as Talismans } from "@app/features/talismans"
 import { WeaponsSelectors as Weapons } from "@app/features/weapons"
 import { ArmorSelectors as Armor } from "@app/features/armor"
 
@@ -45,7 +45,7 @@ export const selectEquipLoadDescription = (state: RootState) => {
 }
 
 export const selectCurrentEquipLoad = (state: RootState) => {
-    const talismans      = Talismans.selectCompactTalismans(state)
+    const talismans      = Talismans.compactArray(state)
     const talismanWeight = sum(talismans.map(x => x?.weight ?? 0))
 
     const weapons      = Weapons.compactArray(state)
@@ -67,7 +67,7 @@ export const selectMaxEquipLoad = (state: RootState): number => {
 
     let equipLoad = baseEquipLoad
 
-    const talismans = Talismans.selectCompactTalismans(state)
+    const talismans = Talismans.compactArray(state)
     if (talismans.length != 0) {
         for (const talisman of talismans) {
             if (talisman.effects) {

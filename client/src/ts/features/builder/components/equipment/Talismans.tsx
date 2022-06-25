@@ -14,10 +14,10 @@ export const Talismans = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const talismans = useSelector(Selectors.Builder.talismans)
+    const talismans = useSelector(Selectors.Talismans.array)
 
     const handleClick = (id: TalismanSlotId) => {
-        dispatch(Actions.Builder.openTalismanModal({ id }))
+        dispatch(Actions.Talismans.openTalismansMenu({ id }))
     }
 
     const slotWithTalisman = (id: TalismanSlotId, talisman?: Talisman) => {

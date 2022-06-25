@@ -14,6 +14,7 @@ import {
 } from "./thunks"
 import { ArmorActions } from "@app/features/armor"
 import { WeaponsActions } from "@app/features/weapons"
+import { TalismansActions } from "@app/features/talismans"
 
 export const reducers = {
     incrementAttribute(state: BuilderState, action: PayloadAction<{ name: string }>) {
@@ -57,25 +58,6 @@ export const reducers = {
         state.startingClassName = className
         // state.startingClass = STARTING_CLASSES.find(x => x.name == className)
     },
-    // =========================================================================
-    // Talisman
-    // =========================================================================
-    setTalisman(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.talisman_names[state.talisman.active_number?.toString()] = action.payload.name
-    },
-    removeTalisman(state: BuilderState) {
-        state.talisman_names[state.talisman.active_number?.toString()] = null
-    },
-    openTalismanModal(state: BuilderState, action: PayloadAction<{ id: TalismanSlotId }>) {
-        state.talisman.active_number = action.payload.id
-        state.talisman.modal_open = true
-        state.currentMenu = "talisman"
-    },
-    closeTalismanModal(state: BuilderState) {
-        state.talisman.active_number = null
-        state.talisman.modal_open = false
-        state.currentMenu = null
-    },
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) => {
@@ -97,8 +79,10 @@ export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) =>
         // ---------------------------------------------------------------------
         // From Other Slices
         // ---------------------------------------------------------------------
-        .addCase(ArmorActions.openArmorMenu,      (state) => { state.currentMenu = "armor"  })
-        .addCase(ArmorActions.closeArmorMenu,     (state) => { state.currentMenu = null     })
-        .addCase(WeaponsActions.openWeaponsMenu,  (state) => { state.currentMenu = "weapon" })
-        .addCase(WeaponsActions.closeWeaponsMenu, (state) => { state.currentMenu = null     })
+        .addCase(ArmorActions.openArmorMenu,          (state) => { state.currentMenu = "armor"    })
+        .addCase(ArmorActions.closeArmorMenu,         (state) => { state.currentMenu = null       })
+        .addCase(WeaponsActions.openWeaponsMenu,      (state) => { state.currentMenu = "weapon"   })
+        .addCase(WeaponsActions.closeWeaponsMenu,     (state) => { state.currentMenu = null       })
+        .addCase(TalismansActions.openTalismansMenu,  (state) => { state.currentMenu = "talisman" })
+        .addCase(TalismansActions.closeTalismansMenu, (state) => { state.currentMenu = null       })
 }
