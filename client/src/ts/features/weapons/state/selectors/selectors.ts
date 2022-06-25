@@ -29,7 +29,7 @@ const selectWeapon = (rootState: RootState, name?: string): Weapon => {
     return weapons.find(x => x.name == name)
 }
 
-const selectWeaponSlots = (rootState: RootState) => {
+export const selectWeaponSlots = (rootState: RootState) => {
     return selectWeaponsSlice(rootState)?.slots
 }
 

@@ -7,19 +7,18 @@ import {
     WeaponSettings,
 } from "@app/types"
 import { FEATURE_KEYS } from "@app/util"
-import {
-    reducers,
-} from "./reducers"
+import { reducers } from "./reducers"
 
 export interface WeaponsState {
     activeSlotId: WeaponSlotId
+    oldWeapon: WeaponSettings
     customizingWeapon: boolean
     slots: WeaponSlots
-    oldWeapon: WeaponSettings
 }
 
 const initialState: WeaponsState = {
     activeSlotId: null,
+    oldWeapon: null,
     customizingWeapon: false,
     slots: {
         R1: { ...DEFAULT_WEAPON_SETTINGS },
@@ -29,7 +28,6 @@ const initialState: WeaponsState = {
         L2: { ...DEFAULT_WEAPON_SETTINGS },
         L3: { ...DEFAULT_WEAPON_SETTINGS },
     },
-    oldWeapon: null,
 }
 
 const devState: WeaponsState = {

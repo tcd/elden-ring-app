@@ -20,6 +20,7 @@ export interface Armor extends BaseEntity {
     armor_type: ArmorType
     weight: number
     poise?: number
+    sort_group?: ArmorSortGroup
 
     effects?: EquipmentEffect[]
     // tags?: string[]
@@ -40,3 +41,18 @@ export interface Armor extends BaseEntity {
     lightning?: number
     holy?: number
 }
+
+export type ArmorSortGroup =
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 7
+    | 8
+    | 9
+    | 10
+    | 11
+
+export const ARMOR_SORT_GROUPS: ArmorSortGroup[] = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]

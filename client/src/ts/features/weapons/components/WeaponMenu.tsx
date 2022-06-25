@@ -59,7 +59,7 @@ export const WeaponMenu = (): JSX.Element => {
         dispatch(Actions.Weapons.setActiveName({ name }))
     }
 
-    const sections = weaponTypes.map((weaponType) => {
+    const sections = weaponTypes.map((weaponType, index) => {
         const sectionWeapons = weapons.filter(x => x.weapon_type_id == weaponType.id)
         const weaponCells = sectionWeapons.map((weapon) => {
             let classes = "equipment-menu-cell inactive"
@@ -77,12 +77,14 @@ export const WeaponMenu = (): JSX.Element => {
             )
         })
 
+        const divider = (index + 1 < weaponTypes.length) ? <div className="equipment-menu-section-border"></div> : null
+
         return (
             <Fragment key={weaponType.plural_name}>
                 <section  id={weaponType.plural_name} className="equipment-menu-section">
                     {weaponCells}
                 </section>
-                <div className="equipment-menu-section-border"></div>
+                {divider}
             </Fragment>
         )
     })

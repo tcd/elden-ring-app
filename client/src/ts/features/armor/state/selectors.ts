@@ -40,8 +40,6 @@ const selectAllFiltered = (rootState: RootState) => {
     return filteredArmor
 }
 
-
-
 export const selectHeadName  = (rootState: RootState): string => selectArmorNames(rootState)?.Head
 export const selectChestName = (rootState: RootState): string => selectArmorNames(rootState)?.Chest
 export const selectArmsName  = (rootState: RootState): string => selectArmorNames(rootState)?.Arms
@@ -93,6 +91,7 @@ export const selectArmorOptions = (state: RootState): Armor[] => {
 // =============================================================================
 
 export const ArmorSelectors = {
+    slots: selectArmorNames,
     all: selectAll,
     allFiltered: selectAllFiltered,
     active: selectActiveArmor,

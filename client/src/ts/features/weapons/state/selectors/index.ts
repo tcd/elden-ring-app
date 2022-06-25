@@ -3,6 +3,7 @@ import * as Core from "./selectors"
 // import { selectWeapons } from "@app/features/builder/state/selectors/api"
 
 export const WeaponsSelectors = {
+    slots: Core.selectWeaponSlots,
     // allWeapons: BuilderSelectors.api.weapons,
     activeSlotId: Core.selectActiveSlotId,
     active: {
