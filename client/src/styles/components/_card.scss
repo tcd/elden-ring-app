@@ -36,7 +36,8 @@ article.er__card {
             font-size: 24px;
             margin-bottom: 0px;
             padding-bottom: 0px;
-            text-shadow: v.$text-shadow-offset v.$text-shadow-offset black
+            text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+            white-space: nowrap;
         }
     }
 
