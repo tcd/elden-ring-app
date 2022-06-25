@@ -9,15 +9,20 @@ import { isBlank } from "@app/util"
 import { WeaponsState } from "./state"
 
 export const reducers = {
+    scrollMenu(state: WeaponsState) {
+        state.menuHasScrolled = true
+    },
     openWeaponsMenu(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
         state.oldWeapon = {
             ...state.slots[action.payload.id],
         }
         state.activeSlotId = action.payload.id
+        state.menuHasScrolled = false
     },
     closeWeaponsMenu(state: WeaponsState) {
         state.activeSlotId = null
         state.oldWeapon = null
+        state.menuHasScrolled = true
     },
     removeWeapon(state: WeaponsState) {
         state.slots[state.activeSlotId] = {

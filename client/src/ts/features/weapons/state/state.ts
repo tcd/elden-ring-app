@@ -10,24 +10,28 @@ import { FEATURE_KEYS } from "@app/util"
 import { reducers } from "./reducers"
 
 export interface WeaponsState {
+    slots: WeaponSlots
     activeSlotId: WeaponSlotId
     oldWeapon: WeaponSettings
     customizingWeapon: boolean
-    slots: WeaponSlots
+    menuHasScrolled: boolean
+}
+
+const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
+    R1: { ...DEFAULT_WEAPON_SETTINGS },
+    R2: { ...DEFAULT_WEAPON_SETTINGS },
+    R3: { ...DEFAULT_WEAPON_SETTINGS },
+    L1: { ...DEFAULT_WEAPON_SETTINGS },
+    L2: { ...DEFAULT_WEAPON_SETTINGS },
+    L3: { ...DEFAULT_WEAPON_SETTINGS },
 }
 
 const initialState: WeaponsState = {
+    slots: { ...DEFAULT_WEAPON_SLOTS },
     activeSlotId: null,
     oldWeapon: null,
     customizingWeapon: false,
-    slots: {
-        R1: { ...DEFAULT_WEAPON_SETTINGS },
-        R2: { ...DEFAULT_WEAPON_SETTINGS },
-        R3: { ...DEFAULT_WEAPON_SETTINGS },
-        L1: { ...DEFAULT_WEAPON_SETTINGS },
-        L2: { ...DEFAULT_WEAPON_SETTINGS },
-        L3: { ...DEFAULT_WEAPON_SETTINGS },
-    },
+    menuHasScrolled: false,
 }
 
 const devState: WeaponsState = {

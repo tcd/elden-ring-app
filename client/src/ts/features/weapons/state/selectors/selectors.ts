@@ -19,12 +19,14 @@ import { selectWeapons, selectAttackElementCorrectParams } from "@app/features/b
 import { selectAttributes } from "@app/features/builder/state/selectors/attributes"
 import { WEAPON_AFFINITIES } from "@app/data"
 
+export const selectAllWeapons = selectWeapons
+
 const selectWeaponsSlice = (rootState: RootState) => {
     return rootState?.Weapons
 }
 
 const selectWeapon = (rootState: RootState, name?: string): Weapon => {
-    const weapons = selectWeapons(rootState)
+    const weapons = selectAllWeapons(rootState)
     if (isBlank(name)) { return null }
     return weapons.find(x => x.name == name)
 }
@@ -48,6 +50,7 @@ export const selectL2Weapon = (rootState: RootState): Weapon => selectWeapon(roo
 export const selectL3Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL3Name(rootState))
 
 export const selectActiveSlotId = (rootState: RootState) => selectWeaponsSlice(rootState)?.activeSlotId
+export const selectHasMenuScrolled = (rootState: RootState) => selectWeaponsSlice(rootState)?.menuHasScrolled
 
 export const selectActiveWeaponSettings = (rootState: RootState): WeaponSettings => {
     const slotId = selectActiveSlotId(rootState)
@@ -82,7 +85,7 @@ export const selectActiveWeapon = (rootState: RootState) => {
     if (isBlank(activeName)) {
         return null
     }
-    const weapons = selectWeapons(rootState)
+    const weapons = selectAllWeapons(rootState)
     if (isBlank(weapons)) {
         return null
     }
@@ -144,7 +147,7 @@ export const selectOldWeapon = (rootState: RootState): Weapon => {
     if (isBlank(oldWeaponSettings)) {
         return null
     }
-    const allWeapons = selectWeapons(rootState)
+    const allWeapons = selectAllWeapons(rootState)
 
     const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
 
@@ -163,7 +166,7 @@ export const selectOldWeaponStats = (rootState: RootState): CalculatedWeaponStat
     }
 
     const attributes = selectAttributes(rootState)
-    const allWeapons = selectWeapons(rootState)
+    const allWeapons = selectAllWeapons(rootState)
 
     const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
 

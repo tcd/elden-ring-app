@@ -1,11 +1,10 @@
 import * as Core from "./selectors"
-// import { BuilderSelectors } from "@app/features/builder"
-// import { selectWeapons } from "@app/features/builder/state/selectors/api"
 
 export const WeaponsSelectors = {
     slots: Core.selectWeaponSlots,
-    // allWeapons: BuilderSelectors.api.weapons,
+    allWeapons: Core.selectAllWeapons,
     activeSlotId: Core.selectActiveSlotId,
+    hasMenuScrolled: Core.selectHasMenuScrolled,
     active: {
         weapon: Core.selectActiveWeapon,
         weaponName: Core.selectActiveWeaponName,
