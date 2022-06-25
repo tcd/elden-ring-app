@@ -7,7 +7,7 @@ import { AppHeader } from "./AppHeader"
 export const AppLayout = () => {
     return (
         <>
-            <AppHeader />
+            {/* <AppHeader /> */}
             <div id="outlet-wrapper" className="container-fluid">
                 {/* <AppSideMenu /> */}
                 <Outlet />
