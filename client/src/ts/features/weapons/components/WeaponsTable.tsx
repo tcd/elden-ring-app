@@ -26,14 +26,14 @@ const renderWeaponSkillCell = (weapon: Weapon) => {
         return (
             <div className="flex-between">
                 <span className="align-self-center">
-                    {skill.display_name}
+                    {skill.name}
                 </span>
                 <div style={{ width: "50px" }}>
                     <img
                         className="img-fluid"
                         src={skill.image_url}
-                        alt={skill.display_name}
-                        title={skill.display_name}
+                        alt={skill.name}
+                        title={skill.name}
                     />
                 </div>
             </div>
@@ -41,7 +41,7 @@ const renderWeaponSkillCell = (weapon: Weapon) => {
     } else {
         return (
             <span className="text-special">
-                {skill.display_name}
+                {skill.name}
             </span>
         )
     }
@@ -62,7 +62,7 @@ const renderNameCell = (weapon: Weapon) => {
     )
 }
 
-const weapon_skill = (weapon: Weapon): string => weapon.weapon_skill.display_name
+const weapon_skill = (weapon: Weapon): string => weapon.weapon_skill.name
 
 const columns: CustomTableColumn<Weapon>[] = [
     { field: "weapon_type", header: "Type",         sortable: true,  width: 200 },

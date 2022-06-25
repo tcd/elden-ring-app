@@ -70,7 +70,7 @@ const ArmorImage = ({ armor }: ArmorImageProps) => {
             <img
                 className="img-fluid"
                 src={armor.image_url}
-                alt={armor.display_name}
+                alt={armor.name}
             />
         </div>
     )

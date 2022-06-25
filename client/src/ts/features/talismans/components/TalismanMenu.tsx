@@ -67,7 +67,7 @@ const talismanImage = (talisman: Talisman) => {
             <img
                 className="img-fluid"
                 src={talisman.image_url}
-                alt={talisman.display_name}
+                alt={talisman.name}
             />
         </div>
     )
