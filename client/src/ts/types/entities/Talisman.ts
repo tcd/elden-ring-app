@@ -14,7 +14,6 @@ export const TALISMAN_SORT_GROUPS: TalismanSortGroup[] = [ 1, 2, 3, 4, 5, 6, 7, 
 
 export interface Talisman extends BaseEntity {
     name: string
-    image_url: string
     description: string
     longDescription?: string
     weight: number

@@ -4,7 +4,6 @@ export const NO_ARMOR: Armor = {
     id: -1,
     name: null,
     armor_type: null,
-    image_url: null,
     sort_group: null,
     weight: 0.0,
     poise: 0.0,

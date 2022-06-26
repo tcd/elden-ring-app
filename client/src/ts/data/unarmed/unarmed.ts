@@ -11,7 +11,6 @@ export const Unarmed: Weapon = {
     weapon_type: "Fists",
     weapon_type_id: 22,
     weapon_skill_id: -1,
-    image_url: null,
 
     defense_fire:        30.0,
     defense_holy:        20.0,
@@ -31,9 +30,9 @@ export const Unarmed: Weapon = {
         name: "Kick",
         ash_of_war: true,
         description: "Push an enemy back with a high kick.Effective against enemies who are guarding, and can break a foe's stance.",
-        can_be_applied_to: [],
         is_chargeable: null,
-        image_url: null,
+        compatible_weapon_affinities: [],
+        compatible_weapon_types: [],
         metadata: {
             complex_fp_cost: "-(&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;-&nbsp;)",
         },

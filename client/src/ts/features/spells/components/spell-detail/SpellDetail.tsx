@@ -5,7 +5,7 @@ import {
 
 import { Spell } from "@app/types"
 import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
-import { isBlank, numberOrDash } from "@app/util"
+import { getImageSrc, isBlank, numberOrDash } from "@app/util"
 
 export interface SpellDetailProps {
     spell: Spell
@@ -36,6 +36,8 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
         )
     })
 
+    const src = getImageSrc("Spell", spell.name, "256")
+
     return (
         <div className="weapon-detail">
             <div className="row">
@@ -56,7 +58,7 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={spell.image_url} alt={spell.name}/>
+                                    <img className="img-fluid" src={src} alt={spell.name}/>
                                 </div>
                             </div>
                         </div>

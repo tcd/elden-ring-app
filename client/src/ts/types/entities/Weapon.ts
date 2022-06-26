@@ -8,7 +8,6 @@ import {
 
 export interface Weapon extends BaseEntity {
     name: string
-    image_url: string
     is_shield?: boolean
     is_special?: boolean
     weapon_type: WeaponTypePluralString

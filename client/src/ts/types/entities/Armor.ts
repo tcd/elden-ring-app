@@ -16,7 +16,6 @@ export interface ArmorSet {
 
 export interface Armor extends BaseEntity {
     name: string
-    image_url: string
     armor_type: ArmorType
     weight: Decimal
     poise?: number

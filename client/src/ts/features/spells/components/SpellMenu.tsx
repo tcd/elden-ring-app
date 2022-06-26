@@ -5,7 +5,7 @@ import { Attributes, Spell } from "@app/types"
 import { meetsRequirements } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
-import { SpellDetail } from "./SpellDetail"
+import { SpellDetail } from "@app/features/spells/components"
 
 const spellCategories = [
     // Incantations
