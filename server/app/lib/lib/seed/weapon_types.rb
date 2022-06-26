@@ -15,6 +15,7 @@ module Lib
       def self.process(input)
         output = {
           id:            input["id"],
+          sort_order:    input["id"],
           name:          input["name"],
           plural_name:   input["plural_name"],
           is_shield:     (input["is_shield"] == true),
