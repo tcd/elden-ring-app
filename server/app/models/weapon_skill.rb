@@ -46,25 +46,35 @@ class WeaponSkill < ApplicationRecord
 
   # @!attribute weapon_skill_weapon_affinities
   #   @return [Array<WeaponSkillWeaponAffinity>]
-  has_many(:weapon_skill_weapon_affinities)
+  has_many(:weapon_skill_weapon_affinities, inverse_of: :weapon_skill)
+
+  # @!attribute weapon_skill_weapon_affinities_attributes
+  #   @return [Array<WeaponType>]
+  accepts_nested_attributes_for(:weapon_skill_weapon_affinities, allow_destroy: true)
 
   # @!attribute compatible_weapon_affinities
   #   @return [Array<WeaponAffinity>]
   has_many(
     :compatible_weapon_affinities,
     through: :weapon_skill_weapon_affinities,
+    source: :weapon_affinity,
     class_name: "WeaponAffinity",
   )
 
   # @!attribute weapon_skill_weapon_types
   #   @return [Array<WeaponSkillWeaponType>]
-  has_many(:weapon_skill_weapon_types)
+  has_many(:weapon_skill_weapon_types, inverse_of: :weapon_skill)
+
+  # @!attribute weapon_skill_weapon_types_attributes
+  #   @return [Array<WeaponType>]
+  accepts_nested_attributes_for(:weapon_skill_weapon_types, allow_destroy: true)
 
   # @!attribute compatible_weapon_types
   #   @return [Array<WeaponType>]
   has_many(
     :compatible_weapon_types,
     through: :weapon_skill_weapon_types,
+    source: :weapon_type,
     class_name: "WeaponType",
   )
 

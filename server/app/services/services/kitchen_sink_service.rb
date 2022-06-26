@@ -20,7 +20,7 @@ module Services
       @@spells                        = Spell.all().order(name: :asc)
       @@talismans                     = Talisman.includes(:equipment_effects).all().order(sort_order: :asc)
       @@weapons                       = Weapon.includes(:weapon_type, :weapon_skill, :weapon_stats).all().order(sort_order: :asc)
-      @@weapon_skills                 = WeaponSkill.all().order(name: :asc)
+      @@weapon_skills                 = WeaponSkill.includes(:compatible_weapon_affinities, :compatible_weapon_types).all().order(name: :asc)
       @@weapon_types                  = WeaponType.all()
       @@attack_element_correct_params = AttackElementCorrectParam.all()
 

@@ -35,13 +35,14 @@ class WeaponType < ApplicationRecord
 
   # @!attribute weapon_skill_weapon_types
   #   @return [Array<WeaponSkillWeaponType>]
-  has_many(:weapon_skill_weapon_types)
+  has_many(:weapon_skill_weapon_types, inverse_of: :weapon_type)
 
   # @!attribute compatible_skills
   #   @return [Array<WeaponSkill>]
   has_many(
     :compatible_skills,
     through: :weapon_skill_weapon_types,
+    source: :weapon_skill,
     class_name: "WeaponSkill",
   )
 

@@ -18,7 +18,7 @@ module Lib
       invalid["armor_types"]                   = Lib::Seed::ArmorTypes.seed()
       invalid["weapon_types"]                  = Lib::Seed::WeaponTypes.seed()
       invalid["weapon_affinities"]             = Lib::Seed::WeaponAffinities.seed()
-      invalid["weapon_skills"]                 = Lib::Seed::WeaponSkills.seed()
+      invalid["weapon_skills"]                 = Lib::Seed::WeaponSkills.new().seed()
       invalid["talismans"]                     = Lib::Seed::Talismans.new().seed()
       invalid["armor"]                         = Lib::Seed::Armors.new().seed()
       invalid["weapons"]                       = Lib::Seed::Weapons.new().seed()
