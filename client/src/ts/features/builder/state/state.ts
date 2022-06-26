@@ -43,7 +43,7 @@ const initialState: BuilderState = {
         response: null,
     },
 
-    whichCharacterStatus: "B",
+    whichCharacterStatus: "A",
 
     currentMenu: null,
     actionMenuDescription: "",
