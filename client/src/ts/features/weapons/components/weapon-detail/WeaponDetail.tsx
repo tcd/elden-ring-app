@@ -22,6 +22,7 @@ import {
     WeaponScalingStats,
     WeaponDefenseStats,
     WeaponRequirementStats,
+    WeaponPassiveEffects,
     // UnarmedWeaponDetail,
     EmptyWeaponDetail,
 } from "."
@@ -120,15 +121,13 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
             <div className="row">
                 <div className="col">
                     <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew}>
-                        <ul>
-                            <li> - </li>
-                            <li> - </li>
-                            <li> - </li>
-                        </ul>
+                        <WeaponPassiveEffects
+                            weapon={weapon}
+                            stats={newStats}
+                        />
                     </ErCard>
                 </div>
             </div>
         </div>
     )
-
 }

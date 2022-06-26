@@ -1,14 +1,9 @@
 import { capitalize } from "lodash"
 import { AttrMap } from "elden-ring-calculator"
 
-import {
-    Attr,
-} from "@app/types"
+import { Attr } from "@app/types"
 import { isBlank } from "@app/util"
-import {
-    StatRow,
-    StatRowProps,
-} from "@app/shared"
+import { StatRow, StatRowProps } from "@app/shared"
 import { ComparableWeaponProps } from "."
 
 export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element => {
