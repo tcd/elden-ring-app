@@ -637,6 +637,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_163051) do
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sort_order", null: false
     t.index ["name"], name: "index_weapon_types_on_name", unique: true
     t.index ["plural_name"], name: "index_weapon_types_on_plural_name", unique: true
   end

@@ -14,6 +14,10 @@ class WeaponType < ApplicationRecord
   #   @return [String]
   validates(:plural_name, presence: true)
 
+  # @!attribute sort_order
+  #   @return [Integer]
+  validates(:sort_order, presence: true)
+
   # @!attribute is_shield
   #   @return [Boolean]
 
