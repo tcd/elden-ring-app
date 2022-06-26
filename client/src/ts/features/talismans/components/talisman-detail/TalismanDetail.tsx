@@ -6,6 +6,7 @@ import {
 import { Talisman } from "@app/types"
 import { equipmentEffectDescription, getImageSrc, isBlank } from "@app/util"
 import { ErCard, StatRow } from "@app/shared"
+import { EmptyTalismanDetail } from "."
 
 export interface TalismanDetailProps {
     talisman: Talisman
@@ -14,7 +15,7 @@ export interface TalismanDetailProps {
 export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element => {
 
     if (isBlank(talisman)) {
-        return null
+        return <EmptyTalismanDetail />
     }
 
     const imageSrc = getImageSrc("Talisman", talisman.name, "256")
