@@ -1,9 +1,10 @@
 import {
     CalculatedWeaponStats,
-    SlimWeaponStatData,
+    SlimWeaponData,
     WeaponStatsCalculator,
 } from "elden-ring-calculator"
 
+import { Unarmed, UnarmedStats } from "@app/data"
 import {
     Weapon,
     WeaponSettings,
@@ -25,7 +26,10 @@ const selectWeaponsSlice = (rootState: RootState) => {
     return rootState?.Weapons
 }
 
-const selectWeapon = (rootState: RootState, name?: string): Weapon => {
+const _selectWeapon = (rootState: RootState, name?: string): Weapon => {
+    if (name == "Unarmed") {
+        return Unarmed
+    }
     const weapons = selectAllWeapons(rootState)
     if (isBlank(name)) { return null }
     return weapons.find(x => x.name == name)
@@ -42,14 +46,14 @@ const selectL1Name = (rootState: RootState): string => selectWeaponSlots(rootSta
 const selectL2Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.L2?.weapon_name
 const selectL3Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.L3?.weapon_name
 
-export const selectR1Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectR1Name(rootState))
-export const selectR2Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectR2Name(rootState))
-export const selectR3Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectR3Name(rootState))
-export const selectL1Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL1Name(rootState))
-export const selectL2Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL2Name(rootState))
-export const selectL3Weapon = (rootState: RootState): Weapon => selectWeapon(rootState, selectL3Name(rootState))
+export const selectR1Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectR1Name(rootState))
+export const selectR2Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectR2Name(rootState))
+export const selectR3Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectR3Name(rootState))
+export const selectL1Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectL1Name(rootState))
+export const selectL2Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectL2Name(rootState))
+export const selectL3Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectL3Name(rootState))
 
-export const selectActiveSlotId = (rootState: RootState) => selectWeaponsSlice(rootState)?.activeSlotId
+export const selectActiveSlotId    = (rootState: RootState) => selectWeaponsSlice(rootState)?.activeSlotId
 export const selectHasMenuScrolled = (rootState: RootState) => selectWeaponsSlice(rootState)?.menuHasScrolled
 
 export const selectActiveWeaponSettings = (rootState: RootState): WeaponSettings => {
@@ -96,7 +100,7 @@ export const selectActiveWeapon = (rootState: RootState) => {
 // Stats
 // =============================================================================
 
-const _selectSlimWeaponStatData = (weapon: Weapon, weaponSettings: WeaponSettings): SlimWeaponStatData => {
+const _selectSlimWeaponData = (weapon: Weapon, weaponSettings: WeaponSettings): SlimWeaponData => {
     const affinityId = WEAPON_AFFINITIES.find(x => x.name == weaponSettings.affinity_name)?.id
     const stat = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)
     if (isBlank(stat)) {
@@ -106,13 +110,13 @@ const _selectSlimWeaponStatData = (weapon: Weapon, weaponSettings: WeaponSetting
     return result
 }
 
-const selectSlimWeaponStatData = (rootState: RootState): SlimWeaponStatData => {
+const selectSlimWeaponStatData = (rootState: RootState): SlimWeaponData => {
     const weapon = selectActiveWeapon(rootState)
     if (isBlank(weapon)) {
         return null
     }
     const weaponSettings = selectActiveWeaponSettings(rootState)
-    const result = _selectSlimWeaponStatData(weapon, weaponSettings)
+    const result = _selectSlimWeaponData(weapon, weaponSettings)
     return result
 }
 
@@ -121,20 +125,20 @@ export const selectCalculatedWeaponStats = (rootState: RootState): CalculatedWea
     const weapon = selectActiveWeapon(rootState)
     const stats = selectSlimWeaponStatData(rootState)
     if (isBlank(stats)) {
-        return null
+        return UnarmedStats
     }
     const allAdjustmentParams = selectAttackElementCorrectParams(rootState)
 
     const adjustmentParams = allAdjustmentParams.find(x => x.id == stats.attack_element_correct_param_id)
     if (isBlank(adjustmentParams)) {
-        return null
+        return UnarmedStats
     }
     const requirements = getRequirements(weapon)
     return new WeaponStatsCalculator({
-        slimData: stats,
+        slimData:         stats,
         adjustmentParams: adjustmentParams,
-        requirements: requirements,
-        attributes: attributes,
+        requirements:     requirements,
+        attributes:       attributes,
     }).calculate()
 }
 
@@ -144,8 +148,14 @@ export const selectCalculatedWeaponStats = (rootState: RootState): CalculatedWea
 
 export const selectOldWeapon = (rootState: RootState): Weapon => {
     const oldWeaponSettings = rootState?.Weapons?.oldWeapon
+    if (isBlank(oldWeaponSettings?.weapon_name)) {
+        return Unarmed
+    }
     if (isBlank(oldWeaponSettings)) {
-        return null
+        return Unarmed
+    }
+    if (oldWeaponSettings.weapon_name == "Unarmed") {
+        return Unarmed
     }
     const allWeapons = selectAllWeapons(rootState)
 
@@ -157,12 +167,12 @@ export const selectOldWeapon = (rootState: RootState): Weapon => {
 export const selectOldWeaponStats = (rootState: RootState): CalculatedWeaponStats => {
     const allAdjustmentParams = selectAttackElementCorrectParams(rootState)
     if (isBlank(allAdjustmentParams)) {
-        return null
+        return UnarmedStats
     }
 
     const oldWeaponSettings = rootState?.Weapons?.oldWeapon
     if (isBlank(oldWeaponSettings)) {
-        return null
+        return UnarmedStats
     }
 
     const attributes = selectAttributes(rootState)
@@ -170,14 +180,14 @@ export const selectOldWeaponStats = (rootState: RootState): CalculatedWeaponStat
 
     const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
 
-    const stats = _selectSlimWeaponStatData(oldWeapon, oldWeaponSettings)
+    const stats = _selectSlimWeaponData(oldWeapon, oldWeaponSettings)
     if (isBlank(stats)) {
-        return null
+        return UnarmedStats
     }
 
     const adjustmentParams = allAdjustmentParams.find(x => x.id == stats.attack_element_correct_param_id)
     if (isBlank(adjustmentParams)) {
-        return null
+        return UnarmedStats
     }
 
     const requirements = getRequirements(oldWeapon)

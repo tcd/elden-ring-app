@@ -1,4 +1,4 @@
-import { CalculatedWeaponStats } from "elden-ring-calculator"
+import { useSelector } from "react-redux"
 import {
     mdiSword,
     mdiShield,
@@ -7,8 +7,7 @@ import {
     mdiTshirtCrew,
 } from "@mdi/js"
 
-import { Unarmed, UnarmedStats } from "@app/data"
-import { Weapon } from "@app/types"
+import { Selectors } from "@app/state"
 import {
     getImageSrc,
     isBlank,
@@ -22,26 +21,18 @@ import {
     WeaponAttackStats,
     WeaponScalingStats,
     WeaponDefenseStats,
+    WeaponRequirementStats,
     // UnarmedWeaponDetail,
     EmptyWeaponDetail,
 } from "."
 
-export interface WeaponDetailProps {
-    weapon: Weapon
-    oldWeapon?: Weapon
-    newStats?: CalculatedWeaponStats
-    oldStats?: CalculatedWeaponStats
-}
+export const WeaponDetail = (_props: unknown): JSX.Element => {
 
-export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
-    props = {
-        weapon:    props.weapon,
-        newStats:  props.newStats,
-        oldWeapon: props?.oldWeapon ?? Unarmed,
-        oldStats:  props?.oldStats  ?? UnarmedStats,
-    }
-
-    const { weapon } = props
+    const weapon     = useSelector(Selectors.Weapons.active.weapon)
+    const oldWeapon  = useSelector(Selectors.Weapons.old.weapon)
+    const newStats   = useSelector(Selectors.Weapons.active.calculatedStats)
+    const oldStats   = useSelector(Selectors.Weapons.old.stats)
+    const attributes = useSelector(Selectors.Builder.allAttributes)
 
     if (isBlank(weapon)) {
         // return <UnarmedWeaponDetail />
@@ -51,14 +42,13 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
     const weaponImgSrc = getImageSrc("Weapon", weapon.name, "256")
 
     let weightColor: StatRowColor = "default"
-    if (props?.oldWeapon) {
-        const newWeight = props.weapon.weight
-        const oldWeight = props.oldWeapon.weight
-        // eslint-disable-next-line indent
-             if (newWeight >  oldWeight) { weightColor = "blue"    }
-        else if (newWeight == oldWeight) { weightColor = "default" }
-        else if (newWeight <  oldWeight) { weightColor = "red"     }
-    }
+
+    const newWeight = weapon.weight
+    const oldWeight = oldWeapon.weight
+
+    if      (newWeight >  oldWeight) { weightColor = "blue"    }
+    else if (newWeight == oldWeight) { weightColor = "default" }
+    else if (newWeight <  oldWeight) { weightColor = "red"     }
 
     return (
         <div className="weapon-detail">
@@ -92,8 +82,8 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                     <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword}>
                         <ul>
                             <WeaponAttackStats
-                                newStats={props?.newStats}
-                                oldStats={props?.oldStats}
+                                newStats={newStats}
+                                oldStats={oldStats}
                             />
                         </ul>
                     </ErCard>
@@ -103,7 +93,7 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                         <ul>
                             <WeaponDefenseStats
                                 newWeapon={weapon}
-                                oldWeapon={props?.oldWeapon}
+                                oldWeapon={oldWeapon}
                             />
                         </ul>
                     </ErCard>
@@ -113,25 +103,17 @@ export const WeaponDetail = (props: WeaponDetailProps): JSX.Element => {
                 <div className="col">
                     <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
                         <WeaponScalingStats
-                            newStats={props?.newStats}
-                            oldStats={props?.oldStats}
+                            newStats={newStats}
+                            oldStats={oldStats}
                         />
                     </ErCard>
                 </div>
                 <div className="col">
                     <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
-                        <div className="row">
-                            <div className="col">
-                                <StatRow title="Str" value={weapon?.required_strength     ?? "-"} />
-                                <StatRow title="Int" value={weapon?.required_intelligence ?? "-"} />
-                                <StatRow title="Arc" value={weapon?.required_arcane       ?? "-"} />
-                            </div>
-                            <div className="col-1"></div>
-                            <div className="col">
-                                <StatRow title="Dex" value={weapon?.required_dexterity ?? "-"} />
-                                <StatRow title="Fai" value={weapon?.required_faith     ?? "-"} />
-                            </div>
-                        </div>
+                        <WeaponRequirementStats
+                            weapon={weapon}
+                            attributes={attributes}
+                        />
                     </ErCard>
                 </div>
             </div>

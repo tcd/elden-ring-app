@@ -8,6 +8,7 @@ export interface StatRowPlusPlusProps {
     title: string
     description?: string
     divider?: string
+    no_parens?: boolean
     value_1: any
     value_2: any
     value_3: any
@@ -19,6 +20,7 @@ export interface StatRowPlusPlusProps {
 
 const defaultProps: Partial<StatRowPlusPlusProps> = {
     divider: "/",
+    no_parens: false,
     value_1_color: "default",
     divider_color: "default",
     value_2_color: "default",
@@ -30,6 +32,9 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
         ...props,
     }
 
+    const leftParen  = props?.no_parens ? "" : "("
+    const rightParen = props?.no_parens ? "" : ")"
+
     if (props?.description) {
         const id = `stat-row-${props.title}`
         return (
@@ -40,9 +45,9 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
                     <span className={`er__stat-row__column--color-${props.divider_color}`}>{props.divider}</span>
                     <span className={`er__stat-row__column--color-${props.value_2_color}`}>{props.value_2}</span>
                     <span className="no-margins">
-                        <span>(</span>
+                        <span>{leftParen}</span>
                         <span className={`er__stat-row__column--color-${props.value_2_color}`}>{props.value_3})</span>
-                        <span>)</span>
+                        <span>{rightParen}</span>
                     </span>
                 </li>
             </MouseOverPopover>
@@ -55,9 +60,9 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
             <span className={`er__stat-row__column--color-${props.divider_color}`}>{props.divider}</span>
             <span className={`er__stat-row__column--color-${props.value_2_color}`}>{props.value_2}</span>
             <span className="no-margins">
-                <span>(</span>
+                <span>{leftParen}</span>
                 <span className={`er__stat-row__column--color-${props.value_3_color}`}>{props.value_3}</span>
-                <span>)</span>
+                <span>{rightParen}</span>
             </span>
         </li>
     )

@@ -1,23 +1,20 @@
 import { capitalize } from "lodash"
 import { AttrMap } from "elden-ring-calculator"
 
-import {
-    Attr,
-} from "@app/types"
+import { Attr, Attributes, Weapon } from "@app/types"
 import { isBlank } from "@app/util"
-import {
-    StatRow,
-    StatRowProps,
-} from "@app/shared"
-import { ComparableWeaponProps } from "."
+import { StatRow, StatRowProps } from "@app/shared"
 
-export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element => {
+export interface WeaponRequirementStatsProps {
+    weapon: Weapon
+    attributes: Attributes
+}
 
-    const { newStats, oldStats } = props
+export const WeaponRequirementStats = (props: WeaponRequirementStatsProps): JSX.Element => {
 
-    const haveNewStats = !isBlank(newStats)
+    const { weapon, attributes } = props
 
-    if (!haveNewStats) {
+    if (isBlank(weapon)) {
         return null
     }
 
@@ -25,18 +22,17 @@ export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element =>
 
     for (const attr of Object.values(Attr)) {
 
-        const oldValue  = oldStats?.scaling?.values?.[attr] ?? newStats?.scaling?.values?.[attr]
-        const newValue  = newStats?.scaling?.values?.[attr]
-        const newString = newStats?.scaling?.tierStrings?.[attr]
+        const requirement = weapon[`required_${attr}`]
+        if (isBlank(requirement)) {
+            continue
+        }
+        const attribute = attributes[attr]
 
         const attrProps: StatRowProps = {
             title: capitalize(attr).slice(0, 3),
-            value: newString,
+            value: requirement,
+            color: (attribute >= requirement ? "default" : "red"),
         }
-
-        if      (newValue >  oldValue) { attrProps.color = "blue"    }
-        else if (newValue == oldValue) { attrProps.color = "default" }
-        else if (newValue <  oldValue) { attrProps.color = "red"     }
 
         // @ts-ignore: next-line
         data[attr] = attrProps

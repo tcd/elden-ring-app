@@ -14,3 +14,4 @@ x 2022-05-24 Completely rewrite AR calculation @client
 2022-06-15 Épée; passive damage name is lowercase as well.
 2022-06-15 Miséricorde
 2022-06-25 Armor stats are way off. Specifically resistance.
+2022-06-26 Incorporate Equipment Effects into Builder selectors @client

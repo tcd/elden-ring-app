@@ -20,13 +20,13 @@ import {
 export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
 
     const defenseRows = Object.values(Dmg).map((dmg) => {
-        const title = capitalize(dmg).slice(0, 3)
+        const title = capitalize(dmg)
         const key = `weapon-attack-${dmg}`
         return (<StatRow key={key} title={title} value={"-"} />)
     })
 
     const attackRows = Object.values(Dmg).map((dmg) => {
-        const title = capitalize(dmg).slice(0, 3)
+        const title = capitalize(dmg)
         const key = `weapon-attack-${dmg}`
         return (<StatRow key={key} title={title} value={"-"} />)
     })

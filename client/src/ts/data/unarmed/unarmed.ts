@@ -79,4 +79,12 @@ export const UnarmedStats: CalculatedWeaponStats = {
             arcane:       "-",
         },
     },
+    passive: {
+        scarlet_rot: 0,
+        madness:     0,
+        sleep:       0,
+        frost:       0,
+        poison:      0,
+        blood_loss:  0,
+    },
 }

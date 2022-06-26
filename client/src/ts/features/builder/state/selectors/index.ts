@@ -1,5 +1,3 @@
-export * from "./select-builder-state"
-
 import * as Stats from "./stats"
 import * as Attributes from "./attributes"
 import * as Resistance from "./resistance"
@@ -33,6 +31,7 @@ export const BuilderSelectors = {
     startingClass: StartingClass.selectStartingClass,
     level: Stats.selectLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
+    allAttributes: Attributes.selectAttributes,
     attribute: {
         vigor:        Attributes.selectVigor,
         mind:         Attributes.selectMind,
