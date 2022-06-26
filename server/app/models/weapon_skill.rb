@@ -48,11 +48,12 @@ class WeaponSkill < ApplicationRecord
   #   @return [Array<WeaponSkillWeaponAffinity>]
   has_many(:weapon_skill_weapon_affinities)
 
-  # @!attribute compatible_skills
-  #   @return [Array<WeaponSkill>]
+  # @!attribute compatible_weapon_affinities
+  #   @return [Array<WeaponAffinity>]
   has_many(
-    :compatible_skills,
+    :compatible_weapon_affinities,
     through: :weapon_skill_weapon_affinities,
+    class_name: "WeaponAffinity",
     class_name: "WeaponSkill",
   )
 
