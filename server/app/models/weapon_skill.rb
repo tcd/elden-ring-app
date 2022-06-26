@@ -24,13 +24,24 @@ class WeaponSkill < ApplicationRecord
   # @!attribute can_be_applied_to
   #   @return [Array<String>]
 
+  # @!attribute sort_group
+  #   @return [Integer]
+  # validates(:sort_group, presence: true)
+
+  # @!attribute sort_order
+  #   @return [Integer]
+  # validates(:order, presence: true)
+
+  # @!attribute default_affinity_id
+  #   @return [Integer]
+  validates(:default_affinity_id, presence: true, if: -> { ash_of_war == true })
+
   # TODO: add these fields
   #
   # - fp cost
   # - lasting effects
   # - damage type
   # - affinity
-  # - compatible_affinities
 
   # @!endgroup Attributes
 
@@ -43,6 +54,15 @@ class WeaponSkill < ApplicationRecord
   # @!attribute weapons
   #   @return [Array<Weapon>]
   has_many(:weapons)
+
+  # @!attribute default_affinity
+  #   @return [WeaponAffinity]
+  belongs_to(
+    :default_affinity,
+    optional: true,
+    class_name: "WeaponAffinity",
+    foreign_key: :default_affinity_id,
+  )
 
   # @!attribute weapon_skill_weapon_affinities
   #   @return [Array<WeaponSkillWeaponAffinity>]

@@ -32,6 +32,10 @@ class WeaponAffinity < ApplicationRecord
   #   @return [Array<WeaponStat>]
   has_many(:weapon_stats, class_name: "WeaponStat")
 
+  # @!attribute default_skills
+  #   @return [Array<WeaponSkill>]
+  has_many(:default_skills, class_name: "WeaponSkill", inverse_of: :default_affinity)
+
   # @!attribute weapon_skill_weapon_affinities
   #   @return [Array<WeaponSkillWeaponAffinity>]
   has_many(:weapon_skill_weapon_affinities, inverse_of: :weapon_affinity)

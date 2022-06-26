@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_26_185728) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_26_225628) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -249,6 +249,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_185728) do
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "sort_group", default: 99, null: false
+    t.integer "sort_order", default: 9999, null: false
+    t.integer "default_affinity_id"
     t.index ["name"], name: "index_weapon_skills_on_name", unique: true
   end
 
@@ -687,6 +690,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_185728) do
   add_foreign_key "weapon_skill_weapon_affinities", "weapon_skills", on_delete: :cascade
   add_foreign_key "weapon_skill_weapon_types", "weapon_skills", on_delete: :cascade
   add_foreign_key "weapon_skill_weapon_types", "weapon_types", on_delete: :cascade
+  add_foreign_key "weapon_skills", "weapon_affinities", column: "default_affinity_id", on_delete: :cascade
   add_foreign_key "weapon_stats", "attack_element_correct_params", on_delete: :cascade
   add_foreign_key "weapon_stats", "weapon_affinities", on_delete: :cascade
   add_foreign_key "weapon_stats", "weapons", on_delete: :cascade
