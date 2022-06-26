@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_23_012629) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_26_163051) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -218,6 +218,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_23_012629) do
     t.datetime "updated_at", null: false
     t.integer "sort_order", null: false
     t.index ["name"], name: "index_weapon_affinities_on_name", unique: true
+  end
+
+  create_table "weapon_skill_weapon_affinities", force: :cascade do |t|
+    t.integer "weapon_skill_id", null: false
+    t.integer "weapon_affinity_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["weapon_affinity_id"], name: "index_weapon_skill_weapon_affinities_on_weapon_affinity_id"
+    t.index ["weapon_skill_id", "weapon_affinity_id"], name: "compound_index_weapon_skill_weapon_affinities", unique: true
+    t.index ["weapon_skill_id"], name: "index_weapon_skill_weapon_affinities_on_weapon_skill_id"
   end
 
   create_table "weapon_skills", force: :cascade do |t|
@@ -662,6 +672,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_23_012629) do
   end
 
   add_foreign_key "armor", "armor_types", on_delete: :restrict
+  add_foreign_key "weapon_skill_weapon_affinities", "weapon_affinities", on_delete: :cascade
+  add_foreign_key "weapon_skill_weapon_affinities", "weapon_skills", on_delete: :cascade
   add_foreign_key "weapon_stats", "attack_element_correct_params", on_delete: :cascade
   add_foreign_key "weapon_stats", "weapon_affinities", on_delete: :cascade
   add_foreign_key "weapon_stats", "weapons", on_delete: :cascade

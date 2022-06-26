@@ -28,15 +28,20 @@ class WeaponAffinity < ApplicationRecord
 
   # @!group Associations
 
-  # # @!attribute compatible_weapons_skills
-  # #   @return [Array<WeaponSkill>]
-  # has_many(:compatible_weapon_skills)
-
   # @!attribute weapon_stats
   #   @return [Array<WeaponStat>]
+  has_many(:weapon_stats, class_name: "WeaponStat")
+
+  # @!attribute weapon_skill_weapon_affinities
+  #   @return [Array<WeaponSkillWeaponAffinity>]
+  has_many(:weapon_skill_weapon_affinities)
+
+  # @!attribute compatible_affinities
+  #   @return [Array<WeaponAffinity>]
   has_many(
-    :weapon_stats,
-    class_name: "WeaponStat",
+    :compatible_affinities,
+    through: :weapon_skill_weapon_affinities,
+    class_name: "WeaponAffinity",
   )
 
   # @!endgroup Associations
