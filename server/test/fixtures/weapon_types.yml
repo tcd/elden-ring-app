@@ -1,34 +1,34 @@
-dagger:                { "id":  1, "name": "Dagger",                "plural_name": "Daggers",                "is_shield": false }
-straight_sword:        { "id":  2, "name": "Straight Sword",        "plural_name": "Straight Swords",        "is_shield": false }
-greatsword:            { "id":  3, "name": "Greatsword",            "plural_name": "Greatswords",            "is_shield": false }
-colossal_sword:        { "id":  4, "name": "Colossal Sword",        "plural_name": "Colossal Swords",        "is_shield": false }
-thrusting_sword:       { "id":  5, "name": "Thrusting Sword",       "plural_name": "Thrusting Swords",       "is_shield": false }
-heavy_thrusting_sword: { "id":  6, "name": "Heavy Thrusting Sword", "plural_name": "Heavy Thrusting Swords", "is_shield": false }
-curved_sword:          { "id":  7, "name": "Curved Sword",          "plural_name": "Curved Swords",          "is_shield": false }
-curved_greatsword:     { "id":  8, "name": "Curved Greatsword",     "plural_name": "Curved Greatswords",     "is_shield": false }
-katana:                { "id":  9, "name": "Katana",                "plural_name": "Katanas",                "is_shield": false }
-twinblade:             { "id": 10, "name": "Twinblade",             "plural_name": "Twinblades",             "is_shield": false }
-axe:                   { "id": 11, "name": "Axe",                   "plural_name": "Axes",                   "is_shield": false }
-greataxe:              { "id": 12, "name": "Greataxe",              "plural_name": "Greataxes",              "is_shield": false }
-hammer:                { "id": 13, "name": "Hammer",                "plural_name": "Hammers",                "is_shield": false }
-flail:                 { "id": 14, "name": "Flail",                 "plural_name": "Flails",                 "is_shield": false }
-great_hammer:          { "id": 15, "name": "Great Hammer",          "plural_name": "Great Hammers",          "is_shield": false }
-colossal_weapon:       { "id": 16, "name": "Colossal Weapon",       "plural_name": "Colossal Weapons",       "is_shield": false }
-spear:                 { "id": 17, "name": "Spear",                 "plural_name": "Spears",                 "is_shield": false }
-great_spear:           { "id": 18, "name": "Great Spear",           "plural_name": "Great Spears",           "is_shield": false }
-halberd:               { "id": 19, "name": "Halberd",               "plural_name": "Halberds",               "is_shield": false }
-reaper:                { "id": 20, "name": "Reaper",                "plural_name": "Reapers",                "is_shield": false }
-whip:                  { "id": 21, "name": "Whip",                  "plural_name": "Whips",                  "is_shield": false }
-fist:                  { "id": 22, "name": "Fist",                  "plural_name": "Fists",                  "is_shield": false }
-claw:                  { "id": 23, "name": "Claw",                  "plural_name": "Claws",                  "is_shield": false }
-light_bow:             { "id": 24, "name": "Light Bow",             "plural_name": "Light Bows",             "is_shield": false }
-bow:                   { "id": 25, "name": "Bow",                   "plural_name": "Bows",                   "is_shield": false }
-greatbow:              { "id": 26, "name": "Greatbow",              "plural_name": "Greatbows",              "is_shield": false }
-crossbow:              { "id": 27, "name": "Crossbow",              "plural_name": "Crossbows",              "is_shield": false }
-ballista:              { "id": 28, "name": "Ballista",              "plural_name": "Ballistae",              "is_shield": false }
-glintstone_staff:      { "id": 29, "name": "Glintstone Staff",      "plural_name": "Glintstone Staves",      "is_shield": false }
-sacred_seal:           { "id": 30, "name": "Sacred Seal",           "plural_name": "Sacred Seals",           "is_shield": false }
-torch:                 { "id": 31, "name": "Torch",                 "plural_name": "Torches",                "is_shield": false }
-small_shield:          { "id": 41, "name": "Small Shield",          "plural_name": "Small Shields",          "is_shield": true  }
-medium_shield:         { "id": 42, "name": "Medium Shield",         "plural_name": "Medium Shields",         "is_shield": true  }
-greatshield:           { "id": 43, "name": "Greatshield",           "plural_name": "Greatshields",           "is_shield": true  }
+dagger:                { "sort_order":  1, "name": "Dagger",                "plural_name": "Daggers",                "is_shield": false }
+straight_sword:        { "sort_order":  2, "name": "Straight Sword",        "plural_name": "Straight Swords",        "is_shield": false }
+greatsword:            { "sort_order":  3, "name": "Greatsword",            "plural_name": "Greatswords",            "is_shield": false }
+colossal_sword:        { "sort_order":  4, "name": "Colossal Sword",        "plural_name": "Colossal Swords",        "is_shield": false }
+thrusting_sword:       { "sort_order":  5, "name": "Thrusting Sword",       "plural_name": "Thrusting Swords",       "is_shield": false }
+heavy_thrusting_sword: { "sort_order":  6, "name": "Heavy Thrusting Sword", "plural_name": "Heavy Thrusting Swords", "is_shield": false }
+curved_sword:          { "sort_order":  7, "name": "Curved Sword",          "plural_name": "Curved Swords",          "is_shield": false }
+curved_greatsword:     { "sort_order":  8, "name": "Curved Greatsword",     "plural_name": "Curved Greatswords",     "is_shield": false }
+katana:                { "sort_order":  9, "name": "Katana",                "plural_name": "Katanas",                "is_shield": false }
+twinblade:             { "sort_order": 10, "name": "Twinblade",             "plural_name": "Twinblades",             "is_shield": false }
+axe:                   { "sort_order": 11, "name": "Axe",                   "plural_name": "Axes",                   "is_shield": false }
+greataxe:              { "sort_order": 12, "name": "Greataxe",              "plural_name": "Greataxes",              "is_shield": false }
+hammer:                { "sort_order": 13, "name": "Hammer",                "plural_name": "Hammers",                "is_shield": false }
+flail:                 { "sort_order": 14, "name": "Flail",                 "plural_name": "Flails",                 "is_shield": false }
+great_hammer:          { "sort_order": 15, "name": "Great Hammer",          "plural_name": "Great Hammers",          "is_shield": false }
+colossal_weapon:       { "sort_order": 16, "name": "Colossal Weapon",       "plural_name": "Colossal Weapons",       "is_shield": false }
+spear:                 { "sort_order": 17, "name": "Spear",                 "plural_name": "Spears",                 "is_shield": false }
+great_spear:           { "sort_order": 18, "name": "Great Spear",           "plural_name": "Great Spears",           "is_shield": false }
+halberd:               { "sort_order": 19, "name": "Halberd",               "plural_name": "Halberds",               "is_shield": false }
+reaper:                { "sort_order": 20, "name": "Reaper",                "plural_name": "Reapers",                "is_shield": false }
+whip:                  { "sort_order": 21, "name": "Whip",                  "plural_name": "Whips",                  "is_shield": false }
+fist:                  { "sort_order": 22, "name": "Fist",                  "plural_name": "Fists",                  "is_shield": false }
+claw:                  { "sort_order": 23, "name": "Claw",                  "plural_name": "Claws",                  "is_shield": false }
+light_bow:             { "sort_order": 24, "name": "Light Bow",             "plural_name": "Light Bows",             "is_shield": false }
+bow:                   { "sort_order": 25, "name": "Bow",                   "plural_name": "Bows",                   "is_shield": false }
+greatbow:              { "sort_order": 26, "name": "Greatbow",              "plural_name": "Greatbows",              "is_shield": false }
+crossbow:              { "sort_order": 27, "name": "Crossbow",              "plural_name": "Crossbows",              "is_shield": false }
+ballista:              { "sort_order": 28, "name": "Ballista",              "plural_name": "Ballistae",              "is_shield": false }
+glintstone_staff:      { "sort_order": 29, "name": "Glintstone Staff",      "plural_name": "Glintstone Staves",      "is_shield": false }
+sacred_seal:           { "sort_order": 30, "name": "Sacred Seal",           "plural_name": "Sacred Seals",           "is_shield": false }
+torch:                 { "sort_order": 31, "name": "Torch",                 "plural_name": "Torches",                "is_shield": false }
+small_shield:          { "sort_order": 41, "name": "Small Shield",          "plural_name": "Small Shields",          "is_shield": true  }
+medium_shield:         { "sort_order": 42, "name": "Medium Shield",         "plural_name": "Medium Shields",         "is_shield": true  }
+greatshield:           { "sort_order": 43, "name": "Greatshield",           "plural_name": "Greatshields",           "is_shield": true  }

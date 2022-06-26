@@ -1,9 +1,9 @@
 claymore: {
   name:                  "Claymore",
   weapon_skill:          lions_claw,
-  weapon_type_id:        3,
+  weapon_type:           greatsword,
   weight:                9,
-  physical_damage_types: ["Standard", "Pierce"],
+  physical_damage_types: [ "Standard", "Pierce" ],
   defense_physical:      50,
   defense_magic:         35,
   defense_fire:          35,
@@ -12,4 +12,4 @@ claymore: {
   defense_guard_boost:   38,
   required_strength:     16,
   required_dexterity:    13,
-}
+ }

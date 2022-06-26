@@ -54,7 +54,18 @@ class WeaponSkill < ApplicationRecord
     :compatible_weapon_affinities,
     through: :weapon_skill_weapon_affinities,
     class_name: "WeaponAffinity",
-    class_name: "WeaponSkill",
+  )
+
+  # @!attribute weapon_skill_weapon_types
+  #   @return [Array<WeaponSkillWeaponType>]
+  has_many(:weapon_skill_weapon_types)
+
+  # @!attribute compatible_weapon_types
+  #   @return [Array<WeaponType>]
+  has_many(
+    :compatible_weapon_types,
+    through: :weapon_skill_weapon_types,
+    class_name: "WeaponType",
   )
 
   # @!endgroup Associations

@@ -33,6 +33,18 @@ class WeaponType < ApplicationRecord
   #   @return [Array<Weapon>]
   has_many(:weapons)
 
+  # @!attribute weapon_skill_weapon_types
+  #   @return [Array<WeaponSkillWeaponType>]
+  has_many(:weapon_skill_weapon_types)
+
+  # @!attribute compatible_skills
+  #   @return [Array<WeaponSkill>]
+  has_many(
+    :compatible_skills,
+    through: :weapon_skill_weapon_types,
+    class_name: "WeaponSkill",
+  )
+
   # @!endgroup Associations
 
   # ============================================================================
@@ -42,11 +54,6 @@ class WeaponType < ApplicationRecord
   # @return [String]
   def display_name()
     return self.name
-  end
-
-  # @return [Integer]
-  def sort_order()
-    return self.id
   end
 
   # @return [String]
