@@ -25,11 +25,23 @@ export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
         return (<StatRow key={key} title={title} value={"-"} />)
     })
 
+    defenseRows.push(<StatRow
+        key="Guard Boost"
+        title="Guard Boost"
+        value="-"
+    />)
+
     const attackRows = Object.values(Dmg).map((dmg) => {
         const title = capitalize(dmg)
         const key = `weapon-attack-${dmg}`
         return (<StatRow key={key} title={title} value={"-"} />)
     })
+
+    attackRows.push(<StatRow
+        key="Critical"
+        title="Critical"
+        value="-"
+    />)
 
     return (
         <div className="weapon-detail">
@@ -39,7 +51,7 @@ export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
                         <div className="row">
                             <div className="col">
                                 <ul>
-                                    <StatRow title={"-"}   value={null} />
+                                    <StatRow title={"-"} value={null} />
                                     <StatRow title={"-"} value={null} />
                                     <br />
                                     <StatRow title={"-"} value={null} />
@@ -51,6 +63,7 @@ export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
                                 <div className="weapon-image-wrapper empty">
+                                    <div></div>
                                 </div>
                             </div>
                         </div>

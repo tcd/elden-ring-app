@@ -13,24 +13,21 @@
         height: 50%;
     }
     .equipment-image-wrapper {
-        // height: 50%;
-        // width: 160px;
-        // height: 170px;
-        // background-color: blue;
-        // border: 5px inset rgba(v.$gold, 0.4);
+        width:  $equipment-detail-image-size;
+        height: $equipment-detail-image-size;
         padding: 5px;
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow:
             inset 0px 0px 3px 3px rgba(v.$equipment-slot-overlay-color, 0.35),
                   0px 0px 2px 2px rgba(v.$equipment-slot-overlay-color, 0.35);
-        img {
-            width: $equipment-detail-image-size;
-            height: $equipment-detail-image-size;
-        }
 
-        &.empty {
-            width: $equipment-detail-image-size;
-            height: $equipment-detail-image-size;
-        }
+        // &.empty {
+        //     width:  $equipment-detail-weapon-image-size;
+        //     height: $equipment-detail-weapon-image-size;
+        //     div:before {
+        //         content: "";
+        //         display: block;
+        //     }
+        // }
     }
 }

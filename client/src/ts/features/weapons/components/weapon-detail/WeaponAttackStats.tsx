@@ -84,7 +84,7 @@ export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => 
     })
 
     rows.push(<StatRowPlusPlus
-        key={"critical"}
+        key={"Critical"}
         title="Critical"
         divider=""
         no_parens={true}
