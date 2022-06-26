@@ -22,11 +22,11 @@ export const store = configureStore({
         [FEATURE_KEYS.Weapons]:   WeaponsSlice.reducer,
     },
     devTools: true,
-    // middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-    //     immutableCheck:    { ignoredPaths: ["Builder.everythingRequest.response"] },
-    //     // serializableCheck: { ignoredPaths: ["Builder.everythingRequest.response"] },
-    //     serializableCheck: { warnAfter: 500 },
-    // }),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        immutableCheck:    { ignoredPaths: ["Builder.everythingRequest.response"] },
+        // serializableCheck: { ignoredPaths: ["Builder.everythingRequest.response"] },
+        serializableCheck: { warnAfter: 500 },
+    }),
 })
 
 export type RootState = ReturnType<typeof store.getState>
