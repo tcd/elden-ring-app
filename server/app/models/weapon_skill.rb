@@ -122,4 +122,19 @@ class WeaponSkill < ApplicationRecord
     return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Ashes of War/#{self.name}/public"
   end
 
+  # @return [String]
+  def default_affinity_name()
+    return self.default_affinity&.name
+  end
+
+  # @return [String]
+  def compatible_weapon_affinity_names()
+    return self.compatible_weapon_affinities.map(&:name)
+  end
+
+  # @return [String]
+  def compatible_weapon_type_names()
+    return self.compatible_weapon_types.map(&:name)
+  end
+
 end
