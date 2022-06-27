@@ -15,6 +15,7 @@ export const BuilderSelectors = {
     api: {
         loading:               Api.selectFetchingEverything,
         shouldFetchEverything: Api.selectShouldFetchEverything,
+        fetchFailed:           Api.selectFetchFailed,
         armor:                 Api.selectArmor,
         spells:                Api.selectSpells,
         talismans:             Api.selectTalismans,
