@@ -29,7 +29,7 @@ module Services
         spells:                        Serializers::SpellSerializer.render_as_json(@@spells),
         talismans:                     Serializers::TalismanSerializer.render_as_json(@@talismans),
         weapons:                       Serializers::WeaponSerializer.render_as_json(@@weapons, view: :with_stats),
-        weapon_skills:                 Serializers::WeaponSkillSerializer.render_as_json(@@weapon_skills),
+        weapon_skills:                 Serializers::WeaponSkillSerializer.render_as_json(@@weapon_skills, view: :with_compatibility),
         weapon_types:                  Serializers::WeaponTypeSerializer.render_as_json(@@weapon_types),
         attack_element_correct_params: @@attack_element_correct_params,
       }

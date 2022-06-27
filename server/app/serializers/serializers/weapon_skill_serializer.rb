@@ -13,7 +13,9 @@ module Serializers
 
     field(:default_affinity) { |x| x&.default_affinity&.name || nil }
 
-    field(:compatible_affinities) { |x| x.compatible_weapon_affinity_names }
-    field(:compatible_types)      { |x| x.compatible_weapon_type_names }
+    view(:with_compatibility) do
+      field(:compatible_weapon_affinities) { |x| x.compatible_weapon_affinity_names }
+      field(:compatible_weapon_types)      { |x| x.compatible_weapon_type_names }
+    end
   end
 end
