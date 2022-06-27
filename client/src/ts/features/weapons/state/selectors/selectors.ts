@@ -97,6 +97,33 @@ export const selectActiveWeapon = (rootState: RootState) => {
     return weapons.find(x => x?.name == activeName)
 }
 
+export const selectActiveWeaponDisplayName = (rootState: RootState): string => {
+    const settings = selectActiveWeaponSettings(rootState)
+    const weaponName = settings?.weapon_name
+    const affinityName = settings?.affinity_name
+    if (isBlank(weaponName)) {
+        return null
+    }
+    if (isBlank(affinityName) || affinityName == "Standard") {
+        return weaponName
+    }
+    const weapons = selectAllWeapons(rootState)
+    if (isBlank(weapons)) {
+        return weaponName
+    }
+    const weapon = weapons.find(x => x?.name == weaponName)
+    if (isBlank(weapon)) {
+        return weaponName
+    }
+    const affinityId = WEAPON_AFFINITIES.find(x => x.name == settings.affinity_name)?.id
+    const displayName = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)?.name
+    if (isBlank(displayName)) {
+        return weaponName
+    } else {
+        return displayName
+    }
+}
+
 // =============================================================================
 // Stats
 // =============================================================================

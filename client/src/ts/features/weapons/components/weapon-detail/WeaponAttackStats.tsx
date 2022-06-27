@@ -51,9 +51,9 @@ export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => 
         else if (newTotal == oldTotal) { row.value_3_color = "default" }
         else if (newTotal <  oldTotal) { row.value_3_color = "red"     }
 
-        if      (newTotal >  oldTotal) { row.divider_color = "blue"    }
-        else if (newTotal == oldTotal) { row.divider_color = "default" }
-        else if (newTotal <  oldTotal) { row.divider_color = "red"     }
+        // if      (newTotal >  oldTotal) { row.divider_color = "blue"    }
+        // else if (newTotal == oldTotal) { row.divider_color = "default" }
+        // else if (newTotal <  oldTotal) { row.divider_color = "red"     }
 
         data.push(row)
     }

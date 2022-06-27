@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { MouseOverPopover } from "@app/shared"
 import { WeaponMenuImage } from "@app/features/weapons/components"
 
 export const WeaponMenuGrid = (): JSX.Element => {
@@ -60,14 +61,19 @@ export const WeaponMenuGrid = (): JSX.Element => {
                 classes = "equipment-menu-cell active"
             }
             return (
-                <div
+                <MouseOverPopover
+                    id={`weapon-${weapon.name}`}
                     key={`weapon-${weapon.name}`}
-                    ref={refs[weapon.name]}
-                    className={classes}
-                    onClick={() => handleClick(weapon.name)}
+                    popoverContent={weapon.name}
                 >
-                    <WeaponMenuImage weapon={weapon} stats={stats} />
-                </div>
+                    <div
+                        ref={refs[weapon.name]}
+                        className={classes}
+                        onClick={() => handleClick(weapon.name)}
+                    >
+                        <WeaponMenuImage weapon={weapon} stats={stats} />
+                    </div>
+                </MouseOverPopover>
             )
         })
 

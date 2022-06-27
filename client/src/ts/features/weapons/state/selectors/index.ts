@@ -12,10 +12,11 @@ export const WeaponsSelectors = {
     activeSlotId:    Core.selectActiveSlotId,
     menuHasScrolled: Core.selectHasMenuScrolled,
     active: {
-        weapon:          Core.selectActiveWeapon,
-        weaponName:      Core.selectActiveWeaponName,
-        weaponSettings:  Core.selectActiveWeaponSettings,
-        calculatedStats: Core.selectCalculatedWeaponStats,
+        weapon:            Core.selectActiveWeapon,
+        weaponName:        Core.selectActiveWeaponName,
+        weaponSettings:    Core.selectActiveWeaponSettings,
+        calculatedStats:   Core.selectCalculatedWeaponStats,
+        weaponDisplayName: Core.selectActiveWeaponDisplayName,
     },
     bySlot: {
         R1: Core.selectR1Weapon,

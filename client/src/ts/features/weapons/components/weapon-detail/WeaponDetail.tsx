@@ -29,11 +29,12 @@ import {
 
 export const WeaponDetail = (_props: unknown): JSX.Element => {
 
-    const weapon     = useSelector(Selectors.Weapons.active.weapon)
-    const oldWeapon  = useSelector(Selectors.Weapons.old.weapon)
-    const newStats   = useSelector(Selectors.Weapons.active.calculatedStats)
-    const oldStats   = useSelector(Selectors.Weapons.old.stats)
-    const attributes = useSelector(Selectors.Builder.allAttributes)
+    const weapon      = useSelector(Selectors.Weapons.active.weapon)
+    const oldWeapon   = useSelector(Selectors.Weapons.old.weapon)
+    const newStats    = useSelector(Selectors.Weapons.active.calculatedStats)
+    const oldStats    = useSelector(Selectors.Weapons.old.stats)
+    const attributes  = useSelector(Selectors.Builder.allAttributes)
+    const displayName = useSelector(Selectors.Weapons.active.weaponDisplayName)
 
     if (isBlank(weapon)) {
         // return <UnarmedWeaponDetail />
@@ -55,7 +56,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
         <div className="weapon-detail">
             <div className="row">
                 <div className="col">
-                    <ErCard title={weapon?.name} className="mt-0">
+                    <ErCard title={displayName} className="mt-0">
                         <div className="row">
                             <div className="col">
                                 <ul>

@@ -27,7 +27,7 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     }, {})
 
     const handleClick = (name: string) => {
-        dispatch(Actions.Weapons.setAffinity({ name }))
+        dispatch(Actions.Weapons.setWeaponSkill({ name }))
     }
 
     const sections = WEAPON_SKILL_SORT_GROUPS.map((sortGroup, index) => {

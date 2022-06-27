@@ -7,6 +7,7 @@ import {
 } from "@app/types"
 import { isBlank } from "@app/util"
 import { WeaponsState } from "./state"
+import { WEAPON_SKILL_DEFAULT_AFFINITIES } from "@app/data"
 
 export const reducers = {
     startCustomizingWeapon(state: WeaponsState) {
@@ -57,6 +58,24 @@ export const reducers = {
             weapon_name: action.payload.name,
         }
     },
+    setWeaponSkill(state: WeaponsState, { payload: { name }}: PayloadAction<{ name: string }>) {
+        const activeSlotId = state.activeSlotId
+        if (isBlank(activeSlotId)) {
+            return
+        }
+        state.oldWeapon = {
+            ...state.slots[activeSlotId],
+        }
+        state.slots[activeSlotId].weapon_skill_name = name
+        if (isBlank(name)) {
+            return
+        }
+        const affinityName = WEAPON_SKILL_DEFAULT_AFFINITIES[name]
+        if (!isBlank(affinityName)) {
+            state.slots[activeSlotId].affinity_name = affinityName
+        }
+        state.choosingAffinity = true
+    },
     setAffinity(state: WeaponsState, action: PayloadAction<{ name: string }>) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
@@ -66,5 +85,6 @@ export const reducers = {
             ...state.slots[activeSlotId],
         }
         state.slots[activeSlotId].affinity_name = action.payload.name as WeaponAffinityName
+        state.choosingAffinity = false
     },
 }

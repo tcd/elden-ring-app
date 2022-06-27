@@ -29,20 +29,19 @@ const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
 
 const initialState: WeaponsState = {
     slots: { ...DEFAULT_WEAPON_SLOTS },
-    activeSlotId: null,
     oldWeapon: null,
+    activeSlotId: null,
     customizingWeapon: false,
-    choosingAffinity: false,
-    menuHasScrolled: false,
+    choosingAffinity:  false,
+    menuHasScrolled:   false,
 }
 
 const devState: WeaponsState = {
     ...initialState,
-    activeSlotId: "R1",
     slots: {
         ...initialState.slots,
         R1: { weapon_name: "Blasphemous Blade", level: 10, affinity_name: "Standard" },
-        R2: { weapon_name: "Claymore",          level: 0,  affinity_name: null,       weapon_skill_name: "Lion's Claw" },
+        R2: { weapon_name: "Claymore",          level: 0,  affinity_name: "Heavy", weapon_skill_name: "Lion's Claw" },
         L1: { weapon_name: "Rotten Greataxe",   level: 25, affinity_name: "Cold"     },
         L2: { weapon_name: "Claymore",          level: 20, affinity_name: "Standard" },
     },
@@ -54,7 +53,7 @@ const devState: WeaponsState = {
     //     L2: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: ""                      },
     //     L3: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Erdtree Seal"             },
     // },
-    oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
+    // oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
 }
 
 export const WeaponsSlice = createSlice({

@@ -35,7 +35,7 @@ const IMAGE_FOLDERS: ImageableFolderMap = {
     "Spell Group":      "Spell Groups",
     "Talisman":         "Talismans",
     "Upgrade Material": "Upgrade Materials",
-    "Weapon Affinity":  "Weapon Affinities",
+    "Weapon Affinity":  "Affinities",
     "Weapon Skill":     "Ashes of War",
     "Weapon":           "Weapons",
 }
