@@ -1,45 +1,31 @@
 import { RootState } from "@app/state"
+import { selectBuilderSlice } from "./select-builder-slice"
 
-export const selectShouldFetchEverything = (state: RootState) => {
-    const requestState = state.Builder.everythingRequest
-    if (requestState.status === "idle") {
+const _selectFetchEverythingRequest       = (rootState: RootState) => selectBuilderSlice(rootState)?.everythingRequest
+const _selectFetchEverythingRequestStatus = (rootState: RootState) => _selectFetchEverythingRequest(rootState)?.status
+const _selectFetchEverythingResponse      = (rootState: RootState) => _selectFetchEverythingRequest(rootState)?.response
+
+export const selectShouldFetchEverything = (rootState: RootState) => {
+    const status = _selectFetchEverythingRequestStatus(rootState)
+    if (status === "idle") {
         return true
     }
 }
 
-export const selectFetchingEverything = (state: RootState) => {
-    const requestState = state.Builder.everythingRequest
-    return (requestState.status === "pending")
+export const selectFetchingEverything = (rootState: RootState) => {
+    const status = _selectFetchEverythingRequestStatus(rootState)
+    return (status === "pending")
 }
 
-const selectEverythingResponse = (rootState: RootState) => {
-    return rootState?.Builder?.everythingRequest?.response
+export const selectFetchFailed = (rootState: RootState) => {
+    const status = _selectFetchEverythingRequestStatus(rootState)
+    return (status === "rejected")
 }
 
-export const selectArmor = (rootState: RootState) => {
-    return selectEverythingResponse(rootState)?.armor ?? []
-}
-
-export const selectSpells = (rootState: RootState) => {
-    return selectEverythingResponse(rootState)?.spells ?? []
-}
-
-export const selectTalismans = (rootState: RootState) => {
-    return selectEverythingResponse(rootState)?.talismans ?? []
-}
-
-export const selectWeapons = (rootState: RootState) => {
-    return selectEverythingResponse(rootState)?.weapons ?? []
-}
-
-export const selectWeaponSkills = (rootState: RootState) => {
-    return selectEverythingResponse(rootState)?.weapon_skills ?? []
-}
-
-export const selectWeaponTypes = (rootState: RootState) => {
-    return selectEverythingResponse(rootState)?.weapon_types ?? []
-}
-
-export const selectAttackElementCorrectParams = (state: RootState) => {
-    return selectEverythingResponse(state)?.attack_element_correct_params ?? []
-}
+export const selectArmor                      = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.armor                         ?? []
+export const selectSpells                     = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.spells                        ?? []
+export const selectTalismans                  = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.talismans                     ?? []
+export const selectWeapons                    = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.weapons                       ?? []
+export const selectWeaponSkills               = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.weapon_skills                 ?? []
+export const selectWeaponTypes                = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.weapon_types                  ?? []
+export const selectAttackElementCorrectParams = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.attack_element_correct_params ?? []
