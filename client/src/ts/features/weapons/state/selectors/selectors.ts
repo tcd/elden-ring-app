@@ -4,10 +4,13 @@ import {
     WeaponStatsCalculator,
 } from "elden-ring-calculator"
 
-import { Unarmed, UnarmedStats } from "@app/data"
+import { Unarmed, UnarmedStats, WEAPON_AFFINITIES } from "@app/data"
 import {
     Weapon,
+    WeaponSlots,
     WeaponSettings,
+    WeaponSkill,
+    WeaponSlotId,
 } from "@app/types"
 import {
     isBlank,
@@ -16,9 +19,8 @@ import {
     getRequirements,
 } from "@app/util"
 import { RootState } from "@app/state"
-import { selectWeapons, selectAttackElementCorrectParams } from "@app/features/builder/state/selectors/api"
 import { selectAttributes } from "@app/features/builder/state/selectors/attributes"
-import { WEAPON_AFFINITIES } from "@app/data"
+import { selectWeapons, selectAttackElementCorrectParams, selectWeaponSkills } from "@app/features/builder/state/selectors/api"
 
 export const selectAllWeapons = selectWeapons
 
@@ -35,9 +37,11 @@ const _selectWeapon = (rootState: RootState, name?: string): Weapon => {
     return weapons.find(x => x.name == name)
 }
 
-export const selectWeaponSlots = (rootState: RootState) => {
-    return selectWeaponsSlice(rootState)?.slots
-}
+export const selectWeaponSlots      = (rootState: RootState): WeaponSlots  => selectWeaponsSlice(rootState)?.slots
+export const selectActiveSlotId     = (rootState: RootState): WeaponSlotId => selectWeaponsSlice(rootState)?.activeSlotId
+export const selectHasMenuScrolled  = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.menuHasScrolled
+export const selectCustomizing      = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.customizingWeapon
+export const selectChoosingAffinity = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.choosingAffinity
 
 const selectR1Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R1?.weapon_name
 const selectR2Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R2?.weapon_name
@@ -53,15 +57,12 @@ export const selectL1Weapon = (rootState: RootState): Weapon => _selectWeapon(ro
 export const selectL2Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectL2Name(rootState))
 export const selectL3Weapon = (rootState: RootState): Weapon => _selectWeapon(rootState, selectL3Name(rootState))
 
-export const selectActiveSlotId    = (rootState: RootState) => selectWeaponsSlice(rootState)?.activeSlotId
-export const selectHasMenuScrolled = (rootState: RootState) => selectWeaponsSlice(rootState)?.menuHasScrolled
-
 export const selectActiveWeaponSettings = (rootState: RootState): WeaponSettings => {
     const slotId = selectActiveSlotId(rootState)
     if (isBlank(slotId)) {
         return null
     }
-    return rootState.Weapons.slots[slotId]
+    return selectWeaponSlots(rootState)?.[slotId]
 }
 
 export const selectActiveWeaponName = (rootState: RootState) => {
@@ -142,9 +143,9 @@ export const selectCalculatedWeaponStats = (rootState: RootState): CalculatedWea
     }).calculate()
 }
 
-// -----------------------------------------------------------------------------
+// =============================================================================
 // Old Weapon
-// -----------------------------------------------------------------------------
+// =============================================================================
 
 export const selectOldWeapon = (rootState: RootState): Weapon => {
     const oldWeaponSettings = rootState?.Weapons?.oldWeapon
@@ -202,3 +203,64 @@ export const selectOldWeaponStats = (rootState: RootState): CalculatedWeaponStat
     return result
 }
 
+// =============================================================================
+// Ashes of War / Smithing
+// =============================================================================
+
+export const selectCanCustomize = (rootState: RootState): boolean => {
+    const customizing = selectCustomizing(rootState)
+    if (customizing == true) {
+        return false
+    }
+    const smithing = selectChoosingAffinity(rootState)
+    if (smithing == true) {
+        return false
+    }
+    const activeWeapon = selectActiveWeapon(rootState)
+    if (isBlank(activeWeapon)) {
+        return false
+    }
+    if (activeWeapon?.is_special == true) {
+        return false
+    }
+    return true
+}
+
+const _selectWeaponSkillByName = (rootState: RootState, name: string): WeaponSkill => {
+    if (isBlank(name)) {
+        return null
+    }
+    const weaponSkills = selectWeaponSkills(rootState)
+    return weaponSkills?.find(x => x.name == name) ?? null
+}
+
+export const selectActiveWeaponSkillName = (rootState: RootState): string => {
+    const configuredName = selectActiveWeaponSettings(rootState)?.weapon_skill_name
+    if (!isBlank(configuredName)) {
+        return configuredName
+    }
+    const activeWeapon = selectActiveWeapon(rootState)
+    return activeWeapon.weapon_skill.name
+}
+
+export const selectAshOfWarOptions = (rootState: RootState): WeaponSkill[] => {
+    const weapon = selectActiveWeapon(rootState)
+    if (isBlank(weapon)) {
+        return []
+    }
+    const skills = selectWeaponSkills(rootState)
+    if (isBlank(skills)) {
+        return []
+    }
+    // debugger
+    return skills.filter(x => x.compatible_weapon_types.includes(weapon.weapon_type))
+}
+
+export const selectActiveAffinityName = (rootState: RootState): string => {
+    const configuredName = selectActiveWeaponSettings(rootState)?.affinity_name
+    if (!isBlank(configuredName)) {
+        return configuredName
+    }
+    const activeWeapon = selectActiveWeapon(rootState)
+    return activeWeapon.weapon_skill.default_affinity
+}

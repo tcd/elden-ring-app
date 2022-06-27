@@ -14,6 +14,7 @@ export interface WeaponsState {
     activeSlotId: WeaponSlotId
     oldWeapon: WeaponSettings
     customizingWeapon: boolean
+    choosingAffinity: boolean
     menuHasScrolled: boolean
 }
 
@@ -31,6 +32,7 @@ const initialState: WeaponsState = {
     activeSlotId: null,
     oldWeapon: null,
     customizingWeapon: false,
+    choosingAffinity: false,
     menuHasScrolled: false,
 }
 
@@ -40,7 +42,9 @@ const devState: WeaponsState = {
     slots: {
         ...initialState.slots,
         R1: { weapon_name: "Blasphemous Blade", level: 10, affinity_name: "Standard" },
+        R2: { weapon_name: "Claymore",          level: 0,  affinity_name: null,       weapon_skill_name: "Lion's Claw" },
         L1: { weapon_name: "Rotten Greataxe",   level: 25, affinity_name: "Cold"     },
+        L2: { weapon_name: "Claymore",          level: 20, affinity_name: "Standard" },
     },
     // slots: {
     //     R1: { ...DEFAULT_WEAPON_SETTINGS, weapon_name: "Maliketh's Black Blade"   },

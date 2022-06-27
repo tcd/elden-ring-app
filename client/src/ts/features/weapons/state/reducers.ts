@@ -9,6 +9,21 @@ import { isBlank } from "@app/util"
 import { WeaponsState } from "./state"
 
 export const reducers = {
+    startCustomizingWeapon(state: WeaponsState) {
+        state.customizingWeapon = true
+        state.menuHasScrolled   = false
+    },
+    stopCustomizingWeapon(state: WeaponsState) {
+        state.customizingWeapon = false
+        state.choosingAffinity  = false
+        state.menuHasScrolled   = false
+    },
+    startChoosingAffinity(state: WeaponsState) {
+        state.choosingAffinity = true
+    },
+    stopChoosingAffinity(state: WeaponsState) {
+        state.choosingAffinity = false
+    },
     scrollMenu(state: WeaponsState) {
         state.menuHasScrolled = true
     },
