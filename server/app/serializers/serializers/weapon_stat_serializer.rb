@@ -5,24 +5,32 @@ module Serializers
 
     fields(
       # :display_name,
-      # :name,
+      :name,
       # :weapon_id,
       :weapon_affinity_id,
       :attack_element_correct_param_id,
     )
 
-    fields(
-      :calc_correct_physical,
-      :calc_correct_magic,
-      :calc_correct_fire,
-      :calc_correct_lightning,
-      :calc_correct_holy,
-    )
+    view(:slim) do
+      field(:weapon_name)          { |x| x.weapon.name }
+      field(:weapon_affinity_name) { |x| x.weapon_affinity.name }
+    end
 
     view(:default) do
       include_view(:attack)
       include_view(:scaling)
       include_view(:passive)
+      include_view(:calc_correct)
+    end
+
+    view(:calc_correct) do
+      fields(
+        :calc_correct_physical,
+        :calc_correct_magic,
+        :calc_correct_fire,
+        :calc_correct_lightning,
+        :calc_correct_holy,
+      )
     end
 
     view(:attack) do

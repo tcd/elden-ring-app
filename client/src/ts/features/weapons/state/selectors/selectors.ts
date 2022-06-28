@@ -4,7 +4,7 @@ import {
     WeaponStatsCalculator,
 } from "elden-ring-calculator"
 
-import { Unarmed, UnarmedStats, WEAPON_AFFINITIES } from "@app/data"
+import { ABNORMAL_WEAPON_NAMES, Unarmed, UnarmedStats, WEAPON_AFFINITIES } from "@app/data"
 import {
     Weapon,
     WeaponSlots,
@@ -107,21 +107,27 @@ export const selectActiveWeaponDisplayName = (rootState: RootState): string => {
     if (isBlank(affinityName) || affinityName == "Standard") {
         return weaponName
     }
-    const weapons = selectAllWeapons(rootState)
-    if (isBlank(weapons)) {
-        return weaponName
-    }
-    const weapon = weapons.find(x => x?.name == weaponName)
-    if (isBlank(weapon)) {
-        return weaponName
-    }
-    const affinityId = WEAPON_AFFINITIES.find(x => x.name == settings.affinity_name)?.id
-    const displayName = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)?.name
-    if (isBlank(displayName)) {
-        return weaponName
+    const abnormalName = ABNORMAL_WEAPON_NAMES.find(x => x.weapon == weaponName && x.affinity == affinityName)
+    if (abnormalName) {
+        return abnormalName.name
     } else {
-        return displayName
+        return weaponName
     }
+    // const weapons = selectAllWeapons(rootState)
+    // if (isBlank(weapons)) {
+    //     return weaponName
+    // }
+    // const weapon = weapons.find(x => x?.name == weaponName)
+    // if (isBlank(weapon)) {
+    //     return weaponName
+    // }
+    // const affinityId = WEAPON_AFFINITIES.find(x => x.name == settings.affinity_name)?.id
+    // const displayName = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)?.name
+    // if (isBlank(displayName)) {
+    //     return weaponName
+    // } else {
+    //     return displayName
+    // }
 }
 
 // =============================================================================

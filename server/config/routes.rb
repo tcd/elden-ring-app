@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     get("/talismans",     to: "talismans#index")
     get("/weapons",       to: "weapons#index")
     get("/weapon-skills", to: "weapon_skills#index")
+    get("/weapon-stats",  to: "weapon_stats#index")
   end
 end
