@@ -27,6 +27,8 @@ export const Unarmed: Weapon = {
 
     weapon_skill: {
         id: 69,
+        sort_group: -1,
+        sort_order: -1,
         name: "Kick",
         ash_of_war: true,
         description: "Push an enemy back with a high kick.Effective against enemies who are guarding, and can break a foe's stance.",

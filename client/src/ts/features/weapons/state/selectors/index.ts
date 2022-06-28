@@ -39,4 +39,20 @@ export const WeaponsSelectors = {
         choosingAffinity:   Core.selectChoosingAffinity,
         affinityOptions:    Core.selectAffinityOptions,
     },
+    calculated: {
+        R1: Core.selectCalculatedWeaponStatsForR1,
+        R2: Core.selectCalculatedWeaponStatsForR2,
+        R3: Core.selectCalculatedWeaponStatsForR3,
+        L1: Core.selectCalculatedWeaponStatsForL1,
+        L2: Core.selectCalculatedWeaponStatsForL2,
+        L3: Core.selectCalculatedWeaponStatsForL3,
+    },
+    totalDamage: {
+        R1: Core.selectTotalDamageForR1,
+        R2: Core.selectTotalDamageForR2,
+        R3: Core.selectTotalDamageForR3,
+        L1: Core.selectTotalDamageForL1,
+        L2: Core.selectTotalDamageForL2,
+        L3: Core.selectTotalDamageForL3,
+    },
 }

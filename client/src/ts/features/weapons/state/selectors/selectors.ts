@@ -1,3 +1,4 @@
+import { sum } from "lodash"
 import {
     CalculatedWeaponStats,
     SlimWeaponData,
@@ -315,3 +316,63 @@ export const selectAffinityOptions = (rootState: RootState) => {
     }
     return skill.compatible_weapon_affinities
 }
+
+// =============================================================================
+// Character Status
+// =============================================================================
+
+const _selectWeaponSettingsBySlot = (rootState: RootState, slotId: WeaponSlotId): WeaponSettings => {
+    return selectWeaponSlots(rootState)?.[slotId]
+}
+
+const _selectCalculatedWeaponStatsBySlot = (rootState: RootState, slotId: WeaponSlotId): CalculatedWeaponStats => {
+    const attributes = selectAttributes(rootState)
+    const weaponSettings = _selectWeaponSettingsBySlot(rootState, slotId)
+    if (isBlank(weaponSettings?.weapon_name)) {
+        return UnarmedStats
+    }
+    const allWeapons = selectAllWeapons(rootState)
+    if (isBlank(allWeapons)) {
+        return UnarmedStats
+    }
+    const weapon = allWeapons.find(x => x?.name == weaponSettings.weapon_name)
+    const slimData = _selectSlimWeaponData(weapon, weaponSettings)
+    if (isBlank(slimData)) {
+        return UnarmedStats
+    }
+    const allAdjustmentParams = selectAttackElementCorrectParams(rootState)
+
+    const adjustmentParams = allAdjustmentParams.find(x => x.id == slimData.attack_element_correct_param_id)
+    if (isBlank(adjustmentParams)) {
+        return UnarmedStats
+    }
+    const requirements = getRequirements(weapon)
+    return new WeaponStatsCalculator({
+        slimData:         slimData,
+        adjustmentParams: adjustmentParams,
+        requirements:     requirements,
+        attributes:       attributes,
+    }).calculate()
+}
+
+export const selectCalculatedWeaponStatsForR1 = (rootState: RootState): CalculatedWeaponStats => _selectCalculatedWeaponStatsBySlot(rootState, "R1")
+export const selectCalculatedWeaponStatsForR2 = (rootState: RootState): CalculatedWeaponStats => _selectCalculatedWeaponStatsBySlot(rootState, "R2")
+export const selectCalculatedWeaponStatsForR3 = (rootState: RootState): CalculatedWeaponStats => _selectCalculatedWeaponStatsBySlot(rootState, "R3")
+export const selectCalculatedWeaponStatsForL1 = (rootState: RootState): CalculatedWeaponStats => _selectCalculatedWeaponStatsBySlot(rootState, "L1")
+export const selectCalculatedWeaponStatsForL2 = (rootState: RootState): CalculatedWeaponStats => _selectCalculatedWeaponStatsBySlot(rootState, "L2")
+export const selectCalculatedWeaponStatsForL3 = (rootState: RootState): CalculatedWeaponStats => _selectCalculatedWeaponStatsBySlot(rootState, "L3")
+
+const _selectTotalDamageBySlot = (rootState: RootState, slotId: WeaponSlotId): Decimal => {
+    const stats = _selectCalculatedWeaponStatsBySlot(rootState, slotId)?.attack?.total
+    if (isBlank(stats)) {
+        return sum(Object.values(UnarmedStats.attack.total))
+    }
+    return sum(Object.values(stats))
+}
+
+export const selectTotalDamageForR1 = (rootState: RootState): Decimal => _selectTotalDamageBySlot(rootState, "R1")
+export const selectTotalDamageForR2 = (rootState: RootState): Decimal => _selectTotalDamageBySlot(rootState, "R2")
+export const selectTotalDamageForR3 = (rootState: RootState): Decimal => _selectTotalDamageBySlot(rootState, "R3")
+export const selectTotalDamageForL1 = (rootState: RootState): Decimal => _selectTotalDamageBySlot(rootState, "L1")
+export const selectTotalDamageForL2 = (rootState: RootState): Decimal => _selectTotalDamageBySlot(rootState, "L2")
+export const selectTotalDamageForL3 = (rootState: RootState): Decimal => _selectTotalDamageBySlot(rootState, "L3")
