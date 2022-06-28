@@ -104,14 +104,17 @@ export const selectActiveWeaponDisplayName = (rootState: RootState): string => {
     if (isBlank(weaponName)) {
         return null
     }
-    if (isBlank(affinityName) || affinityName == "Standard") {
+    if (affinityName == "Standard") {
+        return weaponName
+    }
+    if (isBlank(affinityName)) {
         return weaponName
     }
     const abnormalName = ABNORMAL_WEAPON_NAMES.find(x => x.weapon == weaponName && x.affinity == affinityName)
     if (abnormalName) {
         return abnormalName.name
     } else {
-        return weaponName
+        return `${affinityName} ${weaponName}`
     }
     // const weapons = selectAllWeapons(rootState)
     // if (isBlank(weapons)) {
@@ -296,4 +299,19 @@ export const selectActiveAffinityName = (rootState: RootState): string => {
     }
     const activeWeapon = selectActiveWeapon(rootState)
     return activeWeapon.weapon_skill.default_affinity
+}
+
+export const selectAffinityOptions = (rootState: RootState) => {
+    const skillName = selectActiveWeaponSkillName(rootState)
+    if (isBlank(skillName)) {
+        return []
+    }
+    const skill = _selectWeaponSkillByName(rootState, skillName)
+    if (isBlank(skill)) {
+        return []
+    }
+    if (!skill.ash_of_war) {
+        return []
+    }
+    return skill.compatible_weapon_affinities
 }

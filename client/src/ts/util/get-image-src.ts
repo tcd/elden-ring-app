@@ -40,7 +40,7 @@ const IMAGE_FOLDERS: ImageableFolderMap = {
     "Weapon":           "Weapons",
 }
 
-export type CloudflareVariant = "128" | "256" | "512" | "1024"
+export type CloudflareVariant = "72" | "128" | "256" | "512" | "1024"
 
 export const getImageSrc = (type: ImageableString, name: string, variant: CloudflareVariant = "1024"): string => {
     const folder  = IMAGE_FOLDERS[type]

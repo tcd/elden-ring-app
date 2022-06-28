@@ -7,3 +7,7 @@
 .text-shadow {
     text-shadow: v.$text-shadow-offset v.$text-shadow-offset black
 }
+
+.no-vertical-overflow {
+    overflow-y: hidden !important;
+}

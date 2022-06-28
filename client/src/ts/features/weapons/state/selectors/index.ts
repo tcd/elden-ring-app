@@ -37,5 +37,6 @@ export const WeaponsSelectors = {
         skillOptions:       Core.selectAshOfWarOptions,
         activeAffinityName: Core.selectActiveAffinityName,
         choosingAffinity:   Core.selectChoosingAffinity,
+        affinityOptions:    Core.selectAffinityOptions,
     },
 }

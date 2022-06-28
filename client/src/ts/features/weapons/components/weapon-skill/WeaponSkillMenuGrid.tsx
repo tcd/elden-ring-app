@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponSkillMenuImage } from "@app/features/weapons/components"
+import { WeaponSkillMenuImage, AffinityModal3 } from "@app/features/weapons/components"
 
 export const WeaponSkillMenuGrid = (): JSX.Element => {
 
@@ -18,6 +18,13 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     const activeName       = useSelector(Selectors.Weapons.smithing.activeSkillName)
     const skills           = useSelector(Selectors.Weapons.smithing.skillOptions)
     const menuHasScrolled  = useSelector(Selectors.Weapons.menuHasScrolled)
+    // const choosingAffinity = useSelector(Selectors.Weapons.smithing.choosingAffinity)
+
+    const classNames = ["equipment-menu-grid-column"]
+
+    // if (choosingAffinity) {
+    //     classNames.push("no-vertical-overflow")
+    // }
 
     const menuRef = createRef<HTMLDivElement>()
 
@@ -69,9 +76,11 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
 
     return (
         <div
-            className="equipment-menu-grid-column"
+            id="weapon-skill-grid-menu"
+            className={classNames.join(" ")}
             ref={menuRef}
         >
+            <AffinityModal3 />
             {sections}
         </div>
     )
