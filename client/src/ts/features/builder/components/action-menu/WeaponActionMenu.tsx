@@ -26,6 +26,10 @@ const WeaponWeaponActionMenu = (): JSX.Element => {
         dispatch(Actions.Weapons.startCustomizingWeapon())
     }
 
+    const handleCharacterStatusClick = () => {
+        dispatch(Actions.Builder.cycleCharacterStatus())
+    }
+
     const customizeButton =
         canCustomize
             ? <button type="button" className="elden-ring-button" onClick={handleRequestCustomize}>Customize</button>
@@ -36,6 +40,7 @@ const WeaponWeaponActionMenu = (): JSX.Element => {
             <button type="button" className="elden-ring-button" onClick={handleRequestClose}>Back</button>
             <button type="button" className="elden-ring-button" onClick={handleRequestClear}>Clear</button>
             {customizeButton}
+            <button type="button" className="elden-ring-button" onClick={handleCharacterStatusClick}>Switch view (right)</button>
         </div>
     )
 }
