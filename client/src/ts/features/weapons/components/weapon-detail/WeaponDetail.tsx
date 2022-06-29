@@ -35,6 +35,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
     const oldStats    = useSelector(Selectors.Weapons.old.stats)
     const attributes  = useSelector(Selectors.Builder.allAttributes)
     const displayName = useSelector(Selectors.Weapons.active.weaponDisplayName)
+    const activeSkill = useSelector(Selectors.Weapons.active.weaponSkill)
 
     if (isBlank(weapon)) {
         // return <UnarmedWeaponDetail />
@@ -63,9 +64,9 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
                                     <StatRow title={weapon?.weapon_type}                    value={null} />
                                     <StatRow title={weapon.physical_damage_types.join("/")} value={null} />
                                     <br />
-                                    <StatRow title={weapon?.weapon_skill?.name} value={null} />
+                                    <StatRow title={activeSkill?.name} value={null} />
                                     <br />
-                                    <StatRow title="FP Cost" value={weapon?.weapon_skill?.metadata?.complex_fp_cost ?? weapon?.weapon_skill?.metadata?.basic_fp_cost} />
+                                    <StatRow title="FP Cost" value={activeSkill?.metadata?.complex_fp_cost ?? activeSkill?.metadata?.basic_fp_cost} />
                                     <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color={weightColor} />
                                 </ul>
                             </div>

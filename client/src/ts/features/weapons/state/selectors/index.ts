@@ -17,6 +17,7 @@ export const WeaponsSelectors = {
         weaponSettings:    Core.selectActiveWeaponSettings,
         calculatedStats:   Core.selectCalculatedWeaponStats,
         weaponDisplayName: Core.selectActiveWeaponDisplayName,
+        weaponSkill:       Core.selectActiveWeaponSkill,
     },
     bySlot: {
         R1: Core.selectR1Weapon,

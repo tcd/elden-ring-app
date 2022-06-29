@@ -280,6 +280,18 @@ export const selectActiveWeaponSkillName = (rootState: RootState): string => {
     return activeWeapon.weapon_skill.name
 }
 
+export const selectActiveWeaponSkill = (rootState: RootState): WeaponSkill => {
+    const configuredName = selectActiveWeaponSettings(rootState)?.weapon_skill_name
+    if (!isBlank(configuredName)) {
+        return _selectWeaponSkillByName(rootState, configuredName)
+    }
+    const activeWeapon = selectActiveWeapon(rootState)
+    if (!isBlank(activeWeapon)) {
+        return null
+    }
+    return activeWeapon.weapon_skill
+}
+
 export const selectAshOfWarOptions = (rootState: RootState): WeaponSkill[] => {
     const weapon = selectActiveWeapon(rootState)
     if (isBlank(weapon)) {
