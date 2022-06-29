@@ -1,6 +1,4 @@
 export * from "./WeaponSkillMenuGrid"
 export * from "./WeaponSkillMenuImage"
 export * from "./AffinitySelect"
-export * from "./AffinityModal1"
-export * from "./AffinityModal2"
-export * from "./AffinityModal3"
+export * from "./AffinityModal"

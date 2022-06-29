@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponSkillMenuImage, AffinityModal3 } from "@app/features/weapons/components"
+import { WeaponSkillMenuImage, AffinityModal } from "@app/features/weapons/components"
 
 export const WeaponSkillMenuGrid = (): JSX.Element => {
 
@@ -80,7 +80,7 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
             className={classNames.join(" ")}
             ref={menuRef}
         >
-            <AffinityModal3 />
+            <AffinityModal />
             {sections}
         </div>
     )
