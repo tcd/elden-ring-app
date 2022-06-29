@@ -286,7 +286,7 @@ export const selectActiveWeaponSkill = (rootState: RootState): WeaponSkill => {
         return _selectWeaponSkillByName(rootState, configuredName)
     }
     const activeWeapon = selectActiveWeapon(rootState)
-    if (!isBlank(activeWeapon)) {
+    if (isBlank(activeWeapon)) {
         return null
     }
     return activeWeapon.weapon_skill

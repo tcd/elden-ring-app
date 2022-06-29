@@ -53,6 +53,16 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
     else if (newWeight == oldWeight) { weightColor = "default" }
     else if (newWeight <  oldWeight) { weightColor = "red"     }
 
+    let weaponSkillImageElement = <div className="weapon-skill-image-wrapper empty"></div>
+    if (activeSkill?.ash_of_war) {
+        const weaponSkillImgSrc = getImageSrc("Weapon Skill", activeSkill.name, "256")
+        weaponSkillImageElement = (
+            <div className="weapon-skill-image-wrapper">
+                <img className="img-fluid weapon-skill-image" src={weaponSkillImgSrc} alt="weapon image" />
+            </div>
+        )
+    }
+
     return (
         <div className="weapon-detail">
             <div className="row">
@@ -72,8 +82,9 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
                             </div>
                             <div className="col-1"></div>
                             <div className="col weapon-image-column">
+                                {weaponSkillImageElement}
                                 <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src={weaponImgSrc} alt="weapon image" />
+                                    <img className="img-fluid weapon-image" src={weaponImgSrc} alt="weapon image" />
                                 </div>
                             </div>
                         </div>
