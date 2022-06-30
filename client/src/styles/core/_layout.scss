@@ -77,3 +77,37 @@ $side-menu-bg-stops: (
     // background-color: $side-menu-bg;
     background: m.customGradient(90deg, $side-menu-bg, $side-menu-bg-stops);
 }
+
+#er__appHeader {
+    $header-image-size: 55px;
+    .er__appHeader__content {
+
+        height: 86px;
+        margin-top: 15px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        background-image: url("https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public");
+        background-repeat: no-repeat;
+        // background-position: center;
+        // background-size: cover;
+
+        // padding-left: 40px;
+
+        .er__appHeader__icon {
+            width: $header-image-size;
+            height: $header-image-size;
+            margin-left: 40px;
+            margin-right: 15px;
+        }
+
+        .er__appHeader__title {
+            margin-bottom: 0px;
+            color: v.$gold;
+            font-size: 34px;
+        }
+    }
+}
