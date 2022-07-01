@@ -22,11 +22,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
             <div className="er__startingClass__menu">
                 <ul className="er__startingClass__menu__options">
-                    {/* {options} */}
-                    <div className="example example-1">example 1</div>
-                    <div className="example example-2">example 2</div>
-                    <div className="example example-3">example 3</div>
-                    <div className="example example-4">example 4</div>
+                    {options}
                 </ul>
             </div>
 

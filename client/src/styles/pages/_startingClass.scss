@@ -43,15 +43,15 @@
         //     flex-grow: 1;
             white-space: nowrap;
 
-        //     .er__startingClass__menu__option {
-        //         margin: 0px 10px;
+            .er__startingClass__menu__option {
+                margin: 0px 10px;
         //         // background-size: contain;
         //         // background-repeat: no-repeat;
         //         // background-position: "center";
-        //         width: 500px;
-        //         height: 100%;
-        //         background-color: #1f1c16;
-        //         // display: inline-block;
+                display: inline-block;
+                height: 100%;
+                width: 500px;
+                background-color: #1f1c16;
         //         // flex-direction: column;
         //         // flex-wrap: nowrap;
 
@@ -60,7 +60,7 @@
         //         // .er__startingClass__menu__option__title {
         //         //     span {}
         //         // }
-        //     }
+            }
         }
 
     }
