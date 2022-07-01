@@ -61,7 +61,7 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield}>
+                    <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
                         <ul>
                             <ArmorDefenseStats
                                 armor={armor}
@@ -71,7 +71,7 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
                     </ErCard>
                 </div>
                 <div className="col">
-                    <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline}>
+                    <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline} margined={false} className="mx-3 my-2">
                         <ul>
                             <ArmorResistanceStats
                                 armor={armor}
@@ -83,7 +83,7 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline}>
+                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2">
                         <ul>
                             <li> - </li>
                             <li> - </li>

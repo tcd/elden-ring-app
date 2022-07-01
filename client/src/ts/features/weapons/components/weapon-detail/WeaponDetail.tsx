@@ -93,7 +93,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword}>
+                    <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword} margined={false} className="mx-3 my-2">
                         <ul>
                             <WeaponAttackStats
                                 newStats={newStats}
@@ -103,7 +103,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
                     </ErCard>
                 </div>
                 <div className="col">
-                    <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield}>
+                    <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
                         <ul>
                             <WeaponDefenseStats
                                 newWeapon={weapon}
@@ -115,7 +115,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
+                    <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex} margined={false} className="mx-3 my-2">
                         <WeaponScalingStats
                             newStats={newStats}
                             oldStats={oldStats}
@@ -123,7 +123,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
                     </ErCard>
                 </div>
                 <div className="col">
-                    <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended}>
+                    <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended} margined={false} className="mx-3 my-2">
                         <WeaponRequirementStats
                             weapon={weapon}
                             attributes={attributes}
@@ -133,7 +133,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew}>
+                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew} margined={false} className="mx-3 my-2">
                         <WeaponPassiveEffects
                             weapon={weapon}
                             stats={newStats}

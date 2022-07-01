@@ -48,9 +48,11 @@
     @include m.customScrollbar();
 
     .equipment-menu-grid-column {
-        height: 80vh;
+        height: 75vh;
+        // height: 80%;
         overflow-y: scroll;
         padding: 20px;
+        margin-top: 25px;
         border-radius: 5px;
         background-color: rgba($equipment-menu-grid-background, 0.3);
     }
