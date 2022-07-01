@@ -1,7 +1,7 @@
 @use "../variables"as v;
 @use "../mixins/index" as m;
 
-.er__tall-card {
+.er__tallCard {
 
     $header-height: 20px;
     $section-margin: 20px;
@@ -19,20 +19,20 @@
 
     @include m.vanillaList;
 
-    section.er__tall-card__section {
+    section.er__tallCard__section {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
         margin-bottom: $section-margin;
 
-        span.er__tall-card__section--title {
+        span.er__tallCard__section--title {
             white-space: nowrap;
             font-size: $sub-title-font-size;
             color: v.$gold;
         }
     }
 
-    header.er__tall-card__header {
+    header.er__tallCard__header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -48,7 +48,7 @@
             filter: drop-shadow(v.$text-shadow-offset v.$text-shadow-offset 0.075px rgb(0, 0, 0));
         }
 
-        span.er__tall-card__header--title {
+        span.er__tallCard__header--title {
             white-space: nowrap;
             height: 100%;
             padding-top: .2em;
@@ -73,7 +73,7 @@
             border-radius: 3px;
         }
     }
-    .er__tall-card__content--wrapper {
+    .er__tallCard__content--wrapper {
         display: flex;
 
         .content {

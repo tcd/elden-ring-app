@@ -11,11 +11,11 @@ export interface ErTallCardSectionProps {
 
 export const ErTallCardSection = (props: ErTallCardSectionProps): JSX.Element => {
     return (
-        <section className="er__tall-card__section">
-            <span className="er__tall-card__section--title">
+        <section className="er__tallCard__section">
+            <span className="er__tallCard__section--title">
                 {props.title}
             </span>
-            <div className="er__tall-card__section--content">
+            <div className="er__tallCard__section--content">
                 {props.content}
             </div>
         </section>
@@ -41,16 +41,16 @@ export const ErTallCard = (props: ErTallCardProps): JSX.Element => {
     })
 
     return (
-        <article className="er__tall-card">
-            <header className="er__tall-card__header">
-                <div className="er__tall-card__header--icon-holder">
+        <article className="er__tallCard">
+            <header className="er__tallCard__header">
+                <div className="er__tallCard__header--icon-holder">
                     <MdiIcon path={props.iconPath} />
                 </div>
-                <span className="er__tall-card__header--title">
+                <span className="er__tallCard__header--title">
                     {props.title}
                 </span>
             </header>
-            <div className="er__tall-card__content--wrapper">
+            <div className="er__tallCard__content--wrapper">
                 <div className="left-border-wrapper">
                     <div className="left-border-inner vertical-gradient"></div>
                 </div>
