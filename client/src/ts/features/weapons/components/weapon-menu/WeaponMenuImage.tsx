@@ -3,14 +3,13 @@ import { meetsRequirements, getImageSrc } from "@app/util"
 
 export interface WeaponMenuImageProps {
     weapon: Weapon
-    stats: Attributes
+    attributes: Attributes
 }
 
-export const WeaponMenuImage = ({ weapon, stats }: WeaponMenuImageProps): JSX.Element => {
+export const WeaponMenuImage = ({ weapon, attributes }: WeaponMenuImageProps): JSX.Element => {
     const src = getImageSrc("Weapon", weapon.name, "256")
     let cantUse = null
-    if (!meetsRequirements(stats, weapon)) {
-        // cantUse = <span className="requirements-not-met">X</span>
+    if (!meetsRequirements(attributes, weapon)) {
         cantUse = <span className="requirements-not-met"></span>
     }
     return (

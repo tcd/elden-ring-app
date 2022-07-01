@@ -71,7 +71,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
                         className={classes}
                         onClick={() => handleClick(weapon.name)}
                     >
-                        <WeaponMenuImage weapon={weapon} stats={stats} />
+                        <WeaponMenuImage weapon={weapon} attributes={stats} />
                     </div>
                 </MouseOverPopover>
             )
