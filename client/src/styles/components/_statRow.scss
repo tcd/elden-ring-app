@@ -1,7 +1,7 @@
 @use "../variables" as v;
 
-.er__statRow__column__column--color-blue { color: v.$blue; }
-.er__statRow__column__column--color-red  { color: v.$red;  }
+.er__statRow__column--color-blue { color: v.$blue; }
+.er__statRow__column--color-red  { color: v.$red;  }
 
 @mixin stat-row-styles {
     font-size: v.$stat-row-font-size;

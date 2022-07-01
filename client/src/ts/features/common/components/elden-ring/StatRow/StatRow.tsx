@@ -23,7 +23,7 @@ export const StatRow = (props: StatRowProps): JSX.Element => {
             <MouseOverPopover id={`stat-row-${props.title}`} popoverContent={props.description}>
                 <li className="er__statRow__column">
                     <span className={`er__statRow__column__column`}>{props.title}</span>
-                    <span className={`er__statRow__column__column er__statRow__column__column--color-${props.color}`}>{props.value}</span>
+                    <span className={`er__statRow__column__column er__statRow__column--color-${props.color}`}>{props.value}</span>
                 </li>
             </MouseOverPopover>
         )
@@ -31,7 +31,7 @@ export const StatRow = (props: StatRowProps): JSX.Element => {
     return (
         <li className="er__statRow__column">
             <span className={`er__statRow__column__column`}>{props.title}</span>
-            <span className={`er__statRow__column__column er__statRow__column__column--color-${props.color}`}>{props.value}</span>
+            <span className={`er__statRow__column__column er__statRow__column--color-${props.color}`}>{props.value}</span>
         </li>
     )
 }
