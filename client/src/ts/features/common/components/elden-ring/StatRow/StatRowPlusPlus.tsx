@@ -39,14 +39,14 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
         const id = `stat-row-${props.title}`
         return (
             <MouseOverPopover id={id} popoverContent={props.description}>
-                <li className="er__stat-row-plus-plus">
+                <li className="er__statRow__column-plus-plus">
                     <span>{props.title}</span>
-                    <span className={`er__stat-row__column--color-${props.value_1_color}`}>{props.value_1}</span>
-                    <span className={`er__stat-row__column--color-${props.divider_color}`}>{props.divider}</span>
-                    <span className={`er__stat-row__column--color-${props.value_2_color}`}>{props.value_2}</span>
+                    <span className={`er__statRow__column__column--color-${props.value_1_color}`}>{props.value_1}</span>
+                    <span className={`er__statRow__column__column--color-${props.divider_color}`}>{props.divider}</span>
+                    <span className={`er__statRow__column__column--color-${props.value_2_color}`}>{props.value_2}</span>
                     <span className="no-margins">
                         <span>{leftParen}</span>
-                        <span className={`er__stat-row__column--color-${props.value_2_color}`}>{props.value_3})</span>
+                        <span className={`er__statRow__column__column--color-${props.value_2_color}`}>{props.value_3})</span>
                         <span>{rightParen}</span>
                     </span>
                 </li>
@@ -54,14 +54,14 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
         )
     }
     return (
-        <li className="er__stat-row-plus-plus">
+        <li className="er__statRow__column-plus-plus">
             <span>{props.title}</span>
-            <span className={`er__stat-row__column--color-${props.value_1_color}`}>{props.value_1}</span>
-            <span className={`er__stat-row__column--color-${props.divider_color}`}>{props.divider}</span>
-            <span className={`er__stat-row__column--color-${props.value_2_color}`}>{props.value_2}</span>
+            <span className={`er__statRow__column__column--color-${props.value_1_color}`}>{props.value_1}</span>
+            <span className={`er__statRow__column__column--color-${props.divider_color}`}>{props.divider}</span>
+            <span className={`er__statRow__column__column--color-${props.value_2_color}`}>{props.value_2}</span>
             <span className="no-margins">
                 <span>{leftParen}</span>
-                <span className={`er__stat-row__column--color-${props.value_3_color}`}>{props.value_3}</span>
+                <span className={`er__statRow__column__column--color-${props.value_3_color}`}>{props.value_3}</span>
                 <span>{rightParen}</span>
             </span>
         </li>

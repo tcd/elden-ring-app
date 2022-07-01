@@ -1,7 +1,7 @@
 @use "../variables" as v;
 
-.er__stat-row__column--color-blue { color: v.$blue; }
-.er__stat-row__column--color-red  { color: v.$red;  }
+.er__statRow__column__column--color-blue { color: v.$blue; }
+.er__statRow__column__column--color-red  { color: v.$red;  }
 
 @mixin stat-row-styles {
     font-size: v.$stat-row-font-size;
@@ -12,7 +12,7 @@
     }
 }
 
-.er__stat-row {
+.er__statRow__column {
     @include stat-row-styles;
     display: flex;
     flex-direction: row;
@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.er__stat-row-plus {
+.er__statRow__column-plus {
     @include stat-row-styles;
     display: grid;
     grid-template-columns: 30% 45% 10% 15%;
@@ -43,7 +43,7 @@
     // span:nth-child(3) { background: green;  }
     // span:nth-child(4) { background: blue;   }
 }
-.er__stat-row-plus-plus {
+.er__statRow__column-plus-plus {
     @include stat-row-styles;
     display: grid;
     grid-template-columns: 30% 20% 5% 20% 25%;
