@@ -21,6 +21,7 @@ export type ImageableString =
     | "Armor"
     | "Spell"
     | "Spell Group"
+    | "Starting Class"
     | "Talisman"
     | "Upgrade Material"
     | "Weapon Affinity"
@@ -33,6 +34,7 @@ const IMAGE_FOLDERS: ImageableFolderMap = {
     "Armor":            "Armor",
     "Spell":            "Spells",
     "Spell Group":      "Spell Groups",
+    "Starting Class":   "Starting Classes",
     "Talisman":         "Talismans",
     "Upgrade Material": "Upgrade Materials",
     "Weapon Affinity":  "Affinities",
@@ -40,7 +42,7 @@ const IMAGE_FOLDERS: ImageableFolderMap = {
     "Weapon":           "Weapons",
 }
 
-export type CloudflareVariant = "72" | "128" | "256" | "512" | "1024"
+export type CloudflareVariant = "72" | "128" | "256" | "512" | "1024" | "public"
 
 export const getImageSrc = (type: ImageableString, name: string, variant: CloudflareVariant = "1024"): string => {
     const folder  = IMAGE_FOLDERS[type]

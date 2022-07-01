@@ -1,0 +1,73 @@
+.er__startingClass {
+
+    ul {
+        padding-left: 0px;
+        list-style: none;
+    }
+
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .er__startingClass__menu {
+        background-color: orange;
+        margin: 0px 100px;
+        overflow-x: auto;
+        display: inline-flex;
+        width: 100%;
+        flex-grow: 1;
+        white-space: nowrap;
+
+        // ul.er__startingClass__menu__options {
+        //     background-color: yellow;
+
+        //     margin: 0px 100px;
+        //     overflow-x: auto;
+        //     display: inline-flex;
+        //     // flex-direction: row;
+        //     // flex-wrap: nowrap;
+        //     // display: inline-block;
+        //     width: 100%;
+        //     flex-grow: 1;
+        //     white-space: nowrap;
+
+        //     .er__startingClass__menu__option {
+        //         margin: 0px 10px;
+        //         // background-size: contain;
+        //         // background-repeat: no-repeat;
+        //         // background-position: "center";
+        //         width: 500px;
+        //         height: 100%;
+        //         background-color: #1f1c16;
+        //         // display: inline-block;
+        //         // flex-direction: column;
+        //         // flex-wrap: nowrap;
+
+        //         // ul.er__startingClass__menu__option__attributes {}
+        //         // ul.er__startingClass__menu__option__equipment {}
+        //         // .er__startingClass__menu__option__title {
+        //         //     span {}
+        //         // }
+        //     }
+        // }
+
+    }
+}
+
+.example {
+    width: 750px;
+    &:nth-child(even) { background-color: blue;  }
+    &:nth-child(odd)  { background-color: green; }
+}
+
+.er__startingClass__footer {
+    background-color: violet;
+    height: 50px;
+    .er__startingClass__bottomText {}
+}
+
+// .er__startingClass__topBorder,
+// .er__startingClass__bottomBorder {}

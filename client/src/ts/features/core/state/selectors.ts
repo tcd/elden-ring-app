@@ -12,7 +12,7 @@ const selectUserMenuOpened   = (rootState: RootState): boolean => selectCoreSlic
 const selectSideNavOpened    = (rootState: RootState): boolean => selectCoreSlice(rootState)?.sideNavOpened
 const selectExpandedSections = (rootState: RootState): string[] => selectCoreSlice(rootState)?.expandedSections ?? []
 
-export type TitleString = "Equipment" | "Ashes of War" | "Memorize Spells"
+export type TitleString = "Equipment" | "Ashes of War" | "Memorize Spells" | "Select Character Base"
 
 const selectTitle = (rootState: RootState): TitleString => {
     const ashesOfWar = selectCustomizing(rootState)
@@ -29,6 +29,8 @@ const selectTitle = (rootState: RootState): TitleString => {
         //     return "Talismans"
         // case "weapon":
         //     return "Weapons"
+        case "starting-class":
+            return "Select Character Base"
         default:
             return "Equipment"
     }
@@ -44,6 +46,8 @@ const selectTitleIconUrl = (rootState: RootState): string => {
             return `https://imagedelivery.net/${CONFIG.cloudflareHash}/ui/title-icons/spells/${size}`
         case "Equipment":
             return `https://imagedelivery.net/${CONFIG.cloudflareHash}/ui/title-icons/equipment/${size}`
+        case "Select Character Base":
+            return `https://imagedelivery.net/${CONFIG.cloudflareHash}/ui/title-icons/starting-class/${size}`
         default:
             return `https://imagedelivery.net/${CONFIG.cloudflareHash}/ui/title-icons/equipment/${size}`
     }

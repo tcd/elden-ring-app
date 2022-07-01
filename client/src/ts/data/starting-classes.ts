@@ -1,4 +1,4 @@
-import { StartingClass } from "@types"
+import { StartingClass } from "@app/types"
 
 export const STARTING_CLASSES: StartingClass[] = [
     {

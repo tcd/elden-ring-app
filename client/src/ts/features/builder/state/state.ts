@@ -13,7 +13,7 @@ import {
 import { FEATURE_KEYS } from "@util"
 import { reducers, extraReducers } from "./reducers"
 
-export type BuilderMenu = null |  "armor" | "weapon" | "talisman" | "spell"
+export type BuilderMenu = null |  "armor" | "weapon" | "talisman" | "spell" | "starting-class"
 
 // Define a type for the slice state
 export interface BuilderState {
