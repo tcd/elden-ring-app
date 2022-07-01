@@ -1,11 +1,9 @@
-import React from "react"
+import { Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
-import { Attributes, Spell } from "@app/types"
-import { meetsRequirements } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
-import { SpellDetail } from "@app/features/spells/components"
+import { SpellDetail, SpellMenuImage } from "@app/features/spells/components"
 
 const spellCategories = [
     // Incantations
@@ -77,18 +75,18 @@ export const SpellMenu = (): JSX.Element => {
                     className="equipment-menu-cell"
                     onClick={() => handleClick(spell.name)}
                 >
-                    {spellImage(spell, attributes)}
+                    <SpellMenuImage spell={spell} attributes={attributes} />
                 </div>
             )
         })
 
         return (
-            <React.Fragment key={spellCategory}>
+            <Fragment key={spellCategory}>
                 <section id={spellCategory} className="equipment-menu-section">
                     {cells.length > 0 ? cells : spellCategory}
                 </section>
                 <div className="equipment-menu-section-border"></div>
-            </React.Fragment>
+            </Fragment>
         )
     })
 
@@ -107,23 +105,6 @@ export const SpellMenu = (): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-        </div>
-    )
-}
-
-const spellImage = (spell: Spell, stats: Attributes) => {
-    let cantUse = null
-    if (!meetsRequirements(stats, spell)) {
-        cantUse = <span className="requirements-not-met">X</span>
-    }
-    return (
-        <div className="equipment-menu-image-wrapper">
-            {cantUse}
-            <img
-                className="img-fluid"
-                src={spell.image_url}
-                alt={spell.name}
-            />
         </div>
     )
 }
