@@ -20,7 +20,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
         <Box className="er__startingClass">
             {/* <div className="er__startingClass__topBorder"></div> */}
 
-            {/* <div className="er__startingClass__menu"> */}
+            <div className="er__startingClass__menu">
                 <ul className="er__startingClass__menu__options">
                     {/* {options} */}
                     <div className="example example-1">example 1</div>
@@ -28,7 +28,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
                     <div className="example example-3">example 3</div>
                     <div className="example example-4">example 4</div>
                 </ul>
-            {/* </div> */}
+            </div>
 
             {/* <div className="er__startingClass__bottomBorder"></div> */}
 

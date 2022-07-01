@@ -11,28 +11,37 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    justify-items: stretch;
 
     .er__startingClass__menu {
         background-color: orange;
-        margin: 0px 100px;
-        overflow-x: auto;
-        display: inline-flex;
-        width: 100%;
+        // display: border-box;
+        // margin: 0px 100px;
+        // overflow-x: auto;
+        // display: inline-flex;
+        // width: 100%;
         flex-grow: 1;
-        white-space: nowrap;
+        // white-space: nowrap;
 
-        // ul.er__startingClass__menu__options {
-        //     background-color: yellow;
+        ul.er__startingClass__menu__options {
+            background-color: yellow;
+            width: calc(100% - 200px);
+            height: 100%;
+            box-sizing: border-box;
 
-        //     margin: 0px 100px;
-        //     overflow-x: auto;
-        //     display: inline-flex;
+            // margin: 0px 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            overflow-x: scroll;
+            display: default;
         //     // flex-direction: row;
         //     // flex-wrap: nowrap;
         //     // display: inline-block;
-        //     width: 100%;
         //     flex-grow: 1;
-        //     white-space: nowrap;
+            white-space: nowrap;
 
         //     .er__startingClass__menu__option {
         //         margin: 0px 10px;
@@ -52,13 +61,14 @@
         //         //     span {}
         //         // }
         //     }
-        // }
+        }
 
     }
 }
 
 .example {
     width: 750px;
+    display: inline-block;
     &:nth-child(even) { background-color: blue;  }
     &:nth-child(odd)  { background-color: green; }
 }
