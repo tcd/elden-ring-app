@@ -1,4 +1,4 @@
-import { capitalize, forEach } from "lodash"
+import { capitalize } from "lodash"
 import { useDispatch, useSelector } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -16,7 +16,14 @@ export interface StartingClassOptionProps {
 
 export const StartingClassOption = (props: StartingClassOptionProps): JSX.Element => {
 
+    const dispatch = useDispatch()
+
     const { sClass } = props
+
+    const handleClick = () => {
+        dispatch(Actions.Builder.setPendingStartingClass({ name: sClass.name }))
+    }
+
 
     const imageSrc = getImageSrc("Starting Class", sClass.name, "public")
 
@@ -44,7 +51,12 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
     )
 
     return (
-        <Box component="li" className="er__startingClass__menu__option" sx={sx}>
+        <Box
+            component="li"
+            className="er__startingClass__menu__option"
+            sx={sx}
+            onClick={handleClick}
+        >
             <div className="er__startingClass__menu__optionOverlay"></div>
             <div className="er__startingClass__menu__optionContent">
                 <ul className="er__startingClass__menu__option__attributes">

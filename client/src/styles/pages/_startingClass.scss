@@ -86,13 +86,25 @@ $startingClass-bg-gradient-color-right: #221f17;
     .er__startingClass__menu {
         // background-color: orange;
         flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .er__startingClass__menu__arrowContainer {
+            height: 100%;
+            width: 100px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
 
         ul.er__startingClass__menu__options {
             display: default;
             height: 100%;
             width: calc(100% - 200px);
-            margin-left:  100px;
-            margin-right: 100px;
+            // margin-left:  100px;
+            // margin-right: 100px;
             overflow-x: scroll;
             white-space: nowrap;
 
@@ -111,6 +123,10 @@ $startingClass-bg-gradient-color-right: #221f17;
                 padding-bottom: 0px;
                 background-color: #1f1c16;
                 border: 3px solid #312d26;
+
+                &:hover {
+                    cursor: pointer;
+                }
 
                 .er__startingClass__menu__optionOverlay {
                     z-index: v.$zindex-startingClass-background;

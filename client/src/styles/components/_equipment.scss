@@ -1,20 +1,5 @@
 @use "../variables"as v;
 
-$equipment-grid-cell-width:  150px;
-$equipment-grid-cell-height: 170px;
-
-$equipment-slot-image-url-root: "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu";
-
-$equipment-slot-images: (
-    "weapon-left":  $equipment-slot-image-url-root + "/weapon-slot-left.png",
-    "weapon-right": $equipment-slot-image-url-root + "/weapon-slot-right.png",
-    "talisman":     $equipment-slot-image-url-root + "/talisman-slot.png",
-    "armor-head":   $equipment-slot-image-url-root + "/armor-head.png",
-    "armor-chest":  $equipment-slot-image-url-root + "/armor-chest.png",
-    "armor-arms":   $equipment-slot-image-url-root + "/armor-arms.png",
-    "armor-legs":   $equipment-slot-image-url-root + "/armor-legs.png",
-);
-
 .equipment-slot {
     position: relative;
 
@@ -27,13 +12,13 @@ $equipment-slot-images: (
     background-size: contain;
     background-position: center;
 
-    &.equipment-slot-weapon-left  { background-image: url(map-get($equipment-slot-images, "weapon-left"));  }
-    &.equipment-slot-weapon-right { background-image: url(map-get($equipment-slot-images, "weapon-right")); }
-    &.equipment-slot-talisman     { background-image: url(map-get($equipment-slot-images, "talisman"));     }
-    &.equipment-slot-armor-head   { background-image: url(map-get($equipment-slot-images, "armor-head"));   }
-    &.equipment-slot-armor-chest  { background-image: url(map-get($equipment-slot-images, "armor-chest"));  }
-    &.equipment-slot-armor-arms   { background-image: url(map-get($equipment-slot-images, "armor-arms"));   }
-    &.equipment-slot-armor-legs   { background-image: url(map-get($equipment-slot-images, "armor-legs"));   }
+    &.equipment-slot-weapon-left  { background-image: url(map-get(v.$equipment-slot-images, "weapon-left"));  }
+    &.equipment-slot-weapon-right { background-image: url(map-get(v.$equipment-slot-images, "weapon-right")); }
+    &.equipment-slot-talisman     { background-image: url(map-get(v.$equipment-slot-images, "talisman"));     }
+    &.equipment-slot-armor-head   { background-image: url(map-get(v.$equipment-slot-images, "armor-head"));   }
+    &.equipment-slot-armor-chest  { background-image: url(map-get(v.$equipment-slot-images, "armor-chest"));  }
+    &.equipment-slot-armor-arms   { background-image: url(map-get(v.$equipment-slot-images, "armor-arms"));   }
+    &.equipment-slot-armor-legs   { background-image: url(map-get(v.$equipment-slot-images, "armor-legs"));   }
 
     &.equipment-slot-filled {
         display: flex;

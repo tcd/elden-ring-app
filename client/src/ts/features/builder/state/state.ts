@@ -5,8 +5,8 @@ import {
     KitchenSink,
     RequestState,
     StartingClassName,
-} from "@types"
-import { FEATURE_KEYS } from "@util"
+} from "@app/types"
+import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export type BuilderMenu =
@@ -19,39 +19,24 @@ export type BuilderMenu =
 
 // Define a type for the slice state
 export interface BuilderState {
-
     errors: any[]
-
     everythingRequest: RequestState<KitchenSink>
-
-    whichCharacterStatus: "A" | "B"
-
-    currentMenu?: BuilderMenu
-
-    actionMenuDescription: string
-
-    startingClassName: StartingClassName,
-
     attributes: Attributes
+    currentMenu?: BuilderMenu
+    whichCharacterStatus: "A" | "B"
+    actionMenuDescription: string
+    startingClassName: StartingClassName
+    pendingStartingClassName: StartingClassName
+    confirmingStartingClass: boolean
 }
 
 // Define the initial state using that type
 const initialState: BuilderState = {
-
     errors: [],
-
     everythingRequest: {
         status: "idle",
         response: null,
     },
-
-    whichCharacterStatus: "A",
-
-    currentMenu: null,
-    actionMenuDescription: "",
-
-    startingClassName: null,
-
     attributes: {
         "vigor":        0,
         "mind":         0,
@@ -62,15 +47,18 @@ const initialState: BuilderState = {
         "faith":        0,
         "arcane":       0,
     },
+    currentMenu: null,
+    whichCharacterStatus: "A",
+    actionMenuDescription: "",
+    startingClassName: null,
+    pendingStartingClassName: null,
+    confirmingStartingClass: false,
 }
 
 const myBuild: BuilderState = {
     ...initialState,
-
     startingClassName: StartingClassName.Samurai,
-
     currentMenu: "starting-class",
-
     attributes: {
         "vigor":        30,
         "mind":         30,
@@ -81,7 +69,6 @@ const myBuild: BuilderState = {
         "faith":        30,
         "arcane":       30,
     },
-
     // attributes: {
     //     "vigor":        50,
     //     "mind":         40,

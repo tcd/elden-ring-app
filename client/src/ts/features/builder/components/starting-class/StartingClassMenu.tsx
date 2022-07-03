@@ -1,14 +1,16 @@
 import { useEffect } from "react"
 import { capitalize } from "lodash"
 import { useDispatch, useSelector } from "react-redux"
-import { Box, SxProps } from "@mui/material"
+import { Box, Button, IconButton, SxProps } from "@mui/material"
 
 import { STARTING_CLASSES } from "@app/data"
-import { StartingClass, AttributeName } from "@app/types"
-import { getImageSrc } from "@app/util"
-import { StatRow } from "@app/shared"
+import { getImageSrc, getImageSrcManual } from "@app/util"
+import { ErDialog } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
-import { StartingClassOption } from "."
+import { StartingClassOption, StartingClassConfirmationDialog } from "."
+
+const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
+const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
 
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
@@ -22,18 +24,30 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
     }, [])
 
     const startingClasses = STARTING_CLASSES
-    const selectedName = useSelector(Selectors.Builder.startingClassName)
+    const selectedName = useSelector(Selectors.Builder.startingClass.startingClassName)
+    const confirming = useSelector(Selectors.Builder.startingClass.confirmingStartingClass)
 
     const options = startingClasses.map((sClass) => <StartingClassOption key={sClass.name} sClass={sClass} />)
 
     return (
         <Box className="er__startingClass">
+            <StartingClassConfirmationDialog />
             <div className="er__startingClass__topBorder"></div>
 
             <div className="er__startingClass__menu">
+                <div className="er__startingClass__menu__arrowContainer">
+                    <IconButton>
+                        <img src={leftArrowSrc} />
+                    </IconButton>
+                </div>
                 <ul className="er__startingClass__menu__options">
                     {options}
                 </ul>
+                <div className="er__startingClass__menu__arrowContainer">
+                    <IconButton>
+                        <img src={rightArrowSrc} />
+                    </IconButton>
+                </div>
             </div>
 
             <div className="er__startingClass__bottomBorder"></div>

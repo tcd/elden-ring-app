@@ -58,6 +58,21 @@ export const reducers = {
         state.startingClassName = className
         // state.startingClass = STARTING_CLASSES.find(x => x.name == className)
     },
+    setPendingStartingClass(state: BuilderState, action: PayloadAction<{ name: string }>) {
+        const className = action.payload.name as StartingClassName
+        state.pendingStartingClassName = className
+        state.confirmingStartingClass = true
+    },
+    openStartingClassConfirmation(state: BuilderState) {
+        state.confirmingStartingClass = true
+    },
+    cancelStartingClassConfirmation(state: BuilderState) {
+        state.confirmingStartingClass = false
+    },
+    confirmStartingClassName(state: BuilderState) {
+        state.startingClassName = state.pendingStartingClassName
+        state.currentMenu = null
+    },
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) => {

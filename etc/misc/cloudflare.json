@@ -29,6 +29,8 @@
     { "fileName": "Talisman.png",         "cloudflareId": "ui/equipment-menu/talisman"     },
     { "fileName": "Weapon Left.png",      "cloudflareId": "ui/equipment-menu/weapon-left"  },
     { "fileName": "Weapon Right.png",     "cloudflareId": "ui/equipment-menu/weapon-right" },
+    { "fileName": "arrow-left.png",       "cloudflareId": "ui/misc/arrow-left"             },
+    { "fileName": "arrow-right.png",      "cloudflareId": "ui/misc/arrow-right"            },
     { "fileName": "Astrologer.png",       "cloudflareId": "Starting Classes/Astrologer"    },
     { "fileName": "Bandit.png",           "cloudflareId": "Starting Classes/Bandit"        },
     { "fileName": "Confessor.png",        "cloudflareId": "Starting Classes/Confessor"     },

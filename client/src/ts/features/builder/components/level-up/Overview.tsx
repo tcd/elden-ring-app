@@ -8,7 +8,7 @@ export const Overview = (): JSX.Element => {
 
     const level = useSelector(Selectors.Builder.level)
     const runes = useSelector(Selectors.Builder.runesToNextLevel)
-    const baseClass = useSelector(Selectors.Builder.startingClassName)
+    const baseClass = useSelector(Selectors.Builder.startingClass.startingClassName)
 
     return (
         <ErCard title="Overview" iconPath={mdiAccount} className={"mr-5"}>

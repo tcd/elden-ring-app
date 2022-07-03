@@ -28,8 +28,11 @@ export const BuilderSelectors = {
         whichCharacterStatus: Misc.selectWhichCharacterStatus,
         currentMenu: Misc.selectCurrentMenu,
     },
-    startingClassName: StartingClass.selectStartingClassName,
-    startingClass: StartingClass.selectStartingClass,
+    startingClass: {
+        startingClassName:       StartingClass.selectStartingClassName,
+        startingClass:           StartingClass.selectStartingClass,
+        confirmingStartingClass: StartingClass.selectConfirmingStartingClass,
+    },
     level: Stats.selectLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
     allAttributes: Attributes.selectAttributes,
