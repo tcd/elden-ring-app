@@ -21,9 +21,9 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
 
     const sx: SxProps = {
         backgroundImage: `url("${imageSrc}")`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
+        // backgroundSize: "cover",
+        // backgroundRepeat: "no-repeat",
+        // backgroundPosition: "center center",
     }
 
     const attributes = Object.values(AttributeName).map((attr) => (
@@ -44,6 +44,7 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
 
     return (
         <Box component="li" className="er__startingClass__menu__option" sx={sx}>
+            <div className="er__startingClass__menu__optionOverlay"></div>
             <div className="er__startingClass__menu__optionContent">
                 <ul className="er__startingClass__menu__option__attributes">
                     {attributes}
@@ -64,7 +65,7 @@ interface StartingClassEquipmentProps {
 }
 
 const slotSx: SxProps = {
-    backgroundImage: `url("${getImageSrcManual('ui/equipment-menu/empty', '128')}")`,
+    backgroundImage: `url("${getImageSrcManual("ui/equipment-menu/empty", "128")}")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -78,31 +79,6 @@ const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps): JSX.El
 
     const slots: JSX.Element[] = []
 
-    // if (sClass?.R1) {
-    //     const src = getImageSrc("Weapon", sClass.R1, "128")
-    //     slots.push(
-    //         <Box component="li" key="R1" sx={slotSx}></Box>,
-    //     )
-    // }
-    // if (sClass?.R2) {
-    //     const src = getImageSrc("Weapon", sClass.R2, "128")
-    //     slots.push(
-    //         <Box component="li" key="R2" sx={slotSx}></Box>,
-    //     )
-    // }
-    // if (sClass?.L1) {
-    //     const src = getImageSrc("Weapon", sClass.L1, "128")
-    //     slots.push(
-    //         <Box component="li" key="L1" sx={slotSx}></Box>,
-    //     )
-    // }
-    // if (sClass?.L2) {
-    //     const src = getImageSrc("Weapon", sClass.L2, "128")
-    //     slots.push(
-    //         <Box component="li" key="L2" sx={slotSx}></Box>,
-    //     )
-    // }
-
     for (const property of weaponProperties) {
         const propertyValue = sClass[property]
         if (propertyValue) {
@@ -115,17 +91,17 @@ const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps): JSX.El
         }
     }
 
-    for (const property of armorProperties) {
-        const propertyValue = sClass[property]
-        if (propertyValue) {
-            const src = getImageSrc("Armor", propertyValue, "128")
-            slots.push(
-                <Box component="li" key={property} sx={slotSx}>
-                    <img src={src} alt={propertyValue} className="img-fluid" />
-                </Box>,
-            )
-        }
-    }
+    // for (const property of armorProperties) {
+    //     const propertyValue = sClass[property]
+    //     if (propertyValue) {
+    //         const src = getImageSrc("Armor", propertyValue, "128")
+    //         slots.push(
+    //             <Box component="li" key={property} sx={slotSx}>
+    //                 <img src={src} alt={propertyValue} className="img-fluid" />
+    //             </Box>,
+    //         )
+    //     }
+    // }
 
     for (const property of spellProperties) {
         const propertyValue = sClass[property]

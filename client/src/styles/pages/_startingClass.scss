@@ -1,10 +1,31 @@
 @use "../variables"as v;
+@use "../mixins"as m;
 
 .er__startingClass {
+
+    $option-overlay-color-bg: #181815;
+    // $option-overlay-color-bg: indigo;
+
+    $option-overlay-stops: (
+        // 0%:   0.00,
+        25%:  0.00,
+        30%:  0.40,
+        // 40%:  0.30,
+        50%:  0.50,
+        // 60%:  0.50,
+        70%:  0.60,
+        80%:  0.70,
+        90%:  0.80,
+        100%: 0.90,
+    );
 
     ul {
         padding-left: 0px;
         list-style: none;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 
     // background-color: red;
@@ -34,19 +55,34 @@
             white-space: nowrap;
 
             .er__startingClass__menu__option {
+
                 // background-color: green;
+                position: relative;
                 margin: 0px 10px;
-        //         // background-size: contain;
-        //         // background-repeat: no-repeat;
-        //         // background-position: "center";
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
                 display: inline-block;
                 height: 100%;
-                width: 33%;
-                // background-color: #1f1c16;
+                width: 32%;
+                background-color: #1f1c16;
                 margin-top: 0px;
                 margin-bottom: 0px;
                 padding-top: 0px;
                 padding-bottom: 0px;
+                border: 5px solid #312d26;
+
+                .er__startingClass__menu__optionOverlay {
+                    z-index: v.$zindex-startingClass-background;
+                    position: absolute;
+                    // background-color: blue;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    background: m.customGradient(180deg, $option-overlay-color-bg, $option-overlay-stops);
+                }
+
                 .er__startingClass__menu__optionContent {
                     width: 100%;
                     height: 100%;
@@ -56,14 +92,14 @@
                     flex-wrap: nowrap;
                     align-items: center;
                     justify-content: flex-end;
+                    position: relative;
+                    z-index: v.$zindex-startingClass-content;
 
-                    .er__statRow__column span {
-                        font-size: 1rem;
-                    }
+                    .er__statRow__column span { font-size: 1.5rem; }
                 }
 
                 ul.er__startingClass__menu__option__attributes {
-                    width: 200px;
+                    width: 350px;
                 }
                 ul.er__startingClass__menu__option__equipment {
                     display: flex;
@@ -72,8 +108,8 @@
                     margin-top:    10px;
                     margin-bottom: 10px;
                     li {
-                        width:  50px;
-                        height: 50px;
+                        width:  75px;
+                        height: 75px;
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center;
@@ -85,19 +121,17 @@
                 .er__startingClass__menu__option__title {
                     margin-top:    80px;
                     margin-bottom: 20px;
-                    span {}
+                    width: 40%;
+                    background-color: #201f1a;
+                    span {
+                        font-size: 2rem;
+                        background-color: #201f1a;
+                    }
                 }
             }
         }
 
     }
-}
-
-.example {
-    width: 750px;
-    display: inline-block;
-    &:nth-child(even) { background-color: blue;  }
-    &:nth-child(odd)  { background-color: green; }
 }
 
 .er__startingClass__footer {
