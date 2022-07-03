@@ -42,19 +42,23 @@ module Services
     private
 
     # @return [Array]
+    def includes_for_weapon()
+      return [
+        :weapon_type,
+        :weapon_skill,
+        :weapon_stats,
+      ]
+    end
+
+    # @return [Array]
     def includes_for_weapon_skill()
       return [
         :default_affinity,
-        :compatible_weapon_affinities,
-        :compatible_weapon_types,
+        # :compatible_weapon_affinities,
+        # :compatible_weapon_types,
         weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
-        weapon_skill_weapon_types:      [:weapon_skill, :weapon_type],
+        weapon_skill_weapon_types:      [:weapon_skill, :weapon_type]
       ]
-      # return [
-      #   :default_affinity,
-      #   weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
-      #   weapon_skill_weapon_types:      [:weapon_skill, :weapon_type],
-      # ]
     end
 
   end
