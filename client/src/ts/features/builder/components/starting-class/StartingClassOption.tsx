@@ -6,6 +6,7 @@ import { StartingClass, AttributeName } from "@app/types"
 import { getImageSrc, getImageSrcManual } from "@app/util"
 import { StatRow } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
+import { StartingClassEquipment } from "."
 
 export interface StartingClassOptionProps {
     sClass: StartingClass
@@ -57,67 +58,5 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
                 </div>
             </div>
         </Box>
-    )
-}
-
-interface StartingClassEquipmentProps {
-    sClass: StartingClass
-}
-
-const slotSx: SxProps = {
-    backgroundImage: `url("${getImageSrcManual("ui/equipment-menu/empty", "128")}")`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-}
-
-const weaponProperties  = [ "R1", "R2", "L1", "L2" ]
-const armorProperties   = [ "Head", "Chest", "Arms", "Legs"]
-const spellProperties   = [ "Spell1", "Spell2" ]
-
-const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps): JSX.Element => {
-
-    const slots: JSX.Element[] = []
-
-    for (const property of weaponProperties) {
-        const propertyValue = sClass[property]
-        if (propertyValue) {
-            const src = getImageSrc("Weapon", propertyValue, "128")
-            slots.push(
-                <Box component="li" key={property} sx={slotSx}>
-                    <img src={src} alt={propertyValue} className="img-fluid" />
-                </Box>,
-            )
-        }
-    }
-
-    // for (const property of armorProperties) {
-    //     const propertyValue = sClass[property]
-    //     if (propertyValue) {
-    //         const src = getImageSrc("Armor", propertyValue, "128")
-    //         slots.push(
-    //             <Box component="li" key={property} sx={slotSx}>
-    //                 <img src={src} alt={propertyValue} className="img-fluid" />
-    //             </Box>,
-    //         )
-    //     }
-    // }
-
-    for (const property of spellProperties) {
-        const propertyValue = sClass[property]
-        if (propertyValue) {
-            const src = getImageSrc("Spell", propertyValue, "128")
-            slots.push(
-                <Box component="li" key={property} sx={slotSx}>
-                    <img src={src} alt={propertyValue} className="img-fluid" />
-                </Box>,
-            )
-        }
-    }
-
-    return (
-        <ul className="er__startingClass__menu__option__equipment">
-            {slots}
-        </ul>
     )
 }
