@@ -1,0 +1,39 @@
+lions_claw_straight_sword:
+  weapon_skill: lions_claw
+  weapon_type: straight_sword
+lions_claw_greatsword:
+  weapon_skill: lions_claw
+  weapon_type: greatsword
+lions_claw_colossal_sword:
+  weapon_skill: lions_claw
+  weapon_type: colossal_sword
+lions_claw_curved_sword:
+  weapon_skill: lions_claw
+  weapon_type: curved_sword
+lions_claw_curved_greatsword:
+  weapon_skill: lions_claw
+  weapon_type: curved_greatsword
+lions_claw_katana:
+  weapon_skill: lions_claw
+  weapon_type: katana
+lions_claw_twinblade:
+  weapon_skill: lions_claw
+  weapon_type: twinblade
+lions_claw_axe:
+  weapon_skill: lions_claw
+  weapon_type: axe
+lions_claw_greataxe:
+  weapon_skill: lions_claw
+  weapon_type: greataxe
+lions_claw_hammer:
+  weapon_skill: lions_claw
+  weapon_type: hammer
+lions_claw_great_hammer:
+  weapon_skill: lions_claw
+  weapon_type: great_hammer
+lions_claw_flail:
+  weapon_skill: lions_claw
+  weapon_type: flail
+lions_claw_colossal_weapon:
+  weapon_skill: lions_claw
+  weapon_type: colossal_weapon

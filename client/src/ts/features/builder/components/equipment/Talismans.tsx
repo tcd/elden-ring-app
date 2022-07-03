@@ -9,22 +9,24 @@ import {
     Actions,
     Selectors,
 } from "@app/state"
+import { getImageSrc } from "@app/util"
 
 export const Talismans = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const talismans = useSelector(Selectors.Builder.talismans)
+    const talismans = useSelector(Selectors.Talismans.array)
 
     const handleClick = (id: TalismanSlotId) => {
-        dispatch(Actions.Builder.openTalismanModal({ id }))
+        dispatch(Actions.Talismans.openTalismansMenu({ id }))
     }
 
     const slotWithTalisman = (id: TalismanSlotId, talisman?: Talisman) => {
+        const src = getImageSrc("Talisman", talisman.name, "256")
         return (
             <li className="equipment-slot equipment-slot-filled equipment-slot-talisman" key={`talisman_${id}`} onClick={() => handleClick(id)}>
                 {/* <span>{talisman.name}</span> */}
-                <img className="img-fluid" src={talisman.image_url} alt={talisman.name} />
+                <img className="img-fluid" src={src} alt={talisman.name} />
             </li>
         )
     }

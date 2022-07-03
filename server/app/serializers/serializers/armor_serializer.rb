@@ -1,30 +1,33 @@
 module Serializers
   class ArmorSerializer < BaseSerializer
 
+    include SerializerHelpers
+
     fields(
       :name,
-      :image_url,
-      :is_altered,
+      # :image_url,
+      # :is_altered,
+      :sort_group,
       :poise,
       :immunity,
       :robustness,
       :focus,
       :vitality,
-      :effects,
+      # :effects,
     )
 
     field(:armor_type) { |x| x.armor_type.display_name }
 
-    field(:weight) { |x| x.weight&.to_f }
+    float_field(:weight)
 
-    field(:physical)  { |x| x.physical&.to_f  || 0.0 }
-    field(:vs_strike) { |x| x.vs_strike&.to_f || 0.0 }
-    field(:vs_slash)  { |x| x.vs_slash&.to_f  || 0.0 }
-    field(:vs_pierce) { |x| x.vs_pierce&.to_f || 0.0 }
-    field(:magic)     { |x| x.magic&.to_f     || 0.0 }
-    field(:fire)      { |x| x.fire&.to_f      || 0.0 }
-    field(:lightning) { |x| x.lightning&.to_f || 0.0 }
-    field(:holy)      { |x| x.holy&.to_f      || 0.0 }
+    float_field(:physical)
+    float_field(:vs_strike)
+    float_field(:vs_slash)
+    float_field(:vs_pierce)
+    float_field(:magic)
+    float_field(:fire)
+    float_field(:lightning)
+    float_field(:holy)
 
     # association(:effects, blueprint: EquipmentEffectSerializer)
   end

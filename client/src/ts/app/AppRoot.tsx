@@ -8,7 +8,7 @@ import CircularProgress from "@mui/material/CircularProgress"
 import {
     EldenRingMaterialThemeDark,
     // EldenRingMaterialThemeLight,
-} from "@util"
+} from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { AppRoutesComponent } from "./AppRoutesComponent"
 
@@ -18,13 +18,14 @@ const backdropSx: SxProps = {
     zIndex: 50,
 }
 
-export const AppRoot = (_props: never): JSX.Element => {
+export const AppRoot = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
     // const darkModeEnabled = useSelector(Selectors.Core.darkModeEnabled)
     const fetching: boolean = useSelector(Selectors.Builder.api.loading)
     const shouldFetch: boolean = useSelector(Selectors.Builder.api.shouldFetchEverything)
+    const fetchFailed: boolean = useSelector(Selectors.Builder.api.fetchFailed)
 
     // const theme = darkModeEnabled ? EldenRingMaterialThemeDark : EldenRingMaterialThemeLight
     const theme = EldenRingMaterialThemeDark
@@ -32,6 +33,14 @@ export const AppRoot = (_props: never): JSX.Element => {
     useEffect(() => {
         if (shouldFetch) { dispatch(Actions.Builder.fetchEverything()) }
     })
+
+    if (fetchFailed) {
+        return (
+            <div id="er__fetch-failed">
+                <span>Unable to connect to server</span>
+            </div>
+        )
+    }
 
     return (
         <ThemeProvider theme={theme}>

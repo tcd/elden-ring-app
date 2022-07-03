@@ -21,6 +21,8 @@
     "cSpell.words": [
         "affectable",
         "Booleanish",
+        "Imageable",
+        "reduxjs",
         "zindex"
     ],
     "search.exclude": {
@@ -36,5 +38,8 @@
             ],
             "url": "./server/db/seed_data/effects/schema/talismans-with-effects.schema.json",
         },
-    ]
+    ],
+    "solargraph.commandPath": "C:\\Ruby31-x64\\bin\\solargraph.bat",
+    "solargraph.checkGemVersion": false,
+    "solargraph.useBundler": false,
 }

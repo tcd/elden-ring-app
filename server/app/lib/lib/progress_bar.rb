@@ -21,15 +21,15 @@ module Lib
       return if @counter > @total
       if @title
         if !message.blank?
-          print("\r#{@title}: #{@counter}/#{@total} - #{message}")
+          print("\r#{@title}: #{counter_with_commas}/#{total_with_commas} - #{message}")
         else
-          print("\r#{@title}: #{@counter}/#{@total}")
+          print("\r#{@title}: #{counter_with_commas}/#{total_with_commas}")
         end
       else
         if !message.blank?
-          print("\r#{@counter}/#{@total} - #{message}")
+          print("\r#{counter_with_commas}/#{total_with_commas} - #{message}")
         else
-          print("\r#{@counter}/#{@total}")
+          print("\r#{counter_with_commas}/#{total_with_commas}")
         end
       end
       newline() if @counter == @total
@@ -41,6 +41,16 @@ module Lib
     # @return [void]
     def newline()
       print("\n")
+    end
+
+    # @return [String]
+    def total_with_commas()
+      return @total&.to_fs(:delimited)
+    end
+
+    # @return [String]
+    def counter_with_commas()
+      return @counter&.to_fs(:delimited)
     end
 
   end

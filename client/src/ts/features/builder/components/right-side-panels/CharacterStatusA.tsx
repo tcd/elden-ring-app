@@ -4,6 +4,7 @@ import { mdiAccount } from "@mdi/js"
 import { Selectors } from "@app/state"
 import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 import { EquipLoad } from "../EquipLoad"
+import { DESCRIPTIONS } from "@app/data"
 
 export const CharacterStatusA = (): JSX.Element => {
 
@@ -35,32 +36,34 @@ export const CharacterStatusA = (): JSX.Element => {
     ]
 
     const attributeRows = attributeData.map(({ title, value }) => {
+        const description = DESCRIPTIONS.LEVEL_UP_SCREEN[title]
         return (
             <StatRow
                 key={`attribute_${title}`}
                 title={title}
                 value={value}
+                description={description}
             />
         )
     })
 
     return (
-        <ErCard title="Character Status (A)" iconPath={mdiAccount}>
+        <ErCard title="Character Status" iconPath={mdiAccount} margin="none">
             <ul>
-                <StatRow title="Level" value={level} />
-                <StatRow title="Runes Held" value="∞" />
+                <StatRow title="Level" value={level} description={DESCRIPTIONS.LEVEL_UP_SCREEN.Level} />
+                <StatRow title="Runes Held" value="∞" description={DESCRIPTIONS.LEVEL_UP_SCREEN.RUNES_HELD} />
                 <br />
                 {attributeRows}
                 <br />
-                <StatRowPlus title="HP"      value_1={hp?.toLocaleString()}      value_2={hp?.toLocaleString()} />
-                <StatRowPlus title="FP"      value_1={fp?.toLocaleString()}      value_2={fp?.toLocaleString()} />
-                <StatRowPlus title="Stamina" value_1={stamina?.toLocaleString()} value_2={stamina?.toLocaleString()} />
+                <StatRowPlus title="HP"      value_1={hp?.toLocaleString()}      value_2={hp?.toLocaleString()}       description={DESCRIPTIONS.LEVEL_UP_SCREEN.HP}       />
+                <StatRowPlus title="FP"      value_1={fp?.toLocaleString()}      value_2={fp?.toLocaleString()}       description={DESCRIPTIONS.LEVEL_UP_SCREEN.FP}       />
+                <StatRowPlus title="Stamina" value_1={stamina?.toLocaleString()} value_2={stamina?.toLocaleString()}  description={DESCRIPTIONS.LEVEL_UP_SCREEN.Stamina } />
                 <br />
                 <EquipLoad />
                 {/* <br /> */}
-                <StatRow title="Poise" value={poise} />
-                <StatRow title="Discovery" value={discovery} />
-                <StatRow title="Memory Slots" value={10} />
+                <StatRow title="Poise" value={poise} description={DESCRIPTIONS.LEVEL_UP_SCREEN.Poise} />
+                <StatRow title="Discovery" value={discovery} description={DESCRIPTIONS.LEVEL_UP_SCREEN.Discovery} />
+                <StatRow title="Memory Slots" value={10} description={DESCRIPTIONS.LEVEL_UP_SCREEN.MEMORY_SLOTS } />
             </ul>
         </ErCard>
     )

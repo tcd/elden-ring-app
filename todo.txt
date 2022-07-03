@@ -1,12 +1,17 @@
 x 2022-03-28 2022-03-27 Cant set a value as selected in TalismanModal because its filtered out. @client
 x 2022-03-27 EldenRingModal styles @client
 x 2022-03-29 Spells @client @server
-2022-04-27 Add Staves to rails seed data @server
+x 2022-04-27 Add Staves to rails seed data @server
 2022-04-27 Normalize weapon type names across front & back end code @client @server
 2022-04-28 "https://css-tricks.com/grainy-gradients/" @client
-2022-05-01 Update stat map data for Elden Ring 1.04 @client
-2022-05-01 Separate weapon AR data from weapon model for easier maintanence & more flexible calculation @server @client
+x 2022-05-01 Update stat map data for Elden Ring 1.04 @client
+x 2022-05-01 Separate weapon AR data from weapon model for easier maintanence & more flexible calculation @server @client
 2022-05-17 Consolidate ErCard styles.
-2022-05-18 Rename `weapon-detail` css classes.
+x 2022-06-25 2022-05-18 Rename `weapon-detail` css classes.
 2022-05-23 Include checklist(s) in build/state export
-2022-05-24 Completely rewrite AR calculation @client
+x 2022-05-24 Completely rewrite AR calculation @client
+2022-06-05 Fix custom scrollbar @client
+2022-06-15 Épée; passive damage name is lowercase as well.
+2022-06-15 Miséricorde
+2022-06-25 Armor stats are way off. Specifically resistance.
+2022-06-26 Incorporate Equipment Effects into Builder selectors @client

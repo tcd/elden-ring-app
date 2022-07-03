@@ -8,9 +8,9 @@ import {
     LEVEL_RUNES_MAP,
 } from "@app/data"
 
-import * as Weapons from "./weapons"
-import * as Talismans from "./talismans"
-import * as Armor from "./armor"
+import { ArmorSelectors as Armor } from "@app/features/armor"
+import { TalismansSelectors as Talismans } from "@app/features/talismans"
+import { WeaponsSelectors as Weapons } from "@app/features/weapons"
 
 import * as Attributes from "./attributes"
 // import * as Resistance from "./resistance"
@@ -29,8 +29,8 @@ const selectLevelAlt = (state: RootState): number => {
 export const selectLevel = (state: RootState): number => {
     const addedLevels = Attributes.selectTotalAttributes(state)
     const startingClass = StartingClass.selectStartingClass(state)
-    const l = startingClass?.attributes?.level ?? 0
-    const t = startingClass?.attributes?.total ?? 0
+    const l = startingClass?.level ?? 0
+    const t = startingClass?.total_levels ?? 0
     return addedLevels - t + l
 }
 
@@ -56,13 +56,13 @@ export const selectDiscovery = (state: RootState): string => {
 }
 
 export const selectPoise = (state: RootState): number => {
-    const armor       = Armor.selectCompactArmor(state)
+    const armor       = Armor.compactArray(state)
     const armorPoise = sum(armor.map(x => x?.poise ?? 0))
     return sum([armorPoise].flat())
 }
 
 const selectEffects = (state: RootState) => {
-    const talismans = Talismans.selectCompactTalismans(state)
+    const talismans = Talismans.compactArray(state)
     const talismanEffects = talismans.map(x => x.effects)
 
     return [talismanEffects]

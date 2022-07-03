@@ -93,7 +93,12 @@
                 "Fire Damage Negation",
                 "Lightning Damage Negation",
                 "Holy Damage Negation",
-                "Guard Boost"
+                "Guard Boost",
+                "Physical Attack Power",
+                "Magic Attack Power",
+                "Fire Attack Power",
+                "Lightning Attack Power",
+                "Holy Attack Power"
             ]
         }
     }

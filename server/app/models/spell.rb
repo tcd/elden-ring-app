@@ -1,12 +1,6 @@
 class Spell < ApplicationRecord
 
   # @return [Array<String>]
-  SPELL_TYPES = [
-    "Sorcery",
-    "Incantation",
-  ].freeze()
-
-  # @return [Array<String>]
   SPELL_BOOST_GROUPS = [
     # Sorceries
     "Full Moon Sorcery",
@@ -39,7 +33,7 @@ class Spell < ApplicationRecord
 
   # @!attribute spell_type
   #   @return [String]
-  validates(:spell_type, inclusion: { in: SPELL_TYPES, message: "%{value} is not a valid spell_type" })
+  validates(:spell_type, inclusion: { in: Lib::Constants::SpellTypes::ALL, message: "%{value} is not a valid spell_type" })
 
   # @!attribute description
   #   @return [String]
@@ -131,7 +125,7 @@ class Spell < ApplicationRecord
 
   # @return [String]
   def image_url()
-    return "/public/images/spells/#{self.name.gsub(':', '_')}.png"
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Spells/#{self.name.gsub(':', '_')}/public"
   end
 
 end

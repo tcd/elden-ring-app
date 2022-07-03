@@ -3,11 +3,12 @@ module Serializers
 
     fields(
       :name,
-      :image_url,
+      # :image_url,
       :description,
       :long_description,
       :restricts,
       # :effects,
+      :sort_group,
     )
 
     field(:weight) { |x| x.weight&.to_f }

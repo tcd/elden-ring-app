@@ -13,8 +13,10 @@ module Lib
     #
     # @param data [Object]
     # @param name [String]
+    # @param add_timestamp [Boolean]
+    # @param log [Boolean]
     # @return [String]
-    def self.save_to_file(data, name, add_timestamp: true)
+    def self.save_to_file(data, name, add_timestamp: true, log: false)
       base_name = File.basename(name)
       file_name = base_name
       if add_timestamp
@@ -26,6 +28,7 @@ module Lib
       data = JSON.pretty_generate(data) unless data.is_a?(String)
       File.open(path, "a") { |f| f.write(data) }
       # File.write(path, data, mode: "a")
+      puts("file written: #{path.to_s}") if log
       return path.to_s()
     end
 

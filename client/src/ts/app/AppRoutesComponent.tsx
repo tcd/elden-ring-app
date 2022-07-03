@@ -9,22 +9,19 @@ import {
     TestPage,
     BuilderPage,
     ChecklistPage,
+    StartingClassMenu,
 
     TalismanMenu,
     TalismansPage,
-    TalismanDetailPage,
 
     ArmorMenu,
     ArmorPage,
-    ArmorDetailPage,
 
     WeaponMenu,
     WeaponsPage,
-    WeaponDetailPage,
 
     SpellMenu,
     SpellsPage,
-    SpellDetailPage,
 } from "@app/features"
 
 export const AppRoutesComponent = () => useRoutes(routes)
@@ -42,25 +39,23 @@ const routes: RouteObject[] = [
             { path: "/checklist",        element: <ChecklistPage />      },
             { path: "/test",             element: <TestPage />           },
             { path: "/settings",         element: <SettingsPage />       },
+            { path: "/starting-class",   element: <StartingClassMenu />  },
 
             { path: "/talismans",        element: <TalismansPage />      },
             { path: "/talismans/menu",   element: <TalismanMenu />       },
             { path: "/talismans/table",  element: <TalismansPage />      },
-            { path: "/talismans/detail", element: <TalismanDetailPage /> },
 
-            { path: "/armor",            element: <ArmorPage />          },
-            { path: "/armor/detail",     element: <ArmorDetailPage />    },
+            { path: "/armor",            element: <ArmorMenu />          },
             { path: "/armor/menu",       element: <ArmorMenu />          },
+            { path: "/armor/table",      element: <ArmorPage />          },
 
             { path: "/weapons",          element: <WeaponMenu />         },
             { path: "/weapons/menu",     element: <WeaponMenu />         },
             { path: "/weapons/table",    element: <WeaponsPage />        },
-            { path: "/weapons/detail",   element: <WeaponDetailPage />   },
 
             { path: "/spells",          element: <SpellsPage />          },
             { path: "/spells/menu",     element: <SpellMenu />           },
             { path: "/spells/table",    element: <SpellsPage />          },
-            { path: "/spells/detail",   element: <SpellDetailPage />     },
         ],
     },
 ]

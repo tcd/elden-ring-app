@@ -1,18 +1,20 @@
 import { useSelector, useDispatch } from "react-redux"
 
 import { Talisman } from "@app/types"
+import { getImageSrc } from "@app/util"
+import { Selectors } from "@app/state"
 import {
     CustomTable,
     CustomTableColumn,
 } from "@app/shared"
-import { Selectors } from "@app/state"
 
 const renderImageCell = (talisman: Talisman) => {
+    const imageSrc = getImageSrc("Talisman", talisman.name, "256")
     return (
         <div style={{ width: "75px" }}>
             <img
                 className="img-fluid"
-                src={talisman.image_url}
+                src={imageSrc}
                 alt="talisman"
             />
         </div>

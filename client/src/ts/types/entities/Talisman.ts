@@ -1,8 +1,19 @@
 import { BaseEntity, EquipmentEffect } from "@types"
 
+export type TalismanSortGroup =
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 7
+    | 8
+
+export const TALISMAN_SORT_GROUPS: TalismanSortGroup[] = [ 1, 2, 3, 4, 5, 6, 7, 8 ]
+
 export interface Talisman extends BaseEntity {
     name: string
-    image_url: string
     description: string
     longDescription?: string
     weight: number
@@ -10,6 +21,7 @@ export interface Talisman extends BaseEntity {
     location?: string
     effects?: EquipmentEffect[]
     tags?: string[]
+    sort_group?: TalismanSortGroup
 }
 
 export type TalismanSlotId =

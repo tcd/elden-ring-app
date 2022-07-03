@@ -6,8 +6,8 @@ module Serializers
     # fields(:created_at, :updated_at)
 
     fields(
-      :display_name,
-      :metadata,
+      # :display_name,
+      # :metadata,
     )
 
   end

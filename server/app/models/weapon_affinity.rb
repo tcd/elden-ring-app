@@ -1,3 +1,10 @@
+# Affinities in Elden Ring determine the following Weapon properties:
+#
+# - attribute scaling
+# - attack power
+# - guard boost
+# - guarded damage negation
+# - passive damage
 class WeaponAffinity < ApplicationRecord
   # ============================================================================
   # Attributes
@@ -10,7 +17,7 @@ class WeaponAffinity < ApplicationRecord
   validates(:name, presence: true, uniqueness: true)
 
   # @!attribute sort_order
-  #   @return [String]
+  #   @return [Integer]
   validates(:sort_order, presence: true, uniqueness: true)
 
   # @!endgroup Attributes
@@ -21,15 +28,25 @@ class WeaponAffinity < ApplicationRecord
 
   # @!group Associations
 
-  # # @!attribute compatible_weapons_skills
-  # #   @return [Array<WeaponSkill>]
-  # has_many(:compatible_weapon_skills)
+  # @!attribute weapon_stats
+  #   @return [Array<WeaponStat>]
+  has_many(:weapon_stats, class_name: "WeaponStat")
 
-  # @!attribute weapon_attack_stats
-  #   @return [Array<WeaponAttackStat>]
+  # @!attribute default_skills
+  #   @return [Array<WeaponSkill>]
+  has_many(:default_skills, class_name: "WeaponSkill", inverse_of: :default_affinity)
+
+  # @!attribute weapon_skill_weapon_affinities
+  #   @return [Array<WeaponSkillWeaponAffinity>]
+  has_many(:weapon_skill_weapon_affinities, inverse_of: :weapon_affinity)
+
+  # @!attribute compatible_skills
+  #   @return [Array<WeaponSkill>]
   has_many(
-    :weapon_attack_stats,
-    class_name: "WeaponAttackStat",
+    :compatible_skills,
+    through: :weapon_skill_weapon_affinities,
+    source: :weapon_skill,
+    class_name: "WeaponSkill",
   )
 
   # @!endgroup Associations
@@ -37,6 +54,11 @@ class WeaponAffinity < ApplicationRecord
   # ============================================================================
   # Instance Methods
   # ============================================================================
+
+  # @return [Integer]
+  def display_order()
+    return "/public/images/weapon-affinities/#{self.name}.png"
+  end
 
   # @return [String]
   def image_url()

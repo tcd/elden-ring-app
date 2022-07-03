@@ -1,19 +1,40 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { Talisman } from "@types"
-import { FEATURE_KEYS } from "@util"
+import { TalismanSet, TalismanSlotId } from "@app/types"
+import { FEATURE_KEYS } from "@app/util"
 import { reducers } from "./reducers"
 
 export interface TalismansState {
-    activeName: string
+    talismanNames: TalismanSet
+    activeSlotId: TalismanSlotId
+    oldTalismanName?: string
+    menuHasScrolled: boolean
 }
 
 const initialState: TalismansState = {
-    activeName: "Great-Jar's Arsenal",
+    talismanNames: {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+    },
+    activeSlotId: null,
+    oldTalismanName: null,
+    menuHasScrolled: false,
+}
+
+const initialDevState: TalismansState = {
+    ...initialState,
+    talismanNames: {
+        "1": "Red-Feathered Branchsword",
+        "2": "Ritual Sword Talisman",
+        "3": "Blue-Feathered Branchsword",
+        "4": "Ritual Shield Talisman",
+    },
 }
 
 export const TalismansSlice = createSlice({
     name: FEATURE_KEYS.Talismans,
-    initialState,
+    initialState: initialDevState,
     reducers: reducers,
 })

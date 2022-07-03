@@ -1,0 +1,1236 @@
+{
+    "$schema": "../schema/effect-seed-data.schema.json",
+    "seeds": [
+        {
+            "model": "Talisman",
+            "model_name": "Dragoncrest Shield Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Boosts physical damage negation",
+                "longDescription": "Boosts physical damage negation by 10%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Dragoncrest Shield Talisman +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.13,
+            "metadata": {
+                "description": "Boosts physical damage negation",
+                "longDescription": "Boosts physical damage negation by 13%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Dragoncrest Shield Talisman +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Boosts physical damage negation",
+                "longDescription": "Boosts physical damage negation by 15%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Dragoncrest Greatshield Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.2,
+            "metadata": {
+                "description": "Enormously boosts physical damage negation",
+                "longDescription": "Boosts physical damage negation by 20%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Spelldrake Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.13,
+            "metadata": {
+                "description": "Boosts magic damage negation",
+                "longDescription": "Boosts Magic damage negation by 13%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Spelldrake Talisman +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.17,
+            "metadata": {
+                "description": "Boosts magic damage negation",
+                "longDescription": "Boosts Magic damage negation by 17%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Spelldrake Talisman +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.2,
+            "metadata": {
+                "description": "Boosts magic damage negation",
+                "longDescription": "Boosts Magic damage negation by 20%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Flamedrake Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.13,
+            "metadata": {
+                "description": "Boosts fire damage negation",
+                "longDescription": "Boosts Fire damage negation by 13%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Flamedrake Talisman +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.17,
+            "metadata": {
+                "description": "Boosts fire damage negation",
+                "longDescription": "Boosts Fire damage negation by 17%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Flamedrake Talisman +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.2,
+            "metadata": {
+                "description": "Boosts fire damage negation",
+                "longDescription": "Boosts Fire damage negation by 20%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Boltdrake Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.13,
+            "metadata": {
+                "description": "Boosts lightning damage negation",
+                "longDescription": "Boosts Lightning damage negation by 13%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Boltdrake Talisman +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.17,
+            "metadata": {
+                "description": "Boosts lightning damage negation",
+                "longDescription": "Boosts Lightning damage negation by 17%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Boltdrake Talisman +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.2,
+            "metadata": {
+                "description": "Boosts lightning damage negation",
+                "longDescription": "Boosts Lightning damage negation by 20%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Haligdrake Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.13,
+            "metadata": {
+                "description": "Boosts holy damage negation",
+                "longDescription": "Boosts Holy damage negation by 13%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Haligdrake Talisman +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.17,
+            "metadata": {
+                "description": "Boosts holy damage negation",
+                "longDescription": "Boosts Holy damage negation by 17%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Haligdrake Talisman +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.2,
+            "metadata": {
+                "description": "Boosts holy damage negation",
+                "longDescription": "Boosts Holy damage negation by 20%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Immunizing Horn Charm",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Immunity",
+            "value": 90,
+            "metadata": {
+                "description": "Raises Immunity",
+                "longDescription": "Raises Immunity by 90"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Immunizing Horn Charm +1",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Immunity",
+            "value": 140,
+            "metadata": {
+                "description": "Raises Immunity",
+                "longDescription": "Raises Immunity by 140"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Clarifying Horn Charm",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Focus",
+            "value": 90,
+            "metadata": {
+                "description": "Raises Focus",
+                "longDescription": "Raises Focus by 90"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Clarifying Horn Charm +1",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Focus",
+            "value": 140,
+            "metadata": {
+                "description": "Raises Focus",
+                "longDescription": "Raises Focus by 140"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Stalwart Horn Charm",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Robustness",
+            "value": 90,
+            "metadata": {
+                "description": "Greatly raises robustness"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Stalwart Horn Charm +1",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Robustness",
+            "value": 140,
+            "metadata": {
+                "description": "Greatly raises robustness"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Crimson Amber Medallion",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "HP",
+            "value": 0.06,
+            "metadata": {
+                "description": "Raises maximum HP",
+                "longDescription": "Raises maximum HP by 6%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Crimson Amber Medallion +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "HP",
+            "value": 0.07,
+            "metadata": {
+                "description": "Raises maximum HP",
+                "longDescription": "Raises maximum HP by 7%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Crimson Amber Medallion +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "HP",
+            "value": 0.075,
+            "metadata": {
+                "description": "Raises maximum HP",
+                "longDescription": "Raises maximum HP by 7.5%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Cerulean Amber Medallion",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "FP",
+            "value": 0.07,
+            "metadata": {
+                "description": "Raises maximum FP",
+                "longDescription": "Raises maximum FP by 7%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Cerulean Amber Medallion +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "FP",
+            "value": 0.09,
+            "metadata": {
+                "description": "Raises maximum FP",
+                "longDescription": "Raises maximum FP by 9%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Cerulean Amber Medallion +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "FP",
+            "value": 0.11,
+            "metadata": {
+                "description": "Raises maximum FP",
+                "longDescription": "Raises maximum FP by 11%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Viridian Amber Medallion",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Stamina",
+            "value": 0.11,
+            "metadata": {
+                "description": "Raises maximum stamina",
+                "longDescription": "Raises maximum stamina by 11%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Viridian Amber Medallion +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Stamina",
+            "value": 0.13,
+            "metadata": {
+                "description": "Raises maximum stamina",
+                "longDescription": "Raises maximum stamina by 13%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Viridian Amber Medallion +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Stamina",
+            "value": 0.15,
+            "metadata": {
+                "description": "Raises maximum stamina",
+                "longDescription": "Raises maximum stamina by 15%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Arsenal Charm",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Max Equip Load",
+            "value": 0.15,
+            "metadata": {
+                "description": "Raises maximum equipment load",
+                "longDescription": "Raises maximum equipment load by 15%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Arsenal Charm +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Max Equip Load",
+            "value": 0.17,
+            "metadata": {
+                "description": "Raises maximum equipment load",
+                "longDescription": "Raises maximum equipment load by 17%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Great-Jar's Arsenal",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Max Equip Load",
+            "value": 0.19,
+            "metadata": {
+                "description": "Vastly raises maximum equip load",
+                "longDescription": "Raises maximum equip load by 19%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "HP",
+            "value": 0.03,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (3%), Stamina (6.75%), and Equip Load (5%)"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Stamina",
+            "value": 0.0675,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (3%), Stamina (6.75%), and Equip Load (5%)"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Max Equip Load",
+            "value": 0.05,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (3%), Stamina (6.75%), and Equip Load (5%)"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "HP",
+            "value": 0.035,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (3.5%), Stamina (8.25%), and Equip Load (6.5%)."
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Stamina",
+            "value": 0.0825,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (3.5%), Stamina (8.25%), and Equip Load (6.5%)."
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor +1",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Max Equip Load",
+            "value": 0.065,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (3.5%), Stamina (8.25%), and Equip Load (6.5%)."
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "HP",
+            "value": 0.04,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (4%), Stamina (9.5%), and Equip Load (8%)"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Stamina",
+            "value": 0.095,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (4%), Stamina (9.5%), and Equip Load (8%)"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Erdtree's Favor +2",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Max Equip Load",
+            "value": 0.08,
+            "metadata": {
+                "description": "Raises maximum HP, Stamina, and Equip Load",
+                "longDescription": "Raises maximum HP (4%), Stamina (9.5%), and Equip Load (8%)"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Vigor",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Endurance",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Strength",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Dexterity",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Strike Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Slash Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Pierce Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Vigor",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Endurance",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Strength",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Dexterity",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Strike Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Slash Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Pierce Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Radagon's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Starscourge Heirloom",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Strength",
+            "value": 5,
+            "metadata": {
+                "description": "Raises Strength",
+                "longDescription": "Raises Strength by 5 levels"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Prosthesis-Wearer Heirloom",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Dexterity",
+            "value": 5,
+            "metadata": {
+                "description": "Raises Dexterity",
+                "longDescription": "Raises Dexterity by 5 levels"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Stargazer Heirloom",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Intelligence",
+            "value": 5,
+            "metadata": {
+                "description": "Raises Intelligence",
+                "longDescription": "Raises Intelligence by 5 levels"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Two Fingers Heirloom",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Faith",
+            "value": 5,
+            "metadata": {
+                "description": "Raises Faith",
+                "longDescription": "Raises Faith by 5 levels"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Silver Scarab",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Discovery",
+            "value": 75,
+            "metadata": {
+                "description": "Raises item discovery"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Bull-Goat's Talisman",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "Poise",
+            "value": 0.33,
+            "metadata": {
+                "description": "Raises Poise",
+                "longDescription": "Raises Poise by 33%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Mind",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Intelligence",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Faith",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Arcane",
+            "value": 3,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Strike Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Slash Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Pierce Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Scarseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.1,
+            "metadata": {
+                "description": "Raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Mind",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Intelligence",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Faith",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "flat",
+            "effect_type": "increase",
+            "affected_stat": "Arcane",
+            "value": 5,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Strike Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Slash Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Pierce Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Marika's Soreseal",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.15,
+            "metadata": {
+                "description": "Greatly raises attributes, but also increases damage taken"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Physical Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Strike Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Slash Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "VS Pierce Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Magic Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Fire Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Lightning Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Daedicar's Woe",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "Holy Damage Negation",
+            "value": 0.5,
+            "metadata": {
+                "description": "Increases damage taken",
+                "longDescription": "Increases damage taken by 50%"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Primal Glintstone Blade",
+            "effect_method": "percentage",
+            "effect_type": "increase",
+            "affected_stat": "FP",
+            "value": 0.25,
+            "metadata": {
+                "description": "Spells consume less FP, but maximum HP is reduced"
+            }
+        },
+        {
+            "model": "Talisman",
+            "model_name": "Primal Glintstone Blade",
+            "effect_method": "percentage",
+            "effect_type": "decrease",
+            "affected_stat": "HP",
+            "value": 0.15,
+            "metadata": {
+                "description": "Spells consume less FP, but maximum HP is reduced"
+            }
+        }
+    ]
+}

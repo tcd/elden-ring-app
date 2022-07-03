@@ -2,31 +2,18 @@ no_skill:
   name: "No Skill"
   description: "This armament has no skill. If the armament in the other hand has a skill, that skill will be used instead."
   ash_of_war: true
+  default_affinity: standard
   is_chargeable: false
-  can_be_applied_to: [
-    "Small Shields",
-    "Medium Shields",
-    "Greatshields",
-    "Torches",
-  ]
 
 lions_claw:
   name: "Lion's Claw"
   description: "Lion's Claw: Skill of the Redmanes, who fought alongside General Radahn. Somersault forwards, striking foes with armament."
   ash_of_war: true
   is_chargeable: null
-  can_be_applied_to: [
-    "Straight Swords",
-    "Greatswords",
-    "Colossal Swords",
-    "Curved Swords",
-    "Curved Greatswords",
-    "Katanas",
-    "Twinblades",
-    "Hammers",
-    "Great Hammers",
-    "Axes",
-    "Greataxes",
-    "Flails",
-    "Colossal Weapons",
-  ]
+
+
+barbaric_roar:
+  name: "Barbaric Roar"
+  description: "Let loose a bestial roar to rally the spirit and increase attack power. While active, strong attacks change to savage combo attacks."
+  ash_of_war: true
+  is_chargeable: false

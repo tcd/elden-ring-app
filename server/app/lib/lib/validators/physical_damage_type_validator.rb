@@ -10,7 +10,7 @@ module Lib
           return nil
         end
         record.physical_damage_types.each do |dt|
-          unless Weapon::PHYSICAL_DAMAGE_TYPES.include?(dt)
+          unless Lib::Constants::DamageTypes::Physical::ALL.include?(dt)
             record.errors.add(:physical_damage_types, "'#{dt}' is not a valid physical_damage_type")
           end
         end

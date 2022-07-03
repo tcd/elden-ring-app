@@ -1,10 +1,10 @@
 import { BaseEntity, EquipmentEffect } from "@types"
 
 export enum ArmorType {
-    Head = "Head",
+    Head  = "Head",
     Chest = "Chest",
-    Arms = "Arms",
-    Legs = "Legs",
+    Arms  = "Arms",
+    Legs  = "Legs",
 }
 
 export interface ArmorSet {
@@ -16,26 +16,42 @@ export interface ArmorSet {
 
 export interface Armor extends BaseEntity {
     name: string
-    image_url: string
     armor_type: ArmorType
-    weight: number
-    // resistance: {
-        immunity?: number
-        robustness?: number
-        focus?: number
-        vitality?: number
-        poise?: number
-    // }
-    // damageNegation: {
-        physical?: number
-        vs_strike?: number
-        vs_slash?: number
-        vs_pierce?: number
-        magic?: number
-        fire?: number
-        lightning?: number
-        holy?: number
-    // }
+    weight: Decimal
+    poise?: number
+    sort_group?: ArmorSortGroup
+
     effects?: EquipmentEffect[]
-    tags?: string[]
+    // tags?: string[]
+
+    // Resistance
+    immunity?: Integer
+    robustness?: Integer
+    focus?: Integer
+    vitality?: Integer
+
+    // Damage Negation
+    physical?: Decimal
+    vs_strike?: Decimal
+    vs_slash?: Decimal
+    vs_pierce?: Decimal
+    magic?: Decimal
+    fire?: Decimal
+    lightning?: Decimal
+    holy?: Decimal
 }
+
+export type ArmorSortGroup =
+    | 1
+    | 2
+    | 3
+    | 4
+    | 5
+    | 6
+    | 7
+    | 8
+    | 9
+    | 10
+    | 11
+
+export const ARMOR_SORT_GROUPS: ArmorSortGroup[] = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]

@@ -1,17 +1,20 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import {
-    ArmorType,
     KitchenSink,
     StartingClassName,
     TalismanSlotId,
-    WeaponSlotId,
-} from "@types"
-import { BuilderState } from "./state"
-
+} from "@app/types"
+import {
+    BuilderState,
+    BuilderMenu,
+} from "./state"
 import {
     fetchEverything,
 } from "./thunks"
+import { ArmorActions } from "@app/features/armor"
+import { WeaponsActions } from "@app/features/weapons"
+import { TalismansActions } from "@app/features/talismans"
 
 export const reducers = {
     incrementAttribute(state: BuilderState, action: PayloadAction<{ name: string }>) {
@@ -24,39 +27,28 @@ export const reducers = {
             state.attributes[action.payload.name]--
         }
     },
-    // =========================================================================
-    // Talisman
-    // =========================================================================
-    setTalisman(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.talisman_names[state.talisman.active_number?.toString()] = action.payload.name
+    cycleCharacterStatus(state: BuilderState, action?: PayloadAction<"A" | "B">) {
+        switch (state.whichCharacterStatus) {
+            case null:
+                state.whichCharacterStatus = "A"
+                break
+            case "A":
+                state.whichCharacterStatus = "B"
+                break
+            case "B":
+                state.whichCharacterStatus = "A"
+                break
+            default:
+                state.whichCharacterStatus = "A"
+                break
+        }
+        // state.whichCharacterStatus = action.payload
     },
-    removeTalisman(state: BuilderState) {
-        state.talisman_names[state.talisman.active_number?.toString()] = null
+    setCurrentMenu(state: BuilderState, action: PayloadAction<BuilderMenu>) {
+        state.currentMenu = action.payload
     },
-    openTalismanModal(state: BuilderState, action: PayloadAction<{ id: TalismanSlotId }>) {
-        state.talisman.active_number = action.payload.id
-        state.talisman.modal_open = true
-    },
-    closeTalismanModal(state: BuilderState) {
-        state.talisman.active_number = null
-        state.talisman.modal_open = false
-    },
-    // =========================================================================
-    // Weapons
-    // =========================================================================
-    setWeapon(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.weapon_names[state.weapon.active_slot] = action.payload.name
-    },
-    removeWeapon(state: BuilderState) {
-        state.weapon_names[state.weapon.active_slot] = null
-    },
-    openWeaponModal(state: BuilderState, action: PayloadAction<{ id: WeaponSlotId }>) {
-        state.weapon.active_slot = action.payload.id
-        state.weapon.modal_open = true
-    },
-    closeWeaponModal(state: BuilderState) {
-        state.weapon.active_slot = null
-        state.weapon.modal_open = false
+    clearCurrentMenu(state: BuilderState) {
+        state.currentMenu = null
     },
     // =========================================================================
     // Starting Class
@@ -66,22 +58,20 @@ export const reducers = {
         state.startingClassName = className
         // state.startingClass = STARTING_CLASSES.find(x => x.name == className)
     },
-    // =========================================================================
-    // Armor
-    // =========================================================================
-    setArmor(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        state.armor_names[state.armor.active_type] = action.payload.name
+    setPendingStartingClass(state: BuilderState, action: PayloadAction<{ name: string }>) {
+        const className = action.payload.name as StartingClassName
+        state.pendingStartingClassName = className
+        state.confirmingStartingClass = true
     },
-    removeArmor(state: BuilderState) {
-        state.armor_names[state.armor.active_type] = null
+    openStartingClassConfirmation(state: BuilderState) {
+        state.confirmingStartingClass = true
     },
-    openArmorModal(state: BuilderState, action: PayloadAction<{ type: ArmorType }>) {
-        state.armor.active_type = action.payload.type
-        state.armor.modal_open = true
+    cancelStartingClassConfirmation(state: BuilderState) {
+        state.confirmingStartingClass = false
     },
-    closeArmorModal(state: BuilderState) {
-        state.armor.active_type = null
-        state.armor.modal_open = false
+    confirmStartingClassName(state: BuilderState) {
+        state.startingClassName = state.pendingStartingClassName
+        state.currentMenu = null
     },
 }
 
@@ -101,4 +91,13 @@ export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) =>
             state.everythingRequest.status = "fulfilled"
             state.everythingRequest.response = action.payload
         })
+        // ---------------------------------------------------------------------
+        // From Other Slices
+        // ---------------------------------------------------------------------
+        .addCase(ArmorActions.openArmorMenu,          (state) => { state.currentMenu = "armor"    })
+        .addCase(ArmorActions.closeArmorMenu,         (state) => { state.currentMenu = null       })
+        .addCase(WeaponsActions.openWeaponsMenu,      (state) => { state.currentMenu = "weapon"   })
+        .addCase(WeaponsActions.closeWeaponsMenu,     (state) => { state.currentMenu = null       })
+        .addCase(TalismansActions.openTalismansMenu,  (state) => { state.currentMenu = "talisman" })
+        .addCase(TalismansActions.closeTalismansMenu, (state) => { state.currentMenu = null       })
 }

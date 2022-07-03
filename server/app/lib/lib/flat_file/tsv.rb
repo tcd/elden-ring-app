@@ -2,6 +2,14 @@ module Lib
   module FlatFile
     module Tsv
 
+      CUSTOM_BOOL_CONVERTER = ->(string) do
+        return true  if string&.downcase == "true"
+        return false if string&.downcase == "false"
+        return string
+      rescue
+        return string
+      end
+
       # Read a TSV file and return its contents as an array of hashes.
       #
       # @param filepath [String] Path to the TSV file
@@ -10,11 +18,16 @@ module Lib
       #
       # @return [Array<Hash{String => String}>]
       def self.from_file(filepath, delimiter: "\t", quote_char: "\x00")
-        return STANDARD_CSV.read(
-          filepath,
+        content = File.read(filepath.to_s)
+        return STANDARD_CSV.parse(
+          content,
           col_sep: delimiter,
           headers: true,
           quote_char: quote_char,
+          converters: [
+            :all,
+            CUSTOM_BOOL_CONVERTER,
+          ],
         ).map(&:to_hash)
       end
 

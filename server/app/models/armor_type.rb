@@ -24,4 +24,13 @@ class ArmorType < ApplicationRecord
 
   # @!endgroup Associations
 
+  # ============================================================================
+  # Instance Methods
+  # ============================================================================
+
+  # @return [Integer]
+  def sort_order()
+    return self.id
+  end
+
 end

@@ -67,6 +67,7 @@
                 "Fire Defense",
                 "Lightning Defense",
                 "Holy Defense",
+                "Guard Boost",
 
                 "Physical Damage Negation",
                 "VS Strike Damage Negation",
@@ -77,7 +78,15 @@
                 "Lightning Damage Negation",
                 "Holy Damage Negation",
 
-                "Guard Boost"
+                "Physical Attack",
+                "Magic Attack",
+                "Fire Attack",
+                "Lightning Attack",
+                "Holy Attack",
+                "Critical Attack",
+                "Stamina Damage",
+
+                "Range"
             ]
         }
     }

@@ -5,6 +5,7 @@ import {
     Weapon,
     WeaponSkill,
     WeaponType,
+    AttackElementCorrectParam,
 } from "."
 
 export interface KitchenSink {
@@ -14,4 +15,5 @@ export interface KitchenSink {
     weapons: Weapon[],
     weapon_skills: WeaponSkill[],
     weapon_types: WeaponType[],
+    attack_element_correct_params: AttackElementCorrectParam[],
 }

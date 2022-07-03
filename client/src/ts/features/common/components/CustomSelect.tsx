@@ -1,11 +1,11 @@
 import Autocomplete, { AutocompleteChangeDetails, AutocompleteChangeReason } from "@mui/material/Autocomplete"
 import Box from "@mui/material/Box"
-import MenuItem from "@mui/material/MenuItem"
+// import MenuItem from "@mui/material/MenuItem"
 import TextField from "@mui/material/TextField"
 
 import { isBlank } from "@app/util"
 
-interface SelectOption {
+export interface SelectOption {
     value: any
     label: any
     imageUrl?: string

@@ -1,0 +1,39 @@
+lions_claw_standard:
+  weapon_skill: lions_claw
+  weapon_affinity: standard
+lions_claw_heavy:
+  weapon_skill: lions_claw
+  weapon_affinity: heavy
+lions_claw_keen:
+  weapon_skill: lions_claw
+  weapon_affinity: keen
+lions_claw_quality:
+  weapon_skill: lions_claw
+  weapon_affinity: quality
+lions_claw_fire:
+  weapon_skill: lions_claw
+  weapon_affinity: fire
+lions_claw_flame_art:
+  weapon_skill: lions_claw
+  weapon_affinity: flame_art
+lions_claw_lightning:
+  weapon_skill: lions_claw
+  weapon_affinity: lightning
+lions_claw_sacred:
+  weapon_skill: lions_claw
+  weapon_affinity: sacred
+lions_claw_magic:
+  weapon_skill: lions_claw
+  weapon_affinity: magic
+lions_claw_cold:
+  weapon_skill: lions_claw
+  weapon_affinity: cold
+lions_claw_poison:
+  weapon_skill: lions_claw
+  weapon_affinity: poison
+lions_claw_blood:
+  weapon_skill: lions_claw
+  weapon_affinity: blood
+lions_claw_occult:
+  weapon_skill: lions_claw
+  weapon_affinity: occult

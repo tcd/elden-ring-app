@@ -3,7 +3,7 @@ module Serializers
 
     fields(
       :name,
-      :image_url,
+      # :image_url,
       :spell_type,
       :description,
       :slots_required,

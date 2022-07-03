@@ -1,13 +1,11 @@
-import * as Weapons from "./weapons"
-import * as Talismans from "./talismans"
-import * as Armor from "./armor"
-
 import * as Stats from "./stats"
 import * as Attributes from "./attributes"
 import * as Resistance from "./resistance"
 import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
 import * as StartingClass from "./starting-class"
+
+import * as Misc from "./misc"
 
 import * as Api from "./api"
 import { selectExportData } from "./export-data"
@@ -17,17 +15,27 @@ export const BuilderSelectors = {
     api: {
         loading:               Api.selectFetchingEverything,
         shouldFetchEverything: Api.selectShouldFetchEverything,
+        fetchFailed:           Api.selectFetchFailed,
         armor:                 Api.selectArmor,
         spells:                Api.selectSpells,
         talismans:             Api.selectTalismans,
         weapons:               Api.selectWeapons,
         weaponTypes:           Api.selectWeaponTypes,
         weaponSkills:          Api.selectWeaponSkills,
+        adjustmentParams:      Api.selectAttackElementCorrectParams,
     },
-    startingClassName: StartingClass.selectStartingClassName,
-    startingClass: StartingClass.selectStartingClass,
+    misc: {
+        whichCharacterStatus: Misc.selectWhichCharacterStatus,
+        currentMenu: Misc.selectCurrentMenu,
+    },
+    startingClass: {
+        startingClassName:       StartingClass.selectStartingClassName,
+        startingClass:           StartingClass.selectStartingClass,
+        confirmingStartingClass: StartingClass.selectConfirmingStartingClass,
+    },
     level: Stats.selectLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
+    allAttributes: Attributes.selectAttributes,
     attribute: {
         vigor:        Attributes.selectVigor,
         mind:         Attributes.selectMind,
@@ -44,16 +52,6 @@ export const BuilderSelectors = {
         focus:      Resistance.selectFocus,
         vitality:   Resistance.selectVitality,
     },
-    /** Returns all talismans. */
-    talismans: Talismans.selectTalismansArray,
-    /**
-     * Can't wear two of the same talisman.
-     * Some talismans restrict the use of others.
-     *
-     * This returns talismans available to equip in the active talisman slot.
-     */
-    talismanOptions: Talismans.selectTalismanOptions,
-    talismanModalOpen: Talismans.selectTalismanModalOpen,
     defense: {
         defense: {
             physical:  Defense.selectPhysicalDefense,
@@ -88,50 +86,4 @@ export const BuilderSelectors = {
         percentage:  EquipLoad.selectEquipLoadPercentage,
         description: EquipLoad.selectEquipLoadDescription,
     },
-    talisman: {
-        all: Talismans.selectTalismansArray,
-        options: Talismans.selectTalismanOptions,
-        modalOpen: Talismans.selectTalismanModalOpen,
-        activeName: Talismans.selectActiveTalismanName,
-        activeNumber: Talismans.selectActiveTalismanNumber,
-    },
-    weapons: {
-        modalOpen: Weapons.selectWeaponModalOpen,
-        activeSlotId: Weapons.selectActiveWeaponSlotId,
-        active: Weapons.selectActiveWeapon,
-        bySlot: {
-            R1: Weapons.selectRightWeapon1,
-            R2: Weapons.selectRightWeapon2,
-            R3: Weapons.selectRightWeapon3,
-            L1: Weapons.selectLeftWeapon1,
-            L2: Weapons.selectLeftWeapon2,
-            L3: Weapons.selectLeftWeapon3,
-        },
-    },
-    armor: {
-        modalOpen: Armor.selectArmorModalOpen,
-        activeType: Armor.selectActiveArmorType,
-        activeName: Armor.selectActiveArmorName,
-        activbeOptions: Armor.selectArmorOptions,
-        head: Armor.selectHead,
-        chest: Armor.selectChest,
-        arms: Armor.selectArms,
-        legs: Armor.selectLegs,
-        names: {
-            head: Armor.selectHeadName,
-            chest: Armor.selectChestName,
-            arms: Armor.selectArmsName,
-            legs: Armor.selectLegsName,
-        },
-    },
-    // attribute: {
-    //     vigor:        selectVigor,
-    //     mind:         selectMind,
-    //     endurance:    selectEndurance,
-    //     strength:     selectStrength,
-    //     dexterity:    selectDexterity,
-    //     intelligence: selectIntelligence,
-    //     faith:        selectFaith,
-    //     arcane:       selectArcane,
-    // },
 }

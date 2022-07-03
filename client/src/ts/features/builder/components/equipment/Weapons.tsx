@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Weapon, WeaponSlotId, weaponSlotIdName } from "@app/types"
 import { MouseOverPopover } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
+import { getImageSrc } from "@app/util"
 
 // =============================================================================
 // Ammunition
@@ -43,8 +44,7 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     const weapon = props?.weapon
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        // dispatch(Actions.Builder.set({ number }))
-        dispatch(Actions.Builder.openWeaponModal({ id: slotId }))
+        dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
     }
 
     const elementId = `weapon-slot-${slotId}`
@@ -62,10 +62,11 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     if (weapon) {
         classNames.push("equipment-slot-filled")
         titleString = weapon.name
+        const src = getImageSrc("Weapon", weapon.name, "256")
         weaponImageElement = (
             <img
                 className="img-fluid"
-                src={weapon.image_url}
+                src={src}
                 alt={`${weapon.name} image`}
             />
         )
@@ -93,12 +94,12 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
 
 export const Weapons = (_props: unknown): JSX.Element => {
 
-    const R1 = useSelector(Selectors.Builder.weapons.bySlot.R1)
-    const R2 = useSelector(Selectors.Builder.weapons.bySlot.R2)
-    const R3 = useSelector(Selectors.Builder.weapons.bySlot.R3)
-    const L1 = useSelector(Selectors.Builder.weapons.bySlot.L1)
-    const L2 = useSelector(Selectors.Builder.weapons.bySlot.L2)
-    const L3 = useSelector(Selectors.Builder.weapons.bySlot.L3)
+    const R1 = useSelector(Selectors.Weapons.bySlot.R1)
+    const R2 = useSelector(Selectors.Weapons.bySlot.R2)
+    const R3 = useSelector(Selectors.Weapons.bySlot.R3)
+    const L1 = useSelector(Selectors.Weapons.bySlot.L1)
+    const L2 = useSelector(Selectors.Weapons.bySlot.L2)
+    const L3 = useSelector(Selectors.Weapons.bySlot.L3)
 
     return (
         <>

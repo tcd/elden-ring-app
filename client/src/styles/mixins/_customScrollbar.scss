@@ -2,18 +2,21 @@
 
 $scrollbar-thumb-color: #60604D;
 $scrollbar-thumb-border-radius: 10px;
+$scrollbar-width: 10px;
 
 @mixin customScrollbar {
     // width
     ::-webkit-scrollbar {
+        cursor: pointer;
         // box-sizing: border-box;
-        width: 8px;
+        width: $scrollbar-width;
         // padding-left: 4px;
         // padding-right: 4px;
     }
 
     // Track
     ::-webkit-scrollbar-track {
+        cursor: pointer;
         border-radius: inherit;
         // background: #f1f1f1;
         // background-color: #444339;
@@ -22,12 +25,14 @@ $scrollbar-thumb-border-radius: 10px;
 
     // Handle
     ::-webkit-scrollbar-thumb {
+        cursor: pointer;
         background: $scrollbar-thumb-color;
         border-radius: $scrollbar-thumb-border-radius;
     }
 
     // Handle on hover
     ::-webkit-scrollbar-thumb:hover {
+        cursor: pointer;
         background: $scrollbar-thumb-color;
         border-radius: $scrollbar-thumb-border-radius;
     }

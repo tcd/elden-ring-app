@@ -1,3 +1,3 @@
-export * from "./TalismanDetailPage"
+export * from "./talisman-menu"
+export * from "./talisman-detail"
 export * from "./TalismansPage"
-export * from "./TalismanMenu"

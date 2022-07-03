@@ -1,4 +1,4 @@
-export * from "./SpellDetailPage"
-export * from "./SpellMenu"
+export * from "./spell-detail"
+export * from "./spell-menu"
 export * from "./SpellsPage"
 // export * from "./SpellsTable"

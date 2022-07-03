@@ -1778,7 +1778,7 @@
     },
     {
         "name": "Longtail Cat Talisman",
-        "description": "Renders the wearer immune to fall damage",
+        "description": "Grants immunity to fall damage, but does not prevent death from a high fall",
         "weight": 0.6,
         "restricts": [],
         "location": "Raya Lucaria Academy: Looted off a corpse that can be found at the bottom section of the large rotating lift. Past the graveyard section of Raya Lucaria Academy, simply ride the lift down and defeat the single Pendulum Statue enemy.",

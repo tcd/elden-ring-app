@@ -4,7 +4,7 @@ module Serializers
     fields(
       :name,
       :sort_order,
-      :image_url,
+      # :image_url,
     )
 
   end

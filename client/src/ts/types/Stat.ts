@@ -1,12 +1,26 @@
 export enum Stat {
+
     // -------------------------------------------------------------------------
     // Level
     // -------------------------------------------------------------------------
-    LEVEL        = "Level",
+
+    /**
+     * A cumulative figure that represents overall attribute strength.
+     *
+     * You can level up using runes.
+     */
+    LEVEL = "Level",
+    /**
+     * Number of runes required to raise a level.
+     *
+     * When you level up, you can choose an attribute to increase.
+     */
     RUNES_NEEDED = "Runes Needed",
+
     // -------------------------------------------------------------------------
     // Attributes
     // -------------------------------------------------------------------------
+
     /**
      * Attribute governing HP.
      * Also affects fire resistance and immunity.
@@ -48,18 +62,22 @@ export enum Stat {
      * Also affects holy defense, vitality, and certain sorceries and incantations.
      */
     ARCANE = "Arcane",
+
     // -------------------------------------------------------------------------
     // Base Stats
     // -------------------------------------------------------------------------
+
     HP             = "HP",
     FP             = "FP",
     STAMINA        = "Stamina",
     MAX_EQUIP_LOAD = "Max Equip Load",
     POISE          = "Poise",
     DISCOVERY      = "Discovery",
+
     // -------------------------------------------------------------------------
-    // Body
+    // Resistance
     // -------------------------------------------------------------------------
+
     /** Your resistance to various poisons and rot. */
     IMMUNITY = "Immunity",
     /** Your resistance to blood loss and frostbite. */
@@ -68,16 +86,20 @@ export enum Stat {
     FOCUS = "Focus",
     /** Your resistance to death. */
     VITALITY = "Vitality",
+
     // -------------------------------------------------------------------------
     // Defense/Dmg Negation
     // -------------------------------------------------------------------------
+
     PHYSICAL_DEFENSE          = "Physical Defense",
     PHYSICAL_DAMAGE_NEGATION  = "Physical Damage Negation",
 
     VS_STRIKE_DEFENSE         = "VS Strike Defense",
     VS_STRIKE_DAMAGE_NEGATION = "VS Strike Damage Negation",
+
     VS_SLASH_DEFENSE          = "VS Slash Defense",
     VS_SLASH_DAMAGE_NEGATION  = "VS Slash Damage Negation",
+
     VS_PIERCE_DEFENSE         = "VS Pierce Defense",
     VS_PIERCE_DAMAGE_NEGATION = "VS Pierce Damage Negation",
 
@@ -98,7 +120,20 @@ export enum Stat {
      *
      * The higher this value, the smaller the amount of stamina consumed when guarding attacks.
      */
-    GUARD_BOOST               = "Guard Boost",
+    GUARD_BOOST = "Guard Boost",
+
+    // -------------------------------------------------------------------------
+    // Attack Power / Attack Rating (AR)
+    // -------------------------------------------------------------------------
+
+    PHYSICAL_ATTACK_POWER  = "Physical Attack Power",
+    STRIKE_ATTACK_POWER    = "Strike Attack Power",
+    SLASH_ATTACK_POWER     = "Slash Attack Power",
+    PIERCE_ATTACK_POWER    = "Pierce Attack Power",
+    MAGIC_ATTACK_POWER     = "Magic Attack Power",
+    FIRE_ATTACK_POWER      = "Fire Attack Power",
+    LIGHTNING_ATTACK_POWER = "Lightning Attack Power",
+    HOLY_ATTACK_POWER      = "Holy Attack Power",
 
     // -------------------------------------------------------------------------
     // Equipment

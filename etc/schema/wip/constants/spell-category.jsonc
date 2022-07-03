@@ -5,6 +5,7 @@
     "title": "WIP Spell Category",
     "type": "string",
     "enum": [
+
         "Bestial Incantations",
         "Blood Incantations",
         "Dragon Communion Incantations",
@@ -17,6 +18,7 @@
         "Golden Order Incantations",
         "Servants OF Rot Incantations",
         "Two Fingers Incantations",
+
         "Aberrant Sorceries",
         "Carian Sorceries",
         "Claymen Sorceries",
@@ -30,5 +32,6 @@
         "Night Sorceries",
         "Primeval Sorceries",
         "Cold Sorceries"
+
     ]
 }
