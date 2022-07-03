@@ -51,3 +51,7 @@ export const getImageSrc = (type: ImageableString, name: string, variant: Cloudf
     }
     return `https://imagedelivery.net/${CONFIG.cloudflareHash}/${folder}/${name}/${variant}`
 }
+
+export const getImageSrcManual = (path: string, variant: CloudflareVariant): string => {
+    return `https://imagedelivery.net/${CONFIG.cloudflareHash}/${path}/${variant}`
+}
