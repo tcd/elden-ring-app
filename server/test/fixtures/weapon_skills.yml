@@ -5,10 +5,15 @@ no_skill:
   default_affinity: standard
   is_chargeable: false
 
-
 lions_claw:
   name: "Lion's Claw"
   description: "Lion's Claw: Skill of the Redmanes, who fought alongside General Radahn. Somersault forwards, striking foes with armament."
   ash_of_war: true
   is_chargeable: null
 
+
+barbaric_roar:
+  name: "Barbaric Roar"
+  description: "Let loose a bestial roar to rally the spirit and increase attack power. While active, strong attacks change to savage combo attacks."
+  ash_of_war: true
+  is_chargeable: false

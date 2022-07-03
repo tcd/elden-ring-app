@@ -26,6 +26,7 @@ module Lib
       invalid["spells"]                        = Lib::Seed::Spells.seed()
       invalid["attack_element_correct_params"] = Lib::Seed::AttackElementCorrectParams.seed()
       invalid["weapon_stats"]                  = Lib::Seed::WeaponStats.new().seed()
+      invalid["starting_classes"]              = Lib::Seed::StartingClasses.new().seed()
       error_file = Lib::Util.save_to_file(invalid, "seed-errors.json", add_timestamp: true)
       puts("#{invalid.values.flatten.length} errors; see file '#{error_file}'")
       return invalid

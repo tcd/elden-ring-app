@@ -12,4 +12,19 @@ claymore: {
   defense_guard_boost:   38,
   required_strength:     16,
   required_dexterity:    13,
- }
+}
+
+club: {
+  name: "Club",
+  weapon_skill: barbaric_roar,
+  weapon_type: hammer,
+  weight: 3.5,
+  physical_damage_types: [ "Strike" ],
+  defense_physical: 41,
+  defense_magic: 27,
+  defense_fire: 27,
+  defense_lightning: 27,
+  defense_holy: 27,
+  defense_guard_boost: 27,
+  required_strength: 10,
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_26_225628) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_03_163823) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -194,6 +194,40 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_225628) do
     t.boolean "inflicts_death_blight"
     t.boolean "inflicts_scarlet_rot"
     t.index ["name"], name: "index_spells_on_name", unique: true
+  end
+
+  create_table "starting_classes", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description", null: false
+    t.string "sort_order", null: false
+    t.integer "level", null: false
+    t.integer "vigor", null: false
+    t.integer "mind", null: false
+    t.integer "endurance", null: false
+    t.integer "strength", null: false
+    t.integer "dexterity", null: false
+    t.integer "intelligence", null: false
+    t.integer "faith", null: false
+    t.integer "arcane", null: false
+    t.integer "r1_id"
+    t.integer "r2_id"
+    t.integer "r3_id"
+    t.integer "l1_id"
+    t.integer "l2_id"
+    t.integer "l3_id"
+    t.integer "head_id"
+    t.integer "chest_id"
+    t.integer "arms_id"
+    t.integer "legs_id"
+    t.integer "spell_1_id"
+    t.integer "spell_2_id"
+    t.integer "spell_3_id"
+    t.integer "spell_4_id"
+    t.jsonb "metadata", default: {}
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_starting_classes_on_name", unique: true
+    t.index ["sort_order"], name: "index_starting_classes_on_sort_order", unique: true
   end
 
   create_table "talismans", force: :cascade do |t|
@@ -686,6 +720,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_26_225628) do
   end
 
   add_foreign_key "armor", "armor_types", on_delete: :restrict
+  add_foreign_key "starting_classes", "armor", column: "arms_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "armor", column: "chest_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "armor", column: "head_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "armor", column: "legs_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "spells", column: "spell_1_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "spells", column: "spell_2_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "spells", column: "spell_3_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "spells", column: "spell_4_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "weapons", column: "l1_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "weapons", column: "l2_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "weapons", column: "l3_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "weapons", column: "r1_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "weapons", column: "r2_id", on_delete: :cascade
+  add_foreign_key "starting_classes", "weapons", column: "r3_id", on_delete: :cascade
   add_foreign_key "weapon_skill_weapon_affinities", "weapon_affinities", on_delete: :cascade
   add_foreign_key "weapon_skill_weapon_affinities", "weapon_skills", on_delete: :cascade
   add_foreign_key "weapon_skill_weapon_types", "weapon_skills", on_delete: :cascade
