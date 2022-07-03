@@ -1,0 +1,101 @@
+{
+    "$id": "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/schema/armor.json",
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Detailed Appearance",
+    "type": "object",
+    "properties": {
+        "Age": {
+            "type": "string",
+            "description": "Age only affects appearance, it has no bearing on ability",
+            "enum": ["Young", "Mature", "Aged"]
+        },
+        "Voice": {
+            "type": "string",
+            "enum": ["Young Voice 1", "Young Voice 2", "Mature Voice 1", "Mature Voice 2", "Aged Voice 1", "Aged Voice 2"]
+        },
+        "Alter Skin Color": {
+            "$ref": "#definitions/RGB Color"
+        },
+        "Alter Face & Hair": {
+            "type": "object",
+            "required": [
+                "Adjust Face Template",
+                "Face Structure",
+                "Hair",
+                "Eyebrows",
+                "Facial Hair",
+                "Eyelashes",
+                "Eyes",
+                "Skin Features",
+                "Cosmetics",
+                "Tattoo/Mark/Eyepatch"
+            ],
+            "properties": {
+                "Adjust Face Template": { "type": "object" },
+                "Face Structure":       { "type": "object" },
+                "Hair":                 { "type": "object" },
+                "Eyebrows":             { "type": "object" },
+                "Facial Hair":          { "type": "object" },
+                "Eyelashes":            { "type": "object" },
+                "Eyes":                 { "type": "object" },
+                "Skin Features":        { "type": "object" },
+                "Cosmetics":            { "type": "object" },
+                "Tattoo/Mark/Eyepatch": { "type": "object" },
+            }
+        },
+        "Alter Body": {
+            "type": "object",
+            "required": [
+                "Head",
+                "Chest",
+                "Abdomen",
+                "Arms",
+                "Legs",
+                "Body Hair",
+                "Body Hair Color"
+            ],
+            "properties": {
+                "Head":            { "$ref": "#definitions/8 Bit Int" },
+                "Chest":           { "$ref": "#definitions/8 Bit Int" },
+                "Abdomen":         { "$ref": "#definitions/8 Bit Int" },
+                "Arms":            { "$ref": "#definitions/8 Bit Int" },
+                "Legs":            { "$ref": "#definitions/8 Bit Int" },
+                "Body Hair":       { "$ref": "#definitions/8 Bit Int" },
+                "Body Hair Color": { "$ref": "#definitions/RGB Color" },
+                "Musculature":     {
+                    "description": "Physique",
+                    "type": "string",
+                    "enum": [ "Standard", "Muscular"]
+                },
+            }
+        }
+    },
+    "definitions": {
+        "RGB Color": {
+            "type": "object",
+            "required": ["R", "G", "B"],
+            "properties": {
+                "R": { "$ref": "#definitions/8 Bit Int" },
+                "G": { "$ref": "#definitions/8 Bit Int" },
+                "B": { "$ref": "#definitions/8 Bit Int" },
+            }
+        },
+        "8 Bit Int": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 255
+        },
+        "Facial Balance": {
+            "type": "object",
+            "properties": {
+                "Nose Size":            { "$ref": "#definitions/8 Bit Int" },
+                "Nose/Forehead Ratio":  { "$ref": "#definitions/8 Bit Int" },
+                "Face Protrusion":      { "$ref": "#definitions/8 Bit Int" },
+                "Vert. Face Ratio":     { "$ref": "#definitions/8 Bit Int" },
+                "Facial Feature Slant": { "$ref": "#definitions/8 Bit Int" },
+                "Horiz. Face Ratio":    { "$ref": "#definitions/8 Bit Int" },
+            }
+        }
+
+    }
+}
