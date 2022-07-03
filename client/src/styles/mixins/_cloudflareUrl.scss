@@ -1,0 +1,13 @@
+@use "../variables"as v;
+
+/// Generates an image url for an asset on Cloudflare.
+///
+/// @param {String} $path
+@function cloudflareUrl($path) {
+
+    // https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/Weapons/Blasphemous%20Blade/256
+
+    $url: "https://imagedelivery.net/" + v.$cloudflare-hash + "/" + $path;
+
+    @return url("");
+}
