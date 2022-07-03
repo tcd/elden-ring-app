@@ -49,11 +49,11 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
                 <ul className="er__startingClass__menu__option__attributes">
                     {attributes}
                 </ul>
-                <ul className="er__startingClass__menu__option__equipment">
-                </ul>
                 <StartingClassEquipment sClass={sClass} />
                 <div className="er__startingClass__menu__option__title">
+                    <div className="er__startingClass__menu__option__title__topBorder"></div>
                     <span>{sClass.name}</span>
+                    <div className="er__startingClass__menu__option__title__bottomBorder"></div>
                 </div>
             </div>
         </Box>

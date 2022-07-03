@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { capitalize } from "lodash"
 import { useDispatch, useSelector } from "react-redux"
 import { Box, SxProps } from "@mui/material"
@@ -11,6 +12,15 @@ import { StartingClassOption } from "."
 
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
+    useEffect(() => {
+        // Anything in here is fired on component mount.
+        document.getElementById("root").classList.add("startingClassPage")
+        return () => {
+            // Anything in here is fired on component unmount.
+            document.getElementById("root").classList.remove("startingClassPage")
+        }
+    }, [])
+
     const startingClasses = STARTING_CLASSES
     const selectedName = useSelector(Selectors.Builder.startingClassName)
 
@@ -18,7 +28,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
     return (
         <Box className="er__startingClass">
-            {/* <div className="er__startingClass__topBorder"></div> */}
+            <div className="er__startingClass__topBorder"></div>
 
             <div className="er__startingClass__menu">
                 <ul className="er__startingClass__menu__options">
@@ -26,7 +36,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
                 </ul>
             </div>
 
-            {/* <div className="er__startingClass__bottomBorder"></div> */}
+            <div className="er__startingClass__bottomBorder"></div>
 
             <div className="er__startingClass__footer">
                 <span className="er__startingClass__bottomText">

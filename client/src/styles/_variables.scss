@@ -103,6 +103,8 @@ $prefix:          $variable-prefix !default;
 // ----------------------------------------------------------------------------
 
 // scss-docs-start zindex-stack
+$zindex-startingClass-background:      1005 !default;
+$zindex-startingClass-content:         1010 !default;
 // $zindex-dropdown:                   1000 !default;
 // $zindex-sticky:                     1020 !default;
 // $zindex-fixed:                      1030 !default;
