@@ -6,7 +6,7 @@ module Serializers
     fields(
       :name,
       :description,
-      :sort_order,
+      # :sort_order,
       :level,
       :vigor,
       :mind,
@@ -16,6 +16,7 @@ module Serializers
       :intelligence,
       :faith,
       :arcane,
+      :total_levels,
     )
 
     field(:R1, unless: ->(_, record, _) { record.r1.blank? }) { |x| x.r1&.name }

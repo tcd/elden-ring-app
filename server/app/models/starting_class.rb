@@ -73,4 +73,22 @@ class StartingClass < ApplicationRecord
 
   # @!endgroup Associations
 
+  # ============================================================================
+  # Instance Methods
+  # ============================================================================
+
+  # @return [Integer]
+  def total_levels()
+    return [
+      self.vigor,
+      self.mind,
+      self.endurance,
+      self.strength,
+      self.dexterity,
+      self.intelligence,
+      self.faith,
+      self.arcane,
+    ].sum()
+  end
+
 end

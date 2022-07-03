@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   namespace(:api, defaults: { format: :json }) do
     get("/kitchen-sink", to: "kitchen_sink#index")
 
-    get("/armor",         to: "armor#index")
-    get("/spells",        to: "spells#index")
-    get("/talismans",     to: "talismans#index")
-    get("/weapons",       to: "weapons#index")
-    get("/weapon-skills", to: "weapon_skills#index")
-    get("/weapon-stats",  to: "weapon_stats#index")
+    get("/armor",            to: "armor#index")
+    get("/spells",           to: "spells#index")
+    get("/talismans",        to: "talismans#index")
+    get("/weapons",          to: "weapons#index")
+    get("/weapon-skills",    to: "weapon_skills#index")
+    get("/weapon-stats",     to: "weapon_stats#index")
+    get("/starting-classes", to: "starting_classes#index")
   end
 end
