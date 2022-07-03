@@ -29,8 +29,8 @@ const selectLevelAlt = (state: RootState): number => {
 export const selectLevel = (state: RootState): number => {
     const addedLevels = Attributes.selectTotalAttributes(state)
     const startingClass = StartingClass.selectStartingClass(state)
-    const l = startingClass?.attributes?.level ?? 0
-    const t = startingClass?.attributes?.total ?? 0
+    const l = startingClass?.level ?? 0
+    const t = startingClass?.total_levels ?? 0
     return addedLevels - t + l
 }
 

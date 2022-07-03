@@ -1,19 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 import {
-    ArmorType,
     Attributes,
     KitchenSink,
     RequestState,
     StartingClassName,
-    TalismanSet,
-    TalismanSlotId,
-    WeaponSlotId,
 } from "@types"
 import { FEATURE_KEYS } from "@util"
 import { reducers, extraReducers } from "./reducers"
 
-export type BuilderMenu = null |  "armor" | "weapon" | "talisman" | "spell" | "starting-class"
+export type BuilderMenu =
+    | null
+    | "armor"
+    | "weapon"
+    | "talisman"
+    | "spell"
+    | "starting-class"
 
 // Define a type for the slice state
 export interface BuilderState {
@@ -66,6 +68,8 @@ const myBuild: BuilderState = {
     ...initialState,
 
     startingClassName: StartingClassName.Samurai,
+
+    currentMenu: "starting-class",
 
     attributes: {
         "vigor":        30,
