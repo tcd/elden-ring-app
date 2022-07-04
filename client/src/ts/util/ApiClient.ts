@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
 
-import { urlJoin } from "@app/util"
+import { urlJoin, CONFIG } from "@app/util"
 import { KitchenSink } from "@app/types"
 
 export const AXIOS_REQUEST_CONFIG: AxiosRequestConfig<any> = {
@@ -22,9 +22,6 @@ const ENDPOINTS = {
 
 export class ApiClient {
 
-    public static ApiRoot = "http://localhost:3000/api"
-
-
     public static async getEverything(): Promise<AxiosResponse<KitchenSink>> {
         return await this.get(ENDPOINTS.kitchenSink)
     }
@@ -36,6 +33,10 @@ export class ApiClient {
 
     private static buildUrl(...segments: string[]): string {
         return urlJoin(this.ApiRoot, ...segments)
+    }
+
+    private static get ApiRoot() {
+        return CONFIG.apiServerRoot
     }
 
     private getCookie(name: string): string {
