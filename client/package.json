@@ -4,10 +4,10 @@
     "version": "0.1.0",
     "scripts": {
         "start": "npm run serve",
-        "build:prod": "cross-env NODE_ENV=production webpack --config ./webpack.config.prod.js --mode production",
-        "build:dev": "cross-env NODE_ENV=development webpack --config ./webpack.config.dev.js",
+        "build:prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --mode production",
+        "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.config.dev.js",
         "build:dev:watch": "npm run build:dev -- --watch",
-        "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config.dev.js --open"
+        "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js --open"
     },
     "dependencies": {
         "@babel/core": "^7.17.8",
