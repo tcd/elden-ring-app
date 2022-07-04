@@ -1,17 +1,21 @@
-FROM ruby:3.1.2
+FROM ruby:3.1.1
 
-RUN apt update -qq && apt install -y libpq-dev
+ENV RAILS_ENV=production
+ENV RUBY_DIR=/app/
+
+RUN mkdir $RUBY_DIR
+RUN apt-get update -qq && apt-get install -y libpq-dev
 RUN bundle config --global frozen 1
 
-WORKDIR /app
+WORKDIR $RUBY_DIR
 
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile* $RUBY_DIR
 RUN bundle install
+COPY . $RUBY_DIR
 
-COPY . .
-
-ENTRYPOINT ["./entrypoint.sh"]
 EXPOSE 3000
+COPY entrypoint.sh $RUBY_DIR
+ENTRYPOINT ["./entrypoint.sh"]
 
 # Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# CMD ["rails", "server", "-b", "0.0.0.0"]
