@@ -1,0 +1,57 @@
+[
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Academy Scroll",
+        "cloudflareId": "Scrolls/Academy Scroll"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Ancient Dragon Prayerbook",
+        "cloudflareId": "Scrolls/Ancient Dragon Prayerbook"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Assassin's Prayerbook",
+        "cloudflareId": "Scrolls/Assassin's Prayerbook"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Conspectus Scroll",
+        "cloudflareId": "Scrolls/Conspectus Scroll"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Dragon Cult Prayerbook",
+        "cloudflareId": "Scrolls/Dragon Cult Prayerbook"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Fire Monks' Prayerbook",
+        "cloudflareId": "Scrolls/Fire Monks' Prayerbook"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Giant's Prayerbook",
+        "cloudflareId": "Scrolls/Giant's Prayerbook"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Godskin Prayerbook",
+        "cloudflareId": "Scrolls/Godskin Prayerbook"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Golden Order Principia",
+        "cloudflareId": "Scrolls/Golden Order Principia"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Royal House Scroll",
+        "cloudflareId": "Scrolls/Royal House Scroll"
+    },
+    {
+        "model": "Prayer Books & Scrolls",
+        "entityName": "Two Fingers Prayerbook",
+        "cloudflareId": "Scrolls/Two Fingers Prayerbook"
+    }
+]

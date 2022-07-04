@@ -1,0 +1,872 @@
+[
+    {
+        "model": "Spells",
+        "entityName": "Adula's Moonblade",
+        "cloudflareId": "Spells/Adula's Moonblade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Agheel's Flame",
+        "cloudflareId": "Spells/Agheel's Flame"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Ambush Shard",
+        "cloudflareId": "Spells/Ambush Shard"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Ancient Death Rancor",
+        "cloudflareId": "Spells/Ancient Death Rancor"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Ancient Dragons' Lightning Spear",
+        "cloudflareId": "Spells/Ancient Dragons' Lightning Spear"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Ancient Dragons' Lightning Strike",
+        "cloudflareId": "Spells/Ancient Dragons' Lightning Strike"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Aspects of the Crucible_ Breath",
+        "cloudflareId": "Spells/Aspects of the Crucible_ Breath"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Aspects of the Crucible_ Horns",
+        "cloudflareId": "Spells/Aspects of the Crucible_ Horns"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Aspects of the Crucible_ Tail",
+        "cloudflareId": "Spells/Aspects of the Crucible_ Tail"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Assassin's Approach",
+        "cloudflareId": "Spells/Assassin's Approach"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Barrier of Gold",
+        "cloudflareId": "Spells/Barrier of Gold"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Beast Claw",
+        "cloudflareId": "Spells/Beast Claw"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bestial Constitution",
+        "cloudflareId": "Spells/Bestial Constitution"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bestial Sling",
+        "cloudflareId": "Spells/Bestial Sling"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bestial Vitality",
+        "cloudflareId": "Spells/Bestial Vitality"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Black Blade",
+        "cloudflareId": "Spells/Black Blade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Black Flame Armament",
+        "cloudflareId": "Spells/Black Flame Armament"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Black Flame Blade",
+        "cloudflareId": "Spells/Black Flame Blade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Black Flame Ritual",
+        "cloudflareId": "Spells/Black Flame Ritual"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Black Flame's Protection",
+        "cloudflareId": "Spells/Black Flame's Protection"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Black Flame",
+        "cloudflareId": "Spells/Black Flame"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Blessing of the Erdtree",
+        "cloudflareId": "Spells/Blessing of the Erdtree"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Blessing's Boon",
+        "cloudflareId": "Spells/Blessing's Boon"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bloodboon",
+        "cloudflareId": "Spells/Bloodboon"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bloodflame Armament",
+        "cloudflareId": "Spells/Bloodflame Armament"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bloodflame Blade",
+        "cloudflareId": "Spells/Bloodflame Blade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Bloodflame Talons",
+        "cloudflareId": "Spells/Bloodflame Talons"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Borealis's Mist",
+        "cloudflareId": "Spells/Borealis's Mist"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Briars of Punishment",
+        "cloudflareId": "Spells/Briars of Punishment"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Briars of Sin",
+        "cloudflareId": "Spells/Briars of Sin"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Burn, O Flame!",
+        "cloudflareId": "Spells/Burn, O Flame!"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Cannon of Haima",
+        "cloudflareId": "Spells/Cannon of Haima"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Carian Greatsword",
+        "cloudflareId": "Spells/Carian Greatsword"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Carian Phalanx",
+        "cloudflareId": "Spells/Carian Phalanx"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Carian Piercer",
+        "cloudflareId": "Spells/Carian Piercer"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Carian Retaliation",
+        "cloudflareId": "Spells/Carian Retaliation"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Carian Slicer",
+        "cloudflareId": "Spells/Carian Slicer"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Catch Flame",
+        "cloudflareId": "Spells/Catch Flame"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Collapsing Stars",
+        "cloudflareId": "Spells/Collapsing Stars"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Comet Azur",
+        "cloudflareId": "Spells/Comet Azur"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Comet",
+        "cloudflareId": "Spells/Comet"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Crystal Barrage",
+        "cloudflareId": "Spells/Crystal Barrage"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Crystal Burst",
+        "cloudflareId": "Spells/Crystal Burst"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Crystal Release",
+        "cloudflareId": "Spells/Crystal Release"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Crystal Torrent",
+        "cloudflareId": "Spells/Crystal Torrent"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Cure Poison",
+        "cloudflareId": "Spells/Cure Poison"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Darkness",
+        "cloudflareId": "Spells/Darkness"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Death Lightning",
+        "cloudflareId": "Spells/Death Lightning"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Discus of Light",
+        "cloudflareId": "Spells/Discus of Light"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Divine Fortification",
+        "cloudflareId": "Spells/Divine Fortification"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Dragonbolt Blessing",
+        "cloudflareId": "Spells/Dragonbolt Blessing"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Dragonclaw",
+        "cloudflareId": "Spells/Dragonclaw"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Dragonfire",
+        "cloudflareId": "Spells/Dragonfire"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Dragonice",
+        "cloudflareId": "Spells/Dragonice"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Dragonmaw",
+        "cloudflareId": "Spells/Dragonmaw"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Ekzykes's Decay",
+        "cloudflareId": "Spells/Ekzykes's Decay"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Elden Stars",
+        "cloudflareId": "Spells/Elden Stars"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Electrify Armament",
+        "cloudflareId": "Spells/Electrify Armament"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Erdtree Heal",
+        "cloudflareId": "Spells/Erdtree Heal"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Eternal Darkness",
+        "cloudflareId": "Spells/Eternal Darkness"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Explosive Ghostflame",
+        "cloudflareId": "Spells/Explosive Ghostflame"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Fia's Mist",
+        "cloudflareId": "Spells/Fia's Mist"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Fire's Deadly Sin",
+        "cloudflareId": "Spells/Fire's Deadly Sin"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame Fortification",
+        "cloudflareId": "Spells/Flame Fortification"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame of the Fell God",
+        "cloudflareId": "Spells/Flame of the Fell God"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame Sling",
+        "cloudflareId": "Spells/Flame Sling"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame, Cleanse Me",
+        "cloudflareId": "Spells/Flame, Cleanse Me"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame, Fall Upon Them",
+        "cloudflareId": "Spells/Flame, Fall Upon Them"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame, Grant Me Strength",
+        "cloudflareId": "Spells/Flame, Grant Me Strength"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Flame, Protect Me",
+        "cloudflareId": "Spells/Flame, Protect Me"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Fortissax's Lightning Spear",
+        "cloudflareId": "Spells/Fortissax's Lightning Spear"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Founding Rain of Stars",
+        "cloudflareId": "Spells/Founding Rain of Stars"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Freezing Mist",
+        "cloudflareId": "Spells/Freezing Mist"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Frenzied Burst",
+        "cloudflareId": "Spells/Frenzied Burst"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Frozen Armament",
+        "cloudflareId": "Spells/Frozen Armament"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Frozen Lightning Spear",
+        "cloudflareId": "Spells/Frozen Lightning Spear"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Gavel of Haima",
+        "cloudflareId": "Spells/Gavel of Haima"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Gelmir's Fury",
+        "cloudflareId": "Spells/Gelmir's Fury"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Giantsflame Take Thee",
+        "cloudflareId": "Spells/Giantsflame Take Thee"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintblade Phalanx",
+        "cloudflareId": "Spells/Glintblade Phalanx"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintstone Arc",
+        "cloudflareId": "Spells/Glintstone Arc"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintstone Breath",
+        "cloudflareId": "Spells/Glintstone Breath"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintstone Cometshard",
+        "cloudflareId": "Spells/Glintstone Cometshard"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintstone Icecrag",
+        "cloudflareId": "Spells/Glintstone Icecrag"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintstone Pebble",
+        "cloudflareId": "Spells/Glintstone Pebble"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Glintstone Stars",
+        "cloudflareId": "Spells/Glintstone Stars"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Golden Lightning Fortification",
+        "cloudflareId": "Spells/Golden Lightning Fortification"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Golden Vow",
+        "cloudflareId": "Spells/Golden Vow"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Gravity Well",
+        "cloudflareId": "Spells/Gravity Well"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Great Glinstone Shard",
+        "cloudflareId": "Spells/Great Glinstone Shard"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Great Glintstone Shard",
+        "cloudflareId": "Spells/Great Glintstone Shard"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Great Heal",
+        "cloudflareId": "Spells/Great Heal"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Great Oracular Bubble",
+        "cloudflareId": "Spells/Great Oracular Bubble"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Greatblade Phalanx",
+        "cloudflareId": "Spells/Greatblade Phalanx"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Greyoll's Roar",
+        "cloudflareId": "Spells/Greyoll's Roar"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Gurranq's Beast Claw",
+        "cloudflareId": "Spells/Gurranq's Beast Claw"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Heal",
+        "cloudflareId": "Spells/Heal"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Honed Bolt",
+        "cloudflareId": "Spells/Honed Bolt"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Howl of Shabriri",
+        "cloudflareId": "Spells/Howl of Shabriri"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Immutable Shield",
+        "cloudflareId": "Spells/Immutable Shield"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Inescapable Frenzy",
+        "cloudflareId": "Spells/Inescapable Frenzy"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lansseax's Glaive",
+        "cloudflareId": "Spells/Lansseax's Glaive"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Law of Causality",
+        "cloudflareId": "Spells/Law of Causality"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Law of Regression",
+        "cloudflareId": "Spells/Law of Regression"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lightning Fortification",
+        "cloudflareId": "Spells/Lightning Fortification"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lightning Spear",
+        "cloudflareId": "Spells/Lightning Spear"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lightning Strike",
+        "cloudflareId": "Spells/Lightning Strike"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Litany of Proper Death",
+        "cloudflareId": "Spells/Litany of Proper Death"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lord's Aid",
+        "cloudflareId": "Spells/Lord's Aid"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lord's Divine Fortification",
+        "cloudflareId": "Spells/Lord's Divine Fortification"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lord's Heal",
+        "cloudflareId": "Spells/Lord's Heal"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Loretta's Greatbow",
+        "cloudflareId": "Spells/Loretta's Greatbow"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Loretta's Mastery",
+        "cloudflareId": "Spells/Loretta's Mastery"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Lucidity",
+        "cloudflareId": "Spells/Lucidity"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Magic Downpour",
+        "cloudflareId": "Spells/Magic Downpour"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Magic Fortification",
+        "cloudflareId": "Spells/Magic Fortification"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Magic Glintblade",
+        "cloudflareId": "Spells/Magic Glintblade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Magma Breath",
+        "cloudflareId": "Spells/Magma Breath"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Magma Shot",
+        "cloudflareId": "Spells/Magma Shot"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Meteorite of Astel",
+        "cloudflareId": "Spells/Meteorite of Astel"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Meteorite",
+        "cloudflareId": "Spells/Meteorite"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Night Comet",
+        "cloudflareId": "Spells/Night Comet"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Night Maiden's Mist",
+        "cloudflareId": "Spells/Night Maiden's Mist"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Night Shard",
+        "cloudflareId": "Spells/Night Shard"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Noble Presence",
+        "cloudflareId": "Spells/Noble Presence"
+    },
+    {
+        "model": "Spells",
+        "entityName": "O, Flame!",
+        "cloudflareId": "Spells/O, Flame!"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Oracle Bubbles",
+        "cloudflareId": "Spells/Oracle Bubbles"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Order Healing",
+        "cloudflareId": "Spells/Order Healing"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Order's Blade",
+        "cloudflareId": "Spells/Order's Blade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Pest Threads",
+        "cloudflareId": "Spells/Pest Threads"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Placidusax's Ruin",
+        "cloudflareId": "Spells/Placidusax's Ruin"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Poison Armament",
+        "cloudflareId": "Spells/Poison Armament"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Poison Mist",
+        "cloudflareId": "Spells/Poison Mist"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Protection of the Erdtree",
+        "cloudflareId": "Spells/Protection of the Erdtree"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Radagon's Rings of Light",
+        "cloudflareId": "Spells/Radagon's Rings of Light"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rancorcall",
+        "cloudflareId": "Spells/Rancorcall"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Ranni's Dark Moon",
+        "cloudflareId": "Spells/Ranni's Dark Moon"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rejection",
+        "cloudflareId": "Spells/Rejection"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rennala's Full Moon",
+        "cloudflareId": "Spells/Rennala's Full Moon"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rock Blaster",
+        "cloudflareId": "Spells/Rock Blaster"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rock Sling",
+        "cloudflareId": "Spells/Rock Sling"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Roiling Magma",
+        "cloudflareId": "Spells/Roiling Magma"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rotten Breath",
+        "cloudflareId": "Spells/Rotten Breath"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Rykard's Rancor",
+        "cloudflareId": "Spells/Rykard's Rancor"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Scarlet Aeonia",
+        "cloudflareId": "Spells/Scarlet Aeonia"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Scholar's Armament",
+        "cloudflareId": "Spells/Scholar's Armament"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Scholar's Shield",
+        "cloudflareId": "Spells/Scholar's Shield"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Scouring Black Flame",
+        "cloudflareId": "Spells/Scouring Black Flame"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Shadow Bait",
+        "cloudflareId": "Spells/Shadow Bait"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Shard Spiral",
+        "cloudflareId": "Spells/Shard Spiral"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Shatter Earth",
+        "cloudflareId": "Spells/Shatter Earth"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Shattering Crystal",
+        "cloudflareId": "Spells/Shattering Crystal"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Smarag's Glintstone Breath",
+        "cloudflareId": "Spells/Smarag's Glintstone Breath"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Star Shower",
+        "cloudflareId": "Spells/Star Shower"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Starlight",
+        "cloudflareId": "Spells/Starlight"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Stars of Ruin",
+        "cloudflareId": "Spells/Stars of Ruin"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Stone of Gurranq",
+        "cloudflareId": "Spells/Stone of Gurranq"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Surge, O Flame!",
+        "cloudflareId": "Spells/Surge, O Flame!"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Swarm of Flies",
+        "cloudflareId": "Spells/Swarm of Flies"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Swift Glintstone Shard",
+        "cloudflareId": "Spells/Swift Glintstone Shard"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Terra Magica",
+        "cloudflareId": "Spells/Terra Magica"
+    },
+    {
+        "model": "Spells",
+        "entityName": "The Flame of Frenzy",
+        "cloudflareId": "Spells/The Flame of Frenzy"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Theodorix's Magma",
+        "cloudflareId": "Spells/Theodorix's Magma"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Thops's Barrier",
+        "cloudflareId": "Spells/Thops's Barrier"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Tibia's Summons",
+        "cloudflareId": "Spells/Tibia's Summons"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Triple Rings of Light",
+        "cloudflareId": "Spells/Triple Rings of Light"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Unendurable Frenzy",
+        "cloudflareId": "Spells/Unendurable Frenzy"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Unseen Blade",
+        "cloudflareId": "Spells/Unseen Blade"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Unseen Form",
+        "cloudflareId": "Spells/Unseen Form"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Urgent Heal",
+        "cloudflareId": "Spells/Urgent Heal"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Vyke's Dragonbolt",
+        "cloudflareId": "Spells/Vyke's Dragonbolt"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Whirl, O Flame!",
+        "cloudflareId": "Spells/Whirl, O Flame!"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Wrath of Gold",
+        "cloudflareId": "Spells/Wrath of Gold"
+    },
+    {
+        "model": "Spells",
+        "entityName": "Zamor Ice Storm",
+        "cloudflareId": "Spells/Zamor Ice Storm"
+    }
+]

@@ -55,13 +55,8 @@ class WeaponAffinity < ApplicationRecord
   # Instance Methods
   # ============================================================================
 
-  # @return [Integer]
-  def display_order()
-    return "/public/images/weapon-affinities/#{self.name}.png"
-  end
-
   # @return [String]
   def image_url()
-    return "/public/images/weapon-affinities/#{self.name}.png"
+    return "https://imagedelivery.net/#{Lib::Util.get_credential(:cloudflare_account_hash)}/Affinities/#{self.name}/public"
   end
 end

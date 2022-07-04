@@ -7,10 +7,11 @@ import {
     CustomTable,
     CustomTableColumn,
 } from "@app/shared"
+import { getImageSrc } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 
 const renderImageCell = (armor: Armor) => {
-    const imagePath = `/public/images/armor/${armor.name}.png`
+    const imagePath = getImageSrc("Armor", armor.name, "256")
     return (
         <div style={{ width: "75px" }}>
             <img

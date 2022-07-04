@@ -1,0 +1,2802 @@
+[
+    {
+        "model": "Armor",
+        "entityName": "Alberich's Bracers",
+        "cloudflareId": "Armor/Alberich's Bracers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Alberich's Pointed Hat (Altered)",
+        "cloudflareId": "Armor/Alberich's Pointed Hat (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Alberich's Pointed Hat",
+        "cloudflareId": "Armor/Alberich's Pointed Hat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Alberich's Robe (Altered)",
+        "cloudflareId": "Armor/Alberich's Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Alberich's Robe",
+        "cloudflareId": "Armor/Alberich's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Alberich's Trousers",
+        "cloudflareId": "Armor/Alberich's Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Albinauric Mask",
+        "cloudflareId": "Armor/Albinauric Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "All-Knowing Armor (Altered)",
+        "cloudflareId": "Armor/All-Knowing Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "All-Knowing Armor",
+        "cloudflareId": "Armor/All-Knowing Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "All-Knowing Gauntlets",
+        "cloudflareId": "Armor/All-Knowing Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "All-Knowing Greaves",
+        "cloudflareId": "Armor/All-Knowing Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "All-Knowing Helm",
+        "cloudflareId": "Armor/All-Knowing Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Aristocrat Boots",
+        "cloudflareId": "Armor/Aristocrat Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Aristocrat Coat",
+        "cloudflareId": "Armor/Aristocrat Coat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Aristocrat Garb (Altered)",
+        "cloudflareId": "Armor/Aristocrat Garb (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Aristocrat Garb",
+        "cloudflareId": "Armor/Aristocrat Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Aristocrat Hat",
+        "cloudflareId": "Armor/Aristocrat Hat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Aristocrat Headband",
+        "cloudflareId": "Armor/Aristocrat Headband"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ash-of-War Scarab",
+        "cloudflareId": "Armor/Ash-of-War Scarab"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Astrologer Gloves",
+        "cloudflareId": "Armor/Astrologer Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Astrologer Hood",
+        "cloudflareId": "Armor/Astrologer Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Astrologer Robe (Altered)",
+        "cloudflareId": "Armor/Astrologer Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Astrologer Robe",
+        "cloudflareId": "Armor/Astrologer Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Astrologer Trousers",
+        "cloudflareId": "Armor/Astrologer Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Azur's Glintstone Crown",
+        "cloudflareId": "Armor/Azur's Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Azur's Glintstone Robe",
+        "cloudflareId": "Armor/Azur's Glintstone Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Azur's Manchettes",
+        "cloudflareId": "Armor/Azur's Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bandit Boots",
+        "cloudflareId": "Armor/Bandit Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bandit Garb",
+        "cloudflareId": "Armor/Bandit Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bandit Manchettes",
+        "cloudflareId": "Armor/Bandit Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bandit Mask",
+        "cloudflareId": "Armor/Bandit Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Banished Knight Armor (Altered)",
+        "cloudflareId": "Armor/Banished Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Banished Knight Armor",
+        "cloudflareId": "Armor/Banished Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Banished Knight Gauntlets",
+        "cloudflareId": "Armor/Banished Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Banished Knight Greaves",
+        "cloudflareId": "Armor/Banished Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Banished Knight Helm (Altered)",
+        "cloudflareId": "Armor/Banished Knight Helm (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Banished Knight Helm",
+        "cloudflareId": "Armor/Banished Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Battlemage Legwraps",
+        "cloudflareId": "Armor/Battlemage Legwraps"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Battlemage Manchettes",
+        "cloudflareId": "Armor/Battlemage Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Battlemage Robe",
+        "cloudflareId": "Armor/Battlemage Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Beast Champion Armor (Altered)",
+        "cloudflareId": "Armor/Beast Champion Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Beast Champion Armor",
+        "cloudflareId": "Armor/Beast Champion Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Beast Champion Gauntlets",
+        "cloudflareId": "Armor/Beast Champion Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Beast Champion Greaves",
+        "cloudflareId": "Armor/Beast Champion Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Beast Champion Helm",
+        "cloudflareId": "Armor/Beast Champion Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Dumpling",
+        "cloudflareId": "Armor/Black Dumpling"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Hood",
+        "cloudflareId": "Armor/Black Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Knife Armor (Altered)",
+        "cloudflareId": "Armor/Black Knife Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Knife Armor",
+        "cloudflareId": "Armor/Black Knife Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Knife Gauntlets",
+        "cloudflareId": "Armor/Black Knife Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Knife Greaves",
+        "cloudflareId": "Armor/Black Knife Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Knife Hood",
+        "cloudflareId": "Armor/Black Knife Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Black Wolf Mask",
+        "cloudflareId": "Armor/Black Wolf Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blackflame Monk Armor",
+        "cloudflareId": "Armor/Blackflame Monk Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blackflame Monk Gauntlets",
+        "cloudflareId": "Armor/Blackflame Monk Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blackflame Monk Greaves",
+        "cloudflareId": "Armor/Blackflame Monk Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blackflame Monk Hood",
+        "cloudflareId": "Armor/Blackflame Monk Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blackguard's Iron Mask",
+        "cloudflareId": "Armor/Blackguard's Iron Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blaidd's Armor (Altered)",
+        "cloudflareId": "Armor/Blaidd's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blaidd's Armor",
+        "cloudflareId": "Armor/Blaidd's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blaidd's Gauntlets",
+        "cloudflareId": "Armor/Blaidd's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blaidd's Greaves",
+        "cloudflareId": "Armor/Blaidd's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodhound Knight Armor (Altered)",
+        "cloudflareId": "Armor/Bloodhound Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodhound Knight Armor",
+        "cloudflareId": "Armor/Bloodhound Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodhound Knight Gauntlets",
+        "cloudflareId": "Armor/Bloodhound Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodhound Knight Greaves",
+        "cloudflareId": "Armor/Bloodhound Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodhound Knight Helm",
+        "cloudflareId": "Armor/Bloodhound Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodsoaked Manchettes",
+        "cloudflareId": "Armor/Bloodsoaked Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodsoaked Mask",
+        "cloudflareId": "Armor/Bloodsoaked Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bloodsoaked Tabard",
+        "cloudflareId": "Armor/Bloodsoaked Tabard"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Cloth Cowl",
+        "cloudflareId": "Armor/Blue Cloth Cowl"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Cloth Vest",
+        "cloudflareId": "Armor/Blue Cloth Vest"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Festive Garb",
+        "cloudflareId": "Armor/Blue Festive Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Festive Hood",
+        "cloudflareId": "Armor/Blue Festive Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Silver Bracelets",
+        "cloudflareId": "Armor/Blue Silver Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Silver Mail Armor (Altered)",
+        "cloudflareId": "Armor/Blue Silver Mail Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Silver Mail Armor",
+        "cloudflareId": "Armor/Blue Silver Mail Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Silver Mail Hood",
+        "cloudflareId": "Armor/Blue Silver Mail Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Blue Silver Mail Skirt",
+        "cloudflareId": "Armor/Blue Silver Mail Skirt"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Briar Armor (Altered)",
+        "cloudflareId": "Armor/Briar Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Briar Armor",
+        "cloudflareId": "Armor/Briar Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Briar Gauntlets",
+        "cloudflareId": "Armor/Briar Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Briar Greaves",
+        "cloudflareId": "Armor/Briar Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Briar Helm",
+        "cloudflareId": "Armor/Briar Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bull-Goat Armor",
+        "cloudflareId": "Armor/Bull-Goat Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bull-Goat Gauntlets",
+        "cloudflareId": "Armor/Bull-Goat Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bull-Goat Greaves",
+        "cloudflareId": "Armor/Bull-Goat Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Bull-Goat Helm",
+        "cloudflareId": "Armor/Bull-Goat Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Carian Knight Armor (Altered)",
+        "cloudflareId": "Armor/Carian Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Carian Knight Armor",
+        "cloudflareId": "Armor/Carian Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Carian Knight Gauntlets",
+        "cloudflareId": "Armor/Carian Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Carian Knight Greaves",
+        "cloudflareId": "Armor/Carian Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Carian Knight Helm",
+        "cloudflareId": "Armor/Carian Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cerulean Tear Scarab",
+        "cloudflareId": "Armor/Cerulean Tear Scarab"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Chain Armor",
+        "cloudflareId": "Armor/Chain Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Chain Coif",
+        "cloudflareId": "Armor/Chain Coif"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Chain Leggings",
+        "cloudflareId": "Armor/Chain Leggings"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Chain-Draped Tabard",
+        "cloudflareId": "Armor/Chain-Draped Tabard"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Champion Bracers",
+        "cloudflareId": "Armor/Champion Bracers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Champion Gaiters",
+        "cloudflareId": "Armor/Champion Gaiters"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Champion Headband",
+        "cloudflareId": "Armor/Champion Headband"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Champion Pauldron",
+        "cloudflareId": "Armor/Champion Pauldron"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cleanrot Armor (Altered)",
+        "cloudflareId": "Armor/Cleanrot Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cleanrot Armor",
+        "cloudflareId": "Armor/Cleanrot Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cleanrot Gauntlets",
+        "cloudflareId": "Armor/Cleanrot Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cleanrot Greaves",
+        "cloudflareId": "Armor/Cleanrot Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cleanrot Helm (Altered)",
+        "cloudflareId": "Armor/Cleanrot Helm (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cleanrot Helm",
+        "cloudflareId": "Armor/Cleanrot Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cloth Garb",
+        "cloudflareId": "Armor/Cloth Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cloth Trousers",
+        "cloudflareId": "Armor/Cloth Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Garb (Altered)",
+        "cloudflareId": "Armor/Commoner's Garb (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Garb",
+        "cloudflareId": "Armor/Commoner's Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Headband (Altered)",
+        "cloudflareId": "Armor/Commoner's Headband (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Headband",
+        "cloudflareId": "Armor/Commoner's Headband"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Shoes",
+        "cloudflareId": "Armor/Commoner's Shoes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Simple Garb (Altered)",
+        "cloudflareId": "Armor/Commoner's Simple Garb (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Commoner's Simple Garb",
+        "cloudflareId": "Armor/Commoner's Simple Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Confessor Armor (Altered)",
+        "cloudflareId": "Armor/Confessor Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Confessor Armor",
+        "cloudflareId": "Armor/Confessor Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Confessor Boots",
+        "cloudflareId": "Armor/Confessor Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Confessor Gloves",
+        "cloudflareId": "Armor/Confessor Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Confessor Hood (Altered)",
+        "cloudflareId": "Armor/Confessor Hood (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Confessor Hood",
+        "cloudflareId": "Armor/Confessor Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Consort's Mask",
+        "cloudflareId": "Armor/Consort's Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Consort's Robe",
+        "cloudflareId": "Armor/Consort's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Consort's Trousers",
+        "cloudflareId": "Armor/Consort's Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Corhyn's Robe",
+        "cloudflareId": "Armor/Corhyn's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crimson Hood",
+        "cloudflareId": "Armor/Crimson Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crimson Tear Scarab",
+        "cloudflareId": "Armor/Crimson Tear Scarab"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Axe Armor (Altered)",
+        "cloudflareId": "Armor/Crucible Axe Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Axe Armor",
+        "cloudflareId": "Armor/Crucible Axe Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Axe Helm",
+        "cloudflareId": "Armor/Crucible Axe Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Gauntlets",
+        "cloudflareId": "Armor/Crucible Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Greaves",
+        "cloudflareId": "Armor/Crucible Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Tree Armor (Altered)",
+        "cloudflareId": "Armor/Crucible Tree Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Tree Armor",
+        "cloudflareId": "Armor/Crucible Tree Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Crucible Tree Helm",
+        "cloudflareId": "Armor/Crucible Tree Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cuckoo Knight Armor (Altered)",
+        "cloudflareId": "Armor/Cuckoo Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cuckoo Knight Armor",
+        "cloudflareId": "Armor/Cuckoo Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cuckoo Knight Gauntlets",
+        "cloudflareId": "Armor/Cuckoo Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cuckoo Knight Greaves",
+        "cloudflareId": "Armor/Cuckoo Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cuckoo Knight Helm",
+        "cloudflareId": "Armor/Cuckoo Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Cuckoo Surcoat",
+        "cloudflareId": "Armor/Cuckoo Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Deathbed Dress",
+        "cloudflareId": "Armor/Deathbed Dress"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Deathbed Smalls",
+        "cloudflareId": "Armor/Deathbed Smalls"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Depraved Perfumer Gloves",
+        "cloudflareId": "Armor/Depraved Perfumer Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Depraved Perfumer Headscarf",
+        "cloudflareId": "Armor/Depraved Perfumer Headscarf"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Depraved Perfumer Robe (Altered)",
+        "cloudflareId": "Armor/Depraved Perfumer Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Depraved Perfumer Robe",
+        "cloudflareId": "Armor/Depraved Perfumer Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Depraved Perfumer Trousers",
+        "cloudflareId": "Armor/Depraved Perfumer Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Diallos's Mask",
+        "cloudflareId": "Armor/Diallos's Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Dirty Chainmail",
+        "cloudflareId": "Armor/Dirty Chainmail"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Drake Knight Armor (Altered)",
+        "cloudflareId": "Armor/Drake Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Drake Knight Armor",
+        "cloudflareId": "Armor/Drake Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Drake Knight Gauntlets",
+        "cloudflareId": "Armor/Drake Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Drake Knight Greaves",
+        "cloudflareId": "Armor/Drake Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Drake Knight Helm (Altered)",
+        "cloudflareId": "Armor/Drake Knight Helm (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Drake Knight Helm",
+        "cloudflareId": "Armor/Drake Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Duelist Greaves",
+        "cloudflareId": "Armor/Duelist Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Duelist Helm",
+        "cloudflareId": "Armor/Duelist Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Eccentric's Armor",
+        "cloudflareId": "Armor/Eccentric's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Eccentric's Breeches",
+        "cloudflareId": "Armor/Eccentric's Breeches"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Eccentric's Hood (Altered)",
+        "cloudflareId": "Armor/Eccentric's Hood (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Eccentric's Hood",
+        "cloudflareId": "Armor/Eccentric's Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Eccentric's Manchettes",
+        "cloudflareId": "Armor/Eccentric's Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Elden Lord Armor (Altered)",
+        "cloudflareId": "Armor/Elden Lord Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Elden Lord Armor",
+        "cloudflareId": "Armor/Elden Lord Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Elden Lord Bracers",
+        "cloudflareId": "Armor/Elden Lord Bracers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Elden Lord Crown",
+        "cloudflareId": "Armor/Elden Lord Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Elden Lord Greaves",
+        "cloudflareId": "Armor/Elden Lord Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Envoy Crown",
+        "cloudflareId": "Armor/Envoy Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Erdtree Surcoat",
+        "cloudflareId": "Armor/Erdtree Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Errant Sorcerer Boots",
+        "cloudflareId": "Armor/Errant Sorcerer Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Errant Sorcerer Manchettes",
+        "cloudflareId": "Armor/Errant Sorcerer Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Errant Sorcerer Robe (Altered)",
+        "cloudflareId": "Armor/Errant Sorcerer Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Errant Sorcerer Robe",
+        "cloudflareId": "Armor/Errant Sorcerer Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Exile Armor",
+        "cloudflareId": "Armor/Exile Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Exile Gauntlets",
+        "cloudflareId": "Armor/Exile Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Exile Greaves",
+        "cloudflareId": "Armor/Exile Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Exile Hood",
+        "cloudflareId": "Armor/Exile Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Eye Surcoat",
+        "cloudflareId": "Armor/Eye Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fell Omen Cloak",
+        "cloudflareId": "Armor/Fell Omen Cloak"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Festive Garb (Altered)",
+        "cloudflareId": "Armor/Festive Garb (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Festive Garb",
+        "cloudflareId": "Armor/Festive Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Festive Hood (Altered)",
+        "cloudflareId": "Armor/Festive Hood (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Festive Hood",
+        "cloudflareId": "Armor/Festive Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fia's Hood",
+        "cloudflareId": "Armor/Fia's Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fia's Robe (Altered)",
+        "cloudflareId": "Armor/Fia's Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fia's Robe",
+        "cloudflareId": "Armor/Fia's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Finger Maiden Fillet",
+        "cloudflareId": "Armor/Finger Maiden Fillet"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Finger Maiden Robe (Altered)",
+        "cloudflareId": "Armor/Finger Maiden Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Finger Maiden Robe",
+        "cloudflareId": "Armor/Finger Maiden Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Finger Maiden Shoes",
+        "cloudflareId": "Armor/Finger Maiden Shoes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fingerprint Armor (Altered)",
+        "cloudflareId": "Armor/Fingerprint Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fingerprint Armor",
+        "cloudflareId": "Armor/Fingerprint Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fingerprint Gauntlets",
+        "cloudflareId": "Armor/Fingerprint Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fingerprint Greaves",
+        "cloudflareId": "Armor/Fingerprint Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fingerprint Helm",
+        "cloudflareId": "Armor/Fingerprint Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Monk Armor",
+        "cloudflareId": "Armor/Fire Monk Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Monk Gauntlets",
+        "cloudflareId": "Armor/Fire Monk Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Monk Greaves",
+        "cloudflareId": "Armor/Fire Monk Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Monk Hood",
+        "cloudflareId": "Armor/Fire Monk Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Prelate Armor (Altered)",
+        "cloudflareId": "Armor/Fire Prelate Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Prelate Armor",
+        "cloudflareId": "Armor/Fire Prelate Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Prelate Gauntlets",
+        "cloudflareId": "Armor/Fire Prelate Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Prelate Greaves",
+        "cloudflareId": "Armor/Fire Prelate Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fire Prelate Helm",
+        "cloudflareId": "Armor/Fire Prelate Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Foot Soldier Cap",
+        "cloudflareId": "Armor/Foot Soldier Cap"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Foot Soldier Gauntlets",
+        "cloudflareId": "Armor/Foot Soldier Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Foot Soldier Greaves",
+        "cloudflareId": "Armor/Foot Soldier Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Foot Soldier Helm",
+        "cloudflareId": "Armor/Foot Soldier Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Foot Soldier Helmet",
+        "cloudflareId": "Armor/Foot Soldier Helmet"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Foot Soldier Tabard",
+        "cloudflareId": "Armor/Foot Soldier Tabard"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fur Leggings",
+        "cloudflareId": "Armor/Fur Leggings"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Fur Raiment",
+        "cloudflareId": "Armor/Fur Raiment"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gauntlets",
+        "cloudflareId": "Armor/Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gelmir Knight Armor (Altered)",
+        "cloudflareId": "Armor/Gelmir Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gelmir Knight Armor",
+        "cloudflareId": "Armor/Gelmir Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gelmir Knight Gauntlets",
+        "cloudflareId": "Armor/Gelmir Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gelmir Knight Greaves",
+        "cloudflareId": "Armor/Gelmir Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gelmir Knight Helm",
+        "cloudflareId": "Armor/Gelmir Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gilded Foot Soldier Cap",
+        "cloudflareId": "Armor/Gilded Foot Soldier Cap"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Glintstone Scarab",
+        "cloudflareId": "Armor/Glintstone Scarab"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Knight Armor (Altered)",
+        "cloudflareId": "Armor/Godrick Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Knight Armor",
+        "cloudflareId": "Armor/Godrick Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Knight Gauntlets",
+        "cloudflareId": "Armor/Godrick Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Knight Greaves",
+        "cloudflareId": "Armor/Godrick Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Knight Helm",
+        "cloudflareId": "Armor/Godrick Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Soldier Gauntlets",
+        "cloudflareId": "Armor/Godrick Soldier Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Soldier Greaves",
+        "cloudflareId": "Armor/Godrick Soldier Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godrick Soldier Helm",
+        "cloudflareId": "Armor/Godrick Soldier Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Apostle Bracelets",
+        "cloudflareId": "Armor/Godskin Apostle Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Apostle Hood",
+        "cloudflareId": "Armor/Godskin Apostle Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Apostle Robe",
+        "cloudflareId": "Armor/Godskin Apostle Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Apostle Trousers",
+        "cloudflareId": "Armor/Godskin Apostle Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Noble Bracelets",
+        "cloudflareId": "Armor/Godskin Noble Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Noble Hood",
+        "cloudflareId": "Armor/Godskin Noble Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Noble Robe",
+        "cloudflareId": "Armor/Godskin Noble Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Godskin Noble Trousers",
+        "cloudflareId": "Armor/Godskin Noble Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gold Bracelets",
+        "cloudflareId": "Armor/Gold Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gold Waistwrap",
+        "cloudflareId": "Armor/Gold Waistwrap"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Goldmask's Rags",
+        "cloudflareId": "Armor/Goldmask's Rags"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gravekeeper Cloak (Altered)",
+        "cloudflareId": "Armor/Gravekeeper Cloak (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Gravekeeper Cloak",
+        "cloudflareId": "Armor/Gravekeeper Cloak"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Great Horned Headband",
+        "cloudflareId": "Armor/Great Horned Headband"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Greathelm",
+        "cloudflareId": "Armor/Greathelm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Greathood",
+        "cloudflareId": "Armor/Greathood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Guardian Bracers",
+        "cloudflareId": "Armor/Guardian Bracers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Guardian Garb (Full Bloom)",
+        "cloudflareId": "Armor/Guardian Garb (Full Bloom)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Guardian Garb",
+        "cloudflareId": "Armor/Guardian Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Guardian Greaves",
+        "cloudflareId": "Armor/Guardian Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Guardian Mask",
+        "cloudflareId": "Armor/Guardian Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Guilty Hood",
+        "cloudflareId": "Armor/Guilty Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haima Glintstone Crown",
+        "cloudflareId": "Armor/Haima Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Crest Surcoat",
+        "cloudflareId": "Armor/Haligtree Crest Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Gauntlets",
+        "cloudflareId": "Armor/Haligtree Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Greaves",
+        "cloudflareId": "Armor/Haligtree Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Helm",
+        "cloudflareId": "Armor/Haligtree Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Knight Armor (Altered)",
+        "cloudflareId": "Armor/Haligtree Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Knight Armor",
+        "cloudflareId": "Armor/Haligtree Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Knight Gauntlets",
+        "cloudflareId": "Armor/Haligtree Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Knight Greaves",
+        "cloudflareId": "Armor/Haligtree Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Haligtree Knight Helm",
+        "cloudflareId": "Armor/Haligtree Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Hierodas Glintstone Crown",
+        "cloudflareId": "Armor/Hierodas Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "High Page Clothes (Altered)",
+        "cloudflareId": "Armor/High Page Clothes (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "High Page Clothes",
+        "cloudflareId": "Armor/High Page Clothes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "High Page Hood",
+        "cloudflareId": "Armor/High Page Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Highwayman Cloth Armor",
+        "cloudflareId": "Armor/Highwayman Cloth Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Highwayman Gauntlets",
+        "cloudflareId": "Armor/Highwayman Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Highwayman Hood",
+        "cloudflareId": "Armor/Highwayman Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Hoslow's Armor (Altered)",
+        "cloudflareId": "Armor/Hoslow's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Hoslow's Armor",
+        "cloudflareId": "Armor/Hoslow's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Hoslow's Gauntlets",
+        "cloudflareId": "Armor/Hoslow's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Hoslow's Greaves",
+        "cloudflareId": "Armor/Hoslow's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Hoslow's Helm",
+        "cloudflareId": "Armor/Hoslow's Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Iji's Mirrorhelm",
+        "cloudflareId": "Armor/Iji's Mirrorhelm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Imp Head (Cat)",
+        "cloudflareId": "Armor/Imp Head (Cat)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Imp Head (Corpse)",
+        "cloudflareId": "Armor/Imp Head (Corpse)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Imp Head (Elder)",
+        "cloudflareId": "Armor/Imp Head (Elder)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Imp Head (Fanged)",
+        "cloudflareId": "Armor/Imp Head (Fanged)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Imp Head (Long-Tongued)",
+        "cloudflareId": "Armor/Imp Head (Long-Tongued)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Imp Head (Wolf)",
+        "cloudflareId": "Armor/Imp Head (Wolf)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Incantation Scarab",
+        "cloudflareId": "Armor/Incantation Scarab"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Iron Gauntlets",
+        "cloudflareId": "Armor/Iron Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Iron Helmet",
+        "cloudflareId": "Armor/Iron Helmet"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Iron Kasa",
+        "cloudflareId": "Armor/Iron Kasa"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ivory-Draped Tabard",
+        "cloudflareId": "Armor/Ivory-Draped Tabard"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Jar",
+        "cloudflareId": "Armor/Jar"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Juvenile Scholar Cap",
+        "cloudflareId": "Armor/Juvenile Scholar Cap"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Juvenile Scholar Robe",
+        "cloudflareId": "Armor/Juvenile Scholar Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Kaiden Armor",
+        "cloudflareId": "Armor/Kaiden Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Kaiden Gauntlets",
+        "cloudflareId": "Armor/Kaiden Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Kaiden Helm",
+        "cloudflareId": "Armor/Kaiden Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Kaiden Trousers",
+        "cloudflareId": "Armor/Kaiden Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Karolos Glintstone Crown",
+        "cloudflareId": "Armor/Karolos Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Knight Armor",
+        "cloudflareId": "Armor/Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Knight Gauntlets",
+        "cloudflareId": "Armor/Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Knight Greaves",
+        "cloudflareId": "Armor/Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Knight Helm",
+        "cloudflareId": "Armor/Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Land of Reeds Armor (Altered)",
+        "cloudflareId": "Armor/Land of Reeds Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Land of Reeds Armor",
+        "cloudflareId": "Armor/Land of Reeds Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Land of Reeds Gauntlets",
+        "cloudflareId": "Armor/Land of Reeds Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Land of Reeds Greaves",
+        "cloudflareId": "Armor/Land of Reeds Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Land of Reeds Helm",
+        "cloudflareId": "Armor/Land of Reeds Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lazuli Glintstone Crown",
+        "cloudflareId": "Armor/Lazuli Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lazuli Robe",
+        "cloudflareId": "Armor/Lazuli Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leather Armor",
+        "cloudflareId": "Armor/Leather Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leather Boots",
+        "cloudflareId": "Armor/Leather Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leather Gloves",
+        "cloudflareId": "Armor/Leather Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leather Trousers",
+        "cloudflareId": "Armor/Leather Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leather-Draped Tabard",
+        "cloudflareId": "Armor/Leather-Draped Tabard"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Knight Armor (Altered)",
+        "cloudflareId": "Armor/Leyndell Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Knight Armor",
+        "cloudflareId": "Armor/Leyndell Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Knight Gauntlets",
+        "cloudflareId": "Armor/Leyndell Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Knight Greaves",
+        "cloudflareId": "Armor/Leyndell Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Knight Helm",
+        "cloudflareId": "Armor/Leyndell Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Soldier Gauntlets",
+        "cloudflareId": "Armor/Leyndell Soldier Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Soldier Greaves",
+        "cloudflareId": "Armor/Leyndell Soldier Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Leyndell Soldier Helm",
+        "cloudflareId": "Armor/Leyndell Soldier Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lionel's Armor (Altered)",
+        "cloudflareId": "Armor/Lionel's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lionel's Armor",
+        "cloudflareId": "Armor/Lionel's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lionel's Gauntlets",
+        "cloudflareId": "Armor/Lionel's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lionel's Greaves",
+        "cloudflareId": "Armor/Lionel's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lionel's Helm",
+        "cloudflareId": "Armor/Lionel's Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lord of Blood's Robe (Altered)",
+        "cloudflareId": "Armor/Lord of Blood's Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lord of Blood's Robe",
+        "cloudflareId": "Armor/Lord of Blood's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lusat's Glintstone Crown",
+        "cloudflareId": "Armor/Lusat's Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lusat's Manchettes",
+        "cloudflareId": "Armor/Lusat's Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Lusat's Robe",
+        "cloudflareId": "Armor/Lusat's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malenia's Armor (Altered)",
+        "cloudflareId": "Armor/Malenia's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malenia's Armor",
+        "cloudflareId": "Armor/Malenia's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malenia's Gauntlet",
+        "cloudflareId": "Armor/Malenia's Gauntlet"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malenia's Greaves",
+        "cloudflareId": "Armor/Malenia's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malenia's Winged Helm",
+        "cloudflareId": "Armor/Malenia's Winged Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malformed Dragon Armor",
+        "cloudflareId": "Armor/Malformed Dragon Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malformed Dragon Gauntlets",
+        "cloudflareId": "Armor/Malformed Dragon Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malformed Dragon Greaves",
+        "cloudflareId": "Armor/Malformed Dragon Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Malformed Dragon Helm",
+        "cloudflareId": "Armor/Malformed Dragon Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Maliketh's Armor (Altered)",
+        "cloudflareId": "Armor/Maliketh's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Maliketh's Armor",
+        "cloudflareId": "Armor/Maliketh's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Maliketh's Gauntlets",
+        "cloudflareId": "Armor/Maliketh's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Maliketh's Greaves",
+        "cloudflareId": "Armor/Maliketh's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Maliketh's Helm",
+        "cloudflareId": "Armor/Maliketh's Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Marais Mask",
+        "cloudflareId": "Armor/Marais Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Marais Robe",
+        "cloudflareId": "Armor/Marais Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Marionette Soldier Armor",
+        "cloudflareId": "Armor/Marionette Soldier Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Marionette Soldier Birdhelm",
+        "cloudflareId": "Armor/Marionette Soldier Birdhelm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Marionette Soldier Helm",
+        "cloudflareId": "Armor/Marionette Soldier Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mask of Confidence",
+        "cloudflareId": "Armor/Mask of Confidence"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Gauntlets",
+        "cloudflareId": "Armor/Mausoleum Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Greaves",
+        "cloudflareId": "Armor/Mausoleum Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Knight Armor (Altered)",
+        "cloudflareId": "Armor/Mausoleum Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Knight Armor",
+        "cloudflareId": "Armor/Mausoleum Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Knight Gauntlets",
+        "cloudflareId": "Armor/Mausoleum Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Knight Greaves",
+        "cloudflareId": "Armor/Mausoleum Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mausoleum Surcoat",
+        "cloudflareId": "Armor/Mausoleum Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mushroom Arms",
+        "cloudflareId": "Armor/Mushroom Arms"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mushroom Body",
+        "cloudflareId": "Armor/Mushroom Body"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mushroom Crown",
+        "cloudflareId": "Armor/Mushroom Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mushroom Head",
+        "cloudflareId": "Armor/Mushroom Head"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Mushroom Legs",
+        "cloudflareId": "Armor/Mushroom Legs"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Navy Hood",
+        "cloudflareId": "Armor/Navy Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night Maiden Armor",
+        "cloudflareId": "Armor/Night Maiden Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night Maiden Twin Crown",
+        "cloudflareId": "Armor/Night Maiden Twin Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night's Cavalry Armor (Altered)",
+        "cloudflareId": "Armor/Night's Cavalry Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night's Cavalry Armor",
+        "cloudflareId": "Armor/Night's Cavalry Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night's Cavalry Gauntlets",
+        "cloudflareId": "Armor/Night's Cavalry Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night's Cavalry Greaves",
+        "cloudflareId": "Armor/Night's Cavalry Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night's Cavalry Helm (Altered)",
+        "cloudflareId": "Armor/Night's Cavalry Helm (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Night's Cavalry Helm",
+        "cloudflareId": "Armor/Night's Cavalry Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Noble's Gloves",
+        "cloudflareId": "Armor/Noble's Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Noble's Traveling Garb",
+        "cloudflareId": "Armor/Noble's Traveling Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Noble's Trousers",
+        "cloudflareId": "Armor/Noble's Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nomadic Merchant's Chapeau",
+        "cloudflareId": "Armor/Nomadic Merchant's Chapeau"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nomadic Merchant's Finery (Altered)",
+        "cloudflareId": "Armor/Nomadic Merchant's Finery (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nomadic Merchant's Finery",
+        "cloudflareId": "Armor/Nomadic Merchant's Finery"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nomadic Merchant's Trousers",
+        "cloudflareId": "Armor/Nomadic Merchant's Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Mirrorhelm",
+        "cloudflareId": "Armor/Nox Mirrorhelm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Monk Armor (Altered)",
+        "cloudflareId": "Armor/Nox Monk Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Monk Armor",
+        "cloudflareId": "Armor/Nox Monk Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Monk Bracelets",
+        "cloudflareId": "Armor/Nox Monk Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Monk Greaves",
+        "cloudflareId": "Armor/Nox Monk Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Monk Hood (Altered)",
+        "cloudflareId": "Armor/Nox Monk Hood (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Monk Hood",
+        "cloudflareId": "Armor/Nox Monk Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Swordstress Armor (Altered)",
+        "cloudflareId": "Armor/Nox Swordstress Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Swordstress Armor",
+        "cloudflareId": "Armor/Nox Swordstress Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Swordstress Crown (Altered)",
+        "cloudflareId": "Armor/Nox Swordstress Crown (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Nox Swordstress Crown",
+        "cloudflareId": "Armor/Nox Swordstress Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Octopus Head",
+        "cloudflareId": "Armor/Octopus Head"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Official's Attire",
+        "cloudflareId": "Armor/Official's Attire"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Okina Mask",
+        "cloudflareId": "Armor/Okina Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Old Aristocrat Cowl",
+        "cloudflareId": "Armor/Old Aristocrat Cowl"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Old Aristocrat Gown",
+        "cloudflareId": "Armor/Old Aristocrat Gown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Old Aristocrat Shoes",
+        "cloudflareId": "Armor/Old Aristocrat Shoes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Old Sorcerer's Legwraps",
+        "cloudflareId": "Armor/Old Sorcerer's Legwraps"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Olivinus Glintstone Crown",
+        "cloudflareId": "Armor/Olivinus Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omen Armor",
+        "cloudflareId": "Armor/Omen Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omen Gauntlets",
+        "cloudflareId": "Armor/Omen Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omen Greaves",
+        "cloudflareId": "Armor/Omen Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omen Helm",
+        "cloudflareId": "Armor/Omen Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omenkiller Boots",
+        "cloudflareId": "Armor/Omenkiller Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omenkiller Long Gloves",
+        "cloudflareId": "Armor/Omenkiller Long Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omenkiller Robe",
+        "cloudflareId": "Armor/Omenkiller Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Omensmirk Mask",
+        "cloudflareId": "Armor/Omensmirk Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Page Garb (Altered)",
+        "cloudflareId": "Armor/Page Garb (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Page Garb",
+        "cloudflareId": "Armor/Page Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Page Hood",
+        "cloudflareId": "Armor/Page Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Page Trousers",
+        "cloudflareId": "Armor/Page Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer Gloves",
+        "cloudflareId": "Armor/Perfumer Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer Hood",
+        "cloudflareId": "Armor/Perfumer Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer Robe (Altered)",
+        "cloudflareId": "Armor/Perfumer Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer Robe",
+        "cloudflareId": "Armor/Perfumer Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer Sarong",
+        "cloudflareId": "Armor/Perfumer Sarong"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer's Traveling Garb (Altered)",
+        "cloudflareId": "Armor/Perfumer's Traveling Garb (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Perfumer's Traveling Garb",
+        "cloudflareId": "Armor/Perfumer's Traveling Garb"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Preceptor's Big Hat",
+        "cloudflareId": "Armor/Preceptor's Big Hat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Preceptor's Gloves",
+        "cloudflareId": "Armor/Preceptor's Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Preceptor's Long Gown (Altered)",
+        "cloudflareId": "Armor/Preceptor's Long Gown (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Preceptor's Long Gown",
+        "cloudflareId": "Armor/Preceptor's Long Gown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Preceptor's Trousers",
+        "cloudflareId": "Armor/Preceptor's Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prisoner Clothing",
+        "cloudflareId": "Armor/Prisoner Clothing"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prisoner Iron Mask",
+        "cloudflareId": "Armor/Prisoner Iron Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prisoner Trousers",
+        "cloudflareId": "Armor/Prisoner Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prophet Blindfold",
+        "cloudflareId": "Armor/Prophet Blindfold"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prophet Robe (Altered)",
+        "cloudflareId": "Armor/Prophet Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prophet Robe",
+        "cloudflareId": "Armor/Prophet Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Prophet Trousers",
+        "cloudflareId": "Armor/Prophet Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Pumpkin Helm",
+        "cloudflareId": "Armor/Pumpkin Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Queen's Bracelets",
+        "cloudflareId": "Armor/Queen's Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Queen's Crescent Crown",
+        "cloudflareId": "Armor/Queen's Crescent Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Queen's Leggings",
+        "cloudflareId": "Armor/Queen's Leggings"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Queen's Robe",
+        "cloudflareId": "Armor/Queen's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn Soldier Gauntlets",
+        "cloudflareId": "Armor/Radahn Soldier Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn Soldier Greaves",
+        "cloudflareId": "Armor/Radahn Soldier Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn Soldier Helm",
+        "cloudflareId": "Armor/Radahn Soldier Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn's Gauntlets",
+        "cloudflareId": "Armor/Radahn's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn's Greaves",
+        "cloudflareId": "Armor/Radahn's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn's Lion Armor (Altered)",
+        "cloudflareId": "Armor/Radahn's Lion Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn's Lion Armor",
+        "cloudflareId": "Armor/Radahn's Lion Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radahn's Redmane Helm",
+        "cloudflareId": "Armor/Radahn's Redmane Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Radiant Gold Mask",
+        "cloudflareId": "Armor/Radiant Gold Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raging Wolf Armor (Altered)",
+        "cloudflareId": "Armor/Raging Wolf Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raging Wolf Armor",
+        "cloudflareId": "Armor/Raging Wolf Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raging Wolf Gauntlets",
+        "cloudflareId": "Armor/Raging Wolf Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raging Wolf Greaves",
+        "cloudflareId": "Armor/Raging Wolf Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raging Wolf Helm",
+        "cloudflareId": "Armor/Raging Wolf Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raptor's Black Feathers",
+        "cloudflareId": "Armor/Raptor's Black Feathers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raya Lucarian Gauntlets",
+        "cloudflareId": "Armor/Raya Lucarian Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raya Lucarian Greaves",
+        "cloudflareId": "Armor/Raya Lucarian Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raya Lucarian Helm",
+        "cloudflareId": "Armor/Raya Lucarian Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Raya Lucarian Robe",
+        "cloudflareId": "Armor/Raya Lucarian Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Redmane Knight Armor (Altered)",
+        "cloudflareId": "Armor/Redmane Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Redmane Knight Armor",
+        "cloudflareId": "Armor/Redmane Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Redmane Knight Gauntlets",
+        "cloudflareId": "Armor/Redmane Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Redmane Knight Greaves",
+        "cloudflareId": "Armor/Redmane Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Redmane Knight Helm",
+        "cloudflareId": "Armor/Redmane Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Redmane Surcoat",
+        "cloudflareId": "Armor/Redmane Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ronin's Armor (Altered)",
+        "cloudflareId": "Armor/Ronin's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ronin's Armor",
+        "cloudflareId": "Armor/Ronin's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ronin's Gauntlets",
+        "cloudflareId": "Armor/Ronin's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ronin's Greaves",
+        "cloudflareId": "Armor/Ronin's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Rotten Duelist Greaves",
+        "cloudflareId": "Armor/Rotten Duelist Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Rotten Duelist Helm",
+        "cloudflareId": "Armor/Rotten Duelist Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Rotten Gravekeeper Cloak (Altered)",
+        "cloudflareId": "Armor/Rotten Gravekeeper Cloak (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Rotten Gravekeeper Cloak",
+        "cloudflareId": "Armor/Rotten Gravekeeper Cloak"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Knight Armor (Altered)",
+        "cloudflareId": "Armor/Royal Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Knight Armor",
+        "cloudflareId": "Armor/Royal Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Knight Gauntlets",
+        "cloudflareId": "Armor/Royal Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Knight Greaves",
+        "cloudflareId": "Armor/Royal Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Knight Helm",
+        "cloudflareId": "Armor/Royal Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Remains Armor",
+        "cloudflareId": "Armor/Royal Remains Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Remains Gauntlets",
+        "cloudflareId": "Armor/Royal Remains Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Remains Greaves",
+        "cloudflareId": "Armor/Royal Remains Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Royal Remains Helm",
+        "cloudflareId": "Armor/Royal Remains Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ruler's Mask",
+        "cloudflareId": "Armor/Ruler's Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Ruler's Robe",
+        "cloudflareId": "Armor/Ruler's Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sacred Crown Helm",
+        "cloudflareId": "Armor/Sacred Crown Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sage Hood",
+        "cloudflareId": "Armor/Sage Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sage Robe",
+        "cloudflareId": "Armor/Sage Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sage Trousers",
+        "cloudflareId": "Armor/Sage Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sanguine Noble Hood",
+        "cloudflareId": "Armor/Sanguine Noble Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sanguine Noble Robe",
+        "cloudflareId": "Armor/Sanguine Noble Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sanguine Noble Waistcloth",
+        "cloudflareId": "Armor/Sanguine Noble Waistcloth"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scale Armor",
+        "cloudflareId": "Armor/Scale Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scaled Armor (Altered)",
+        "cloudflareId": "Armor/Scaled Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scaled Armor",
+        "cloudflareId": "Armor/Scaled Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scaled Gauntlets",
+        "cloudflareId": "Armor/Scaled Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scaled Greaves",
+        "cloudflareId": "Armor/Scaled Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scaled Helm",
+        "cloudflareId": "Armor/Scaled Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Scarlet Tabard",
+        "cloudflareId": "Armor/Scarlet Tabard"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Shaman Furs",
+        "cloudflareId": "Armor/Shaman Furs"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Shaman Leggings",
+        "cloudflareId": "Armor/Shaman Leggings"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Shining Horned Headband",
+        "cloudflareId": "Armor/Shining Horned Headband"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Silver Tear Mask",
+        "cloudflareId": "Armor/Silver Tear Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Skeletal Mask",
+        "cloudflareId": "Armor/Skeletal Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Snow Witch Hat",
+        "cloudflareId": "Armor/Snow Witch Hat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Snow Witch Robe (Altered)",
+        "cloudflareId": "Armor/Snow Witch Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Snow Witch Robe",
+        "cloudflareId": "Armor/Snow Witch Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Snow Witch Skirt",
+        "cloudflareId": "Armor/Snow Witch Skirt"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sorcerer Leggings",
+        "cloudflareId": "Armor/Sorcerer Leggings"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Sorcerer Manchettes",
+        "cloudflareId": "Armor/Sorcerer Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Spellblade's Gloves",
+        "cloudflareId": "Armor/Spellblade's Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Spellblade's Pointed Hat",
+        "cloudflareId": "Armor/Spellblade's Pointed Hat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Spellblade's Traveling Attire (Altered)",
+        "cloudflareId": "Armor/Spellblade's Traveling Attire (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Spellblade's Traveling Attire",
+        "cloudflareId": "Armor/Spellblade's Traveling Attire"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Spellblade's Trousers",
+        "cloudflareId": "Armor/Spellblade's Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveler's Boots",
+        "cloudflareId": "Armor/Traveler's Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveler's Clothes",
+        "cloudflareId": "Armor/Traveler's Clothes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveler's Gloves",
+        "cloudflareId": "Armor/Traveler's Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveler's Hat",
+        "cloudflareId": "Armor/Traveler's Hat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveler's Manchettes",
+        "cloudflareId": "Armor/Traveler's Manchettes"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveler's Slops",
+        "cloudflareId": "Armor/Traveler's Slops"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveling Maiden Boots",
+        "cloudflareId": "Armor/Traveling Maiden Boots"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveling Maiden Gloves",
+        "cloudflareId": "Armor/Traveling Maiden Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveling Maiden Hood",
+        "cloudflareId": "Armor/Traveling Maiden Hood"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveling Maiden Robe (Altered)",
+        "cloudflareId": "Armor/Traveling Maiden Robe (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Traveling Maiden Robe",
+        "cloudflareId": "Armor/Traveling Maiden Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree Sentinel Armor (Altered)",
+        "cloudflareId": "Armor/Tree Sentinel Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree Sentinel Armor",
+        "cloudflareId": "Armor/Tree Sentinel Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree Sentinel Gauntlets",
+        "cloudflareId": "Armor/Tree Sentinel Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree Sentinel Greaves",
+        "cloudflareId": "Armor/Tree Sentinel Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree Sentinel Helm",
+        "cloudflareId": "Armor/Tree Sentinel Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree Surcoat",
+        "cloudflareId": "Armor/Tree Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Tree-and-Beast Surcoat",
+        "cloudflareId": "Armor/Tree-and-Beast Surcoat"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Twinned Armor (Altered)",
+        "cloudflareId": "Armor/Twinned Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Twinned Armor",
+        "cloudflareId": "Armor/Twinned Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Twinned Gauntlets",
+        "cloudflareId": "Armor/Twinned Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Twinned Greaves",
+        "cloudflareId": "Armor/Twinned Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Twinned Helm",
+        "cloudflareId": "Armor/Twinned Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Twinsage Glintstone Crown",
+        "cloudflareId": "Armor/Twinsage Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Upper-Class Robe",
+        "cloudflareId": "Armor/Upper-Class Robe"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vagabond Knight Armor (Altered)",
+        "cloudflareId": "Armor/Vagabond Knight Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vagabond Knight Armor",
+        "cloudflareId": "Armor/Vagabond Knight Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vagabond Knight Gauntlets",
+        "cloudflareId": "Armor/Vagabond Knight Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vagabond Knight Greaves",
+        "cloudflareId": "Armor/Vagabond Knight Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vagabond Knight Helm",
+        "cloudflareId": "Armor/Vagabond Knight Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Veteran's Armor (Altered)",
+        "cloudflareId": "Armor/Veteran's Armor (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Veteran's Armor",
+        "cloudflareId": "Armor/Veteran's Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Veteran's Gauntlets",
+        "cloudflareId": "Armor/Veteran's Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Veteran's Greaves",
+        "cloudflareId": "Armor/Veteran's Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Veteran's Helm",
+        "cloudflareId": "Armor/Veteran's Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vulgar Militia Armor",
+        "cloudflareId": "Armor/Vulgar Militia Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vulgar Militia Gauntlets",
+        "cloudflareId": "Armor/Vulgar Militia Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vulgar Militia Greaves",
+        "cloudflareId": "Armor/Vulgar Militia Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Vulgar Militia Helm",
+        "cloudflareId": "Armor/Vulgar Militia Helm"
+    },
+    {
+        "model": "Armor",
+        "entityName": "War Surgeon Gloves",
+        "cloudflareId": "Armor/War Surgeon Gloves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "War Surgeon Gown (Altered)",
+        "cloudflareId": "Armor/War Surgeon Gown (Altered)"
+    },
+    {
+        "model": "Armor",
+        "entityName": "War Surgeon Gown",
+        "cloudflareId": "Armor/War Surgeon Gown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "War Surgeon Trousers",
+        "cloudflareId": "Armor/War Surgeon Trousers"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Warrior Gauntlets",
+        "cloudflareId": "Armor/Warrior Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Warrior Greaves",
+        "cloudflareId": "Armor/Warrior Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "White Mask",
+        "cloudflareId": "Armor/White Mask"
+    },
+    {
+        "model": "Armor",
+        "entityName": "White Reed Armor",
+        "cloudflareId": "Armor/White Reed Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "White Reed Gauntlets",
+        "cloudflareId": "Armor/White Reed Gauntlets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "White Reed Greaves",
+        "cloudflareId": "Armor/White Reed Greaves"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Witch's Glintstone Crown",
+        "cloudflareId": "Armor/Witch's Glintstone Crown"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Zamor Armor",
+        "cloudflareId": "Armor/Zamor Armor"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Zamor Bracelets",
+        "cloudflareId": "Armor/Zamor Bracelets"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Zamor Legwraps",
+        "cloudflareId": "Armor/Zamor Legwraps"
+    },
+    {
+        "model": "Armor",
+        "entityName": "Zamor Mask",
+        "cloudflareId": "Armor/Zamor Mask"
+    }
+]

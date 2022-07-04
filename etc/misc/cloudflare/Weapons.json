@@ -1,0 +1,1887 @@
+[
+    {
+        "model": "Weapons",
+        "entityName": "Academy Glintstone Staff",
+        "cloudflareId": "Weapons/Academy Glintstone Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Alabaster Lord's Sword",
+        "cloudflareId": "Weapons/Alabaster Lord's Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Albinauric Bow",
+        "cloudflareId": "Weapons/Albinauric Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Albinauric Shield",
+        "cloudflareId": "Weapons/Albinauric Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Albinauric Staff",
+        "cloudflareId": "Weapons/Albinauric Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ant's Skull Plate",
+        "cloudflareId": "Weapons/Ant's Skull Plate"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Antspur Rapier",
+        "cloudflareId": "Weapons/Antspur Rapier"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Arbalest",
+        "cloudflareId": "Weapons/Arbalest"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Astrologer's Staff",
+        "cloudflareId": "Weapons/Astrologer's Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Axe of Godfrey",
+        "cloudflareId": "Weapons/Axe of Godfrey"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Axe of Godrick",
+        "cloudflareId": "Weapons/Axe of Godrick"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Azur's Glintstone Staff",
+        "cloudflareId": "Weapons/Azur's Glintstone Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bandit's Curved Sword",
+        "cloudflareId": "Weapons/Bandit's Curved Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Banished Knight's Greatsword",
+        "cloudflareId": "Weapons/Banished Knight's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Banished Knight's Halberd",
+        "cloudflareId": "Weapons/Banished Knight's Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Banished Knight's Shield",
+        "cloudflareId": "Weapons/Banished Knight's Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bastard Sword",
+        "cloudflareId": "Weapons/Bastard Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bastard's Stars",
+        "cloudflareId": "Weapons/Bastard's Stars"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Battle Axe",
+        "cloudflareId": "Weapons/Battle Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Battle Hammer",
+        "cloudflareId": "Weapons/Battle Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Beast Crest Heater Shield",
+        "cloudflareId": "Weapons/Beast Crest Heater Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Beast-Repellent Torch",
+        "cloudflareId": "Weapons/Beast-Repellent Torch"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Beastclaw Greathammer",
+        "cloudflareId": "Weapons/Beastclaw Greathammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Beastman's Cleaver",
+        "cloudflareId": "Weapons/Beastman's Cleaver"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Beastman's Curved Sword",
+        "cloudflareId": "Weapons/Beastman's Curved Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Beastman's Jar-Shield",
+        "cloudflareId": "Weapons/Beastman's Jar-Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Black Bow",
+        "cloudflareId": "Weapons/Black Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Black Knife",
+        "cloudflareId": "Weapons/Black Knife"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Black Leather Shield",
+        "cloudflareId": "Weapons/Black Leather Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Blade of Calling",
+        "cloudflareId": "Weapons/Blade of Calling"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Blasphemous Blade",
+        "cloudflareId": "Weapons/Blasphemous Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bloodhound Claws",
+        "cloudflareId": "Weapons/Bloodhound Claws"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bloodhound's Fang",
+        "cloudflareId": "Weapons/Bloodhound's Fang"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bloodstained Dagger",
+        "cloudflareId": "Weapons/Bloodstained Dagger"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bloody Helice",
+        "cloudflareId": "Weapons/Bloody Helice"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Blue Crest Heater Shield",
+        "cloudflareId": "Weapons/Blue Crest Heater Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Blue-Gold Kite Shield",
+        "cloudflareId": "Weapons/Blue-Gold Kite Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Blue-White Wooden Shield",
+        "cloudflareId": "Weapons/Blue-White Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Bolt of Gransax",
+        "cloudflareId": "Weapons/Bolt of Gransax"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Brass Shield",
+        "cloudflareId": "Weapons/Brass Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Briar Greatshield",
+        "cloudflareId": "Weapons/Briar Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Brick Hammer",
+        "cloudflareId": "Weapons/Brick Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Broadsword",
+        "cloudflareId": "Weapons/Broadsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Buckler",
+        "cloudflareId": "Weapons/Buckler"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Butchering Knife",
+        "cloudflareId": "Weapons/Butchering Knife"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Caestus",
+        "cloudflareId": "Weapons/Caestus"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Candletree Wooden Shield",
+        "cloudflareId": "Weapons/Candletree Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cane Sword",
+        "cloudflareId": "Weapons/Cane Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Carian Glintblade Staff",
+        "cloudflareId": "Weapons/Carian Glintblade Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Carian Glintstone Staff",
+        "cloudflareId": "Weapons/Carian Glintstone Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Carian Knight's Shield",
+        "cloudflareId": "Weapons/Carian Knight's Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Carian Knight's Sword",
+        "cloudflareId": "Weapons/Carian Knight's Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Carian Regal Scepter",
+        "cloudflareId": "Weapons/Carian Regal Scepter"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Celebrant's Cleaver",
+        "cloudflareId": "Weapons/Celebrant's Cleaver"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Celebrant's Rib-Rake",
+        "cloudflareId": "Weapons/Celebrant's Rib-Rake"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Celebrant's Sickle",
+        "cloudflareId": "Weapons/Celebrant's Sickle"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Celebrant's Skull",
+        "cloudflareId": "Weapons/Celebrant's Skull"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Chainlink Flail",
+        "cloudflareId": "Weapons/Chainlink Flail"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cinquedea",
+        "cloudflareId": "Weapons/Cinquedea"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cipher Pata",
+        "cloudflareId": "Weapons/Cipher Pata"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Clawmark Seal",
+        "cloudflareId": "Weapons/Clawmark Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Clayman's Harpoon",
+        "cloudflareId": "Weapons/Clayman's Harpoon"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Claymore",
+        "cloudflareId": "Weapons/Claymore"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cleanrot Knight's Sword",
+        "cloudflareId": "Weapons/Cleanrot Knight's Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cleanrot Spear",
+        "cloudflareId": "Weapons/Cleanrot Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Clinging Bone",
+        "cloudflareId": "Weapons/Clinging Bone"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Club",
+        "cloudflareId": "Weapons/Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Coded Sword",
+        "cloudflareId": "Weapons/Coded Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Coil Shield",
+        "cloudflareId": "Weapons/Coil Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Commander's Standard",
+        "cloudflareId": "Weapons/Commander's Standard"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Composite Bow",
+        "cloudflareId": "Weapons/Composite Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cranial Vessel Candlestand",
+        "cloudflareId": "Weapons/Cranial Vessel Candlestand"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crepus's Black-Key Crossbow",
+        "cloudflareId": "Weapons/Crepus's Black-Key Crossbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crescent Moon Axe",
+        "cloudflareId": "Weapons/Crescent Moon Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cross-Naginata",
+        "cloudflareId": "Weapons/Cross-Naginata"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crossed-Tree Towershield",
+        "cloudflareId": "Weapons/Crossed-Tree Towershield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crucible Hornshield",
+        "cloudflareId": "Weapons/Crucible Hornshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crystal Knife",
+        "cloudflareId": "Weapons/Crystal Knife"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crystal Spear",
+        "cloudflareId": "Weapons/Crystal Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crystal Staff",
+        "cloudflareId": "Weapons/Crystal Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Crystal Sword",
+        "cloudflareId": "Weapons/Crystal Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Cuckoo Greatshield",
+        "cloudflareId": "Weapons/Cuckoo Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Curved Club",
+        "cloudflareId": "Weapons/Curved Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Curved Great Club",
+        "cloudflareId": "Weapons/Curved Great Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dagger",
+        "cloudflareId": "Weapons/Dagger"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dark Moon Greatsword",
+        "cloudflareId": "Weapons/Dark Moon Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Death Ritual Spear",
+        "cloudflareId": "Weapons/Death Ritual Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Death's Poker",
+        "cloudflareId": "Weapons/Death's Poker"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Demi-Human Queen's Staff",
+        "cloudflareId": "Weapons/Demi-Human Queen's Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Devourer's Scepter",
+        "cloudflareId": "Weapons/Devourer's Scepter"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Digger's Staff",
+        "cloudflareId": "Weapons/Digger's Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dismounter",
+        "cloudflareId": "Weapons/Dismounter"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Distinguished Greatshield",
+        "cloudflareId": "Weapons/Distinguished Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragon Communion Seal",
+        "cloudflareId": "Weapons/Dragon Communion Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragon Greatclaw",
+        "cloudflareId": "Weapons/Dragon Greatclaw"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragon Halberd",
+        "cloudflareId": "Weapons/Dragon Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragon King's Cragblade",
+        "cloudflareId": "Weapons/Dragon King's Cragblade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragon Towershield",
+        "cloudflareId": "Weapons/Dragon Towershield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragonclaw Shield",
+        "cloudflareId": "Weapons/Dragonclaw Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Dragonscale Blade",
+        "cloudflareId": "Weapons/Dragonscale Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Duelist Greataxe",
+        "cloudflareId": "Weapons/Duelist Greataxe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Eclipse Crest Greatshield",
+        "cloudflareId": "Weapons/Eclipse Crest Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Eclipse Crest Heater Shield",
+        "cloudflareId": "Weapons/Eclipse Crest Heater Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Eclipse Shotel",
+        "cloudflareId": "Weapons/Eclipse Shotel"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Eleonora's Poleblade",
+        "cloudflareId": "Weapons/Eleonora's Poleblade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Envoy's Greathorn",
+        "cloudflareId": "Weapons/Envoy's Greathorn"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Envoy's Horn",
+        "cloudflareId": "Weapons/Envoy's Horn"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Envoy's Long Horn",
+        "cloudflareId": "Weapons/Envoy's Long Horn"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Erdsteel Dagger",
+        "cloudflareId": "Weapons/Erdsteel Dagger"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Erdtree Bow",
+        "cloudflareId": "Weapons/Erdtree Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Erdtree Greatbow",
+        "cloudflareId": "Weapons/Erdtree Greatbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Erdtree Greatshield",
+        "cloudflareId": "Weapons/Erdtree Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Erdtree Seal",
+        "cloudflareId": "Weapons/Erdtree Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Estoc",
+        "cloudflareId": "Weapons/Estoc"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Executioner's Greataxe",
+        "cloudflareId": "Weapons/Executioner's Greataxe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Falchion",
+        "cloudflareId": "Weapons/Falchion"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Fallingstar Beast Jaw",
+        "cloudflareId": "Weapons/Fallingstar Beast Jaw"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Family Heads",
+        "cloudflareId": "Weapons/Family Heads"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Finger Seal",
+        "cloudflareId": "Weapons/Finger Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Fingerprint Stone Shield",
+        "cloudflareId": "Weapons/Fingerprint Stone Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Flail",
+        "cloudflareId": "Weapons/Flail"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Flamberge",
+        "cloudflareId": "Weapons/Flamberge"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Flame Crest Wooden Shield",
+        "cloudflareId": "Weapons/Flame Crest Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Flowing Curved Sword",
+        "cloudflareId": "Weapons/Flowing Curved Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Forked Greatsword",
+        "cloudflareId": "Weapons/Forked Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Forked Hatchet",
+        "cloudflareId": "Weapons/Forked Hatchet"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Frenzied Flame Seal",
+        "cloudflareId": "Weapons/Frenzied Flame Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Frozen Needle",
+        "cloudflareId": "Weapons/Frozen Needle"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Full Moon Crossbow",
+        "cloudflareId": "Weapons/Full Moon Crossbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Black Axe",
+        "cloudflareId": "Weapons/Gargoyle's Black Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Black Blades",
+        "cloudflareId": "Weapons/Gargoyle's Black Blades"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Black Halberd",
+        "cloudflareId": "Weapons/Gargoyle's Black Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Blackblade",
+        "cloudflareId": "Weapons/Gargoyle's Blackblade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Great Axe",
+        "cloudflareId": "Weapons/Gargoyle's Great Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Greatsword",
+        "cloudflareId": "Weapons/Gargoyle's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Halberd",
+        "cloudflareId": "Weapons/Gargoyle's Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gargoyle's Twinblade",
+        "cloudflareId": "Weapons/Gargoyle's Twinblade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gelmir Glintstone Staff",
+        "cloudflareId": "Weapons/Gelmir Glintstone Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ghiza's Wheel",
+        "cloudflareId": "Weapons/Ghiza's Wheel"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ghostflame Torch",
+        "cloudflareId": "Weapons/Ghostflame Torch"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Giant's Red Braid",
+        "cloudflareId": "Weapons/Giant's Red Braid"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Giant's Seal",
+        "cloudflareId": "Weapons/Giant's Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Giant-Crusher",
+        "cloudflareId": "Weapons/Giant-Crusher"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gilded Greatshield",
+        "cloudflareId": "Weapons/Gilded Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gilded Iron Shield",
+        "cloudflareId": "Weapons/Gilded Iron Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Glaive",
+        "cloudflareId": "Weapons/Glaive"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Glintstone Kris",
+        "cloudflareId": "Weapons/Glintstone Kris"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Glintstone Staff",
+        "cloudflareId": "Weapons/Glintstone Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Godskin Peeler",
+        "cloudflareId": "Weapons/Godskin Peeler"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Godskin Stitcher",
+        "cloudflareId": "Weapons/Godskin Stitcher"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Godslayer's Greatsword",
+        "cloudflareId": "Weapons/Godslayer's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Godslayer's Seal",
+        "cloudflareId": "Weapons/Godslayer's Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golden Beast Crest Shield",
+        "cloudflareId": "Weapons/Golden Beast Crest Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golden Epitaph",
+        "cloudflareId": "Weapons/Golden Epitaph"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golden Greatshield",
+        "cloudflareId": "Weapons/Golden Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golden Halberd",
+        "cloudflareId": "Weapons/Golden Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golden Order Greatsword",
+        "cloudflareId": "Weapons/Golden Order Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golden Order Seal",
+        "cloudflareId": "Weapons/Golden Order Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golem Greatbow",
+        "cloudflareId": "Weapons/Golem Greatbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Golem's Halberd",
+        "cloudflareId": "Weapons/Golem's Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Grafted Blade Greatsword",
+        "cloudflareId": "Weapons/Grafted Blade Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Grafted Dragon",
+        "cloudflareId": "Weapons/Grafted Dragon"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Grave Scythe",
+        "cloudflareId": "Weapons/Grave Scythe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Gravel Stone Seal",
+        "cloudflareId": "Weapons/Gravel Stone Seal"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Club",
+        "cloudflareId": "Weapons/Great Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Epee",
+        "cloudflareId": "Weapons/Great Epee"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Knife",
+        "cloudflareId": "Weapons/Great Knife"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Mace",
+        "cloudflareId": "Weapons/Great Mace"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Omenkiller Cleaver",
+        "cloudflareId": "Weapons/Great Omenkiller Cleaver"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Stars",
+        "cloudflareId": "Weapons/Great Stars"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Great Turtle Shell",
+        "cloudflareId": "Weapons/Great Turtle Shell"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Greataxe",
+        "cloudflareId": "Weapons/Greataxe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Greatbow",
+        "cloudflareId": "Weapons/Greatbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Greathorn Hammer",
+        "cloudflareId": "Weapons/Greathorn Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Greatsword",
+        "cloudflareId": "Weapons/Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Grossmesser",
+        "cloudflareId": "Weapons/Grossmesser"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Guardian's Swordspear",
+        "cloudflareId": "Weapons/Guardian's Swordspear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Halberd",
+        "cloudflareId": "Weapons/Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Haligtree Crest Greatshield",
+        "cloudflareId": "Weapons/Haligtree Crest Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Halo Scythe",
+        "cloudflareId": "Weapons/Halo Scythe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hammer",
+        "cloudflareId": "Weapons/Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hand Axe",
+        "cloudflareId": "Weapons/Hand Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hand Ballista",
+        "cloudflareId": "Weapons/Hand Ballista"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hand of Malenia",
+        "cloudflareId": "Weapons/Hand of Malenia"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Harp Bow",
+        "cloudflareId": "Weapons/Harp Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hawk Crest Wooden Shield",
+        "cloudflareId": "Weapons/Hawk Crest Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Heater Shield",
+        "cloudflareId": "Weapons/Heater Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Heavy Crossbow",
+        "cloudflareId": "Weapons/Heavy Crossbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Helphen's Steeple",
+        "cloudflareId": "Weapons/Helphen's Steeple"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Highland Axe",
+        "cloudflareId": "Weapons/Highland Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hookclaws",
+        "cloudflareId": "Weapons/Hookclaws"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Horn Bow",
+        "cloudflareId": "Weapons/Horn Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Horse Crest Wooden Shield",
+        "cloudflareId": "Weapons/Horse Crest Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Hoslow's Petal Whip",
+        "cloudflareId": "Weapons/Hoslow's Petal Whip"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ice Crest Shield",
+        "cloudflareId": "Weapons/Ice Crest Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Icerind Hatchet",
+        "cloudflareId": "Weapons/Icerind Hatchet"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Icon Shield",
+        "cloudflareId": "Weapons/Icon Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Inquisitor's Girandole",
+        "cloudflareId": "Weapons/Inquisitor's Girandole"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Inseparable Sword",
+        "cloudflareId": "Weapons/Inseparable Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Inverted Hawk Heater Shield",
+        "cloudflareId": "Weapons/Inverted Hawk Heater Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Inverted Hawk Towershield",
+        "cloudflareId": "Weapons/Inverted Hawk Towershield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Iron Ball",
+        "cloudflareId": "Weapons/Iron Ball"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Iron Cleaver",
+        "cloudflareId": "Weapons/Iron Cleaver"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Iron Greatsword",
+        "cloudflareId": "Weapons/Iron Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Iron Roundshield",
+        "cloudflareId": "Weapons/Iron Roundshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Iron Spear",
+        "cloudflareId": "Weapons/Iron Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ivory Sickle",
+        "cloudflareId": "Weapons/Ivory Sickle"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Jar Cannon",
+        "cloudflareId": "Weapons/Jar Cannon"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Jawbone Axe",
+        "cloudflareId": "Weapons/Jawbone Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Jellyfish Shield",
+        "cloudflareId": "Weapons/Jellyfish Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Katar",
+        "cloudflareId": "Weapons/Katar"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Kite Shield",
+        "cloudflareId": "Weapons/Kite Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Knight's Greatsword",
+        "cloudflareId": "Weapons/Knight's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lance",
+        "cloudflareId": "Weapons/Lance"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Large Club",
+        "cloudflareId": "Weapons/Large Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Large Leather Shield",
+        "cloudflareId": "Weapons/Large Leather Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lazuli Glintstone Sword",
+        "cloudflareId": "Weapons/Lazuli Glintstone Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Light Crossbow",
+        "cloudflareId": "Weapons/Light Crossbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lion Greatbow",
+        "cloudflareId": "Weapons/Lion Greatbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Longbow",
+        "cloudflareId": "Weapons/Longbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Longhaft Axe",
+        "cloudflareId": "Weapons/Longhaft Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Longsword",
+        "cloudflareId": "Weapons/Longsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lordsworn's Greatsword",
+        "cloudflareId": "Weapons/Lordsworn's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lordsworn's Shield",
+        "cloudflareId": "Weapons/Lordsworn's Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lordsworn's Straight Sword",
+        "cloudflareId": "Weapons/Lordsworn's Straight Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Loretta's War Sickle",
+        "cloudflareId": "Weapons/Loretta's War Sickle"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lucerne",
+        "cloudflareId": "Weapons/Lucerne"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Lusat's Glintstone Staff",
+        "cloudflareId": "Weapons/Lusat's Glintstone Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Mace",
+        "cloudflareId": "Weapons/Mace"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Magma Blade",
+        "cloudflareId": "Weapons/Magma Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Magma Whip Candlestick",
+        "cloudflareId": "Weapons/Magma Whip Candlestick"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Magma Wyrm's Scalesword",
+        "cloudflareId": "Weapons/Magma Wyrm's Scalesword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Maliketh's Black Blade",
+        "cloudflareId": "Weapons/Maliketh's Black Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Man-Serpent's Shield",
+        "cloudflareId": "Weapons/Man-Serpent's Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Manor Towershield",
+        "cloudflareId": "Weapons/Manor Towershield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Mantis Blade",
+        "cloudflareId": "Weapons/Mantis Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Marais Executioner's Sword",
+        "cloudflareId": "Weapons/Marais Executioner's Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Marika's Hammer",
+        "cloudflareId": "Weapons/Marika's Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Marred Leather Shield",
+        "cloudflareId": "Weapons/Marred Leather Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Marred Wooden Shield",
+        "cloudflareId": "Weapons/Marred Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Meteoric Ore Blade",
+        "cloudflareId": "Weapons/Meteoric Ore Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Meteorite Staff",
+        "cloudflareId": "Weapons/Meteorite Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Miquellan Knight's Sword",
+        "cloudflareId": "Weapons/Miquellan Knight's Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Misbegotten Shortbow",
+        "cloudflareId": "Weapons/Misbegotten Shortbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Misericorde",
+        "cloudflareId": "Weapons/Misericorde"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Mohgwyn's Sacred Spear",
+        "cloudflareId": "Weapons/Mohgwyn's Sacred Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Monk's Flameblade",
+        "cloudflareId": "Weapons/Monk's Flameblade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Monk's Flamemace",
+        "cloudflareId": "Weapons/Monk's Flamemace"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Moonveil",
+        "cloudflareId": "Weapons/Moonveil"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Morgott's Cursed Sword",
+        "cloudflareId": "Weapons/Morgott's Cursed Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Morning Star",
+        "cloudflareId": "Weapons/Morning Star"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Nagakiba",
+        "cloudflareId": "Weapons/Nagakiba"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Nightrider Flail",
+        "cloudflareId": "Weapons/Nightrider Flail"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Nightrider Glaive",
+        "cloudflareId": "Weapons/Nightrider Glaive"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Noble's Estoc",
+        "cloudflareId": "Weapons/Noble's Estoc"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Noble's Slender Sword",
+        "cloudflareId": "Weapons/Noble's Slender Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Nox Flowing Hammer",
+        "cloudflareId": "Weapons/Nox Flowing Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Nox Flowing Sword",
+        "cloudflareId": "Weapons/Nox Flowing Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Omen Cleaver",
+        "cloudflareId": "Weapons/Omen Cleaver"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "One-Eyed Shield",
+        "cloudflareId": "Weapons/One-Eyed Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Onyx Lord's Greatsword",
+        "cloudflareId": "Weapons/Onyx Lord's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ordovis's Greatsword",
+        "cloudflareId": "Weapons/Ordovis's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ornamental Straight Sword",
+        "cloudflareId": "Weapons/Ornamental Straight Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Parrying Dagger",
+        "cloudflareId": "Weapons/Parrying Dagger"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Partisan",
+        "cloudflareId": "Weapons/Partisan"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Perfumer's Shield",
+        "cloudflareId": "Weapons/Perfumer's Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Pest's Glaive",
+        "cloudflareId": "Weapons/Pest's Glaive"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Pickaxe",
+        "cloudflareId": "Weapons/Pickaxe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Pike",
+        "cloudflareId": "Weapons/Pike"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Pillory Shield",
+        "cloudflareId": "Weapons/Pillory Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Prelate's Inferno Crozier",
+        "cloudflareId": "Weapons/Prelate's Inferno Crozier"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Prince of Death's Staff",
+        "cloudflareId": "Weapons/Prince of Death's Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Pulley Bow",
+        "cloudflareId": "Weapons/Pulley Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Pulley Crossbow",
+        "cloudflareId": "Weapons/Pulley Crossbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rapier",
+        "cloudflareId": "Weapons/Rapier"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Raptor Talons",
+        "cloudflareId": "Weapons/Raptor Talons"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Red Branch Shortbow",
+        "cloudflareId": "Weapons/Red Branch Shortbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Red Crest Heater Shield",
+        "cloudflareId": "Weapons/Red Crest Heater Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Red Thorn Roundshield",
+        "cloudflareId": "Weapons/Red Thorn Roundshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Redmane Greatshield",
+        "cloudflareId": "Weapons/Redmane Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Reduvia",
+        "cloudflareId": "Weapons/Reduvia"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Regalia of Eochaid",
+        "cloudflareId": "Weapons/Regalia of Eochaid"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rickety Shield",
+        "cloudflareId": "Weapons/Rickety Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rift Shield",
+        "cloudflareId": "Weapons/Rift Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ringed Finger",
+        "cloudflareId": "Weapons/Ringed Finger"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ripple Blade",
+        "cloudflareId": "Weapons/Ripple Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ripple Crescent Halberd",
+        "cloudflareId": "Weapons/Ripple Crescent Halberd"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rivers of Blood",
+        "cloudflareId": "Weapons/Rivers of Blood"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Riveted Wooden Shield",
+        "cloudflareId": "Weapons/Riveted Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rogier's Rapier ",
+        "cloudflareId": "Weapons/Rogier's Rapier "
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rosus' Axe",
+        "cloudflareId": "Weapons/Rosus' Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rotten Battle Hammer",
+        "cloudflareId": "Weapons/Rotten Battle Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rotten Crystal Spear",
+        "cloudflareId": "Weapons/Rotten Crystal Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rotten Crystal Staff",
+        "cloudflareId": "Weapons/Rotten Crystal Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rotten Crystal Sword",
+        "cloudflareId": "Weapons/Rotten Crystal Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rotten Greataxe",
+        "cloudflareId": "Weapons/Rotten Greataxe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rotten Staff",
+        "cloudflareId": "Weapons/Rotten Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Round Shield",
+        "cloudflareId": "Weapons/Round Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Royal Greatsword",
+        "cloudflareId": "Weapons/Royal Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Ruins Greatsword",
+        "cloudflareId": "Weapons/Ruins Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Rusted Anchor",
+        "cloudflareId": "Weapons/Rusted Anchor"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sacred Relic Sword",
+        "cloudflareId": "Weapons/Sacred Relic Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sacrificial Axe",
+        "cloudflareId": "Weapons/Sacrificial Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scavenger's Curved Sword",
+        "cloudflareId": "Weapons/Scavenger's Curved Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scepter of the All-Knowing",
+        "cloudflareId": "Weapons/Scepter of the All-Knowing"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scimitar",
+        "cloudflareId": "Weapons/Scimitar"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scorpion Kite Shield",
+        "cloudflareId": "Weapons/Scorpion Kite Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scorpion's Stinger",
+        "cloudflareId": "Weapons/Scorpion's Stinger"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scripture Wooden Shield",
+        "cloudflareId": "Weapons/Scripture Wooden Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Scythe",
+        "cloudflareId": "Weapons/Scythe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sentry's Torch",
+        "cloudflareId": "Weapons/Sentry's Torch"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Serpent Bow",
+        "cloudflareId": "Weapons/Serpent Bow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Serpent-God's Curved Sword",
+        "cloudflareId": "Weapons/Serpent-God's Curved Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Serpent-Hunter",
+        "cloudflareId": "Weapons/Serpent-Hunter"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Serpentbone Blade",
+        "cloudflareId": "Weapons/Serpentbone Blade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Shamshir",
+        "cloudflareId": "Weapons/Shamshir"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Shield of the Guilty",
+        "cloudflareId": "Weapons/Shield of the Guilty"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Short Spear",
+        "cloudflareId": "Weapons/Short Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Short Sword",
+        "cloudflareId": "Weapons/Short Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Shortbow",
+        "cloudflareId": "Weapons/Shortbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Shotel",
+        "cloudflareId": "Weapons/Shotel"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Siluria's Tree",
+        "cloudflareId": "Weapons/Siluria's Tree"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Silver Mirrorshield",
+        "cloudflareId": "Weapons/Silver Mirrorshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Smoldering Shield",
+        "cloudflareId": "Weapons/Smoldering Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Soldier's Crossbow",
+        "cloudflareId": "Weapons/Soldier's Crossbow"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Spear",
+        "cloudflareId": "Weapons/Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Spiked Caestus",
+        "cloudflareId": "Weapons/Spiked Caestus"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Spiked Club",
+        "cloudflareId": "Weapons/Spiked Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Spiked Palisade Shield",
+        "cloudflareId": "Weapons/Spiked Palisade Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Spiked Spear",
+        "cloudflareId": "Weapons/Spiked Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Spiralhorn Shield",
+        "cloudflareId": "Weapons/Spiralhorn Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "St. Trina's Torch",
+        "cloudflareId": "Weapons/St. Trina's Torch"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Staff of Loss",
+        "cloudflareId": "Weapons/Staff of Loss"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Staff of the Avatar",
+        "cloudflareId": "Weapons/Staff of the Avatar"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Staff of the Guilty",
+        "cloudflareId": "Weapons/Staff of the Guilty"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Star Fist",
+        "cloudflareId": "Weapons/Star Fist"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Starscourge Greatsword",
+        "cloudflareId": "Weapons/Starscourge Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Steel-Wire Torch",
+        "cloudflareId": "Weapons/Steel-Wire Torch"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Stone Club",
+        "cloudflareId": "Weapons/Stone Club"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Stormhawk Axe",
+        "cloudflareId": "Weapons/Stormhawk Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sun Realm Shield",
+        "cloudflareId": "Weapons/Sun Realm Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sword of Milos",
+        "cloudflareId": "Weapons/Sword of Milos"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sword of Night and Flame",
+        "cloudflareId": "Weapons/Sword of Night and Flame"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Sword of St. Trina",
+        "cloudflareId": "Weapons/Sword of St. Trina"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Thorned Whip",
+        "cloudflareId": "Weapons/Thorned Whip"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Torch",
+        "cloudflareId": "Weapons/Torch"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Torchpole",
+        "cloudflareId": "Weapons/Torchpole"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Treespear",
+        "cloudflareId": "Weapons/Treespear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Troll Knight's Sword",
+        "cloudflareId": "Weapons/Troll Knight's Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Troll's Golden Sword",
+        "cloudflareId": "Weapons/Troll's Golden Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Troll's Hammer",
+        "cloudflareId": "Weapons/Troll's Hammer"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Twinbird Kite Shield",
+        "cloudflareId": "Weapons/Twinbird Kite Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Twinblade",
+        "cloudflareId": "Weapons/Twinblade"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Twinned Knight Swords",
+        "cloudflareId": "Weapons/Twinned Knight Swords"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Uchigatana",
+        "cloudflareId": "Weapons/Uchigatana"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Urumi",
+        "cloudflareId": "Weapons/Urumi"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Varre's Bouquet",
+        "cloudflareId": "Weapons/Varre's Bouquet"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Venomous Fang",
+        "cloudflareId": "Weapons/Venomous Fang"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Veteran's Prosthesis",
+        "cloudflareId": "Weapons/Veteran's Prosthesis"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Visage Shield",
+        "cloudflareId": "Weapons/Visage Shield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Vulgar Militia Saw",
+        "cloudflareId": "Weapons/Vulgar Militia Saw"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Vulgar Militia Shotel",
+        "cloudflareId": "Weapons/Vulgar Militia Shotel"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Vyke's War Spear",
+        "cloudflareId": "Weapons/Vyke's War Spear"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Wakizashi",
+        "cloudflareId": "Weapons/Wakizashi"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Warhawk's Talon",
+        "cloudflareId": "Weapons/Warhawk's Talon"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Warped Axe",
+        "cloudflareId": "Weapons/Warped Axe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Warpick",
+        "cloudflareId": "Weapons/Warpick"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Watchdog's Greatsword",
+        "cloudflareId": "Weapons/Watchdog's Greatsword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Watchdog's Staff",
+        "cloudflareId": "Weapons/Watchdog's Staff"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Weathered Straight Sword",
+        "cloudflareId": "Weapons/Weathered Straight Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Whip",
+        "cloudflareId": "Weapons/Whip"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Wing of Astel",
+        "cloudflareId": "Weapons/Wing of Astel"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Winged Greathorn",
+        "cloudflareId": "Weapons/Winged Greathorn"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Winged Scythe",
+        "cloudflareId": "Weapons/Winged Scythe"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Wooden Greatshield",
+        "cloudflareId": "Weapons/Wooden Greatshield"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Zamor Curved Sword",
+        "cloudflareId": "Weapons/Zamor Curved Sword"
+    },
+    {
+        "model": "Weapons",
+        "entityName": "Zweihander",
+        "cloudflareId": "Weapons/Zweihander"
+    }
+]

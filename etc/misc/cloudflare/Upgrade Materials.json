@@ -1,0 +1,207 @@
+[
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ancient Dragon Smithing Stone",
+        "cloudflareId": "Upgrade Materials/Ancient Dragon Smithing Stone"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [1]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [1]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [2]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [2]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [3]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [3]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [4]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [4]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [5]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [5]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [6]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [6]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [7]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [7]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [8]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [8]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Ghost Glovewort [9]",
+        "cloudflareId": "Upgrade Materials/Ghost Glovewort [9]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Golden Seed",
+        "cloudflareId": "Upgrade Materials/Golden Seed"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [1]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [1]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [2]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [2]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [3]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [3]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [4]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [4]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [5]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [5]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [6]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [6]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [7]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [7]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [8]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [8]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Grave Glovewort [9]",
+        "cloudflareId": "Upgrade Materials/Grave Glovewort [9]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Great Ghost Glovewort",
+        "cloudflareId": "Upgrade Materials/Great Ghost Glovewort"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Great Grave Glovewort",
+        "cloudflareId": "Upgrade Materials/Great Grave Glovewort"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Sacred Tear",
+        "cloudflareId": "Upgrade Materials/Sacred Tear"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [1]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [1]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [2]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [2]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [3]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [3]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [4]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [4]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [5]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [5]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [6]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [6]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [7]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [7]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Smithing Stone [8]",
+        "cloudflareId": "Upgrade Materials/Smithing Stone [8]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Ancient Dragon Smithing Stone",
+        "cloudflareId": "Upgrade Materials/Somber Ancient Dragon Smithing Stone"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [1]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [1]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [2]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [2]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [3]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [3]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [4]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [4]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [5]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [5]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [6]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [6]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [7]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [7]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [8]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [8]"
+    },
+    {
+        "model": "Upgrade Materials",
+        "entityName": "Somber Smithing Stone [9]",
+        "cloudflareId": "Upgrade Materials/Somber Smithing Stone [9]"
+    }
+]

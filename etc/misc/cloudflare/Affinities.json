@@ -1,0 +1,67 @@
+[
+    {
+        "model": "Affinities",
+        "entityName": "Blood",
+        "cloudflareId": "Affinities/Blood"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Cold",
+        "cloudflareId": "Affinities/Cold"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Fire",
+        "cloudflareId": "Affinities/Fire"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Flame Art",
+        "cloudflareId": "Affinities/Flame Art"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Heavy",
+        "cloudflareId": "Affinities/Heavy"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Keen",
+        "cloudflareId": "Affinities/Keen"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Lightning",
+        "cloudflareId": "Affinities/Lightning"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Magic",
+        "cloudflareId": "Affinities/Magic"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Occult",
+        "cloudflareId": "Affinities/Occult"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Poison",
+        "cloudflareId": "Affinities/Poison"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Quality",
+        "cloudflareId": "Affinities/Quality"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Sacred",
+        "cloudflareId": "Affinities/Sacred"
+    },
+    {
+        "model": "Affinities",
+        "entityName": "Standard",
+        "cloudflareId": "Affinities/Standard"
+    }
+]

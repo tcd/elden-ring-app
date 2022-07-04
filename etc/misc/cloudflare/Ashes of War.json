@@ -1,0 +1,462 @@
+[
+    {
+        "model": "Ashes of War",
+        "entityName": "Assassin's Gambit",
+        "cloudflareId": "Ashes of War/Assassin's Gambit"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Barbaric Roar",
+        "cloudflareId": "Ashes of War/Barbaric Roar"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Barrage",
+        "cloudflareId": "Ashes of War/Barrage"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Barricade Shield",
+        "cloudflareId": "Ashes of War/Barricade Shield"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Beast's Roar",
+        "cloudflareId": "Ashes of War/Beast's Roar"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Black Flame Tornado",
+        "cloudflareId": "Ashes of War/Black Flame Tornado"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Blood Blade",
+        "cloudflareId": "Ashes of War/Blood Blade"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Blood Tax",
+        "cloudflareId": "Ashes of War/Blood Tax"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Bloodhound's Step",
+        "cloudflareId": "Ashes of War/Bloodhound's Step"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Bloody Slash",
+        "cloudflareId": "Ashes of War/Bloody Slash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Braggart's Roar",
+        "cloudflareId": "Ashes of War/Braggart's Roar"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Carian Grandeur",
+        "cloudflareId": "Ashes of War/Carian Grandeur"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Carian Greatsword",
+        "cloudflareId": "Ashes of War/Carian Greatsword"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Carian Retaliation",
+        "cloudflareId": "Ashes of War/Carian Retaliation"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Charge Forth",
+        "cloudflareId": "Ashes of War/Charge Forth"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Chilling Mist",
+        "cloudflareId": "Ashes of War/Chilling Mist"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Cragblade",
+        "cloudflareId": "Ashes of War/Cragblade"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Determination",
+        "cloudflareId": "Ashes of War/Determination"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Double Slash",
+        "cloudflareId": "Ashes of War/Double Slash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Earthshaker",
+        "cloudflareId": "Ashes of War/Earthshaker"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Enchanted Shot",
+        "cloudflareId": "Ashes of War/Enchanted Shot"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Endure",
+        "cloudflareId": "Ashes of War/Endure"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Eruption",
+        "cloudflareId": "Ashes of War/Eruption"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Flame of the Redmanes",
+        "cloudflareId": "Ashes of War/Flame of the Redmanes"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Flaming Strike",
+        "cloudflareId": "Ashes of War/Flaming Strike"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Giant Hunt",
+        "cloudflareId": "Ashes of War/Giant Hunt"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Glintblade Phalanx",
+        "cloudflareId": "Ashes of War/Glintblade Phalanx"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Glintstone Pebble",
+        "cloudflareId": "Ashes of War/Glintstone Pebble"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Golden Land",
+        "cloudflareId": "Ashes of War/Golden Land"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Golden Parry",
+        "cloudflareId": "Ashes of War/Golden Parry"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Golden Slam",
+        "cloudflareId": "Ashes of War/Golden Slam"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Golden Vow",
+        "cloudflareId": "Ashes of War/Golden Vow"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Gravitas",
+        "cloudflareId": "Ashes of War/Gravitas"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Ground Slam",
+        "cloudflareId": "Ashes of War/Ground Slam"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Hoarah Loux's Earthshaker",
+        "cloudflareId": "Ashes of War/Hoarah Loux's Earthshaker"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Hoarfrost Stomp",
+        "cloudflareId": "Ashes of War/Hoarfrost Stomp"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Holy Ground",
+        "cloudflareId": "Ashes of War/Holy Ground"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Ice Spear",
+        "cloudflareId": "Ashes of War/Ice Spear"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Impaling Thrust",
+        "cloudflareId": "Ashes of War/Impaling Thrust"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Kick",
+        "cloudflareId": "Ashes of War/Kick"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Lifesteal Fist",
+        "cloudflareId": "Ashes of War/Lifesteal Fist"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Lightning Ram",
+        "cloudflareId": "Ashes of War/Lightning Ram"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Lightning Slash",
+        "cloudflareId": "Ashes of War/Lightning Slash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Lion's Claw",
+        "cloudflareId": "Ashes of War/Lion's Claw"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Loretta's Slash",
+        "cloudflareId": "Ashes of War/Loretta's Slash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Lost Ashes of War",
+        "cloudflareId": "Ashes of War/Lost Ashes of War"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Mighty Shot",
+        "cloudflareId": "Ashes of War/Mighty Shot"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "No Skill",
+        "cloudflareId": "Ashes of War/No Skill"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Parry",
+        "cloudflareId": "Ashes of War/Parry"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Phantom Slash",
+        "cloudflareId": "Ashes of War/Phantom Slash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Piercing Fang",
+        "cloudflareId": "Ashes of War/Piercing Fang"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Poison Moth Flight",
+        "cloudflareId": "Ashes of War/Poison Moth Flight"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Poisonous Mist",
+        "cloudflareId": "Ashes of War/Poisonous Mist"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Prayerful Strike",
+        "cloudflareId": "Ashes of War/Prayerful Strike"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Prelate's Charge",
+        "cloudflareId": "Ashes of War/Prelate's Charge"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Quickstep",
+        "cloudflareId": "Ashes of War/Quickstep"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Rain of Arrows",
+        "cloudflareId": "Ashes of War/Rain of Arrows"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Raptor of the Mists",
+        "cloudflareId": "Ashes of War/Raptor of the Mists"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Repeating Thrust",
+        "cloudflareId": "Ashes of War/Repeating Thrust"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Royal Knight's Resolve",
+        "cloudflareId": "Ashes of War/Royal Knight's Resolve"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Sacred Blade",
+        "cloudflareId": "Ashes of War/Sacred Blade"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Sacred Order",
+        "cloudflareId": "Ashes of War/Sacred Order"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Sacred Ring of Light",
+        "cloudflareId": "Ashes of War/Sacred Ring of Light"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Seppuku",
+        "cloudflareId": "Ashes of War/Seppuku"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Shared Order",
+        "cloudflareId": "Ashes of War/Shared Order"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Shield Bash",
+        "cloudflareId": "Ashes of War/Shield Bash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Shield Crash",
+        "cloudflareId": "Ashes of War/Shield Crash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Sky Shot",
+        "cloudflareId": "Ashes of War/Sky Shot"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Spectral Lance",
+        "cloudflareId": "Ashes of War/Spectral Lance"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Spinning Slash",
+        "cloudflareId": "Ashes of War/Spinning Slash"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Spinning Strikes",
+        "cloudflareId": "Ashes of War/Spinning Strikes"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Spinning Weapon",
+        "cloudflareId": "Ashes of War/Spinning Weapon"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Square Off",
+        "cloudflareId": "Ashes of War/Square Off"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Stamp (Sweep)",
+        "cloudflareId": "Ashes of War/Stamp (Sweep)"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Stamp (Upward Cut)",
+        "cloudflareId": "Ashes of War/Stamp (Upward Cut)"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Storm Assault",
+        "cloudflareId": "Ashes of War/Storm Assault"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Storm Blade",
+        "cloudflareId": "Ashes of War/Storm Blade"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Storm Stomp",
+        "cloudflareId": "Ashes of War/Storm Stomp"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Storm Wall",
+        "cloudflareId": "Ashes of War/Storm Wall"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Stormcaller",
+        "cloudflareId": "Ashes of War/Stormcaller"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Sword Dance",
+        "cloudflareId": "Ashes of War/Sword Dance"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Thops's Barrier",
+        "cloudflareId": "Ashes of War/Thops's Barrier"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Through and Through",
+        "cloudflareId": "Ashes of War/Through and Through"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Thunderbolt",
+        "cloudflareId": "Ashes of War/Thunderbolt"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Troll's Roar",
+        "cloudflareId": "Ashes of War/Troll's Roar"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Unsheathe",
+        "cloudflareId": "Ashes of War/Unsheathe"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Vacuum Slice",
+        "cloudflareId": "Ashes of War/Vacuum Slice"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Vow of the Indomitable",
+        "cloudflareId": "Ashes of War/Vow of the Indomitable"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "War Cry",
+        "cloudflareId": "Ashes of War/War Cry"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Waves of Darkness",
+        "cloudflareId": "Ashes of War/Waves of Darkness"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "White Shadow's Lure",
+        "cloudflareId": "Ashes of War/White Shadow's Lure"
+    },
+    {
+        "model": "Ashes of War",
+        "entityName": "Wild Strikes",
+        "cloudflareId": "Ashes of War/Wild Strikes"
+    }
+]

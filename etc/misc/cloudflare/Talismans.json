@@ -1,0 +1,572 @@
+[
+    {
+        "model": "Talismans",
+        "entityName": "Ancestral Spirit's Horn",
+        "cloudflareId": "Talismans/Ancestral Spirit's Horn"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Arrow's Reach Talisman",
+        "cloudflareId": "Talismans/Arrow's Reach Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Arrow's Sting Talisman",
+        "cloudflareId": "Talismans/Arrow's Sting Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Arsenal Charm +1",
+        "cloudflareId": "Talismans/Arsenal Charm +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Arsenal Charm",
+        "cloudflareId": "Talismans/Arsenal Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Assassin's Cerulean Dagger",
+        "cloudflareId": "Talismans/Assassin's Cerulean Dagger"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Assassin's Crimson Dagger",
+        "cloudflareId": "Talismans/Assassin's Crimson Dagger"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Axe Talisman",
+        "cloudflareId": "Talismans/Axe Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Blessed Dew Talisman",
+        "cloudflareId": "Talismans/Blessed Dew Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Blue Dancer Charm",
+        "cloudflareId": "Talismans/Blue Dancer Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Blue-Feathered Branchsword",
+        "cloudflareId": "Talismans/Blue-Feathered Branchsword"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Boltdrake Talisman +1",
+        "cloudflareId": "Talismans/Boltdrake Talisman +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Boltdrake Talisman +2",
+        "cloudflareId": "Talismans/Boltdrake Talisman +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Boltdrake Talisman",
+        "cloudflareId": "Talismans/Boltdrake Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Bull-Goat's Talisman",
+        "cloudflareId": "Talismans/Bull-Goat's Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Carian Filigreed Crest",
+        "cloudflareId": "Talismans/Carian Filigreed Crest"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Cerulean Amber Medallion +1",
+        "cloudflareId": "Talismans/Cerulean Amber Medallion +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Cerulean Amber Medallion +2",
+        "cloudflareId": "Talismans/Cerulean Amber Medallion +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Cerulean Amber Medallion",
+        "cloudflareId": "Talismans/Cerulean Amber Medallion"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Cerulean Seed Talisman",
+        "cloudflareId": "Talismans/Cerulean Seed Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Clarifying Horn Charm +1",
+        "cloudflareId": "Talismans/Clarifying Horn Charm +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Clarifying Horn Charm",
+        "cloudflareId": "Talismans/Clarifying Horn Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Claw Talisman",
+        "cloudflareId": "Talismans/Claw Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Companion Jar",
+        "cloudflareId": "Talismans/Companion Jar"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Concealing Veil",
+        "cloudflareId": "Talismans/Concealing Veil"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crepus's Vial",
+        "cloudflareId": "Talismans/Crepus's Vial"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crimson Amber Medallion +1",
+        "cloudflareId": "Talismans/Crimson Amber Medallion +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crimson Amber Medallion +2",
+        "cloudflareId": "Talismans/Crimson Amber Medallion +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crimson Amber Medallion",
+        "cloudflareId": "Talismans/Crimson Amber Medallion"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crimson Seed Talisman",
+        "cloudflareId": "Talismans/Crimson Seed Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crucible Feather Talisman",
+        "cloudflareId": "Talismans/Crucible Feather Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crucible Knot Talisman",
+        "cloudflareId": "Talismans/Crucible Knot Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Crucible Scale Talisman",
+        "cloudflareId": "Talismans/Crucible Scale Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Curved Sword Talisman",
+        "cloudflareId": "Talismans/Curved Sword Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Daedicar's Woe",
+        "cloudflareId": "Talismans/Daedicar's Woe"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Dagger Talisman",
+        "cloudflareId": "Talismans/Dagger Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Dragoncrest Greatshield Talisman",
+        "cloudflareId": "Talismans/Dragoncrest Greatshield Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Dragoncrest Shield Talisman +1",
+        "cloudflareId": "Talismans/Dragoncrest Shield Talisman +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Dragoncrest Shield Talisman +2",
+        "cloudflareId": "Talismans/Dragoncrest Shield Talisman +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Dragoncrest Shield Talisman",
+        "cloudflareId": "Talismans/Dragoncrest Shield Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Erdtree's Favor +1",
+        "cloudflareId": "Talismans/Erdtree's Favor +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Erdtree's Favor +2",
+        "cloudflareId": "Talismans/Erdtree's Favor +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Erdtree's Favor",
+        "cloudflareId": "Talismans/Erdtree's Favor"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Faithful's Canvas Talisman",
+        "cloudflareId": "Talismans/Faithful's Canvas Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Fire Scorpion Charm",
+        "cloudflareId": "Talismans/Fire Scorpion Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Flamedrake Talisman +1",
+        "cloudflareId": "Talismans/Flamedrake Talisman +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Flamedrake Talisman +2",
+        "cloudflareId": "Talismans/Flamedrake Talisman +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Flamedrake Talisman",
+        "cloudflareId": "Talismans/Flamedrake Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Flock's Canvas Talisman",
+        "cloudflareId": "Talismans/Flock's Canvas Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Furled Finger's Trick-Mirror",
+        "cloudflareId": "Talismans/Furled Finger's Trick-Mirror"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Godfrey Icon",
+        "cloudflareId": "Talismans/Godfrey Icon"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Godskin Swaddling Cloth",
+        "cloudflareId": "Talismans/Godskin Swaddling Cloth"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Gold Scarab",
+        "cloudflareId": "Talismans/Gold Scarab"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Graven-Mass Talisman",
+        "cloudflareId": "Talismans/Graven-Mass Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Graven-School Talisman",
+        "cloudflareId": "Talismans/Graven-School Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Great-Jar's Arsenal",
+        "cloudflareId": "Talismans/Great-Jar's Arsenal"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Greatshield Talisman",
+        "cloudflareId": "Talismans/Greatshield Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Green Turtle Talisman",
+        "cloudflareId": "Talismans/Green Turtle Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Haligdrake Talisman +1",
+        "cloudflareId": "Talismans/Haligdrake Talisman +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Haligdrake Talisman +2",
+        "cloudflareId": "Talismans/Haligdrake Talisman +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Haligdrake Talisman",
+        "cloudflareId": "Talismans/Haligdrake Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Hammer Talisman",
+        "cloudflareId": "Talismans/Hammer Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Host's Trick-Mirror",
+        "cloudflareId": "Talismans/Host's Trick-Mirror"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Immunizing Horn Charm +1",
+        "cloudflareId": "Talismans/Immunizing Horn Charm +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Immunizing Horn Charm",
+        "cloudflareId": "Talismans/Immunizing Horn Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Kindred of Rot's Exultation",
+        "cloudflareId": "Talismans/Kindred of Rot's Exultation"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Lance Talisman",
+        "cloudflareId": "Talismans/Lance Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Lightning Scorpion Charm",
+        "cloudflareId": "Talismans/Lightning Scorpion Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Longtail Cat Talisman",
+        "cloudflareId": "Talismans/Longtail Cat Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Lord of Blood's Exultation",
+        "cloudflareId": "Talismans/Lord of Blood's Exultation"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Magic Scorpion Charm",
+        "cloudflareId": "Talismans/Magic Scorpion Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Marika's Scarseal",
+        "cloudflareId": "Talismans/Marika's Scarseal"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Marika's Soreseal",
+        "cloudflareId": "Talismans/Marika's Soreseal"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Millicent's Prosthesis",
+        "cloudflareId": "Talismans/Millicent's Prosthesis"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Moon of Nokstella",
+        "cloudflareId": "Talismans/Moon of Nokstella"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Mottled Necklace +1",
+        "cloudflareId": "Talismans/Mottled Necklace +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Mottled Necklace",
+        "cloudflareId": "Talismans/Mottled Necklace"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Old Lord's Talisman",
+        "cloudflareId": "Talismans/Old Lord's Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Pearldrake Talisman +1",
+        "cloudflareId": "Talismans/Pearldrake Talisman +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Pearldrake Talisman +2",
+        "cloudflareId": "Talismans/Pearldrake Talisman +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Pearldrake Talisman",
+        "cloudflareId": "Talismans/Pearldrake Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Perfumer's Talisman",
+        "cloudflareId": "Talismans/Perfumer's Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Primal Glintstone Blade",
+        "cloudflareId": "Talismans/Primal Glintstone Blade"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Prince of Death's Pustule",
+        "cloudflareId": "Talismans/Prince of Death's Pustule"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Prosthesis-Wearer Heirloom",
+        "cloudflareId": "Talismans/Prosthesis-Wearer Heirloom"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Radagon Icon",
+        "cloudflareId": "Talismans/Radagon Icon"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Radagon's Scarseal",
+        "cloudflareId": "Talismans/Radagon's Scarseal"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Radagon's Soreseal",
+        "cloudflareId": "Talismans/Radagon's Soreseal"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Red-Feathered Branchsword",
+        "cloudflareId": "Talismans/Red-Feathered Branchsword"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Ritual Shield Talisman",
+        "cloudflareId": "Talismans/Ritual Shield Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Ritual Sword Talisman",
+        "cloudflareId": "Talismans/Ritual Sword Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Roar Medallion",
+        "cloudflareId": "Talismans/Roar Medallion"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Rotten Winged Sword Insignia",
+        "cloudflareId": "Talismans/Rotten Winged Sword Insignia"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Sacred Scorpion Charm",
+        "cloudflareId": "Talismans/Sacred Scorpion Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Sacrificial Twig",
+        "cloudflareId": "Talismans/Sacrificial Twig"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Shabriri's Woe",
+        "cloudflareId": "Talismans/Shabriri's Woe"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Shard of Alexander",
+        "cloudflareId": "Talismans/Shard of Alexander"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Silver Scarab",
+        "cloudflareId": "Talismans/Silver Scarab"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Spear Talisman",
+        "cloudflareId": "Talismans/Spear Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Spelldrake Talisman +1",
+        "cloudflareId": "Talismans/Spelldrake Talisman +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Spelldrake Talisman +2",
+        "cloudflareId": "Talismans/Spelldrake Talisman +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Spelldrake Talisman",
+        "cloudflareId": "Talismans/Spelldrake Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Stalwart Horn Charm +1",
+        "cloudflareId": "Talismans/Stalwart Horn Charm +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Stalwart Horn Charm",
+        "cloudflareId": "Talismans/Stalwart Horn Charm"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Stargazer Heirloom",
+        "cloudflareId": "Talismans/Stargazer Heirloom"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Starscourge Heirloom",
+        "cloudflareId": "Talismans/Starscourge Heirloom"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Taker's Cameo",
+        "cloudflareId": "Talismans/Taker's Cameo"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Twinblade Talisman",
+        "cloudflareId": "Talismans/Twinblade Talisman"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Two Fingers Heirloom",
+        "cloudflareId": "Talismans/Two Fingers Heirloom"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Viridian Amber Medallion +1",
+        "cloudflareId": "Talismans/Viridian Amber Medallion +1"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Viridian Amber Medallion +2",
+        "cloudflareId": "Talismans/Viridian Amber Medallion +2"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Viridian Amber Medallion",
+        "cloudflareId": "Talismans/Viridian Amber Medallion"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Warrior Jar Shard",
+        "cloudflareId": "Talismans/Warrior Jar Shard"
+    },
+    {
+        "model": "Talismans",
+        "entityName": "Winged Sword Insignia",
+        "cloudflareId": "Talismans/Winged Sword Insignia"
+    }
+]
