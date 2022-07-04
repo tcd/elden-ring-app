@@ -189,7 +189,6 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    sqlite3 (1.4.2)
     strscan (3.0.1)
     thor (1.2.1)
     timeout (0.2.0)
@@ -220,7 +219,6 @@ DEPENDENCIES
   rails-erd (~> 1.6)
   rb_json5
   simplecov (~> 0.21.2)
-  sqlite3 (~> 1.4)
   tzinfo-data
 
 RUBY VERSION
