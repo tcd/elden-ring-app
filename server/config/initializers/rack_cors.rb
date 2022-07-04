@@ -7,8 +7,12 @@
 
 Rails.application.config.middleware.insert_before(0, Rack::Cors) do
   allow do
+    # origins([
+    #   "localhost:4200",
+    #   "localhost:6969",
+    #   "localhost:8080",
+    # ])
     origins("*")
-
     resource(
       "*",
       headers: :any,
