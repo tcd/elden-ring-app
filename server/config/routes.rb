@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get("/", to: "index#index")
 
   namespace(:api, defaults: { format: :json }) do
+    get("/", to: "index#index")
+
     get("/kitchen-sink", to: "kitchen_sink#index")
 
     get("/armor",            to: "armor#index")
