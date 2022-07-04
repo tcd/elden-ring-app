@@ -14,4 +14,7 @@ Rails.application.routes.draw do
     get("/weapon-stats",     to: "weapon_stats#index")
     get("/starting-classes", to: "starting_classes#index")
   end
+
+  match("*route_not_found.:format", to: "application#not_found", via: :all)
+  match("*route_not_found",         to: "application#not_found", via: :all)
 end
