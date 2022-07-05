@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux"
 import { mdiAccount } from "@mdi/js"
 
-import { Selectors } from "@app/state"
-import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
-import { EquipLoad } from "../EquipLoad"
 import { DESCRIPTIONS } from "@app/data"
+import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { Selectors } from "@app/state"
+import { EquipLoad } from "@app/features/builder/components/stats"
 
 export const CharacterStatusA = (): JSX.Element => {
 

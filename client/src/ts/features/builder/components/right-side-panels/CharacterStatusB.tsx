@@ -1,12 +1,7 @@
 import { mdiAccount } from "@mdi/js"
 
-import {
-    ErTallCard,
-    ErTallCardSection,
-} from "@app/shared"
-import { Resistance } from "@app/features/builder/components/resistance"
-import { DefensePlus } from "@app/features/builder/components/defense"
-import { Attack } from "@app/features/builder/components/attack"
+import { ErTallCard, ErTallCardSection } from "@app/shared"
+import { Attack, DefensePlus, Resistance } from "@app/features/builder/components/stats"
 
 const attackSection     = <ErTallCardSection title="Attack Power"         content={<Attack/>} />
 const defenseSection    = <ErTallCardSection title="Defense/Dmg Negation" content={<DefensePlus/>} />

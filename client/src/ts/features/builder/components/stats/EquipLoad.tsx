@@ -1,11 +1,10 @@
 import { useSelector } from "react-redux"
-import Typography from "@mui/material/Typography"
 
+import { DESCRIPTIONS } from "@app/data"
 import { Encumbrance } from "@app/types"
-import { Selectors } from "@app/state"
 import { COLORS } from "@app/util"
 import { StatRow, StatRowPlus } from "@app/shared"
-import { DESCRIPTIONS } from "@app/data"
+import { Selectors } from "@app/state"
 
 const equipmentLoadColor = (load: Encumbrance) => {
     switch (load) {
@@ -22,7 +21,7 @@ const equipmentLoadColor = (load: Encumbrance) => {
     }
 }
 
-export const EquipLoad = (): JSX.Element => {
+export const EquipLoad = (_props: unknown): JSX.Element => {
 
     const currentEquipLoad     = useSelector(Selectors.Builder.stat.currentEquipLoad)
     const maxEquipLoad         = useSelector(Selectors.Builder.stat.maxEquipLoad)
