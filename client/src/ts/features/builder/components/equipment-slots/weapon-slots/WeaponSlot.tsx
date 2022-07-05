@@ -1,14 +1,14 @@
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { Weapon, WeaponSlotId, weaponSlotIdName } from "@app/types"
+import { WeaponSlotId, weaponSlotIdName, WeaponSlotData } from "@app/types"
 import { getImageSrc, cssUrl, EquipmentSlotImageUrls } from "@app/util"
 import { MouseOverPopover } from "@app/shared"
-import { Actions, Selectors } from "@app/state"
+import { Actions } from "@app/state"
 
 export interface WeaponSlotProps {
     slotId: WeaponSlotId
-    weapon?: Weapon
+    data: WeaponSlotData
 }
 
 export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
@@ -16,7 +16,7 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     const dispatch = useDispatch()
 
     const slotId = props.slotId
-    const weapon = props?.weapon
+    const { name, displayName } = props.data
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
@@ -36,15 +36,15 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
         slotSx["backgroundImage"] = cssUrl(EquipmentSlotImageUrls.WeaponRight)
     }
 
-    if (weapon) {
+    if (name) {
         classNames.push("equipment-slot-filled")
-        titleString = weapon.name
-        const src = getImageSrc("Weapon", weapon.name, "256")
+        titleString = displayName
+        const src = getImageSrc("Weapon", name, "256")
         weaponImageElement = (
             <img
                 className="img-fluid"
                 src={src}
-                alt={`${weapon.name} image`}
+                alt={`${name} image`}
             />
         )
     } else {

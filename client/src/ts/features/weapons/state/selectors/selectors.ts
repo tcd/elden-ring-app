@@ -5,23 +5,28 @@ import {
     WeaponStatsCalculator,
 } from "elden-ring-calculator"
 
-import { ABNORMAL_WEAPON_NAMES, Unarmed, UnarmedStats, WEAPON_AFFINITIES } from "@app/data"
+import { Unarmed, UnarmedStats } from "@app/data"
 import {
     Weapon,
     WeaponSlots,
     WeaponSettings,
     WeaponSkill,
     WeaponSlotId,
+    WeaponSlotsData,
 } from "@app/types"
 import {
     isBlank,
     compactArray,
-    getSlimWeaponStatData,
     getRequirements,
 } from "@app/util"
 import { RootState } from "@app/state"
 import { selectAttributes } from "@app/features/builder/state/selectors/attributes"
 import { selectWeapons, selectAttackElementCorrectParams, selectWeaponSkills } from "@app/features/builder/state/selectors/api"
+
+import {
+    _selectWeaponDisplayName,
+    _selectSlimWeaponData,
+} from "./helpers"
 
 export const selectAllWeapons = selectWeapons
 
@@ -86,6 +91,15 @@ export const selectCompactWeaponsArray = (rootState: RootState): Weapon[] => {
     ])
 }
 
+export const selectEquipmentSlotData = (rootState: RootState): WeaponSlotsData => {
+    const slots = selectWeaponSlots(rootState)
+    const results = {} as unknown as WeaponSlotsData
+    for (const [id, settings] of Object.entries(slots)) {
+        results[id] = { name: settings.weapon_name, displayName: _selectWeaponDisplayName(settings) }
+    }
+    return results
+}
+
 export const selectActiveWeapon = (rootState: RootState) => {
     const activeName = selectActiveWeaponName(rootState)
     if (isBlank(activeName)) {
@@ -99,54 +113,12 @@ export const selectActiveWeapon = (rootState: RootState) => {
 }
 
 export const selectActiveWeaponDisplayName = (rootState: RootState): string => {
-    const settings = selectActiveWeaponSettings(rootState)
-    const weaponName = settings?.weapon_name
-    const affinityName = settings?.affinity_name
-    if (isBlank(weaponName)) {
-        return null
-    }
-    if (affinityName == "Standard") {
-        return weaponName
-    }
-    if (isBlank(affinityName)) {
-        return weaponName
-    }
-    const abnormalName = ABNORMAL_WEAPON_NAMES.find(x => x.weapon == weaponName && x.affinity == affinityName)
-    if (abnormalName) {
-        return abnormalName.name
-    } else {
-        return `${affinityName} ${weaponName}`
-    }
-    // const weapons = selectAllWeapons(rootState)
-    // if (isBlank(weapons)) {
-    //     return weaponName
-    // }
-    // const weapon = weapons.find(x => x?.name == weaponName)
-    // if (isBlank(weapon)) {
-    //     return weaponName
-    // }
-    // const affinityId = WEAPON_AFFINITIES.find(x => x.name == settings.affinity_name)?.id
-    // const displayName = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)?.name
-    // if (isBlank(displayName)) {
-    //     return weaponName
-    // } else {
-    //     return displayName
-    // }
+    return _selectWeaponDisplayName(selectActiveWeaponSettings(rootState))
 }
 
 // =============================================================================
 // Stats
 // =============================================================================
-
-const _selectSlimWeaponData = (weapon: Weapon, weaponSettings: WeaponSettings): SlimWeaponData => {
-    const affinityId = WEAPON_AFFINITIES.find(x => x.name == weaponSettings.affinity_name)?.id
-    const stat = weapon?.stats.find(x => x.weapon_affinity_id == affinityId)
-    if (isBlank(stat)) {
-        return null
-    }
-    const result = getSlimWeaponStatData(stat, weaponSettings?.level)
-    return result
-}
 
 const selectSlimWeaponStatData = (rootState: RootState): SlimWeaponData => {
     const weapon = selectActiveWeapon(rootState)

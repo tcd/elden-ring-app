@@ -6,11 +6,12 @@ export const WeaponsSelectors = {
     *
     * Will not include null values.
     */
-    compactArray:    Core.selectCompactWeaponsArray,
-    slots:           Core.selectWeaponSlots,
-    allWeapons:      Core.selectAllWeapons,
-    activeSlotId:    Core.selectActiveSlotId,
-    menuHasScrolled: Core.selectHasMenuScrolled,
+    compactArray:      Core.selectCompactWeaponsArray,
+    slots:             Core.selectWeaponSlots,
+    allWeapons:        Core.selectAllWeapons,
+    activeSlotId:      Core.selectActiveSlotId,
+    menuHasScrolled:   Core.selectHasMenuScrolled,
+    equipmentSlotData: Core.selectEquipmentSlotData,
     active: {
         weapon:            Core.selectActiveWeapon,
         weaponName:        Core.selectActiveWeaponName,

@@ -32,26 +32,21 @@ const boltSlot = (id: string) => {
 
 export const WeaponSlots = (_props: unknown): JSX.Element => {
 
-    const R1 = useSelector(Selectors.Weapons.bySlot.R1)
-    const R2 = useSelector(Selectors.Weapons.bySlot.R2)
-    const R3 = useSelector(Selectors.Weapons.bySlot.R3)
-    const L1 = useSelector(Selectors.Weapons.bySlot.L1)
-    const L2 = useSelector(Selectors.Weapons.bySlot.L2)
-    const L3 = useSelector(Selectors.Weapons.bySlot.L3)
+    const data = useSelector(Selectors.Weapons.equipmentSlotData)
 
     return (
         <>
             <section className="armaments">
-                <WeaponSlot slotId="R1" weapon={R1} />
-                <WeaponSlot slotId="R2" weapon={R2} />
-                <WeaponSlot slotId="R3" weapon={R3} />
+                <WeaponSlot slotId="R1" data={data.R1} />
+                <WeaponSlot slotId="R2" data={data.R2} />
+                <WeaponSlot slotId="R3" data={data.R3} />
                 {/* { arrowSlot("A1") }
                 { arrowSlot("A2") } */}
             </section>
             <section className="armaments">
-                <WeaponSlot slotId="L1" weapon={L1} />
-                <WeaponSlot slotId="L2" weapon={L2} />
-                <WeaponSlot slotId="L3" weapon={L3} />
+                <WeaponSlot slotId="L1" data={data.L1} />
+                <WeaponSlot slotId="L2" data={data.L2} />
+                <WeaponSlot slotId="L3" data={data.L3} />
                 {/* { boltSlot("B1") }
                 { boltSlot("B2") } */}
             </section>

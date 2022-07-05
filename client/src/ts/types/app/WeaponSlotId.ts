@@ -32,3 +32,10 @@ export const weaponSlotIdName = (slotId: WeaponSlotId): string => {
             return ""
     }
 }
+
+export interface WeaponSlotData {
+    name: string
+    displayName: string
+}
+
+export type WeaponSlotsData = WeaponSlotIdMap<WeaponSlotData>
