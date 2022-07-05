@@ -32,7 +32,8 @@ const initialDevState: ChecklistState = {
     },
 }
 
-const _initialState = CONFIG.production() ? initialState : initialDevState
+// const _initialState = CONFIG.production() ? initialState : initialDevState
+const _initialState = initialState
 
 export const ChecklistSlice = createSlice({
     name: FEATURE_KEYS.Checklist,
