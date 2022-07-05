@@ -1,0 +1,9 @@
+./db/seed_data
+./db/migrate
+./coverage
+./docs
+./lib
+./log
+./test
+!./log/.keep
+!./storage/.keep
