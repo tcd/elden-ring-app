@@ -5,6 +5,7 @@ export * from "./RawHtml"
 
 export * from "./CustomSelect"
 export * from "./CustomTable"
+export * from "./LoadingOverlay"
 export * from "./MdiIcon"
 export * from "./MouseOverPopover"
 
