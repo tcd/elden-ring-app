@@ -26,6 +26,7 @@ export const AppRoot = (_props: unknown): JSX.Element => {
     const fetching: boolean = useSelector(Selectors.Builder.api.loading)
     const shouldFetch: boolean = useSelector(Selectors.Builder.api.shouldFetchEverything)
     const fetchFailed: boolean = useSelector(Selectors.Builder.api.fetchFailed)
+    const fetchSuccessful: boolean = useSelector(Selectors.Builder.api.fetchSuccessful)
 
     // const theme = darkModeEnabled ? EldenRingMaterialThemeDark : EldenRingMaterialThemeLight
     const theme = EldenRingMaterialThemeDark
@@ -44,13 +45,19 @@ export const AppRoot = (_props: unknown): JSX.Element => {
         )
     }
 
+    const _mainContent = (
+        <Router>
+            <AppRoutesComponent />
+        </Router>
+    )
+
+    const mainContent = fetchSuccessful ? _mainContent : null
+
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Router>
-                <AppRoutesComponent />
-            </Router>
-            <Backdrop sx={backdropSx} open={fetching}>
+            {mainContent}
+            <Backdrop id="er__loadingBackdrop" open={fetching}>
                 <CircularProgress color="inherit" />
             </Backdrop>
         </ThemeProvider>

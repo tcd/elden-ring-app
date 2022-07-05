@@ -1,0 +1,10 @@
+@use "../variables" as v;
+
+#er__loadingBackdrop {
+    background: linear-gradient(
+        90deg,
+        v.$startingClass-bg-gradient-color-left    0%,
+        v.$startingClass-bg-gradient-color-right  50%,
+        v.$startingClass-bg-gradient-color-right 100%
+    );
+}

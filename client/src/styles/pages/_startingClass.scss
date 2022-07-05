@@ -1,17 +1,14 @@
 @use "../variables"as v;
 @use "../mixins"as m;
 
-$startingClass-bg-gradient-color-left: #3d3b34;
-$startingClass-bg-gradient-color-right: #221f17;
-
 #root.startingClassPage {
     background-image: none !important;
-    background: $startingClass-bg-gradient-color-left !important;
+    background: v.$startingClass-bg-gradient-color-left !important;
     background: linear-gradient(
         90deg,
-        $startingClass-bg-gradient-color-left    0%,
-        $startingClass-bg-gradient-color-right  50%,
-        $startingClass-bg-gradient-color-right 100%
+        v.$startingClass-bg-gradient-color-left    0%,
+        v.$startingClass-bg-gradient-color-right  50%,
+        v.$startingClass-bg-gradient-color-right 100%
     ) !important;
 }
 

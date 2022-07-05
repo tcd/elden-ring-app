@@ -22,6 +22,11 @@ export const selectFetchFailed = (rootState: RootState) => {
     return (status === "rejected")
 }
 
+export const selectFetchSuccessful = (rootState: RootState) => {
+    const status = _selectFetchEverythingRequestStatus(rootState)
+    return (status === "fulfilled")
+}
+
 export const selectArmor                      = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.armor                         ?? []
 export const selectSpells                     = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.spells                        ?? []
 export const selectTalismans                  = (rootState: RootState) => _selectFetchEverythingResponse(rootState)?.talismans                     ?? []
