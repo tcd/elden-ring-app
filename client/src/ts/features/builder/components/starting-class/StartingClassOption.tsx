@@ -58,6 +58,7 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
             onClick={handleClick}
         >
             <div className="er__startingClass__menu__optionOverlay"></div>
+            <div className="er__startingClass__menu__optionHoverOverlay"></div>
             <div className="er__startingClass__menu__optionContent">
                 <ul className="er__startingClass__menu__option__attributes">
                     {attributes}
