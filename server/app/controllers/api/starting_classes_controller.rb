@@ -8,7 +8,7 @@ module Api
     # @action GET
     # @response 200 Ok
     def index()
-      records = StartingClass.includes(:r1, :r2, :l1, :l2, :head, :chest, :arms, :legs, :spell_1, :spell_2).all()
+      records = StartingClass.with_includes().order_by_sort_order()
       data = Serializers::StartingClassSerializer.render_as_json(records)
       render_json(data)
     end

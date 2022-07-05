@@ -8,7 +8,7 @@ module Api
     # @action GET
     # @response 200 Ok
     def index()
-      records = Talisman.includes(:equipment_effects).all().order(name: :asc)
+      records = Talisman.with_effects().order_by_sort_order()
       data = Serializers::TalismanSerializer.render_as_json(records)
       render_json(data)
     end

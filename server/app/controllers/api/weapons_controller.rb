@@ -10,14 +10,14 @@ module Api
     # @response 200 Ok
     def index()
       records = nil
-      data    = nil
+      view    = :default
       if include_stats?()
-        records = Weapon.includes(:weapon_type, :weapon_skill, :weapon_stats).all()
-        data = Serializers::WeaponSerializer.render_as_json(records, view: :with_stats)
+        view = :with_stats
+        records = Weapon.with_all_includes().order_by_sort_order()
       else
-        records = Weapon.includes(:weapon_type, :weapon_skill).all()
-        data = Serializers::WeaponSerializer.render_as_json(records)
+        records = Weapon.with_type_and_skill_includes().order_by_sort_order()
       end
+      data = Serializers::WeaponSerializer.render_as_json(records, view: view)
       render_json(data)
     end
 

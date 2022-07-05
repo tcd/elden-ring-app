@@ -3,13 +3,11 @@ module Api
 
     # @response 200 Ok
     def index()
-      render(
-        status: 200,
-        json: {
-          version: EldenRing::Application::VERSION,
-          environment: Rails.env,
-        },
-      )
+      response = {
+        version:    EldenRing::Application::VERSION,
+        environment: Rails.env,
+      }
+      render_json(response)
     end
 
   end

@@ -106,11 +106,34 @@ class WeaponSkill < ApplicationRecord
 
   # @!group Scopes
 
+  # @!method self.order_by_name()
+  #   @return [WeaponSkill::ActiveRecord_Relation]
+  scope(:order_by_name, -> { order(name: :asc) })
+
+  # @!method self.with_includes()
+  #   @return [WeaponSkill::ActiveRecord_Relation]
+  scope(:with_includes, -> { includes(all_includes()) })
+
   # @!method self.ashes_of_war()
   #   @return [WeaponSkill::ActiveRecord_Relation]
   scope(:ashes_of_war, -> { where(ash_of_war: true) })
 
   # @!endgroup Scopes
+
+  # ============================================================================
+  # Class Methods
+  # ============================================================================
+
+  # @return [Array]
+  def self.all_includes()
+    return [
+      :default_affinity,
+      :compatible_weapon_affinities,
+      :compatible_weapon_types,
+      weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
+      weapon_skill_weapon_types:      [:weapon_skill, :weapon_type]
+    ]
+  end
 
   # ============================================================================
   # Instance Methods

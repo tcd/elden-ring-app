@@ -105,6 +105,58 @@ class Weapon < ApplicationRecord
   # @!endgroup Associations
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.order_by_sort_order()
+  #   @return [Weapon::ActiveRecord_Relation]
+  scope(:order_by_sort_order, -> { order(sort_order: :asc) })
+
+  # # @!method self.with_includes()
+  # #   @return [Weapon::ActiveRecord_Relation]
+  # scope(:with_includes, -> { includes(all_includes()) })
+
+  # @!method self.with_all_includes()
+  #   @return [Weapon::ActiveRecord_Relation]
+  scope(:with_all_includes, -> { includes(all_includes())})
+
+  # @!method self.with_skill_includes()
+  #   @return [Weapon::ActiveRecord_Relation]
+  scope(:with_skill_includes, -> { includes(skill_includes()) })
+
+  # @!method self.with_type_and_skill_includes()
+  #   @return [Weapon::ActiveRecord_Relation]
+  scope(:with_type_and_skill_includes, -> { includes(:weapon_type, *skill_includes()) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
+  # Class Methods
+  # ============================================================================
+
+  # @return [Array]
+  def self.all_includes()
+    return [
+      :weapon_type,
+      :weapon_stats,
+      *skill_includes(),
+    ]
+  end
+
+  # @return [Array]
+  def self.skill_includes()
+    return [
+      weapon_skill: [
+        :default_affinity,
+        weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
+        weapon_skill_weapon_types:      [:weapon_skill, :weapon_type],
+      ]
+    ]
+  end
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 

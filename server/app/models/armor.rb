@@ -90,6 +90,22 @@ class Armor < ApplicationRecord
   # @!endgroup Associations
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.order_by_sort_order()
+  #   @return [Armor::ActiveRecord_Relation]
+  scope(:order_by_sort_order, -> { order(sort_order: :asc) })
+
+  # @!method self.with_includes()
+  #   @return [Armor::ActiveRecord_Relation]
+  scope(:with_includes, -> { includes(:armor_type) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 

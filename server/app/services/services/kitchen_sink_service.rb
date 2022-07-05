@@ -16,12 +16,12 @@ module Services
     @@result = nil
 
     def initialize()
-      @@armor                         = Armor.includes(:armor_type).all().order(sort_order: :asc)
-      @@spells                        = Spell.all().order(name: :asc)
-      @@talismans                     = Talisman.includes(:equipment_effects).all().order(sort_order: :asc)
-      @@weapons                       = Weapon.includes(includes_for_weapon()).all().order(sort_order: :asc)
-      @@weapon_skills                 = WeaponSkill.includes(includes_for_weapon_skill()).all().order(name: :asc)
-      @@weapon_types                  = WeaponType.all()
+      @@armor                         = Armor.with_includes().order_by_sort_order()
+      @@spells                        = Spell.all().order_by_name()
+      @@talismans                     = Talisman.with_effects().order_by_sort_order()
+      @@weapons                       = Weapon.with_all_includes().order_by_sort_order()
+      @@weapon_skills                 = WeaponSkill.with_includes().order_by_name()
+      @@weapon_types                  = WeaponType.order_by_sort_order()
       @@attack_element_correct_params = AttackElementCorrectParam.all()
 
       @@result = {
@@ -37,32 +37,6 @@ module Services
 
     def result()
       return @@result
-    end
-
-    private
-
-    # @return [Array]
-    def includes_for_weapon()
-      return [
-        :weapon_type,
-        :weapon_stats,
-        weapon_skill: [
-          :default_affinity,
-          weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
-          weapon_skill_weapon_types:      [:weapon_skill, :weapon_type],
-        ]
-      ]
-    end
-
-    # @return [Array]
-    def includes_for_weapon_skill()
-      return [
-        :default_affinity,
-        :compatible_weapon_affinities,
-        :compatible_weapon_types,
-        weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
-        weapon_skill_weapon_types:      [:weapon_skill, :weapon_type]
-      ]
     end
 
   end

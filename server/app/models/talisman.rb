@@ -58,6 +58,22 @@ class Talisman < ApplicationRecord
   # @!endgroup Associations
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.order_by_sort_order()
+  #   @return [Talisman::ActiveRecord_Relation]
+  scope(:order_by_sort_order, -> { order(sort_order: :asc) })
+
+  # @!method self.with_effects()
+  #   @return [Talisman::ActiveRecord_Relation]
+  scope(:with_effects, -> { includes(:equipment_effects) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 

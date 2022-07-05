@@ -74,6 +74,22 @@ class StartingClass < ApplicationRecord
   # @!endgroup Associations
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.order_by_sort_order()
+  #   @return [StartingClass::ActiveRecord_Relation]
+  scope(:order_by_sort_order, -> { order(sort_order: :asc) })
+
+  # @!method self.with_includes()
+  #   @return [StartingClass::ActiveRecord_Relation]
+  scope(:with_includes, -> { includes(:r1, :r2, :l1, :l2, :head, :chest, :arms, :legs, :spell_1, :spell_2) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 

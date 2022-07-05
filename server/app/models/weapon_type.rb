@@ -49,6 +49,18 @@ class WeaponType < ApplicationRecord
   # @!endgroup Associations
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.order_by_sort_order()
+  #   @return [WeaponType::ActiveRecord_Relation]
+  scope(:order_by_sort_order, -> { order(sort_order: :asc) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 

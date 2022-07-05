@@ -120,6 +120,18 @@ class Spell < ApplicationRecord
   # @!endgroup Attributes
 
   # ============================================================================
+  # Scopes
+  # ============================================================================
+
+  # @!group Scopes
+
+  # @!method self.order_by_name()
+  #   @return [Spell::ActiveRecord_Relation]
+  scope(:order_by_name, -> { order(name: :asc) })
+
+  # @!endgroup Scopes
+
+  # ============================================================================
   # Instance Methods
   # ============================================================================
 
