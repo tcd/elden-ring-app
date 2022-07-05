@@ -58,7 +58,7 @@ const initialState: BuilderState = {
 const myBuild: BuilderState = {
     ...initialState,
     startingClassName: StartingClassName.Samurai,
-    currentMenu: "starting-class",
+    // currentMenu: "starting-class",
     attributes: {
         "vigor":        30,
         "mind":         30,

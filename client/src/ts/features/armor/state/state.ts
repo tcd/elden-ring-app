@@ -4,7 +4,7 @@ import {
     ArmorType,
     ArmorSet,
 } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
+import { CONFIG, FEATURE_KEYS } from "@app/util"
 import { reducers } from "./reducers"
 
 export interface ArmorState {
@@ -28,16 +28,15 @@ const initialState: ArmorState = {
 const initialDevState: ArmorState = {
     ...initialState,
     armorNames: {
-        Arms: null,
-        Chest: null,
-        Head: "Banished Knight Helm (Altered)",
-        Legs: null,
+        ...initialState.armorNames,
+        Head: "Banished Knight Helm",
     },
 }
 
+const _initialState = CONFIG.production() ? initialState : initialDevState
+
 export const ArmorSlice = createSlice({
     name: FEATURE_KEYS.Armor,
-    // initialState: initialDevState,
-    initialState: initialState,
+    initialState: _initialState,
     reducers: reducers,
 })

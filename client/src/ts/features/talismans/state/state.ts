@@ -26,9 +26,10 @@ const initialState: TalismansState = {
 const initialDevState: TalismansState = {
     ...initialState,
     talismanNames: {
+        ...initialState.talismanNames,
         "1": "Red-Feathered Branchsword",
-        "2": "Ritual Sword Talisman",
-        "3": "Blue-Feathered Branchsword",
+        // "2": "Ritual Sword Talisman",
+        // "3": "Blue-Feathered Branchsword",
         "4": "Ritual Shield Talisman",
     },
 }
