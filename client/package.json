@@ -7,7 +7,9 @@
         "build:prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --mode production",
         "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.config.dev.js",
         "build:dev:watch": "npm run build:dev -- --watch",
-        "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js --open"
+        "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js --open",
+        "build-and-deploy": "npm run build:prod && npm run deploy",
+        "deploy": "./config/deploy.sh"
     },
     "dependencies": {
         "@babel/core": "^7.17.8",
