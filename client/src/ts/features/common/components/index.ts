@@ -8,5 +8,6 @@ export * from "./CustomTable"
 export * from "./LoadingOverlay"
 export * from "./MdiIcon"
 export * from "./MouseOverPopover"
+export * from "./PreloadOverlay"
 
 export * from "./renderNullableNumberCell"

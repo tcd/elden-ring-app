@@ -4,6 +4,12 @@ import { FEATURE_KEYS } from "@util"
 import { reducers } from "./reducers"
 
 export interface CoreState {
+    /**
+     * Always true.
+     *
+     * Can be used to determine if redux initialization is complete.
+     */
+    reduxReady: boolean
     darkModeEnabled: boolean
     userMenuOpened: boolean
     sideNavOpened: boolean
@@ -12,6 +18,7 @@ export interface CoreState {
 }
 
 const initialState: CoreState = {
+    reduxReady: true,
     darkModeEnabled: true,
     userMenuOpened: false,
     sideNavOpened: false,
