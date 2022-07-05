@@ -16,11 +16,9 @@ body {
     background-color: v.$body-color-bg;
 }
 
-// height minus the header
-$header-height: 64px;
-$main-height: calc(100vh - $header-height);
-
 #root {
+    margin:  0px;
+    padding: 0px;
     height: 100vh;
     overflow-y: scroll;
     flex-grow: 1;
@@ -51,19 +49,6 @@ $main-height: calc(100vh - $header-height);
     background-color: #292927;
 }
 
-$header-height: 48px; // 48px/56px/64px
-$side-menu-width: 400px;
-$side-menu-bg: #35352f;
-
-$side-menu-bg-stops: (
-     0%: 1.0,
-    25%: 1.0,
-    50%: 1.0,
-    75%: 0.5,
-    90%: 0.3,
-   100%: 0.0,
-);
-
 #app-side-menu {
     box-sizing: border-box;
     position: absolute;
@@ -73,13 +58,12 @@ $side-menu-bg-stops: (
     height: 100%;
     margin: 0px;
     // padding: 0px;
-    width: $side-menu-width;
+    width: v.$side-menu-width;
     // background-color: $side-menu-bg;
-    background: m.customGradient(90deg, $side-menu-bg, $side-menu-bg-stops);
+    background: m.customGradient(90deg, v.$side-menu-bg, v.$side-menu-bg-stops);
 }
 
 #er__appHeader {
-    $header-image-size: 55px;
     .er__appHeader__content {
 
         height: 86px;
@@ -98,8 +82,8 @@ $side-menu-bg-stops: (
         // padding-left: 40px;
 
         .er__appHeader__icon {
-            width: $header-image-size;
-            height: $header-image-size;
+            width:  v.$header-image-size;
+            height: v.$header-image-size;
             margin-left: 40px;
             margin-right: 15px;
         }

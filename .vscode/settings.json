@@ -22,8 +22,9 @@
         "affectable",
         "Booleanish",
         "Imageable",
+        "OptimusPrinceps",
         "reduxjs",
-        "zindex"
+        "zindex",
     ],
     "search.exclude": {
         ".vscode/**":  true,
