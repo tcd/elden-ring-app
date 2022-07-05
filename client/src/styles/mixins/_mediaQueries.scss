@@ -1,0 +1,5 @@
+@use "../variables" as v;
+
+@mixin for-mobile-only {
+    @media (max-width: map-get(v.$breakpoints, "mobile")) { @content; }
+}

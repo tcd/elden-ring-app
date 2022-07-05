@@ -107,15 +107,15 @@ export const Weapons = (_props: unknown): JSX.Element => {
                 <WeaponSlot slotId="R1" weapon={R1} />
                 <WeaponSlot slotId="R2" weapon={R2} />
                 <WeaponSlot slotId="R3" weapon={R3} />
-                { arrowSlot("A1") }
-                { arrowSlot("A2") }
+                {/* { arrowSlot("A1") }
+                { arrowSlot("A2") } */}
             </section>
             <section className="armaments">
                 <WeaponSlot slotId="L1" weapon={L1} />
                 <WeaponSlot slotId="L2" weapon={L2} />
                 <WeaponSlot slotId="L3" weapon={L3} />
-                { boltSlot("B1") }
-                { boltSlot("B2") }
+                {/* { boltSlot("B1") }
+                { boltSlot("B2") } */}
             </section>
         </>
     )

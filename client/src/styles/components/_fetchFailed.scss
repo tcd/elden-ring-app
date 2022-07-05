@@ -33,4 +33,15 @@
             color: v.$you-died-red;
         }
     }
+
+    @include m.for-mobile-only {
+        div {
+            height: 150px;
+            width: 100%;
+            span {
+                font-size: 1.75rem;
+            }
+        }
+    }
 }
+

@@ -22,9 +22,11 @@
         "affectable",
         "Booleanish",
         "Imageable",
+        "offcanvas",
         "OptimusPrinceps",
         "reduxjs",
-        "zindex",
+        "semibold",
+        "zindex"
     ],
     "search.exclude": {
         ".vscode/**":  true,
