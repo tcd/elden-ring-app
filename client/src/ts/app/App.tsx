@@ -1,11 +1,15 @@
 import { Provider } from "react-redux"
-import { store } from "@app/state"
+import { PersistGate } from "redux-persist/integration/react"
+
+import { store, persistor } from "@app/state"
 import { AppRoot } from "./AppRoot"
 
 export const App = () => {
     return (
         <Provider store={store}>
-            <AppRoot />
+            <PersistGate loading={null} persistor={persistor}>
+                <AppRoot />
+            </PersistGate>
         </Provider>
     )
 }

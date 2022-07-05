@@ -1,9 +1,7 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { BrowserRouter as Router } from "react-router-dom"
-import { CssBaseline, ThemeProvider, SxProps } from "@mui/material"
-import Backdrop from "@mui/material/Backdrop"
-import CircularProgress from "@mui/material/CircularProgress"
+import { CssBaseline, ThemeProvider, SxProps, Backdrop, CircularProgress } from "@mui/material"
 
 import {
     EldenRingMaterialThemeDark,
