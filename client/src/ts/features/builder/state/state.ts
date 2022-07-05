@@ -6,7 +6,7 @@ import {
     RequestState,
     StartingClassName,
 } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
+import { FEATURE_KEYS, CONFIG } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export type BuilderMenu =
@@ -81,9 +81,11 @@ const myBuild: BuilderState = {
     // },
 }
 
+const _initialState = CONFIG.production() ? initialState : myBuild
+
 export const BuilderSlice = createSlice({
     name:          FEATURE_KEYS.Builder,
-    initialState:  myBuild,
+    initialState:  _initialState,
     reducers:      reducers,
     extraReducers: extraReducers,
 })

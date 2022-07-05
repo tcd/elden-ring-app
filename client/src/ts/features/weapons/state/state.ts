@@ -6,7 +6,7 @@ import {
     WeaponSlotId,
     WeaponSettings,
 } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
+import { FEATURE_KEYS, CONFIG } from "@app/util"
 import { reducers } from "./reducers"
 
 export interface WeaponsState {
@@ -56,8 +56,10 @@ const devState: WeaponsState = {
     // oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
 }
 
+const _initialState = CONFIG.production() ? initialState : devState
+
 export const WeaponsSlice = createSlice({
     name: FEATURE_KEYS.Weapons,
-    initialState: devState,
+    initialState: _initialState,
     reducers: reducers,
 })

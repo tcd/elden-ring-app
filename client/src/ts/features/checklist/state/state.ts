@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FEATURE_KEYS } from "@util"
+import { FEATURE_KEYS, CONFIG } from "@app/util"
 import {
     FiniteResourceChecklist,
     UpgradeMaterialsChecklist,
@@ -12,6 +12,12 @@ export interface ChecklistState {
 }
 
 const initialState: ChecklistState = {
+    obtainedResources: {
+        ...UpgradeMaterialsChecklist,
+    },
+}
+
+const initialDevState: ChecklistState = {
     obtainedResources: {
         ...UpgradeMaterialsChecklist,
         "102": true,
@@ -26,8 +32,10 @@ const initialState: ChecklistState = {
     },
 }
 
+const _initialState = CONFIG.production() ? initialState : initialDevState
+
 export const ChecklistSlice = createSlice({
     name: FEATURE_KEYS.Checklist,
-    initialState,
+    initialState: _initialState,
     reducers: reducers,
 })

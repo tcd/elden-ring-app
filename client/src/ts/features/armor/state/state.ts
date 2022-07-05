@@ -37,6 +37,7 @@ const initialDevState: ArmorState = {
 
 export const ArmorSlice = createSlice({
     name: FEATURE_KEYS.Armor,
-    initialState: initialDevState,
+    // initialState: initialDevState,
+    initialState: initialState,
     reducers: reducers,
 })
