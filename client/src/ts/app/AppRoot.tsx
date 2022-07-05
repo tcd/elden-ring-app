@@ -23,27 +23,27 @@ export const AppRoot = (_props: unknown): JSX.Element => {
     const dispatch = useDispatch()
 
     // const darkModeEnabled = useSelector(Selectors.Core.darkModeEnabled)
-    const fetching: boolean = useSelector(Selectors.Builder.api.loading)
-    const shouldFetch: boolean = useSelector(Selectors.Builder.api.shouldFetchEverything)
-    const fetchFailed: boolean = useSelector(Selectors.Builder.api.fetchFailed)
-    const fetchSuccessful: boolean = useSelector(Selectors.Builder.api.fetchSuccessful)
+    // const fetching: boolean = useSelector(Selectors.Builder.api.loading)
+    // const shouldFetch: boolean = useSelector(Selectors.Builder.api.shouldFetchEverything)
+    // const fetchFailed: boolean = useSelector(Selectors.Builder.api.fetchFailed)
+    // const fetchSuccessful: boolean = useSelector(Selectors.Builder.api.fetchSuccessful)
 
     // const theme = darkModeEnabled ? EldenRingMaterialThemeDark : EldenRingMaterialThemeLight
     const theme = EldenRingMaterialThemeDark
 
-    useEffect(() => {
-        if (shouldFetch) { dispatch(Actions.Builder.fetchEverything()) }
-    })
+    // useEffect(() => {
+    //     if (shouldFetch) { dispatch(Actions.Builder.fetchEverything()) }
+    // })
 
-    if (fetchFailed) {
-        return (
-            <div id="er__fetchFailed">
-                <div>
-                    <span>unable to connect to server</span>
-                </div>
-            </div>
-        )
-    }
+    // if (fetchFailed) {
+    //     return (
+    //         <div id="er__fetchFailed">
+    //             <div>
+    //                 <span>unable to connect to server</span>
+    //             </div>
+    //         </div>
+    //     )
+    // }
 
     const _mainContent = (
         <Router>
@@ -51,15 +51,16 @@ export const AppRoot = (_props: unknown): JSX.Element => {
         </Router>
     )
 
-    const mainContent = fetchSuccessful ? _mainContent : null
+    // const mainContent = fetchSuccessful ? _mainContent : null
 
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            {mainContent}
+            {_mainContent}
+            {/* {mainContent}
             <Backdrop id="er__loadingBackdrop" open={fetching}>
                 <CircularProgress color="inherit" />
-            </Backdrop>
+            </Backdrop> */}
         </ThemeProvider>
     )
 }

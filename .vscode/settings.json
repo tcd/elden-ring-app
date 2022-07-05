@@ -1,6 +1,12 @@
 {
     // "terminal.integrated.defaultProfile.windows": "PowerShell",
     // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
+    // "files.associations": {
+    //     "kitchen-sink-data.ts": "plaintext",
+    // },
+    "files.exclude": {
+        "client/src/ts/data/kitchen-sink/kitchen-sink-data.ts": true,
+    },
     "eslint.format.enable": true,
     "[javascript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
     "[typescript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
@@ -21,6 +27,7 @@
     "cSpell.words": [
         "affectable",
         "Booleanish",
+        "chunkhash",
         "Imageable",
         "offcanvas",
         "OptimusPrinceps",

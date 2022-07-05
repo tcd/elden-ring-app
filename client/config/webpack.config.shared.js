@@ -14,11 +14,17 @@ const rootFolder = path.resolve(__dirname, "..")
  * @type {import("webpack").Configuration}
  */
 const webpackConfig = {
-    entry: "./src/index.tsx",
+    // entry: "./src/index.tsx",
+    entry: {
+        main: "./src/index.tsx",
+        // kitchenSink: "./src/ts/data/kitchen-sink/kitchen-sink-data.ts",
+    },
     output: {
         path: path.resolve(rootFolder, "dist"),
         publicPath: "/",
-        filename: "bundle.js",
+        // filename: "bundle.js",
+        // filename: "[name].[chunkhash:8].dist.js",
+        filename: "[name].dist.js",
     },
     plugins: [
         new dotEnv(),
@@ -38,6 +44,18 @@ const webpackConfig = {
         plugins: [
             new TsconfigPathsPlugin(),
         ],
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                kitchenSink: {
+                    test: /[\\/]kitchen-sink[\\/]/,
+                    name: "kitchenSink",
+                    enforce: true,
+                    chunks: "all",
+                },
+            },
+        },
     },
     module: {
         rules: [
@@ -77,6 +95,10 @@ const webpackConfig = {
                 test: /\.png/,
                 type: "asset/resource",
             },
+            // {
+            //     test: /\.json$/,
+            //     loader: "json-loader",
+            // },
         ],
     },
 }
