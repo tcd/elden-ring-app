@@ -1,4 +1,4 @@
-import { BaseEntity, EquipmentEffect } from "@types"
+import { BaseEntity, EquipmentEffect } from "@app/types"
 
 export type TalismanSortGroup =
     | 1

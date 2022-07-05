@@ -8,14 +8,11 @@ export type WeaponSlotId =
     | "L2"
     | "L3"
 
-export interface WeaponSlots {
-    R1?: WeaponSettings
-    R2?: WeaponSettings
-    R3?: WeaponSettings
-    L1?: WeaponSettings
-    L2?: WeaponSettings
-    L3?: WeaponSettings
-}
+// export type WeaponSlotIdMap<T> = {
+//     [key in WeaponSlotId]: T;
+// };
+export type WeaponSlotIdMap<T> = Record<WeaponSlotId, T>
+export type WeaponSlots = WeaponSlotIdMap<WeaponSettings>
 
 export const weaponSlotIdName = (slotId: WeaponSlotId): string => {
     switch (slotId) {

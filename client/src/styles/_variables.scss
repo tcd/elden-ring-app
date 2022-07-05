@@ -321,18 +321,6 @@ $equipment-menu-horizontal-margin: 10%;
 $equipment-grid-cell-width:  150px;
 $equipment-grid-cell-height: 170px;
 
-$equipment-slot-image-url-root: "https://raw.githubusercontent.com/tcd/elden-ring-app/master/etc/assets/images/menu";
-
-$equipment-slot-images: (
-    "weapon-left":  $equipment-slot-image-url-root + "/weapon-slot-left.png",
-    "weapon-right": $equipment-slot-image-url-root + "/weapon-slot-right.png",
-    "talisman":     $equipment-slot-image-url-root + "/talisman-slot.png",
-    "armor-head":   $equipment-slot-image-url-root + "/armor-head.png",
-    "armor-chest":  $equipment-slot-image-url-root + "/armor-chest.png",
-    "armor-arms":   $equipment-slot-image-url-root + "/armor-arms.png",
-    "armor-legs":   $equipment-slot-image-url-root + "/armor-legs.png",
-);
-
 // ==========================================================================
 // Base64 Encoded Images
 // ==========================================================================

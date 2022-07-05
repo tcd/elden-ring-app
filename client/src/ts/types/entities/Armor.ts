@@ -1,4 +1,4 @@
-import { BaseEntity, EquipmentEffect } from "@types"
+import { BaseEntity, EquipmentEffect } from "@app/types"
 
 export enum ArmorType {
     Head  = "Head",
@@ -7,12 +7,8 @@ export enum ArmorType {
     Legs  = "Legs",
 }
 
-export interface ArmorSet {
-    [ArmorType.Head]?:  string
-    [ArmorType.Chest]?: string
-    [ArmorType.Arms]?:  string
-    [ArmorType.Legs]?:  string
-}
+export type ArmorTypeMap<T> = Record<ArmorType, T>
+export type ArmorSet = ArmorTypeMap<string>
 
 export interface Armor extends BaseEntity {
     name: string

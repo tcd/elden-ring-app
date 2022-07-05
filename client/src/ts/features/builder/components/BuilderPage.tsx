@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import {
@@ -12,11 +12,9 @@ import {
 } from "@app/features"
 import { CharacterStatus } from "./right-side-panels"
 import { ActionMenu } from "./action-menu"
-import { Equipment } from "./equipment"
+import { EquipmentSlots } from "./equipment-slots"
 
 export const BuilderPage = (): JSX.Element => {
-
-    // const dispatch = useDispatch
 
     const currentMenu = useSelector(Selectors.Builder.misc.currentMenu)
 
@@ -48,9 +46,6 @@ export const BuilderPage = (): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-            {/* <ArmorModal />
-            <TalismanModal />
-            <WeaponModal /> */}
             <ActionMenu />
         </main>
     )
@@ -64,7 +59,7 @@ const LevelUpMenu = (_props: unknown): JSX.Element => {
                 <Attributes />
             </div>
             <div className="builder-column">
-                <Equipment />
+                <EquipmentSlots />
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ import {
     WeaponTypePluralString,
     EquipmentEffect,
     WeaponStat,
-} from "@types"
+} from "@app/types"
 
 export interface Weapon extends BaseEntity {
     name: string

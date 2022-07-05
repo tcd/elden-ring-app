@@ -1,4 +1,4 @@
-import { BaseEntity, Stat } from "@types"
+import { BaseEntity, Stat } from "@app/types"
 
 /** Math for the effect */
 export enum EquipmentEffectMethod {
