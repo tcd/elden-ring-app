@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios"
+import axios, { Axios, AxiosRequestConfig, AxiosResponse } from "axios"
 
 import { urlJoin, CONFIG } from "@app/util"
 import { KitchenSink } from "@app/types"
@@ -28,7 +28,10 @@ export class ApiClient {
 
     private static async get<T>(path: string): Promise<AxiosResponse<T>> {
         const url = this.buildUrl(path)
-        return await axios.get<T>(url, AXIOS_REQUEST_CONFIG)
+        const overrides: AxiosRequestConfig = {
+            timeout: 5_000,
+        }
+        return await axios.get<T>(url, this.buildConfig(overrides))
     }
 
     private static buildUrl(...segments: string[]): string {
@@ -39,12 +42,21 @@ export class ApiClient {
         return CONFIG.apiServerRoot
     }
 
-    private getCookie(name: string): string {
-        const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"))
-        if (match) {
-            return match[2]
-        } else {
-            return null
+    private static buildConfig(overrides: AxiosRequestConfig = {}): AxiosRequestConfig {
+        return {
+            ...this.defaultConfig(),
+            ...overrides,
+        }
+    }
+
+    private static defaultConfig(): AxiosRequestConfig {
+        return {
+            // withCredentials: true,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                // "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+            },
         }
     }
 }
