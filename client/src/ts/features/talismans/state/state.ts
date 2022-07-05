@@ -34,7 +34,8 @@ const initialDevState: TalismansState = {
     },
 }
 
-const _initialState = CONFIG.production() ? initialState : initialDevState
+// const _initialState = CONFIG.production() ? initialState : initialDevState
+const _initialState = initialState
 
 export const TalismansSlice = createSlice({
     name: FEATURE_KEYS.Talismans,

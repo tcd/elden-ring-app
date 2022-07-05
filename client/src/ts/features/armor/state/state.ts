@@ -33,7 +33,8 @@ const initialDevState: ArmorState = {
     },
 }
 
-const _initialState = CONFIG.production() ? initialState : initialDevState
+// const _initialState = CONFIG.production() ? initialState : initialDevState
+const _initialState = initialState
 
 export const ArmorSlice = createSlice({
     name: FEATURE_KEYS.Armor,

@@ -56,7 +56,8 @@ const devState: WeaponsState = {
     // oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
 }
 
-const _initialState = CONFIG.production() ? initialState : devState
+// const _initialState = CONFIG.production() ? initialState : devState
+const _initialState = initialState
 
 export const WeaponsSlice = createSlice({
     name: FEATURE_KEYS.Weapons,

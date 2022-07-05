@@ -81,7 +81,8 @@ const myBuild: BuilderState = {
     // },
 }
 
-const _initialState = CONFIG.production() ? initialState : myBuild
+// const _initialState = CONFIG.production() ? initialState : myBuild
+const _initialState = initialState
 
 export const BuilderSlice = createSlice({
     name:          FEATURE_KEYS.Builder,
