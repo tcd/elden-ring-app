@@ -19,7 +19,7 @@ module Services
       @@armor                         = Armor.includes(:armor_type).all().order(sort_order: :asc)
       @@spells                        = Spell.all().order(name: :asc)
       @@talismans                     = Talisman.includes(:equipment_effects).all().order(sort_order: :asc)
-      @@weapons                       = Weapon.includes(:weapon_type, :weapon_skill, :weapon_stats).all().order(sort_order: :asc)
+      @@weapons                       = Weapon.includes(includes_for_weapon()).all().order(sort_order: :asc)
       @@weapon_skills                 = WeaponSkill.includes(includes_for_weapon_skill()).all().order(name: :asc)
       @@weapon_types                  = WeaponType.all()
       @@attack_element_correct_params = AttackElementCorrectParam.all()
@@ -45,8 +45,12 @@ module Services
     def includes_for_weapon()
       return [
         :weapon_type,
-        :weapon_skill,
         :weapon_stats,
+        weapon_skill: [
+          :default_affinity,
+          weapon_skill_weapon_affinities: [:weapon_skill, :weapon_affinity],
+          weapon_skill_weapon_types:      [:weapon_skill, :weapon_type],
+        ]
       ]
     end
 
