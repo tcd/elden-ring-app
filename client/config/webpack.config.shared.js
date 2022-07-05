@@ -20,7 +20,6 @@ const webpackConfig = {
         publicPath: "/",
         filename: "bundle.js",
     },
-    devtool: "inline-source-map",
     plugins: [
         new dotEnv(),
         new HtmlWebpackPlugin({
