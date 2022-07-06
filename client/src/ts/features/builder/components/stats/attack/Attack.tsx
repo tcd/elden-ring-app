@@ -13,8 +13,8 @@ export const Attack = (): JSX.Element => {
     const L2 = useSelector(Selectors.Weapons.totalDamage.L2)
     const L3 = useSelector(Selectors.Weapons.totalDamage.L3)
 
-    const actieSlotId     = useSelector(Selectors.Weapons.activeSlotId)
-    const calculatedStats = useSelector(Selectors.Weapons.active.calculatedStats)
+    // const actieSlotId     = useSelector(Selectors.Weapons.activeSlotId)
+    // const calculatedStats = useSelector(Selectors.Weapons.active.calculatedStats)
 
     const attackPowerValues = [
         { id: "R1", title: "R Armament 1", value: R1?.toFixed(0) ?? "-", description: DESCRIPTIONS.LEVEL_UP_SCREEN["Right Hand Armament 1"] },

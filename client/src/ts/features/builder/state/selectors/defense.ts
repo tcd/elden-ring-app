@@ -18,40 +18,40 @@ import { ArmorSelectors as Armor } from "@app/features/armor"
 // Defense
 // =============================================================================
 
-const selectDefenseFromRuneLevel = (state: RootState): number => {
-    const runeLevel = Stats.selectLevel(state)
+const selectDefenseFromRuneLevel = (rootState: RootState): number => {
+    const runeLevel = Stats.selectLevel(rootState)
     const defense = defenseFromRuneLevel(runeLevel)
     return defense
 }
 
-export const selectPhysicalDefense = (state: RootState) => {
-    const baseDefense = selectDefenseFromRuneLevel(state)
-    const strengthLevel = Attributes.selectStrength(state)
+export const selectPhysicalDefense = (rootState: RootState) => {
+    const baseDefense = selectDefenseFromRuneLevel(rootState)
+    const strengthLevel = Attributes.selectStrength(rootState)
     const attributeDefense = physicalDefenseFromStrength(strengthLevel)
     return sum([baseDefense, attributeDefense])
 }
 // export const selectStrikeDefense = (state: RootState) => { return selectNegation(state, "strike") }
 // export const selectSlashDefense  = (state: RootState) => { return selectNegation(state, "slash") }
 // export const selectPierceDefense = (state: RootState) => { return selectNegation(state, "pierce") }
-export const selectMagicDefense = (state: RootState) => {
-    const baseDefense = selectDefenseFromRuneLevel(state)
-    const intelligenceLevel = Attributes.selectIntelligence(state)
+export const selectMagicDefense = (rootState: RootState) => {
+    const baseDefense = selectDefenseFromRuneLevel(rootState)
+    const intelligenceLevel = Attributes.selectIntelligence(rootState)
     const attributeDefense = magicDefenseFromIntelligence(intelligenceLevel)
     return sum([baseDefense, attributeDefense])
 }
-export const selectFireDefense = (state: RootState) => {
-    const baseDefense = selectDefenseFromRuneLevel(state)
-    const vigorLevel = Attributes.selectVigor(state)
+export const selectFireDefense = (rootState: RootState) => {
+    const baseDefense = selectDefenseFromRuneLevel(rootState)
+    const vigorLevel = Attributes.selectVigor(rootState)
     const attributeDefense = fireDefenseFromVigor(vigorLevel)
     return sum([baseDefense, attributeDefense])
 }
-export const selectLightningDefense = (state: RootState): number => {
-    const baseDefense = selectDefenseFromRuneLevel(state)
+export const selectLightningDefense = (rootState: RootState): number => {
+    const baseDefense = selectDefenseFromRuneLevel(rootState)
     return sum([baseDefense])
 }
-export const selectHolyDefense = (state: RootState) => {
-    const baseDefense = selectDefenseFromRuneLevel(state)
-    const arcaneLevel = Attributes.selectArcane(state)
+export const selectHolyDefense = (rootState: RootState) => {
+    const baseDefense = selectDefenseFromRuneLevel(rootState)
+    const arcaneLevel = Attributes.selectArcane(rootState)
     const attributeDefense = holyDefenseFromArcane(arcaneLevel)
     return sum([baseDefense, attributeDefense])
 }

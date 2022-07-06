@@ -11,21 +11,21 @@ import { WeaponsSelectors   as Weapons   } from "@app/features/weapons"
 import * as StartingClass from "./starting-class"
 import * as Attributes from "./attributes"
 
-export const selectExportData = (state: RootState): BuildData => {
+export const selectExportData = (rootState: RootState): BuildData => {
     return {
-        startingClassName: StartingClass.selectStartingClassName(state),
-        armorNames:        Armor.slots(state),
-        talismanNames:     Talismans.slots(state),
-        weaponNames:       Weapons.slots(state),
+        startingClassName: StartingClass.selectStartingClassName(rootState),
+        armorNames:        Armor.slots(rootState),
+        talismanNames:     Talismans.slots(rootState),
+        weaponNames:       Weapons.slots(rootState),
         attributes: {
-            [AttributeName.vigor]:        Attributes.selectVigor(state),
-            [AttributeName.mind]:         Attributes.selectMind(state),
-            [AttributeName.endurance]:    Attributes.selectEndurance(state),
-            [AttributeName.strength]:     Attributes.selectStrength(state),
-            [AttributeName.dexterity]:    Attributes.selectDexterity(state),
-            [AttributeName.intelligence]: Attributes.selectIntelligence(state),
-            [AttributeName.faith]:        Attributes.selectFaith(state),
-            [AttributeName.arcane]:       Attributes.selectArcane(state),
+            [AttributeName.vigor]:        Attributes.selectVigor(rootState),
+            [AttributeName.mind]:         Attributes.selectMind(rootState),
+            [AttributeName.endurance]:    Attributes.selectEndurance(rootState),
+            [AttributeName.strength]:     Attributes.selectStrength(rootState),
+            [AttributeName.dexterity]:    Attributes.selectDexterity(rootState),
+            [AttributeName.intelligence]: Attributes.selectIntelligence(rootState),
+            [AttributeName.faith]:        Attributes.selectFaith(rootState),
+            [AttributeName.arcane]:       Attributes.selectArcane(rootState),
         },
     }
 }

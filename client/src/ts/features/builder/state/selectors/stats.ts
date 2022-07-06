@@ -21,21 +21,21 @@ import * as StartingClass from "./starting-class"
 // const selectBuilderState = (state: RootState) => { return state?.Builder }
 
 // don't think this is performant.
-const selectLevelAlt = (state: RootState): number => {
-    const attributeValues = Attributes.selectAttributes(state)
+const selectLevelAlt = (rootState: RootState): number => {
+    const attributeValues = Attributes.selectAttributes(rootState)
     return sum(Object.values(attributeValues))
 }
 
-export const selectLevel = (state: RootState): number => {
-    const addedLevels = Attributes.selectTotalAttributes(state)
-    const startingClass = StartingClass.selectStartingClass(state)
+export const selectLevel = (rootState: RootState): number => {
+    const addedLevels = Attributes.selectTotalAttributes(rootState)
+    const startingClass = StartingClass.selectStartingClass(rootState)
     const l = startingClass?.level ?? 0
     const t = startingClass?.total_levels ?? 0
     return addedLevels - t + l
 }
 
-export const selectRunesForNextLevel = (state: RootState) => {
-    const level = selectLevel(state)
+export const selectRunesForNextLevel = (rootState: RootState) => {
+    const level = selectLevel(rootState)
     const runes = LEVEL_RUNES_MAP[level.toString()]?.runes ?? "?"
     return runes
 }
@@ -50,19 +50,19 @@ const calculateStat = (level: number, map: number[]): number => {
 }
 
 // https://eldenring.wiki.fextralife.com/Discovery
-export const selectDiscovery = (state: RootState): string => {
-    const level = Attributes.selectArcane(state)
+export const selectDiscovery = (rootState: RootState): string => {
+    const level = Attributes.selectArcane(rootState)
     return ((1.10) * level * 10).toFixed(1)
 }
 
-export const selectPoise = (state: RootState): number => {
-    const armor       = Armor.compactArray(state)
+export const selectPoise = (rootState: RootState): number => {
+    const armor       = Armor.compactArray(rootState)
     const armorPoise = sum(armor.map(x => x?.poise ?? 0))
     return sum([armorPoise].flat())
 }
 
-const selectEffects = (state: RootState) => {
-    const talismans = Talismans.compactArray(state)
+const selectEffects = (rootState: RootState) => {
+    const talismans = Talismans.compactArray(rootState)
     const talismanEffects = talismans.map(x => x.effects)
 
     return [talismanEffects]
@@ -72,13 +72,13 @@ const selectEffects = (state: RootState) => {
 // HP
 // =============================================================================
 
-const selectBaseHp = (state: RootState): number => {
-    const level = Attributes.selectVigor(state)
+const selectBaseHp = (rootState: RootState): number => {
+    const level = Attributes.selectVigor(rootState)
     return (level > 99) ? LEVEL_HP_MAP[-1] : LEVEL_HP_MAP[level]
 }
 
-export const selectHp = (state: RootState): number => {
-    const baseHp = selectBaseHp(state)
+export const selectHp = (rootState: RootState): number => {
+    const baseHp = selectBaseHp(rootState)
     return baseHp
 }
 
@@ -86,13 +86,13 @@ export const selectHp = (state: RootState): number => {
 // FP
 // =============================================================================
 
-const selectBaseFp = (state: RootState): number => {
-    const level = Attributes.selectMind(state)
+const selectBaseFp = (rootState: RootState): number => {
+    const level = Attributes.selectMind(rootState)
     return (level > 99) ? LEVEL_FP_MAP[-1] : LEVEL_FP_MAP[level]
 }
 
-export const selectFp = (state: RootState): number => {
-    const baseFp = selectBaseFp(state)
+export const selectFp = (rootState: RootState): number => {
+    const baseFp = selectBaseFp(rootState)
     return baseFp
 }
 
@@ -100,12 +100,12 @@ export const selectFp = (state: RootState): number => {
 // Stamina
 // =============================================================================
 
-const selectBaseStamina = (state: RootState): number => {
-    const level = Attributes.selectEndurance(state)
+const selectBaseStamina = (rootState: RootState): number => {
+    const level = Attributes.selectEndurance(rootState)
     return (level > 99) ? LEVEL_STAMINA_MAP[-1] : LEVEL_STAMINA_MAP[level]
 }
 
-export const selectStamina = (state: RootState): number => {
-    const baseStamina = selectBaseStamina(state)
+export const selectStamina = (rootState: RootState): number => {
+    const baseStamina = selectBaseStamina(rootState)
     return baseStamina
 }
