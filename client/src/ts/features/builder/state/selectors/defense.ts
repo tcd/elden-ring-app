@@ -10,7 +10,7 @@ import {
     holyDefenseFromArcane,
 } from "@app/util"
 
-import * as Attributes from "./attributes"
+import * as Level from "./level"
 import * as Stats from "./stats"
 import { ArmorSelectors as Armor } from "@app/features/armor"
 
@@ -19,14 +19,14 @@ import { ArmorSelectors as Armor } from "@app/features/armor"
 // =============================================================================
 
 const selectDefenseFromRuneLevel = (rootState: RootState): number => {
-    const runeLevel = Stats.selectLevel(rootState)
+    const runeLevel = Level.selectCorrectedLevel(rootState)
     const defense = defenseFromRuneLevel(runeLevel)
     return defense
 }
 
 export const selectPhysicalDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const strengthLevel = Attributes.selectStrength(rootState)
+    const strengthLevel = Level.selectCorrectedStrength(rootState)
     const attributeDefense = physicalDefenseFromStrength(strengthLevel)
     return sum([baseDefense, attributeDefense])
 }
@@ -35,13 +35,13 @@ export const selectPhysicalDefense = (rootState: RootState) => {
 // export const selectPierceDefense = (state: RootState) => { return selectNegation(state, "pierce") }
 export const selectMagicDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const intelligenceLevel = Attributes.selectIntelligence(rootState)
+    const intelligenceLevel = Level.selectCorrectedIntelligence(rootState)
     const attributeDefense = magicDefenseFromIntelligence(intelligenceLevel)
     return sum([baseDefense, attributeDefense])
 }
 export const selectFireDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const vigorLevel = Attributes.selectVigor(rootState)
+    const vigorLevel = Level.selectCorrectedVigor(rootState)
     const attributeDefense = fireDefenseFromVigor(vigorLevel)
     return sum([baseDefense, attributeDefense])
 }
@@ -51,7 +51,7 @@ export const selectLightningDefense = (rootState: RootState): number => {
 }
 export const selectHolyDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const arcaneLevel = Attributes.selectArcane(rootState)
+    const arcaneLevel = Level.selectCorrectedArcane(rootState)
     const attributeDefense = holyDefenseFromArcane(arcaneLevel)
     return sum([baseDefense, attributeDefense])
 }

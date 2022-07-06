@@ -9,7 +9,7 @@ import { TalismansSelectors as Talismans } from "@app/features/talismans"
 import { WeaponsSelectors   as Weapons   } from "@app/features/weapons"
 
 import * as StartingClass from "./starting-class"
-import * as Attributes from "./attributes"
+import * as Level from "./level"
 
 export const selectExportData = (rootState: RootState): BuildData => {
     return {
@@ -18,14 +18,14 @@ export const selectExportData = (rootState: RootState): BuildData => {
         talismanNames:     Talismans.slots(rootState),
         weaponNames:       Weapons.slots(rootState),
         attributes: {
-            [AttributeNames.vigor]:        Attributes.selectVigor(rootState),
-            [AttributeNames.mind]:         Attributes.selectMind(rootState),
-            [AttributeNames.endurance]:    Attributes.selectEndurance(rootState),
-            [AttributeNames.strength]:     Attributes.selectStrength(rootState),
-            [AttributeNames.dexterity]:    Attributes.selectDexterity(rootState),
-            [AttributeNames.intelligence]: Attributes.selectIntelligence(rootState),
-            [AttributeNames.faith]:        Attributes.selectFaith(rootState),
-            [AttributeNames.arcane]:       Attributes.selectArcane(rootState),
+            [AttributeNames.vigor]:        Level.selectAddedVigor(rootState),
+            [AttributeNames.mind]:         Level.selectAddedMind(rootState),
+            [AttributeNames.endurance]:    Level.selectAddedEndurance(rootState),
+            [AttributeNames.strength]:     Level.selectAddedStrength(rootState),
+            [AttributeNames.dexterity]:    Level.selectAddedDexterity(rootState),
+            [AttributeNames.intelligence]: Level.selectAddedIntelligence(rootState),
+            [AttributeNames.faith]:        Level.selectAddedFaith(rootState),
+            [AttributeNames.arcane]:       Level.selectAddedArcane(rootState),
         },
     }
 }
