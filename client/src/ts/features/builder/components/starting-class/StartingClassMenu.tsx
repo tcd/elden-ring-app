@@ -1,12 +1,8 @@
-import { useEffect } from "react"
-import { capitalize } from "lodash"
-import { useDispatch, useSelector } from "react-redux"
-import { Box, Button, IconButton, SxProps } from "@mui/material"
+import { Box, IconButton } from "@mui/material"
 
 import { STARTING_CLASSES } from "@app/data"
-import { getImageSrc, getImageSrcManual } from "@app/util"
-import { ErDialog } from "@app/shared"
-import { Actions, Selectors } from "@app/state"
+import { getImageSrcManual } from "@app/util"
+// import { Actions, Selectors } from "@app/state"
 import { StartingClassOption, StartingClassConfirmationDialog } from "."
 
 const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
@@ -14,18 +10,9 @@ const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
 
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
-    useEffect(() => {
-        // Anything in here is fired on component mount.
-        document.getElementById("root").classList.add("startingClassPage")
-        return () => {
-            // Anything in here is fired on component unmount.
-            document.getElementById("root").classList.remove("startingClassPage")
-        }
-    }, [])
-
     const startingClasses = STARTING_CLASSES
-    const selectedName = useSelector(Selectors.Builder.startingClass.startingClassName)
-    const confirming = useSelector(Selectors.Builder.startingClass.confirmingStartingClass)
+    // const selectedName = useSelector(Selectors.Builder.startingClass.startingClassName)
+    // const confirming = useSelector(Selectors.Builder.startingClass.confirmingStartingClass)
 
     const options = startingClasses.map((sClass) => <StartingClassOption key={sClass.name} sClass={sClass} />)
 
