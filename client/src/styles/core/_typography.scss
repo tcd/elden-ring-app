@@ -1,14 +1,8 @@
 @use "../variables" as v;
 
-
 span.text-special {
     color: v.$gold;
 }
-
-// @import url("../../assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff");
-// @import url("../../assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff2");
-// @import url("../../assets/fonts/OptimusPrinceps/woff2/OptimusPrincepsSemiBold.woff");
-// @import url("../../assets/fonts/OptimusPrinceps/woff2/OptimusPrincepsSemiBold.woff2");
 
 .OptimusPrinceps {
     font-family: garamond-premier-pro, serif;
@@ -25,116 +19,9 @@ span.text-special {
 // }
 
 @font-face {
-    font-family: 'OptimusPrinceps';
-    // src: url('OptimusPrinceps.woff2') format('woff2'), url('OptimusPrinceps.woff') format('woff');
-    src: url('assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff2') format('woff2'), url('assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff') format('woff');
+    font-family: "OptimusPrinceps";
+    src: url("assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff2") format("woff2"), url("assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
-
-
-//
-// * {
-//     font-family: garamond-premier-pro-display, serif;
-// }
-
-// ==========================================================================
-// TODO: Figure out which of these are needed
-// ==========================================================================
-
-// .Garamond-Premier-Pro-Regular {
-//     font-family: garamond-premier-pro, serif;
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Italic {
-//     font-family: garamond-premier-pro, serif;
-//     font-weight: 400;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Bold {
-//     font-family: garamond-premier-pro, serif;
-//     font-weight: 700;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Bold-Italic {
-//     font-family: garamond-premier-pro, serif;
-//     font-weight: 700;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Caption {
-//     font-family: garamond-premier-pro-caption, serif;
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Italic-Caption {
-//     font-family: garamond-premier-pro-caption, serif;
-//     font-weight: 400;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Bold-Caption {
-//     font-family: garamond-premier-pro-caption, serif;
-//     font-weight: 700;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Bold-Italic-Caption {
-//     font-family: garamond-premier-pro-caption, serif;
-//     font-weight: 700;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Bold-Display {
-//     font-family: garamond-premier-pro-display, serif;
-//     font-weight: 700;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Bold-Italic-Display {
-//     font-family: garamond-premier-pro-display, serif;
-//     font-weight: 700;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Display {
-//     font-family: garamond-premier-pro-display, serif;
-//     font-weight: 400;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Italic-Display {
-//     font-family: garamond-premier-pro-display, serif;
-//     font-weight: 400;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Bold-Subhead {
-//     font-family: garamond-premier-pro-subhead, serif;
-//     font-weight: 700;
-//     font-style: normal;
-// }
-
-// .Garamond-Premier-Pro-Bold-Italic-Subhead {
-//     font-family: garamond-premier-pro-subhead, serif;
-//     font-weight: 700;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Italic-Subhead {
-//     font-family: garamond-premier-pro-subhead, serif;
-//     font-weight: 400;
-//     font-style: italic;
-// }
-
-// .Garamond-Premier-Pro-Subhead {
-//     font-family: garamond-premier-pro-subhead, serif;
-//     font-weight: 400;
-//     font-style: normal;
-// }
