@@ -8,6 +8,15 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 <!-- ## [Unreleased] -->
 
 
+## [0.2.0] - 2022-07-06
+### Added
+- Set starting equipment after confirming starting class
+### Changed
+- Include data in client build instead of fetching from server
+- Updated readme
+- Other assorted changes
+
+
 ## [0.1.0] - 2022-07-04
 - Initial release
 

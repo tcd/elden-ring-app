@@ -1,5 +1,7 @@
 # Elden Ring App
 
+[![GitHub issues](https://img.shields.io/github/issues/tcd/elden-ring-app)](https://github.com/tcd/elden-ring-app/issues)
+
 This is something I'm working on in my free time and is very much incomplete at the moment.
 
 

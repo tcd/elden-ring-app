@@ -17,3 +17,10 @@ x 2022-05-24 Completely rewrite AR calculation @client
 2022-06-26 Incorporate Equipment Effects into Builder selectors @client
 2022-07-04 Remove all local assets from client app. @client
 2022-07-05 Refactor data files for better code splitting @client
+2022-07-06 Fix starting class scroll @client
+x 2022-07-06 2022-07-06 Set equipment after picking a class. @client
+2022-07-06 Dont let levels go below zero @client
+2022-07-06 Allow editing affinity more than once
+2022-07-06 Equipment menu images hidden when selected
+2022-07-06 Affinity option 'Undo Enhancement' does nothing
+2022-07-06 Add OpenGraph meta tags @client
