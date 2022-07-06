@@ -1,0 +1,11 @@
+// https://ogp.me/
+[
+    { "property": "og:title",        "content": "Elden Ring App" },
+    // { "property": "og:type",         "content": "video.movie" },
+    { "property": "og:url",          "content": "https://elden-ring-app.com" },
+    // { "property": "og:image",        "content": "https://ia.media-imdb.com/images/rock.jpg" },
+    { "property": "og:description",  "content": "An Elden Ring build planner and then some" },
+    { "property": "og:locale",       "content": "en_US" },
+    { "property": "og:site_name",    "content": "Elden Ring App" },
+    { "property": "og:type",         "content": "website" }
+]
