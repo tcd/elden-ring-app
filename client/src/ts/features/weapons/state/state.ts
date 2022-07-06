@@ -7,7 +7,7 @@ import {
     WeaponSettings,
 } from "@app/types"
 import { FEATURE_KEYS, CONFIG } from "@app/util"
-import { reducers } from "./reducers"
+import { reducers, extraReducers } from "./reducers"
 
 export interface WeaponsState {
     slots: WeaponSlots
@@ -63,4 +63,5 @@ export const WeaponsSlice = createSlice({
     name: FEATURE_KEYS.Weapons,
     initialState: _initialState,
     reducers: reducers,
+    extraReducers: extraReducers,
 })

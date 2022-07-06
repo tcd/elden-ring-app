@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
 import { ErDialog } from "@app/shared"
@@ -7,14 +7,14 @@ import { Actions, Selectors } from "@app/state"
 export const StartingClassConfirmationDialog = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const selectedName = useSelector(Selectors.Builder.startingClass.startingClassName)
+    const pendingName = useSelector(Selectors.Builder.startingClass.pendingName)
     const confirming = useSelector(Selectors.Builder.startingClass.confirmingStartingClass)
 
     const handleConfirm = async () => {
-        await dispatch(Actions.Builder.confirmStartingClassName())
-        navigate("/")
+        await dispatch(Actions.Builder.confirmStartingClassName({ name: pendingName }))
+        // navigate("/")
     }
 
     const handleCancel = () => {

@@ -5,7 +5,7 @@ import {
     ArmorSet,
 } from "@app/types"
 import { CONFIG, FEATURE_KEYS } from "@app/util"
-import { reducers } from "./reducers"
+import { reducers, extraReducers } from "./reducers"
 
 export interface ArmorState {
     armorNames: ArmorSet
@@ -40,4 +40,5 @@ export const ArmorSlice = createSlice({
     name: FEATURE_KEYS.Armor,
     initialState: _initialState,
     reducers: reducers,
+    extraReducers: extraReducers,
 })

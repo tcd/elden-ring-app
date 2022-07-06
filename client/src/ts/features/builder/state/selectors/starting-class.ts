@@ -4,9 +4,9 @@ import { RootState } from "@app/state"
 import { isBlank } from "@app/util"
 import { selectBuilderSlice } from "./select-builder-slice"
 
-export const selectStartingClassName = (rootState: RootState): StartingClassName => {
-    return selectBuilderSlice(rootState)?.startingClassName
-}
+export const selectStartingClassName        = (rootState: RootState): StartingClassName =>  selectBuilderSlice(rootState)?.startingClassName
+export const selectPendingStartingClassName = (rootState: RootState): StartingClassName =>  selectBuilderSlice(rootState)?.pendingStartingClassName
+export const selectConfirmingStartingClass  = (rootState: RootState): boolean           =>  selectBuilderSlice(rootState)?.confirmingStartingClass
 
 export const selectStartingClass = (rootState: RootState): StartingClass => {
     const startingClassName = selectStartingClassName(rootState)
@@ -17,6 +17,3 @@ export const selectStartingClass = (rootState: RootState): StartingClass => {
     return startingClass
 }
 
-export const selectConfirmingStartingClass = (rootState: RootState): boolean => {
-    return selectBuilderSlice(rootState)?.confirmingStartingClass
-}

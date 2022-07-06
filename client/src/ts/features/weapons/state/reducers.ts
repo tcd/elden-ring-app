@@ -1,13 +1,14 @@
-import { PayloadAction } from "@reduxjs/toolkit"
+import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
+import { startingClassByName, WEAPON_SKILL_DEFAULT_AFFINITIES } from "@app/data"
 import {
     WeaponSlotId,
     WeaponAffinityName,
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"
 import { isBlank } from "@app/util"
+import { BuilderActions } from "@app/features/builder"
 import { WeaponsState } from "./state"
-import { WEAPON_SKILL_DEFAULT_AFFINITIES } from "@app/data"
 
 export const reducers = {
     startCustomizingWeapon(state: WeaponsState) {
@@ -87,4 +88,29 @@ export const reducers = {
         state.slots[activeSlotId].affinity_name = action.payload.name as WeaponAffinityName
         state.choosingAffinity = false
     },
+}
+
+const noWeaponsSelected = (slice: WeaponsState): boolean => {
+    const slots = slice?.slots
+    if (slots?.R1?.weapon_name != null) { return false }
+    if (slots?.R2?.weapon_name != null) { return false }
+    if (slots?.R3?.weapon_name != null) { return false }
+    if (slots?.L1?.weapon_name != null) { return false }
+    if (slots?.L2?.weapon_name != null) { return false }
+    if (slots?.L3?.weapon_name != null) { return false }
+    return true
+}
+
+export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
+    builder
+        .addCase(BuilderActions.confirmStartingClassName, (state: WeaponsState, { payload: { name } }) => {
+            if (noWeaponsSelected(state)) {
+                const sClass = startingClassByName(name)
+                state.slots.R1.weapon_name = sClass?.R1 ?? null
+                state.slots.R2.weapon_name = sClass?.R2 ?? null
+                state.slots.L1.weapon_name = sClass?.L1 ?? null
+                state.slots.L2.weapon_name = sClass?.L2 ?? null
+                return state
+            }
+        })
 }

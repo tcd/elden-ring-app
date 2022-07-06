@@ -30,8 +30,9 @@ export const BuilderSelectors = {
         currentMenu: Misc.selectCurrentMenu,
     },
     startingClass: {
-        startingClassName:       StartingClass.selectStartingClassName,
         startingClass:           StartingClass.selectStartingClass,
+        startingClassName:       StartingClass.selectStartingClassName,
+        pendingName:             StartingClass.selectPendingStartingClassName,
         confirmingStartingClass: StartingClass.selectConfirmingStartingClass,
     },
     level: Level.selectCorrectedLevel,
