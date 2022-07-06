@@ -1,5 +1,4 @@
 import * as Stats from "./stats"
-import * as Attributes from "./attributes"
 import * as Resistance from "./resistance"
 import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
@@ -37,7 +36,7 @@ export const BuilderSelectors = {
     },
     level: Level.selectCorrectedLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
-    allAttributes: Attributes.selectAttributes,
+    allAttributes: Level.selectCorrectedAttributes,
     attribute: {
         vigor:        Level.selectCorrectedVigor,
         mind:         Level.selectCorrectedMind,

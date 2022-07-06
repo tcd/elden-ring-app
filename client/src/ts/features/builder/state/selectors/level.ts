@@ -1,6 +1,6 @@
 import { sum } from "lodash"
 
-import { AttributeName, StartingClass } from "@app/types"
+import { Attributes, AttributeName, StartingClass } from "@app/types"
 import { RootState } from "@app/state"
 import { selectBuilderSlice } from "./select-builder-slice"
 import { selectStartingClass } from "./starting-class"
@@ -86,6 +86,19 @@ export const selectCorrectedDexterity    = (rootState: RootState): Integer => se
 export const selectCorrectedIntelligence = (rootState: RootState): Integer => selectCorrectedAttribute(rootState, "intelligence")
 export const selectCorrectedFaith        = (rootState: RootState): Integer => selectCorrectedAttribute(rootState, "faith")
 export const selectCorrectedArcane       = (rootState: RootState): Integer => selectCorrectedAttribute(rootState, "arcane")
+
+export const selectCorrectedAttributes = (rootState: RootState): Attributes => {
+    return {
+        vigor:        selectCorrectedVigor(rootState),
+        mind:         selectCorrectedMind(rootState),
+        endurance:    selectCorrectedEndurance(rootState),
+        strength:     selectCorrectedStrength(rootState),
+        dexterity:    selectCorrectedDexterity(rootState),
+        intelligence: selectCorrectedIntelligence(rootState),
+        faith:        selectCorrectedFaith(rootState),
+        arcane:       selectCorrectedArcane(rootState),
+    }
+}
 
 // =============================================================================
 // Level
