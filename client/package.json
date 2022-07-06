@@ -4,9 +4,11 @@
     "version": "0.1.0",
     "scripts": {
         "start": "npm run serve",
-        "build:prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --mode production",
         "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.config.dev.js",
         "build:dev:watch": "npm run build:dev -- --watch",
+        "build:prod": "npm run build:prod:clean && npm run build:prod:build",
+        "build:prod:clean": "rimraf ./dist/*",
+        "build:prod:build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --mode production",
         "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js --open",
         "build-and-deploy": "npm run build:prod && npm run deploy",
         "deploy": "./config/deploy.sh"
@@ -60,6 +62,7 @@
         "react-modal": "^3.14.4",
         "react-redux": "^7.2.6",
         "react-router-dom": "^6.2.2",
+        "rimraf": "^3.0.2",
         "rpg-awesome": "^0.2.0",
         "sass": "^1.49.9",
         "sass-loader": "^12.6.0",
