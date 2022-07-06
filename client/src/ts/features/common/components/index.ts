@@ -10,4 +10,4 @@ export * from "./MdiIcon"
 export * from "./MouseOverPopover"
 export * from "./PreloadOverlay"
 
-export * from "./renderNullableNumberCell"
+export * from "./NullableNumber"

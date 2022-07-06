@@ -4,7 +4,7 @@ import { Spell } from "@app/types"
 import { Selectors } from "@app/state"
 import {
     CustomTable,
-    renderNullableNumberCell,
+    NullableNumber,
     SpellDamageTypes,
     CustomTableColumn,
 } from "@app/shared"
@@ -29,9 +29,9 @@ const columns: CustomTableColumn<Spell>[] = [
     { header: "Name",         field: "name",                  sortable: true, width: 250 },
     { header: "FP Cost",      field: "fp_cost",               sortable: true, align: "right" },
     { header: "Slots Used",   field: "slots_required",        sortable: true, align: "right" },
-    { header: "Int",          field: "required_intelligence", sortable: true, align: "right", renderFunc: (row) => renderNullableNumberCell(row.required_intelligence) },
-    { header: "Fai",          field: "required_faith",        sortable: true, align: "right", renderFunc: (row) => renderNullableNumberCell(row.required_faith)        },
-    { header: "Arc",          field: "required_arcane",       sortable: true, align: "right", renderFunc: (row) => renderNullableNumberCell(row.required_arcane)       },
+    { header: "Int",          field: "required_intelligence", sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_intelligence} /> },
+    { header: "Fai",          field: "required_faith",        sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_faith} />        },
+    { header: "Arc",          field: "required_arcane",       sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_arcane} />       },
     { header: "Damage Types", field: "id",                    sortable: false, renderFunc: (row) => <SpellDamageTypes spell={row} /> },
 ]
 

@@ -4,7 +4,7 @@ export interface NullableNumberProps {
     number?: number
 }
 
-export const renderNullableNumberCell = (number: number): JSX.Element => {
+export const NullableNumber = ({ number }: NullableNumberProps): JSX.Element => {
     if (isBlank(number) || number === 0) {
         return null
     }
