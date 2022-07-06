@@ -16,3 +16,4 @@ x 2022-05-24 Completely rewrite AR calculation @client
 2022-06-25 Armor stats are way off. Specifically resistance.
 2022-06-26 Incorporate Equipment Effects into Builder selectors @client
 2022-07-04 Remove all local assets from client app. @client
+2022-07-05 Refactor data files for better code splitting @client
