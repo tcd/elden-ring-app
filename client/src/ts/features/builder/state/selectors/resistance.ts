@@ -2,7 +2,6 @@ import { sum } from "lodash"
 
 import { RootState } from "@app/state"
 
-import * as Attributes from "./attributes"
 import { ArmorSelectors as Armor } from "@app/features/armor"
 
 // =============================================================================

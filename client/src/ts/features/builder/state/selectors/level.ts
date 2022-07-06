@@ -1,5 +1,6 @@
 import { sum } from "lodash"
 
+import { LEVEL_RUNES_MAP } from "@app/data"
 import { Attributes, AttributeName, StartingClass } from "@app/types"
 import { RootState } from "@app/state"
 import { selectBuilderSlice } from "./select-builder-slice"
@@ -120,3 +121,12 @@ export const selectCorrectedLevel = (rootState: RootState): Integer => {
     return fromClass + fromAttributes
 }
 
+// =============================================================================
+// Old
+// =============================================================================
+
+export const selectRunesForNextLevel = (rootState: RootState): Integer => {
+    const level = selectCorrectedLevel(rootState)
+    const runes = LEVEL_RUNES_MAP[level.toString()]?.runes ?? "?"
+    return runes
+}

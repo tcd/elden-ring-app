@@ -35,7 +35,7 @@ export const BuilderSelectors = {
         confirmingStartingClass: StartingClass.selectConfirmingStartingClass,
     },
     level: Level.selectCorrectedLevel,
-    runesToNextLevel: Stats.selectRunesForNextLevel,
+    runesToNextLevel: Level.selectRunesForNextLevel,
     allAttributes: Level.selectCorrectedAttributes,
     attribute: {
         vigor:        Level.selectCorrectedVigor,

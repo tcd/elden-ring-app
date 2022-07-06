@@ -11,7 +11,7 @@ import {
     LEVEL_EQUIP_LOAD_MAP,
 } from "@app/data"
 
-import * as Attributes from "./attributes"
+import * as Level from "./level"
 import { TalismansSelectors as Talismans } from "@app/features/talismans"
 import { WeaponsSelectors as Weapons } from "@app/features/weapons"
 import { ArmorSelectors as Armor } from "@app/features/armor"
@@ -21,7 +21,7 @@ import { ArmorSelectors as Armor } from "@app/features/armor"
 // =============================================================================
 
 export const selectBaseEquipLoad = (rootState: RootState): number => {
-    const level = Attributes.selectEndurance(rootState)
+    const level = Level.selectCorrectedEndurance(rootState)
     return (level > 99) ? LEVEL_EQUIP_LOAD_MAP[-1] : LEVEL_EQUIP_LOAD_MAP[level]
 }
 
