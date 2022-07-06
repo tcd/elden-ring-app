@@ -3,17 +3,6 @@ import { sum } from "lodash"
 import { RootState } from "@app/state"
 import { selectBuilderSlice } from "./select-builder-slice"
 
-// export const selectAttributes = (state: RootState) => { return selectBuilderSlice(state)?.attributes }
-
-// export const selectVigor        = (state: RootState) => { return selectAttributes(state)?.vigor }
-// export const selectMind         = (state: RootState) => { return selectAttributes(state)?.mind }
-// export const selectEndurance    = (state: RootState) => { return selectAttributes(state)?.endurance }
-// export const selectStrength     = (state: RootState) => { return selectAttributes(state)?.strength }
-// export const selectDexterity    = (state: RootState) => { return selectAttributes(state)?.dexterity }
-// export const selectIntelligence = (state: RootState) => { return selectAttributes(state)?.intelligence }
-// export const selectFaith        = (state: RootState) => { return selectAttributes(state)?.faith }
-// export const selectArcane       = (state: RootState) => { return selectAttributes(state)?.arcane }
-
 export const selectAttributes = (rootState: RootState) => selectBuilderSlice(rootState)?.attributes
 
 export const selectVigor        = (rootState: RootState): Integer => selectAttributes(rootState)?.vigor

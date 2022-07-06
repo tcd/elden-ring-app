@@ -1,29 +1,23 @@
-export enum AttributeName {
-    vigor        = "vigor",
-    mind         = "mind",
-    endurance    = "endurance",
-    strength     = "strength",
-    dexterity    = "dexterity",
-    intelligence = "intelligence",
-    faith        = "faith",
-    arcane       = "arcane",
-}
+export const AttributeNames = {
+    vigor:        "vigor",
+    mind:         "mind",
+    endurance:    "endurance",
+    strength:     "strength",
+    dexterity:    "dexterity",
+    intelligence: "intelligence",
+    faith:        "faith",
+    arcane:       "arcane",
+} as const
 
-export const AttributeNames = Object.keys(AttributeName)
+export type AttributeName = keyof typeof AttributeNames
+export type TAttributeName = typeof AttributeNames[AttributeName];
+
+// export const AttributeNames = Object.keys(AttributeName)
 
 /**
  * Additional attribute points beyond those of a given starting class.
  */
-export interface Attributes {
-    [AttributeName.vigor]:        Integer
-    [AttributeName.mind]:         Integer
-    [AttributeName.endurance]:    Integer
-    [AttributeName.strength]:     Integer
-    [AttributeName.dexterity]:    Integer
-    [AttributeName.intelligence]: Integer
-    [AttributeName.faith]:        Integer
-    [AttributeName.arcane]:       Integer
-}
+export type Attributes = Record<AttributeName, Integer>
 
 // /**
 //  * Additional attribute points beyond those of a given starting class.

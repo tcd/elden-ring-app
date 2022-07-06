@@ -59,16 +59,16 @@ const myBuild: BuilderState = {
     ...initialState,
     startingClassName: StartingClassName.Samurai,
     // currentMenu: "starting-class",
-    attributes: {
-        "vigor":        30,
-        "mind":         30,
-        "endurance":    30,
-        "strength":     30,
-        "dexterity":    30,
-        "intelligence": 30,
-        "faith":        30,
-        "arcane":       30,
-    },
+    // attributes: {
+    //     "vigor":        30,
+    //     "mind":         30,
+    //     "endurance":    30,
+    //     "strength":     30,
+    //     "dexterity":    30,
+    //     "intelligence": 30,
+    //     "faith":        30,
+    //     "arcane":       30,
+    // },
     // attributes: {
     //     "vigor":        50,
     //     "mind":         40,
@@ -77,12 +77,22 @@ const myBuild: BuilderState = {
     //     "dexterity":    50,
     //     "intelligence": 30,
     //     "faith":        80,
-    //     "arcane":       30,
+    //     "arcane":       33,
     // },
+    attributes: {
+        vigor:        38,
+        mind:         29,
+        endurance:    47,
+        strength:     68,
+        dexterity:    35,
+        intelligence: 21,
+        faith:        72,
+        arcane:       25,
+    },
 }
 
-// const _initialState = CONFIG.production() ? initialState : myBuild
-const _initialState = initialState
+const _initialState = CONFIG.production() ? initialState : myBuild
+// const _initialState = initialState
 
 export const BuilderSlice = createSlice({
     name:          FEATURE_KEYS.Builder,

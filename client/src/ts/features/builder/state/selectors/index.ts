@@ -4,6 +4,7 @@ import * as Resistance from "./resistance"
 import * as Defense from "./defense"
 import * as EquipLoad from "./equip-load"
 import * as StartingClass from "./starting-class"
+import * as Level from "./level"
 
 import * as Misc from "./misc"
 
@@ -34,18 +35,18 @@ export const BuilderSelectors = {
         startingClass:           StartingClass.selectStartingClass,
         confirmingStartingClass: StartingClass.selectConfirmingStartingClass,
     },
-    level: Stats.selectLevel,
+    level: Level.selectCorrectedLevel,
     runesToNextLevel: Stats.selectRunesForNextLevel,
     allAttributes: Attributes.selectAttributes,
     attribute: {
-        vigor:        Attributes.selectVigor,
-        mind:         Attributes.selectMind,
-        endurance:    Attributes.selectEndurance,
-        strength:     Attributes.selectStrength,
-        dexterity:    Attributes.selectDexterity,
-        intelligence: Attributes.selectIntelligence,
-        faith:        Attributes.selectFaith,
-        arcane:       Attributes.selectArcane,
+        vigor:        Level.selectCorrectedVigor,
+        mind:         Level.selectCorrectedMind,
+        endurance:    Level.selectCorrectedEndurance,
+        strength:     Level.selectCorrectedStrength,
+        dexterity:    Level.selectCorrectedDexterity,
+        intelligence: Level.selectCorrectedIntelligence,
+        faith:        Level.selectCorrectedFaith,
+        arcane:       Level.selectCorrectedArcane,
     },
     resistance: {
         immunity:   Resistance.selectImmunity,

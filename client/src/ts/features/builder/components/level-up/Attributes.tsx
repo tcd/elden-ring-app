@@ -1,14 +1,16 @@
+import { capitalize } from "lodash"
 import { useSelector, useDispatch } from "react-redux"
 import { mdiArmFlex } from "@mdi/js"
 import IconButton from "@mui/material/IconButton"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
 
-import { Actions, Selectors } from "@app/state"
+import { AttributeName, Attributes as TAttributes } from "@app/types"
 import { ErCard } from "@app/shared"
+import { Actions, Selectors } from "@app/state"
 
 export interface AttributeRowProps {
-    name: string
+    name: AttributeName
     value: number
 }
 
@@ -17,16 +19,16 @@ export const AttributeRow = ({ name, value }: AttributeRowProps): JSX.Element =>
     const dispatch = useDispatch()
 
     const incrementAttribute = () => {
-        dispatch(Actions.Builder.incrementAttribute({ name: name.toLowerCase() }))
+        dispatch(Actions.Builder.incrementAttribute({ name }))
     }
 
     const decrementAttribute = () => {
-        dispatch(Actions.Builder.decrementAttribute({ name: name.toLowerCase() }))
+        dispatch(Actions.Builder.decrementAttribute({ name }))
     }
 
     return (
         <li className="attribute-row">
-            <span className="text-capitalize">{name}</span>
+            <span className="text-capitalize">{capitalize(name)}</span>
             <div className="attribute-control">
                 <IconButton size="small" onClick={decrementAttribute}>
                     <ArrowBackIosNewIcon />
@@ -53,20 +55,20 @@ export const Attributes = (): JSX.Element => {
     const faith        = useSelector(Selectors.Builder.attribute.faith)
     const arcane       = useSelector(Selectors.Builder.attribute.arcane)
 
-    const attributeData: AttributeRowProps[] = [
-        { name: "Vigor",        value: vigor        },
-        { name: "Mind",         value: mind         },
-        { name: "Endurance",    value: endurance    },
-        { name: "Strength",     value: strength     },
-        { name: "Dexterity",    value: dexterity    },
-        { name: "Intelligence", value: intelligence },
-        { name: "Faith",        value: faith        },
-        { name: "Arcane",       value: arcane       },
-    ]
+    const attributes: TAttributes = {
+        vigor,
+        mind,
+        endurance,
+        strength,
+        dexterity,
+        intelligence,
+        faith,
+        arcane,
+    }
 
-    const attributeRows = attributeData.map(({ name, value }) => {
+    const attributeRows = Object.entries(attributes).map(([name, value]) => {
         return <AttributeRow
-            name={name}
+            name={name as AttributeName}
             value={value}
             key={`attribute-leveling-row-${name}`}
         />

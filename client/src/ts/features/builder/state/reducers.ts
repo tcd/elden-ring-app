@@ -3,44 +3,34 @@ import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 import {
     KitchenSink,
     StartingClassName,
-    TalismanSlotId,
+    AttributeName,
 } from "@app/types"
-import {
-    BuilderState,
-    BuilderMenu,
-} from "./state"
-import {
-    fetchEverything,
-} from "./thunks"
 import { ArmorActions } from "@app/features/armor"
 import { WeaponsActions } from "@app/features/weapons"
 import { TalismansActions } from "@app/features/talismans"
+import { BuilderState, BuilderMenu } from "./state"
+import { fetchEverything } from "./thunks"
+import { selectCorrectedAttributeLevel } from "./selectors/for-reducers"
 
 export const reducers = {
-    incrementAttribute(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        if (state.attributes[action.payload.name] < 99) {
-            state.attributes[action.payload.name]++
+    incrementAttribute(state: BuilderState, { payload: { name }}: PayloadAction<{ name: AttributeName }>) {
+        const correctedLevel = selectCorrectedAttributeLevel(state, name)
+        if (correctedLevel < 99) {
+            state.attributes[name]++
         }
     },
-    decrementAttribute(state: BuilderState, action: PayloadAction<{ name: string }>) {
-        if (state.attributes[action.payload.name] > 0) {
-            state.attributes[action.payload.name]--
+    decrementAttribute(state: BuilderState, { payload: { name }}: PayloadAction<{ name: AttributeName }>) {
+        const correctedLevel = selectCorrectedAttributeLevel(state, name)
+        if (correctedLevel > 0) {
+            state.attributes[name]--
         }
     },
-    cycleCharacterStatus(state: BuilderState, action?: PayloadAction<"A" | "B">) {
+    cycleCharacterStatus(state: BuilderState, _action?: PayloadAction<"A" | "B">) {
         switch (state.whichCharacterStatus) {
-            case null:
-                state.whichCharacterStatus = "A"
-                break
-            case "A":
-                state.whichCharacterStatus = "B"
-                break
-            case "B":
-                state.whichCharacterStatus = "A"
-                break
-            default:
-                state.whichCharacterStatus = "A"
-                break
+            case null: state.whichCharacterStatus = "A"; break
+            case "A":  state.whichCharacterStatus = "B"; break
+            case "B":  state.whichCharacterStatus = "A"; break
+            default:   state.whichCharacterStatus = "A"
         }
         // state.whichCharacterStatus = action.payload
     },

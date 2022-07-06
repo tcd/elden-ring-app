@@ -2,7 +2,7 @@ import { capitalize } from "lodash"
 import { useDispatch, useSelector } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { StartingClass, AttributeName } from "@app/types"
+import { StartingClass, AttributeNames } from "@app/types"
 import { getImageSrc, getImageSrcManual } from "@app/util"
 import { StatRow } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
@@ -34,7 +34,7 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
         // backgroundPosition: "center center",
     }
 
-    const attributes = Object.values(AttributeName).map((attr) => (
+    const attributes = Object.values(AttributeNames).map((attr) => (
         <StatRow
             key={attr}
             title={capitalize(attr)}

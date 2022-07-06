@@ -1,7 +1,7 @@
 import { RootState } from "@app/state"
 import {
     BuildData,
-    AttributeName,
+    AttributeNames,
 } from "@app/types"
 
 import { ArmorSelectors     as Armor     } from "@app/features/armor"
@@ -18,14 +18,14 @@ export const selectExportData = (rootState: RootState): BuildData => {
         talismanNames:     Talismans.slots(rootState),
         weaponNames:       Weapons.slots(rootState),
         attributes: {
-            [AttributeName.vigor]:        Attributes.selectVigor(rootState),
-            [AttributeName.mind]:         Attributes.selectMind(rootState),
-            [AttributeName.endurance]:    Attributes.selectEndurance(rootState),
-            [AttributeName.strength]:     Attributes.selectStrength(rootState),
-            [AttributeName.dexterity]:    Attributes.selectDexterity(rootState),
-            [AttributeName.intelligence]: Attributes.selectIntelligence(rootState),
-            [AttributeName.faith]:        Attributes.selectFaith(rootState),
-            [AttributeName.arcane]:       Attributes.selectArcane(rootState),
+            [AttributeNames.vigor]:        Attributes.selectVigor(rootState),
+            [AttributeNames.mind]:         Attributes.selectMind(rootState),
+            [AttributeNames.endurance]:    Attributes.selectEndurance(rootState),
+            [AttributeNames.strength]:     Attributes.selectStrength(rootState),
+            [AttributeNames.dexterity]:    Attributes.selectDexterity(rootState),
+            [AttributeNames.intelligence]: Attributes.selectIntelligence(rootState),
+            [AttributeNames.faith]:        Attributes.selectFaith(rootState),
+            [AttributeNames.arcane]:       Attributes.selectArcane(rootState),
         },
     }
 }

@@ -11,7 +11,7 @@ export const selectStartingClassName = (rootState: RootState): StartingClassName
 export const selectStartingClass = (rootState: RootState): StartingClass => {
     const startingClassName = selectStartingClassName(rootState)
     if (isBlank(startingClassName)) {
-        return null
+        return {} as StartingClass
     }
     const startingClass = STARTING_CLASSES.find(x => x.name == startingClassName)
     return startingClass
