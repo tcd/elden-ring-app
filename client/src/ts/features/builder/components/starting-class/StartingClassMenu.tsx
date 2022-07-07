@@ -1,55 +1,27 @@
-import { useEffect, useRef } from "react"
 import { Box, IconButton } from "@mui/material"
 
-import { STARTING_CLASSES } from "@app/data"
 import { getImageSrcManual } from "@app/util"
 import {
-    StartingClassOption,
     StartingClassOptions,
     StartingClassConfirmationDialog,
 } from "."
-import { scroll, StartingMenuScroller } from "./utility"
+import { StartingMenuScroller } from "./utility"
 
 const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
 const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
 
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
-    const ref = useRef(null)
-
-    const startingClasses = STARTING_CLASSES
-    // const selectedName = useSelector(Selectors.Builder.startingClass.startingClassName)
-    // const confirming = useSelector(Selectors.Builder.startingClass.confirmingStartingClass)
-
-    // const options = startingClasses.map((sClass) => <StartingClassOption key={sClass.name} sClass={sClass} />)
-
-    // useEffect(() => {
-    //     const ignore = (event: Event) => {
-    //         console.log(event)
-    //         event.preventDefault()
-    //     }
-    //     const element = ref.current
-    //     element.addEventListener("scroll", ignore)
-    //     // return () => { element.removeEventListener("scroll", ignore) }
-    // }, [])
-
-    const handleScroll = (): void => {
-        StartingMenuScroller.scrollToNext()
-        // scroll()
-    }
-
     const handleScrollLeft = (): void => {
-        // scroll()
-        handleScroll()
+        StartingMenuScroller.scrollLeft()
     }
 
     const handleScrollRight = (): void => {
-        // scroll()
-        handleScroll()
+        StartingMenuScroller.scrollRight()
     }
 
     return (
-        <Box className="er__startingClass" ref={ref}>
+        <Box className="er__startingClass">
             <StartingClassConfirmationDialog />
             <div className="er__startingClass__topBorder"></div>
 
