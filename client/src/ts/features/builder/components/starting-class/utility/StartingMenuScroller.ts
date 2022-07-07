@@ -1,5 +1,4 @@
-import { logJson } from "@app/util"
-import { DOMHelpers } from "./DOMHelpers"
+import { logJson, DOMHelpers } from "@app/util"
 
 /**
  *
@@ -56,33 +55,67 @@ export class StartingMenuScroller {
     }
 
     public static firstVisible() {
-        const scrolled = this.menu_widthScrolled()
+        const scrolled    = this.menu_widthScrolled()
         const optionWidth = this.option_width()
 
-        if (scrolled < optionWidth)      { return 1 }
-        if (scrolled < optionWidth *  2) { return 2 }
-        if (scrolled < optionWidth *  3) { return 3 }
-        if (scrolled < optionWidth *  4) { return 4 }
-        if (scrolled < optionWidth *  5) { return 5 }
-        if (scrolled < optionWidth *  6) { return 6 }
-        if (scrolled < optionWidth *  7) { return 7 }
-        if (scrolled < optionWidth *  8) { return 8 }
-        if (scrolled < optionWidth *  9) { return 1 }
+        let firstVisibleId: Integer = null
+
+        for (let i = 1; i <= 8; i++) {
+            if (scrolled < optionWidth * i) {
+                firstVisibleId = i
+                break
+            }
+        }
+
+        if (firstVisibleId == null) {
+            alert("unable to determine first visible")
+        }
+
+        console.log({ firstVisibleId })
+        return firstVisibleId
+
+        // if (scrolled < optionWidth *  1) { return 1 }
+        // if (scrolled < optionWidth *  2) { return 2 }
+        // if (scrolled < optionWidth *  3) { return 3 }
+        // if (scrolled < optionWidth *  4) { return 4 }
+        // if (scrolled < optionWidth *  5) { return 5 }
+        // if (scrolled < optionWidth *  6) { return 6 }
+        // if (scrolled < optionWidth *  7) { return 7 }
+        // if (scrolled < optionWidth *  8) { return 8 }
+        // if (scrolled < optionWidth *  9) { return 1 }
         // if (scrolled < optionWidth * 10) { return 10 }
-
-        alert("unable to determine first visible")
-
-        return 8
     }
 
-    public static nextVisible(): number {
-        const firstVisible = this.firstVisible()
-        if (firstVisible == 8) { return null }
-        return firstVisible + 3
+    public static nextVisibleIndex(): number {
+        const scrolled    = this.menu_widthScrolled()
+        const optionWidth = this.option_width()
+
+        let firstVisible: Integer = null
+        let nextVisible: Integer = null
+
+        for (let i = 1; i <= 10; i++) {
+            if (scrolled < optionWidth * i) {
+                firstVisible = i
+                break
+            }
+        }
+
+        if (firstVisible == null) {
+            alert("unable to determine first visible")
+        }
+
+        if (firstVisible >= 8 ) {
+            nextVisible = firstVisible - 10 + 3
+        } else {
+            nextVisible = firstVisible + 3
+        }
+
+        console.log({ firstVisible, nextVisible })
+        return nextVisible - 1
     }
 
     public static scrollToNext() {
-        const next = this.nextVisible() - 1
+        const next = this.nextVisibleIndex()
         const target = this.getOption(next)
         const menu = this.menu()
         try {
@@ -105,7 +138,7 @@ export class StartingMenuScroller {
         logJson({
             menu_widthScrolled: this.menu_widthScrolled(),
             firstVisible: this.firstVisible(),
-            nextVisible: this.nextVisible(),
+            nextVisible: this.nextVisibleIndex(),
         })
         // logJson({
         //     menuViewWidth:      this.menu_viewWidth(),

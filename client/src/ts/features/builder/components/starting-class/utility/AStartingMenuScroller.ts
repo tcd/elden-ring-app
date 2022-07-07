@@ -1,5 +1,4 @@
-import { logJson } from "@app/util"
-import { DOMHelpers } from "./DOMHelpers"
+import { logJson, DOMHelpers } from "@app/util"
 
 const MenuId      = "er__startingClass__menu__options"
 const OptionClass = "er__startingClass__menu__option"
