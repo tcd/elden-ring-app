@@ -80,7 +80,7 @@
     justify-content: stretch;
     justify-items: stretch;
 
-    .er__startingClass__menu {
+    #er__startingClass__menu {
         // background-color: orange;
         flex-grow: 1;
         display: flex;
@@ -96,14 +96,17 @@
             align-items: center;
         }
 
-        ul.er__startingClass__menu__options {
+        ul#er__startingClass__menu__options {
             display: default;
             height: 100%;
             width: calc(100% - 200px);
             // margin-left:  100px;
             // margin-right: 100px;
-            overflow-x: scroll;
+            overflow-x: auto;
             white-space: nowrap;
+
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
 
             .er__startingClass__menu__option {
                 display: inline-block;
@@ -120,6 +123,8 @@
                 padding-bottom: 0px;
                 background-color: #1f1c16;
                 border: 3px solid #312d26;
+
+                scroll-snap-align: start;
 
                 &:hover {
                     cursor: pointer;
@@ -172,7 +177,7 @@
                 ul.er__startingClass__menu__option__equipment {
                     display: flex;
                     flex-direction: row;
-                    flex-wrap: nowrap;
+                    flex-wrap: wrap;
                     // margin-top:    10px;
                     margin-bottom: 10px;
                     li {
@@ -232,6 +237,8 @@
     .er__startingClass__footer {
         // background-color: violet;
         height: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
         .er__startingClass__bottomText {}
     }
 

@@ -33,7 +33,11 @@ const webpackConfig = {
             hash: true,
             inject: true,
         }),
-        new webpack.ProvidePlugin({ process: "process/browser" }),
+        new webpack.ProvidePlugin({
+            process: "process/browser",
+            $:      "jquery",
+            jQuery: "jquery",
+        }),
     ],
     resolve: {
         extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
@@ -51,6 +55,12 @@ const webpackConfig = {
                 kitchenSink: {
                     test: /[\\/]kitchen-sink[\\/]/,
                     name: "kitchenSink",
+                    enforce: true,
+                    chunks: "all",
+                },
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendor",
                     enforce: true,
                     chunks: "all",
                 },

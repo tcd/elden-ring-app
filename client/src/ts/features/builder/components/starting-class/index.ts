@@ -1,5 +1,6 @@
 export * from "./StartingClassPage"
 export * from "./StartingClassMenu"
 export * from "./StartingClassOption"
+export * from "./StartingClassOptions"
 export * from "./StartingClassEquipment"
 export * from "./StartingClassConfirmationDialog"
