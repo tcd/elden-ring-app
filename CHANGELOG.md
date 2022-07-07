@@ -8,9 +8,12 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 <!-- ## [Unreleased] -->
 
 
-## [0.2.0] - 2022-07-06
+## [0.2.0] - 2022-07-07
 ### Added
 - Set starting equipment after confirming starting class
+### Fixed
+- Fix scrolling behavior on starting class page
+- Fixed issue allowing attribute levels to be lowered below zero
 ### Changed
 - Include data in client build instead of fetching from server
 - Updated readme

@@ -5,6 +5,7 @@ import {
     StartingClassName,
     AttributeName,
 } from "@app/types"
+import { STARTING_CLASSES } from "@app/data"
 import { ArmorActions } from "@app/features/armor"
 import { WeaponsActions } from "@app/features/weapons"
 import { TalismansActions } from "@app/features/talismans"
@@ -13,16 +14,20 @@ import { fetchEverything } from "./thunks"
 import { selectCorrectedAttributeLevel } from "./selectors/for-reducers"
 
 export const reducers = {
-    incrementAttribute(state: BuilderState, { payload: { name }}: PayloadAction<{ name: AttributeName }>) {
+    incrementAttribute(state: BuilderState, { payload: { name } }: PayloadAction<{ name: AttributeName }>) {
         const correctedLevel = selectCorrectedAttributeLevel(state, name)
         if (correctedLevel < 99) {
             state.attributes[name]++
         }
     },
-    decrementAttribute(state: BuilderState, { payload: { name }}: PayloadAction<{ name: AttributeName }>) {
-        const correctedLevel = selectCorrectedAttributeLevel(state, name)
-        if (correctedLevel > 0) {
+    decrementAttribute(state: BuilderState, { payload: { name } }: PayloadAction<{ name: AttributeName }>) {
+        const baseValue = STARTING_CLASSES.find(x => x.name == state.startingClassName)[name]
+        const currentValue = selectCorrectedAttributeLevel(state, name)
+        if (currentValue <= baseValue) {
+            return state
+        } else  {
             state.attributes[name]--
+            return state
         }
     },
     cycleCharacterStatus(state: BuilderState, _action?: PayloadAction<"A" | "B">) {
