@@ -8,7 +8,7 @@ import { ErCard, StatRow } from "@app/shared"
 export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
 
     return (
-        <div className="equipment-detail">
+        <div className="er__equipmentDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title="-">
@@ -20,8 +20,8 @@ export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col equipment-image-column">
-                                <div className="equipment-image-wrapper empty">
+                            <div className="col er__equipmentDetail__imageColumn">
+                                <div className="er__equipmentDetail__imageWrapper empty">
                                     <div></div>
                                 </div>
                             </div>

@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux"
 import {
     mdiShield,
     mdiShieldOutline,
@@ -6,22 +5,16 @@ import {
     mdiTshirtCrewOutline,
 } from "@mdi/js"
 
-import { NO_ARMOR } from "@app/data"
-import { getImageSrc, isBlank } from "@app/util"
 import {
     ErCard,
     StatRow,
 } from "@app/shared"
-import { Selectors } from "@app/state"
 import {
-    ArmorDetailProps,
-    ArmorDefenseStats,
-    ArmorResistanceStats,
     ARMOR_DEFENSE_STATS,
     ARMOR_RESISTANCE_STATS,
 } from "."
 
-export const EmptyArmorDetail = (props: unknown): JSX.Element => {
+export const EmptyArmorDetail = (_props: unknown): JSX.Element => {
 
     const defenseRows = ARMOR_DEFENSE_STATS.map(({ title }) => {
         return (<StatRow key={title} title={title} value="-" />)
@@ -32,7 +25,7 @@ export const EmptyArmorDetail = (props: unknown): JSX.Element => {
     })
 
     return (
-        <div className="equipment-detail">
+        <div className="er__equipmentDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title="-">
@@ -44,8 +37,8 @@ export const EmptyArmorDetail = (props: unknown): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col equipment-image-column">
-                                <div className="equipment-image-wrapper empty">
+                            <div className="col er__equipmentDetail__imageColumn">
+                                <div className="er__equipmentDetail__imageWrapper empty">
                                 </div>
                             </div>
                         </div>

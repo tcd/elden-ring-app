@@ -12,12 +12,8 @@ import {
     ErCard,
     StatRow,
 } from "@app/shared"
-import {
-    WeaponAttackStats,
-    WeaponScalingStats,
-} from "."
 
-export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
+export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
 
     const defenseRows = Object.values(Dmg).map((dmg) => {
         const title = capitalize(dmg)
@@ -44,7 +40,7 @@ export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
     />)
 
     return (
-        <div className="weapon-detail">
+        <div className="er__weaponDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title={"-"} className="mt-0">
@@ -61,8 +57,8 @@ export const EmptyWeaponDetail = (props: unknown): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col weapon-image-column">
-                                <div className="weapon-image-wrapper empty">
+                            <div className="col er__weaponDetail__imageColumn">
+                                <div className="er__weaponDetail__imageWrapper empty">
                                     <div></div>
                                 </div>
                             </div>

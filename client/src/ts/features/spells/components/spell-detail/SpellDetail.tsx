@@ -39,7 +39,7 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
     const src = getImageSrc("Spell", spell.name, "256")
 
     return (
-        <div className="weapon-detail">
+        <div className="er__equipmentDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title={spell.name} className="mt-0">
@@ -56,8 +56,8 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col weapon-image-column">
-                                <div className="weapon-image-wrapper">
+                            <div className="col er__equipmentDetail__imageColumn">
+                                <div className="er__equipmentDetail__imageWrapper">
                                     <img className="img-fluid" src={src} alt={spell.name}/>
                                 </div>
                             </div>

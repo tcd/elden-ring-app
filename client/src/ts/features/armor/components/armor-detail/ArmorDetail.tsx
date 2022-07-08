@@ -38,7 +38,7 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
     else if (armor.weight < oldArmor.weight) { weightColor = "blue" }
 
     return (
-        <div className="equipment-detail">
+        <div className="er__equipmentDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title={armor.name}>
@@ -50,8 +50,8 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col equipment-image-column">
-                                <div className="equipment-image-wrapper">
+                            <div className="col er__equipmentDetail__imageColumn">
+                                <div className="er__equipmentDetail__imageWrapper">
                                     <img className="img-fluid" src={imageSrc} alt="armor" />
                                 </div>
                             </div>

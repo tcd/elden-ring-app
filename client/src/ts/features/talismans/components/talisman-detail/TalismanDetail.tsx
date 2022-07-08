@@ -27,7 +27,7 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
     })
 
     return (
-        <div className="equipment-detail">
+        <div className="er__equipmentDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title={talisman.name}>
@@ -39,8 +39,8 @@ export const TalismanDetail = ({ talisman }: TalismanDetailProps): JSX.Element =
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col equipment-image-column">
-                                <div className="equipment-image-wrapper">
+                            <div className="col er__equipmentDetail__imageColumn">
+                                <div className="er__equipmentDetail__imageWrapper">
                                     <img className="img-fluid" src={imageSrc} alt="talisman image" />
                                 </div>
                             </div>

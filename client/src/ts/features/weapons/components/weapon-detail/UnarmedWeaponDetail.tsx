@@ -13,32 +13,20 @@ import {
 import {
     ErCard,
     StatRow,
-    StatRowColor,
 } from "@app/shared"
 import {
     WeaponAttackStats,
     WeaponScalingStats,
     WeaponDefenseStats,
-    WeaponDetailProps,
 } from "."
 
 export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
 
     const weapon = Unarmed
 
-    const props: WeaponDetailProps = {
+    const props = {
         weapon: Unarmed,
         newStats: UnarmedStats,
-    }
-
-    let weightColor: StatRowColor = "default"
-    if (props?.oldWeapon) {
-        const newWeight = props.weapon.weight
-        const oldWeight = props.oldWeapon.weight
-        // eslint-disable-next-line indent
-             if (newWeight >  oldWeight) { weightColor = "blue"    }
-        else if (newWeight == oldWeight) { weightColor = "default" }
-        else if (newWeight <  oldWeight) { weightColor = "red"     }
     }
 
     return (
@@ -55,7 +43,7 @@ export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
                                     <StatRow title={weapon?.weapon_skill?.name} value={null} />
                                     <br />
                                     <StatRow title="FP Cost" value={<span>-&nbsp;(&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;)</span>} />
-                                    <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color={weightColor} />
+                                    <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color="default" />
                                 </ul>
                             </div>
                             <div className="col-1"></div>
@@ -74,7 +62,7 @@ export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
                         <ul>
                             <WeaponAttackStats
                                 newStats={props?.newStats}
-                                oldStats={props?.oldStats}
+                                oldStats={null}
                             />
                         </ul>
                     </ErCard>
@@ -84,7 +72,7 @@ export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
                         <ul>
                             <WeaponDefenseStats
                                 newWeapon={weapon}
-                                oldWeapon={props?.oldWeapon}
+                                oldWeapon={null}
                             />
                         </ul>
                     </ErCard>
@@ -95,7 +83,7 @@ export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
                     <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex}>
                         <WeaponScalingStats
                             newStats={props?.newStats}
-                            oldStats={props?.oldStats}
+                            oldStats={null}
                         />
                     </ErCard>
                 </div>

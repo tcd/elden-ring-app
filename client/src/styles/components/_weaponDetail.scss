@@ -1,53 +1,49 @@
 @use "sass:math";
 @use "../variables"as v;
+@use "../mixins" as m;
 
-.weapon-detail {
-    $weapon-detail-weapon-image-size: 155px;
-    $weapon-detail-weapon-skill-image-size: math.div($weapon-detail-weapon-image-size, 2);
-    .weapon-image-column {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: flex-end;
-        // justify-items: end;
-        // align-content: flex-end;
-        justify-content: end;
-        height: 50%;
-    }
-    .weapon-image-wrapper {
-        // box-sizing: border-box;
-        width:  $weapon-detail-weapon-image-size;
-        height: $weapon-detail-weapon-image-size;
-        padding: 5px;
+.er__weaponDetail {
+
+    $image-size: 155px;
+    $skill-image-size: math.div($image-size, 2);
+
+    @mixin boxShadow {
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow:
             inset 0px 0px 3px 3px rgba(v.$equipment-slot-overlay-color, 0.40),
                   0px 0px 2px 2px rgba(v.$equipment-slot-overlay-color, 0.40);
+    }
+
+    .er__weaponDetail__imageColumn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: end;
+        height: 50%;
+    }
+    .er__weaponDetail__imageWrapper {
+        padding: 5px;
+        @include m.square($image-size);
+        @include boxShadow;
 
         &.empty {
-            width:  $weapon-detail-weapon-image-size;
-            height: $weapon-detail-weapon-image-size;
+            @include m.square($image-size);
             div:before {
                 content: "";
                 display: block;
             }
         }
     }
-    .weapon-skill-image-wrapper {
-        // box-sizing: border-box;
+    .er__weaponDetail__weaponSkillImageWrapper {
         margin-right: 6px;
-        width:  $weapon-detail-weapon-skill-image-size;
-        height: $weapon-detail-weapon-skill-image-size;
         padding: 5px;
-        /* offset-x | offset-y | blur-radius | spread-radius | color */
-        box-shadow:
-            inset 0px 0px 3px 3px rgba(v.$equipment-slot-overlay-color, 0.40),
-                  0px 0px 2px 2px rgba(v.$equipment-slot-overlay-color, 0.40);
+        @include m.square($skill-image-size);
+        @include boxShadow;
 
         &.empty {
-            width:  $weapon-detail-weapon-skill-image-size;
-            height: $weapon-detail-weapon-skill-image-size;
             box-shadow: none;
+            @include m.square($skill-image-size);
             div:before {
                 content: "";
                 display: block;

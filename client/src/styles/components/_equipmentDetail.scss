@@ -1,8 +1,11 @@
 @use "../variables"as v;
+@use "../mixins" as m;
 
-.equipment-detail {
-    $equipment-detail-image-size: 155px;
-    .equipment-image-column {
+.er__equipmentDetail {
+
+    $image-size: 155px;
+
+    .er__equipmentDetail__imageColumn {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -12,22 +15,12 @@
         justify-content: end;
         height: 50%;
     }
-    .equipment-image-wrapper {
-        width:  $equipment-detail-image-size;
-        height: $equipment-detail-image-size;
+    .er__equipmentDetail__imageWrapper {
+        @include m.square($image-size);
         padding: 5px;
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow:
             inset 0px 0px 3px 3px rgba(v.$equipment-slot-overlay-color, 0.35),
                   0px 0px 2px 2px rgba(v.$equipment-slot-overlay-color, 0.35);
-
-        // &.empty {
-        //     width:  $equipment-detail-weapon-image-size;
-        //     height: $equipment-detail-weapon-image-size;
-        //     div:before {
-        //         content: "";
-        //         display: block;
-        //     }
-        // }
     }
 }

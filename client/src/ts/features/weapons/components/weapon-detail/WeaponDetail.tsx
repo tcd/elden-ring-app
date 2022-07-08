@@ -53,18 +53,18 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
     else if (newWeight == oldWeight) { weightColor = "default" }
     else if (newWeight <  oldWeight) { weightColor = "red"     }
 
-    let weaponSkillImageElement = <div className="weapon-skill-image-wrapper empty"></div>
+    let weaponSkillImageElement = <div className="er__weaponDetail__weaponSkillImageWrapper empty"></div>
     if (activeSkill?.ash_of_war) {
         const weaponSkillImgSrc = getImageSrc("Weapon Skill", activeSkill.name, "256")
         weaponSkillImageElement = (
-            <div className="weapon-skill-image-wrapper">
-                <img className="img-fluid weapon-skill-image" src={weaponSkillImgSrc} alt="weapon image" />
+            <div className="er__weaponDetail__weaponSkillImageWrapper">
+                <img className="img-fluid" src={weaponSkillImgSrc} alt="weapon skill image" />
             </div>
         )
     }
 
     return (
-        <div className="weapon-detail">
+        <div className="er__weaponDetail">
             <div className="row">
                 <div className="col">
                     <ErCard title={displayName} className="mt-0">
@@ -81,10 +81,10 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col weapon-image-column">
+                            <div className="col er__weaponDetail__imageColumn">
                                 {weaponSkillImageElement}
-                                <div className="weapon-image-wrapper">
-                                    <img className="img-fluid weapon-image" src={weaponImgSrc} alt="weapon image" />
+                                <div className="er__weaponDetail__imageWrapper">
+                                    <img className="img-fluid" src={weaponImgSrc} alt="weapon image" />
                                 </div>
                             </div>
                         </div>
