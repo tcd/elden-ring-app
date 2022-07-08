@@ -1,0 +1,259 @@
+@use "../variables"as v;
+@use "../mixins"as m;
+
+#root.startingClassPage {
+    background-image: none !important;
+    background: v.$startingClass-bg-gradient-color-left !important;
+    background: linear-gradient(
+        90deg,
+        v.$startingClass-bg-gradient-color-left    0%,
+        v.$startingClass-bg-gradient-color-right  50%,
+        v.$startingClass-bg-gradient-color-right 100%
+    ) !important;
+}
+
+.er__startingClass2 {
+
+    $top-bottom-border-color: #5b5749;
+    $top-bottom-border-stops: (
+        0%: 0.0,
+       10%: 1.0,
+       90%: 1.0,
+      100%: 0.0,
+    );
+
+    $option-overlay-color-bg: #181815;
+    // $option-overlay-color-bg: indigo;
+    $option-title-color-bg: #201f1a;
+    $option-title-border-height: 2px;
+
+    $option-overlay-stops: (
+        // 0%:   0.00,
+        25%:  0.00,
+        30%:  0.40,
+        // 40%:  0.30,
+        50%:  0.50,
+        // 60%:  0.50,
+        70%:  0.60,
+        80%:  0.70,
+        90%:  0.80,
+        100%: 0.90,
+    );
+
+    $option-title-stops: (
+        0%: 0.00,
+
+        5%: 0.30,
+        6%: 0.50,
+        7%: 0.70,
+        8%: 0.80,
+        9%: 0.85,
+
+        50%: 0.90,
+
+        91%: 0.85,
+        92%: 0.80,
+        93%: 0.70,
+        94%: 0.50,
+        95%: 0.30,
+
+        100%: 0.00
+    );
+
+    ul {
+        padding-left: 0px;
+        list-style: none;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    // background-color: red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    justify-items: stretch;
+
+    #er__startingClass2__menu {
+        // background-color: orange;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .er__startingClass2__menu__arrowContainer {
+            height: 100%;
+            width: 100px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul#er__startingClass2__menu__options {
+            display: default;
+            height: 100%;
+            width: calc(100% - 200px);
+            // margin-left:  100px;
+            // margin-right: 100px;
+            overflow-x: auto;
+            white-space: nowrap;
+
+            scroll-snap-type: x mandatory;
+            scroll-behavior: auto;
+
+            .er__startingClass2__menu__option {
+                display: inline-block;
+                position: relative;
+                height: 100%;
+                width:  calc(33.33% - 20px);
+                background-repeat:   no-repeat;
+                background-size:     contain;
+                background-position: center;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top:    0px;
+                margin-bottom: 0px;
+                padding-top:    0px;
+                padding-bottom: 0px;
+                background-color: #1f1c16;
+                border: 3px solid #312d26;
+
+                scroll-snap-align: start;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                .er__startingClass2__menu__optionHoverOverlay,
+                .er__startingClass2__menu__optionOverlay {
+                    position: absolute;
+                    bottom: 0;
+                    left:   0;
+                    width:  100%;
+                    height: 100%;
+                }
+
+                .er__startingClass2__menu__optionOverlay {
+                    z-index: v.$zindex-startingClass-background;
+                    background: m.customGradient(180deg, $option-overlay-color-bg, $option-overlay-stops);
+                }
+
+                .er__startingClass2__menu__optionHoverOverlay {
+                    z-index: v.$zindex-startingClass-hover;
+                    &:hover {
+                        // opacity: 0.1;
+                        background: radial-gradient(
+                            ellipse,
+                            rgba(v.$equipment-slot-overlay-color, 0.0)  40%,
+                            rgba(v.$equipment-slot-overlay-color, 0.4) 100%
+                        );
+                    }
+                }
+
+                .er__startingClass2__menu__optionContent {
+                    width:  100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: flex-end;
+                    position: relative;
+                    z-index: v.$zindex-startingClass-content;
+
+                    .er__statRow__column span { font-size: 1.25rem; }
+                }
+
+                ul.er__startingClass2__menu__option__attributes {
+                    // width: 350px;
+                    width: 50%;
+                }
+                ul.er__startingClass2__menu__option__equipment {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    // margin-top:    10px;
+                    margin-bottom: 10px;
+                    li {
+                        width:  50px;
+                        height: 50px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        img {
+                            padding: 10px;
+                        }
+                    }
+                }
+                .er__startingClass2__menu__option__title {
+                    padding-top:    $option-title-border-height;
+                    padding-bottom: $option-title-border-height;
+                    // margin-top:    80px;
+                    margin-bottom: 20px;
+                    width: 50%;
+                    background-color: #201f1a;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    position: relative;
+
+                    background: m.customGradient(90deg, $option-title-color-bg, $option-title-stops);
+
+                    span {
+                        flex-direction: column;
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                        font-size: 1.75rem;
+                        // background-color: #201f1a;
+                    }
+
+                    .er__startingClass2__menu__option__title__topBorder,
+                    .er__startingClass2__menu__option__title__bottomBorder {
+                        height: $option-title-border-height;
+                        background: m.customGradient(90deg, $top-bottom-border-color, $top-bottom-border-stops);
+                        position: absolute;
+                        width: 100%;
+                    }
+                    .er__startingClass2__menu__option__title__topBorder {
+                        top: 0;
+                    }
+                    .er__startingClass2__menu__option__title__bottomBorder {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .er__startingClass2__footer {
+        // background-color: violet;
+        height: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+        .er__startingClass2__bottomText {}
+    }
+
+    .er__startingClass2__topBorder,
+    .er__startingClass2__bottomBorder {
+        align-self: center;
+        width: 90%;
+        margin-top:    10px;
+        margin-bottom: 10px;
+        height: 3px;
+        background:
+            m.customGradient(90deg, $top-bottom-border-color, $top-bottom-border-stops)
+            // v.$modal-color-border;
+    }
+
+}

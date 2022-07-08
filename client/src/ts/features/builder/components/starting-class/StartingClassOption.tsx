@@ -24,7 +24,6 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
         dispatch(Actions.Builder.setPendingStartingClass({ name: sClass.name }))
     }
 
-
     const imageSrc = getImageSrc("Starting Class", sClass.name, "public")
 
     const sx: SxProps = {
