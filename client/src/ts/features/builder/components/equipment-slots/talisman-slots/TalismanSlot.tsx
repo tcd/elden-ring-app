@@ -23,17 +23,13 @@ export const TalismanSlot = ({ id, talisman }: TalismanSlotProps): JSX.Element =
         dispatch(Actions.Talismans.openTalismansMenu({ id }))
     }
 
-    const classNames = [
-        "equipment-slot",
-        "equipment-slot-talisman",
-    ]
-
     const elementId = `talisman-slot-${id}`
+    const classNames = ["er__equipmentSlot"]
     let titleString = `Talisman ${id}`
     let talismanImage: JSX.Element = null
 
     if (talisman) {
-        classNames.push("equipment-slot-filled")
+        classNames.push("er__equipmentSlot--filled")
         const src = getImageSrc("Talisman", talisman.name, "256")
         talismanImage = <img className="img-fluid" src={src} alt={talisman.name} />
         titleString = talisman.name

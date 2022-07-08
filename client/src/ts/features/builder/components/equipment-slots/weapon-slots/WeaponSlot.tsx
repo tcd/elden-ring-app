@@ -1,3 +1,4 @@
+import { lowerCase } from "lodash"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -23,21 +24,19 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     }
 
     const slotSx: SxProps = {}
-    const elementId = `weapon-slot-${slotId}`
-    const classNames = ["equipment-slot"]
+    const elementId = `weapon-slot-${lowerCase(slotId)}`
+    const classNames = ["er__equipmentSlot"]
     let weaponImageElement: JSX.Element = null
     let titleString: string
 
     if (slotId.startsWith("L")) {
-        classNames.push("equipment-slot-weapon-left")
         slotSx["backgroundImage"] = cssUrl(EquipmentSlotImageUrls.WeaponLeft)
     } else {
-        classNames.push("equipment-slot-weapon-right")
         slotSx["backgroundImage"] = cssUrl(EquipmentSlotImageUrls.WeaponRight)
     }
 
     if (name) {
-        classNames.push("equipment-slot-filled")
+        classNames.push("er__equipmentSlot--filled")
         titleString = displayName
         const src = getImageSrc("Weapon", name, "256")
         weaponImageElement = (

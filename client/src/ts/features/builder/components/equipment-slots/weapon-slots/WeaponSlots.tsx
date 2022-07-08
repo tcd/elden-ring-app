@@ -8,23 +8,25 @@ import { WeaponSlot } from "./WeaponSlot"
 // Ammunition
 // =============================================================================
 
-const arrowSlot = (id: string) => {
-    const imagePath = EquipmentSlotImageUrls.Arrow
-    return (
-        <li id={`weapon-${id}`} className="equipment-slot" key={`weapon_slot_${id}`}>
-            <img className="img-fluid" src={imagePath} alt="arrows" />
-        </li>
-    )
-}
+// const arrowSlot = (id: string) => {
+//     const imagePath = EquipmentSlotImageUrls.Arrow
+//     const key = `arrow-slot-${id}`
+//     return (
+//         <li key={key} id={key} className="er__equipmentSlot">
+//             <img className="img-fluid" src={imagePath} alt="arrows" />
+//         </li>
+//     )
+// }
 
-const boltSlot = (id: string) => {
-    const imagePath = EquipmentSlotImageUrls.Bolt
-    return (
-        <li id={`weapon-${id}`} className="equipment-slot" key={`weapon_slot_${id}`}>
-            <img className="img-fluid" src={imagePath} alt="bolts" />
-        </li>
-    )
-}
+// const boltSlot = (id: string) => {
+//     const imagePath = EquipmentSlotImageUrls.Bolt
+//     const key = `bolt-slot-${id}`
+//     return (
+//         <li key={key} id={key} className="er__equipmentSlot">
+//             <img className="img-fluid" src={imagePath} alt="bolts" />
+//         </li>
+//     )
+// }
 
 // =============================================================================
 // All Together

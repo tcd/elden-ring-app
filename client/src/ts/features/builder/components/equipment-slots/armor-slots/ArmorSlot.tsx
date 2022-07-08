@@ -20,13 +20,13 @@ export const ArmorSlot = ({ type, armor }: ArmorSlotProps) => {
         backgroundImage: cssUrl(EquipmentSlotImageUrls[type]),
     }
 
-    const elementId = `armor-slot-${type}`
-    const classNames = ["equipment-slot", "equipment-slot-armor", `equipment-slot-armor-${lowerCase(type)}`]
+    const elementId = `armor-slot-${lowerCase(type)}`
+    const classNames = ["er__equipmentSlot"]
     let titleString = type.toString()
     let armorImage = null
 
     if (armor) {
-        classNames.push("equipment-slot-filled")
+        classNames.push("er__equipmentSlot--filled")
         titleString = armor.name
         armorImage  = <img
             className="img-fluid"

@@ -1,6 +1,7 @@
 // import { useSelector, useDispatch } from "react-redux"
 
-// import { Weapon, WeaponSlotId } from "@types"
+import { getImageSrcManual } from "@app/util"
+// import { Weapon, WeaponSlotId } from "@app/types"
 // import { BuilderActions, BuilderSelectors } from "@app/features"
 
 const _QUICK_ITEM_SLOTS = [
@@ -16,13 +17,15 @@ const _QUICK_ITEM_SLOTS = [
     "10",
 ]
 
+const quickItemSlotSrc = getImageSrcManual("bad/equipment-slots/quick-items", "256")
+
 export const QuickItems = (): JSX.Element => {
 
     const quickItemSlot = (id: string) => {
-        const imagePath = `/public/images/menu/quick-items.png`
+        const key = `quick-item-slot-${id}`
         return (
-            <li id={`quick-item-${id}`} className="equipment-slot" key={`quick_item_slot_${id}`}>
-                <img className="img-fluid" src={imagePath} alt="quick-item" />
+            <li key={key} id={key} className="er__equipmentSlot" >
+                <img className="img-fluid" src={quickItemSlotSrc} alt="quick-item" />
             </li>
         )
     }
@@ -32,10 +35,10 @@ export const QuickItems = (): JSX.Element => {
 
     return (
         <>
-            <section className="quick-items w-100">
+            <section className="w-100">
                 { row1 }
             </section>
-            <section className="quick-items w-100">
+            <section className="w-100">
                 { row2 }
             </section>
         </>
