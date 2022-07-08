@@ -29,16 +29,13 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     const sections = ARMOR_SORT_GROUPS.map((sortGroup, index) => {
         const sectionArmor = armor.filter(x => x.sort_group == sortGroup)
         const armorCells = sectionArmor.map((armor) => {
-            let classes = "equipment-menu-cell inactive"
+            const key = `armor-${armor.name}`
+            let classes = "er__equipmentMenu__gridCell inactive"
             if (armor.name === activeName) {
-                classes = "equipment-menu-cell active"
+                classes = "er__equipmentMenu__gridCell active"
             }
             return (
-                <MouseOverPopover
-                    id={`armor-${armor.name}`}
-                    key={`armor-${armor.name}`}
-                    popoverContent={armor.name}
-                >
+                <MouseOverPopover id={key} key={key} popoverContent={armor.name}>
                     <div
                         key={`armor-${armor.name}`}
                         ref={refs[armor.name]}
@@ -50,11 +47,11 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
                 </MouseOverPopover>
             )
         })
-        const divider = (index + 1 < ARMOR_SORT_GROUPS.length) ? <div className="equipment-menu-section-border"></div> : null
+        const divider = (index + 1 < ARMOR_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
         return (
             <Fragment key={sortGroup}>
-                <section id={sortGroup.toString()} className="equipment-menu-section">
+                <section id={sortGroup.toString()} className="er__equipmentMenu__gridSection">
                     {armorCells}
                 </section>
                 {divider}
@@ -72,7 +69,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     return (
         <div
             ref={menuRef}
-            className="equipment-menu-grid-column"
+            className="er__equipmentMenu__gridColumn"
         >
             {sections}
         </div>

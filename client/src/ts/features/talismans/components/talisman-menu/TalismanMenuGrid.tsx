@@ -29,18 +29,14 @@ export const TalismanMenuGrid = (): JSX.Element => {
     const sections = TALISMAN_SORT_GROUPS.map((sortGroup, index) => {
         const sectionTalismans = talismans.filter(x => x.sort_group == sortGroup)
         const talismanCells = sectionTalismans.map((talisman) => {
-            let classes = "equipment-menu-cell inactive"
+            const key = `talisman-${talisman.name}`
+            let classes = "er__equipmentMenu__gridCell inactive"
             if (talisman.name === activeName) {
-                classes = "equipment-menu-cell active"
+                classes = "er__equipmentMenu__gridCell active"
             }
             return (
-                <MouseOverPopover
-                    id={`talisman-${talisman.name}`}
-                    key={`talisman-${talisman.name}`}
-                    popoverContent={talisman.name}
-                >
+                <MouseOverPopover id={key} key={key} popoverContent={talisman.name} >
                     <div
-                        key={`talisman-${talisman.name}`}
                         ref={refs[talisman.name]}
                         className={classes}
                         onClick={() => handleClick(talisman.name)}
@@ -50,11 +46,11 @@ export const TalismanMenuGrid = (): JSX.Element => {
                 </MouseOverPopover>
             )
         })
-        const divider = (index + 1 < TALISMAN_SORT_GROUPS.length) ? <div className="equipment-menu-section-border"></div> : null
+        const divider = (index + 1 < TALISMAN_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
         return (
             <Fragment key={sortGroup}>
-                <section id={sortGroup.toString()} className="equipment-menu-section">
+                <section id={sortGroup.toString()} className="er__equipmentMenu__gridSection">
                     {talismanCells}
                 </section>
                 {divider}
@@ -71,7 +67,7 @@ export const TalismanMenuGrid = (): JSX.Element => {
     return (
         <div
             ref={menuRef}
-            className="equipment-menu-grid-column"
+            className="er__equipmentMenu__gridColumn"
         >
             {sections}
         </div>

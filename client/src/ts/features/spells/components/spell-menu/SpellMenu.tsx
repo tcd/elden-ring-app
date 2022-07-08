@@ -72,7 +72,7 @@ export const SpellMenu = (): JSX.Element => {
             return (
                 <div
                     key={`spell-${spell.id}`}
-                    className="equipment-menu-cell"
+                    className="er__equipmentMenu__gridCell"
                     onClick={() => handleClick(spell.name)}
                 >
                     <SpellMenuImage spell={spell} attributes={attributes} />
@@ -82,19 +82,19 @@ export const SpellMenu = (): JSX.Element => {
 
         return (
             <Fragment key={spellCategory}>
-                <section id={spellCategory} className="equipment-menu-section">
+                <section id={spellCategory} className="er__equipmentMenu__gridSection">
                     {cells.length > 0 ? cells : spellCategory}
                 </section>
-                <div className="equipment-menu-section-border"></div>
+                <div className="er__equipmentMenu__gridSectionBorder"></div>
             </Fragment>
         )
     })
 
     return (
-        <div className="equipment-menu container">
+        <div className="er__equipmentMenu container">
             <div className="row">
                 <div className="col-4">
-                    <div className="equipment-menu-grid-column">
+                    <div className="er__equipmentMenu__gridColumn">
                         {sections}
                     </div>
                 </div>

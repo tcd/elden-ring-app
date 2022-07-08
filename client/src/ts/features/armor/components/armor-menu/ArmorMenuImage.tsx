@@ -8,7 +8,7 @@ export interface ArmorMenuImageProps {
 export const ArmorMenuImage = ({ armor }: ArmorMenuImageProps) => {
     const src = getImageSrc("Armor", armor.name, "256")
     return (
-        <div className="equipment-menu-image-wrapper">
+        <div className="er__equipmentMenu__imageWrapper">
             <img
                 className="img-fluid"
                 src={src}

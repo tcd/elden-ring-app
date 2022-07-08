@@ -1,7 +1,7 @@
 @use "../variables"as v;
-@use "../mixins/index" as m;
+@use "../mixins" as m;
 
-.equipment-menu {
+.er__equipmentMenu {
 
     margin-left:  v.$equipment-menu-horizontal-margin;
     margin-right: v.$equipment-menu-horizontal-margin;
@@ -47,7 +47,7 @@
 
     @include m.customScrollbar();
 
-    .equipment-menu-grid-column {
+    .er__equipmentMenu__gridColumn {
         height: 75vh;
         // height: 80%;
         overflow-y: scroll;
@@ -57,17 +57,17 @@
         background-color: rgba($equipment-menu-grid-background, 0.3);
     }
 
-    .equipment-menu-section-border {
+    .er__equipmentMenu__gridSectionBorder {
         height:        3px;
         margin-top:    6px;
         margin-bottom: 6px;
         background: m.customGradient(90deg, $equipment-menu-grid-divider, $equipment-grid-border-stops);
     }
 
-    section.equipment-menu-section {
+    section.er__equipmentMenu__gridSection {
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        .equipment-menu-cell {
+        .er__equipmentMenu__gridCell {
             $equipment-menu-min-cell-size: 50px;
             box-sizing: border-box;
             min-height: $equipment-menu-min-cell-size;
@@ -84,13 +84,12 @@
                 cursor: pointer;
             }
         }
-        .equipment-menu-image-wrapper {
+        .er__equipmentMenu__imageWrapper {
+            @include m.square(100%);
             box-sizing: border-box;
-            height: 100%;
-            width: 100%;
             padding: 7px;
             position: relative;
-            .requirements-not-met {
+            .er__equipmentMenu__requirementsNotMet {
                 $equipment-menu-red-x-size: 16px;
                 $equipment-menu-red-x-padding: 4px;
 
@@ -101,12 +100,7 @@
                 position: absolute;
                 top:   $equipment-menu-red-x-padding;
                 right: $equipment-menu-red-x-padding;
-                // padding: 5px;
-                width:  $equipment-menu-red-x-size;
-                height: $equipment-menu-red-x-size;
-                // font-size: 26px;
-                // color: v.$red;
-                // text-shadow: none;
+                @include m.square($equipment-menu-red-x-size);
             }
         }
     }

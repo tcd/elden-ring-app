@@ -9,7 +9,7 @@ export const TalismanMenu = (): JSX.Element => {
 
     return (
         <div id="variable-menu">
-            <div className="equipment-menu">
+            <div className="er__equipmentMenu">
                 <TalismanMenuGrid />
             </div>
             <div>

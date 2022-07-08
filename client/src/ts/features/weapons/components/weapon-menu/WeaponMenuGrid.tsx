@@ -56,16 +56,13 @@ export const WeaponMenuGrid = (): JSX.Element => {
     const sections = weaponTypes.map((weaponType, index) => {
         const sectionWeapons = weapons.filter(x => x.weapon_type_id == weaponType.id)
         const weaponCells = sectionWeapons.map((weapon) => {
-            let classes = "equipment-menu-cell inactive"
+            const key = `weapon-${weapon.name}`
+            let classes = "er__equipmentMenu__gridCell inactive"
             if (weapon.name === activeName) {
-                classes = "equipment-menu-cell active"
+                classes = "er__equipmentMenu__gridCell active"
             }
             return (
-                <MouseOverPopover
-                    id={`weapon-${weapon.name}`}
-                    key={`weapon-${weapon.name}`}
-                    popoverContent={weapon.name}
-                >
+                <MouseOverPopover id={key} key={key} popoverContent={weapon.name}>
                     <div
                         ref={refs[weapon.name]}
                         className={classes}
@@ -77,13 +74,13 @@ export const WeaponMenuGrid = (): JSX.Element => {
             )
         })
 
-        const divider = (index + 1 < weaponTypes.length) ? <div className="equipment-menu-section-border"></div> : null
+        const divider = (index + 1 < weaponTypes.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
         return (
             <Fragment key={weaponType.plural_name}>
                 <section
                     id={weaponType.plural_name}
-                    className="equipment-menu-section"
+                    className="er__equipmentMenu__gridSection"
                 >
                     {weaponCells}
                 </section>
@@ -100,7 +97,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
 
     return (
         <div
-            className="equipment-menu-grid-column"
+            className="er__equipmentMenu__gridColumn"
             ref={menuRef}
         >
             {sections}

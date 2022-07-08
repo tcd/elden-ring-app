@@ -8,7 +8,7 @@ export interface TalismanMenuImageProps {
 export const TalismanMenuImage = ({ talisman }: TalismanMenuImageProps) => {
     const src = getImageSrc("Talisman", talisman.name, "256")
     return (
-        <div className="equipment-menu-image-wrapper">
+        <div className="er__equipmentMenu__imageWrapper">
             <img
                 className="img-fluid"
                 src={src}
