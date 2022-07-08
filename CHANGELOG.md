@@ -7,10 +7,15 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 <!-- ## [Unreleased] -->
 
+### Fixed
+- Improve behavior of affinity select:
+    - Add functionality to *Undo Enhancement* button
+    - Persist current affinity when changing affinity for the current weapon skill
+
 
 ## [0.3.0] - 2022-07-08
 ### Changed
-- Use [keen-slider][keen-slider] for the starting class menu.
+- Use [keen-slider][keen-slider] for the starting class menu
 - Update deployment script
 
 

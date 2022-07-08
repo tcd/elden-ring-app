@@ -1,6 +1,9 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import { startingClassByName, WEAPON_SKILL_DEFAULT_AFFINITIES } from "@app/data"
+import {
+    startingClassByName,
+    WEAPON_SKILL_DEFAULT_AFFINITIES,
+} from "@app/data"
 import {
     WeaponSlotId,
     WeaponAffinityName,
@@ -59,13 +62,29 @@ export const reducers = {
             weapon_name: action.payload.name,
         }
     },
-    setWeaponSkill(state: WeaponsState, { payload: { name }}: PayloadAction<{ name: string }>) {
+    removeWeaponSkill(state: WeaponsState) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
             return
         }
         state.oldWeapon = {
             ...state.slots[activeSlotId],
+        }
+        state.slots[activeSlotId].weapon_skill_name = null
+        state.slots[activeSlotId].affinity_name = null
+        state.choosingAffinity = false
+    },
+    setWeaponSkill(state: WeaponsState, { payload: { name } }: PayloadAction<{ name: string }>) {
+        const activeSlotId = state.activeSlotId
+        if (isBlank(activeSlotId)) {
+            return
+        }
+        state.oldWeapon = {
+            ...state.slots[activeSlotId],
+        }
+        if (state.slots[activeSlotId].weapon_skill_name == name) {
+            state.choosingAffinity = true
+            return
         }
         state.slots[activeSlotId].weapon_skill_name = name
         if (isBlank(name)) {
