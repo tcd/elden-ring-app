@@ -3,7 +3,6 @@ import { Box, SxProps } from "@mui/material"
 import { StartingClass } from "@app/types"
 import { getImageSrc, getImageSrcManual } from "@app/util"
 
-
 export interface StartingClassEquipmentProps {
     sClass: StartingClass
 }
@@ -16,7 +15,7 @@ const slotSx: SxProps = {
 }
 
 const weaponProperties  = [ "R1", "R2", "L1", "L2" ]
-const armorProperties   = [ "Head", "Chest", "Arms", "Legs"]
+// const armorProperties   = [ "Head", "Chest", "Arms", "Legs"]
 const spellProperties   = [ "Spell1", "Spell2" ]
 
 export const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps): JSX.Element => {

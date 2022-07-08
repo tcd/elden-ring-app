@@ -1,11 +1,11 @@
 import { capitalize } from "lodash"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
 import { StartingClass, AttributeNames } from "@app/types"
-import { getImageSrc, getImageSrcManual } from "@app/util"
+import { getImageSrc } from "@app/util"
 import { StatRow } from "@app/shared"
-import { Actions, Selectors } from "@app/state"
+import { Actions } from "@app/state"
 import { StartingClassEquipment } from "."
 
 export interface StartingClassOptionProps {
@@ -23,7 +23,6 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
     const handleClick = () => {
         dispatch(Actions.Builder.setPendingStartingClass({ name: sClass.name }))
     }
-
 
     const imageSrc = getImageSrc("Starting Class", sClass.name, "public")
 

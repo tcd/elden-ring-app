@@ -28,6 +28,8 @@
         "affectable",
         "Booleanish",
         "chunkhash",
+        "csstype",
+        "egjs",
         "Imageable",
         "offcanvas",
         "OptimusPrinceps",

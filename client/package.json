@@ -52,6 +52,7 @@
         "http-server": "^14.1.0",
         "jquery": "^3.6.0",
         "json-loader": "^0.5.7",
+        "keen-slider": "^6.7.0",
         "lodash": "^4.17.21",
         "material-ui-popup-state": "^2.0.1",
         "mini-css-extract-plugin": "^2.6.0",
