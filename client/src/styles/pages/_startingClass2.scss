@@ -65,9 +65,9 @@
         list-style: none;
     }
 
-    * {
-        box-sizing: border-box;
-    }
+    // * {
+    //     box-sizing: border-box;
+    // }
 
     // background-color: red;
     height: 100%;
@@ -85,7 +85,7 @@
         flex-grow: 1;
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        // flex-wrap: nowrap;
 
         .er__startingClass2__menu__arrowContainer {
             height: 100%;
@@ -97,27 +97,28 @@
         }
 
         ul#er__startingClass2__menu__options {
-            display: default;
+            // display: default;
             height: 100%;
-            width: calc(100% - 200px);
+            // width: calc(100% - 200px);
+            width: 100%;
             // margin-left:  100px;
             // margin-right: 100px;
-            overflow-x: auto;
-            white-space: nowrap;
+            // overflow-x: auto;
+            // white-space: nowrap;
 
-            scroll-snap-type: x mandatory;
-            scroll-behavior: auto;
+            // scroll-snap-type: x mandatory;
+            // scroll-behavior: auto;
 
             .er__startingClass2__menu__option {
-                display: inline-block;
-                position: relative;
+                // display: inline-block;
+                // position: relative;
                 height: 100%;
-                width:  calc(33.33% - 20px);
+                // width:  calc(33.33% - 20px);
                 background-repeat:   no-repeat;
                 background-size:     contain;
                 background-position: center;
-                margin-left: 10px;
-                margin-right: 10px;
+                // margin-left: 10px;
+                // margin-right: 10px;
                 margin-top:    0px;
                 margin-bottom: 0px;
                 padding-top:    0px;
@@ -125,7 +126,7 @@
                 background-color: #1f1c16;
                 border: 3px solid #312d26;
 
-                scroll-snap-align: start;
+                // scroll-snap-align: start;
 
                 &:hover {
                     cursor: pointer;
