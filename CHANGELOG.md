@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 <!-- ## [Unreleased] -->
 
 
+## [0.2.1] - 2022-07-07
+### Changed
+- Output big data file as json; much faster
+
+
 ## [0.2.0] - 2022-07-07
 ### Added
 - Set starting equipment after confirming starting class
