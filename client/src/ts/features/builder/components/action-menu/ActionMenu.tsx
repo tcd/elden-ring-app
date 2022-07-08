@@ -45,7 +45,7 @@ const DefaultMenu = (_props: unknown): JSX.Element => {
         <div id="action-menu">
             <button
                 type="button"
-                className="elden-ring-button"
+                className="er__button"
                 onClick={handleCharacterStatusClick}
             >
                 Switch view (right)

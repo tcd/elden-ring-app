@@ -21,9 +21,9 @@ export const TalismanActionMenu = (): JSX.Element => {
 
     return (
         <div id="action-menu">
-            <button type="button" className="elden-ring-button" onClick={handleRequestClose}>Close</button>
-            <button type="button" className="elden-ring-button" onClick={handleRequestClear}>Clear</button>
-            <button type="button" className="elden-ring-button" onClick={handleCharacterStatusClick}>Switch view (right)</button>
+            <button type="button" className="er__button" onClick={handleRequestClose}>Close</button>
+            <button type="button" className="er__button" onClick={handleRequestClear}>Clear</button>
+            <button type="button" className="er__button" onClick={handleCharacterStatusClick}>Switch view (right)</button>
         </div>
     )
 }

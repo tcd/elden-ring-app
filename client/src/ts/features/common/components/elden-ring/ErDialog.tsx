@@ -19,7 +19,7 @@ export const ErDialog = (props: ErDialogProps): JSX.Element => {
         return (
             <button
                 key={title}
-                className="elden-ring-button"
+                className="er__button"
                 onClick={handler}
             >
                 {title}

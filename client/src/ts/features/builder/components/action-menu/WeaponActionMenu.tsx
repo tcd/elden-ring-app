@@ -32,15 +32,15 @@ const WeaponWeaponActionMenu = (): JSX.Element => {
 
     const customizeButton =
         canCustomize
-            ? <button type="button" className="elden-ring-button" onClick={handleRequestCustomize}>Customize</button>
+            ? <button type="button" className="er__button" onClick={handleRequestCustomize}>Customize</button>
             : null
 
     return (
         <div id="action-menu">
-            <button type="button" className="elden-ring-button" onClick={handleRequestClose}>Back</button>
-            <button type="button" className="elden-ring-button" onClick={handleRequestClear}>Clear</button>
+            <button type="button" className="er__button" onClick={handleRequestClose}>Back</button>
+            <button type="button" className="er__button" onClick={handleRequestClear}>Clear</button>
             {customizeButton}
-            <button type="button" className="elden-ring-button" onClick={handleCharacterStatusClick}>Switch view (right)</button>
+            <button type="button" className="er__button" onClick={handleCharacterStatusClick}>Switch view (right)</button>
         </div>
     )
 }
@@ -60,8 +60,8 @@ const WeaponSkillActionMenu = (): JSX.Element => {
 
     return (
         <div id="action-menu">
-            <button type="button" className="elden-ring-button" onClick={handleRequestClose}>Back</button>
-            <button type="button" className="elden-ring-button" onClick={handleRequestClear}>Clear</button>
+            <button type="button" className="er__button" onClick={handleRequestClose}>Back</button>
+            <button type="button" className="er__button" onClick={handleRequestClear}>Clear</button>
         </div>
     )
 }

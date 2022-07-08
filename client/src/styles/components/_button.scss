@@ -1,7 +1,7 @@
 @use "../variables"as v;
 @use "../mixins/hoverGradient" as m;
 
-.elden-ring-button {
+.er__button {
     border-radius: 0px;
     border: 1px solid v.$button-border-color;
 
