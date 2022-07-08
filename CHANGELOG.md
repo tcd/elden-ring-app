@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 <!-- ## [Unreleased] -->
 
+### Added
+- Show name on hover for items in armor & talisman grids
 ### Fixed
 - Improve behavior of affinity select:
     - Add functionality to *Undo Enhancement* button

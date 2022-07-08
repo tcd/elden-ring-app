@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { TALISMAN_SORT_GROUPS, RefMap } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { MouseOverPopover } from "@app/shared"
 import { TalismanMenuImage } from "@app/features/talismans/components"
 
 export const TalismanMenuGrid = (): JSX.Element => {
@@ -33,14 +34,20 @@ export const TalismanMenuGrid = (): JSX.Element => {
                 classes = "equipment-menu-cell active"
             }
             return (
-                <div
+                <MouseOverPopover
+                    id={`talisman-${talisman.name}`}
                     key={`talisman-${talisman.name}`}
-                    ref={refs[talisman.name]}
-                    className={classes}
-                    onClick={() => handleClick(talisman.name)}
+                    popoverContent={talisman.name}
                 >
-                    <TalismanMenuImage talisman={talisman}/>
-                </div>
+                    <div
+                        key={`talisman-${talisman.name}`}
+                        ref={refs[talisman.name]}
+                        className={classes}
+                        onClick={() => handleClick(talisman.name)}
+                    >
+                        <TalismanMenuImage talisman={talisman}/>
+                    </div>
+                </MouseOverPopover>
             )
         })
         const divider = (index + 1 < TALISMAN_SORT_GROUPS.length) ? <div className="equipment-menu-section-border"></div> : null

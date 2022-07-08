@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { ARMOR_SORT_GROUPS, RefMap } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { MouseOverPopover } from "@app/shared"
 import { ArmorMenuImage } from "@app/features/armor/components"
 
 export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
@@ -33,14 +34,20 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
                 classes = "equipment-menu-cell active"
             }
             return (
-                <div
+                <MouseOverPopover
+                    id={`armor-${armor.name}`}
                     key={`armor-${armor.name}`}
-                    ref={refs[armor.name]}
-                    className={classes}
-                    onClick={() => handleClick(armor.name)}
+                    popoverContent={armor.name}
                 >
-                    <ArmorMenuImage armor={armor} />
-                </div>
+                    <div
+                        key={`armor-${armor.name}`}
+                        ref={refs[armor.name]}
+                        className={classes}
+                        onClick={() => handleClick(armor.name)}
+                    >
+                        <ArmorMenuImage armor={armor} />
+                    </div>
+                </MouseOverPopover>
             )
         })
         const divider = (index + 1 < ARMOR_SORT_GROUPS.length) ? <div className="equipment-menu-section-border"></div> : null
