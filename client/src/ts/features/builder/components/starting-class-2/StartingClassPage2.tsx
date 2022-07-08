@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import { Box } from "@mui/material"
 
 import { Actions } from "@app/state"
-import { StartingClassMenu2 } from "."
+import { StartingClassMenu2 } from ".."
 // import { StartingClassConfirmationDialog } from "@app/features/builder"
 
 export const StartingClassPage2 = (_props: unknown): JSX.Element => {

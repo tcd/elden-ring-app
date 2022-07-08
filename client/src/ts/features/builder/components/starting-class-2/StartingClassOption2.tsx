@@ -6,7 +6,7 @@ import { StartingClass, AttributeNames } from "@app/types"
 import { getImageSrc, getImageSrcManual } from "@app/util"
 import { StatRow } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
-import { StartingClassEquipment2 } from "."
+import { StartingClassEquipment2 } from ".."
 
 export interface StartingClassOption2Props {
     sClass: StartingClass
@@ -21,6 +21,7 @@ export const StartingClassOption2 = (props: StartingClassOption2Props): JSX.Elem
     const { sClass } = props
 
     const handleClick = () => {
+        console.log("click")
         dispatch(Actions.Builder.setPendingStartingClass({ name: sClass.name }))
     }
 
