@@ -3,11 +3,10 @@ import { useSelector } from "react-redux"
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
 
-import { MainBuilderMenu } from "./MainBuilderMenu"
-import { StartingClassPage } from "./starting-class"
+import { MainBuilderMenu, StartingClassPage2 } from "@app/features/builder"
 
 export const BuilderPage = (): JSX.Element => {
     const startingClassName = useSelector(Selectors.Builder.startingClass.startingClassName)
-    const content = isBlank(startingClassName) ? <StartingClassPage /> : <MainBuilderMenu />
+    const content = isBlank(startingClassName) ? <StartingClassPage2 /> : <MainBuilderMenu />
     return content
 }

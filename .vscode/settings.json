@@ -6,6 +6,7 @@
     // },
     "files.exclude": {
         "client/src/ts/data/kitchen-sink/kitchen-sink-data.ts": true,
+        "client/src/ts/data/kitchen-sink/kitchen-sink.json": true,
     },
     "eslint.format.enable": true,
     "[javascript]":      { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
@@ -28,6 +29,7 @@
         "affectable",
         "Booleanish",
         "chunkhash",
+        "egjs",
         "Imageable",
         "offcanvas",
         "OptimusPrinceps",
