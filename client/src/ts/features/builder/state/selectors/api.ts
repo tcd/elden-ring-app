@@ -1,6 +1,6 @@
 import { RootState } from "@app/state"
 import { selectBuilderSlice } from "./select-builder-slice"
-import KITCHEN_SINK_DATA from "../../../../data/kitchen-sink/kitchen-sink-data"
+import { KITCHEN_SINK_DATA } from "../../../../data/kitchen-sink"
 
 const _selectFetchEverythingRequest       = (rootState: RootState) => selectBuilderSlice(rootState)?.everythingRequest
 const _selectFetchEverythingRequestStatus = (rootState: RootState) => _selectFetchEverythingRequest(rootState)?.status
