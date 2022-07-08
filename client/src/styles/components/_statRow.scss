@@ -8,6 +8,7 @@
     color: v.$body-color-fg;
 
     span {
+        white-space: nowrap;
         font-size: v.$stat-row-font-size;
     }
 }
