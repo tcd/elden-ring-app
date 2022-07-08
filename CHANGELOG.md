@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 <!-- ## [Unreleased] -->
 
 
+## [0.3.0] - 2022-07-08
+### Changed
+- Use [keen-slider][keen-slider] for the starting class menu.
+- Update deployment script
+
+
 ## [0.2.1] - 2022-07-07
 ### Changed
 - Output big data file as json; much faster
@@ -18,10 +24,10 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 - Set starting equipment after confirming starting class
 ### Fixed
 - Fix scrolling behavior on starting class page
-- Fixed issue allowing attribute levels to be lowered below zero
+- Fix issue allowing attribute levels to be lowered below zero
 ### Changed
 - Include data in client build instead of fetching from server
-- Updated readme
+- Update readme
 - Other assorted changes
 
 
@@ -35,3 +41,4 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 [keep-a-changelog]: https://keepachangelog.com/en/1.0.0/
 [semver]: https://semver.org/spec/v2.0.0.html
+[keen-slider]: https://github.com/rcbyr/keen-slider
