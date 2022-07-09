@@ -1,13 +1,17 @@
 @use "../variables" as v;
 
-@mixin for-mobile-only {
+@mixin media-mobile {
     @media (max-width: map-get(v.$breakpoints, "mobile")) { @content; }
 }
 
-@mixin for-mobile-only {
-    @media (min-width: map-get(v.$breakpoints, "mobile")) and (max-width: map-get(v.$breakpoints, "desktop")) { @content; }
+@mixin media-tablet {
+    @media (min-width: map-get(v.$breakpoints, "mobile")) and (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
 }
 
-@mixin for-desktop-only {
-    @media (max-width: map-get(v.$breakpoints, "desktop")) { @content; }
+@mixin media-laptop {
+    @media (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+}
+
+@mixin media-desktop {
+    @media (min-width: map-get(v.$breakpoints, "desktop")) { @content; }
 }

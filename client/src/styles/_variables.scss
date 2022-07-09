@@ -47,8 +47,9 @@ $grid-breakpoints: (
 ) !default;
 
 $breakpoints: (
-  mobile:  500px,
-  desktop: 990px,
+    mobile:  500px,
+    laptop:  990px,
+    desktop: 1400px,
 ) !default;
 
 // ----------------------------------------------------------------------------

@@ -34,7 +34,7 @@
         }
     }
 
-    @include m.for-mobile-only {
+    @include m.media-mobile {
         div {
             height: 150px;
             width: 100%;
