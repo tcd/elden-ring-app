@@ -1,0 +1,17 @@
+{
+    "Material UI": [
+        { "breakpoint": "extra-small", "class-infix": "xs", "size": "0px"    },
+        { "breakpoint": "small",       "class-infix": "sm", "size": "600px"  },
+        { "breakpoint": "medium",      "class-infix": "md", "size": "900px"  },
+        { "breakpoint": "large",       "class-infix": "lg", "size": "1200px" },
+        { "breakpoint": "extra-large", "class-infix": "xl", "size": "1536px" },
+    ],
+    "Bootstrap": [
+        { "breakpoint": "X-Small",           "class-infix": null,  "dimensions": "<576px"  },
+        { "breakpoint": "Small",             "class-infix": "sm",  "dimensions": "≥576px"  },
+        { "breakpoint": "Medium",            "class-infix": "md",  "dimensions": "≥768px"  },
+        { "breakpoint": "Large",             "class-infix": "lg",  "dimensions": "≥992px"  },
+        { "breakpoint": "Extra large",       "class-infix": "xl",  "dimensions": "≥1200px" },
+        { "breakpoint": "Extra extra large", "class-infix": "xxl", "dimensions": "≥1400px" },
+    ],
+}

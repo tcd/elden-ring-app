@@ -1,6 +1,9 @@
 export declare global {
-    export type Integer = number
-    export type Decimal = number
+
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    export type Integer = number & {}
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    export type Decimal = number & {}
 
     export interface Window {
         [key: string]: any
