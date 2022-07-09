@@ -52,4 +52,8 @@
     { "fileName": "weapon-slot-bolts.png",  "cloudflareId": "bad/equipment-slots/weapon-slot-bolts"  },
     { "fileName": "weapon-slot-left.png",   "cloudflareId": "bad/equipment-slots/weapon-slot-left"   },
     { "fileName": "weapon-slot-right.png",  "cloudflareId": "bad/equipment-slots/weapon-slot-right"  },
+    { "cloudflareId": "ui/header/300" },
+    { "cloudflareId": "ui/header/350" },
+    { "cloudflareId": "ui/header/400" },
+    { "cloudflareId": "ui/header/811" },
 ]

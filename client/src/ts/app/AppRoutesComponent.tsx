@@ -2,6 +2,7 @@ import { RouteObject, useRoutes } from "react-router-dom"
 
 import {
     AppLayout,
+    MobileLayout,
 
     HomePage,
     AboutPage,
@@ -28,7 +29,7 @@ export const AppRoutesComponent = () => useRoutes(routes)
 const routes: RouteObject[] = [
     {
         path: "/",
-        element: <AppLayout />,
+        element: <MobileLayout />,
         children: [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },

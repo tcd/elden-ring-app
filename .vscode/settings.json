@@ -1,9 +1,6 @@
 {
     // "terminal.integrated.defaultProfile.windows": "PowerShell",
     // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
-    // "files.associations": {
-    //     "kitchen-sink-data.ts": "plaintext",
-    // },
     "files.exclude": {
         "client/src/ts/data/kitchen-sink/kitchen-sink.json": true,
     },

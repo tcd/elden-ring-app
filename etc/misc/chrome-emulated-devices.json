@@ -1,0 +1,287 @@
+[
+    {
+        "title": "iPad 10.2-inch",
+        "type": "unknown",
+        "user-agent": "",
+        "capabilities": [
+            "mobile",
+            "touch"
+        ],
+        "screen": {
+            "device-pixel-ratio": 2,
+            "vertical": {
+                "width": 810,
+                "height": 1080
+            },
+            "horizontal": {
+                "width": 1080,
+                "height": 810
+            }
+        },
+        "modes": [
+            {
+                "title": "",
+                "orientation": "vertical",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            },
+            {
+                "title": "",
+                "orientation": "horizontal",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            }
+        ],
+        "show-by-default": true,
+        "dual-screen": false,
+        "show": "Default",
+        "user-agent-metadata": {
+            "brands": [],
+            "fullVersion": "",
+            "platform": "",
+            "platformVersion": "",
+            "architecture": "",
+            "model": "",
+            "mobile": true
+        }
+    },
+    {
+        "title": "MacBook 15-inch (full screen)",
+        "type": "unknown",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36",
+        "capabilities": [],
+        "screen": {
+            "device-pixel-ratio": 2,
+            "vertical": {
+                "width": 939,
+                "height": 1680
+            },
+            "horizontal": {
+                "width": 1680,
+                "height": 939
+            }
+        },
+        "modes": [
+            {
+                "title": "",
+                "orientation": "vertical",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            },
+            {
+                "title": "",
+                "orientation": "horizontal",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            }
+        ],
+        "show-by-default": true,
+        "dual-screen": false,
+        "show": "Default",
+        "user-agent-metadata": {
+            "brands": [
+                {
+                    "brand": "Chromium",
+                    "version": "102"
+                },
+                {
+                    "brand": "Google Chrome",
+                    "version": "102"
+                }
+            ],
+            "fullVersion": "",
+            "platform": "macOS",
+            "platformVersion": "10.15.7",
+            "architecture": "x86",
+            "model": "",
+            "mobile": false
+        }
+    },
+    {
+        "title": "MacBook 15-inch (maximized)",
+        "type": "unknown",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36",
+        "capabilities": [
+            "mobile",
+            "touch"
+        ],
+        "screen": {
+            "device-pixel-ratio": 0,
+            "vertical": {
+                "width": 859,
+                "height": 1680
+            },
+            "horizontal": {
+                "width": 1680,
+                "height": 859
+            }
+        },
+        "modes": [
+            {
+                "title": "",
+                "orientation": "vertical",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            },
+            {
+                "title": "",
+                "orientation": "horizontal",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            }
+        ],
+        "show-by-default": true,
+        "dual-screen": false,
+        "show": "Default",
+        "user-agent-metadata": {
+            "brands": [
+                {
+                    "brand": "",
+                    "version": ""
+                }
+            ],
+            "fullVersion": "",
+            "platform": "macOS",
+            "platformVersion": "10.15.7",
+            "architecture": "x86",
+            "model": "",
+            "mobile": true
+        }
+    },
+    {
+        "title": "HP Spectre 15-inch",
+        "type": "unknown",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+        "capabilities": [],
+        "screen": {
+            "device-pixel-ratio": 0,
+            "vertical": {
+                "width": 722,
+                "height": 1536
+            },
+            "horizontal": {
+                "width": 1536,
+                "height": 722
+            }
+        },
+        "modes": [
+            {
+                "title": "",
+                "orientation": "vertical",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            },
+            {
+                "title": "",
+                "orientation": "horizontal",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            }
+        ],
+        "show-by-default": true,
+        "dual-screen": false,
+        "show": "Default",
+        "user-agent-metadata": {
+            "brands": [
+                {
+                    "brand": "",
+                    "version": ""
+                }
+            ],
+            "fullVersion": "",
+            "platform": "Windows",
+            "platformVersion": "10",
+            "architecture": "x86",
+            "model": "",
+            "mobile": false
+        }
+    },
+    {
+        "title": "HP Omen display",
+        "type": "unknown",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+        "capabilities": [],
+        "screen": {
+            "device-pixel-ratio": 1,
+            "vertical": {
+                "width": 1297,
+                "height": 2560
+            },
+            "horizontal": {
+                "width": 2560,
+                "height": 1297
+            }
+        },
+        "modes": [
+            {
+                "title": "",
+                "orientation": "vertical",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            },
+            {
+                "title": "",
+                "orientation": "horizontal",
+                "insets": {
+                    "left": 0,
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0
+                }
+            }
+        ],
+        "show-by-default": true,
+        "dual-screen": false,
+        "show": "Default",
+        "user-agent-metadata": {
+            "brands": [
+                {
+                    "brand": "",
+                    "version": ""
+                }
+            ],
+            "fullVersion": "",
+            "platform": "Windows",
+            "platformVersion": "10",
+            "architecture": "x86",
+            "model": "",
+            "mobile": false
+        }
+    }
+]
