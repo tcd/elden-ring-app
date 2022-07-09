@@ -1,13 +1,13 @@
 @use "../variables"as v;
 
-#builder-root {
+#er__builder__root {
     height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 
-#builder-body {
+#er__builder__body {
     display: flex;
     flex-grow: 1;
 
@@ -36,7 +36,7 @@
     //     margin-right: 5%;
     // }
 
-    #character-status {
+    #er__builder__characterStatus {
         width: 30%;
     }
 }
@@ -74,11 +74,4 @@
         filter: drop-shadow(v.$text-shadow-offset v.$text-shadow-offset 0.75px rgb(0, 0, 0));
         color: v.$body-color-fg;
     }
-}
-
-section.armor,
-section.armaments {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
 }

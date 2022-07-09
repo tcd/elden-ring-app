@@ -10,11 +10,11 @@ export const TalismanSlots = (): JSX.Element => {
 
     const rows = talismans.map((talisman, index) => {
         const id = TalismanSlotIds[index]
-        return <TalismanSlot key={`talisman_${id}`} id={id} talisman={talisman} />
+        return <TalismanSlot key={`talisman-slot-${id}`} id={id} talisman={talisman} />
     })
 
     return (
-        <section className="talismans w-100">
+        <section className="er__equipmentSlotsRow">
             {rows}
         </section>
     )

@@ -13,7 +13,7 @@ export const ArmorSlots = (): JSX.Element => {
 
     return (
         <>
-            <section className="armor w-100">
+            <section className="er__equipmentSlotsRow">
                 <ArmorSlot type={ArmorType.Head}  armor={head}  />
                 <ArmorSlot type={ArmorType.Chest} armor={chest} />
                 <ArmorSlot type={ArmorType.Arms}  armor={arms}  />

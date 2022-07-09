@@ -22,10 +22,10 @@ export const MainBuilderMenu = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <main id="builder-root" className="container-fluid">
-            <div id="builder-body" className="row">
+        <main id="er__builder__root" className="container-fluid">
+            <div id="er__builder__body" className="row">
                 {menuElement}
-                <div id="character-status">
+                <div id="er__builder__characterStatus">
                     <CharacterStatus />
                 </div>
             </div>

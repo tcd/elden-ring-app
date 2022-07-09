@@ -1,5 +1,12 @@
 @use "../variables"as v;
 
+.er__equipmentSlotsRow {
+    // width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .er__equipmentSlot {
     position: relative;
 
