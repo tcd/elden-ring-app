@@ -3,3 +3,11 @@
 @mixin for-mobile-only {
     @media (max-width: map-get(v.$breakpoints, "mobile")) { @content; }
 }
+
+@mixin for-mobile-only {
+    @media (min-width: map-get(v.$breakpoints, "mobile")) and (max-width: map-get(v.$breakpoints, "desktop")) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (max-width: map-get(v.$breakpoints, "desktop")) { @content; }
+}
