@@ -43,8 +43,8 @@
             // padding-left: 40px;
 
             .er__appHeader__icon {
-                width:  v.$header-image-size;
-                height: v.$header-image-size;
+                width:  v.$header-imageSize;
+                height: v.$header-imageSize;
                 margin-left: 20px;
                 margin-right: 15px;
             }
@@ -85,8 +85,8 @@
         height: 100%;
         margin: 0px;
         // padding: 0px;
-        width: v.$side-menu-width;
-        // background-color: $side-menu-bg;
-        background: m.customGradient(90deg, v.$side-menu-bg, v.$side-menu-bg-stops);
+        width: v.$sideNav-width;
+        // background-color: $sideNav-bg;
+        background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
     }
 }

@@ -137,6 +137,8 @@ $zindex-modal:                      1055 !default;
 // $zindex-popover:                    1070 !default;
 // $zindex-tooltip:                    1080 !default;
 // $zindex-toast:                      1090 !default;
+$zindex-sideNav-backdrop:             1190 !default;
+$zindex-sideNav:                      1200 !default;
 // scss-docs-end zindex-stack
 
 // ----------------------------------------------------------------------------
@@ -186,17 +188,32 @@ $stat-row-font-size: .875rem;
 // Layout
 // ----------------------------------------------------------------------------
 
-$header-image-size: 55px;
-$side-menu-width: 400px;
-// $side-menu-bg: #35352f;
-$side-menu-bg: #36342f;
-$side-menu-bg-stops: (
+$header-imageSize: 55px;
+$sideNav-width: 400px;
+// $sideNav-bg: #35352f;
+$sideNav-bg: #36342f;
+$sideNav-bgStops: (
      0%: 1.00,
     25%: 0.90,
     50%: 0.75,
     75%: 0.50,
     90%: 0.30,
    100%: 0.00,
+);
+$sideNav-backdrop-bgStops: (
+     0%: 1.00,
+     5%: 0.90,
+    10%: 0.75,
+    15%: 0.50,
+    18%: 0.30,
+    20%: 0.00,
+
+   80%: 0.00,
+   82%: 0.30,
+   85%: 0.50,
+   90%: 0.75,
+   95%: 0.90,
+  100%: 1.00,
 );
 
 // ----------------------------------------------------------------------------

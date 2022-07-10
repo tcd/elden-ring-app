@@ -28,7 +28,7 @@
             // padding-left: 40px;
 
             .er__header__icon {
-                @include m.square(v.$header-image-size);
+                @include m.square(v.$header-imageSize);
                 margin-left: 40px;
                 margin-right: 15px;
 
@@ -42,28 +42,6 @@
             }
         }
     }
-
-
-    // // MuiPaper-root
-    // // MuiPaper-elevation
-    // // MuiPaper-elevation16
-    // // MuiDrawer-paper
-    // // MuiDrawer-paperAnchorLeft
-    // // css-iur3w5-MuiPaper-root-MuiDrawer-paper
-    // #er__sideNav {
-    //     // box-sizing: border-box;
-    //     // position: absolute;
-    //     // z-index: 10;
-    //     // left: 0;
-    //     // top: 0;
-    //     // height: 100%;
-    //     // margin: 0px;
-    //     // padding: 0px;
-    //     // width: v.$side-menu-width;
-    //     // background-color: v.$side-menu-bg;
-    //     background-color: blue !important;
-    //     // background: m.customGradient(90deg, v.$side-menu-bg, v.$side-menu-bg-stops);
-    // }
 
     #app-footer {
         box-sizing: border-box;
@@ -79,6 +57,12 @@
     }
 }
 
+#er__sideNav__backdrop {
+    z-index: v.$zindex-sideNav-backdrop;
+    // background-color: blue !important;
+    background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-backdrop-bgStops);
+}
+
 // MuiPaper-root
 // MuiPaper-elevation
 // MuiPaper-elevation16
@@ -88,21 +72,18 @@
 // .MuiDrawer-paper,
 // .MuiDrawer-root,
 #er__sideNav {
+    z-index: v.$zindex-sideNav;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     // box-sizing: border-box;
     // position: absolute;
-    // z-index: 10;
-    // left: 0;
-    // top: 0;
     // height: 100%;
     // margin: 0px;
     // padding: 0px;
-    width: v.$side-menu-width;
-    // background-color: v.$side-menu-bg;
-    // background-color: blue !important;
-    background: m.customGradient(90deg, v.$side-menu-bg, v.$side-menu-bg-stops);
+    width: v.$sideNav-width;
+    // background-color: v.$sideNav-bg;
+    background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
 
     ul#er__sideNavItems {
         margin-left: 0px;

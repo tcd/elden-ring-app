@@ -20,7 +20,10 @@ export const AppSideNav = (_props: unknown): JSX.Element => {
             anchor="left"
             open={sideNavOpened}
             onClose={handleMenuClose}
-            BackdropProps={{ invisible: true }}
+            BackdropProps={{
+                invisible: true,
+                id: "er__sideNav__backdrop",
+            }}
             PaperProps={{
                 id: "er__sideNav",
                 elevation: 0,
