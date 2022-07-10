@@ -25,6 +25,7 @@
         "affectable",
         "Booleanish",
         "chunkhash",
+        "clsx",
         "csstype",
         "egjs",
         "Imageable",
@@ -34,6 +35,8 @@
         "reduxjs",
         "scroller",
         "semibold",
+        "unequip",
+        "unstyled",
         "zindex"
     ],
     "search.exclude": {
