@@ -20,7 +20,7 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     const menuHasScrolled  = useSelector(Selectors.Weapons.menuHasScrolled)
     // const choosingAffinity = useSelector(Selectors.Weapons.smithing.choosingAffinity)
 
-    const classNames = ["equipment-menu-grid-column"]
+    const classNames = ["er__equipmentMenu__gridColumn"]
 
     // if (choosingAffinity) {
     //     classNames.push("no-vertical-overflow")
@@ -40,13 +40,14 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     const sections = WEAPON_SKILL_SORT_GROUPS.map((sortGroup, index) => {
         const sectionSkills = skills.filter(x => x.sort_group == sortGroup)
         const skillCells = sectionSkills.map((skill) => {
-            let classes = "equipment-menu-cell inactive"
+            const key = `weapon-skill-${skill.name}`
+            let classes = "er__equipmentMenu__gridCell inactive"
             if (skill.name === activeName) {
-                classes = "equipment-menu-cell active"
+                classes = "er__equipmentMenu__gridCell active"
             }
             return (
                 <div
-                    key={`weapon-skill-${skill.name}`}
+                    key={key}
                     ref={refs[skill.name]}
                     className={classes}
                     onClick={() => handleClick(skill.name)}
@@ -56,11 +57,11 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
             )
         })
 
-        const divider = (index + 1 < WEAPON_SKILL_SORT_GROUPS.length) ? <div className="equipment-menu-section-border"></div> : null
+        const divider = (index + 1 < WEAPON_SKILL_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
         return (
             <Fragment key={sortGroup}>
-                <section className="equipment-menu-section">
+                <section className="er__equipmentMenu__gridSection">
                     {skillCells}
                 </section>
                 {divider}
