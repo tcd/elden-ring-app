@@ -1,3 +1,4 @@
+import { forwardRef } from "react"
 import { lowerCase } from "lodash"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
@@ -10,9 +11,20 @@ import { Actions } from "@app/state"
 export interface WeaponSlotProps {
     slotId: WeaponSlotId
     data: WeaponSlotData
+    // onClick:
+    onContextMenu: (event: React.MouseEvent<any>) => any,
 }
 
-export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
+const defaultProps: Partial<WeaponSlotProps> = {
+    onContextMenu: () => { return null },
+}
+
+const weaponSlot = forwardRef((props: WeaponSlotProps, ref) => {
+
+    props = {
+        ...defaultProps,
+        ...props,
+    }
 
     const dispatch = useDispatch()
 
@@ -52,15 +64,20 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
 
     return (
         // <MouseOverPopover id={elementId} popoverContent={titleString}>
-            <Box
-                component="li"
-                id={elementId}
-                sx={slotSx}
-                className={classNames.join(" ")}
-                onClick={handleClick}
-            >
-                {weaponImageElement && weaponImageElement}
-            </Box>
+        <Box
+            ref={ref}
+            component="li"
+            id={elementId}
+            sx={slotSx}
+            className={classNames.join(" ")}
+            onClick={handleClick}
+            onContextMenu={props.onContextMenu}
+        >
+            {weaponImageElement && weaponImageElement}
+        </Box>
         // </MouseOverPopover>
     )
-}
+})
+
+weaponSlot.displayName = "WeaponSlot"
+export const WeaponSlot = weaponSlot

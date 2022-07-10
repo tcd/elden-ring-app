@@ -3,19 +3,37 @@
 
 
 #er__contextMenu {
-    background-color: none;;
     background: m.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
     width: 200px;
-    text-align: center;
+    // text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: stretch;
 
     ul {
+        flex-grow: 1;
         text-align: center;
-        width: 100%;
+        // height: calc(100% - 4px);
+        // background-color: blue;
+        margin-bottom: 0px;
+        padding-top:    5px;
+        padding-bottom: 5px;
         li {
-            // opacity: 0;;
-            width: 100%;
-            text-align: center !important;
+            @include m.pointer-on-hover;
+            &:hover {
+                background-color: v.$gold;
+            }
         }
+    }
+
+    .bottom-border,
+    .top-border {
+        height: 2px;
+        background:
+            m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
+            v.$modal-color-border;
     }
 
     // display: flex;
@@ -23,8 +41,8 @@
     // align-items: stretch;
     // justify-content: stretch;
 
-    background-color: v.$modal-color-bg;
-    background: m.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
+    // background-color: v.$modal-color-bg;
+    // background: m.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
 
     // .er__modal__main {
     //     padding-top:    25px;

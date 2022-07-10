@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"
 import { useDispatch } from "react-redux"
 import { Box, SxProps, Menu, MenuItem, Typography } from "@mui/material"
+import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
 import { Actions } from "@app/state"
 import { WeaponSlotProps, WeaponSlot } from "./WeaponSlot"
@@ -13,60 +14,65 @@ export interface ContextMenuState {
 export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
 
     const dispatch = useDispatch()
-
-    const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null)
-
-    const slotId = props.slotId
-
-    const handleClose = () => {
-        setContextMenu(null)
-    }
+    const slotRef = useRef(null)
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+    const open = Boolean(anchorEl)
+    const id = open ? "er__contextMenu" : undefined
 
     const handleContextMenu = (event: React.MouseEvent) => {
         event.preventDefault()
-        // repeated contextmenu when it is already open closes it with Chrome 84 on Ubuntu
-        // Other native context menus might behave different.
-        // With this behavior we prevent contextmenu from the backdrop to re-locale existing context menus.
-        if (contextMenu !== null) {
-            setContextMenu(null)
-        }
-        setContextMenu({
-            mouseX: event.clientX + 2,
-            mouseY: event.clientY - 6,
-        })
+        setAnchorEl(anchorEl ? null : slotRef.current)
+    }
+
+    const handleClickAway = () => {
+        setAnchorEl(null)
     }
 
     const handleClickChange = () => {
-        setContextMenu(null)
+        setAnchorEl(null)
         dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
     }
 
     const handleClickAshOfWar = () => {
-        setContextMenu(null)
+        setAnchorEl(null)
         // dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
     }
 
     const handleClickUnequip = () => {
-        setContextMenu(null)
+        setAnchorEl(null)
         dispatch(Actions.Weapons.unequipWeaponBySlotId({ id: props.slotId }))
     }
+
+    const menuItems = [
+        { name: "Choose",     action: handleClickChange },
+        { name: "Ash of War", action: handleClickAshOfWar },
+        { name: "Unequip",    action: handleClickUnequip },
+    ]
+
+    const menuItemElements = menuItems.map(({ name, action }) => (
+        <li key={name} onClick={action}>{name}</li>
+    ))
 
     return (
         <Box
             onContextMenu={handleContextMenu}
             style={{ cursor: "context-menu" }}
         >
-            <WeaponSlot {...props} />
-            <Menu
+            <WeaponSlot
+                {...props}
+                onContextMenu={handleContextMenu}
+                ref={slotRef}
+            />
+            {/* <Menu
                 // className="er__contextMenu"
                 open={contextMenu !== null}
                 onClose={handleClose}
                 anchorReference="anchorPosition"
                 anchorPosition={contextMenu !== null ? { top: contextMenu.mouseY, left: contextMenu.mouseX } : undefined}
-                // PopoverClasses={{
-                //     paper: "testing",
-                //     root: "testing",
-                // }}
+                PopoverClasses={{
+                    paper: "testing",
+                    root: "testing",
+                }}
                 PaperProps={{
                     id: "er__contextMenu",
                     elevation: 0,
@@ -76,7 +82,16 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
                 <MenuItem onClick={handleClickChange}>Choose</MenuItem>
                 <MenuItem onClick={handleClickAshOfWar}>Ash of War</MenuItem>
                 <MenuItem onClick={handleClickUnequip}>Unequip</MenuItem>
-            </Menu>
+            </Menu> */}
+            <ClickAwayListener onClickAway={handleClickAway}>
+                <PopperUnstyled id={id} open={open} anchorEl={anchorEl}>
+                    <div className="top-border"></div>
+                    <ul>
+                        {menuItemElements}
+                    </ul>
+                    <div className="bottom-border"></div>
+                </PopperUnstyled>
+            </ClickAwayListener>
         </Box>
     )
 }
