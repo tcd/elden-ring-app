@@ -47,5 +47,6 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": ["off"],
         "@typescript-eslint/type-annotation-spacing": ["warn"],
         "@typescript-eslint/ban-ts-comment": ["off"],
+        "@typescript-eslint/no-empty-function": ["warn"],
     },
 }

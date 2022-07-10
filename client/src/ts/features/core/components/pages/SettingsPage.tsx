@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { Box, Button, Typography } from "@mui/material"
 
@@ -7,7 +8,16 @@ import { exportJsonToFile } from "@app/util"
 
 export const SettingsPage = (): JSX.Element => {
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        // Anything in here is fired on component mount.
+        dispatch(Actions.Core.setPageName("settings"))
+        return () => {
+            // Anything in here is fired on component unmount.
+            dispatch(Actions.Core.clearPageName())
+        }
+    }, [])
 
     const buildData = useSelector(Selectors.Builder.exportData)
 
