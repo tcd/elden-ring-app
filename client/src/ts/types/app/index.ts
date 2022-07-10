@@ -1,6 +1,7 @@
 export * from "./ComparisonColor"
 export * from "./Encumbrance"
 export * from "./ILinkData"
+export * from "./Pages"
 export * from "./RefMap"
 export * from "./Request"
 export * from "./WeaponSlotId"

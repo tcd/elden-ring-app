@@ -6,10 +6,7 @@ import {
     AttributeName,
 } from "@app/types"
 import { STARTING_CLASSES } from "@app/data"
-import { ArmorActions } from "@app/features/armor"
-import { WeaponsActions } from "@app/features/weapons"
-import { TalismansActions } from "@app/features/talismans"
-import { BuilderState, BuilderMenu } from "./state"
+import { BuilderState } from "./state"
 import { fetchEverything } from "./thunks"
 import { selectCorrectedAttributeLevel } from "./selectors/for-reducers"
 
@@ -39,12 +36,6 @@ export const reducers = {
         }
         // state.whichCharacterStatus = action.payload
     },
-    setCurrentMenu(state: BuilderState, action: PayloadAction<BuilderMenu>) {
-        state.currentMenu = action.payload
-    },
-    clearCurrentMenu(state: BuilderState) {
-        state.currentMenu = null
-    },
     // =========================================================================
     // Starting Class
     // =========================================================================
@@ -61,7 +52,6 @@ export const reducers = {
     },
     confirmStartingClassName(state: BuilderState, action: PayloadAction<{ name: string }>) {
         state.startingClassName = state.pendingStartingClassName
-        state.currentMenu = null
     },
 }
 
@@ -81,13 +71,4 @@ export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) =>
             state.everythingRequest.status = "fulfilled"
             state.everythingRequest.response = action.payload
         })
-        // ---------------------------------------------------------------------
-        // From Other Slices
-        // ---------------------------------------------------------------------
-        .addCase(ArmorActions.openArmorMenu,          (state) => { state.currentMenu = "armor"    })
-        .addCase(ArmorActions.closeArmorMenu,         (state) => { state.currentMenu = null       })
-        .addCase(WeaponsActions.openWeaponsMenu,      (state) => { state.currentMenu = "weapon"   })
-        .addCase(WeaponsActions.closeWeaponsMenu,     (state) => { state.currentMenu = null       })
-        .addCase(TalismansActions.openTalismansMenu,  (state) => { state.currentMenu = "talisman" })
-        .addCase(TalismansActions.closeTalismansMenu, (state) => { state.currentMenu = null       })
 }

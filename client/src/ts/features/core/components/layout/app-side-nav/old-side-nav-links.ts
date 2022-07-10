@@ -13,7 +13,7 @@ import {
     mdiDesktopMacDashboard,
 } from "@mdi/js"
 
-import { ILinkData } from "@types"
+import { ILinkData } from "@app/types"
 
 const tableLinks: ILinkData[] = [
     { title: "Weapons", url: "/weapons/table", icon: mdiSword },

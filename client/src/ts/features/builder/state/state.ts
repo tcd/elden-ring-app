@@ -9,20 +9,11 @@ import {
 import { FEATURE_KEYS, CONFIG } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
-export type BuilderMenu =
-    | null
-    | "armor"
-    | "weapon"
-    | "talisman"
-    | "spell"
-    | "starting-class"
-
 // Define a type for the slice state
 export interface BuilderState {
     errors: any[]
     everythingRequest: RequestState<KitchenSink>
     attributes: Attributes
-    currentMenu?: BuilderMenu
     whichCharacterStatus: "A" | "B"
     actionMenuDescription: string
     startingClassName: StartingClassName
@@ -47,7 +38,6 @@ const initialState: BuilderState = {
         "faith":        0,
         "arcane":       0,
     },
-    currentMenu: null,
     whichCharacterStatus: "A",
     actionMenuDescription: "",
     startingClassName: null,
@@ -58,7 +48,6 @@ const initialState: BuilderState = {
 const myBuild: BuilderState = {
     ...initialState,
     startingClassName: StartingClassName.Samurai,
-    // currentMenu: "starting-class",
     // attributes: {
     //     "vigor":        30,
     //     "mind":         30,

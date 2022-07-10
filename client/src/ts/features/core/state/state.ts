@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FEATURE_KEYS } from "@util"
-import { reducers } from "./reducers"
+import { PageName } from "@app/types"
+import { FEATURE_KEYS } from "@app/util"
+import { reducers, extraReducers } from "./reducers"
 
 export interface CoreState {
     /**
@@ -10,23 +11,19 @@ export interface CoreState {
      * Can be used to determine if redux initialization is complete.
      */
     reduxReady: boolean
-    darkModeEnabled: boolean
-    userMenuOpened: boolean
     sideNavOpened: boolean
-    /** Sections in the side nav that are open */
-    expandedSections: string[]
+    pageName: PageName
 }
 
 const initialState: CoreState = {
     reduxReady: true,
-    darkModeEnabled: true,
-    userMenuOpened: false,
     sideNavOpened: false,
-    expandedSections: [],
+    pageName: null,
 }
 
 export const CoreSlice = createSlice({
     name: FEATURE_KEYS.Core,
     initialState,
     reducers: reducers,
+    extraReducers: extraReducers,
 })

@@ -1,41 +1,35 @@
-import { Link as RouterLink } from "react-router-dom"
-import {
-    AppBar,
-    Box,
-    Container,
-    Link,
-    Toolbar,
-} from "@mui/material"
+import { useDispatch, useSelector } from "react-redux"
 
-import { COLORS } from "@app/theme"
-import { AppSideNav } from "./side-nav"
+import { Actions, Selectors } from "@app/state"
 
-export const AppHeader = (): JSX.Element => {
+export const AppHeader = (_props: unknown): JSX.Element => {
+
+    const dispatch = useDispatch()
+
+    const title = useSelector(Selectors.Core.title)
+    const imageUrl = useSelector(Selectors.Core.titleIconUrl)
+    const sideNavOpened = useSelector(Selectors.Core.sideNavOpened)
+
+    const handleIconClick = (_event) => {
+        if (!sideNavOpened) {
+            dispatch(Actions.Core.openSideNav())
+        }
+    }
 
     return (
-        <AppBar position="static">
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-
-                    <AppSideNav />
-
-                    <Link
-                        noWrap
-                        variant="h6"
-                        component={RouterLink}
-                        className="text-shadow"
-                        to={"/"}
-                        sx={{ mr: 2, textDecoration: "none", color: COLORS.white }}
-                    >
-                            Elden Ring
-                    </Link>
-
-                    <Box sx={{ flexGrow: 1 }}></Box>
-
-                    {/* <UserMenu /> */}
-
-                </Toolbar>
-            </Container>
-        </AppBar>
+        <header id="er__header">
+            <div className="er__header__content">
+                {/* <img src="https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public" alt="title-background" /> */}
+                <img
+                    className="er__header__icon"
+                    src={imageUrl}
+                    alt={title}
+                    onClick={handleIconClick}
+                />
+                <h1 className="er__header__title">
+                    {title}
+                </h1>
+            </div>
+        </header>
     )
 }

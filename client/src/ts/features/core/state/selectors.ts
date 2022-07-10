@@ -1,6 +1,12 @@
-import { CloudflareVariant, getImageSrcManual } from "@app/util"
+import {
+    PageName,
+    PageTitle,
+    PAGE_NAME_TITLES,
+    PAGE_NAME_ICONS,
+    DEFAULT_PAGE_ICON,
+    HEADER_ICONS,
+} from "@app/types"
 import { RootState } from "@app/state"
-import { selectCurrentMenu } from "@app/features/builder/state/selectors/misc"
 import { selectCustomizing } from "@app/features/weapons/state/selectors/selectors"
 import { CoreState } from "."
 
@@ -9,39 +15,25 @@ const selectCoreSlice = (rootState: RootState): CoreState => {
 }
 
 const selectReduxReady       = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.reduxReady
-const selectDarkModeEnabled  = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.darkModeEnabled
-const selectUserMenuOpened   = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.userMenuOpened
+const selectPageName         = (rootState: RootState): PageName => selectCoreSlice(rootState)?.pageName ?? null
 const selectSideNavOpened    = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.sideNavOpened
-const selectExpandedSections = (rootState: RootState): string[] => selectCoreSlice(rootState)?.expandedSections ?? []
 
-export type TitleString = "Equipment" | "Ashes of War" | "Memorize Spells" | "Select Character Base"
-
-const selectTitle = (rootState: RootState): TitleString => {
+const selectTitle = (rootState: RootState): PageTitle => {
+    const pageName = selectPageName(rootState)
     const ashesOfWar = selectCustomizing(rootState)
     if (ashesOfWar) {
         return "Ashes of War"
     }
-    const currentMenu = selectCurrentMenu(rootState)
-    switch (currentMenu) {
-        // case "armor":          return "Armor"
-        case "spell":          return "Memorize Spells"
-        // case "talisman":       return "Talismans"
-        // case "weapon":         return "Weapons"
-        case "starting-class": return "Select Character Base"
-        default:               return "Equipment"
-    }
-}
-
-const titleImageSize: CloudflareVariant = "128"
-const titleStringImages: Record<TitleString, string> = {
-    "Ashes of War":          getImageSrcManual("/ui/title-icons/ashes-of-war", titleImageSize),
-    "Memorize Spells":       getImageSrcManual("/ui/title-icons/spells", titleImageSize),
-    "Equipment":             getImageSrcManual("/ui/title-icons/equipment", titleImageSize),
-    "Select Character Base": getImageSrcManual("/ui/title-icons/starting-class", titleImageSize),
+    return PAGE_NAME_TITLES?.[pageName] ?? null
 }
 
 const selectTitleIconUrl = (rootState: RootState): string => {
-    return titleStringImages[selectTitle(rootState)] ?? getImageSrcManual("/ui/title-icons/equipment", titleImageSize)
+    const pageName = selectPageName(rootState)
+    const ashesOfWar = selectCustomizing(rootState)
+    if (ashesOfWar) {
+        return HEADER_ICONS["ashes-of-war"]
+    }
+    return PAGE_NAME_ICONS?.[pageName] ?? DEFAULT_PAGE_ICON
 }
 
 // =============================================================================
@@ -50,10 +42,8 @@ const selectTitleIconUrl = (rootState: RootState): string => {
 
 export const CoreSelectors = {
     reduxReady: selectReduxReady,
-    darkModeEnabled: selectDarkModeEnabled,
-    userMenuOpened: selectUserMenuOpened,
-    sideNavOpened: selectSideNavOpened,
-    expandedSections: selectExpandedSections,
+    pageName: selectPageName,
     title: selectTitle,
     titleIconUrl: selectTitleIconUrl,
+    sideNavOpened: selectSideNavOpened,
 }
