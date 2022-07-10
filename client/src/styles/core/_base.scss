@@ -1,5 +1,34 @@
 @use "../variables"as v;
 @use "../mixins/index"as m;
+@use "../helpers/index" as h;
+
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: v.$body-color-fg;
+    background-color: v.$body-color-bg;
+}
+
+#root {
+    margin:  0px;
+    padding: 0px;
+    height: 100vh;
+    overflow-y: scroll;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-image: url(h.$main-menu-encoded-background);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
 * {
     @include m.customScrollbar();
@@ -11,6 +40,7 @@ ol, ul, li {
     list-style: none;
     list-style-position: inside;
     padding-left: 0;
+    margin-left: 0;
     margin-bottom: default !important;
 }
 

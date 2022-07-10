@@ -29,7 +29,8 @@ export const AppRoutesComponent = () => useRoutes(routes)
 const routes: RouteObject[] = [
     {
         path: "/",
-        element: <MobileLayout />,
+        // element: <MobileLayout />,
+        element: <AppLayout />,
         children: [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },

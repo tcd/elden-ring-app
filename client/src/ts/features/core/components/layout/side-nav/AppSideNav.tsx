@@ -8,12 +8,12 @@ import {
 import MenuIcon from "@mui/icons-material/Menu"
 
 import { COLORS } from "@app/theme"
-import { AppDispatch, Actions, Selectors } from "@app/state"
+import { Actions, Selectors } from "@app/state"
 import { SideNavContent } from "./SideNavContent"
 
 export const AppSideNav = () => {
 
-    const dispatch: AppDispatch = useDispatch()
+    const dispatch = useDispatch()
     const sideNavOpened = useSelector(Selectors.Core.sideNavOpened)
 
     // =========================================================================

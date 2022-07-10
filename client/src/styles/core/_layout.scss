@@ -1,97 +1,132 @@
 @use "../variables" as v;
-@use "../mixins/customGradient" as m;
+@use "../mixins" as m;
 @use "../helpers/index" as h;
 
-html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+#er__layout {
+
+    #er__layout__outletWrapper {
+        flex-grow: 1;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #er__header {
+        .er__header__content {
+
+            height: 86px;
+            margin-top: 15px;
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            background-image: url("https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public");
+            background-repeat: no-repeat;
+            // background-position: center;
+            // background-size: cover;
+
+            // padding-left: 40px;
+
+            .er__header__icon {
+                @include m.square(v.$header-image-size);
+                margin-left: 40px;
+                margin-right: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .er__header__title {
+                margin-bottom: 0px;
+                color: v.$gold;
+                font-size: 34px;
+            }
+        }
+    }
+
+
+    // // MuiPaper-root
+    // // MuiPaper-elevation
+    // // MuiPaper-elevation16
+    // // MuiDrawer-paper
+    // // MuiDrawer-paperAnchorLeft
+    // // css-iur3w5-MuiPaper-root-MuiDrawer-paper
+    // #er__sideNav {
+    //     // box-sizing: border-box;
+    //     // position: absolute;
+    //     // z-index: 10;
+    //     // left: 0;
+    //     // top: 0;
+    //     // height: 100%;
+    //     // margin: 0px;
+    //     // padding: 0px;
+    //     // width: v.$side-menu-width;
+    //     // background-color: v.$side-menu-bg;
+    //     background-color: blue !important;
+    //     // background: m.customGradient(90deg, v.$side-menu-bg, v.$side-menu-bg-stops);
+    // }
+
+    #app-footer {
+        box-sizing: border-box;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        padding: 3px;
+        text-align: center;
+        height: 30px;
+        color: map-get(v.$EldenRingColor, menu-fg);
+        background-color: #292927;
+    }
 }
 
-body {
+// MuiPaper-root
+// MuiPaper-elevation
+// MuiPaper-elevation16
+// MuiDrawer-paper
+// MuiDrawer-paperAnchorLeft
+// css-iur3w5-MuiPaper-root-MuiDrawer-paper
+// .MuiDrawer-paper,
+// .MuiDrawer-root,
+#er__sideNav {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    color: v.$body-color-fg;
-    background-color: v.$body-color-bg;
-}
-
-#root {
-    margin:  0px;
-    padding: 0px;
-    height: 100vh;
-    overflow-y: scroll;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    background-image: url(h.$main-menu-encoded-background);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-#outlet-wrapper {
-    flex-grow: 1;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-#app-footer {
-    box-sizing: border-box;
-    width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    padding: 3px;
-    text-align: center;
-    height: 30px;
-    color: map-get(v.$EldenRingColor, menu-fg);
-    background-color: #292927;
-}
-
-#app-side-menu {
-    box-sizing: border-box;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    height: 100%;
-    margin: 0px;
+    flex-flow: column nowrap;
+    justify-content: center;
+    // box-sizing: border-box;
+    // position: absolute;
+    // z-index: 10;
+    // left: 0;
+    // top: 0;
+    // height: 100%;
+    // margin: 0px;
     // padding: 0px;
     width: v.$side-menu-width;
-    // background-color: $side-menu-bg;
+    // background-color: v.$side-menu-bg;
+    // background-color: blue !important;
     background: m.customGradient(90deg, v.$side-menu-bg, v.$side-menu-bg-stops);
-}
 
-#er__appHeader {
-    .er__appHeader__content {
-
-        height: 86px;
-        margin-top: 15px;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-
-        background-image: url("https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public");
-        background-repeat: no-repeat;
-        // background-position: center;
-        // background-size: cover;
-
-        // padding-left: 40px;
-
-        .er__appHeader__icon {
-            width:  v.$header-image-size;
-            height: v.$header-image-size;
-            margin-left: 40px;
-            margin-right: 15px;
-        }
-
-        .er__appHeader__title {
-            margin-bottom: 0px;
-            color: v.$gold;
-            font-size: 34px;
+    ul#er__sideNavItems {
+        margin-left: 0px;
+        padding-left: 0px;
+        .er__sideNavItem {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            $horizontal-margin: 25px;
+            margin-top: $horizontal-margin;
+            margin-bottom: $horizontal-margin;
+            img.er__sideNavItemImage {
+                @include m.square(75px);
+                margin-left: 50px;
+                margin-right: 15px;
+            }
+            span.er__sideNavItemTitle {
+                margin-bottom: 0px;
+                color: v.$gold;
+                font-size: 20px;
+            }
         }
     }
 }
+
