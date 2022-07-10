@@ -3,8 +3,9 @@ $equipment-slot-overlay-color: #B6AD84;
 @mixin hoverGradient {
     position: relative;
 
+    @include m.pointer-on-hover;
+
     &:hover {
-        cursor: pointer;
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow: 0px 0px 2px 1px rgba($equipment-slot-overlay-color, 0.5);
 
