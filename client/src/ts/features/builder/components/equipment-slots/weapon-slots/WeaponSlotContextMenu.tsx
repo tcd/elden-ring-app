@@ -42,6 +42,21 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
         })
     }
 
+    const handleClickChange = () => {
+        setContextMenu(null)
+        dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
+    }
+
+    const handleClickAshOfWar = () => {
+        setContextMenu(null)
+        // dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
+    }
+
+    const handleClickUnequip = () => {
+        setContextMenu(null)
+        dispatch(Actions.Weapons.unequipWeaponBySlotId({ id: props.slotId }))
+    }
+
     return (
         <Box
             id={elementId}
@@ -50,15 +65,24 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
         >
             <WeaponSlot {...props} />
             <Menu
+                // className="er__contextMenu"
                 open={contextMenu !== null}
                 onClose={handleClose}
                 anchorReference="anchorPosition"
                 anchorPosition={contextMenu !== null ? { top: contextMenu.mouseY, left: contextMenu.mouseX } : undefined}
+                // PopoverClasses={{
+                //     paper: "testing",
+                //     root: "testing",
+                // }}
+                PaperProps={{
+                    id: "er__contextMenu",
+                    elevation: 0,
+                }}
+                // MenuListProps={{ className: "er__contextMenu" }}
             >
-                <MenuItem onClick={handleClose}>Copy</MenuItem>
-                <MenuItem onClick={handleClose}>Print</MenuItem>
-                <MenuItem onClick={handleClose}>Highlight</MenuItem>
-                <MenuItem onClick={handleClose}>Email</MenuItem>
+                {/* <MenuItem onClick={handleClickChange}>Choose</MenuItem> */}
+                <MenuItem onClick={handleClickAshOfWar}>Ash of War</MenuItem>
+                <MenuItem onClick={handleClickUnequip}>Unequip</MenuItem>
             </Menu>
         </Box>
     )

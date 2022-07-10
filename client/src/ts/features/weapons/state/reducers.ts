@@ -49,6 +49,11 @@ export const reducers = {
             ...DEFAULT_WEAPON_SETTINGS,
         }
     },
+    unequipWeaponBySlotId(state: WeaponsState, { payload: { id } }: PayloadAction<{ id: WeaponSlotId }>) {
+        state.slots[id] = {
+            ...DEFAULT_WEAPON_SETTINGS,
+        }
+    },
     setActiveName(state: WeaponsState, action: PayloadAction<{ name: string }>) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
