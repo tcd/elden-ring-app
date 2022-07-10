@@ -1,10 +1,7 @@
-import * as React from "react"
+import { useState, useRef } from "react"
 import { useDispatch } from "react-redux"
 import { Box, SxProps, Menu, MenuItem, Typography } from "@mui/material"
 
-import { WeaponSlotId, weaponSlotIdName, WeaponSlotData } from "@app/types"
-import { getImageSrc, cssUrl, EquipmentSlotImageUrls } from "@app/util"
-import { MouseOverPopover } from "@app/shared"
 import { Actions } from "@app/state"
 import { WeaponSlotProps, WeaponSlot } from "./WeaponSlot"
 
@@ -17,12 +14,9 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const [contextMenu, setContextMenu] = React.useState<ContextMenuState | null>(null)
+    const [contextMenu, setContextMenu] = useState<ContextMenuState | null>(null)
 
     const slotId = props.slotId
-
-    // const elementId = `weapon-slot-${lowerCase(slotId)}-context-menu`
-    const elementId = `er__contextMenu__weaponSlot${slotId}`
 
     const handleClose = () => {
         setContextMenu(null)
@@ -59,7 +53,6 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
 
     return (
         <Box
-            id={elementId}
             onContextMenu={handleContextMenu}
             style={{ cursor: "context-menu" }}
         >
@@ -80,7 +73,7 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
                 }}
                 // MenuListProps={{ className: "er__contextMenu" }}
             >
-                {/* <MenuItem onClick={handleClickChange}>Choose</MenuItem> */}
+                <MenuItem onClick={handleClickChange}>Choose</MenuItem>
                 <MenuItem onClick={handleClickAshOfWar}>Ash of War</MenuItem>
                 <MenuItem onClick={handleClickUnequip}>Unequip</MenuItem>
             </Menu>
