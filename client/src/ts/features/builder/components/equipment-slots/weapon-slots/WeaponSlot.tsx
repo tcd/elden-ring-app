@@ -51,7 +51,7 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
     }
 
     return (
-        <MouseOverPopover id={elementId} popoverContent={titleString}>
+        // <MouseOverPopover id={elementId} popoverContent={titleString}>
             <Box
                 component="li"
                 id={elementId}
@@ -61,6 +61,6 @@ export const WeaponSlot = (props: WeaponSlotProps): JSX.Element => {
             >
                 {weaponImageElement && weaponImageElement}
             </Box>
-        </MouseOverPopover>
+        // </MouseOverPopover>
     )
 }

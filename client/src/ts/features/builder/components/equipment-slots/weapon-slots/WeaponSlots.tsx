@@ -1,32 +1,8 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { EquipmentSlotImageUrls } from "@app/util"
-import { WeaponSlot } from "./WeaponSlot"
-
-// =============================================================================
-// Ammunition
-// =============================================================================
-
-// const arrowSlot = (id: string) => {
-//     const imagePath = EquipmentSlotImageUrls.Arrow
-//     const key = `arrow-slot-${id}`
-//     return (
-//         <li key={key} id={key} className="er__equipmentSlot">
-//             <img className="img-fluid" src={imagePath} alt="arrows" />
-//         </li>
-//     )
-// }
-
-// const boltSlot = (id: string) => {
-//     const imagePath = EquipmentSlotImageUrls.Bolt
-//     const key = `bolt-slot-${id}`
-//     return (
-//         <li key={key} id={key} className="er__equipmentSlot">
-//             <img className="img-fluid" src={imagePath} alt="bolts" />
-//         </li>
-//     )
-// }
+// import { WeaponSlot } from "./WeaponSlot"
+import { WeaponSlotContextMenu as WeaponSlot } from "./WeaponSlotContextMenu"
 
 // =============================================================================
 // All Together
