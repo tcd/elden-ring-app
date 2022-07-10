@@ -1,6 +1,7 @@
 import { Components } from "@mui/material"
 
 export const generalComponents: Components = {
+
     // MuiToolbar: {
     //     styleOverrides: {
     //         root: {
@@ -12,5 +13,12 @@ export const generalComponents: Components = {
     //             minHeight: "46px",
     //         },
     //     },
+    // },
+    // MuiDrawer: {
+    //     defaultProps: {
+    //     },
+    //     styleOverrides: {
+
+    //     }
     // },
 }

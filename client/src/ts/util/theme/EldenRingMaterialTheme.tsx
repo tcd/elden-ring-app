@@ -16,33 +16,7 @@ const components: Components = {
 const options: ThemeOptions = {
     palette: paletteOptions,
     typography: typographyOptions as ExtendedTypographyOptions,
-    components,
-}
-
-// =============================================================================
-// Dark Mode
-// =============================================================================
-
-const darkModeOptions: ThemeOptions = {
-    palette: {
-        ...paletteOptions,
-        mode: "dark",
-    },
-    typography: typographyOptions as ExtendedTypographyOptions,
-    components,
-}
-
-// =============================================================================
-// Light Mode
-// =============================================================================
-
-const lightModeOptions: ThemeOptions = {
-    palette: {
-        ...paletteOptions,
-        mode: "light",
-    },
-    typography: typographyOptions as ExtendedTypographyOptions,
-    components,
+    components: components,
 }
 
 // =============================================================================
@@ -55,6 +29,4 @@ const lightModeOptions: ThemeOptions = {
  * - [Palette](https://mui.com/customization/palette/)
  * - [Components](https://mui.com/customization/theme-components/)
  */
-export const EldenRingMaterialTheme      = createTheme(options)
-export const EldenRingMaterialThemeDark  = createTheme(darkModeOptions)
-export const EldenRingMaterialThemeLight = createTheme(lightModeOptions)
+export const EldenRingMaterialTheme = createTheme(options)
