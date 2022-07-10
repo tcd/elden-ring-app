@@ -144,8 +144,9 @@
                 line-height: $affinityModal-option-font-size;
             }
 
+            @include m.pointer-on-hover;
+
             &:hover {
-                cursor: pointer;
                 background: m.customGradient(90deg, $affinity-item-color-active-bg, $affinity-item-stops);
             }
 

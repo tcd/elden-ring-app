@@ -80,9 +80,7 @@
             &.active {
                 background-color: #615e4b;
             }
-            &:hover {
-                cursor: pointer;
-            }
+            @include m.pointer-on-hover;
         }
         .er__equipmentMenu__imageWrapper {
             @include m.square(100%);

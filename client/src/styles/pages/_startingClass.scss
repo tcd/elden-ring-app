@@ -128,9 +128,7 @@
 
                 // scroll-snap-align: start;
 
-                &:hover {
-                    cursor: pointer;
-                }
+                @include m.pointer-on-hover;
 
                 .er__startingClass__menu__optionHoverOverlay,
                 .er__startingClass__menu__optionOverlay {

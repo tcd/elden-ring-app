@@ -1,0 +1,8 @@
+@use "../variables" as v;
+
+@mixin pointer-on-hover {
+    &:hover {
+        cursor: pointer;
+        // cursor: url(v.$image-cursor-pointer), auto;
+    }
+}

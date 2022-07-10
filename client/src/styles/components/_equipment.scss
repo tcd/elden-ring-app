@@ -1,4 +1,5 @@
 @use "../variables"as v;
+@use "../mixins"as m;
 
 .er__equipmentSlotsRow {
     // width: 100%;
@@ -29,10 +30,9 @@
             padding: 10px;
         }
     }
+    @include m.pointer-on-hover;
 
     &:hover {
-        // background-color: goldenrod;
-        cursor: pointer;
         &:before {
             content: '';
             position: absolute;
