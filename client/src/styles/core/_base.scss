@@ -34,7 +34,7 @@ body {
     @include m.customScrollbar();
     box-sizing: border-box !important;
     font-size: 15px;
-    cursor: url(v.$image-cursor-default), auto;
+    // cursor: url(v.$image-cursor-default), default;
 }
 
 ol, ul, li {
