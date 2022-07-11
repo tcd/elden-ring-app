@@ -5,13 +5,13 @@ import {
     FiniteResourceChecklist,
     UpgradeMaterialsChecklist,
 } from "@app/data"
-import { reducers } from "./reducers"
+import { reducers, extraReducers } from "./reducers"
 
 export interface ChecklistState {
     obtainedResources: FiniteResourceChecklist
 }
 
-const initialState: ChecklistState = {
+export const INITIAL_CHECKLIST_STATE: ChecklistState = {
     obtainedResources: {
         ...UpgradeMaterialsChecklist,
     },
@@ -33,10 +33,11 @@ const initialDevState: ChecklistState = {
 }
 
 // const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = initialState
+const _initialState = INITIAL_CHECKLIST_STATE
 
 export const ChecklistSlice = createSlice({
     name: FEATURE_KEYS.Checklist,
     initialState: _initialState,
     reducers: reducers,
+    extraReducers: extraReducers,
 })

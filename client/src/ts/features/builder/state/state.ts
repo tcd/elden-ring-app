@@ -22,7 +22,7 @@ export interface BuilderState {
 }
 
 // Define the initial state using that type
-const initialState: BuilderState = {
+export const INITIAL_BUILDER_STATE: BuilderState = {
     errors: [],
     everythingRequest: {
         status: "idle",
@@ -46,7 +46,7 @@ const initialState: BuilderState = {
 }
 
 const myBuild: BuilderState = {
-    ...initialState,
+    ...INITIAL_BUILDER_STATE,
     startingClassName: StartingClassName.Samurai,
     // attributes: {
     //     "vigor":        30,
@@ -81,7 +81,7 @@ const myBuild: BuilderState = {
 }
 
 // const _initialState = CONFIG.production() ? initialState : myBuild
-const _initialState = initialState
+const _initialState = INITIAL_BUILDER_STATE
 
 export const BuilderSlice = createSlice({
     name:          FEATURE_KEYS.Builder,

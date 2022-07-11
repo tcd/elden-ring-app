@@ -6,7 +6,8 @@ import {
     AttributeName,
 } from "@app/types"
 import { STARTING_CLASSES } from "@app/data"
-import { BuilderState } from "./state"
+import { CoreActions } from "@app/features/core"
+import { BuilderState, INITIAL_BUILDER_STATE } from "./state"
 import { fetchEverything } from "./thunks"
 import { selectCorrectedAttributeLevel } from "./selectors/for-reducers"
 
@@ -57,6 +58,7 @@ export const reducers = {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) => {
     builder
+        .addCase(CoreActions.resetState, () => INITIAL_BUILDER_STATE)
         // ---------------------------------------------------------------------
         // Fetch Everything
         // ---------------------------------------------------------------------

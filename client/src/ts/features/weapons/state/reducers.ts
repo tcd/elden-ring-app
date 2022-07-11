@@ -11,7 +11,8 @@ import {
 } from "@app/types"
 import { isBlank } from "@app/util"
 import { BuilderActions } from "@app/features/builder"
-import { WeaponsState } from "./state"
+import { CoreActions } from "@app/features/core"
+import { WeaponsState, INITIAL_WEAPONS_STATE } from "./state"
 
 export const reducers = {
     setActiveSlotId(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
@@ -134,6 +135,7 @@ const noWeaponsSelected = (slice: WeaponsState): boolean => {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
     builder
+        .addCase(CoreActions.resetState, () => INITIAL_WEAPONS_STATE)
         .addCase(BuilderActions.confirmStartingClassName, (state: WeaponsState, { payload: { name } }) => {
             if (noWeaponsSelected(state)) {
                 const sClass = startingClassByName(name)

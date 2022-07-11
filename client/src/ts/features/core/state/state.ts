@@ -15,7 +15,7 @@ export interface CoreState {
     pageName: PageName
 }
 
-const initialState: CoreState = {
+export const INITIAL_CORE_STATE: CoreState = {
     reduxReady: true,
     sideNavOpened: false,
     pageName: null,
@@ -23,7 +23,7 @@ const initialState: CoreState = {
 
 export const CoreSlice = createSlice({
     name: FEATURE_KEYS.Core,
-    initialState,
+    initialState: INITIAL_CORE_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })

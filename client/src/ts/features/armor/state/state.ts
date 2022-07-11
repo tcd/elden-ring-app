@@ -14,7 +14,7 @@ export interface ArmorState {
     menuHasScrolled: boolean
 }
 
-const initialState: ArmorState = {
+export const INITIAL_ARMOR_STATE: ArmorState = {
     armorNames: {
         Arms: null,
         Chest: null,
@@ -26,15 +26,15 @@ const initialState: ArmorState = {
     menuHasScrolled: false,
 }
 const initialDevState: ArmorState = {
-    ...initialState,
+    ...INITIAL_ARMOR_STATE,
     armorNames: {
-        ...initialState.armorNames,
+        ...INITIAL_ARMOR_STATE.armorNames,
         Head: "Banished Knight Helm",
     },
 }
 
 // const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = initialState
+const _initialState = INITIAL_ARMOR_STATE
 
 export const ArmorSlice = createSlice({
     name: FEATURE_KEYS.Armor,

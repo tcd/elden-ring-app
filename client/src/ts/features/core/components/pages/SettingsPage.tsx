@@ -1,20 +1,19 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
 import { Box, Button, Typography } from "@mui/material"
 
-import { Heading } from "@app/shared"
-import { Actions, Selectors } from "@app/state"
+import { Actions, Selectors, persistor } from "@app/state"
 import { exportJsonToFile } from "@app/util"
 
 export const SettingsPage = (): JSX.Element => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     useEffect(() => {
-        // Anything in here is fired on component mount.
         dispatch(Actions.Core.setPageName("settings"))
         return () => {
-            // Anything in here is fired on component unmount.
             dispatch(Actions.Core.clearPageName())
         }
     }, [])
@@ -28,9 +27,14 @@ export const SettingsPage = (): JSX.Element => {
         })
     }
 
+    const handleResetClick = async () => {
+        await persistor.purge()
+        await dispatch(Actions.Core.resetState())
+        navigate("/")
+    }
+
     return (
         <Box className="container">
-            <Heading title="Settings" />
             <section>
                 <Typography variant="h5">
                     Export Data
@@ -39,6 +43,15 @@ export const SettingsPage = (): JSX.Element => {
                         onClick={handleExportClick}
                     >
                         Export Build
+                    </Button>
+                </Typography>
+            </section>
+            <section>
+                <Typography variant="h5">
+                    Reset
+                    <br />
+                    <Button onClick={handleResetClick}>
+                        Reset App State
                     </Button>
                 </Typography>
             </section>

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 import { TalismanSet, TalismanSlotId } from "@app/types"
 import { FEATURE_KEYS, CONFIG } from "@app/util"
-import { reducers } from "./reducers"
+import { reducers, extraReducers } from "./reducers"
 
 export interface TalismansState {
     talismanNames: TalismanSet
@@ -11,7 +11,7 @@ export interface TalismansState {
     menuHasScrolled: boolean
 }
 
-const initialState: TalismansState = {
+export const INITIAL_TALISMANS_STATE: TalismansState = {
     talismanNames: {
         "1": null,
         "2": null,
@@ -24,9 +24,9 @@ const initialState: TalismansState = {
 }
 
 const initialDevState: TalismansState = {
-    ...initialState,
+    ...INITIAL_TALISMANS_STATE,
     talismanNames: {
-        ...initialState.talismanNames,
+        ...INITIAL_TALISMANS_STATE.talismanNames,
         "1": "Red-Feathered Branchsword",
         // "2": "Ritual Sword Talisman",
         // "3": "Blue-Feathered Branchsword",
@@ -35,10 +35,11 @@ const initialDevState: TalismansState = {
 }
 
 // const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = initialState
+const _initialState = INITIAL_TALISMANS_STATE
 
 export const TalismansSlice = createSlice({
     name: FEATURE_KEYS.Talismans,
     initialState: _initialState,
     reducers: reducers,
+    extraReducers: extraReducers,
 })

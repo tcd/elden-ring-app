@@ -2,7 +2,8 @@ import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { startingClassByName } from "@app/data"
 import { BuilderActions } from "@app/features/builder"
-import { SpellsState } from "./state"
+import { CoreActions } from "@app/features/core"
+import { SpellsState, INITIAL_SPELLS_STATE } from "./state"
 
 export const reducers = {
     setActiveName(state: SpellsState, action: PayloadAction<{ name: string }>) {
@@ -17,6 +18,7 @@ const noSpellsSelected = (slice: SpellsState): boolean => {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<SpellsState>) => {
     builder
+        .addCase(CoreActions.resetState, () => INITIAL_SPELLS_STATE)
         .addCase(BuilderActions.confirmStartingClassName, (state: SpellsState, { payload: { name } }) => {
             if (noSpellsSelected(state)) {
                 const sClass = startingClassByName(name)

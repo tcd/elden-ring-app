@@ -1,8 +1,9 @@
-import { PayloadAction } from "@reduxjs/toolkit"
+import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { TalismanSlotId } from "@app/types"
 import { isBlank } from "@app/util"
-import { TalismansState } from "./state"
+import { CoreActions } from "@app/features/core"
+import { TalismansState, INITIAL_TALISMANS_STATE } from "./state"
 
 export const reducers = {
     scrollMenu(state: TalismansState) {
@@ -29,4 +30,9 @@ export const reducers = {
         state.oldTalismanName = null
         state.talismanNames[activeSlotId] = action.payload.name
     },
+}
+
+export const extraReducers = (builder: ActionReducerMapBuilder<TalismansState>) => {
+    builder
+        .addCase(CoreActions.resetState, () => INITIAL_TALISMANS_STATE)
 }

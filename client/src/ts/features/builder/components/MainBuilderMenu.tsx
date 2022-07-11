@@ -1,6 +1,7 @@
-import { useSelector } from "react-redux"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 
-import { Selectors } from "@app/state"
+import { Actions, Selectors } from "@app/state"
 import { ArmorMenu, TalismanMenu, WeaponMenu } from "@app/features"
 
 import { LevelUpMenu } from "./level-up"
@@ -8,6 +9,15 @@ import { CharacterStatus } from "./right-side-panels"
 import { ActionMenu } from "./action-menu"
 
 export const MainBuilderMenu = (_props: unknown): JSX.Element => {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(Actions.Core.setPageName("equipment"))
+        return () => {
+            dispatch(Actions.Core.clearPageName())
+        }
+    }, [])
 
     const pageName = useSelector(Selectors.Core.pageName)
 

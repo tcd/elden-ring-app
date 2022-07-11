@@ -27,7 +27,7 @@ const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
     L3: { ...DEFAULT_WEAPON_SETTINGS },
 }
 
-const initialState: WeaponsState = {
+export const INITIAL_WEAPONS_STATE: WeaponsState = {
     slots: { ...DEFAULT_WEAPON_SLOTS },
     oldWeapon: null,
     activeSlotId: null,
@@ -37,9 +37,9 @@ const initialState: WeaponsState = {
 }
 
 const devState: WeaponsState = {
-    ...initialState,
+    ...INITIAL_WEAPONS_STATE,
     slots: {
-        ...initialState.slots,
+        ...INITIAL_WEAPONS_STATE.slots,
         R1: { weapon_name: "Blasphemous Blade", level: 10, affinity_name: "Standard" },
         R2: { weapon_name: "Claymore",          level: 0,  affinity_name: "Heavy", weapon_skill_name: "Lion's Claw" },
         L1: { weapon_name: "Rotten Greataxe",   level: 25, affinity_name: "Cold"     },
@@ -57,7 +57,7 @@ const devState: WeaponsState = {
 }
 
 // const _initialState = CONFIG.production() ? initialState : devState
-const _initialState = initialState
+const _initialState = INITIAL_WEAPONS_STATE
 
 export const WeaponsSlice = createSlice({
     name: FEATURE_KEYS.Weapons,

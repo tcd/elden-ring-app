@@ -1,15 +1,18 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { PageName } from "@app/types"
-import { CoreState } from "./state"
+import { CoreState, INITIAL_CORE_STATE } from "./state"
 
-import { ArmorActions } from "@app/features/armor"
-import { WeaponsActions } from "@app/features/weapons"
-import { TalismansActions } from "@app/features/talismans"
 import { BuilderActions } from "@app/features/builder"
-
+import { ArmorActions } from "@app/features/armor"
+import { TalismansActions } from "@app/features/talismans"
+import { WeaponsActions } from "@app/features/weapons"
 
 export const reducers = {
+    // -------------------------------------------------------------------------
+    // Reset State
+    // -------------------------------------------------------------------------
+    resetState: () => INITIAL_CORE_STATE,
     // -------------------------------------------------------------------------
     // Page Name
     // -------------------------------------------------------------------------
