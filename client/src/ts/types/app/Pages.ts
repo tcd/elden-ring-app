@@ -5,14 +5,16 @@ import { CloudflareVariant, getImageSrcManual } from "@app/util"
 // =============================================================================
 
 export const PageNames = {
-    armor:         "armor",
-    equipment:     "equipment",
-    settings:      "settings",
-    spell:         "spell",
-    startingClass: "starting-class",
-    status:        "status",
-    talisman:      "talisman",
-    weapon:        "weapon",
+    "armor":          "armor",
+    "ashes-of-war":   "ashes-of-war",
+    "equipment":      "equipment",
+    "not-found":      "not-found",
+    "settings":       "settings",
+    "spell":          "spell",
+    "starting-class": "starting-class",
+    "status":         "status",
+    "talisman":       "talisman",
+    "weapon":         "weapon",
 } as const
 export type PageNameKey = keyof typeof PageNames
 export type PageNameValue = typeof PageNames[PageNameKey];
@@ -26,6 +28,7 @@ export const PageTitles = {
     "Ashes of War":          "Ashes of War",
     "Equipment":             "Equipment",
     "Memorize Spells":       "Memorize Spells",
+    "Not Found":             "Not Found",
     "Select Character Base": "Select Character Base",
     "Status":                "Status",
     "System":                "System",
@@ -40,7 +43,9 @@ export type PageTitle = PageTitleValue
 
 export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "armor":          "Equipment",
+    "ashes-of-war":   "Ashes of War",
     "equipment":      "Equipment",
+    "not-found":      "Not Found",
     "settings":       "System",
     "spell":          "Memorize Spells",
     "starting-class": "Select Character Base",
@@ -85,11 +90,13 @@ export const DEFAULT_PAGE_ICON = HEADER_ICONS["site-of-grace"]
 
 export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "armor":          HEADER_ICONS.equipment,
+    "ashes-of-war":   HEADER_ICONS["ashes-of-war"],
     "equipment":      HEADER_ICONS.equipment,
+    "not-found":      HEADER_ICONS["site-of-grace"],
     "settings":       HEADER_ICONS.system,
     "spell":          HEADER_ICONS.spells,
     "starting-class": HEADER_ICONS["starting-class"],
     "status":         HEADER_ICONS.status,
     "weapon":         HEADER_ICONS.equipment,
-    talisman:         HEADER_ICONS.equipment,
+    "talisman":       HEADER_ICONS.equipment,
 }

@@ -5,6 +5,7 @@ import {
     MobileLayout,
 
     HomePage,
+    NotFoundPage,
     AboutPage,
     SettingsPage,
     TestPage,
@@ -60,6 +61,8 @@ const routes: RouteObject[] = [
             { path: "/spells",           element: <SpellsTablePage /> },
             { path: "/spells/menu",      element: <SpellMenu /> },
             { path: "/spells/table",     element: <SpellsTablePage /> },
+
+            { path: "*",     element: <NotFoundPage /> },
 
         ],
     },

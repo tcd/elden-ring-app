@@ -1,7 +1,7 @@
 @use "../variables" as v;
 @use "../mixins" as m;
 
-#er__fetchFailed {
+#er__youDied {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,10 +27,12 @@
         width: 100%;
         text-align: center;
         background: m.customGradient(180deg, v.$you-died-black, v.$you-died-gradient-stops);
+        a.er__youDied__link,
         span {
             font-family: "OptimusPrinceps";
             font-size: 4rem;
             color: v.$you-died-red;
+            text-decoration: none;
         }
     }
 

@@ -88,7 +88,7 @@ export const StatusPage = (): JSX.Element => {
     })
 
     return (
-        <main id="er__statusPage">
+        <main id="er__pageRoot">
             <div className="row">
                 <div className="col">
                     <div className="row">

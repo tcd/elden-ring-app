@@ -7,6 +7,7 @@ import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { WeaponSlotId } from "@app/types"
 import { WeaponMenu } from "@app/features/weapons"
+import { WeaponDetail, WeaponMenuGrid, WeaponSkillMenu } from "@app/features/weapons/components"
 
 export const AshesOfWarPage = (_props: unknown): JSX.Element => {
 
@@ -16,21 +17,26 @@ export const AshesOfWarPage = (_props: unknown): JSX.Element => {
     const activeSlotId = useSelector(Selectors.Weapons.activeSlotId)
 
     useEffect(() => {
-        // Anything in here is fired on component mount.
-        dispatch(Actions.Core.setPageName("weapon"))
+        dispatch(Actions.Core.setPageName("ashes-of-war"))
         if (isBlank(activeSlotId)) {
             dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
             dispatch(Actions.Weapons.startCustomizingWeapon())
         }
         return () => {
-            // Anything in here is fired on component unmount.
-            dispatch(Actions.Core.clearPageName())
+            // dispatch(Actions.Core.clearPageName())
         }
-    }, [slotId])
+    }, [activeSlotId, slotId])
 
     return (
-        <>
-            <WeaponMenu />
-        </>
+        <main id="er__pageRoot">
+            <div className="row">
+                <div className="col">
+                    <WeaponSkillMenu />
+                </div>
+                <div className="col">
+                    <WeaponDetail />
+                </div>
+            </div>
+        </main>
     )
 }

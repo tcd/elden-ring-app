@@ -22,7 +22,7 @@ export const AppRoot = (_props: unknown): JSX.Element => {
 
     // if (fetchFailed) {
     //     return (
-    //         <div id="er__fetchFailed">
+    //         <div id="er__youDied">
     //             <div>
     //                 <span>unable to connect to server</span>
     //             </div>
