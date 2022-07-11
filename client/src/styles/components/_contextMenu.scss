@@ -3,10 +3,8 @@
 
 
 #er__contextMenu {
-    background: m.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
+    background: m.customGradient(90deg, v.$contextMenu-color-bg, v.$modal-body-stops);
     width: 200px;
-    // text-align: center;
-
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
@@ -14,16 +12,24 @@
 
     ul {
         flex-grow: 1;
-        text-align: center;
-        // height: calc(100% - 4px);
-        // background-color: blue;
-        margin-bottom: 0px;
-        padding-top:    5px;
-        padding-bottom: 5px;
+        margin-bottom:  0px;
+        margin-top:     0px;
+        margin-left:    10px;
+        margin-right:   10px;
+        padding-top:    10px;
+        padding-bottom: 10px;
         li {
             @include m.pointer-on-hover;
+            height: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: m.customGradient(90deg, v.$contextMenuItem-color-bg, v.$contextMenu-item-stops);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
             &:hover {
-                background-color: v.$gold;
+                background: m.customGradient(90deg, v.$contextMenuItem-color-bg-active, v.$contextMenu-item-stops);
             }
         }
     }
@@ -35,25 +41,4 @@
             m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
             v.$modal-color-border;
     }
-
-    // display: flex;
-    // flex-direction: column;
-    // align-items: stretch;
-    // justify-content: stretch;
-
-    // background-color: v.$modal-color-bg;
-    // background: m.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
-
-    // .er__modal__main {
-    //     padding-top:    25px;
-    //     padding-bottom: 25px;
-    // }
-
-    // .bottom-border,
-    // .top-border {
-    //     height: 3px;
-    //     background:
-    //         m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
-    //         v.$modal-color-border;
-    // }
 }

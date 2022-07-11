@@ -296,6 +296,25 @@ $modal-inner-border-stops: (
 );
 
 // ----------------------------------------------------------------------------
+// Context Menu
+// ----------------------------------------------------------------------------
+
+$contextMenu-color-bg: $modal-color-bg;
+$contextMenu-color-border: $modal-color-border;
+$contextMenuItem-color-bg: lighten($modal-color-bg, 11%);
+$contextMenuItem-color-bg-active: lighten($modal-color-bg, 30%);
+
+$contextMenu-item-stops: (
+    0%: 0.10,
+   10%: 0.25,
+   40%: 0.60,
+   // 50%: 0.75,
+   60%: 0.60,
+   90%: 0.25,
+  100%: 0.10,
+);
+
+// ----------------------------------------------------------------------------
 // You Died
 // ----------------------------------------------------------------------------
 
