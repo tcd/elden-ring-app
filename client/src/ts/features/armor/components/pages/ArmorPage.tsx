@@ -18,7 +18,7 @@ export const ArmorPage = (_props: unknown): JSX.Element => {
     useEffect(() => {
         dispatch(Actions.Core.setPageName("armor"))
         if (isBlank(activeType)) {
-            dispatch(Actions.Armor.setActiveType({ type: activeType }))
+            dispatch(Actions.Armor.setActiveType({ type: slotId }))
         }
         return () => {
             // dispatch(Actions.Core.clearPageName())

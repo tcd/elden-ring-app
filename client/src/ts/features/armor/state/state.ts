@@ -16,12 +16,12 @@ export interface ArmorState {
 
 export const INITIAL_ARMOR_STATE: ArmorState = {
     armorNames: {
-        Arms: null,
+        Arms:  null,
         Chest: null,
-        Head: null,
-        Legs: null,
+        Head:  null,
+        Legs:  null,
     },
-    activeType: "all",
+    activeType: null,
     oldName: null,
     menuHasScrolled: false,
 }

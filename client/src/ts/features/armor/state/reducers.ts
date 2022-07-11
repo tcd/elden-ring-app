@@ -25,12 +25,16 @@ export const reducers = {
         state.activeType = action.payload.type
     },
     equipArmor(state: ArmorState, action: PayloadAction<{ name: string }>) {
+        state.oldName = state.armorNames[state.activeType]
         state.armorNames[state.activeType] = action.payload.name
     },
     removeArmor(state: ArmorState) {
         if (!isBlank(state.activeType)) {
             state.armorNames[state.activeType] = null
         }
+    },
+    removeArmorByType(state: ArmorState, action: PayloadAction<{ type: ArmorType }>) {
+        state.armorNames[action.payload.type] = null
     },
     // equipArmor(state: ArmorState, action: PayloadAction<{ type: ArmorType, name: string }>) {
     //     state.armorNames[action.payload.type] = action.payload.name

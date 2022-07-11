@@ -1,12 +1,7 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-// import { WeaponSlot } from "./WeaponSlot"
-import { WeaponSlotContextMenu as WeaponSlot } from "./WeaponSlotContextMenu"
-
-// =============================================================================
-// All Together
-// =============================================================================
+import { WeaponSlot } from "./WeaponSlot"
 
 export const WeaponSlots = (_props: unknown): JSX.Element => {
 
