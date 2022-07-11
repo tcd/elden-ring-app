@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const path = require("path")
+const webpack = require("webpack")
 const shared = require("./webpack.config.shared")
 const rootFolder = path.resolve(__dirname, "..")
+const logsFolder = path.join(__dirname, "logs")
 
 /**
  * See [Webpack Configuration docs](https://webpack.js.org/configuration/) for more information.
@@ -29,6 +31,12 @@ const webpackConfig = {
         allowedHosts: "all",
         hot: true,
     },
+    plugins: [
+        ...shared.plugins,
+        new webpack.DefinePlugin({
+            "process.env.LOGS_FOLDER": JSON.stringify(logsFolder),
+        }),
+    ],
 }
 
 module.exports = webpackConfig

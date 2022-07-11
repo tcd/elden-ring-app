@@ -1,10 +1,15 @@
+import { useContext } from "react"
+
 import { useDispatch, useSelector } from "react-redux"
+import { ThingsContext, useLogging } from "@app/shared"
 
 import { Actions, Selectors } from "@app/state"
 
 export const AppHeader = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
+    const things = useContext(ThingsContext)
+    const logger = useLogging()
 
     const title = useSelector(Selectors.Core.title)
     const imageUrl = useSelector(Selectors.Core.titleIconUrl)
@@ -15,6 +20,9 @@ export const AppHeader = (_props: unknown): JSX.Element => {
             dispatch(Actions.Core.openSideNav())
         }
     }
+
+    console.log(things?.anything)
+    logger.info("oh shit noice")
 
     return (
         <header id="er__header">
