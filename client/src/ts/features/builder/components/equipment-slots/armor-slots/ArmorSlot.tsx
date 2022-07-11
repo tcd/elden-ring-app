@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux"
 import { Box } from "@mui/material"
 import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
-
 import { Armor, ArmorType } from "@app/types"
 import { MouseOverPopover } from "@app/shared"
 import { Actions } from "@app/state"

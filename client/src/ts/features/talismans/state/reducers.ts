@@ -6,17 +6,17 @@ import { CoreActions } from "@app/features/core"
 import { TalismansState, INITIAL_TALISMANS_STATE } from "./state"
 
 export const reducers = {
-    setActiveSlotId(state: TalismansState, action: PayloadAction<{ id: TalismanSlotId }>) {
-        state.oldTalismanName = state.talismanNames[action.payload.id]
-        state.activeSlotId = action.payload.id
+    setActiveSlotId(state: TalismansState, { payload: { id } }: PayloadAction<{ id: TalismanSlotId }>) {
+        state.oldTalismanName = state.talismanNames[id]
+        state.activeSlotId = id
         // state.menuHasScrolled = false
     },
     scrollMenu(state: TalismansState) {
         state.menuHasScrolled = true
     },
-    openTalismansMenu(state: TalismansState, action: PayloadAction<{ id: TalismanSlotId }>) {
-        state.oldTalismanName = state.talismanNames[action.payload.id]
-        state.activeSlotId = action.payload.id
+    openTalismansMenu(state: TalismansState, { payload: { id } }: PayloadAction<{ id: TalismanSlotId }>) {
+        state.oldTalismanName = state.talismanNames[id]
+        state.activeSlotId = id
         state.menuHasScrolled = false
     },
     closeTalismansMenu(state: TalismansState) {
@@ -27,13 +27,16 @@ export const reducers = {
     removeTalisman(state: TalismansState) {
         state.talismanNames[state.activeSlotId] = null
     },
-    setActiveName(state: TalismansState, action: PayloadAction<{ name: string }>) {
+    removeTalismanBySlot(state: TalismansState, { payload: { id } }: PayloadAction<{ id: TalismanSlotId }>) {
+        state.talismanNames[id] = null
+    },
+    setActiveName(state: TalismansState, { payload: { name } }: PayloadAction<{ name: string }>) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
             return
         }
         state.oldTalismanName = null
-        state.talismanNames[activeSlotId] = action.payload.name
+        state.talismanNames[activeSlotId] = name
     },
 }
 

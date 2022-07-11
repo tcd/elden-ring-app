@@ -26,3 +26,4 @@ x 2022-07-08 2022-07-06 Affinity option 'Undo Enhancement' does nothing
 2022-07-06 Add OpenGraph meta tags @client
 x 2022-07-08 2022-07-07 Rewrite starting class scroll to be virtual @client
 2022-07-08 Add context menus
+2022-07-11 Fix talisman options
