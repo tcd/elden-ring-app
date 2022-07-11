@@ -35,6 +35,7 @@
         "reduxjs",
         "scroller",
         "semibold",
+        "tslog",
         "unequip",
         "unstyled",
         "zindex"

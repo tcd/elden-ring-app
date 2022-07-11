@@ -3,3 +3,5 @@
 client/dist
 ignore
 ignore/**
+**/logs/**
+!**/.keep
