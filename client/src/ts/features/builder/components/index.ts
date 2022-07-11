@@ -1,3 +1,3 @@
-export * from "./BuilderPage"
 export * from "./MainBuilderMenu"
+export * from "./pages"
 export * from "./starting-class"
