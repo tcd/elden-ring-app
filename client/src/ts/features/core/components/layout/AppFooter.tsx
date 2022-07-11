@@ -22,15 +22,13 @@ export const AppFooter = () => {
     const currentYear = new Date().getFullYear()
 
     return (
-        <>
-            <div id="app-footer" className="mt-auto w-100">
-                {/* <Box sx={showOnMobile}>
-                    <AppBottomNav />
-                </Box> */}
-                {/* <Box sx={showOnDesktop}>
-                    <span>Elden Ring - {currentYear}</span>
-                </Box> */}
-            </div>
-        </>
+        <footer id="er__footer">
+            {/* <Box sx={showOnMobile}>
+                <AppBottomNav />
+            </Box> */}
+            {/* <Box sx={showOnDesktop}>
+                <span>Elden Ring - {currentYear}</span>
+            </Box> */}
+        </footer>
     )
 }

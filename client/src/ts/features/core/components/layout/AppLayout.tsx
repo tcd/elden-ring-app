@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 
 import { AppHeader } from "./AppHeader"
-// import { AppFooter } from "./AppFooter"
+import { AppFooter } from "./AppFooter"
 import { AppSideNav } from "./app-side-nav"
 
 export const AppLayout = () => {
