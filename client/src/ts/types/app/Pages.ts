@@ -10,6 +10,7 @@ export const PageNames = {
     settings:      "settings",
     spell:         "spell",
     startingClass: "starting-class",
+    status:        "status",
     talisman:      "talisman",
     weapon:        "weapon",
 } as const
@@ -22,11 +23,12 @@ export type PageName = PageNameValue
 // =============================================================================
 
 export const PageTitles = {
-    ["Ashes of War"]:          "Ashes of War",
-    ["Equipment"]:             "Equipment",
-    ["Memorize Spells"]:       "Memorize Spells",
-    ["Select Character Base"]: "Select Character Base",
-    ["System"]:                "System",
+    "Ashes of War":          "Ashes of War",
+    "Equipment":             "Equipment",
+    "Memorize Spells":       "Memorize Spells",
+    "Select Character Base": "Select Character Base",
+    "Status":                "Status",
+    "System":                "System",
 } as const
 export type PageTitleKey = keyof typeof PageTitles
 export type PageTitleValue = typeof PageTitles[PageTitleKey];
@@ -42,6 +44,7 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "settings":       "System",
     "spell":          "Memorize Spells",
     "starting-class": "Select Character Base",
+    "status":         "Status",
     "talisman":       "Equipment",
     "weapon":         "Equipment",
 }
@@ -86,6 +89,7 @@ export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "settings":       HEADER_ICONS.system,
     "spell":          HEADER_ICONS.spells,
     "starting-class": HEADER_ICONS["starting-class"],
-    talisman:         HEADER_ICONS.equipment,
+    "status":         HEADER_ICONS.status,
     "weapon":         HEADER_ICONS.equipment,
+    talisman:         HEADER_ICONS.equipment,
 }

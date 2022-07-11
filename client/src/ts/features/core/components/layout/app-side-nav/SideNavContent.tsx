@@ -22,6 +22,7 @@ const sideNavItems: SideNavItemProps[] = [
     {
         title: "Status",
         cloudflareId: "ui/title-icons/status",
+        url: "/status",
     },
     {
         title: "Settings",

@@ -44,7 +44,7 @@ export const Heading = (props: HeadingProps): JSX.Element => {
                         </div>
                     </div>
                 </div>
-                <hr className="mb-5" />
+                <hr className="er__hr mb-5" />
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 @use "../variables"as v;
-@use "../mixins/index"as m;
-@use "../helpers/index" as h;
+@use "../mixins"as m;
+@use "../helpers" as h;
 
 html, body {
     height: 100%;
@@ -73,4 +73,11 @@ span {
 .d-flex {
     // margin-bottom: 0.4rem;
     margin-bottom: 0px;
+}
+
+hr.er__hr {
+    height: 1.75px;
+    background:
+        m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
+        v.$gold;
 }
