@@ -6,6 +6,11 @@ import { CoreActions } from "@app/features/core"
 import { TalismansState, INITIAL_TALISMANS_STATE } from "./state"
 
 export const reducers = {
+    setActiveSlotId(state: TalismansState, action: PayloadAction<{ id: TalismanSlotId }>) {
+        state.oldTalismanName = state.talismanNames[action.payload.id]
+        state.activeSlotId = action.payload.id
+        // state.menuHasScrolled = false
+    },
     scrollMenu(state: TalismansState) {
         state.menuHasScrolled = true
     },

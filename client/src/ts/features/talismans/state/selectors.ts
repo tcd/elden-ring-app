@@ -98,6 +98,7 @@ export const TalismansSelectors = {
     slots: selectTalismanNames,
     all: selectTalismans,
     active: selectActiveTalisman,
+    activeSlotId: selectActiveSlotId,
     activeName: selectActiveTalismanName,
     array: selectArray,
     compactArray: selectCompactArray,

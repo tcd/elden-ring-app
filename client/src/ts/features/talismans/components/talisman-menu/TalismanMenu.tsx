@@ -1,20 +1,20 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { TalismanDetail, TalismanMenuGrid } from "@app/features/talismans/components"
+import { isBlank } from "@app/util"
+import { TalismanMenuGrid } from "@app/features/talismans/components"
 
 export const TalismanMenu = (): JSX.Element => {
 
-    const talisman = useSelector(Selectors.Talismans.active)
+    const activeSlot = useSelector(Selectors.Talismans.activeSlotId)
 
-    return (
-        <div id="variable-menu">
+    if (isBlank(activeSlot)) {
+        return null
+    } else {
+        return (
             <div className="er__equipmentMenu">
                 <TalismanMenuGrid />
             </div>
-            <div>
-                <TalismanDetail talisman={talisman} />
-            </div>
-        </div>
-    )
+        )
+    }
 }

@@ -1,1 +1,2 @@
-export * from "./TalismansPage"
+export * from "./TalismanPage"
+export * from "./TalismansTablePage"

@@ -30,9 +30,7 @@ export const AshesOfWarPage = (_props: unknown): JSX.Element => {
         <main id="er__pageRoot">
             <div className="row">
                 <div className="col">
-                    <div className="er__equipmentMenu">
-                        <WeaponSkillMenu />
-                    </div>
+                    <WeaponSkillMenu />
                 </div>
                 <div className="col">
                     <WeaponDetail />

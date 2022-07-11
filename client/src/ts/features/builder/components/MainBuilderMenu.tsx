@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 import { Actions, Selectors } from "@app/state"
-import { ArmorMenu, TalismanMenu, WeaponMenu, WeaponBuilderMenu } from "@app/features"
+import { ArmorBuilderMenu, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/features"
 
 import { LevelUpMenu } from "./level-up"
 import { CharacterStatus } from "./right-side-panels"
@@ -25,8 +25,8 @@ export const MainBuilderMenu = (_props: unknown): JSX.Element => {
 
     switch (pageName) {
         case null:       menuElement = <LevelUpMenu />; break
-        case "armor":    menuElement = <ArmorMenu />; break
-        case "talisman": menuElement = <TalismanMenu />; break
+        case "armor":    menuElement = <ArmorBuilderMenu />; break
+        case "talisman": menuElement = <TalismanBuilderMenu />; break
         case "weapon":   menuElement = <WeaponBuilderMenu />; break
         default:         menuElement = <LevelUpMenu />
     }

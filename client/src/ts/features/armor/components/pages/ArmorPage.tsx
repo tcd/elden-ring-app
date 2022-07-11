@@ -2,38 +2,37 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { WeaponSlotId } from "@app/types"
+import { ArmorType } from "@app/types"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
+import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/builder"
 
-export const WeaponsPage = (_props: unknown): JSX.Element => {
+export const ArmorPage = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
-    const { slotId } = useParams<{ slotId: WeaponSlotId }>()
+    const { slotId } = useParams<{ slotId: ArmorType }>()
 
-    const activeSlotId = useSelector(Selectors.Weapons.activeSlotId)
+    const activeType = useSelector(Selectors.Armor.activeType)
 
     useEffect(() => {
-        dispatch(Actions.Core.setPageName("weapon"))
-        if (isBlank(activeSlotId)) {
-            dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
-            // dispatch(Actions.Weapons.startCustomizingWeapon())
+        dispatch(Actions.Core.setPageName("armor"))
+        if (isBlank(activeType)) {
+            dispatch(Actions.Armor.setActiveType({ type: activeType }))
         }
         return () => {
             // dispatch(Actions.Core.clearPageName())
         }
-    }, [activeSlotId, slotId])
+    }, [activeType, slotId])
 
     return (
         <main id="er__pageRoot">
             <div className="row">
                 <div className="col">
-                    <WeaponMenu />
+                    <ArmorMenu />
                 </div>
                 <div className="col">
-                    <WeaponDetail />
+                    <ArmorDetail />
                 </div>
                 <div className="col">
                     <CharacterStatus />

@@ -2,24 +2,24 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { WeaponSlotId } from "@app/types"
+import { TalismanSlotId } from "@app/types"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
+import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
 import { CharacterStatus } from "@app/features/builder"
 
-export const WeaponsPage = (_props: unknown): JSX.Element => {
+export const TalismanPage = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
-    const { slotId } = useParams<{ slotId: WeaponSlotId }>()
+    const { slotId } = useParams<{ slotId: TalismanSlotId }>()
 
-    const activeSlotId = useSelector(Selectors.Weapons.activeSlotId)
+    const activeSlotId = useSelector(Selectors.Talismans.activeSlotId)
+    const activeTalisman = useSelector(Selectors.Talismans.active)
 
     useEffect(() => {
-        dispatch(Actions.Core.setPageName("weapon"))
+        dispatch(Actions.Core.setPageName("talisman"))
         if (isBlank(activeSlotId)) {
-            dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
-            // dispatch(Actions.Weapons.startCustomizingWeapon())
+            dispatch(Actions.Talismans.setActiveSlotId({ id: slotId }))
         }
         return () => {
             // dispatch(Actions.Core.clearPageName())
@@ -30,10 +30,10 @@ export const WeaponsPage = (_props: unknown): JSX.Element => {
         <main id="er__pageRoot">
             <div className="row">
                 <div className="col">
-                    <WeaponMenu />
+                    <TalismanMenu />
                 </div>
                 <div className="col">
-                    <WeaponDetail />
+                    <TalismanDetail talisman={activeTalisman} />
                 </div>
                 <div className="col">
                     <CharacterStatus />

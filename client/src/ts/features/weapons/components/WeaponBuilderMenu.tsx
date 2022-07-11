@@ -1,19 +1,17 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { WeaponDetail, WeaponMenuGrid, WeaponSkillMenu } from "@app/features/weapons/components"
+import { WeaponDetail, WeaponMenu, WeaponSkillMenu } from "@app/features/weapons/components"
 
 export const WeaponBuilderMenu = (): JSX.Element => {
 
     const customizing = useSelector(Selectors.Weapons.smithing.areWeSmithing)
 
-    const farLeft = customizing ? <WeaponSkillMenu /> : <WeaponMenuGrid />
+    const farLeft = customizing ? <WeaponSkillMenu /> : <WeaponMenu />
 
     return (
         <div id="variable-menu">
-            <div className="er__equipmentMenu">
-                {farLeft}
-            </div>
+            {farLeft}
             <div>
                 <WeaponDetail />
             </div>
