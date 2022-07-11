@@ -1,7 +1,7 @@
 import { Heading } from "@app/shared"
-import { TalismansTable } from "./TalismansTable"
+import { TalismansTable } from "@app/features/talismans"
 
-export const TalismansPage = (): JSX.Element => {
+export const TalismansTablePage = (): JSX.Element => {
 
     return (
         <div className="container flex-stretch-column">

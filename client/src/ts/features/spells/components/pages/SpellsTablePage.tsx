@@ -1,7 +1,7 @@
 import { Heading } from "@app/shared"
-import { SpellsTable } from "./SpellsTable"
+import { SpellsTable } from "@app/features/spells"
 
-export const SpellsPage = (): JSX.Element => {
+export const SpellsTablePage = (): JSX.Element => {
     return (
         <div className="container mb-5">
             <div className="row">

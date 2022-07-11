@@ -45,7 +45,7 @@ const columns: CustomTableColumn<Armor>[] = [
     // { field: "vitality",   header: "Vitality",   sortable: true, align: "right" },
 ]
 
-export const ArmorPage = (): JSX.Element => {
+export const ArmorTablePage = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
