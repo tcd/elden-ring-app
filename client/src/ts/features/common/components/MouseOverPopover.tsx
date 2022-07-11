@@ -1,6 +1,5 @@
 import { useState } from "react"
 import {
-    Typography,
     Box,
     Popover,
     PopoverOrigin,
@@ -80,7 +79,6 @@ export const MouseOverPopover = (props: MouseOverPopoverProps): JSX.Element => {
                 onClose={handlePopoverClose}
                 disableRestoreFocus
             >
-                {/* <Typography className="er__popover" sx={{ p: 1 }}>{props.popoverText}</Typography> */}
                 <EPopoverContent>
                     <>
                         {props.popoverContent}

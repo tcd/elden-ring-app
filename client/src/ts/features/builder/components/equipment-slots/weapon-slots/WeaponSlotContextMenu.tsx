@@ -4,8 +4,9 @@ import { useDispatch } from "react-redux"
 import { Box } from "@mui/material"
 import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
-import { WeaponSlotData, WeaponSlotId } from "@app/types"
+import { WeaponSlotId, weaponSlotIdName, WeaponSlotData } from "@app/types"
 import { Actions } from "@app/state"
+import { MouseOverPopover } from "@app/shared"
 import { WeaponSlot } from "./WeaponSlot"
 
 // export interface ContextMenuState {
@@ -31,6 +32,7 @@ export const WeaponSlotContextMenu = (props: WeaponSlotContextMenuProps): JSX.El
     const open = Boolean(anchorEl)
     const elementId = `weapon-slot-${slotId}`
     const id = open ? "er__contextMenu" : undefined
+    let titleString: string
 
     const handleContextMenuFunc = (event: MouseEvent) => {
         event.preventDefault()
@@ -108,6 +110,9 @@ export const WeaponSlotContextMenu = (props: WeaponSlotContextMenuProps): JSX.El
             { name: "Ash of War", action: handleClickAshOfWar },
             { name: "Unequip",    action: handleClickUnequip },
         ]
+        titleString = props.data.displayName
+    } else {
+        titleString = weaponSlotIdName(slotId)
     }
 
     const menuItemElements = menuItems.map(({ name, action }) => (
@@ -120,11 +125,9 @@ export const WeaponSlotContextMenu = (props: WeaponSlotContextMenuProps): JSX.El
             style={{ cursor: "context-menu" }}
             ref={containerRef}
         >
-            <WeaponSlot
-                {...props}
-                // onContextMenu={handleContextMenu}
-                ref={slotRef}
-            />
+            <MouseOverPopover id={elementId} popoverContent={titleString}>
+                <WeaponSlot {...props} ref={slotRef} />
+            </MouseOverPopover>
             <ClickAwayListener onClickAway={handleClickAway}>
                 <PopperUnstyled id={id} open={open} anchorEl={anchorEl}>
                     <div className="top-border"></div>

@@ -9,6 +9,7 @@
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: stretch;
+    z-index: v.$zindex-contextMenu;
 
     ul {
         flex-grow: 1;

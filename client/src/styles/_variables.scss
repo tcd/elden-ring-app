@@ -134,9 +134,10 @@ $zindex-startingClass-hover:           1011 !default;
 // $zindex-offcanvas:                  1045 !default;
 $zindex-modal-backdrop:             1050 !default;
 $zindex-modal:                      1055 !default;
-// $zindex-popover:                    1070 !default;
-// $zindex-tooltip:                    1080 !default;
+$zindex-popover:                    1070 !default;
+$zindex-tooltip:                    1080 !default;
 // $zindex-toast:                      1090 !default;
+$zindex-contextMenu:                  1100 !default;
 $zindex-sideNav-backdrop:             1190 !default;
 $zindex-sideNav:                      1200 !default;
 // scss-docs-end zindex-stack

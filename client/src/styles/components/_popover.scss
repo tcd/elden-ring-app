@@ -32,6 +32,7 @@ $er-popover-border-size: 2.5px;
 // =============================================================================
 
 .er__popover {
+    z-index: v.$zindex-popover;
     box-sizing: border-box;
     // https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax
     /* top | right | bottom | left */

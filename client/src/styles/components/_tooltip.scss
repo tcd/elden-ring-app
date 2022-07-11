@@ -1,0 +1,5 @@
+@use "../variables"as v;
+
+.er__tooltip {
+    z-index: v.$zindex-tooltip;
+}
