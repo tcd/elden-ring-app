@@ -18,7 +18,8 @@ import {
     ArmorPage,
 
     WeaponMenu,
-    WeaponsPage,
+    WeaponsTablePage,
+    AshesOfWarPage,
 
     SpellMenu,
     SpellsPage,
@@ -51,11 +52,13 @@ const routes: RouteObject[] = [
 
             { path: "/weapons",          element: <WeaponMenu />         },
             { path: "/weapons/menu",     element: <WeaponMenu />         },
-            { path: "/weapons/table",    element: <WeaponsPage />        },
+            { path: "/weapons/table",    element: <WeaponsTablePage />        },
 
             { path: "/spells",          element: <SpellsPage />          },
             { path: "/spells/menu",     element: <SpellMenu />           },
             { path: "/spells/table",    element: <SpellsPage />          },
+
+            { path: "/weapons/:slotId/ashes-of-war", element: <AshesOfWarPage /> },
         ],
     },
 ]

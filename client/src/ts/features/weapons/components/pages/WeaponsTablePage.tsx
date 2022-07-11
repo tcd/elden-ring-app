@@ -1,7 +1,8 @@
 import { Heading } from "@app/shared"
-import { WeaponsTable } from "./WeaponsTable"
+// import { WeaponsTable } from "./WeaponsTable"
+import { WeaponsTable } from "@app/features/weapons"
 
-export const WeaponsPage = (): JSX.Element => {
+export const WeaponsTablePage = (): JSX.Element => {
 
     return (
         <div className="container flex-stretch-column">
