@@ -1,36 +1,80 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box } from "@mui/material"
 import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
+import { WeaponSlotData, WeaponSlotId } from "@app/types"
 import { Actions } from "@app/state"
-import { WeaponSlotProps, WeaponSlot } from "./WeaponSlot"
+import { WeaponSlot } from "./WeaponSlot"
 
-export interface ContextMenuState {
-    mouseX: number
-    mouseY: number
+// export interface ContextMenuState {
+//     mouseX: number
+//     mouseY: number
+// }
+
+export interface WeaponSlotContextMenuProps {
+    slotId: WeaponSlotId
+    data: WeaponSlotData
 }
 
-export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
-
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const slotRef = useRef(null)
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-    const open = Boolean(anchorEl)
-    const id = open ? "er__contextMenu" : undefined
+export const WeaponSlotContextMenu = (props: WeaponSlotContextMenuProps): JSX.Element => {
 
     const { slotId } = props
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const containerRef = useRef(null)
+    const slotRef = useRef(null)
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+
+    const open = Boolean(anchorEl)
+    const elementId = `weapon-slot-${slotId}`
+    const id = open ? "er__contextMenu" : undefined
+
+    const handleContextMenuFunc = (event: MouseEvent) => {
+        event.preventDefault()
+        event.stopPropagation()
+        if (!containerRef?.current) { return }
+        if (anchorEl) {
+            // @ts-ignore: next-line
+            if (event?.target?.id != elementId) {
+                setAnchorEl(null)
+            }
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener("contextmenu", handleContextMenuFunc)
+        return () => {
+            document.removeEventListener("contextMenu", handleContextMenuFunc)
+        }
+    }, [anchorEl, setAnchorEl])
+
+    const closeContextMenu = () => {
+        setAnchorEl(null)
+    }
+
+    // =========================================================================
+    // Popup Handlers
+    // =========================================================================
+
     const handleContextMenu = (event: React.MouseEvent) => {
         event.preventDefault()
-        setAnchorEl(anchorEl ? null : slotRef.current)
+        if (anchorEl) {
+            setAnchorEl(null)
+        } else {
+            setAnchorEl(slotRef.current)
+        }
     }
 
     const handleClickAway = () => {
-        setAnchorEl(null)
+        closeContextMenu()
     }
+
+    // =========================================================================
+    // Menu Item Handlers
+    // =========================================================================
 
     const handleClickChange = () => {
         setAnchorEl(null)
@@ -47,6 +91,10 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
         setAnchorEl(null)
         dispatch(Actions.Weapons.unequipWeaponBySlotId({ id: slotId }))
     }
+
+    // =========================================================================
+    // Rendering
+    // =========================================================================
 
     let menuItems = [
         { name: "Choose",     action: handleClickChange },
@@ -70,10 +118,11 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
         <Box
             onContextMenu={handleContextMenu}
             style={{ cursor: "context-menu" }}
+            ref={containerRef}
         >
             <WeaponSlot
                 {...props}
-                onContextMenu={handleContextMenu}
+                // onContextMenu={handleContextMenu}
                 ref={slotRef}
             />
             <ClickAwayListener onClickAway={handleClickAway}>

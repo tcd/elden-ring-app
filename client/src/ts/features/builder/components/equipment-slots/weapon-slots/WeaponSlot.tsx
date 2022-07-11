@@ -1,5 +1,4 @@
 import { forwardRef } from "react"
-import { lowerCase } from "lodash"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -12,19 +11,19 @@ export interface WeaponSlotProps {
     slotId: WeaponSlotId
     data: WeaponSlotData
     // onClick:
-    onContextMenu: (event: React.MouseEvent<any>) => any,
+    // onContextMenu: (event: React.MouseEvent<any>) => any,
 }
 
-const defaultProps: Partial<WeaponSlotProps> = {
-    onContextMenu: () => { return null },
-}
+// const defaultProps: Partial<WeaponSlotProps> = {
+//     onContextMenu: () => { return null },
+// }
 
 const weaponSlot = forwardRef((props: WeaponSlotProps, ref) => {
 
-    props = {
-        ...defaultProps,
-        ...props,
-    }
+    // props = {
+    //     ...defaultProps,
+    //     ...props,
+    // }
 
     const dispatch = useDispatch()
 
@@ -36,7 +35,7 @@ const weaponSlot = forwardRef((props: WeaponSlotProps, ref) => {
     }
 
     const slotSx: SxProps = {}
-    const elementId = `weapon-slot-${lowerCase(slotId)}`
+    const elementId = `weapon-slot-${slotId}`
     const classNames = ["er__equipmentSlot"]
     let weaponImageElement: JSX.Element = null
     let titleString: string
@@ -71,7 +70,7 @@ const weaponSlot = forwardRef((props: WeaponSlotProps, ref) => {
             sx={slotSx}
             className={classNames.join(" ")}
             onClick={handleClick}
-            onContextMenu={props.onContextMenu}
+            // onContextMenu={props.onContextMenu}
         >
             {weaponImageElement && weaponImageElement}
         </Box>
