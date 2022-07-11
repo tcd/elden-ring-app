@@ -1,6 +1,7 @@
 import { useState, useRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { Box, SxProps, Menu, MenuItem, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
 import { Actions } from "@app/state"
@@ -14,10 +15,13 @@ export interface ContextMenuState {
 export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const slotRef = useRef(null)
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
     const open = Boolean(anchorEl)
     const id = open ? "er__contextMenu" : undefined
+
+    const { slotId } = props
 
     const handleContextMenu = (event: React.MouseEvent) => {
         event.preventDefault()
@@ -30,24 +34,33 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
 
     const handleClickChange = () => {
         setAnchorEl(null)
-        dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
+        dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
     }
 
     const handleClickAshOfWar = () => {
         setAnchorEl(null)
+        navigate(`/weapons/${slotId}/ashes-of-war`)
         // dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
     }
 
     const handleClickUnequip = () => {
         setAnchorEl(null)
-        dispatch(Actions.Weapons.unequipWeaponBySlotId({ id: props.slotId }))
+        dispatch(Actions.Weapons.unequipWeaponBySlotId({ id: slotId }))
     }
 
-    const menuItems = [
+    let menuItems = [
         { name: "Choose",     action: handleClickChange },
-        { name: "Ash of War", action: handleClickAshOfWar },
-        { name: "Unequip",    action: handleClickUnequip },
+        // { name: "Ash of War", action: handleClickAshOfWar },
+        // { name: "Unequip",    action: handleClickUnequip },
     ]
+
+    if (!props.data.empty) {
+        menuItems = [
+            { name: "Choose",     action: handleClickChange },
+            { name: "Ash of War", action: handleClickAshOfWar },
+            { name: "Unequip",    action: handleClickUnequip },
+        ]
+    }
 
     const menuItemElements = menuItems.map(({ name, action }) => (
         <li key={name} onClick={action}>{name}</li>
@@ -63,26 +76,6 @@ export const WeaponSlotContextMenu = (props: WeaponSlotProps): JSX.Element => {
                 onContextMenu={handleContextMenu}
                 ref={slotRef}
             />
-            {/* <Menu
-                // className="er__contextMenu"
-                open={contextMenu !== null}
-                onClose={handleClose}
-                anchorReference="anchorPosition"
-                anchorPosition={contextMenu !== null ? { top: contextMenu.mouseY, left: contextMenu.mouseX } : undefined}
-                PopoverClasses={{
-                    paper: "testing",
-                    root: "testing",
-                }}
-                PaperProps={{
-                    id: "er__contextMenu",
-                    elevation: 0,
-                }}
-                // MenuListProps={{ className: "er__contextMenu" }}
-            >
-                <MenuItem onClick={handleClickChange}>Choose</MenuItem>
-                <MenuItem onClick={handleClickAshOfWar}>Ash of War</MenuItem>
-                <MenuItem onClick={handleClickUnequip}>Unequip</MenuItem>
-            </Menu> */}
             <ClickAwayListener onClickAway={handleClickAway}>
                 <PopperUnstyled id={id} open={open} anchorEl={anchorEl}>
                     <div className="top-border"></div>

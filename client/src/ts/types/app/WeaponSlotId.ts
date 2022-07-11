@@ -36,6 +36,7 @@ export const weaponSlotIdName = (slotId: WeaponSlotId): string => {
 export interface WeaponSlotData {
     name: string
     displayName: string
+    empty: boolean
 }
 
 export type WeaponSlotsData = WeaponSlotIdMap<WeaponSlotData>

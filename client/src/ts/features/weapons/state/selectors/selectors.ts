@@ -95,7 +95,11 @@ export const selectEquipmentSlotData = (rootState: RootState): WeaponSlotsData =
     const slots = selectWeaponSlots(rootState)
     const results = {} as unknown as WeaponSlotsData
     for (const [id, settings] of Object.entries(slots)) {
-        results[id] = { name: settings.weapon_name, displayName: _selectWeaponDisplayName(settings) }
+        results[id] = {
+            name: settings.weapon_name,
+            displayName: _selectWeaponDisplayName(settings),
+            empty: isBlank(settings?.weapon_name),
+        }
     }
     return results
 }

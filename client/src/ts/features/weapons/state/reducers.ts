@@ -14,6 +14,13 @@ import { BuilderActions } from "@app/features/builder"
 import { WeaponsState } from "./state"
 
 export const reducers = {
+    setActiveSlotId(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
+        state.oldWeapon = {
+            ...state.slots[action.payload.id],
+        }
+        state.activeSlotId = action.payload.id
+        state.menuHasScrolled = false
+    },
     startCustomizingWeapon(state: WeaponsState) {
         state.customizingWeapon = true
         state.menuHasScrolled   = false
