@@ -1,23 +1,18 @@
+
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { WeaponDetail, WeaponMenuGrid, WeaponSkillMenu } from "@app/features/weapons/components"
+import { isBlank } from "@app/util"
+import { WeaponMenuGrid } from "@app/features/weapons/components"
 
 export const WeaponMenu = (): JSX.Element => {
 
-    const customizing = useSelector(Selectors.Weapons.smithing.areWeSmithing)
+    const activeSlot = useSelector(Selectors.Weapons.activeSlotId)
 
-    const farLeft = customizing ? <WeaponSkillMenu /> : <WeaponMenuGrid />
-
-    return (
-        <div id="variable-menu">
-            <div className="er__equipmentMenu">
-                {farLeft}
-            </div>
-            <div>
-                <WeaponDetail />
-            </div>
-        </div>
-    )
+    if (isBlank(activeSlot)) {
+        return null
+    } else {
+        return (<WeaponMenuGrid />)
+    }
 }
 

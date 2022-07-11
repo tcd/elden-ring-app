@@ -2,13 +2,13 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
+import { WeaponSlotId } from "@app/types"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponSlotId } from "@app/types"
-import { WeaponDetail, WeaponSkillMenu } from "@app/features/weapons/components"
+import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 import { CharacterStatus } from "@app/features/builder"
 
-export const AshesOfWarPage = (_props: unknown): JSX.Element => {
+export const WeaponsPage = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
     const { slotId } = useParams<{ slotId: WeaponSlotId }>()
@@ -16,7 +16,7 @@ export const AshesOfWarPage = (_props: unknown): JSX.Element => {
     const activeSlotId = useSelector(Selectors.Weapons.activeSlotId)
 
     useEffect(() => {
-        dispatch(Actions.Core.setPageName("ashes-of-war"))
+        dispatch(Actions.Core.setPageName("weapon"))
         if (isBlank(activeSlotId)) {
             dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
             // dispatch(Actions.Weapons.startCustomizingWeapon())
@@ -31,7 +31,7 @@ export const AshesOfWarPage = (_props: unknown): JSX.Element => {
             <div className="row">
                 <div className="col">
                     <div className="er__equipmentMenu">
-                        <WeaponSkillMenu />
+                        <WeaponMenu />
                     </div>
                 </div>
                 <div className="col">

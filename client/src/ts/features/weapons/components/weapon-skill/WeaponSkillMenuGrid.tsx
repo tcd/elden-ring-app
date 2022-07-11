@@ -78,7 +78,8 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     return (
         <div
             id="weapon-skill-grid-menu"
-            className={classNames.join(" ")}
+            // className={classNames.join(" ")}
+            className="er__equipmentMenu__gridColumn"
             ref={menuRef}
         >
             <AffinityModal />

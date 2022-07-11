@@ -20,6 +20,7 @@ import {
     ArmorTablePage,
 
     WeaponMenu,
+    WeaponsPage,
     WeaponsTablePage,
     AshesOfWarPage,
 
@@ -47,20 +48,21 @@ const routes: RouteObject[] = [
 
             { path: "/talismans",        element: <TalismansTablePage /> },
             { path: "/talismans/menu",   element: <TalismanMenu /> },
-            { path: "/talismans/table",  element: <TalismansTablePage /> },
+            // { path: "/talismans/table",  element: <TalismansTablePage /> },
 
             { path: "/armor",            element: <ArmorMenu /> },
             { path: "/armor/menu",       element: <ArmorMenu /> },
-            { path: "/armor/table",      element: <ArmorTablePage /> },
+            // { path: "/armor/table",      element: <ArmorTablePage /> },
 
-            { path: "/weapons",          element: <WeaponMenu /> },
-            { path: "/weapons/menu",     element: <WeaponMenu /> },
-            { path: "/weapons/table",    element: <WeaponsTablePage /> },
+            // { path: "/weapons",          element: <WeaponMenu /> },
+            // { path: "/weapons/menu",     element: <WeaponMenu /> },
+            // { path: "/weapons/table",    element: <WeaponsTablePage /> },
+            { path: "/weapons/:slotId", element: <WeaponsPage /> },
             { path: "/weapons/:slotId/ashes-of-war", element: <AshesOfWarPage /> },
 
             { path: "/spells",           element: <SpellsTablePage /> },
             { path: "/spells/menu",      element: <SpellMenu /> },
-            { path: "/spells/table",     element: <SpellsTablePage /> },
+            // { path: "/spells/table",     element: <SpellsTablePage /> },
 
             { path: "*",     element: <NotFoundPage /> },
 

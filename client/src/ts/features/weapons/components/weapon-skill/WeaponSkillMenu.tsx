@@ -10,12 +10,9 @@ export const WeaponSkillMenu = (): JSX.Element => {
 
     if (isBlank(activeName)) {
         return null
+    } else {
+        return (<WeaponSkillMenuGrid />)
     }
 
-    return (
-        <>
-            <WeaponSkillMenuGrid />
-        </>
-    )
 }
 
