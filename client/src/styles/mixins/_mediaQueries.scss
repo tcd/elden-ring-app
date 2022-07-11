@@ -4,6 +4,10 @@
     @media (max-width: map-get(v.$breakpoints, "mobile")) { @content; }
 }
 
+@mixin media-tablet-down {
+    @media (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+}
+
 @mixin media-tablet {
     @media (min-width: map-get(v.$breakpoints, "mobile")) and (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
 }
