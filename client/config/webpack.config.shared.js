@@ -84,7 +84,14 @@ const webpackConfig = {
                 use: [
                     "style-loader",
                     "css-loader",
-                    "sass-loader",
+                    {
+                        // https://webpack.js.org/loaders/sass-loader/
+                        loader: "sass-loader",
+                        options: {
+                            // Prefer `dart-sass`
+                            implementation: require.resolve("sass"),
+                        },
+                    },
                 ],
             },
             {
