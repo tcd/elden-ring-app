@@ -2,13 +2,20 @@ import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/integration/react"
 
 import { store, persistor } from "@app/state"
+import { LoggingProvider } from "@app/features"
+import { ConsoleLogger } from "@app/util"
 import { AppRoot } from "./AppRoot"
 
 export const App = () => {
+
+    const logger = new ConsoleLogger()
+
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
-                <AppRoot />
+                <LoggingProvider value={logger}>
+                    <AppRoot />
+                </LoggingProvider>
             </PersistGate>
         </Provider>
     )
