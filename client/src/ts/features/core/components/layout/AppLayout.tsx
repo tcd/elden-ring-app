@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 
 import { AppHeader } from "./AppHeader"
-import { AppFooter } from "./AppFooter"
+import { AppFooter } from "./app-footer"
 import { AppSideNav } from "./app-side-nav"
 
 export const AppLayout = () => {
@@ -12,7 +12,7 @@ export const AppLayout = () => {
                 <AppSideNav />
                 <Outlet />
             </div>
-            {/* <AppFooter /> */}
+            <AppFooter />
         </div>
     )
 }

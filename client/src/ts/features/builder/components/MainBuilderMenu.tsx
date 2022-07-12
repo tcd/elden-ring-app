@@ -6,7 +6,6 @@ import { ArmorBuilderMenu, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/f
 
 import { LevelUpMenu } from "./level-up"
 import { CharacterStatus } from "./right-side-panels"
-import { ActionMenu } from "./action-menu"
 
 export const MainBuilderMenu = (_props: unknown): JSX.Element => {
 
@@ -17,7 +16,7 @@ export const MainBuilderMenu = (_props: unknown): JSX.Element => {
         return () => {
             dispatch(Actions.Core.clearPageName())
         }
-    }, [])
+    }, [dispatch])
 
     const pageName = useSelector(Selectors.Core.pageName)
 
@@ -39,7 +38,6 @@ export const MainBuilderMenu = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-            <ActionMenu />
         </main>
     )
 }

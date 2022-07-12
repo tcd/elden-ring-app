@@ -1,7 +1,7 @@
-import { SxProps } from "@mui/material"
-import Box from "@mui/material/Box"
+import { Box, SxProps } from "@mui/material"
 
 // import { AppBottomNav } from "."
+import { AppFooterActions } from "."
 
 const showOnMobile: SxProps = {
     display: {
@@ -19,7 +19,7 @@ const showOnDesktop: SxProps = {
 
 export const AppFooter = () => {
 
-    const currentYear = new Date().getFullYear()
+    // const currentYear = new Date().getFullYear()
 
     return (
         <footer id="er__footer">
@@ -29,6 +29,7 @@ export const AppFooter = () => {
             {/* <Box sx={showOnDesktop}>
                 <span>Elden Ring - {currentYear}</span>
             </Box> */}
+            <AppFooterActions />
         </footer>
     )
 }
