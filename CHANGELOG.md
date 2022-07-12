@@ -7,12 +7,23 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 <!-- ## [Unreleased] -->
 
+## [0.4.0] - 2022-07-11
 ### Added
-- Show name on hover for items in armor & talisman grids
+- Add side navigation
+- Add persisted state (you can close the page and come back and not lose progress)
+- Add custom context menus for equipment slots
+- Add tooltips for items in armor & talisman grids
+- Add *Status* page
+- Add *Settings* page
+- Add custom cursor styles
+- Begin work on mobile styles
 ### Fixed
 - Improve behavior of affinity select:
     - Add functionality to *Undo Enhancement* button
     - Persist current affinity when changing affinity for the current weapon skill
+### Changed
+- Update routes; begin moving components to individual pages
+- Various minor changes
 
 
 ## [0.3.0] - 2022-07-08
