@@ -66,6 +66,7 @@
         "react-redux": "^7.2.6",
         "react-router-dom": "^6.2.2",
         "redux-deep-persist": "^1.0.6",
+        "redux-first-history": "^5.0.12",
         "redux-persist": "^6.0.0",
         "rimraf": "^3.0.2",
         "rpg-awesome": "^0.2.0",

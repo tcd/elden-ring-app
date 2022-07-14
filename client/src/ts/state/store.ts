@@ -11,6 +11,8 @@ import {
 } from "redux-persist"
 import storage from "redux-persist/lib/storage" // defaults to localStorage for web
 import { getPersistConfig } from "redux-deep-persist"
+import { createReduxHistoryContext, IHistoryContextOptions } from "redux-first-history"
+import { createBrowserHistory } from "history"
 
 import { FEATURE_KEYS } from "@app/util"
 import {
@@ -26,6 +28,19 @@ import {
     WeaponsSlice,
 } from "@app/features"
 
+
+const routerOptions: IHistoryContextOptions = {
+    history: createBrowserHistory(),
+    reduxTravelling: true,
+    savePreviousLocations: 5,
+}
+
+const {
+    createReduxHistory,
+    routerMiddleware,
+    routerReducer,
+} = createReduxHistoryContext(routerOptions)
+
 const rootReducer = combineReducers({
     [FEATURE_KEYS.Armor]:         ArmorSlice.reducer,
     [FEATURE_KEYS.Builder]:       BuilderSlice.reducer,
@@ -37,6 +52,7 @@ const rootReducer = combineReducers({
     [FEATURE_KEYS.Spells]:        SpellsSlice.reducer,
     [FEATURE_KEYS.Talismans]:     TalismansSlice.reducer,
     [FEATURE_KEYS.Weapons]:       WeaponsSlice.reducer,
+    [FEATURE_KEYS.router]:        routerReducer,
 })
 
 const persistConfig = getPersistConfig({
@@ -44,6 +60,9 @@ const persistConfig = getPersistConfig({
     key: "root",
     version: 1,
     storage: storage,
+    // blacklist: [
+    //     "router",
+    // ],
     whitelist: [
         // "Armor.activeType",
         "Armor.armorNames",
@@ -75,8 +94,10 @@ export const store = configureStore({
         serializableCheck: {
             ignoredActions: [ FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER ],
         },
-    }),
+    }).concat(routerMiddleware),
 })
+
+export const history = createReduxHistory(store)
 
 export const persistor = persistStore(store)
 
