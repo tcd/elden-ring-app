@@ -35,6 +35,12 @@ const sideNavItems: SideNavItemProps[] = [
         url: "/status",
     },
     {
+        pageName: "about",
+        title: "About",
+        cloudflareId: "ui/title-icons/map",
+        url: "/about",
+    },
+    {
         pageName: "settings",
         title: "Settings",
         cloudflareId: "ui/title-icons/system",

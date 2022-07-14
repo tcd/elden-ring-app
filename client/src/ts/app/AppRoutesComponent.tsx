@@ -13,6 +13,7 @@ import {
     ChecklistPage,
     StatusPage,
     LevelUpPage,
+    EquipmentPage,
 
     TalismanPage,
     TalismansTablePage,
@@ -46,6 +47,7 @@ const routes: RouteObject[] = [
             { path: "/status",    element: <StatusPage /> },
             { path: "/test",      element: <TestPage /> },
             { path: "/level-up",  element: <LevelUpPage /> },
+            { path: "/equipment", element: <EquipmentPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
             { path: "/talismans/:slotId", element: <TalismanPage /> },

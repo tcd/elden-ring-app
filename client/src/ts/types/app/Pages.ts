@@ -5,6 +5,7 @@ import { CloudflareVariant, getImageSrcManual } from "@app/util"
 // =============================================================================
 
 export const PageNames = {
+    "about":          "about",
     "armor":          "armor",
     "ashes-of-war":   "ashes-of-war",
     "equipment":      "equipment",
@@ -26,6 +27,7 @@ export type PageName = PageNameValue
 // =============================================================================
 
 export const PageTitles = {
+    "About":                 "About",
     "Ashes of War":          "Ashes of War",
     "Equipment":             "Equipment",
     "Level Up":              "Level Up",
@@ -44,6 +46,7 @@ export type PageTitle = PageTitleValue
 // =============================================================================
 
 export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
+    "about":          "About",
     "armor":          "Equipment",
     "ashes-of-war":   "Ashes of War",
     "equipment":      "Equipment",
@@ -92,6 +95,7 @@ export const HEADER_ICONS = Object.entries(HeaderIconIds).reduce((acc, [key, val
 export const DEFAULT_PAGE_ICON = HEADER_ICONS["site-of-grace"]
 
 export const PAGE_NAME_ICONS: Record<PageName, string> = {
+    "about":          HEADER_ICONS.map,
     "armor":          HEADER_ICONS.equipment,
     "ashes-of-war":   HEADER_ICONS["ashes-of-war"],
     "equipment":      HEADER_ICONS.equipment,
