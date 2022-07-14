@@ -7,10 +7,10 @@ import { StatRow, StatRowProps } from "@app/shared"
 
 export const Resistance = (): JSX.Element => {
 
-    const immunity   = useSelector(Selectors.Builder.resistance.immunity)
-    const robustness = useSelector(Selectors.Builder.resistance.robustness)
-    const focus      = useSelector(Selectors.Builder.resistance.focus)
-    const vitality   = useSelector(Selectors.Builder.resistance.vitality)
+    const immunity   = useSelector(Selectors.Meta.Stats.immunity)
+    const robustness = useSelector(Selectors.Meta.Stats.robustness)
+    const focus      = useSelector(Selectors.Meta.Stats.focus)
+    const vitality   = useSelector(Selectors.Meta.Stats.vitality)
 
     const resistanceData: StatRowProps[] = [
         { title: "Immunity",   value: immunity,   description: DESCRIPTIONS.LEVEL_UP_SCREEN[Stat.IMMUNITY]   },

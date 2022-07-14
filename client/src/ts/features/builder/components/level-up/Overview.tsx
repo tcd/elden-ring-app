@@ -6,9 +6,9 @@ import { ErCard, StatRow } from "@app/shared"
 
 export const Overview = (): JSX.Element => {
 
-    const level = useSelector(Selectors.Builder.level)
-    const runes = useSelector(Selectors.Builder.runesToNextLevel)
-    const baseClass = useSelector(Selectors.Builder.startingClass.startingClassName)
+    const level = useSelector(Selectors.Meta.Levels.runeLevel)
+    const runes = useSelector(Selectors.Meta.Levels.runesForNextLevel)
+    const baseClass = useSelector(Selectors.StartingClass.startingClassName)
 
     return (
         <ErCard title="Overview" iconPath={mdiAccount} className={"mr-5"}>

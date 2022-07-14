@@ -21,7 +21,7 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
     const { sClass } = props
 
     const handleClick = () => {
-        dispatch(Actions.Builder.setPendingStartingClass({ name: sClass.name }))
+        dispatch(Actions.StartingClass.setPendingStartingClass({ name: sClass.name }))
     }
 
     const imageSrc = getImageSrc("Starting Class", sClass.name, "public")

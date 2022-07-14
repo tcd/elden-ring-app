@@ -3,8 +3,8 @@ import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 import { startingClassByName } from "@app/data"
 import { ArmorType } from "@app/types"
 import { isBlank } from "@app/util"
-import { BuilderActions } from "@app/features/builder"
 import { CoreActions } from "@app/features/core"
+import { StartingClassActions } from "@app/features/starting-class"
 import { ArmorState, INITIAL_ARMOR_STATE } from "./state"
 
 export const reducers = {
@@ -56,7 +56,7 @@ const noArmorSelected = (slice: ArmorState): boolean => {
 export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_ARMOR_STATE)
-        .addCase(BuilderActions.confirmStartingClassName, (state: ArmorState, { payload: { name } }) => {
+        .addCase(StartingClassActions.confirmStartingClassName, (state: ArmorState, { payload: { name } }) => {
             if (noArmorSelected(state)) {
                 const sClass = startingClassByName(name)
                 state.armorNames = {

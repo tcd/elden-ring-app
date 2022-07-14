@@ -20,8 +20,8 @@ import {
     getRequirements,
 } from "@app/util"
 import { RootState } from "@app/state"
-import { selectCorrectedAttributes } from "@app/features/builder/state/selectors/level"
 import { selectWeapons, selectAttackElementCorrectParams, selectWeaponSkills } from "@app/features/builder/state/selectors/api"
+import { selectAllAttributeLevels } from "@app/state/meta-selectors/LevelsSelectors"
 
 import {
     _selectWeaponDisplayName,
@@ -135,7 +135,7 @@ const selectSlimWeaponStatData = (rootState: RootState): SlimWeaponData => {
 }
 
 export const selectCalculatedWeaponStats = (rootState: RootState): CalculatedWeaponStats => {
-    const attributes = selectCorrectedAttributes(rootState)
+    const attributes = selectAllAttributeLevels(rootState)
     const weapon = selectActiveWeapon(rootState)
     const stats = selectSlimWeaponStatData(rootState)
     if (isBlank(stats)) {
@@ -189,7 +189,7 @@ export const selectOldWeaponStats = (rootState: RootState): CalculatedWeaponStat
         return UnarmedStats
     }
 
-    const attributes = selectCorrectedAttributes(rootState)
+    const attributes = selectAllAttributeLevels(rootState)
     const allWeapons = selectAllWeapons(rootState)
 
     const oldWeapon = allWeapons.find(x => x.name == oldWeaponSettings.weapon_name)
@@ -314,7 +314,7 @@ const _selectWeaponSettingsBySlot = (rootState: RootState, slotId: WeaponSlotId)
 }
 
 const _selectCalculatedWeaponStatsBySlot = (rootState: RootState, slotId: WeaponSlotId): CalculatedWeaponStats => {
-    const attributes = selectCorrectedAttributes(rootState)
+    const attributes = selectAllAttributeLevels(rootState)
     const weaponSettings = _selectWeaponSettingsBySlot(rootState, slotId)
     if (isBlank(weaponSettings?.weapon_name)) {
         return UnarmedStats

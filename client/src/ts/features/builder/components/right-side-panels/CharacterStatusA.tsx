@@ -8,21 +8,21 @@ import { EquipLoad } from "@app/features/builder/components/stats"
 
 export const CharacterStatusA = (): JSX.Element => {
 
-    const level     = useSelector(Selectors.Builder.level)
-    const hp        = useSelector(Selectors.Builder.stat.hp)
-    const fp        = useSelector(Selectors.Builder.stat.fp)
-    const stamina   = useSelector(Selectors.Builder.stat.stamina)
-    const poise     = useSelector(Selectors.Builder.stat.poise)
-    const discovery = useSelector(Selectors.Builder.stat.discovery)
+    const level     = useSelector(Selectors.Meta.Levels.runeLevel)
+    const hp        = useSelector(Selectors.Meta.Stats.hp)
+    const fp        = useSelector(Selectors.Meta.Stats.fp)
+    const stamina   = useSelector(Selectors.Meta.Stats.stamina)
+    const poise     = useSelector(Selectors.Meta.Stats.poise)
+    const discovery = useSelector(Selectors.Meta.Stats.discovery)
 
-    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
-    const mind         = useSelector(Selectors.Builder.attribute.mind)
-    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
-    const strength     = useSelector(Selectors.Builder.attribute.strength)
-    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
-    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
-    const faith        = useSelector(Selectors.Builder.attribute.faith)
-    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+    const vigor        = useSelector(Selectors.Meta.Levels.corrected.vigor)
+    const mind         = useSelector(Selectors.Meta.Levels.corrected.mind)
+    const endurance    = useSelector(Selectors.Meta.Levels.corrected.endurance)
+    const strength     = useSelector(Selectors.Meta.Levels.corrected.strength)
+    const dexterity    = useSelector(Selectors.Meta.Levels.corrected.dexterity)
+    const intelligence = useSelector(Selectors.Meta.Levels.corrected.intelligence)
+    const faith        = useSelector(Selectors.Meta.Levels.corrected.faith)
+    const arcane       = useSelector(Selectors.Meta.Levels.corrected.arcane)
 
     const attributeData: StatRowProps[] = [
         { title: "Vigor",        value: vigor        },

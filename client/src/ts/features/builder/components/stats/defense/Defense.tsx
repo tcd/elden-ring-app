@@ -7,14 +7,14 @@ import { StatRow } from "@app/shared"
 
 export const Defense = (): JSX.Element => {
 
-    const physicalNegation  = useSelector(Selectors.Builder.defense.negation.physical)
-    const strikeNegation    = useSelector(Selectors.Builder.defense.negation.strike)
-    const slashNegation     = useSelector(Selectors.Builder.defense.negation.slash)
-    const pierceNegation    = useSelector(Selectors.Builder.defense.negation.pierce)
-    const magicNegation     = useSelector(Selectors.Builder.defense.negation.magic)
-    const fireNegation      = useSelector(Selectors.Builder.defense.negation.fire)
-    const lightningNegation = useSelector(Selectors.Builder.defense.negation.lightning)
-    const holyNegation      = useSelector(Selectors.Builder.defense.negation.holy)
+    const physicalNegation  = useSelector(Selectors.Meta.Defense.damageNegation.physical)
+    const strikeNegation    = useSelector(Selectors.Meta.Defense.damageNegation.strike)
+    const slashNegation     = useSelector(Selectors.Meta.Defense.damageNegation.slash)
+    const pierceNegation    = useSelector(Selectors.Meta.Defense.damageNegation.pierce)
+    const magicNegation     = useSelector(Selectors.Meta.Defense.damageNegation.magic)
+    const fireNegation      = useSelector(Selectors.Meta.Defense.damageNegation.fire)
+    const lightningNegation = useSelector(Selectors.Meta.Defense.damageNegation.lightning)
+    const holyNegation      = useSelector(Selectors.Meta.Defense.damageNegation.holy)
 
     const stats = [
         { title: "Physical",  value: physicalNegation,   stat: Stat.PHYSICAL_DEFENSE  },

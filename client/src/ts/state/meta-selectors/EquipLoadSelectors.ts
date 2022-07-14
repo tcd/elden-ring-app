@@ -1,48 +1,21 @@
 import { sum } from "lodash"
 
-import {
-    Encumbrance,
-    Stat,
-    EquipmentEffectMethod,
-    EquipmentEffectType,
-} from "@types"
+import { LEVEL_EQUIP_LOAD_MAP } from "@app/data"
+import { Encumbrance, EquipmentEffectMethod, EquipmentEffectType, Stat } from "@app/types"
 import { RootState } from "@app/state"
 import {
-    LEVEL_EQUIP_LOAD_MAP,
-} from "@app/data"
+    ArmorSelectors as Armor,
+    TalismansSelectors as Talismans,
+    WeaponsSelectors as Weapons,
+} from "@app/features"
+import { LevelsSelectors as Level } from "./LevelsSelectors"
 
-import * as Level from "./level"
-import { TalismansSelectors as Talismans } from "@app/features/talismans"
-import { WeaponsSelectors as Weapons } from "@app/features/weapons"
-import { ArmorSelectors as Armor } from "@app/features/armor"
-
-// =============================================================================
-// Equip Load
-// =============================================================================
-
-export const selectBaseEquipLoad = (rootState: RootState): number => {
-    const level = Level.selectCorrectedEndurance(rootState)
+const selectBaseEquipLoad = (rootState: RootState): number => {
+    const level = Level.corrected.endurance(rootState)
     return (level > 99) ? LEVEL_EQUIP_LOAD_MAP[-1] : LEVEL_EQUIP_LOAD_MAP[level]
 }
 
-export const selectEquipLoadPercentage = (rootState: RootState) => {
-    const maxLoad     = selectMaxEquipLoad(rootState)
-    const currentLoad = selectCurrentEquipLoad(rootState)
-
-    return (parseFloat((currentLoad / maxLoad).toFixed(3)))
-}
-
-export const selectEquipLoadDescription = (rootState: RootState) => {
-    const percentage = selectEquipLoadPercentage(rootState)
-
-    if (percentage <= 0.299) { return Encumbrance.Light }
-    if (percentage <= 0.699) { return Encumbrance.Medium }
-    if (percentage <= 0.999) { return Encumbrance.Heavy }
-
-    return Encumbrance.Overloaded
-}
-
-export const selectCurrentEquipLoad = (rootState: RootState) => {
+const selectCurrentEquipLoad = (rootState: RootState) => {
     const talismans      = Talismans.compactArray(rootState)
     const talismanWeight = sum(talismans.map(x => x?.weight ?? 0))
 
@@ -52,7 +25,6 @@ export const selectCurrentEquipLoad = (rootState: RootState) => {
     const armor       = Armor.compactArray(rootState)
     const armorWeight = sum(armor.map(x => x?.weight ?? 0))
 
-
     return sum([
         armorWeight,
         talismanWeight,
@@ -60,7 +32,7 @@ export const selectCurrentEquipLoad = (rootState: RootState) => {
     ].flat())
 }
 
-export const selectMaxEquipLoad = (rootState: RootState): number => {
+const selectMaxEquipLoad = (rootState: RootState): number => {
     const baseEquipLoad = selectBaseEquipLoad(rootState)
 
     let equipLoad = baseEquipLoad
@@ -93,4 +65,28 @@ export const selectMaxEquipLoad = (rootState: RootState): number => {
     }
 
     return equipLoad
+}
+
+const selectEquipLoadPercentage = (rootState: RootState) => {
+    const maxLoad     = selectMaxEquipLoad(rootState)
+    const currentLoad = selectCurrentEquipLoad(rootState)
+
+    return (parseFloat((currentLoad / maxLoad).toFixed(3)))
+}
+
+const selectEquipLoadDescription = (rootState: RootState) => {
+    const percentage = selectEquipLoadPercentage(rootState)
+
+    if (percentage <= 0.299) { return Encumbrance.Light }
+    if (percentage <= 0.699) { return Encumbrance.Medium }
+    if (percentage <= 0.999) { return Encumbrance.Heavy }
+
+    return Encumbrance.Overloaded
+}
+
+export const EquipLoadSelectors = {
+    max:         selectMaxEquipLoad,
+    current:     selectCurrentEquipLoad,
+    percentage:  selectEquipLoadPercentage,
+    description: selectEquipLoadDescription,
 }

@@ -32,27 +32,27 @@ export const StatusPage = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const level     = useSelector(Selectors.Builder.level)
-    const runes     = useSelector(Selectors.Builder.runesToNextLevel)
-    const baseClass = useSelector(Selectors.Builder.startingClass.startingClassName)
+    const level = useSelector(Selectors.Meta.Levels.runeLevel)
+    const runes = useSelector(Selectors.Meta.Levels.runesForNextLevel)
+    const baseClass = useSelector(Selectors.StartingClass.startingClassName)
     const bodyType  = "Type A" // "Type A", "Type B"
     const age       = "Young" // "Young", "Mature", "Aged"
     const keepsake  = "Boiled Prawn"
 
-    const hp        = useSelector(Selectors.Builder.stat.hp)
-    const fp        = useSelector(Selectors.Builder.stat.fp)
-    const stamina   = useSelector(Selectors.Builder.stat.stamina)
-    const poise     = useSelector(Selectors.Builder.stat.poise)
-    const discovery = useSelector(Selectors.Builder.stat.discovery)
+    const hp        = useSelector(Selectors.Meta.Stats.hp)
+    const fp        = useSelector(Selectors.Meta.Stats.fp)
+    const stamina   = useSelector(Selectors.Meta.Stats.stamina)
+    const poise     = useSelector(Selectors.Meta.Stats.poise)
+    const discovery = useSelector(Selectors.Meta.Stats.discovery)
 
-    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
-    const mind         = useSelector(Selectors.Builder.attribute.mind)
-    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
-    const strength     = useSelector(Selectors.Builder.attribute.strength)
-    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
-    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
-    const faith        = useSelector(Selectors.Builder.attribute.faith)
-    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+    const vigor        = useSelector(Selectors.Meta.Levels.corrected.vigor)
+    const mind         = useSelector(Selectors.Meta.Levels.corrected.mind)
+    const endurance    = useSelector(Selectors.Meta.Levels.corrected.endurance)
+    const strength     = useSelector(Selectors.Meta.Levels.corrected.strength)
+    const dexterity    = useSelector(Selectors.Meta.Levels.corrected.dexterity)
+    const intelligence = useSelector(Selectors.Meta.Levels.corrected.intelligence)
+    const faith        = useSelector(Selectors.Meta.Levels.corrected.faith)
+    const arcane       = useSelector(Selectors.Meta.Levels.corrected.arcane)
 
     useEffect(() => {
         if (isBlank(baseClass)) {
@@ -62,7 +62,7 @@ export const StatusPage = (): JSX.Element => {
         return () => {
             dispatch(Actions.Core.clearPageName())
         }
-    }, [baseClass])
+    }, [dispatch, baseClass])
 
     const attributeData: StatRowProps[] = [
         { title: "Vigor",        value: vigor        },

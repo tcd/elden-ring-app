@@ -12,6 +12,12 @@ import { getImageSrcManual } from "@app/util"
 
 const sideNavItems: SideNavItemProps[] = [
     {
+        pageName: "level-up",
+        title: "Level Up",
+        cloudflareId: "ui/title-icons/level-up",
+        url: "/level-up",
+    },
+    {
         pageName: "equipment",
         title: "Equipment",
         cloudflareId: "ui/title-icons/equipment",

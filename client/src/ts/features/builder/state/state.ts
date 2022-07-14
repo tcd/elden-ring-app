@@ -6,7 +6,7 @@ import {
     RequestState,
     StartingClassName,
 } from "@app/types"
-import { FEATURE_KEYS, CONFIG } from "@app/util"
+import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 // Define a type for the slice state

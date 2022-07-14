@@ -9,27 +9,21 @@ export const StartingClassConfirmationDialog = (_props: unknown): JSX.Element =>
     const dispatch = useDispatch()
     // const navigate = useNavigate()
 
-    const pendingName = useSelector(Selectors.Builder.startingClass.pendingName)
-    const confirming = useSelector(Selectors.Builder.startingClass.confirmingStartingClass)
+    const pendingName = useSelector(Selectors.StartingClass.pendingName)
+    const confirming = useSelector(Selectors.StartingClass.confirmingStartingClass)
 
     const handleConfirm = async () => {
-        await dispatch(Actions.Builder.confirmStartingClassName({ name: pendingName }))
+        await dispatch(Actions.StartingClass.confirmStartingClassName({ name: pendingName }))
         // navigate("/")
     }
 
     const handleCancel = () => {
-        dispatch(Actions.Builder.cancelStartingClassConfirmation())
+        dispatch(Actions.StartingClass.cancelStartingClassConfirmation())
     }
 
     const options = [
-        {
-            title: "Yes",
-            handler: handleConfirm,
-        },
-        {
-            title: "No",
-            handler: handleCancel,
-        },
+        { title: "Yes", handler: handleConfirm },
+        { title: "No",  handler: handleCancel  },
     ]
 
     return (

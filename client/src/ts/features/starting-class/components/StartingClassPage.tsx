@@ -10,15 +10,13 @@ export const StartingClassPage = (_props: unknown): JSX.Element => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        // Anything in here is fired on component mount.
         dispatch(Actions.Core.setPageName("starting-class"))
         document.getElementById("root").classList.add("startingClassPage")
         return () => {
-            // Anything in here is fired on component unmount.
-            // dispatch(Actions.Core.clearPageName())
+            dispatch(Actions.Core.clearPageName())
             document.getElementById("root").classList.remove("startingClassPage")
         }
-    }, [])
+    }, [dispatch])
 
     return (
         <Box className="er__startingClass">

@@ -10,8 +10,8 @@ import {
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"
 import { isBlank } from "@app/util"
-import { BuilderActions } from "@app/features/builder"
 import { CoreActions } from "@app/features/core"
+import { StartingClassActions } from "@app/features/starting-class"
 import { WeaponsState, INITIAL_WEAPONS_STATE } from "./state"
 
 export const reducers = {
@@ -136,7 +136,7 @@ const noWeaponsSelected = (slice: WeaponsState): boolean => {
 export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_WEAPONS_STATE)
-        .addCase(BuilderActions.confirmStartingClassName, (state: WeaponsState, { payload: { name } }) => {
+        .addCase(StartingClassActions.confirmStartingClassName, (state: WeaponsState, { payload: { name } }) => {
             if (noWeaponsSelected(state)) {
                 const sClass = startingClassByName(name)
                 state.slots.R1.weapon_name = sClass?.R1 ?? null

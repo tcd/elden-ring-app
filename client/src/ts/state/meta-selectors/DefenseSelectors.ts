@@ -10,8 +10,7 @@ import {
     holyDefenseFromArcane,
 } from "@app/util"
 
-import * as Level from "./level"
-import * as Stats from "./stats"
+import { LevelsSelectors as Level } from "./LevelsSelectors"
 import { ArmorSelectors as Armor } from "@app/features/armor"
 
 // =============================================================================
@@ -19,39 +18,39 @@ import { ArmorSelectors as Armor } from "@app/features/armor"
 // =============================================================================
 
 const selectDefenseFromRuneLevel = (rootState: RootState): number => {
-    const runeLevel = Level.selectCorrectedLevel(rootState)
+    const runeLevel = Level.runeLevel(rootState)
     const defense = defenseFromRuneLevel(runeLevel)
     return defense
 }
 
-export const selectPhysicalDefense = (rootState: RootState) => {
+const selectPhysicalDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const strengthLevel = Level.selectCorrectedStrength(rootState)
+    const strengthLevel = Level.corrected.strength(rootState)
     const attributeDefense = physicalDefenseFromStrength(strengthLevel)
     return sum([baseDefense, attributeDefense])
 }
 // export const selectStrikeDefense = (state: RootState) => { return selectNegation(state, "strike") }
 // export const selectSlashDefense  = (state: RootState) => { return selectNegation(state, "slash") }
 // export const selectPierceDefense = (state: RootState) => { return selectNegation(state, "pierce") }
-export const selectMagicDefense = (rootState: RootState) => {
+const selectMagicDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const intelligenceLevel = Level.selectCorrectedIntelligence(rootState)
+    const intelligenceLevel = Level.corrected.intelligence(rootState)
     const attributeDefense = magicDefenseFromIntelligence(intelligenceLevel)
     return sum([baseDefense, attributeDefense])
 }
-export const selectFireDefense = (rootState: RootState) => {
+const selectFireDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const vigorLevel = Level.selectCorrectedVigor(rootState)
+    const vigorLevel = Level.corrected.vigor(rootState)
     const attributeDefense = fireDefenseFromVigor(vigorLevel)
     return sum([baseDefense, attributeDefense])
 }
-export const selectLightningDefense = (rootState: RootState): number => {
+const selectLightningDefense = (rootState: RootState): number => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
     return sum([baseDefense])
 }
-export const selectHolyDefense = (rootState: RootState) => {
+const selectHolyDefense = (rootState: RootState) => {
     const baseDefense = selectDefenseFromRuneLevel(rootState)
-    const arcaneLevel = Level.selectCorrectedArcane(rootState)
+    const arcaneLevel = Level.corrected.arcane(rootState)
     const attributeDefense = holyDefenseFromArcane(arcaneLevel)
     return sum([baseDefense, attributeDefense])
 }
@@ -60,30 +59,37 @@ export const selectHolyDefense = (rootState: RootState) => {
 // Damage Negation
 // =============================================================================
 
-export const selectNegation = (state: RootState, key: keyof(IArmor)) => {
+const selectNegation = (state: RootState, key: keyof(IArmor)) => {
     const armor       = Armor.compactArray(state)
     const armorPoints = sum(armor.map(x => x[key] ?? 0))
     return sum([armorPoints].flat()).toFixed(1)
 }
 
-export const selectPhysicalNegation  = (state: RootState) => { return selectNegation(state, "physical") }
-export const selectStrikeNegation    = (state: RootState) => { return selectNegation(state, "vs_strike") }
-export const selectSlashNegation     = (state: RootState) => { return selectNegation(state, "vs_slash") }
-export const selectPierceNegation    = (state: RootState) => { return selectNegation(state, "vs_pierce") }
-export const selectMagicNegation     = (state: RootState) => { return selectNegation(state, "magic") }
-export const selectFireNegation      = (state: RootState) => { return selectNegation(state, "fire") }
-export const selectLightningNegation = (state: RootState) => { return selectNegation(state, "lightning") }
-export const selectHolyNegation      = (state: RootState) => { return selectNegation(state, "holy") }
+const selectPhysicalNegation  = (state: RootState) => selectNegation(state, "physical")
+const selectStrikeNegation    = (state: RootState) => selectNegation(state, "vs_strike")
+const selectSlashNegation     = (state: RootState) => selectNegation(state, "vs_slash")
+const selectPierceNegation    = (state: RootState) => selectNegation(state, "vs_pierce")
+const selectMagicNegation     = (state: RootState) => selectNegation(state, "magic")
+const selectFireNegation      = (state: RootState) => selectNegation(state, "fire")
+const selectLightningNegation = (state: RootState) => selectNegation(state, "lightning")
+const selectHolyNegation      = (state: RootState) => selectNegation(state, "holy")
 
-// export const selectResistance = (state: RootState) => {
-//     const immunity = selectImmunity(state)
-//     const robustness = selectRobustness(state)
-//     const focus = selectFocus(state)
-//     const vitality = selectVitality(state)
-//     return {
-//         immunity,
-//         robustness,
-//         focus,
-//         vitality,
-//     }
-// }
+export const DefenseSelectors = {
+    defense: {
+        physical: selectPhysicalDefense,
+        magic: selectMagicDefense,
+        fire: selectFireDefense,
+        lightning: selectLightningDefense,
+        holy: selectHolyDefense,
+    },
+    damageNegation: {
+        physical:  selectPhysicalNegation,
+        strike:    selectStrikeNegation,
+        slash:     selectSlashNegation,
+        pierce:    selectPierceNegation,
+        magic:     selectMagicNegation,
+        fire:      selectFireNegation,
+        lightning: selectLightningNegation,
+        holy:      selectHolyNegation,
+    },
+}

@@ -1,8 +1,10 @@
 export * from "./app"
 export * from "./entities"
 export * from "./calculations"
+export * from "./constants"
 
 export * from "./Attributes"
+export * from "./BodyType"
 export * from "./BuildData"
 export * from "./Damage"
 export * from "./KitchenSink"

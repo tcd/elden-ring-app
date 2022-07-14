@@ -16,9 +16,9 @@ export const SettingsPage = (): JSX.Element => {
         return () => {
             dispatch(Actions.Core.clearPageName())
         }
-    }, [])
+    }, [dispatch])
 
-    const buildData = useSelector(Selectors.Builder.exportData)
+    const buildData = useSelector(Selectors.Meta.Export.build)
 
     const handleExportClick = () => {
         exportJsonToFile({

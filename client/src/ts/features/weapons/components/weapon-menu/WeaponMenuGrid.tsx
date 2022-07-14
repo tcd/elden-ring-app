@@ -21,14 +21,14 @@ export const WeaponMenuGrid = (): JSX.Element => {
     const weaponTypes      = useSelector(Selectors.Builder.api.weaponTypes)
     const menuHasScrolled  = useSelector(Selectors.Weapons.menuHasScrolled)
 
-    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
-    const mind         = useSelector(Selectors.Builder.attribute.mind)
-    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
-    const strength     = useSelector(Selectors.Builder.attribute.strength)
-    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
-    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
-    const faith        = useSelector(Selectors.Builder.attribute.faith)
-    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+    const vigor        = useSelector(Selectors.Meta.Levels.corrected.vigor)
+    const mind         = useSelector(Selectors.Meta.Levels.corrected.mind)
+    const endurance    = useSelector(Selectors.Meta.Levels.corrected.endurance)
+    const strength     = useSelector(Selectors.Meta.Levels.corrected.strength)
+    const dexterity    = useSelector(Selectors.Meta.Levels.corrected.dexterity)
+    const intelligence = useSelector(Selectors.Meta.Levels.corrected.intelligence)
+    const faith        = useSelector(Selectors.Meta.Levels.corrected.faith)
+    const arcane       = useSelector(Selectors.Meta.Levels.corrected.arcane)
 
     const stats = {
         vigor,

@@ -33,7 +33,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
     const oldWeapon   = useSelector(Selectors.Weapons.old.weapon)
     const newStats    = useSelector(Selectors.Weapons.active.calculatedStats)
     const oldStats    = useSelector(Selectors.Weapons.old.stats)
-    const attributes  = useSelector(Selectors.Builder.allAttributes)
+    const attributes  = useSelector(Selectors.Meta.Levels.allAttributeLevels)
     const displayName = useSelector(Selectors.Weapons.active.weaponDisplayName)
     const activeSkill = useSelector(Selectors.Weapons.active.weaponSkill)
 

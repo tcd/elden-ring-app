@@ -8,7 +8,7 @@ import {
 
 export const CharacterStatus = (): JSX.Element => {
 
-    const whichStatus = useSelector(Selectors.Builder.misc.whichCharacterStatus)
+    const whichStatus = useSelector(Selectors.Builder.whichCharacterStatus)
 
     if (whichStatus == "A") {
         return (<CharacterStatusA />)

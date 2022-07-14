@@ -7,20 +7,20 @@ import { StatRowPlus } from "@app/shared"
 
 export const DefensePlus = (): JSX.Element => {
 
-    const physicalNegation  = useSelector(Selectors.Builder.defense.negation.physical)
-    const strikeNegation    = useSelector(Selectors.Builder.defense.negation.strike)
-    const slashNegation     = useSelector(Selectors.Builder.defense.negation.slash)
-    const pierceNegation    = useSelector(Selectors.Builder.defense.negation.pierce)
-    const magicNegation     = useSelector(Selectors.Builder.defense.negation.magic)
-    const fireNegation      = useSelector(Selectors.Builder.defense.negation.fire)
-    const lightningNegation = useSelector(Selectors.Builder.defense.negation.lightning)
-    const holyNegation      = useSelector(Selectors.Builder.defense.negation.holy)
+    const physicalNegation  = useSelector(Selectors.Meta.Defense.damageNegation.physical)
+    const strikeNegation    = useSelector(Selectors.Meta.Defense.damageNegation.strike)
+    const slashNegation     = useSelector(Selectors.Meta.Defense.damageNegation.slash)
+    const pierceNegation    = useSelector(Selectors.Meta.Defense.damageNegation.pierce)
+    const magicNegation     = useSelector(Selectors.Meta.Defense.damageNegation.magic)
+    const fireNegation      = useSelector(Selectors.Meta.Defense.damageNegation.fire)
+    const lightningNegation = useSelector(Selectors.Meta.Defense.damageNegation.lightning)
+    const holyNegation      = useSelector(Selectors.Meta.Defense.damageNegation.holy)
 
-    const physicalDefense  = useSelector(Selectors.Builder.defense.defense.physical)
-    const magicDefense     = useSelector(Selectors.Builder.defense.defense.magic)
-    const fireDefense      = useSelector(Selectors.Builder.defense.defense.fire)
-    const lightningDefense = useSelector(Selectors.Builder.defense.defense.lightning)
-    const holyDefense      = useSelector(Selectors.Builder.defense.defense.holy)
+    const physicalDefense  = useSelector(Selectors.Meta.Defense.defense.physical)
+    const magicDefense     = useSelector(Selectors.Meta.Defense.defense.magic)
+    const fireDefense      = useSelector(Selectors.Meta.Defense.defense.fire)
+    const lightningDefense = useSelector(Selectors.Meta.Defense.defense.lightning)
+    const holyDefense      = useSelector(Selectors.Meta.Defense.defense.holy)
 
     const stats = [
         { title: "Physical",  defense: physicalDefense,  negation: physicalNegation,   stat: Stat.PHYSICAL_DEFENSE  },

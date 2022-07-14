@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew"
 
-import { AttributeName, Attributes as TAttributes } from "@app/types"
+import { AttributeName } from "@app/types"
 import { ErCard } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
 
@@ -19,11 +19,11 @@ export const AttributeRow = ({ name, value }: AttributeRowProps): JSX.Element =>
     const dispatch = useDispatch()
 
     const incrementAttribute = () => {
-        dispatch(Actions.Builder.incrementAttribute({ name }))
+        dispatch(Actions.LevelUp.incrementAttribute({ attribute: name }))
     }
 
     const decrementAttribute = () => {
-        dispatch(Actions.Builder.decrementAttribute({ name }))
+        dispatch(Actions.LevelUp.decrementAttribute({ attribute: name }))
     }
 
     return (
@@ -46,16 +46,16 @@ export const AttributeRow = ({ name, value }: AttributeRowProps): JSX.Element =>
 
 export const Attributes = (): JSX.Element => {
 
-    const vigor        = useSelector(Selectors.Builder.attribute.vigor)
-    const mind         = useSelector(Selectors.Builder.attribute.mind)
-    const endurance    = useSelector(Selectors.Builder.attribute.endurance)
-    const strength     = useSelector(Selectors.Builder.attribute.strength)
-    const dexterity    = useSelector(Selectors.Builder.attribute.dexterity)
-    const intelligence = useSelector(Selectors.Builder.attribute.intelligence)
-    const faith        = useSelector(Selectors.Builder.attribute.faith)
-    const arcane       = useSelector(Selectors.Builder.attribute.arcane)
+    const vigor        = useSelector(Selectors.Meta.Levels.corrected.vigor)
+    const mind         = useSelector(Selectors.Meta.Levels.corrected.mind)
+    const endurance    = useSelector(Selectors.Meta.Levels.corrected.endurance)
+    const strength     = useSelector(Selectors.Meta.Levels.corrected.strength)
+    const dexterity    = useSelector(Selectors.Meta.Levels.corrected.dexterity)
+    const intelligence = useSelector(Selectors.Meta.Levels.corrected.intelligence)
+    const faith        = useSelector(Selectors.Meta.Levels.corrected.faith)
+    const arcane       = useSelector(Selectors.Meta.Levels.corrected.arcane)
 
-    const attributes: TAttributes = {
+    const attributes: Record<AttributeName, Integer> = {
         vigor,
         mind,
         endurance,
