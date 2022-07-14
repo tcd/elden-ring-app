@@ -34,7 +34,18 @@ body {
     @include m.customScrollbar();
     box-sizing: border-box !important;
     font-size: 15px;
-    cursor: url(v.$image-cursor-default), default;
+    cursor: url(v.$image-cursor-default), auto;
+}
+
+a {
+    @include m.pointer-on-hover;
+    text-decoration: none;
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+    // &:visited {}
 }
 
 ol, ul, li {
@@ -80,4 +91,8 @@ hr.er__hr {
     background:
         m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
         v.$gold;
+}
+
+.er__hoverPointer {
+    @include m.pointer-on-hover;
 }
