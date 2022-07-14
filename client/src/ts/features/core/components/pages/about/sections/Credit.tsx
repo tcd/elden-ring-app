@@ -12,7 +12,7 @@ export const Credit = (): JSX.Element => {
         <AboutPageSection title="Thanks, Credit, &amp; Recognition">
             <List>
                 <ListItem sx={{ display: "list-item" }}>
-                    All Weapon Damage calculations are from <a href={links.TarnishedSpreadsheet}>u/TarnishedSpreadsheet&apos;s</a> <a href={links.calculator}>Elden Ring Weapon Calculator</a>.
+                    Most all weapon damage calculations are from <a href={links.TarnishedSpreadsheet}>u/TarnishedSpreadsheet&apos;s</a> fantastic <a href={links.calculator}>Elden Ring Weapon Calculator</a>.
                 </ListItem>
             </List>
         </AboutPageSection>
