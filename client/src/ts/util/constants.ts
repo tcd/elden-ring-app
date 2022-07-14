@@ -8,6 +8,7 @@ export const SPELLS_FEATURE_KEY = "Spells"
 export const STARTING_CLASS_FEATURE_KEY = "StartingClass"
 export const TALISMANS_FEATURE_KEY = "Talismans"
 export const WEAPONS_FEATURE_KEY = "Weapons"
+export const ROUTER_FEATURE_KEY = "router"
 
 export const FEATURE_KEYS =  {
     Armor:         ARMOR_FEATURE_KEY,
@@ -20,4 +21,5 @@ export const FEATURE_KEYS =  {
     StartingClass: STARTING_CLASS_FEATURE_KEY,
     Talismans:     TALISMANS_FEATURE_KEY,
     Weapons:       WEAPONS_FEATURE_KEY,
+    router:        ROUTER_FEATURE_KEY,
 } as const

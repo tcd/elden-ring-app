@@ -7,7 +7,8 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 <!-- ## [Unreleased] -->
 
-## [0.4.0] - 2022-07-11
+
+## [0.4.1] - 2022-07-14
 ### Added
 - Add side navigation
 - Add persisted state (you can close the page and come back and not lose progress)
@@ -22,6 +23,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
     - Add functionality to *Undo Enhancement* button
     - Persist current affinity when changing affinity for the current weapon skill
 ### Changed
+- Improve *About* page
 - Update routes; begin moving components to individual pages
 - Various minor changes
 
