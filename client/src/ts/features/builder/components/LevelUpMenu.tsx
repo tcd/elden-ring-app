@@ -1,5 +1,5 @@
-import { Attributes, Overview } from "."
-import { EquipmentSlots } from "../equipment-slots"
+import { Attributes, Overview } from "@app/features/level-up"
+import { EquipmentSlots } from "./equipment-slots"
 
 export const LevelUpMenu = (_props: unknown): JSX.Element => {
     return (

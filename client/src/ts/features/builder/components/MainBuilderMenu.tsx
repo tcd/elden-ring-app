@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Actions, Selectors } from "@app/state"
 import { ArmorBuilderMenu, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/features"
 
-import { LevelUpMenu } from "./level-up"
+import { LevelUpMenu } from "."
 import { CharacterStatus } from "./right-side-panels"
 
 export const MainBuilderMenu = (_props: unknown): JSX.Element => {

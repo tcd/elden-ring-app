@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { mdiArmFlex } from "@mdi/js"
 import { IconButton } from "@mui/material"
 import {
-    ArrowForward as ArrowForwardIosIcon,
-    ArrowBackIos as ArrowBackIosNewIcon,
+    ArrowForwardIos as ArrowForwardIcon,
+    ArrowBackIosNew as ArrowBackIcon,
 } from "@mui/icons-material"
 
 import { AttributeName } from "@app/types"
@@ -33,13 +33,13 @@ export const AttributeRow = ({ name, value }: AttributeRowProps): JSX.Element =>
             <span className="text-capitalize">{capitalize(name)}</span>
             <div className="attribute-control">
                 <IconButton size="small" onClick={decrementAttribute}>
-                    <ArrowBackIosNewIcon />
+                    <ArrowBackIcon />
                 </IconButton>
                 <span className="attribute-value">
                     {value}
                 </span>
                 <IconButton size="small" onClick={incrementAttribute}>
-                    <ArrowForwardIosIcon />
+                    <ArrowForwardIcon />
                 </IconButton>
             </div>
         </li>
