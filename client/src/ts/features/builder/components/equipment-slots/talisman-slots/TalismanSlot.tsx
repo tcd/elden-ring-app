@@ -44,7 +44,7 @@ export const TalismanSlot = (props: TalismanSlotProps): JSX.Element => {
         return () => {
             document.removeEventListener("contextMenu", handleContextMenuFunc)
         }
-    }, [anchorEl, setAnchorEl])
+    }, [anchorEl, setAnchorEl, dispatch])
 
     // =========================================================================
     // Popup Handlers

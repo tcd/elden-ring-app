@@ -76,7 +76,8 @@ export const WeaponSlot = (props: WeaponSlotContextMenuProps): JSX.Element => {
 
     const handleClickChange = () => {
         setAnchorEl(null)
-        dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
+        navigate(`/weapons/${slotId}`)
+        // dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
     }
 
     const handleClickAshOfWar = () => {

@@ -44,7 +44,7 @@ export const ArmorSlot = (props: ArmorSlotProps) => {
         return () => {
             document.removeEventListener("contextMenu", handleContextMenuFunc)
         }
-    }, [anchorEl, setAnchorEl])
+    }, [anchorEl, setAnchorEl, dispatch])
 
     // =========================================================================
     // Popup Handlers
