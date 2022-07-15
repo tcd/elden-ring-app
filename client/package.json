@@ -11,7 +11,8 @@
         "build:prod:build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --mode production",
         "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js --open",
         "build-and-deploy": "npm run build:prod && npm run deploy",
-        "deploy": "./config/deploy.sh"
+        "deploy": "./config/deploy.sh",
+        "docs:sass": "cross-env sassdoc ./src/styles --config ./config/.sassdocrc.yml"
     },
     "dependencies": {
         "@babel/core": "^7.17.8",
@@ -72,6 +73,8 @@
         "rpg-awesome": "^0.2.0",
         "sass": "^1.53.0",
         "sass-loader": "^12.6.0",
+        "sassdoc": "^2.7.4",
+        "sassdoc-extras": "^3.0.0",
         "source-map-loader": "^3.0.1",
         "style-loader": "^3.3.1",
         "styled-components": "^5.3.5",
