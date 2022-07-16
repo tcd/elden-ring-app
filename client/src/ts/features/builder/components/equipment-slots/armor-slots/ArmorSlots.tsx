@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 
-import { ArmorType } from "@app/types"
+import { ArmorTypes } from "@app/constants"
 import { Selectors } from "@app/state"
 import { ArmorSlot } from "./ArmorSlot"
 
@@ -14,10 +14,10 @@ export const ArmorSlots = (): JSX.Element => {
     return (
         <>
             <section className="er__equipmentSlotsRow">
-                <ArmorSlot type={ArmorType.Head}  armor={head}  />
-                <ArmorSlot type={ArmorType.Chest} armor={chest} />
-                <ArmorSlot type={ArmorType.Arms}  armor={arms}  />
-                <ArmorSlot type={ArmorType.Legs}  armor={legs}  />
+                <ArmorSlot type={ArmorTypes.Head}  armor={head}  />
+                <ArmorSlot type={ArmorTypes.Chest} armor={chest} />
+                <ArmorSlot type={ArmorTypes.Arms}  armor={arms}  />
+                <ArmorSlot type={ArmorTypes.Legs}  armor={legs}  />
             </section>
         </>
     )

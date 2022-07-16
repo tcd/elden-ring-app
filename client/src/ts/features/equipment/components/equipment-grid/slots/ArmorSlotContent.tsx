@@ -2,7 +2,8 @@ import { forwardRef } from "react"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { Armor, ArmorType } from "@app/types"
+import { ArmorType } from "@app/constants"
+import { Armor } from "@app/types"
 import { getImageSrc, EquipmentSlotImageUrls, cssUrl } from "@app/util"
 import { Actions } from "@app/state"
 

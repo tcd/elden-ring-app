@@ -1,5 +1,5 @@
+import { ArmorType } from "@app/constants"
 import {
-    ArmorType,
     TalismanSlotId,
     WeaponSlotId,
 } from "@app/types"

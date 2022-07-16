@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { ArmorType } from "@app/types"
+import { ArmorType } from "@app/constants"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"

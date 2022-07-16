@@ -1,9 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import {
-    ArmorType,
-    ArmorSet,
-} from "@app/types"
+import { ArmorType } from "@app/constants"
+import { ArmorSet } from "@app/types"
 import { CONFIG, FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 

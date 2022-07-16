@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from "react-redux"
 import { MenuItem, TextField } from "@mui/material"
 
-import { Armor, ArmorType } from "@app/types"
+import { ArmorTypes, ArmorType } from "@app/constants"
+import { Armor } from "@app/types"
 import {
     Heading,
     CustomTable,
@@ -74,10 +75,10 @@ export const ArmorTablePage = (): JSX.Element => {
                                 SelectProps={{}}
                             >
                                 <MenuItem value="all">All</MenuItem>
-                                <MenuItem value={ArmorType.Head}>{ArmorType.Head}</MenuItem>
-                                <MenuItem value={ArmorType.Chest}>{ArmorType.Chest}</MenuItem>
-                                <MenuItem value={ArmorType.Arms}>{ArmorType.Arms}</MenuItem>
-                                <MenuItem value={ArmorType.Legs}>{ArmorType.Legs}</MenuItem>
+                                <MenuItem value={ArmorTypes.Head}>{ArmorTypes.Head}</MenuItem>
+                                <MenuItem value={ArmorTypes.Chest}>{ArmorTypes.Chest}</MenuItem>
+                                <MenuItem value={ArmorTypes.Arms}>{ArmorTypes.Arms}</MenuItem>
+                                <MenuItem value={ArmorTypes.Legs}>{ArmorTypes.Legs}</MenuItem>
                             </TextField>
                         </div>
                     </Heading>

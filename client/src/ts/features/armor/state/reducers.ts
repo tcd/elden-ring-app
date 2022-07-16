@@ -1,7 +1,7 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { startingClassByName } from "@app/data"
-import { ArmorType } from "@app/types"
+import { ArmorType } from "@app/constants"
 import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { StartingClassActions } from "@app/features/starting-class"

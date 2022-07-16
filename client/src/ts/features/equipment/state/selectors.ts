@@ -1,7 +1,4 @@
 import {
-    ArmorType,
-    EquipmentType,
-    TalismanSlotId,
     WeaponSlotId,
     weaponSlotIdName,
 } from "@app/types"

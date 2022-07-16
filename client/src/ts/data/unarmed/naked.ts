@@ -1,4 +1,5 @@
-import { Armor, ArmorType } from "@app/types"
+import { ArmorType } from "@app/constants"
+import { Armor } from "@app/types"
 
 export const NO_ARMOR: Armor = {
     id: -1,
@@ -45,9 +46,7 @@ export const Legs: Armor = {
     name: "Legs",
 }
 
-export type INakedArmorSet = {
-    [key in keyof typeof ArmorType]: Armor
-}
+export type INakedArmorSet = Record<ArmorType, Armor>
 
 export const NakedArmorSet: INakedArmorSet = {
     Head: Head,

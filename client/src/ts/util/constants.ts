@@ -10,7 +10,7 @@ export const TALISMANS_FEATURE_KEY = "Talismans"
 export const WEAPONS_FEATURE_KEY = "Weapons"
 export const ROUTER_FEATURE_KEY = "router"
 
-export const FEATURE_KEYS =  {
+export const FEATURE_KEYS = {
     Armor:         ARMOR_FEATURE_KEY,
     Builder:       BUILDER_FEATURE_KEY,
     Checklist:     CHECKLIST_FEATURE_KEY,

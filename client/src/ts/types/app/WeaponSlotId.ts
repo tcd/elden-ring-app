@@ -1,36 +1,31 @@
 import { WeaponSettings } from "@app/types"
 
-export type WeaponSlotId =
-    | "R1"
-    | "R2"
-    | "R3"
-    | "L1"
-    | "L2"
-    | "L3"
+export const WeaponSlotIds = {
+    "R1": "R1",
+    "R2": "R2",
+    "R3": "R3",
+    "L1": "L1",
+    "L2": "L2",
+    "L3": "L3",
+} as const
 
-// export type WeaponSlotIdMap<T> = {
-//     [key in WeaponSlotId]: T;
-// };
-export type WeaponSlotIdMap<T> = Record<WeaponSlotId, T>
-export type WeaponSlots = WeaponSlotIdMap<WeaponSettings>
+export type WeaponSlotId = keyof typeof WeaponSlotIds
+
+export type WeaponSlotIdType = typeof WeaponSlotIds[WeaponSlotId];
+
+export type WeaponSlots = Record<WeaponSlotId, WeaponSettings>
+
+const WeaponSlotIdDisplayNames: Record<WeaponSlotId, string> = {
+    "R1": "Right Hand Armament 1",
+    "R2": "Right Hand Armament 2",
+    "R3": "Right Hand Armament 3",
+    "L1": "Left Hand Armament 1",
+    "L2": "Left Hand Armament 2",
+    "L3": "Left Hand Armament 3",
+}
 
 export const weaponSlotIdName = (slotId: WeaponSlotId): string => {
-    switch (slotId) {
-        case "R1":
-            return "Right Hand Armament 1"
-        case "R2":
-            return "Right Hand Armament 2"
-        case "R3":
-            return "Right Hand Armament 3"
-        case "L1":
-            return "Left Hand Armament 1"
-        case "L2":
-            return "Left Hand Armament 2"
-        case "L3":
-            return "Left Hand Armament 3"
-        default:
-            return ""
-    }
+    return WeaponSlotIdDisplayNames?.[slotId] ?? ""
 }
 
 export interface WeaponSlotData {
@@ -39,4 +34,4 @@ export interface WeaponSlotData {
     empty: boolean
 }
 
-export type WeaponSlotsData = WeaponSlotIdMap<WeaponSlotData>
+export type WeaponSlotsData = Record<WeaponSlotId, WeaponSlotData>
