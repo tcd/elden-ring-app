@@ -30,10 +30,10 @@ export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <div className="weapon-detail">
+        <div className="er__equipmentDetail">
             <div className="row">
                 <div className="col">
-                    <ErCard title={weapon?.name} className="mt-0">
+                    <ErCard title={weapon?.name}>
                         <div className="row">
                             <div className="col">
                                 <ul>
@@ -47,9 +47,9 @@ export const UnarmedWeaponDetail = (_props: unknown): JSX.Element => {
                                 </ul>
                             </div>
                             <div className="col-1"></div>
-                            <div className="col weapon-image-column">
-                                <div className="weapon-image-wrapper">
-                                    <img className="img-fluid" src="" />
+                            <div className="col er__equipmentDetail__imageColumn">
+                                <div className="er__equipmentDetail__imageColumn empty">
+                                    <div></div>
                                 </div>
                             </div>
                         </div>

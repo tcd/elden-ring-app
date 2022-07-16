@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import { Box } from "@mui/material"
 
 import { PageName } from "@app/types"
-import { Actions, Selectors } from "@app/state"
+import { Actions } from "@app/state"
 
 
 export interface PageProps {
