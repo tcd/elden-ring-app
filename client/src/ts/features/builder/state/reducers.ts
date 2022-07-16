@@ -4,11 +4,9 @@ import {
     KitchenSink,
     AttributeName,
 } from "@app/types"
-import { STARTING_CLASSES } from "@app/data"
 import { CoreActions } from "@app/features/core"
 import { BuilderState, INITIAL_BUILDER_STATE } from "./state"
 import { fetchEverything } from "./thunks"
-import { selectCorrectedAttributeLevel } from "./selectors/for-reducers"
 
 export const reducers = {
     cycleCharacterStatus(state: BuilderState, _action?: PayloadAction<"A" | "B">) {

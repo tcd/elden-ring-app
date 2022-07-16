@@ -1,13 +1,12 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import { StartingClassName } from "@app/types"
+import { StartingClassName } from "@app/constants"
 import { CoreActions } from "@app/features/core"
 import { StartingClassState, INITIAL_STARTING_CLASS_STATE } from "./state"
 
 export const reducers = {
-    setPendingStartingClass(state: StartingClassState, action: PayloadAction<{ name: string }>) {
-        const className = action.payload.name as StartingClassName
-        state.pendingStartingClassName = className
+    setPendingStartingClass(state: StartingClassState, { payload: { name } }: PayloadAction<{ name: StartingClassName }>) {
+        state.pendingStartingClassName = name
         state.confirmingStartingClass = true
     },
     openStartingClassConfirmation(state: StartingClassState) {

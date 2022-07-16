@@ -4,7 +4,6 @@ import {
     Attributes,
     KitchenSink,
     RequestState,
-    StartingClassName,
 } from "@app/types"
 import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
@@ -16,9 +15,6 @@ export interface BuilderState {
     attributes: Attributes
     whichCharacterStatus: "A" | "B"
     actionMenuDescription: string
-    startingClassName: StartingClassName
-    pendingStartingClassName: StartingClassName
-    confirmingStartingClass: boolean
 }
 
 // Define the initial state using that type
@@ -40,14 +36,10 @@ export const INITIAL_BUILDER_STATE: BuilderState = {
     },
     whichCharacterStatus: "A",
     actionMenuDescription: "",
-    startingClassName: null,
-    pendingStartingClassName: null,
-    confirmingStartingClass: false,
 }
 
 const myBuild: BuilderState = {
     ...INITIAL_BUILDER_STATE,
-    startingClassName: StartingClassName.Samurai,
     // attributes: {
     //     "vigor":        30,
     //     "mind":         30,

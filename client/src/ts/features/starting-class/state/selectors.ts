@@ -1,5 +1,6 @@
 import { STARTING_CLASSES } from "@app/data"
-import { AttributeName, StartingClass, StartingClassName } from "@app/types"
+import { StartingClassName } from "@app/constants"
+import { AttributeName, StartingClass } from "@app/types"
 import { isBlank } from "@app/util"
 import { RootState } from "@app/state"
 import { StartingClassState } from "./state"

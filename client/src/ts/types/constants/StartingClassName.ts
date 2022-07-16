@@ -11,6 +11,6 @@ export const StartingClassNames = {
     "Wretch":      "Wretch",
 } as const
 
-export type StartingClassName = keyof typeof StartingClassNames
+type StartingClassNamesKey = keyof typeof StartingClassNames
 
-export type StartingClassNameType = typeof StartingClassNames[StartingClassName];
+export type StartingClassName = typeof StartingClassNames[StartingClassNamesKey];

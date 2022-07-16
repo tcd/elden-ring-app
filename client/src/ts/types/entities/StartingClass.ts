@@ -1,24 +1,10 @@
-/**
- * NOTE: do not reorder.
- */
-export enum StartingClassName {
-    Vagabond   = "Vagabond",
-    Warrior    = "Warrior",
-    Hero       = "Hero",
-    Bandit     = "Bandit",
-    Astrologer = "Astrologer",
-    Prophet    = "Prophet",
-    Samurai    = "Samurai",
-    Prisoner   = "Prisoner",
-    Confessor  = "Confessor",
-    Wretch     = "Wretch",
-}
+import { StartingClassName } from "@app/constants"
 
 export interface StartingClass {
 
     id: Integer
 
-    name: string
+    name: StartingClassName
     description: string
 
     level:        Integer

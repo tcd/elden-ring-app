@@ -1,7 +1,7 @@
+import { StartingClassName } from "@app/constants"
 import {
     ArmorSet,
     Attributes,
-    StartingClassName,
     TalismanSet,
     WeaponSlots,
 } from "@app/types"
