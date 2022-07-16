@@ -76,13 +76,13 @@ export const WeaponSlot = (props: WeaponSlotContextMenuProps): JSX.Element => {
 
     const handleClickChange = () => {
         setAnchorEl(null)
-        navigate(`/weapons/${slotId}`)
+        navigate(`/weapons/${slotId}#grid`)
         // dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
     }
 
     const handleClickAshOfWar = () => {
         setAnchorEl(null)
-        navigate(`/weapons/${slotId}/ashes-of-war`)
+        navigate(`/weapons/${slotId}/ashes-of-war#grid`)
         // dispatch(Actions.Weapons.openWeaponsMenu({ id: props.slotId }))
     }
 

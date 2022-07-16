@@ -24,7 +24,7 @@ export const WeaponsPage = (_props: unknown): JSX.Element => {
         return () => {
             // dispatch(Actions.Core.clearPageName())
         }
-    }, [activeSlotId, slotId])
+    }, [activeSlotId, slotId, dispatch])
 
     return (
         <main id="er__pageRoot">

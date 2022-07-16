@@ -12,9 +12,10 @@ import {
 } from "./footers"
 
 const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
-    "ashes-of-war":   <AshesOfWarFooter />,
     "armor":          <ArmorFooter />,
+    "ashes-of-war":   <AshesOfWarFooter />,
     "equipment":      <EquipmentFooter />,
+    "level-up":       <NoFooter />,
     "not-found":      <NoFooter />,
     "settings":       <NoFooter />,
     "spell":          <NoFooter />,
@@ -22,6 +23,7 @@ const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
     "status":         <NoFooter />,
     "talisman":       <TalismanFooter />,
     "weapon":         <WeaponFooter />,
+    about:            <NoFooter />,
 }
 
 export const AppFooterActions = (_props: unknown): JSX.Element => {

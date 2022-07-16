@@ -1,0 +1,28 @@
+
+/// Generates a linear gradient.
+///
+/// Code by [Doug Avery](https://codepen.io/averyvery/pen/RvNRJE?editors=0101).
+///
+/// @param {String} $mapName
+@function access-safely($mapName, $map, $key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+
+    @else {
+        $validKeys: "";
+
+        @each $validKey,
+        $_ in $map {
+            @if ($validKeys =="") {
+                $validKeys: $validKey
+            }
+
+            @else {
+                $validKeys: "#{$validKeys}, #{$validKey}";
+            }
+        }
+
+        @error "The key '#{$key}' is not present in #{$mapName}. Try one of the following: #{$validKeys}";
+    }
+}

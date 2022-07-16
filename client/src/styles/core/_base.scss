@@ -4,8 +4,8 @@
 
 html, body {
     height: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 body {
@@ -19,15 +19,14 @@ body {
 #root {
     margin:  0px;
     padding: 0px;
-    height: 100vh;
-    overflow-y: scroll;
+    // height: 100vh;
+    height: 100%;
+    // overflow-y: scroll;
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    background-image: url(h.$main-menu-encoded-background);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    flex-flow: column nowrap;
+    @include m.backgroundImage(h.$main-menu-encoded-background);
+    // background-color: blue;
 }
 
 * {

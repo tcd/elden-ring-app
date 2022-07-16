@@ -4,6 +4,7 @@ import {
     Fragment,
     useRef,
 } from "react"
+import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 
 import { RefMap } from "@app/types"
@@ -15,6 +16,7 @@ import { WeaponMenuImage } from "@app/features/weapons/components"
 export const WeaponMenuGrid = (): JSX.Element => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const activeName       = useSelector(Selectors.Weapons.active.weaponName)
     const weapons          = useSelector(Selectors.Weapons.allWeapons)
@@ -51,6 +53,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
 
     const handleClick = (name: string) => {
         dispatch(Actions.Weapons.setActiveName({ name }))
+        navigate("#detail")
     }
 
     const sections = weaponTypes.map((weaponType, index) => {

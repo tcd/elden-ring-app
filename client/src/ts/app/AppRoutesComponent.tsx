@@ -24,6 +24,7 @@ import {
     WeaponsPage,
     WeaponsTablePage,
     AshesOfWarPage,
+    MobileWeaponPage,
 
     SpellMenu,
     SpellsTablePage,
@@ -34,8 +35,8 @@ export const AppRoutesComponent = () => useRoutes(routes)
 const routes: RouteObject[] = [
     {
         path: "/",
-        // element: <MobileLayout />,
-        element: <AppLayout />,
+        element: <MobileLayout />,
+        // element: <AppLayout />,
         children: [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },
@@ -56,7 +57,7 @@ const routes: RouteObject[] = [
             { path: "/armor/:slotId", element: <ArmorPage /> },
 
             // { path: "/weapons", element: <WeaponsTablePage /> },
-            { path: "/weapons/:slotId", element: <WeaponsPage /> },
+            { path: "/weapons/:slotId", element: <MobileWeaponPage /> },
             { path: "/weapons/:slotId/ashes-of-war", element: <AshesOfWarPage /> },
 
             // { path: "/spells",     element: <SpellsTablePage /> },
