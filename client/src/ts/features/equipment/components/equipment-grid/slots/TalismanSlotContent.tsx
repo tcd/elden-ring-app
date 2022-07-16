@@ -2,7 +2,9 @@ import { forwardRef } from "react"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { Talisman, TalismanSlotId } from "@app/types"
+
+import { TalismanSlotId } from "@app/constants"
+import { Talisman } from "@app/types"
 import { getImageSrc, EquipmentSlotImageUrls, cssUrl } from "@app/util"
 import { Actions } from "@app/state"
 
@@ -24,7 +26,7 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
     }
 
     const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        dispatch(Actions.Equipment.setActiveSlot({ type: "Talisman", id: id }))
+        dispatch(Actions.Equipment.setActiveSlot({ type: "Talisman", id: (id as string) }))
     }
 
     const elementId = `talisman-slot-${id}`

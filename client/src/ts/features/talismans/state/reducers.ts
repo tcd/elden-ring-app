@@ -1,6 +1,6 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import { TalismanSlotId } from "@app/types"
+import { TalismanSlotId } from "@app/constants"
 import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { TalismansState, INITIAL_TALISMANS_STATE } from "./state"

@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { TalismanSet, TalismanSlotId } from "@app/types"
+import { TalismanSlotId } from "@app/constants"
+import { TalismanSet } from "@app/types"
 import { FEATURE_KEYS, CONFIG } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 

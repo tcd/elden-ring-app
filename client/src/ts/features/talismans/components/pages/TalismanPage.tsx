@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { TalismanSlotId } from "@app/types"
+import { TalismanSlotId } from "@app/constants"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
