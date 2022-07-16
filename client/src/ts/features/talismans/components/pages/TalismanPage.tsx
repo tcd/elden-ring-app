@@ -14,7 +14,6 @@ export const TalismanPage = (_props: unknown): JSX.Element => {
     const { slotId } = useParams<{ slotId: TalismanSlotId }>()
 
     const activeSlotId = useSelector(Selectors.Talismans.activeSlotId)
-    const activeTalisman = useSelector(Selectors.Talismans.active)
 
     useEffect(() => {
         dispatch(Actions.Core.setPageName("talisman"))
@@ -22,9 +21,9 @@ export const TalismanPage = (_props: unknown): JSX.Element => {
             dispatch(Actions.Talismans.setActiveSlotId({ id: slotId }))
         }
         return () => {
-            // dispatch(Actions.Core.clearPageName())
+            dispatch(Actions.Core.clearPageName())
         }
-    }, [activeSlotId, slotId])
+    }, [activeSlotId, slotId, dispatch])
 
     return (
         <main id="er__pageRoot">
@@ -33,7 +32,7 @@ export const TalismanPage = (_props: unknown): JSX.Element => {
                     <TalismanMenu />
                 </div>
                 <div className="col">
-                    <TalismanDetail talisman={activeTalisman} />
+                    <TalismanDetail />
                 </div>
                 <div className="col">
                     <CharacterStatus />

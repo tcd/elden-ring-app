@@ -34,10 +34,12 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.clickSlot({ type: "Armor", id: type }))
+        dispatch(Actions.Armor.setActiveType({ type: type }))
     }
 
     const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.setActiveSlot({ type: "Armor", id: type }))
+        dispatch(Actions.Armor.setActiveType({ type: type }))
     }
 
     return (

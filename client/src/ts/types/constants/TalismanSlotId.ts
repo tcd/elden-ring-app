@@ -6,4 +6,5 @@ export const TalismanSlotIds = {
 }
 
 type TalismanSlotIdsKey = keyof typeof TalismanSlotIds
-export type TalismanSlotId = typeof TalismanSlotIds[TalismanSlotIdsKey]
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type TalismanSlotId = typeof TalismanSlotIds[TalismanSlotIdsKey] & {}

@@ -19,10 +19,12 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.clickSlot({ type: "Weapon", id: slotId }))
+        dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
     }
 
     const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.setActiveSlot({ type: "Weapon", id: slotId }))
+        dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
     }
 
     const slotSx: SxProps = {}

@@ -23,10 +23,12 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.clickSlot({ type: "Talisman", id: id }))
+        dispatch(Actions.Talismans.setActiveSlotId({ id }))
     }
 
     const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        dispatch(Actions.Equipment.setActiveSlot({ type: "Talisman", id: (id as string) }))
+        dispatch(Actions.Equipment.setActiveSlot({ type: "Talisman", id: id }))
+        dispatch(Actions.Talismans.setActiveSlotId({ id }))
     }
 
     const elementId = `talisman-slot-${id}`
