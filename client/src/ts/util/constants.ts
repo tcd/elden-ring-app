@@ -23,3 +23,20 @@ export const FEATURE_KEYS = {
     Weapons:       WEAPONS_FEATURE_KEY,
     router:        ROUTER_FEATURE_KEY,
 } as const
+
+// export const FeatureKeys = {
+//     Armor:         "Armor",
+//     Builder:       "Builder",
+//     Checklist:     "Checklist",
+//     Core:          "Core",
+//     Equipment:     "Equipment",
+//     LevelUp:       "LevelUp",
+//     router:        "router",
+//     Spells:        "Spells",
+//     StartingClass: "StartingClass",
+//     Talismans:     "Talismans",
+//     Weapons:       "Weapons",
+// } as const
+
+// type FeatureKeyKey = keyof typeof FeatureKeys
+// export type FeatureKey = typeof FeatureKeys[FeatureKeyKey];
