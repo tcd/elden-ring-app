@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { ArmorType } from "@app/constants"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { Page } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/builder"
 
@@ -16,17 +17,13 @@ export const ArmorPage = (_props: unknown): JSX.Element => {
     const activeType = useSelector(Selectors.Armor.activeType)
 
     useEffect(() => {
-        dispatch(Actions.Core.setPageName("armor"))
         if (isBlank(activeType)) {
             dispatch(Actions.Armor.setActiveType({ type: slotId }))
         }
-        return () => {
-            // dispatch(Actions.Core.clearPageName())
-        }
-    }, [activeType, slotId])
+    }, [activeType, slotId, dispatch])
 
     return (
-        <main id="er__pageRoot">
+        <Page pageName="armor">
             <div className="row">
                 <div className="col">
                     <ArmorMenu />
@@ -38,6 +35,6 @@ export const ArmorPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-        </main>
+        </Page>
     )
 }
