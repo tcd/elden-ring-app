@@ -5,7 +5,8 @@ import { Box } from "@mui/material"
 import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
 import { WeaponSlotId } from "@app/constants"
-import { weaponSlotIdName, WeaponSlotData } from "@app/types"
+import { WeaponSlotData } from "@app/types"
+import { weaponSlotDisplayName } from "@app/util"
 import { Actions } from "@app/state"
 import { MouseOverPopover } from "@app/shared"
 import { WeaponSlotContent } from "./WeaponSlotContent"
@@ -110,7 +111,7 @@ export const WeaponSlot = (props: WeaponSlotContextMenuProps): JSX.Element => {
         ]
         titleString = props.data.displayName
     } else {
-        titleString = weaponSlotIdName(slotId)
+        titleString = weaponSlotDisplayName(slotId)
     }
 
     const menuItemElements = menuItems.map(({ name, action }) => (

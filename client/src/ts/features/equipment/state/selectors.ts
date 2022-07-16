@@ -1,5 +1,5 @@
-import { WeaponSlotId } from "@app/constants"
-import { weaponSlotIdName } from "@app/types"
+import { AmmunitionSlotId, WeaponSlotId } from "@app/constants"
+import { weaponSlotDisplayName, ammunitionSlotDisplayName } from "@app/util"
 import { RootState } from "@app/state"
 import { EquipmentState } from "./state"
 
@@ -24,9 +24,10 @@ const selectGridTitle = (rootState: RootState): string => {
     const activeType = selectActiveType(rootState)
     const slotId     = selectActiveSlotId(rootState)
     switch (activeType) {
-        case "Armor":    return slotId?.toString()
-        case "Weapon":   return weaponSlotIdName(slotId as WeaponSlotId)
-        case "Talisman": return `Talisman ${slotId}`
+        case "Armor":      return slotId?.toString()
+        case "Weapon":     return weaponSlotDisplayName(slotId as WeaponSlotId)
+        case "Talisman":   return `Talisman ${slotId}`
+        case "Ammunition": return ammunitionSlotDisplayName(slotId as AmmunitionSlotId)
         default: return "no title"
     }
 }
@@ -35,9 +36,10 @@ const selectGridDescription = (rootState: RootState): string => {
     const activeType = selectActiveType(rootState)
     const slotId     = selectActiveSlotId(rootState)
     switch (activeType) {
-        case "Armor":    return slotId?.toString()
-        case "Weapon":   return weaponSlotIdName(slotId as WeaponSlotId)
-        case "Talisman": return `Talisman ${slotId}`
+        case "Armor":      return slotId?.toString()
+        case "Weapon":     return weaponSlotDisplayName(slotId as WeaponSlotId)
+        case "Talisman":   return `Talisman ${slotId}`
+        case "Ammunition": return ammunitionSlotDisplayName(slotId as AmmunitionSlotId)
         default: return "no title"
     }
 }
