@@ -16,6 +16,7 @@ import {
 } from "./footers"
 
 const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
+    "about":          <NoFooter />,
     "armor":          <NoFooter />,
     "ashes-of-war":   <NoFooter />,
     "equipment":      <NoFooter />,
@@ -27,7 +28,6 @@ const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
     "status":         <NoFooter />,
     "talisman":       <NoFooter />,
     "weapon":         <WeaponFooter />,
-    about:            <NoFooter />,
 }
 
 export const MobileFooter = (_props: unknown): JSX.Element => {
