@@ -11,9 +11,9 @@ export const reducers = {
     scrollMenu(state: ArmorState) {
         state.menuHasScrolled = true
     },
-    openArmorMenu(state: ArmorState, action: PayloadAction<{ type: ArmorType }>) {
-        state.activeType = action.payload.type
-        state.oldName = state.armorNames[action.payload.type]
+    openArmorMenu(state: ArmorState, { payload: { type } }: PayloadAction<{ type: ArmorType }>) {
+        state.activeType = type
+        state.oldName = state.armorNames[type]
         state.menuHasScrolled = false
     },
     closeArmorMenu(state: ArmorState) {
@@ -21,20 +21,20 @@ export const reducers = {
         state.oldName = null
         state.menuHasScrolled = true
     },
-    setActiveType(state: ArmorState, action: PayloadAction<{ type: "all" | ArmorType }>) {
-        state.activeType = action.payload.type
+    setActiveType(state: ArmorState, { payload: { type } }: PayloadAction<{ type: "all" | ArmorType }>) {
+        state.activeType = type
     },
-    equipArmor(state: ArmorState, action: PayloadAction<{ name: string }>) {
+    equipArmor(state: ArmorState, { payload: { name } }: PayloadAction<{ name: string }>) {
         state.oldName = state.armorNames[state.activeType]
-        state.armorNames[state.activeType] = action.payload.name
+        state.armorNames[state.activeType] = name
     },
     removeArmor(state: ArmorState) {
         if (!isBlank(state.activeType)) {
             state.armorNames[state.activeType] = null
         }
     },
-    removeArmorByType(state: ArmorState, action: PayloadAction<{ type: ArmorType }>) {
-        state.armorNames[action.payload.type] = null
+    removeArmorByType(state: ArmorState, { payload: { type } }: PayloadAction<{ type: ArmorType }>) {
+        state.armorNames[type] = null
     },
     // equipArmor(state: ArmorState, action: PayloadAction<{ type: ArmorType, name: string }>) {
     //     state.armorNames[action.payload.type] = action.payload.name

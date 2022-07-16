@@ -17,13 +17,12 @@ import { WeaponsState, INITIAL_WEAPONS_STATE } from "../state"
 // import { history } from "@app/state"
 import { isLocationChange, noWeaponsSelected, handleLocationChange } from "./helpers"
 
-
 export const reducers = {
-    setActiveSlotId(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
+    setActiveSlotId(state: WeaponsState, { payload: { id } }: PayloadAction<{ id: WeaponSlotId }>) {
         state.oldWeapon = {
-            ...state.slots[action.payload.id],
+            ...state.slots[id],
         }
-        state.activeSlotId = action.payload.id
+        state.activeSlotId = id
         state.menuHasScrolled = false
     },
     startCustomizingWeapon(state: WeaponsState) {
@@ -44,11 +43,11 @@ export const reducers = {
     scrollMenu(state: WeaponsState) {
         state.menuHasScrolled = true
     },
-    openWeaponsMenu(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
+    openWeaponsMenu(state: WeaponsState, { payload: { id } }: PayloadAction<{ id: WeaponSlotId }>) {
         state.oldWeapon = {
-            ...state.slots[action.payload.id],
+            ...state.slots[id],
         }
-        state.activeSlotId = action.payload.id
+        state.activeSlotId = id
         state.menuHasScrolled = false
     },
     closeWeaponsMenu(state: WeaponsState) {
@@ -66,7 +65,7 @@ export const reducers = {
             ...DEFAULT_WEAPON_SETTINGS,
         }
     },
-    setActiveName(state: WeaponsState, action: PayloadAction<{ name: string }>) {
+    setActiveName(state: WeaponsState, { payload: { name } }: PayloadAction<{ name: string }>) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
             return
@@ -76,7 +75,7 @@ export const reducers = {
         }
         state.slots[activeSlotId] = {
             ...DEFAULT_WEAPON_SETTINGS,
-            weapon_name: action.payload.name,
+            weapon_name: name,
         }
     },
     removeWeaponSkill(state: WeaponsState) {
@@ -113,7 +112,7 @@ export const reducers = {
         }
         state.choosingAffinity = true
     },
-    setAffinity(state: WeaponsState, action: PayloadAction<{ name: string }>) {
+    setAffinity(state: WeaponsState, { payload: { name } }: PayloadAction<{ name: string }>) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
             return
@@ -121,54 +120,9 @@ export const reducers = {
         state.oldWeapon = {
             ...state.slots[activeSlotId],
         }
-        state.slots[activeSlotId].affinity_name = action.payload.name as WeaponAffinityName
+        state.slots[activeSlotId].affinity_name = name as WeaponAffinityName
         state.choosingAffinity = false
     },
-}
-
-const WEAPON_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3))(?<aow>\/ashes-of-war)?(?<tab>#(grid|detail|status)?)?$/
-// const WEAPON_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)(?<tab>#(grid|detail|status))?$)/
-// const ASH_OF_WAR_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)\/ashes-of-war$)/
-// const ASH_OF_WAR_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)\/ashes-of-war(?<tab>#(grid|detail|status))?$)/
-
-interface WeaponPathParams {
-    slotId: WeaponSlotId
-    tab: "grid" | "detail" | "status"
-    ashesOfWar: boolean
-}
-
-const matchWeaponPath = (path: string): WeaponPathParams => {
-    if (!path.startsWith("/weapon")) {
-        return null
-    }
-    const match = WEAPON_PATH_PATTERN.exec(path)
-    console.log(match?.groups)
-    const result = { slotId: null, tab: null, ashesOfWar: null }
-    if (match?.groups) {
-        if (match?.groups?.slotId) {
-            result.slotId = match.groups.slotId as WeaponSlotId
-        }
-        if (match?.groups?.ashesOfWar) {
-            result.ashesOfWar = true
-        }
-        if (match?.groups?.tab) {
-            result.tab = match.groups.tab as "grid" | "detail" | "status"
-        }
-        return result
-    } else {
-        return null
-    }
-    // if (path.includes("ashes-of-war")) {
-    //     const match = ASH_OF_WAR_PATH_PATTERN.exec(path)
-    //     if (match?.groups?.slotId) {
-    //         return match.groups.slotId as WeaponSlotId
-    //     }
-    // } else {
-    //     const match = WEAPON_PATH_PATTERN.exec(path)
-    //     if (match?.groups?.slotId) {
-    //         return match.groups.slotId as WeaponSlotId
-    //     }
-    // }
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
