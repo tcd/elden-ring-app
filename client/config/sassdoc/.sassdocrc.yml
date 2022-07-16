@@ -2,8 +2,8 @@ title: "Elden Ring App"
 name: "er"
 version: 0.1.0
 languageCode: "en"
-package: "../package.json"
-dest: "../docs/sassdoc"
+package: "../../package.json"
+dest: "../../docs/sassdoc"
 # groups: {
 #   "undefined": "General",
 #   "zindex-stack": "Z-Index"
