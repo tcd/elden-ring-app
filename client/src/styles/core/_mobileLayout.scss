@@ -1,5 +1,5 @@
 @use "../variables" as v;
-@use "../mixins/customGradient" as m;
+@use "../mixins" as m;
 @use "../helpers/index" as h;
 
 #er__mobileLayout {
@@ -43,10 +43,11 @@
             // padding-left: 40px;
 
             .er__appHeader__icon {
-                width:  v.$header-imageSize;
-                height: v.$header-imageSize;
+                @include m.square(v.$header-imageSize);
                 margin-left: 20px;
                 margin-right: 15px;
+
+                @include m.pointer-on-hover;
             }
 
             .er__appHeader__title {
