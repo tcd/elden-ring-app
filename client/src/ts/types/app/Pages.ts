@@ -28,6 +28,7 @@ export type PageName = PageNameValue
 
 export const PageTitles = {
     "About":                 "About",
+    "Armor":                 "Armor",
     "Ashes of War":          "Ashes of War",
     "Equipment":             "Equipment",
     "Level Up":              "Level Up",
@@ -36,6 +37,8 @@ export const PageTitles = {
     "Select Character Base": "Select Character Base",
     "Status":                "Status",
     "System":                "System",
+    "Talisman":              "Talisman",
+    "Weapon":                "Weapon",
 } as const
 export type PageTitleKey = keyof typeof PageTitles
 export type PageTitleValue = typeof PageTitles[PageTitleKey];
@@ -47,7 +50,7 @@ export type PageTitle = PageTitleValue
 
 export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "about":          "About",
-    "armor":          "Equipment",
+    "armor":          "Armor",
     "ashes-of-war":   "Ashes of War",
     "equipment":      "Equipment",
     "level-up":       "Level Up",
@@ -56,8 +59,8 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "spell":          "Memorize Spells",
     "starting-class": "Select Character Base",
     "status":         "Status",
-    "talisman":       "Equipment",
-    "weapon":         "Equipment",
+    "talisman":       "Talisman",
+    "weapon":         "Weapon",
 }
 
 // =============================================================================
