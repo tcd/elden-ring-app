@@ -39,59 +39,46 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
 
     return (
         <div className="er__equipmentDetail">
-            <div className="row">
-                <div className="col">
-                    <ErCard title={armor.name}>
-                        <div className="row">
-                            <div className="col">
-                                <ul className="h-100 flex-between-column">
-                                    <span></span>
-                                    <StatRow title="Weight" value={armor.weight.toFixed(1)} color={weightColor} />
-                                </ul>
-                            </div>
-                            <div className="col-1"></div>
-                            <div className="col er__equipmentDetail__imageColumn">
-                                <div className="er__equipmentDetail__imageWrapper">
-                                    <img className="img-fluid" src={imageSrc} alt="armor" />
-                                </div>
-                            </div>
+            <section className="er__equipmentDetail__section">
+                <ErCard title={armor.name} contentClassName="er__equipmentDetail__cardContent">
+                    <ul className="h-100 flex-between-column">
+                        <span></span>
+                        <StatRow title="Weight" value={armor.weight.toFixed(1)} color={weightColor} />
+                    </ul>
+                    <div className="er__equipmentDetail__imageColumn">
+                        <div className="er__equipmentDetail__imageWrapper">
+                            <img className="img-fluid" src={imageSrc} alt="armor" />
                         </div>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
-                        <ul>
-                            <ArmorDefenseStats
-                                armor={armor}
-                                oldArmor={oldArmor}
-                            />
-                        </ul>
-                    </ErCard>
-                </div>
-                <div className="col">
-                    <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline} margined={false} className="mx-3 my-2">
-                        <ul>
-                            <ArmorResistanceStats
-                                armor={armor}
-                                oldArmor={oldArmor}
-                            />
-                        </ul>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2">
-                        <ul>
-                            <li> - </li>
-                            <li> - </li>
-                            <li> - </li>
-                        </ul>
-                    </ErCard>
-                </div>
-            </div>
+                    </div>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2" contentClassName="er__equipmentDetail__section">
+                    <ul>
+                        <ArmorDefenseStats
+                            armor={armor}
+                            oldArmor={oldArmor}
+                        />
+                    </ul>
+                </ErCard>
+                <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline} margined={false} className="mx-3 my-2" contentClassName="er__equipmentDetail__section">
+                    <ul>
+                        <ArmorResistanceStats
+                            armor={armor}
+                            oldArmor={oldArmor}
+                        />
+                    </ul>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2" contentClassName="er__equipmentDetail__section">
+                    <ul>
+                        <li> - </li>
+                        <li> - </li>
+                        <li> - </li>
+                    </ul>
+                </ErCard>
+            </section>
         </div>
     )
 }

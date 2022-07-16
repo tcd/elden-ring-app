@@ -3,15 +3,44 @@
 
 .er__equipmentDetail {
 
+    display: flex;
+    flex-direction: column;
+
+    .er__equipmentDetail__cardContent {
+        display: flex;
+        flex-flow: row nowrap;
+        // width: 100%;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-items: stretch;
+        align-content: stretch;
+
+        &>* {
+            flex-grow: 1;
+        }
+    }
+
+    section.er__equipmentDetail__section {
+        .er__card {
+            width: 100%;
+        }
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
     .er__equipmentDetail__imageColumn {
         display: flex;
         flex-flow: row nowrap;
-        align-items: flex-end;
+        justify-content: end;
+        align-items: end;
+        // align-content: end;
+        // align-items: flex-end;
         // justify-items: end;
         // align-content: flex-end;
-        justify-content: end;
-        height: 50%;
-        align-self: flex-end;
+        // justify-content: end;
+        // height: 50%;
+        // width: 50%;
+        // align-self: flex-end;
     }
 
     .er__equipmentDetail__imageWrapper {
@@ -20,13 +49,13 @@
         @include m.equipmentMenuBoxShadow;
         padding: 5px;
 
-        // &.empty {
-        //     @include m.square(v.$equipmentDetail-primary-image-size);
-        //     div:before {
-        //         content: "";
-        //         display: block;
-        //     }
-        // }
+        &.empty {
+            @include m.square(v.$equipmentDetail-primary-image-size);
+            div:before {
+                content: "";
+                display: block;
+            }
+        }
     }
 
     .er__equipmentDetail__secondaryImageWrapper {

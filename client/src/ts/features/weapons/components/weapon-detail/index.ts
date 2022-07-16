@@ -8,4 +8,3 @@ export * from "./WeaponRequirementStats"
 export * from "./WeaponPassiveEffects"
 
 export * from "./EmptyWeaponDetail"
-export * from "./UnarmedWeaponDetail"

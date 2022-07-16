@@ -8,6 +8,7 @@ export const PageNames = {
     "about":          "about",
     "armor":          "armor",
     "ashes-of-war":   "ashes-of-war",
+    "builder":        "builder",
     "equipment":      "equipment",
     "level-up":       "level-up",
     "not-found":      "not-found",
@@ -18,9 +19,8 @@ export const PageNames = {
     "talisman":       "talisman",
     "weapon":         "weapon",
 } as const
-export type PageNameKey = keyof typeof PageNames
-export type PageNameValue = typeof PageNames[PageNameKey];
-export type PageName = PageNameValue
+type PageNameKey = keyof typeof PageNames
+export type PageName = typeof PageNames[PageNameKey];
 
 // =============================================================================
 // Page Title (displayed on header)
@@ -30,19 +30,20 @@ export const PageTitles = {
     "About":                 "About",
     "Armor":                 "Armor",
     "Ashes of War":          "Ashes of War",
+    "Builder":               "Builder",
     "Equipment":             "Equipment",
     "Level Up":              "Level Up",
     "Memorize Spells":       "Memorize Spells",
     "Not Found":             "Not Found",
     "Select Character Base": "Select Character Base",
+    "Settings":              "Settings",
     "Status":                "Status",
     "System":                "System",
     "Talisman":              "Talisman",
     "Weapon":                "Weapon",
 } as const
-export type PageTitleKey = keyof typeof PageTitles
-export type PageTitleValue = typeof PageTitles[PageTitleKey];
-export type PageTitle = PageTitleValue
+type PageTitleKey = keyof typeof PageTitles
+export type PageTitle = typeof PageTitles[PageTitleKey];
 
 // =============================================================================
 // Utilities
@@ -52,6 +53,7 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "about":          "About",
     "armor":          "Armor",
     "ashes-of-war":   "Ashes of War",
+    "builder":        "Builder",
     "equipment":      "Equipment",
     "level-up":       "Level Up",
     "not-found":      "Not Found",
@@ -67,7 +69,7 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
 // Icons
 // =============================================================================
 
-const HeaderIconIds = {
+export const HeaderIconIds = {
     "alter-garments":  "ui/title-icons/alter-garments",
     "ashes-of-war":    "ui/title-icons/ashes-of-war",
     "crafting":        "ui/title-icons/crafting",
@@ -80,13 +82,14 @@ const HeaderIconIds = {
     "multiplayer":     "ui/title-icons/multiplayer",
     "physick":         "ui/title-icons/physick",
     "site-of-grace":   "ui/title-icons/site-of-grace",
+    "smithing":        "ui/title-icons/smithing",
     "sort-chest":      "ui/title-icons/sort-chest",
     "spells":          "ui/title-icons/spells",
     "starting-class":  "ui/title-icons/starting-class",
     "status":          "ui/title-icons/status",
     "system":          "ui/title-icons/system",
 } as const
-type HeaderIconId = keyof typeof HeaderIconIds
+export type HeaderIconId = keyof typeof HeaderIconIds
 
 const HEADER_ICON_SIZE: CloudflareVariant = "128"
 export const HEADER_ICONS = Object.entries(HeaderIconIds).reduce((acc, [key, value]) => {
@@ -101,6 +104,7 @@ export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "about":          HEADER_ICONS.map,
     "armor":          HEADER_ICONS.equipment,
     "ashes-of-war":   HEADER_ICONS["ashes-of-war"],
+    "builder":        HEADER_ICONS.smithing,
     "equipment":      HEADER_ICONS.equipment,
     "level-up":       HEADER_ICONS["level-up"],
     "not-found":      HEADER_ICONS["site-of-grace"],

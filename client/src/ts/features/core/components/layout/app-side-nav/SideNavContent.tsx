@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { useNavigate, NavigateFunction, To } from "react-router-dom"
 import { Box } from "@mui/material"
 
-import { PageName } from "@app/types"
+import { HeaderIconId, HeaderIconIds, PageName, PageTitle } from "@app/types"
 import { AppDispatch, Actions, Selectors } from "@app/state"
 import { getImageSrcManual } from "@app/util"
 
@@ -12,16 +12,22 @@ import { getImageSrcManual } from "@app/util"
 
 const sideNavItems: SideNavItemProps[] = [
     {
-        pageName: "level-up",
-        title: "Level Up",
-        cloudflareId: "ui/title-icons/level-up",
-        url: "/level-up",
+        pageName: "builder",
+        title: "Builder",
+        cloudflareId: "smithing",
+        url: "/",
     },
     {
         pageName: "equipment",
         title: "Equipment",
-        cloudflareId: "ui/title-icons/equipment",
+        cloudflareId: "equipment",
         url: "/equipment",
+    },
+    {
+        pageName: "level-up",
+        title: "Level Up",
+        cloudflareId: "level-up",
+        url: "/level-up",
     },
     // {
     //     pageName: null,
@@ -31,19 +37,19 @@ const sideNavItems: SideNavItemProps[] = [
     {
         pageName: "status",
         title: "Status",
-        cloudflareId: "ui/title-icons/status",
+        cloudflareId: "status",
         url: "/status",
     },
     {
         pageName: "about",
         title: "About",
-        cloudflareId: "ui/title-icons/map",
+        cloudflareId: "map",
         url: "/about",
     },
     {
         pageName: "settings",
         title: "Settings",
-        cloudflareId: "ui/title-icons/system",
+        cloudflareId: "system",
         url: "/settings",
     },
 ]
@@ -63,18 +69,19 @@ export const SideNavContent = (_props: unknown): JSX.Element => {
 
 export interface SideNavItemProps {
     pageName: PageName
-    title: string
-    cloudflareId: string
+    title: PageTitle
+    cloudflareId: HeaderIconId
     url?: To
     action?: any
     actionPayload?: any
 }
 
 export const SideNavItem = (props: SideNavItemProps): JSX.Element => {
+
     const dispatch: AppDispatch      = useDispatch()
     const navigate: NavigateFunction = useNavigate()
 
-    const imgSrc = getImageSrcManual(props.cloudflareId, "256")
+    const imgSrc = getImageSrcManual(HeaderIconIds[props.cloudflareId], "256")
 
     const handleClick = () => {
         if (props?.action) {

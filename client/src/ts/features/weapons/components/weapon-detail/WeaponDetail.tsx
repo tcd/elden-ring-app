@@ -65,82 +65,65 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
 
     return (
         <div className="er__equipmentDetail">
-            <div className="row">
-                <div className="col">
-                    <ErCard title={displayName}>
-                        <div className="row">
-                            <div className="col">
-                                <ul>
-                                    <StatRow title={weapon?.weapon_type}                    value={null} />
-                                    <StatRow title={weapon.physical_damage_types.join("/")} value={null} />
-                                    <br />
-                                    <StatRow title={activeSkill?.name} value={null} />
-                                    <br />
-                                    <StatRow title="FP Cost" value={activeSkill?.metadata?.complex_fp_cost ?? activeSkill?.metadata?.basic_fp_cost} />
-                                    <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color={weightColor} />
-                                </ul>
-                            </div>
-                            <div className="col-1"></div>
-                            <div className="col er__equipmentDetail__imageColumn">
-                                {weaponSkillImageElement}
-                                <div className="er__equipmentDetail__imageWrapper">
-                                    <img className="img-fluid" src={weaponImgSrc} alt="weapon image" />
-                                </div>
-                            </div>
+            <section className="er__equipmentDetail__section">
+                <ErCard title={displayName} contentClassName="er__equipmentDetail__cardContent">
+                    <ul>
+                        <StatRow title={weapon?.weapon_type}                    value={null} />
+                        <StatRow title={weapon.physical_damage_types.join("/")} value={null} />
+                        <br />
+                        <StatRow title={activeSkill?.name} value={null} />
+                        <br />
+                        <StatRow title="FP Cost" value={activeSkill?.metadata?.complex_fp_cost ?? activeSkill?.metadata?.basic_fp_cost} />
+                        <StatRow title="Weight"  value={weapon.weight.toFixed(1)} color={weightColor} />
+                    </ul>
+                    <div className="er__equipmentDetail__imageColumn">
+                        {weaponSkillImageElement}
+                        <div className="er__equipmentDetail__imageWrapper">
+                            <img className="img-fluid" src={weaponImgSrc} alt="weapon image" />
                         </div>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword} margined={false} className="mx-3 my-2">
-                        <ul>
-                            <WeaponAttackStats
-                                newStats={newStats}
-                                oldStats={oldStats}
-                            />
-                        </ul>
-                    </ErCard>
-                </div>
-                <div className="col">
-                    <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
-                        <ul>
-                            <WeaponDefenseStats
-                                newWeapon={weapon}
-                                oldWeapon={oldWeapon}
-                            />
-                        </ul>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex} margined={false} className="mx-3 my-2">
-                        <WeaponScalingStats
+                    </div>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword} margined={false} className="mx-3 my-2">
+                    <ul>
+                        <WeaponAttackStats
                             newStats={newStats}
                             oldStats={oldStats}
                         />
-                    </ErCard>
-                </div>
-                <div className="col">
-                    <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended} margined={false} className="mx-3 my-2">
-                        <WeaponRequirementStats
-                            weapon={weapon}
-                            attributes={attributes}
+                    </ul>
+                </ErCard>
+                <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
+                    <ul>
+                        <WeaponDefenseStats
+                            newWeapon={weapon}
+                            oldWeapon={oldWeapon}
                         />
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew} margined={false} className="mx-3 my-2">
-                        <WeaponPassiveEffects
-                            weapon={weapon}
-                            stats={newStats}
-                        />
-                    </ErCard>
-                </div>
-            </div>
+                    </ul>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex} margined={false} className="mx-3 my-2">
+                    <WeaponScalingStats
+                        newStats={newStats}
+                        oldStats={oldStats}
+                    />
+                </ErCard>
+                <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended} margined={false} className="mx-3 my-2">
+                    <WeaponRequirementStats
+                        weapon={weapon}
+                        attributes={attributes}
+                    />
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew} margined={false} className="mx-3 my-2">
+                    <WeaponPassiveEffects
+                        weapon={weapon}
+                        stats={newStats}
+                    />
+                </ErCard>
+            </section>
         </div>
     )
 }

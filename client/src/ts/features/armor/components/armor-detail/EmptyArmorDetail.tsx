@@ -26,53 +26,45 @@ export const EmptyArmorDetail = (_props: unknown): JSX.Element => {
 
     return (
         <div className="er__equipmentDetail">
-            <div className="row">
-                <div className="col">
-                    <ErCard title="-">
-                        <div className="row">
-                            <div className="col">
-                                <ul className="h-100 flex-between-column">
-                                    <span></span>
-                                    <StatRow title="Weight" value="-"/>
-                                </ul>
-                            </div>
-                            <div className="col-1"></div>
-                            <div className="col er__equipmentDetail__imageColumn">
-                                <div className="er__equipmentDetail__imageWrapper empty">
-                                    <div></div>
-                                </div>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="-">
+                    <div className="row">
+                        <div className="col">
+                            <ul className="h-100 flex-between-column">
+                                <span></span>
+                                <StatRow title="Weight" value="-"/>
+                            </ul>
+                        </div>
+                        <div className="col-1"></div>
+                        <div className="col er__equipmentDetail__imageColumn">
+                            <div className="er__equipmentDetail__imageWrapper empty">
+                                <div></div>
                             </div>
                         </div>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
-                        <ul>
-                            {defenseRows}
-                        </ul>
-                    </ErCard>
-                </div>
-                <div className="col">
-                    <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline} margined={false} className="mx-3 my-2">
-                        <ul>
-                            {resistanceRows}
-                        </ul>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2">
-                        <ul>
-                            <li> - </li>
-                            <li> - </li>
-                            <li> - </li>
-                        </ul>
-                    </ErCard>
-                </div>
-            </div>
+                    </div>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
+                    <ul>
+                        {defenseRows}
+                    </ul>
+                </ErCard>
+                <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline} margined={false} className="mx-3 my-2">
+                    <ul>
+                        {resistanceRows}
+                    </ul>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2">
+                    <ul>
+                        <li> - </li>
+                        <li> - </li>
+                        <li> - </li>
+                    </ul>
+                </ErCard>
+            </section>
         </div>
     )
 }

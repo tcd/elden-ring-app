@@ -28,42 +28,31 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
 
     return (
         <div className="er__equipmentDetail">
-            <div className="row">
-                <div className="col">
-                    <ErCard title={talisman.name}>
-                        <div className="row">
-                            <div className="col">
-                                <ul className="h-100 flex-between-column">
-                                    <br />
-                                    <StatRow title="Weight" value={talisman.weight.toFixed(1)}/>
-                                </ul>
-                            </div>
-                            <div className="col-1"></div>
-                            <div className="col er__equipmentDetail__imageColumn">
-                                <div className="er__equipmentDetail__imageWrapper">
-                                    <img className="img-fluid" src={imageSrc} alt="talisman image" />
-                                </div>
-                            </div>
+            <section className="er__equipmentDetail__section">
+                <ErCard title={talisman.name} contentClassName="er__equipmentDetail__cardContent">
+                    <ul className="h-100 flex-between-column">
+                        {/* <br /> */}
+                        <StatRow title="Weight" value={talisman.weight.toFixed(1)}/>
+                    </ul>
+                    <div className="er__equipmentDetail__imageColumn">
+                        <div className="er__equipmentDetail__imageWrapper">
+                            <img className="img-fluid" src={imageSrc} alt="talisman image" />
                         </div>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Description" smallTitle={true} iconPath={mdiScript}>
-                        <p>{talisman.description}</p>
-                    </ErCard>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col">
-                    <ErCard title="Item Effect" smallTitle={true} iconPath={mdiFileCode}>
-                        <ul className="normal">
-                            {effects}
-                        </ul>
-                    </ErCard>
-                </div>
-            </div>
+                    </div>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Description" smallTitle={true} iconPath={mdiScript} margined={false} className="mx-3 my-2">
+                    <p>{talisman.description}</p>
+                </ErCard>
+            </section>
+            <section className="er__equipmentDetail__section">
+                <ErCard title="Item Effect" smallTitle={true} iconPath={mdiFileCode} margined={false} className="mx-3 my-2">
+                    <ul className="normal">
+                        {effects}
+                    </ul>
+                </ErCard>
+            </section>
         </div>
     )
 }

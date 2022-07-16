@@ -20,6 +20,7 @@ export interface ErCardProps {
     iconPath?: string
     content?: any
     className?: string
+    contentClassName?: string
     /**
      * CSS properties to apply to the card.
      * @default {}
@@ -73,6 +74,14 @@ export class ErCard extends Component<ErCardProps> {
         return names.join(" ")
     }
 
+    private contentClassName(): string {
+        const names = ["er__card__content"]
+        if (this.props?.contentClassName) {
+            names.push(this.props.contentClassName)
+        }
+        return names.join(" ")
+    }
+
     private marginClass(): string {
         switch (this.props?.margin) {
             case "all":
@@ -119,7 +128,7 @@ export class ErCard extends Component<ErCardProps> {
                     <div className="left-border-wrapper">
                         <div className="left-border-inner vertical-gradient"></div>
                     </div>
-                    <div className="er__card__content">
+                    <div className={this.contentClassName()}>
                         {this?.props?.children}
                     </div>
                 </section>
