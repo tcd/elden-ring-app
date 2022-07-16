@@ -1,6 +1,7 @@
 import { Page } from "@app/shared"
-import { EquipmentGrid } from "./equipment-grid"
 import { CharacterStatus } from "@app/features/builder"
+import { EquipmentGrid } from "./equipment-grid"
+import { EquipmentPageDetail } from "./EquipmentPageDetail"
 
 export const EquipmentPage = (_props: unknown): JSX.Element => {
     return (
@@ -10,6 +11,7 @@ export const EquipmentPage = (_props: unknown): JSX.Element => {
                     <EquipmentGrid />
                 </div>
                 <div className="col">
+                    <EquipmentPageDetail />
                 </div>
                 <div className="col">
                     <CharacterStatus />

@@ -15,7 +15,7 @@ export const TalismanSlots = (): JSX.Element => {
     })
 
     return (
-        <section className="er__equipmentSlotsRow">
+        <section className="er__equipmentGrid__row">
             {rows}
         </section>
     )

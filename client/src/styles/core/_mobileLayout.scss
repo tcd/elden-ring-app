@@ -10,14 +10,12 @@
     height: 100%;
     // background-color: red;
 
-    #outlet-wrapper {
+    #er__mobileLayout__outletWrapper {
         box-sizing: border-box;
         flex-grow: 1;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
-        // // flex-grow: 1;
-        // padding-top: 1.5rem;
-        // padding-bottom: 0.5rem;
+        overflow-y: scroll;
     }
 
     #er__appHeader__root {
@@ -74,18 +72,18 @@
         }
     }
 
-    #app-footer {
-        box-sizing: border-box;
-        width: 100%;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        padding: 3px;
-        text-align: center;
-        height: 30px;
-        color: map-get(v.$EldenRingColor, menu-fg);
-        background-color: #292927;
-    }
+    // #app-footer {
+    //     box-sizing: border-box;
+    //     width: 100%;
+    //     margin-left: 0px;
+    //     margin-right: 0px;
+    //     margin-bottom: 0px;
+    //     padding: 3px;
+    //     text-align: center;
+    //     height: 30px;
+    //     color: map-get(v.$EldenRingColor, menu-fg);
+    //     background-color: #292927;
+    // }
 
     #er__mobileLayout__footerRoot {
         margin-left: 0px;

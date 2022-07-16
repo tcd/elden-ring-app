@@ -19,11 +19,11 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
     }
 
     const elementId = `armor-slot-${type}`
-    const classNames = ["er__equipmentSlot"]
+    const classNames = ["er__equipmentGrid__cell"]
     let armorImage = null
 
     if (armor) {
-        classNames.push("er__equipmentSlot--filled")
+        classNames.push("er__equipmentGrid__cell--filled")
         armorImage  = <img
             className="img-fluid"
             alt={armor.name}
@@ -31,8 +31,12 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
         />
     }
 
-    const handleClick = () => {
-        dispatch(Actions.Armor.openArmorMenu({ type: type }))
+    const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Equipment.clickSlot({ type: "Armor", id: type }))
+    }
+
+    const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Equipment.setActiveSlot({ type: "Armor", id: type }))
     }
 
     return (
@@ -43,6 +47,7 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
             id={elementId}
             className={classNames.join(" ")}
             onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
         >
             {armorImage}
         </Box>

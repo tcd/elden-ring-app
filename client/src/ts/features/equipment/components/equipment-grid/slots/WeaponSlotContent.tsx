@@ -18,12 +18,16 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
     const { slotId, data: { name } } = props
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
+        dispatch(Actions.Equipment.clickSlot({ type: "Weapon", id: slotId }))
+    }
+
+    const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Equipment.setActiveSlot({ type: "Weapon", id: slotId }))
     }
 
     const slotSx: SxProps = {}
     const elementId = `weapon-slot-${slotId}`
-    const classNames = ["er__equipmentSlot"]
+    const classNames = ["er__equipmentGrid__cell"]
     let weaponImageElement: JSX.Element = null
 
     if (slotId.startsWith("L")) {
@@ -33,7 +37,7 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
     }
 
     if (name) {
-        classNames.push("er__equipmentSlot--filled")
+        classNames.push("er__equipmentGrid__cell--filled")
         const src = getImageSrc("Weapon", name, "256")
         weaponImageElement = (
             <img
@@ -52,6 +56,7 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
             sx={slotSx}
             className={classNames.join(" ")}
             onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
         >
             {weaponImageElement && weaponImageElement}
         </Box>

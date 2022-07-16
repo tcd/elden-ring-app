@@ -1,17 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 import {
-    ArmorType,
     EquipmentType,
-    TalismanSlotId,
-    WeaponSlotId,
+    EquipmentSlotId,
 } from "@app/types"
 import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export interface EquipmentState {
     activeType: EquipmentType
-    activeSlotId: WeaponSlotId | ArmorType | TalismanSlotId
+    activeSlotId: EquipmentSlotId
 }
 
 export const INITIAL_EQUIPMENT_STATE: EquipmentState = {

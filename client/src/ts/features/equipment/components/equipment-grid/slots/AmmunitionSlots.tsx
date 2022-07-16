@@ -14,7 +14,7 @@ export const ArrowSlot = ({ id }: AmmunitionSlotProps): JSX.Element => {
     const imagePath = EquipmentSlotImageUrls.Arrow
     const key = `arrow-slot-${id}`
     return (
-        <li key={key} id={key} className="er__equipmentSlot">
+        <li key={key} id={key} className="er__equipmentGrid__cell">
             <img className="img-fluid" src={imagePath} alt="arrows" />
         </li>
     )
@@ -24,7 +24,7 @@ export const BoltSlot = ({ id }: AmmunitionSlotProps): JSX.Element => {
     const imagePath = EquipmentSlotImageUrls.Bolt
     const key = `bolt-slot-${id}`
     return (
-        <li key={key} id={key} className="er__equipmentSlot">
+        <li key={key} id={key} className="er__equipmentGrid__cell">
             <img className="img-fluid" src={imagePath} alt="bolts" />
         </li>
     )

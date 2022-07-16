@@ -1,13 +1,11 @@
 @use "../variables" as v;
 
-span.text-special {
-    color: v.$gold;
-}
-
-.OptimusPrinceps {
-    font-family: garamond-premier-pro, serif;
-    font-weight: 400;
+@font-face {
+    font-family: "OptimusPrinceps";
+    src: url("assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff2") format("woff2"), url("assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff") format("woff");
+    font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 // @font-face {
@@ -18,10 +16,22 @@ span.text-special {
 //     font-display: swap;
 // }
 
-@font-face {
-    font-family: "OptimusPrinceps";
-    src: url("assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff2") format("woff2"), url("assets/fonts/OptimusPrinceps/woff2/OptimusPrinceps.woff") format("woff");
-    font-weight: 500;
+span.text-special {
+    color: v.$gold;
+}
+
+.OptimusPrinceps {
+    font-family: garamond-premier-pro, serif;
+    font-weight: 400;
     font-style: normal;
-    font-display: swap;
+}
+
+.er__title {
+    color: v.$gold;
+    font-size: 24px;
+    padding-top: .2em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+    white-space: nowrap;
 }

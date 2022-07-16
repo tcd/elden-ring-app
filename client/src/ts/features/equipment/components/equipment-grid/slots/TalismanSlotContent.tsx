@@ -19,17 +19,21 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
 
     const dispatch = useDispatch()
 
-    const handleClick = () => {
-        dispatch(Actions.Talismans.openTalismansMenu({ id }))
+    const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Equipment.clickSlot({ type: "Talisman", id: id }))
+    }
+
+    const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Equipment.setActiveSlot({ type: "Talisman", id: id }))
     }
 
     const elementId = `talisman-slot-${id}`
-    const classNames = ["er__equipmentSlot"]
+    const classNames = ["er__equipmentGrid__cell"]
     let titleString = `Talisman ${id}`
     let talismanImage: JSX.Element = null
 
     if (talisman) {
-        classNames.push("er__equipmentSlot--filled")
+        classNames.push("er__equipmentGrid__cell--filled")
         const src = getImageSrc("Talisman", talisman.name, "256")
         talismanImage = <img className="img-fluid" src={src} alt={talisman.name} />
         titleString = talisman.name
@@ -44,6 +48,7 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
             className={classNames.join(" ")}
             title={titleString}
             onClick={handleClick}
+            onMouseEnter={handleMouseEnter}
         >
             {talismanImage}
         </Box>

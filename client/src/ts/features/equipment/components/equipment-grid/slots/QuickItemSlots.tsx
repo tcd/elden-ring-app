@@ -24,7 +24,7 @@ export const QuickItemSlots = (): JSX.Element => {
     const quickItemSlot = (id: string) => {
         const key = `quick-item-slot-${id}`
         return (
-            <li key={key} id={key} className="er__equipmentSlot" >
+            <li key={key} id={key} className="er__equipmentGrid__cell" >
                 <img className="img-fluid" src={quickItemSlotSrc} alt="quick-item" />
             </li>
         )
@@ -35,11 +35,11 @@ export const QuickItemSlots = (): JSX.Element => {
 
     return (
         <>
-            <section className="w-100">
-                { row1 }
+            <section className="er__equipmentGrid__row">
+                {row1}
             </section>
-            <section className="w-100">
-                { row2 }
+            <section className="er__equipmentGrid__row">
+                {row2}
             </section>
         </>
     )

@@ -1,3 +1,5 @@
+// @import "./bootstrapDefaultVariables";
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -36,16 +38,16 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #2786b7;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #b7273f;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #c5dc6e;
-$teal:    #20c997 !default;
-$cyan:    #0dcaf0 !default;
+$blue:    royalblue;
+$indigo:  mediumslateblue;
+$purple:  rebeccapurple;
+$pink:    hotpink;
+$red:     indianred;
+$orange:  coral;
+$yellow:  #C9BBA1;
+$green:   lime;
+$teal:    lightseagreen;;
+$cyan:    aqua;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map

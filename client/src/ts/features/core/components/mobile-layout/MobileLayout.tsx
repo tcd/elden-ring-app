@@ -7,7 +7,7 @@ export const MobileLayout = () => {
     return (
         <div id="er__mobileLayout">
             <MobileHeader />
-            <div id="mobile-outlet-wrapper">
+            <div id="er__mobileLayout__outletWrapper">
                 <AppSideNav />
                 <Outlet />
             </div>

@@ -12,13 +12,11 @@ export const ArmorSlots = (): JSX.Element => {
     const legs  = useSelector(Selectors.Armor.equipped.legs)
 
     return (
-        <>
-            <section className="er__equipmentSlotsRow">
-                <ArmorSlotContent type={ArmorType.Head}  armor={head}  />
-                <ArmorSlotContent type={ArmorType.Chest} armor={chest} />
-                <ArmorSlotContent type={ArmorType.Arms}  armor={arms}  />
-                <ArmorSlotContent type={ArmorType.Legs}  armor={legs}  />
-            </section>
-        </>
+        <section className="er__equipmentGrid__row">
+            <ArmorSlotContent type={ArmorType.Head}  armor={head}  />
+            <ArmorSlotContent type={ArmorType.Chest} armor={chest} />
+            <ArmorSlotContent type={ArmorType.Arms}  armor={arms}  />
+            <ArmorSlotContent type={ArmorType.Legs}  armor={legs}  />
+        </section>
     )
 }
