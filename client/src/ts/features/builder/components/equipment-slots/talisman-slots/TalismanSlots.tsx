@@ -9,7 +9,7 @@ export const TalismanSlots = (): JSX.Element => {
     const talismans = useSelector(Selectors.Talismans.array)
 
     const rows = talismans.map((talisman, index) => {
-        const id = TalismanSlotIds[index]
+        const id = TalismanSlotIds[index + 1]
         return <TalismanSlot key={`talisman-slot-${id}`} id={id} talisman={talisman} />
     })
 
