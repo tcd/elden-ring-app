@@ -21,7 +21,7 @@ const sideNavItems: SideNavItemProps[] = [
         pageName: "equipment",
         title: "Equipment",
         cloudflareId: "ui/title-icons/equipment",
-        url: "/",
+        url: "/equipment",
     },
     // {
     //     pageName: null,
