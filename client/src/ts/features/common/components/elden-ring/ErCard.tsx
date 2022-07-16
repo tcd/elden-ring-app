@@ -119,7 +119,7 @@ export class ErCard extends Component<ErCardProps> {
                     <div className="left-border-wrapper">
                         <div className="left-border-inner vertical-gradient"></div>
                     </div>
-                    <div className="content">
+                    <div className="er__card__content">
                         {this?.props?.children}
                     </div>
                 </section>

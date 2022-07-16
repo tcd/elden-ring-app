@@ -54,7 +54,7 @@ export const ErTallCard = (props: ErTallCardProps): JSX.Element => {
                 <div className="left-border-wrapper">
                     <div className="left-border-inner vertical-gradient"></div>
                 </div>
-                <div className="content">
+                <div className="er__tallCard__content">
                     {props.sections && sections}
                 </div>
             </div>
