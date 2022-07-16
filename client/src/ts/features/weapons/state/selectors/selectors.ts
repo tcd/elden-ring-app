@@ -48,6 +48,7 @@ export const selectActiveSlotId     = (rootState: RootState): WeaponSlotId => se
 export const selectHasMenuScrolled  = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.menuHasScrolled
 export const selectCustomizing      = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.customizingWeapon
 export const selectChoosingAffinity = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.choosingAffinity
+export const selectMobileTab        = (rootState: RootState)               => selectWeaponsSlice(rootState)?.mobileTab
 
 const selectR1Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R1?.weapon_name
 const selectR2Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R2?.weapon_name

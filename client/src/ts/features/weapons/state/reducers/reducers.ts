@@ -1,4 +1,5 @@
-import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
+import { ActionReducerMapBuilder, AnyAction, PayloadAction } from "@reduxjs/toolkit"
+import { RouterActions, LOCATION_CHANGE } from "redux-first-history"
 
 import {
     startingClassByName,
@@ -12,7 +13,10 @@ import {
 import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { StartingClassActions } from "@app/features/starting-class"
-import { WeaponsState, INITIAL_WEAPONS_STATE } from "./state"
+import { WeaponsState, INITIAL_WEAPONS_STATE } from "../state"
+// import { history } from "@app/state"
+import { isLocationChange, noWeaponsSelected, handleLocationChange } from "./helpers"
+
 
 export const reducers = {
     setActiveSlotId(state: WeaponsState, action: PayloadAction<{ id: WeaponSlotId }>) {
@@ -122,15 +126,49 @@ export const reducers = {
     },
 }
 
-const noWeaponsSelected = (slice: WeaponsState): boolean => {
-    const slots = slice?.slots
-    if (slots?.R1?.weapon_name != null) { return false }
-    if (slots?.R2?.weapon_name != null) { return false }
-    if (slots?.R3?.weapon_name != null) { return false }
-    if (slots?.L1?.weapon_name != null) { return false }
-    if (slots?.L2?.weapon_name != null) { return false }
-    if (slots?.L3?.weapon_name != null) { return false }
-    return true
+const WEAPON_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3))(?<aow>\/ashes-of-war)?(?<tab>#(grid|detail|status)?)?$/
+// const WEAPON_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)(?<tab>#(grid|detail|status))?$)/
+// const ASH_OF_WAR_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)\/ashes-of-war$)/
+// const ASH_OF_WAR_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)\/ashes-of-war(?<tab>#(grid|detail|status))?$)/
+
+interface WeaponPathParams {
+    slotId: WeaponSlotId
+    tab: "grid" | "detail" | "status"
+    ashesOfWar: boolean
+}
+
+const matchWeaponPath = (path: string): WeaponPathParams => {
+    if (!path.startsWith("/weapon")) {
+        return null
+    }
+    const match = WEAPON_PATH_PATTERN.exec(path)
+    console.log(match?.groups)
+    const result = { slotId: null, tab: null, ashesOfWar: null }
+    if (match?.groups) {
+        if (match?.groups?.slotId) {
+            result.slotId = match.groups.slotId as WeaponSlotId
+        }
+        if (match?.groups?.ashesOfWar) {
+            result.ashesOfWar = true
+        }
+        if (match?.groups?.tab) {
+            result.tab = match.groups.tab as "grid" | "detail" | "status"
+        }
+        return result
+    } else {
+        return null
+    }
+    // if (path.includes("ashes-of-war")) {
+    //     const match = ASH_OF_WAR_PATH_PATTERN.exec(path)
+    //     if (match?.groups?.slotId) {
+    //         return match.groups.slotId as WeaponSlotId
+    //     }
+    // } else {
+    //     const match = WEAPON_PATH_PATTERN.exec(path)
+    //     if (match?.groups?.slotId) {
+    //         return match.groups.slotId as WeaponSlotId
+    //     }
+    // }
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
@@ -146,4 +184,5 @@ export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) =>
                 return state
             }
         })
+        .addCase(LOCATION_CHANGE, (state: WeaponsState, action) => handleLocationChange(state, action))
 }

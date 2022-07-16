@@ -16,6 +16,7 @@ export interface WeaponsState {
     customizingWeapon: boolean
     choosingAffinity: boolean
     menuHasScrolled: boolean
+    mobileTab: "grid" | "detail" | "status"
 }
 
 const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
@@ -34,6 +35,7 @@ export const INITIAL_WEAPONS_STATE: WeaponsState = {
     customizingWeapon: false,
     choosingAffinity:  false,
     menuHasScrolled:   false,
+    mobileTab: null,
 }
 
 const devState: WeaponsState = {
