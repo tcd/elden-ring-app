@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { WeaponSlotId } from "@app/types"
+import { WeaponSlotId } from "@app/constants"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { WeaponDetail, WeaponSkillMenu } from "@app/features/weapons/components"

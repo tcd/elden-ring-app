@@ -1,8 +1,4 @@
-import { ArmorType } from "@app/constants"
-import {
-    TalismanSlotId,
-    WeaponSlotId,
-} from "@app/types"
+import { ArmorType, WeaponSlotId, TalismanSlotId } from "@app/constants"
 
 export type EquipmentType = "Weapon" | "Armor" | "Talisman"
 export type EquipmentSlotId = WeaponSlotId | ArmorType | TalismanSlotId

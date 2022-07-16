@@ -2,7 +2,8 @@ import { forwardRef } from "react"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { WeaponSlotId, WeaponSlotData } from "@app/types"
+import { WeaponSlotId } from "@app/constants"
+import { WeaponSlotData } from "@app/types"
 import { getImageSrc, cssUrl, EquipmentSlotImageUrls } from "@app/util"
 import { Actions } from "@app/state"
 

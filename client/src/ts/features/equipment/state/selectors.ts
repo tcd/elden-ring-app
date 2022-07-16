@@ -1,7 +1,5 @@
-import {
-    WeaponSlotId,
-    weaponSlotIdName,
-} from "@app/types"
+import { WeaponSlotId } from "@app/constants"
+import { weaponSlotIdName } from "@app/types"
 import { RootState } from "@app/state"
 import { EquipmentState } from "./state"
 

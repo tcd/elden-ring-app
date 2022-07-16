@@ -5,8 +5,8 @@ import {
     startingClassByName,
     WEAPON_SKILL_DEFAULT_AFFINITIES,
 } from "@app/data"
+import { WeaponSlotId } from "@app/constants"
 import {
-    WeaponSlotId,
     WeaponAffinityName,
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"

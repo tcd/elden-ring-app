@@ -6,12 +6,12 @@ import {
 } from "elden-ring-calculator"
 
 import { Unarmed, UnarmedStats } from "@app/data"
+import { WeaponSlotId } from "@app/constants"
 import {
     Weapon,
     WeaponSlots,
     WeaponSettings,
     WeaponSkill,
-    WeaponSlotId,
     WeaponSlotsData,
 } from "@app/types"
 import {
