@@ -5,6 +5,6 @@ export const ArmorTypes = {
     "Legs":  "Legs",
 } as const
 
-type ArmorTypeKey = keyof typeof ArmorTypes
+type ArmorTypesKey = keyof typeof ArmorTypes
 
-export type ArmorType = typeof ArmorTypes[ArmorTypeKey];
+export type ArmorType = typeof ArmorTypes[ArmorTypesKey];

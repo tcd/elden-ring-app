@@ -9,9 +9,9 @@ export const WeaponSlotIds = {
     "L3": "L3",
 } as const
 
-export type WeaponSlotId = keyof typeof WeaponSlotIds
+type WeaponSlotIdsKey = keyof typeof WeaponSlotIds
 
-export type WeaponSlotIdType = typeof WeaponSlotIds[WeaponSlotId];
+export type WeaponSlotId = typeof WeaponSlotIds[WeaponSlotIdsKey];
 
 export type WeaponSlots = Record<WeaponSlotId, WeaponSettings>
 
@@ -35,3 +35,14 @@ export interface WeaponSlotData {
 }
 
 export type WeaponSlotsData = Record<WeaponSlotId, WeaponSlotData>
+
+export const AmmunitionSlotIds = {
+    "A1": "A1",
+    "A2": "A2",
+    "B1": "B1",
+    "B2": "B2",
+} as const
+
+type AmmunitionSlotIdsKey = keyof typeof AmmunitionSlotIds
+
+export type AmmunitionSlotId = typeof AmmunitionSlotIds[AmmunitionSlotIdsKey];

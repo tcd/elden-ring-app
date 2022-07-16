@@ -5,6 +5,6 @@ export const ResistanceStatNames = {
     "vitality":   "vitality",
 } as const
 
-export type ResistanceStatName = keyof typeof ResistanceStatNames
+type ResistanceStatNamesKey = keyof typeof ResistanceStatNames
 
-export type ResistanceStatNames = typeof ResistanceStatNames[ResistanceStatName];
+export type ResistanceStatName = typeof ResistanceStatNames[ResistanceStatNamesKey];

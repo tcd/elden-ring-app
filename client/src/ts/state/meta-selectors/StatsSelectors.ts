@@ -5,7 +5,7 @@ import {
     LEVEL_FP_MAP,
     LEVEL_STAMINA_MAP,
 } from "@app/data"
-import { ResistanceStatName } from "@app/types"
+import { ResistanceStatName } from "@app/constants"
 import { RootState } from "@app/state"
 import { ArmorSelectors as Armor } from "@app/features/armor"
 import { LevelsSelectors as Level } from "./LevelsSelectors"
