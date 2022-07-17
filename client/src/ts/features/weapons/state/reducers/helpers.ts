@@ -1,25 +1,6 @@
-import { ActionReducerMapBuilder, AnyAction, PayloadAction } from "@reduxjs/toolkit"
-import { RouterActions, LOCATION_CHANGE } from "redux-first-history"
-import { locationChangeAction } from "redux-first-history/build/es6/actions"
-
-import {
-    startingClassByName,
-    WEAPON_SKILL_DEFAULT_AFFINITIES,
-} from "@app/data"
 import { WeaponSlotId } from "@app/constants"
-import {
-    DEFAULT_WEAPON_SETTINGS,
-} from "@app/types"
 import { isBlank } from "@app/util"
-import { WeaponsState, INITIAL_WEAPONS_STATE } from "../state"
-// import { history } from "@app/state"
-
-type TLocationChangeAction = typeof locationChangeAction
-
-// @ts-ignore: next-line
-export const isLocationChange = (action: AnyAction): action is TLocationChangeAction   => {
-    return action.type == LOCATION_CHANGE
-}
+import { WeaponsState } from "../state"
 
 export const noWeaponsSelected = (slice: WeaponsState): boolean => {
     const slots = slice?.slots
@@ -32,23 +13,22 @@ export const noWeaponsSelected = (slice: WeaponsState): boolean => {
     return true
 }
 
-const WEAPON_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3))(?<aow>\/ashes-of-war)?(?<tab>#(grid|detail|status)?)?$/
+const PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3))(?<aow>\/ashes-of-war)?(?<tab>#(grid|detail|status)?)?$/
 // const WEAPON_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)(?<tab>#(grid|detail|status))?$)/
 // const ASH_OF_WAR_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)\/ashes-of-war$)/
 // const ASH_OF_WAR_PATH_PATTERN = /^\/weapons\/(?<slotId>(R1|R2|R3|L1|L2|L3)\/ashes-of-war(?<tab>#(grid|detail|status))?$)/
 
-interface WeaponPathParams {
+interface PathParams {
     slotId: WeaponSlotId
     tab: "grid" | "detail" | "status"
     ashesOfWar: boolean
 }
 
-const matchWeaponPath = (path: string): WeaponPathParams => {
+const matchPath = (path: string): PathParams => {
     if (!path.startsWith("/weapon")) {
         return null
     }
-    const match = WEAPON_PATH_PATTERN.exec(path)
-    // console.log(match?.groups)
+    const match = PATH_PATTERN.exec(path)
     const result = { slotId: null, tab: null, ashesOfWar: null }
     if (match?.groups) {
         if (match?.groups?.slotId) {
@@ -78,7 +58,6 @@ const matchWeaponPath = (path: string): WeaponPathParams => {
 }
 
 export const handleLocationChange =  (state: WeaponsState, action): WeaponsState => {
-    console.log(action)
     // @ts-ignore: next-line
     const pathname: string = action?.payload?.location?.pathname
     // @ts-ignore: next-line
@@ -91,7 +70,7 @@ export const handleLocationChange =  (state: WeaponsState, action): WeaponsState
         state.mobileTab = hash.replaceAll("#", "") as ("grid" | "detail" | "status")
     }
 
-    const pathParams = matchWeaponPath(pathname)
+    const pathParams = matchPath(pathname)
     if (pathParams == null) {
         return state
     }
