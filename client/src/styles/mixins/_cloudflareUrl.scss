@@ -9,5 +9,5 @@
 
     $url: "https://imagedelivery.net/" + v.$cloudflare-hash + "/" + $path;
 
-    @return url("");
+    @return url($url);
 }

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { getImageSrcManual } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 
-const headerBackgroundSrc = getImageSrcManual("ui/header/400", "public")
+// const headerBackgroundSrc = getImageSrcManual("ui/header/400", "public")
 
 export const MobileHeader = (_props: unknown): JSX.Element => {
 
@@ -21,7 +21,8 @@ export const MobileHeader = (_props: unknown): JSX.Element => {
 
     return (
         <header id="er__appHeader__root">
-            <img id="er__appHeader__background" src={headerBackgroundSrc} alt="header background" />
+            {/* <img id="er__appHeader__background" src={headerBackgroundSrc} alt="header background" /> */}
+            <div id="er__appHeader__background"></div>
             <div id="er__appHeader__content">
                 <img
                     className="er__appHeader__icon"
