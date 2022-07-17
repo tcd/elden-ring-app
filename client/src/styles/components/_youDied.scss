@@ -26,12 +26,12 @@
         height: 150px;
         width: 100%;
         text-align: center;
-        background: m.customGradient(180deg, v.$you-died-black, v.$you-died-gradient-stops);
+        background: m.customGradient(180deg, v.$youDied-black, v.$youDied-gradient-stops);
         a.er__youDied__link,
         span {
             font-family: "OptimusPrinceps";
             font-size: 4rem;
-            color: v.$you-died-red;
+            color: v.$youDied-red;
             text-decoration: none;
         }
     }

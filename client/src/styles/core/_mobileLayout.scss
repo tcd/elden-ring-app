@@ -11,27 +11,24 @@
     // background-color: red;
 
     #er__mobileLayout__outletWrapper {
-        box-sizing: border-box;
+        // box-sizing: border-box;
         flex-grow: 1;
-        margin-top: 1.5rem;
-        margin-bottom: 0.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 0.5rem;
         overflow-y: scroll;
     }
 
     #er__appHeader__root {
-        $mobileHeader-height: 86px;
-        $mobileHeader-contentHeight: 86px;
-        $mobileHeader-topMargin: 5px;
+        // position: relative;
 
-        position: relative;
-
-        height: ($mobileHeader-height + ($mobileHeader-topMargin * 2));
+        height: (v.$mobileHeader-height + (v.$mobileHeader-topMargin * 2));
+        // height: 56px;
 
         #er__appHeader__background {
             position: absolute;
             top: 0;
             left: 0;
-            margin-top: $mobileHeader-topMargin;
+            margin-top: v.$mobileHeader-topMargin;
         }
 
         #er__appHeader__content {
@@ -40,8 +37,8 @@
             left: 0;
 
             width: 100%;
-            height: $mobileHeader-contentHeight;
-            margin-top: $mobileHeader-topMargin;
+            height: v.$mobileHeader-contentHeight;
+            margin-top: v.$mobileHeader-topMargin;
 
             display: flex;
             flex-flow: row nowrap;

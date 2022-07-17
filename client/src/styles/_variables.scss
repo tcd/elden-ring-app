@@ -62,25 +62,25 @@ $breakpoints: (
 $white:    #d4d4d4;
 $black:    #1e1e1e;
 $blue:    #527ED5;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #d63384 !default;
+// $indigo:  #6610f2;
+// $purple:  #6f42c1;
+// $pink:    #d63384;
 $red:     #CD3138;
-// $orange:  #fd7e14 !default;
+// $orange:  #fd7e14;
 $yellow:  #ebbd6c;
 $green:   #338636;
-// $teal:    #20c997 !default;
-// $cyan:    #0dcaf0 !default;
+// $teal:    #20c997;
+// $cyan:    #0dcaf0;
 
 // scss-docs-start theme-color-variables
-// $primary:       $blue !default;
-// $secondary:     $gray-600 !default;
+// $primary:       $blue;
+// $secondary:     $gray-600;
 $success:       $green;
-// $info:          $cyan !default;
+// $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
-// $light:         $gray-100 !default;
-// $dark:          $gray-900 !default;
+// $light:         $gray-100;
+// $dark:          $gray-900;
 // scss-docs-end theme-color-variables
 
 // ----------------------------------------------------------------------------
@@ -91,7 +91,7 @@ $danger:        $red;
 
 // Prefix for :root CSS variables
 $variable-prefix: er-; // Deprecated in Bootstrap v5.2.0 for the shorter `$prefix`
-$prefix: $variable-prefix !default;
+$prefix: $variable-prefix;
 
 // ----------------------------------------------------------------------------
 // Z-index master list
@@ -101,22 +101,22 @@ $prefix: $variable-prefix !default;
 // ----------------------------------------------------------------------------
 
 // scss-docs-start zindex-stack
-$zindex-startingClass-background:      1005 !default;
-$zindex-startingClass-content:         1010 !default;
-$zindex-startingClass-hover:           1011 !default;
-// $zindex-dropdown:                   1000 !default;
-// $zindex-sticky:                     1020 !default;
-// $zindex-fixed:                      1030 !default;
-// $zindex-offcanvas-backdrop:         1040 !default;
-// $zindex-offcanvas:                  1045 !default;
-$zindex-modal-backdrop:             1050 !default;
-$zindex-modal:                      1055 !default;
-$zindex-popover:                    1070 !default;
-$zindex-tooltip:                    1080 !default;
-// $zindex-toast:                      1090 !default;
-$zindex-contextMenu:                  1100 !default;
-$zindex-sideNav-backdrop:             1190 !default;
-$zindex-sideNav:                      1200 !default;
+$zindex-startingClass-background:      1005;
+$zindex-startingClass-content:         1010;
+$zindex-startingClass-hover:           1011;
+// $zindex-dropdown:                   1000;
+// $zindex-sticky:                     1020;
+// $zindex-fixed:                      1030;
+// $zindex-offcanvas-backdrop:         1040;
+// $zindex-offcanvas:                  1045;
+$zindex-modal-backdrop:             1050;
+$zindex-modal:                      1055;
+$zindex-popover:                    1070;
+$zindex-tooltip:                    1080;
+// $zindex-toast:                      1090;
+$zindex-contextMenu:                  1100;
+$zindex-sideNav-backdrop:             1190;
+$zindex-sideNav:                      1200;
 // scss-docs-end zindex-stack
 
 // ----------------------------------------------------------------------------
@@ -125,8 +125,8 @@ $zindex-sideNav:                      1200 !default;
 // Settings for the `<body>` element.
 // ----------------------------------------------------------------------------
 
-$body-color-bg: $black !default;
-$body-color-fg: #d3d3d3 !default;
+$body-color-bg: $black;
+$body-color-fg: #d3d3d3;
 
 // ----------------------------------------------------------------------------
 // Typography
@@ -134,29 +134,7 @@ $body-color-fg: #d3d3d3 !default;
 // Font, line-height, and color for body text, headings, and more.
 // ----------------------------------------------------------------------------
 
-// // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
-// $font-size-root: null !default;
-
-// // $font-size-base affects the font size of the body text
-// $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-
-// // $font-size-sm:   $font-size-base * .875 !default;
-// // $font-size-lg:   $font-size-base * 1.25 !default;
-//
-// $font-weight-lighter:         lighter !default;
-// $font-weight-light:           300 !default;
-// $font-weight-normal:          400 !default;
-// $font-weight-semibold:        600 !default;
-// $font-weight-bold:            700 !default;
-// $font-weight-bolder:          bolder !default;
-//
-// $font-weight-base:            $font-weight-normal !default;
-
-// $line-height-base:            1.5 !default;
-// $line-height-sm:              1.25 !default;
-// $line-height-lg:              2 !default;
-
-$headings-color: #cfc1a6 !default;
+$headings-color: #cfc1a6;
 
 $text-shadow-offset: 1px;
 // $stat-row-font-size: 16px;
@@ -193,6 +171,14 @@ $sideNav-backdrop-bgStops: (
    95%: 0.90,
   100%: 1.00,
 );
+
+// ----------------------------------------------------------------------------
+// Mobile Layout
+// ----------------------------------------------------------------------------
+
+$mobileHeader-height: 86px;
+$mobileHeader-contentHeight: 86px;
+$mobileHeader-topMargin: 5px;
 
 // ----------------------------------------------------------------------------
 // Button
@@ -296,9 +282,9 @@ $contextMenu-item-stops: (
 // You Died
 // ----------------------------------------------------------------------------
 
-$you-died-red: #520000;
-$you-died-black: black;
-$you-died-gradient-stops: (
+$youDied-red: #520000;
+$youDied-black: black;
+$youDied-gradient-stops: (
     0%:   0.20,
     10%:  0.40,
     25%:  0.60,
@@ -348,6 +334,42 @@ $equipment-slot-overlay-color: #B6AD84;
 $equipment-menu-horizontal-margin: 10%;
 $equipment-grid-cell-width:  150px;
 $equipment-grid-cell-height: 170px;
+
+// ----------------------------------------------------------------------------
+// Equipment Grid / Equipment Slots
+// ----------------------------------------------------------------------------
+
+$equipmentMenu-image-background: #3A3931;
+$equipmentMenu-grid-background: #3d3b32;
+$equipmentMenu-grid-divider: #4c4a41;
+$equipmentMenu-cell-color: #36352d;
+$equipmentMenu-min-cell-size: 50px;
+$equipmentMenu-redX-size: 16px;
+$equipmentMenu-redX-padding: 4px;
+
+$equipmentCell-gradient-colors: (
+    #2e2d26,
+);
+
+$equipmentGrid-border-stops: (
+      0%: 0.0,
+     10%: 1.0,
+     90%: 1.0,
+    100%: 0.0,
+);
+
+$equipmentCell-border-stops: (
+      0%: 0.00,
+     25%: 0.05,
+     45%: 0.10,
+     50%: 0.20,
+     60%: 0.30,
+     70%: 0.40,
+     80%: 0.50,
+     90%: 0.90,
+     95%: 0.75,
+    100%: 0.00,
+);
 
 // ==========================================================================
 // Base64 Encoded Images
