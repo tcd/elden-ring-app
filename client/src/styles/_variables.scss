@@ -40,20 +40,20 @@ $CorrectColors: (
 // ----------------------------------------------------------------------------
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 550px,
-  md: 770px,
-  lg: 990px,
-  xl: 1200px,
+  xs:  0,
+  sm:  550px,
+  md:  770px,
+  lg:  990px,
+  xl:  1200px,
   xxl: 1400px
-) !default;
+);
 
 $breakpoints: (
     mobile:  500px,
     tablet:  770px,
     laptop:  990px,
     desktop: 1200px,
-) !default;
+);
 
 // ----------------------------------------------------------------------------
 // Color System

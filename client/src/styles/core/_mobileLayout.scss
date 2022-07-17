@@ -11,18 +11,25 @@
     // background-color: red;
 
     #er__mobileLayout__outletWrapper {
-        // box-sizing: border-box;
-        flex-grow: 1;
-        padding-top: 1.5rem;
-        padding-bottom: 0.5rem;
+        box-sizing: border-box;
+        // flex-grow: 1;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
         overflow-y: scroll;
     }
 
     #er__appHeader__root {
+        width: 100%;
+        align-self: flex-start;
+        justify-self: flex-start;
+        margin: 0px;
+        padding: 0px;
+        flex-shrink: 0;
         // position: relative;
+        display: flex;
 
-        height: (v.$mobileHeader-height + (v.$mobileHeader-topMargin * 2));
-        // height: 56px;
+        // height: (v.$mobileHeader-height + (v.$mobileHeader-topMargin * 2));
+        height: v.$mobileHeader-height;
 
         #er__appHeader__background {
             position: absolute;
@@ -32,6 +39,7 @@
         }
 
         #er__appHeader__content {
+            box-sizing: border-box;
             position: absolute;
             top: 0;
             left: 0;
