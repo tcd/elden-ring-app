@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -18,9 +19,11 @@ interface TalismanSlotProps {
 const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleClick = () => {
-        dispatch(Actions.Talismans.openTalismansMenu({ id }))
+        // dispatch(Actions.Talismans.openTalismansMenu({ id }))
+        navigate(`/talismans/${id}#grid`)
     }
 
     const elementId = `talisman-slot-${id}`

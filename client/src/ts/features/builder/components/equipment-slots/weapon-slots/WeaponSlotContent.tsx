@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -15,11 +16,13 @@ export interface WeaponSlotProps {
 const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const { slotId, data: { name } } = props
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
+        // dispatch(Actions.Weapons.openWeaponsMenu({ id: slotId }))
+        navigate(`/weapons/${slotId}#grid`)
     }
 
     const slotSx: SxProps = {}

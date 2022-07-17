@@ -70,7 +70,7 @@ export const TalismanSlot = (props: TalismanSlotProps): JSX.Element => {
 
     const handleClickChange = () => {
         setAnchorEl(null)
-        navigate(`/talismans/${props.id}`)
+        navigate(`/talismans/${props.id}#grid`)
     }
 
     const handleClickUnequip = () => {

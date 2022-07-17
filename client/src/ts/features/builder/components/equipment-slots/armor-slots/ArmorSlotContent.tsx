@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -13,7 +14,9 @@ interface ArmorSlotProps {
 }
 
 const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
+
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const slotSx: SxProps = {
         backgroundImage: cssUrl(EquipmentSlotImageUrls[type]),
@@ -33,7 +36,8 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
     }
 
     const handleClick = () => {
-        dispatch(Actions.Armor.openArmorMenu({ type: type }))
+        // dispatch(Actions.Armor.openArmorMenu({ type: type }))
+        navigate(`/armor/${type}#grid`)
     }
 
     return (

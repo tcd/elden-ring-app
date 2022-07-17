@@ -70,7 +70,7 @@ export const ArmorSlot = (props: ArmorSlotProps) => {
 
     const handleClickChange = () => {
         setAnchorEl(null)
-        navigate(`/armor/${props.type}`)
+        navigate(`/armor/${props.type}#grid`)
         // dispatch(Actions.Armor.openArmorMenu({ type: props.type }))
     }
 
