@@ -10,6 +10,7 @@ export interface TalismansState {
     activeSlotId: TalismanSlotId
     oldTalismanName?: string
     menuHasScrolled: boolean
+    mobileTab: "grid" | "detail" | "status"
 }
 
 export const INITIAL_TALISMANS_STATE: TalismansState = {
@@ -22,6 +23,7 @@ export const INITIAL_TALISMANS_STATE: TalismansState = {
     activeSlotId: null,
     oldTalismanName: null,
     menuHasScrolled: false,
+    mobileTab: "grid",
 }
 
 const initialDevState: TalismansState = {

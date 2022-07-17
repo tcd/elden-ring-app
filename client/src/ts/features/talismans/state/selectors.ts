@@ -15,6 +15,7 @@ const _selectTalisman = (rootState: RootState, name?: string) => {
 const selectActiveSlotId    = (rootState: RootState): TalismanSlotId => selectTalismansSlice(rootState).activeSlotId
 const selectTalismanNames   = (rootState: RootState): TalismanSet => selectTalismansSlice(rootState).talismanNames
 const selectHasMenuScrolled = (rootState: RootState): boolean => selectTalismansSlice(rootState).menuHasScrolled
+const selectMobileTab       = (rootState: RootState) => selectTalismansSlice(rootState).mobileTab
 
 const _selectTalismanNameBySlotId = (rootState: RootState, slotId: TalismanSlotId) => {
     return selectTalismanNames(rootState)?.[slotId]
@@ -110,4 +111,5 @@ export const TalismansSelectors = {
      */
     options: selectTalismanOptions,
     menuHasScrolled: selectHasMenuScrolled,
+    mobileTab: selectMobileTab,
 }

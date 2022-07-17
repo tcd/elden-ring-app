@@ -1,9 +1,10 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { TalismanSlotId } from "@app/constants"
-import { isBlank } from "@app/util"
+import { isBlank, isLocationChange } from "@app/util"
 import { CoreActions } from "@app/features/core"
-import { TalismansState, INITIAL_TALISMANS_STATE } from "./state"
+import { TalismansState, INITIAL_TALISMANS_STATE } from "../state"
+import { handleLocationChange } from "./helpers"
 
 export const reducers = {
     setActiveSlotId(state: TalismansState, { payload: { id } }: PayloadAction<{ id: TalismanSlotId }>) {
@@ -43,4 +44,5 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<TalismansState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_TALISMANS_STATE)
+        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
 }
