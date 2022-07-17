@@ -1,12 +1,11 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import {
-    KitchenSink,
-    AttributeName,
-} from "@app/types"
+import { KitchenSink } from "@app/types"
+import { isLocationChange } from "@app/util"
 import { CoreActions } from "@app/features/core"
-import { BuilderState, INITIAL_BUILDER_STATE } from "./state"
-import { fetchEverything } from "./thunks"
+import { BuilderState, INITIAL_BUILDER_STATE } from "../state"
+import { fetchEverything } from "../thunks"
+import { handleLocationChange } from "./helpers"
 
 export const reducers = {
     cycleCharacterStatus(state: BuilderState, _action?: PayloadAction<"A" | "B">) {
@@ -37,4 +36,5 @@ export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) =>
             state.everythingRequest.status = "fulfilled"
             state.everythingRequest.response = action.payload
         })
+        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
 }

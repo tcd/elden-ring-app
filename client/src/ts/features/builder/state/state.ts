@@ -15,6 +15,7 @@ export interface BuilderState {
     attributes: Attributes
     whichCharacterStatus: "A" | "B"
     actionMenuDescription: string
+    mobileTab: "level" | "equipment" | "status"
 }
 
 // Define the initial state using that type
@@ -36,6 +37,7 @@ export const INITIAL_BUILDER_STATE: BuilderState = {
     },
     whichCharacterStatus: "A",
     actionMenuDescription: "",
+    mobileTab: "equipment",
 }
 
 const myBuild: BuilderState = {
