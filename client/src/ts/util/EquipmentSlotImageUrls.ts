@@ -1,5 +1,9 @@
 import { getImageSrcManual } from "./get-image-src"
 
+// =============================================================================
+// Old
+// =============================================================================
+
 const emptySlotSrc = getImageSrcManual("bad/equipment-slots/empty", "256")
 
 const headSlotSrc  = getImageSrcManual("bad/equipment-slots/armor-head",  "256")
@@ -15,6 +19,28 @@ const boltSlotSrc        = getImageSrcManual("bad/equipment-slots/weapon-slot-bo
 const talismanSlotSrc  = getImageSrcManual("bad/equipment-slots/talisman-slot", "256")
 const quickItemSlotSrc = getImageSrcManual("bad/equipment-slots/quick-items", "256")
 const spellSlotSrc     = getImageSrcManual("bad/equipment-slots/empty", "256")
+
+// =============================================================================
+// New
+// =============================================================================
+
+// const emptySlotSrc = getImageSrcManual("ui/equipment-menu/empty", "256")
+
+// const headSlotSrc  = getImageSrcManual("ui/equipment-menu/head",  "256")
+// const chestSlotSrc = getImageSrcManual("ui/equipment-menu/chest", "256")
+// const armsSlotSrc  = getImageSrcManual("ui/equipment-menu/arms",  "256")
+// const legsSlotSrc  = getImageSrcManual("ui/equipment-menu/legs",  "256")
+
+// const weaponSlotSrcRight = getImageSrcManual("ui/equipment-menu/weapon-right",  "256")
+// const weaponSlotSrcLeft  = getImageSrcManual("ui/equipment-menu/weapon-left",   "256")
+// const arrowSlotSrc       = getImageSrcManual("ui/equipment-menu/arrows", "256")
+// const boltSlotSrc        = getImageSrcManual("ui/equipment-menu/bolts",  "256")
+
+// const talismanSlotSrc  = getImageSrcManual("ui/equipment-menu/talisman", "256")
+// const quickItemSlotSrc = getImageSrcManual("ui/equipment-menu/quick-item", "256")
+// const spellSlotSrc     = getImageSrcManual("ui/equipment-menu/spell", "256")
+
+// =============================================================================
 
 export interface IEquipmentSlotImageUrls {
     Empty:       string
