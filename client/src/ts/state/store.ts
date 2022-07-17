@@ -33,7 +33,7 @@ import {
 const routerOptions: IHistoryContextOptions = {
     history: createBrowserHistory(),
     reduxTravelling: true,
-    savePreviousLocations: 5,
+    savePreviousLocations: 25,
 }
 
 const {

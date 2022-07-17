@@ -4,9 +4,9 @@ import {
     FEATURE_KEYS,
     ApiClient,
     LocalStorage,
-} from "@util"
+} from "@app/util"
 
-const actionName = `${FEATURE_KEYS.Core}/fetch/everything`
+const actionName = `${FEATURE_KEYS.Builder}/fetch/everything`
 
 export const fetchEverything = createAsyncThunk(actionName, async (_, thunkApi) => {
     try {

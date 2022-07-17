@@ -1,21 +1,27 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-import { Actions } from "@app/state"
+import { Actions, Selectors } from "@app/state"
 import { AppFooterAction, AppFooterActionProps } from "../AppFooterAction"
 
 export const AshesOfWarFooter = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const lastMainPage = useSelector(Selectors.Meta.Router.lastMainPage)
 
     // =========================================================================
 
     const handleRequestClose = () => {
         dispatch(Actions.Weapons.stopCustomizingWeapon())
+        navigate(lastMainPage)
     }
 
     const handleRequestClear = () => {
         // dispatch(Actions.Weapons.removeWeapon())
         dispatch(Actions.Weapons.stopCustomizingWeapon())
+        navigate(lastMainPage)
     }
 
     const handleCharacterStatusClick = () => {

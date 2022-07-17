@@ -2,8 +2,8 @@ import { Grid, GridProps } from "@mui/material"
 
 import { Page } from "@app/shared"
 import { CharacterStatus } from "@app/features/builder"
-import { EquipmentGrid } from "./equipment-grid"
-import { EquipmentPageDetail } from "./EquipmentPageDetail"
+import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
+import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
 
 const parentProps: GridProps = {
     container: true,
