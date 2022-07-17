@@ -2,10 +2,11 @@ import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { startingClassByName } from "@app/data"
 import { ArmorType } from "@app/constants"
-import { isBlank } from "@app/util"
+import { isBlank, isLocationChange } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { StartingClassActions } from "@app/features/starting-class"
-import { ArmorState, INITIAL_ARMOR_STATE } from "./state"
+import { ArmorState, INITIAL_ARMOR_STATE } from "../state"
+import { noArmorSelected, handleLocationChange } from "./helpers"
 
 export const reducers = {
     scrollMenu(state: ArmorState) {
@@ -44,15 +45,6 @@ export const reducers = {
     // },
 }
 
-const noArmorSelected = (slice: ArmorState): boolean => {
-    const armorNames = slice?.armorNames
-    if (armorNames?.Arms  != null) { return false }
-    if (armorNames?.Chest != null) { return false }
-    if (armorNames?.Head  != null) { return false }
-    if (armorNames?.Legs  != null) { return false }
-    return true
-}
-
 export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_ARMOR_STATE)
@@ -68,4 +60,5 @@ export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
                 return state
             }
         })
+        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
 }

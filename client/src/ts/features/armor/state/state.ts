@@ -3,13 +3,14 @@ import { createSlice } from "@reduxjs/toolkit"
 import { ArmorType } from "@app/constants"
 import { ArmorSet } from "@app/types"
 import { CONFIG, FEATURE_KEYS } from "@app/util"
-import { reducers, extraReducers } from "./reducers"
+import { reducers, extraReducers } from "./redeucers"
 
 export interface ArmorState {
     armorNames: ArmorSet
     activeType?: "all" | ArmorType
     oldName: string
     menuHasScrolled: boolean
+    mobileTab: "grid" | "detail" | "status"
 }
 
 export const INITIAL_ARMOR_STATE: ArmorState = {
@@ -22,6 +23,7 @@ export const INITIAL_ARMOR_STATE: ArmorState = {
     activeType: null,
     oldName: null,
     menuHasScrolled: false,
+    mobileTab: "grid",
 }
 const initialDevState: ArmorState = {
     ...INITIAL_ARMOR_STATE,

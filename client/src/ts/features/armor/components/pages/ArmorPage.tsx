@@ -16,11 +16,11 @@ export const ArmorPage = (_props: unknown): JSX.Element => {
 
     const activeType = useSelector(Selectors.Armor.activeType)
 
-    useEffect(() => {
-        if (isBlank(activeType)) {
-            dispatch(Actions.Armor.setActiveType({ type: slotId }))
-        }
-    }, [activeType, slotId, dispatch])
+    // useEffect(() => {
+    //     if (isBlank(activeType)) {
+    //         dispatch(Actions.Armor.setActiveType({ type: slotId }))
+    //     }
+    // }, [activeType, slotId, dispatch])
 
     return (
         <Page pageName="armor">

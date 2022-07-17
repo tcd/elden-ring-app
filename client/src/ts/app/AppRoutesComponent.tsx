@@ -20,6 +20,7 @@ import {
 
     ArmorPage,
     ArmorTablePage,
+    MobileArmorPage,
 
     WeaponsPage,
     WeaponsTablePage,
@@ -54,7 +55,7 @@ const routes: RouteObject[] = [
             { path: "/talismans/:slotId", element: <TalismanPage /> },
 
             // { path: "/armor",      element: <ArmorTablePage /> },
-            { path: "/armor/:slotId", element: <ArmorPage /> },
+            { path: "/armor/:slotId", element: <MobileArmorPage /> },
 
             // { path: "/weapons", element: <WeaponsTablePage /> },
             { path: "/weapons/:slotId", element: <MobileWeaponPage /> },
