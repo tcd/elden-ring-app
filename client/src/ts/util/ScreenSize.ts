@@ -13,12 +13,16 @@ export type DeviceSize = "mobile" | "tablet" | "laptop" | "desktop"
  */
 export abstract class ScreenSize {
 
+    public static get onMobile(): boolean {
+        return this.width <= 700
+    }
+
     public static get width(): Integer {
         return window.innerWidth
     }
 
     public static get height(): Integer {
-        return window.innerWidth
+        return window.innerHeight
     }
 
     public static get orientation(): Orientation {
