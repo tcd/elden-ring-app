@@ -5,6 +5,8 @@ import { AmmunitionState } from "./state"
 
 const _selectSlice = (rootState: RootState): AmmunitionState => rootState?.Ammunition
 
+const selectMobileTab = (rootState: RootState) => _selectSlice(rootState)?.mobileTab
+
 const selectActiveSlotId = (rootState: RootState): AmmunitionSlotId => {
     return _selectSlice(rootState)?.activeSlotId
 }
@@ -24,4 +26,5 @@ const selectActiveType = (rootState: RootState): AmmunitionType => {
 export const AmmunitionSelectors = {
     activeSlotId: selectActiveSlotId,
     activeType: selectActiveType,
+    mobileTab: selectMobileTab,
 }

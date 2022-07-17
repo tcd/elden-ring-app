@@ -17,6 +17,7 @@ import {
 
     TalismanPage,
     TalismansTablePage,
+    MobileTalismanPage,
 
     ArmorPage,
     ArmorTablePage,
@@ -52,7 +53,7 @@ const routes: RouteObject[] = [
             { path: "/equipment", element: <EquipmentPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
-            { path: "/talismans/:slotId", element: <TalismanPage /> },
+            { path: "/talismans/:slotId", element: <MobileTalismanPage /> },
 
             // { path: "/armor",      element: <ArmorTablePage /> },
             { path: "/armor/:slotId", element: <MobileArmorPage /> },

@@ -6,10 +6,12 @@ import { reducers, extraReducers } from "./reducers"
 
 export interface AmmunitionState {
     activeSlotId: AmmunitionSlotId
+    mobileTab: "grid" | "detail" | "status"
 }
 
 export const INITIAL_AMMUNITION_STATE: AmmunitionState = {
     activeSlotId: null,
+    mobileTab: "grid",
 }
 
 export const AmmunitionSlice = createSlice({

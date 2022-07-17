@@ -3,10 +3,11 @@ import { weaponSlotDisplayName, ammunitionSlotDisplayName } from "@app/util"
 import { RootState } from "@app/state"
 import { EquipmentState } from "./state"
 
-const _selectEquipmentSlice = (rootState: RootState): EquipmentState => rootState?.Equipment
+const _selectSlice = (rootState: RootState): EquipmentState => rootState?.Equipment
 
-const _selectActiveType   = (rootState: RootState) => _selectEquipmentSlice(rootState)?.activeType ?? null
-const _selectActiveSlotId = (rootState: RootState) => _selectEquipmentSlice(rootState)?.activeSlotId ?? null
+const _selectActiveType   = (rootState: RootState) => _selectSlice(rootState)?.activeType ?? null
+const _selectActiveSlotId = (rootState: RootState) => _selectSlice(rootState)?.activeSlotId ?? null
+const selectMobileTab     = (rootState: RootState) => _selectSlice(rootState)?.mobileTab
 
 const selectActiveType = (rootState: RootState) => {
     return _selectActiveType(rootState) ?? "Weapon"
@@ -48,4 +49,5 @@ export const EquipmentSelectors = {
     gridTitle: selectGridTitle,
     gridDescription: selectGridDescription,
     activeType: selectActiveType,
+    mobileTab: selectMobileTab,
 }
