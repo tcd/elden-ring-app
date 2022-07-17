@@ -34,7 +34,6 @@
 
         #er__appHeader__background {
             position: absolute;
-            z-index: 2000;
             top: 0;
             left: 0;
             margin-top: v.$mobileHeader-topMargin;
@@ -64,19 +63,12 @@
             flex-flow: row nowrap;
             align-items: center;
 
-            // background-image: url("https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public");
-            // background-repeat: no-repeat;
-            // // background-attachment: fixed;
-            // // background-size: cover;
-            // background-size: contain;
-            // background-position: center;
-
             // padding-left: 40px;
 
             .er__appHeader__icon {
                 @include m.square(v.$header-imageSize);
-                margin-left: 20px;
-                margin-right: 15px;
+                margin-left: 35px;
+                margin-right: 20px;
 
                 @include m.pointer-on-hover;
             }
