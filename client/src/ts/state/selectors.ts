@@ -1,5 +1,6 @@
 import { FEATURE_KEYS } from "@app/util"
 import {
+    AmmunitionSelectors,
     ArmorSelectors,
     BuilderSelectors,
     ChecklistSelectors,
@@ -14,6 +15,7 @@ import {
 import { MetaSelectors } from "./meta-selectors"
 
 export interface AppSelectors {
+    [FEATURE_KEYS.Ammunition]:    typeof AmmunitionSelectors
     [FEATURE_KEYS.Armor]:         typeof ArmorSelectors
     [FEATURE_KEYS.Builder]:       typeof BuilderSelectors
     [FEATURE_KEYS.Checklist]:     typeof ChecklistSelectors
@@ -28,6 +30,7 @@ export interface AppSelectors {
 }
 
 export const Selectors: AppSelectors = {
+    Ammunition:    AmmunitionSelectors,
     Armor:         ArmorSelectors,
     Builder:       BuilderSelectors,
     Checklist:     ChecklistSelectors,

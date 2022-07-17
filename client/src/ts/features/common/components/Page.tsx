@@ -5,7 +5,6 @@ import { Box } from "@mui/material"
 import { PageName } from "@app/types"
 import { Actions } from "@app/state"
 
-
 export interface PageProps {
     pageName: PageName
     className?: string

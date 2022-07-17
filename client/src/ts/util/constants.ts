@@ -1,3 +1,4 @@
+export const AMMUNITION_FEATURE_KEY = "Ammunition"
 export const ARMOR_FEATURE_KEY = "Armor"
 export const BUILDER_FEATURE_KEY = "Builder"
 export const CHECKLIST_FEATURE_KEY = "Checklist"
@@ -11,6 +12,7 @@ export const WEAPONS_FEATURE_KEY = "Weapons"
 export const ROUTER_FEATURE_KEY = "router"
 
 export const FEATURE_KEYS = {
+    Ammunition:    AMMUNITION_FEATURE_KEY,
     Armor:         ARMOR_FEATURE_KEY,
     Builder:       BUILDER_FEATURE_KEY,
     Checklist:     CHECKLIST_FEATURE_KEY,

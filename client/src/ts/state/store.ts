@@ -16,6 +16,7 @@ import { createBrowserHistory } from "history"
 
 import { FEATURE_KEYS } from "@app/util"
 import {
+    AmmunitionSlice,
     ArmorSlice,
     BuilderSlice,
     ChecklistSlice,
@@ -42,6 +43,7 @@ const {
 } = createReduxHistoryContext(routerOptions)
 
 const rootReducer = combineReducers({
+    [FEATURE_KEYS.Ammunition]:    AmmunitionSlice.reducer,
     [FEATURE_KEYS.Armor]:         ArmorSlice.reducer,
     [FEATURE_KEYS.Builder]:       BuilderSlice.reducer,
     [FEATURE_KEYS.Checklist]:     ChecklistSlice.reducer,

@@ -6,6 +6,7 @@ import { CloudflareVariant, getImageSrcManual } from "@app/util"
 
 export const PageNames = {
     "about":          "about",
+    "ammunition":     "ammunition",
     "armor":          "armor",
     "ashes-of-war":   "ashes-of-war",
     "builder":        "builder",
@@ -28,6 +29,7 @@ export type PageName = typeof PageNames[PageNameKey];
 
 export const PageTitles = {
     "About":                 "About",
+    "Ammunition":            "Ammunition",
     "Armor":                 "Armor",
     "Ashes of War":          "Ashes of War",
     "Builder":               "Builder",
@@ -51,6 +53,7 @@ export type PageTitle = typeof PageTitles[PageTitleKey];
 
 export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "about":          "About",
+    "ammunition":     "Ammunition",
     "armor":          "Armor",
     "ashes-of-war":   "Ashes of War",
     "builder":        "Builder",
@@ -102,6 +105,7 @@ export const DEFAULT_PAGE_ICON = HEADER_ICONS["site-of-grace"]
 
 export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "about":          HEADER_ICONS.map,
+    "ammunition":     HEADER_ICONS.equipment,
     "armor":          HEADER_ICONS.equipment,
     "ashes-of-war":   HEADER_ICONS["ashes-of-war"],
     "builder":        HEADER_ICONS.smithing,
@@ -112,6 +116,6 @@ export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "spell":          HEADER_ICONS.spells,
     "starting-class": HEADER_ICONS["starting-class"],
     "status":         HEADER_ICONS.status,
-    "weapon":         HEADER_ICONS.equipment,
     "talisman":       HEADER_ICONS.equipment,
+    "weapon":         HEADER_ICONS.equipment,
 }

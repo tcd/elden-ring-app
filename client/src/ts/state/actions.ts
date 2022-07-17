@@ -1,5 +1,6 @@
 import { FEATURE_KEYS } from "@app/util"
 import {
+    AmmunitionActions,
     ArmorActions,
     BuilderActions,
     ChecklistActions,
@@ -13,6 +14,7 @@ import {
 } from "@app/features"
 
 export interface AppActions {
+    [FEATURE_KEYS.Ammunition]:    typeof AmmunitionActions
     [FEATURE_KEYS.Armor]:         typeof ArmorActions
     [FEATURE_KEYS.Builder]:       typeof BuilderActions
     [FEATURE_KEYS.Checklist]:     typeof ChecklistActions
@@ -26,6 +28,7 @@ export interface AppActions {
 }
 
 export const Actions: AppActions = {
+    Ammunition:    AmmunitionActions,
     Armor:         ArmorActions,
     Builder:       BuilderActions,
     Checklist:     ChecklistActions,

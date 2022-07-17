@@ -5,9 +5,10 @@ import { Selectors } from "@app/state"
 import { ArmorDetail } from "@app/features/armor/components"
 import { TalismanDetail } from "@app/features/talismans/components"
 import { WeaponDetail } from "@app/features/weapons/components"
+import { AmmunitionDetail } from "@app/features/ammunition/components"
 
 const DETAILS_BY_TYPE: Record<EquipmentType, JSX.Element> = {
-    "Ammunition": null,
+    "Ammunition": <AmmunitionDetail />,
     "Armor": <ArmorDetail />,
     "Talisman": <TalismanDetail />,
     "Weapon": <WeaponDetail />,
