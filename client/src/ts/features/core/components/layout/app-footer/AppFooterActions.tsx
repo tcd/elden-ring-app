@@ -5,6 +5,7 @@ import { Selectors } from "@app/state"
 import {
     ArmorFooter,
     AshesOfWarFooter,
+    BuilderFooter,
     EquipmentFooter,
     NoFooter,
     TalismanFooter,
@@ -12,8 +13,11 @@ import {
 } from "./footers"
 
 const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
+    "about":          <NoFooter />,
+    "ammunition":     <NoFooter />,
     "armor":          <ArmorFooter />,
     "ashes-of-war":   <AshesOfWarFooter />,
+    "builder":        <BuilderFooter />,
     "equipment":      <EquipmentFooter />,
     "level-up":       <NoFooter />,
     "not-found":      <NoFooter />,
@@ -23,7 +27,6 @@ const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
     "status":         <NoFooter />,
     "talisman":       <TalismanFooter />,
     "weapon":         <WeaponFooter />,
-    about:            <NoFooter />,
 }
 
 export const AppFooterActions = (_props: unknown): JSX.Element => {

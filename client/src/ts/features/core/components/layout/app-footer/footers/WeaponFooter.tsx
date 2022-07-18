@@ -11,6 +11,7 @@ export const WeaponFooter = (_props: unknown): JSX.Element => {
 
     const lastMainPage = useSelector(Selectors.Meta.Router.lastMainPage)
     const canCustomize = useSelector(Selectors.Weapons.smithing.canWeSmith)
+    const activeSlotId = useSelector(Selectors.Weapons.activeSlotId)
 
     // =========================================================================
 
@@ -26,7 +27,8 @@ export const WeaponFooter = (_props: unknown): JSX.Element => {
     }
 
     const handleRequestCustomize = () => {
-        dispatch(Actions.Weapons.startCustomizingWeapon())
+        // dispatch(Actions.Weapons.startCustomizingWeapon())
+        navigate(`/weapons/${activeSlotId}/ashes-of-war#grid`)
     }
 
     const handleCharacterStatusClick = () => {

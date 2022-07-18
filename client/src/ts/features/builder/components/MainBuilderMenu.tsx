@@ -1,22 +1,12 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
-import { Actions, Selectors } from "@app/state"
-import { ArmorBuilderMenu, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/features"
+import { Selectors } from "@app/state"
+import { ArmorBuilderMenu, Page, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/features"
 
 import { LevelUpMenu } from "."
 import { CharacterStatus } from "./right-side-panels"
 
 export const MainBuilderMenu = (_props: unknown): JSX.Element => {
-
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(Actions.Core.setPageName("equipment"))
-        return () => {
-            dispatch(Actions.Core.clearPageName())
-        }
-    }, [dispatch])
 
     const pageName = useSelector(Selectors.Core.pageName)
 
@@ -31,14 +21,14 @@ export const MainBuilderMenu = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <main id="er__builder__root" className="container-fluid">
+        <Page pageName="builder" id="er__builder__root" className="container-fluid">
             <div id="er__builder__body" className="row">
                 {menuElement}
                 <div id="er__builder__characterStatus">
                     <CharacterStatus />
                 </div>
             </div>
-        </main>
+        </Page>
     )
 }
 

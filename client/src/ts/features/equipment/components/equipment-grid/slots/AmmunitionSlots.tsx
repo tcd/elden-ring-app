@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -15,6 +16,7 @@ export interface AmmunitionSlotProps {
 const arrowSlot = forwardRef(({ id }: AmmunitionSlotProps, ref) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const elementId = `arrow-slot-${id}`
     const slotSx: SxProps = {

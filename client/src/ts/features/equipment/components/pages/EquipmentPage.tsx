@@ -33,7 +33,13 @@ const child1Props: GridProps = {
     ...childProps,
     md: 2,
     sx: {
-        backgroundColor: "red",
+        // backgroundColor: "red",
+        boxSizing: "border-box",
+    },
+    pl: {
+        xs: 0,
+        sm: 0,
+        md: "96px",
     },
 }
 
@@ -41,13 +47,13 @@ const child2Props: GridProps = {
     ...childProps,
     md: 2,
     alignContent: "flex-start",
-    // pr: {
-    //     xs: 0,
-    //     sm: 0,
-    //     md: "500px",
-    // },
+    pr: {
+        xs: 0,
+        sm: 0,
+        md: "96px",
+    },
     sx: {
-        backgroundColor: "orange",
+        // backgroundColor: "orange",
     },
 }
 
@@ -60,7 +66,7 @@ const child4Props: GridProps = {
     xl: 1,
     xxl: 1,
     sx: {
-        backgroundColor: "green",
+        // backgroundColor: "green",
     },
 }
 
@@ -68,7 +74,7 @@ const child3Props: GridProps = {
     ...childProps,
     md: 1,
     sx: {
-        backgroundColor: "yellow",
+        // backgroundColor: "yellow",
     },
 }
 

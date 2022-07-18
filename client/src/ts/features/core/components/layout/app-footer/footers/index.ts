@@ -1,5 +1,6 @@
 export * from "./ArmorFooter"
 export * from "./AshesOfWarFooter"
+export * from "./BuilderFooter"
 export * from "./EquipmentFooter"
 export * from "./TalismanFooter"
 export * from "./WeaponFooter"

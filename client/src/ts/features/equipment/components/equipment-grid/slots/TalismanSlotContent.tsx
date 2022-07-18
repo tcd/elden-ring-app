@@ -1,4 +1,5 @@
 import { forwardRef } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
@@ -20,10 +21,12 @@ interface TalismanSlotProps {
 const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.clickSlot({ type: "Talisman", id: id }))
-        dispatch(Actions.Talismans.setActiveSlotId({ id }))
+        // dispatch(Actions.Talismans.setActiveSlotId({ id }))
+        navigate(`/talismans/${id}#grid`)
     }
 
     const handleMouseEnter = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {

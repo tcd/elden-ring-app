@@ -1,17 +1,19 @@
 import { useEffect, ReactNode } from "react"
 import { useDispatch } from "react-redux"
-import { Box } from "@mui/material"
+import { Box, BoxProps } from "@mui/material"
 
 import { PageName } from "@app/types"
 import { Actions } from "@app/state"
 
 export interface PageProps {
+    id?: string
     pageName: PageName
     className?: string
     children?: ReactNode
 }
 
 const DEFAULT_PROPS: Partial<PageProps> = {
+    id: null,
     className: "",
 }
 
@@ -22,7 +24,7 @@ export const Page = (props: PageProps): JSX.Element => {
         ...props,
     }
 
-    const { pageName, children, className } = props
+    const { id, pageName, children, className } = props
 
     const correctedClassName = "er_page" + " " + className
 
@@ -35,8 +37,16 @@ export const Page = (props: PageProps): JSX.Element => {
         }
     }, [dispatch, pageName])
 
+    const boxProps: BoxProps = {
+        className: correctedClassName,
+    }
+
+    if (id) {
+        boxProps.id = id
+    }
+
     return (
-        <Box className={correctedClassName}>
+        <Box {...boxProps}>
             <>
                 {children && children}
             </>
