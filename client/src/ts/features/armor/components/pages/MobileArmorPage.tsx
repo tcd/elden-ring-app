@@ -10,7 +10,7 @@ export const MobileArmorPage = (_props: unknown): JSX.Element => {
 
     const tab = useSelector(Selectors.Armor.mobileTab)
 
-    let content
+    let content: JSX.Element = null
 
     switch (tab) {
         case "grid":   content = <ArmorMenu />;       break

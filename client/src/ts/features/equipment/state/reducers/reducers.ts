@@ -4,8 +4,10 @@ import {
     EquipmentType,
     EquipmentSlotId,
 } from "@app/types"
+import { isLocationChange } from "@app/util"
 import { CoreActions } from "@app/features/core"
-import { EquipmentState, INITIAL_EQUIPMENT_STATE } from "./state"
+import { EquipmentState, INITIAL_EQUIPMENT_STATE } from "../state"
+import { handleLocationChange } from "./helpers"
 
 interface SetActiveSlotPayload {
     type: EquipmentType
@@ -32,4 +34,5 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<EquipmentState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_EQUIPMENT_STATE)
+        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
 }

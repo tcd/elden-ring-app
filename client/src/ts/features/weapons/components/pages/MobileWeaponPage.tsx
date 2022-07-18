@@ -10,7 +10,7 @@ export const MobileWeaponPage = (_props: unknown): JSX.Element => {
 
     const tab = useSelector(Selectors.Weapons.mobileTab)
 
-    let content
+    let content: JSX.Element = null
 
     switch (tab) {
         case "grid":   content = <WeaponMenu />;      break

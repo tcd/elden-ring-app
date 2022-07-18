@@ -13,7 +13,9 @@ import {
     ChecklistPage,
     StatusPage,
     LevelUpPage,
+
     EquipmentPage,
+    MobileEquipmentPage,
 
     TalismanPage,
     // TalismansTablePage,
@@ -94,7 +96,7 @@ const mobileRoutes: RouteObject[] = [
             { path: "/status",    element: <StatusPage /> },
             { path: "/test",      element: <TestPage /> },
             { path: "/level-up",  element: <LevelUpPage /> },
-            { path: "/equipment", element: <EquipmentPage /> },
+            { path: "/equipment", element: <MobileEquipmentPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
             { path: "/talismans/:slotId", element: <MobileTalismanPage /> },

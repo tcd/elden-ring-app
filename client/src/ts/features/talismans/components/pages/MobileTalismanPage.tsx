@@ -9,7 +9,7 @@ export const MobileTalismanPage = (_props: unknown): JSX.Element => {
 
     const tab = useSelector(Selectors.Talismans.mobileTab)
 
-    let content
+    let content: JSX.Element = null
 
     switch (tab) {
         case "grid":   content = <TalismanMenu />;    break

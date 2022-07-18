@@ -20,7 +20,7 @@ const selectLastMainPage = (rootState: RootState) => {
             break
         }
     }
-    return lastMainPage
+    return lastMainPage + "#grid"
 }
 
 export const RouterSelectors = {
