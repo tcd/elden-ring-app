@@ -50,7 +50,7 @@ const desktopRoutes: RouteObject[] = [
         children: [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },
-            { path: "/",          element: <BuilderPage /> },
+            { path: "/",          element: <EquipmentPage /> },
             { path: "/about",     element: <AboutPage /> },
             { path: "/builder",   element: <BuilderPage /> },
             { path: "/checklist", element: <ChecklistPage /> },
