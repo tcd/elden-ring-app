@@ -1,7 +1,7 @@
 // https://cssgradient.io/
 
 @use "../variables" as v;
-@use "../mixins/index" as m;
+@use "../helpers/functions" as functions;
 
 .er__dialog,
 .er__dialog__overlay {
@@ -30,7 +30,7 @@
     justify-content: stretch;
 
     background-color: v.$modal-color-bg;
-    background: m.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
+    background: functions.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
 
     header {
         text-align: center;
@@ -59,7 +59,7 @@
     .top-border {
         height: 3px;
         background:
-            m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
+            functions.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
             v.$modal-color-border;
     }
 }

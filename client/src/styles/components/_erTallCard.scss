@@ -1,5 +1,5 @@
 @use "../variables"as v;
-@use "../mixins/index" as m;
+@use "../mixins" as mixins;
 
 .er__tallCard {
 
@@ -17,7 +17,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
 
-    @include m.vanillaList;
+    @include mixins.vanillaList;
 
     section.er__tallCard__section {
         display: flex;
@@ -66,7 +66,7 @@
         flex-direction: column;
         align-items: center;
         .left-border-inner {
-            @include m.erCardSideBorder;
+            @include mixins.erCardSideBorder;
             height: 100%;;
             width: 4px;
             margin-bottom: 5px;

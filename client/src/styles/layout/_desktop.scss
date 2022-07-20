@@ -2,6 +2,7 @@
 @use "../variables" as v;
 @use "../mixins" as m;
 @use "../helpers/index" as h;
+@use "../helpers/functions" as functions;
 
 #er__layout {
 
@@ -69,7 +70,7 @@
 #er__sideNav__backdrop {
     z-index: v.$zindex-sideNav-backdrop;
     // background-color: blue !important;
-    background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-backdrop-bgStops);
+    background: functions.customGradient(90deg, v.$sideNav-bg, v.$sideNav-backdrop-bgStops);
     @include m.media-mobile {
         background: transparent;
     }
@@ -95,7 +96,7 @@
     // padding: 0px;
     width: v.$sideNav-width;
     // background-color: v.$sideNav-bg;
-    background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
+    background: functions.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
 
     @include m.media-mobile {
         width: math.div(v.$sideNav-width, 1.5);

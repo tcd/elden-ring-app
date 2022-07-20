@@ -1,5 +1,6 @@
 @use "../variables"as v;
 @use "../mixins" as m;
+@use "../helpers/functions" as functions;
 
 .er__equipmentMenu {
 
@@ -28,7 +29,7 @@
         height:        3px;
         margin-top:    6px;
         margin-bottom: 6px;
-        background: m.customGradient(90deg, v.$equipmentMenu-grid-divider, v.$equipmentGrid-border-stops);
+        background: functions.customGradient(90deg, v.$equipmentMenu-grid-divider, v.$equipmentGrid-border-stops);
     }
 
     section.er__equipmentMenu__gridSection {
@@ -41,7 +42,7 @@
             margin: 5px;
             border-radius: 2px;
             &.inactive {
-                background: m.customGradient(180deg, v.$equipmentMenu-cell-color, v.$equipmentCell-border-stops);
+                background: functions.customGradient(180deg, v.$equipmentMenu-cell-color, v.$equipmentCell-border-stops);
             }
             &.active {
                 background-color: #615e4b;

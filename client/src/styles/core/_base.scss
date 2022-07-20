@@ -1,6 +1,7 @@
 @use "../variables"as v;
 @use "../mixins"as m;
 @use "../helpers" as h;
+@use "../helpers/functions" as functions;
 
 html, body {
     height: 100%;
@@ -93,7 +94,7 @@ span {
 hr.er__hr {
     height: 1.75px;
     background:
-        m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
+        functions.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
         v.$gold;
 }
 

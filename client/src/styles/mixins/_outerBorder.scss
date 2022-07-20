@@ -1,7 +1,7 @@
 // https://cssgradient.io/
 
 @use "../variables" as v;
-@use "customGradient";
+@use "../helpers/functions" as functions;
 
 // $inner-border-1: #423E35;
 // $inner-border-2: #4C4A3F;
@@ -17,6 +17,6 @@ $top-bottom-border-stops: (
 @mixin outerBorder {
     height: 3px;
     background:
-        customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
+        functions.customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
         v.$modal-color-border;
 }
