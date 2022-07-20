@@ -1,8 +1,9 @@
 // @import "./fonts";
 
-@import "./vendor/index";
+@import "./vendor";
 
-@import "./core/index";
-@import "./helpers/index";
-@import "./components/index";
-@import "./pages/index";
+@import "./helpers";
+@import "./core";
+@import "./layout";
+@import "./components";
+@import "./pages";

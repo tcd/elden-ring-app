@@ -1,5 +1,6 @@
-@use "../variables"as v;
-@use "../mixins"as m;
+@use "@variables"as v;
+@use "@mixins"as mixins;
+@use "@functions"as functions;
 
 #root.startingClassPage {
     background-image: none !important;
@@ -128,7 +129,7 @@
 
                 // scroll-snap-align: start;
 
-                @include m.pointer-on-hover;
+                @include mixins.pointer-on-hover;
 
                 .er__startingClass__menu__optionHoverOverlay,
                 .er__startingClass__menu__optionOverlay {
@@ -141,7 +142,7 @@
 
                 .er__startingClass__menu__optionOverlay {
                     z-index: v.$zindex-startingClass-background;
-                    background: m.customGradient(180deg, $option-overlay-color-bg, $option-overlay-stops);
+                    background: functions.customGradient(180deg, $option-overlay-color-bg, $option-overlay-stops);
                 }
 
                 .er__startingClass__menu__optionHoverOverlay {
@@ -206,7 +207,7 @@
                     justify-content: center;
                     position: relative;
 
-                    background: m.customGradient(90deg, $option-title-color-bg, $option-title-stops);
+                    background: functions.customGradient(90deg, $option-title-color-bg, $option-title-stops);
 
                     span {
                         flex-direction: column;
@@ -219,7 +220,7 @@
                     .er__startingClass__menu__option__title__topBorder,
                     .er__startingClass__menu__option__title__bottomBorder {
                         height: $option-title-border-height;
-                        background: m.customGradient(90deg, $top-bottom-border-color, $top-bottom-border-stops);
+                        background: functions.customGradient(90deg, $top-bottom-border-color, $top-bottom-border-stops);
                         position: absolute;
                         width: 100%;
                     }
@@ -251,7 +252,7 @@
         margin-bottom: 10px;
         height: 3px;
         background:
-            m.customGradient(90deg, $top-bottom-border-color, $top-bottom-border-stops)
+            functions.customGradient(90deg, $top-bottom-border-color, $top-bottom-border-stops)
             // v.$modal-color-border;
     }
 

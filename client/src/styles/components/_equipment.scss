@@ -1,5 +1,5 @@
-@use "../variables"as v;
-@use "../mixins"as m;
+@use "@variables"as v;
+@use "@mixins"as mixins;
 
 .er__equipmentSlotsRow {
     // width: 100%;
@@ -30,9 +30,9 @@
             padding: 10px;
         }
     }
-    @include m.pointer-on-hover;
+    @include mixins.pointer-on-hover;
 
-    @include m.media-tablet-down {
+    @include mixins.media-tablet-down {
         width:  55px;
         height: 60px;
     }

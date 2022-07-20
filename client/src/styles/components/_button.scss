@@ -1,5 +1,5 @@
-@use "../variables"as v;
-@use "../mixins" as m;
+@use "@variables"as v;
+@use "@mixins" as mixins;
 
 .er__button {
     border-radius: 0px;
@@ -18,7 +18,7 @@
     text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
 
     position: relative;
-    @include m.pointer-on-hover;
+    @include mixins.pointer-on-hover;
     &:hover {
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow: 0px 0px 2px 1px rgba(v.$equipment-slot-overlay-color, 0.5);

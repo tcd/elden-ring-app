@@ -1,0 +1,11 @@
+/// Sets `background-image` and related properties
+///
+/// @param {String} $url
+/// @param {contain | cover | auto} $size
+@mixin backgroundImage($url, $size: cover) {
+    background-image: url($url);
+
+    background-repeat:   no-repeat;
+    background-position: center;
+    background-size:     $size;
+}

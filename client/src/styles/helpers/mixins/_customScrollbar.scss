@@ -1,0 +1,45 @@
+// https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+
+$scrollbar-thumb-color: #60604D;
+$scrollbar-thumb-border-radius: 10px;
+$scrollbar-width: 10px;
+
+@mixin customScrollbar {
+    // // width
+    // ::-webkit-scrollbar {
+    //     cursor: pointer;
+    //     // box-sizing: border-box;
+    //     width: $scrollbar-width;
+    //     // padding-left: 4px;
+    //     // padding-right: 4px;
+    // }
+
+    // // Track
+    // ::-webkit-scrollbar-track {
+    //     cursor: pointer;
+    //     border-radius: inherit;
+    //     // background: #f1f1f1;
+    //     // background-color: #444339;
+    //     background-color: transparent;
+    // }
+
+    // // Handle
+    // ::-webkit-scrollbar-thumb {
+    //     cursor: pointer;
+    //     background: $scrollbar-thumb-color;
+    //     border-radius: $scrollbar-thumb-border-radius;
+    // }
+
+    // // Handle on hover
+    // ::-webkit-scrollbar-thumb:hover {
+    //     cursor: pointer;
+    //     background: $scrollbar-thumb-color;
+    //     border-radius: $scrollbar-thumb-border-radius;
+    // }
+}
+
+/*
+total width: 17px
+center (dark) 5px; (#393731, #31302a, #2b2a25, #31302a, #3a3932)
+sides (lighter) 6px + 6px;
+*/

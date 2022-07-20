@@ -40,14 +40,33 @@ const webpackConfig = {
         }),
     ],
     resolve: {
-        extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
-        modules: [rootFolder, "src", "node_modules"],
+        extensions: [
+            // "*",
+            ".js",
+            ".jsx",
+            ".tsx",
+            ".ts",
+            ".scss",
+        ],
+        modules: [
+            rootFolder,
+            "src",
+            "node_modules",
+        ],
         fallback: {
             console: false,
         },
         plugins: [
             new TsconfigPathsPlugin(),
         ],
+        alias: {
+            "@styles": path.join(rootFolder, "src", "styles"),
+            // "@helpers": path.join(rootFolder, "src", "styles", "helpers", "_index.scss"),
+            "@variables": path.join(rootFolder, "src", "styles", "helpers", "variables"),
+            "@mixins": path.join(rootFolder, "src", "styles", "helpers", "mixins"),
+            "@functions": path.join(rootFolder, "src", "styles", "helpers", "functions"),
+            // url: false,
+        },
     },
     optimization: {
         splitChunks: {
@@ -83,11 +102,17 @@ const webpackConfig = {
                 test: /\.s?css$/,
                 use: [
                     "style-loader",
-                    "css-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            url: false,
+                        },
+                    },
                     {
                         // https://webpack.js.org/loaders/sass-loader/
                         loader: "sass-loader",
                         options: {
+                            sourceMap: true,
                             // Prefer `dart-sass`
                             implementation: require.resolve("sass"),
                         },
@@ -108,10 +133,10 @@ const webpackConfig = {
                 //     },
                 // }],
             },
-            {
-                test: /\.png/,
-                type: "asset/resource",
-            },
+            // {
+            //     test: /\.png/,
+            //     type: "asset/resource",
+            // },
             // {
             //     test: /\.json$/,
             //     loader: "json-loader",

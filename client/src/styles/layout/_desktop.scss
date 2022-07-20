@@ -1,7 +1,7 @@
 @use "sass:math";
-@use "../variables" as v;
-@use "../mixins" as m;
-@use "../helpers/index" as h;
+@use "@variables" as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 #er__layout {
 
@@ -33,11 +33,11 @@
             // padding-left: 40px;
 
             .er__header__icon {
-                @include m.square(v.$header-imageSize);
+                @include mixins.square(v.$header-imageSize);
                 margin-left: 40px;
                 margin-right: 15px;
 
-                @include m.pointer-on-hover;
+                @include mixins.pointer-on-hover;
             }
 
             .er__header__title {
@@ -69,8 +69,8 @@
 #er__sideNav__backdrop {
     z-index: v.$zindex-sideNav-backdrop;
     // background-color: blue !important;
-    background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-backdrop-bgStops);
-    @include m.media-mobile {
+    background: functions.customGradient(90deg, v.$sideNav-bg, v.$sideNav-backdrop-bgStops);
+    @include mixins.media-mobile {
         background: transparent;
     }
 }
@@ -95,9 +95,9 @@
     // padding: 0px;
     width: v.$sideNav-width;
     // background-color: v.$sideNav-bg;
-    background: m.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
+    background: functions.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
 
-    @include m.media-mobile {
+    @include mixins.media-mobile {
         width: math.div(v.$sideNav-width, 1.5);
     }
 
@@ -112,7 +112,7 @@
             margin-top: $horizontal-margin;
             margin-bottom: $horizontal-margin;
             img.er__sideNavItemImage {
-                @include m.square(75px);
+                @include mixins.square(75px);
                 margin-left: 50px;
                 margin-right: 15px;
             }

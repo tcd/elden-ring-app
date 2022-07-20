@@ -1,7 +1,8 @@
 // https://cssgradient.io/
 
-@use "../variables" as v;
-@use "../mixins/index" as m;
+@use "@variables" as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 #weapon-skill-grid-menu {
     position: relative;
@@ -97,7 +98,7 @@
     justify-content: stretch;
 
     background-color: v.$modal-color-bg;
-    background: m.customGradient(90deg, v.$modal-color-bg, $body-stops);
+    background: functions.customGradient(90deg, v.$modal-color-bg, $body-stops);
 
     header {
         text-align: center;
@@ -124,7 +125,7 @@
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            background: m.customGradient(90deg, $affinity-item-color-bg, $affinity-item-stops);
+            background: functions.customGradient(90deg, $affinity-item-color-bg, $affinity-item-stops);
             margin-left:  $affinityModal-option-horizontal-padding;
             margin-right: $affinityModal-option-horizontal-padding;
             margin-top:    6px;
@@ -142,14 +143,14 @@
                 line-height: $affinityModal-option-font-size;
             }
 
-            @include m.pointer-on-hover;
+            @include mixins.pointer-on-hover;
 
             &:hover {
-                background: m.customGradient(90deg, $affinity-item-color-active-bg, $affinity-item-stops);
+                background: functions.customGradient(90deg, $affinity-item-color-active-bg, $affinity-item-stops);
             }
 
             &.active {
-                background: m.customGradient(90deg, $affinity-item-color-active-bg, $affinity-item-stops);
+                background: functions.customGradient(90deg, $affinity-item-color-active-bg, $affinity-item-stops);
             }
         }
     }
@@ -159,7 +160,7 @@
     .top-border {
         height: 3px;
         background:
-            m.customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
+            functions.customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
             v.$modal-color-border;
     }
 
@@ -173,7 +174,7 @@
             text-align: center;
             width: 90%;
             background:
-                m.customGradient(90deg, v.$modal-color-bg, $inner-border-stops),
+                functions.customGradient(90deg, v.$modal-color-bg, $inner-border-stops),
                 linear-gradient(180deg, rgba(66,62,53,0.5) 0%, rgba(76,74,63,1) 50%, rgba(69,65,57,0.5) 100%);
             height: 2px;
         }
@@ -187,7 +188,7 @@
         width: 3px;
         // background-color: blue;
         background:
-            m.customGradient(180deg, v.$modal-color-bg, $top-bottom-border-stops),
+            functions.customGradient(180deg, v.$modal-color-bg, $top-bottom-border-stops),
             v.$modal-color-border;
     }
 
@@ -199,7 +200,7 @@
         width: 3px;
         // background-color: blue;
         background:
-            m.customGradient(180deg, v.$modal-color-bg, $top-bottom-border-stops),
+            functions.customGradient(180deg, v.$modal-color-bg, $top-bottom-border-stops),
             v.$modal-color-border;
     }
 

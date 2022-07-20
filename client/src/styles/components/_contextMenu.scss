@@ -1,9 +1,10 @@
-@use "../variables"as v;
-@use "../mixins" as m;
+@use "@variables"as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 
 #er__contextMenu {
-    background: m.customGradient(90deg, v.$contextMenu-color-bg, v.$modal-body-stops);
+    background: functions.customGradient(90deg, v.$contextMenu-color-bg, v.$modal-body-stops);
     width: 200px;
     display: flex;
     flex-flow: column nowrap;
@@ -20,17 +21,17 @@
         padding-top:    10px;
         padding-bottom: 10px;
         li {
-            @include m.pointer-on-hover;
+            @include mixins.pointer-on-hover;
             height: 25px;
             margin-top: 10px;
             margin-bottom: 10px;
-            background: m.customGradient(90deg, v.$contextMenuItem-color-bg, v.$contextMenu-item-stops);
+            background: functions.customGradient(90deg, v.$contextMenuItem-color-bg, v.$contextMenu-item-stops);
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
             &:hover {
-                background: m.customGradient(90deg, v.$contextMenuItem-color-bg-active, v.$contextMenu-item-stops);
+                background: functions.customGradient(90deg, v.$contextMenuItem-color-bg-active, v.$contextMenu-item-stops);
             }
         }
     }
@@ -39,7 +40,7 @@
     .top-border {
         height: 2px;
         background:
-            m.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
+            functions.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
             v.$modal-color-border;
     }
 }

@@ -1,5 +1,6 @@
-@use "../variables" as v;
-@use "../mixins" as m;
+@use "@variables" as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 #er__youDied {
     position: absolute;
@@ -26,7 +27,7 @@
         height: 150px;
         width: 100%;
         text-align: center;
-        background: m.customGradient(180deg, v.$youDied-black, v.$youDied-gradient-stops);
+        background: functions.customGradient(180deg, v.$youDied-black, v.$youDied-gradient-stops);
         a.er__youDied__link,
         span {
             font-family: "OptimusPrinceps";
@@ -36,7 +37,7 @@
         }
     }
 
-    @include m.media-mobile {
+    @include mixins.media-mobile {
         div {
             height: 150px;
             width: 100%;

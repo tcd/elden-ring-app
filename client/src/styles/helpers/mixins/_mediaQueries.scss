@@ -1,0 +1,26 @@
+@use "@variables" as v;
+
+/// up to 500px
+@mixin media-mobile {
+    @media (max-width: map-get(v.$breakpoints, "mobile")) { @content; }
+}
+
+@mixin media-tablet-down {
+    @media (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+}
+
+/// 770px and up
+@mixin media-tablet {
+    // @media (min-width: map-get(v.$breakpoints, "mobile")) and (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+    @media (max-width: map-get(v.$breakpoints, "tablet")) { @content; }
+}
+
+/// 990px and up
+@mixin media-laptop {
+    @media (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+}
+
+/// 1200px and up
+@mixin media-desktop {
+    @media (min-width: map-get(v.$breakpoints, "desktop")) { @content; }
+}

@@ -1,0 +1,24 @@
+/// Generates a linear gradient.
+///
+/// Code by [Kitty Giraudel](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+///
+/// @param {any} $direction
+/// @param {Color} $color
+/// @param {Map} $stops
+@function customGradient($direction, $color, $stops) {
+
+    $cleanColor: rgba($color, 1.0);
+
+    $colors: ();
+
+    @each $percentage, $transparency in $stops {
+        // Adjust transparency
+        $currentColor: rgba($cleanColor, $transparency);
+        // Assign percentage
+        $currentStop:  $currentColor $percentage;
+        // Add to list
+        $colors: ($colors, $currentStop)
+    }
+
+    @return linear-gradient($direction, $colors);
+}

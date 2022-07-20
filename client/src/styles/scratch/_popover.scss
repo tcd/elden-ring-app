@@ -1,5 +1,5 @@
-@use "../variables" as v;
-@use "../mixins/index" as m;
+@use "@variables" as v;
+@use "@mixins" as m;
 
 $er-popover-border-size: 4px;
 $er-popover-border-overlap: $er-popover-border-size;

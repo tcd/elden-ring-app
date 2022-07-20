@@ -14,7 +14,7 @@ import { getPersistConfig } from "redux-deep-persist"
 import { createReduxHistoryContext, IHistoryContextOptions } from "redux-first-history"
 import { createBrowserHistory } from "history"
 
-import { FEATURE_KEYS } from "@app/util"
+import { FEATURE_KEYS, CONFIG } from "@app/util"
 import {
     AmmunitionSlice,
     ArmorSlice,
@@ -88,7 +88,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
     reducer: persistedReducer,
-    devTools: true,
+    devTools: (CONFIG.nodeEnv !== "development"),
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         // immutableCheck:    { ignoredPaths: ["Builder.everythingRequest.response"] },
         // serializableCheck: { ignoredPaths: ["Builder.everythingRequest.response"] },

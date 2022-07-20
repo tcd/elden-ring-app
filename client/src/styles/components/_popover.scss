@@ -1,5 +1,5 @@
-@use "../variables" as v;
-@use "../mixins/index" as m;
+@use "@variables" as v;
+@use "@mixins" as m;
 
 .er__popover {
     z-index: v.$zindex-popover;

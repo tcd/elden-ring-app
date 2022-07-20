@@ -1,7 +1,7 @@
 @use "include-media" as im;
-@use "../variables" as v;
-@use "../mixins" as m;
-@use "../helpers" as h;
+@use "@variables" as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 #er__mobileLayout {
 
@@ -43,10 +43,10 @@
             background-repeat: no-repeat;
             background-position: left center;
             // background-size: $size;
-            @include im.media("<350px")            { background-image: m.cloudflareUrl("ui/header/300/public"); }
-            @include im.media(">=350px", "<400px") { background-image: m.cloudflareUrl("ui/header/350/public"); }
-            @include im.media(">=400px", "<811px") { background-image: m.cloudflareUrl("ui/header/400/public"); }
-            @include im.media(">=811px")           { background-image: m.cloudflareUrl("ui/header/811/public"); }
+            @include im.media("<350px")            { background-image: functions.cloudflareUrl("ui/header/300/public"); }
+            @include im.media(">=350px", "<400px") { background-image: functions.cloudflareUrl("ui/header/350/public"); }
+            @include im.media(">=400px", "<811px") { background-image: functions.cloudflareUrl("ui/header/400/public"); }
+            @include im.media(">=811px")           { background-image: functions.cloudflareUrl("ui/header/811/public"); }
         }
 
         #er__appHeader__content {
@@ -66,11 +66,11 @@
             // padding-left: 40px;
 
             .er__appHeader__icon {
-                @include m.square(v.$header-imageSize);
+                @include mixins.square(v.$header-imageSize);
                 margin-left: 35px;
                 margin-right: 20px;
 
-                @include m.pointer-on-hover;
+                @include mixins.pointer-on-hover;
             }
 
             .er__appHeader__title {
