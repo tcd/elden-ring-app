@@ -7,13 +7,19 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 <!-- ## [Unreleased] -->
 
+<!-- ## [0.6.0] - 2022-07-19 -->
+### Added
+- Add `react-helmet` dependency for meta tags
+### Fixed
+- Assorted style fixes
+
 
 ## [0.5.2] - 2022-07-17
-- Fixes to new mobile pages.
+- Fixes to new mobile pages
 
 
 ## [0.5.1] - 2022-07-17
-- Fixes to new mobile pages.
+- Fixes to new mobile pages
 
 ## [0.5.0] - 2022-07-17
 - Testing out new mobile styles & components
