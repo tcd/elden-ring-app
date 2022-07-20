@@ -47,7 +47,7 @@
             &.active {
                 background-color: #615e4b;
             }
-            @include m.pointer-on-hover;
+            @include m.pointerOnHover;
         }
         .er__equipmentMenu__imageWrapper {
             @include m.square(100%);

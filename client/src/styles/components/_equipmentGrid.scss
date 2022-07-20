@@ -38,7 +38,7 @@
         }
 
         .er__equipmentGrid__cell {
-            @include m.pointer-on-hover;
+            @include m.pointerOnHover;
             @include m.media-tablet-down {
                 width:  55px;
                 height: 60px;

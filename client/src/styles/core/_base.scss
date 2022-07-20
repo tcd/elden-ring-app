@@ -41,7 +41,7 @@ body {
 }
 
 a {
-    @include m.pointer-on-hover;
+    @include m.pointerOnHover;
     text-decoration: none;
     // &:active,
     // &:focus,
@@ -99,5 +99,5 @@ hr.er__hr {
 }
 
 .er__hoverPointer {
-    @include m.pointer-on-hover;
+    @include m.pointerOnHover;
 }

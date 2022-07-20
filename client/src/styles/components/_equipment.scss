@@ -30,7 +30,7 @@
             padding: 10px;
         }
     }
-    @include m.pointer-on-hover;
+    @include m.pointerOnHover;
 
     @include m.media-tablet-down {
         width:  55px;

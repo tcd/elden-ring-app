@@ -3,7 +3,7 @@ $equipment-slot-overlay-color: #B6AD84;
 @mixin hoverGradient {
     position: relative;
 
-    @include m.pointer-on-hover;
+    @include m.pointerOnHover;
 
     &:hover {
         /* offset-x | offset-y | blur-radius | spread-radius | color */
