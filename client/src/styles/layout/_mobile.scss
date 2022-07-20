@@ -1,7 +1,6 @@
 @use "include-media" as im;
 @use "../variables" as v;
-@use "../mixins" as m;
-@use "../helpers" as h;
+@use "../mixins" as mixins;
 @use "../helpers/functions" as functions;
 
 #er__mobileLayout {
@@ -67,11 +66,11 @@
             // padding-left: 40px;
 
             .er__appHeader__icon {
-                @include m.square(v.$header-imageSize);
+                @include mixins.square(v.$header-imageSize);
                 margin-left: 35px;
                 margin-right: 20px;
 
-                @include m.pointerOnHover;
+                @include mixins.pointerOnHover;
             }
 
             .er__appHeader__title {
