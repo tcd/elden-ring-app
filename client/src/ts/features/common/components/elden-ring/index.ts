@@ -1,4 +1,5 @@
 export * from "./DamageTypes"
+export * from "./ErButton"
 export * from "./ErCard"
 export * from "./ErTallCard"
 export * from "./ErDialog"

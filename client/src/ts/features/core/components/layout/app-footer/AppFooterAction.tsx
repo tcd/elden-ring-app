@@ -1,3 +1,7 @@
+import { Button } from "@mui/material"
+
+import { ErButton } from "@app/shared"
+
 export interface AppFooterActionProps {
     name: string
     onClick: () => void
@@ -16,12 +20,8 @@ export const AppFooterAction = (props: AppFooterActionProps): JSX.Element => {
     // )
 
     return (
-        <button
-            type="button"
-            className="er__button"
-            onClick={handleClick}
-        >
+        <ErButton onClick={handleClick}>
             {props.name}
-        </button>
+        </ErButton>
     )
 }

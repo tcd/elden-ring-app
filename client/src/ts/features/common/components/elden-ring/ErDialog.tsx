@@ -1,6 +1,8 @@
 import { ReactNode } from "react"
 import ReactModal from "react-modal"
 
+import { ErButton } from "@app/shared"
+
 export interface ErDialogOption {
     title: string
     handler: () => any
@@ -17,13 +19,9 @@ export const ErDialog = (props: ErDialogProps): JSX.Element => {
 
     const options = props.options.map(({ title, handler }) => {
         return (
-            <button
-                key={title}
-                className="er__button"
-                onClick={handler}
-            >
+            <ErButton key={title} onClick={handler}>
                 {title}
-            </button>
+            </ErButton>
         )
     })
 

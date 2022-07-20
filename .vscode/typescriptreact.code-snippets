@@ -8,11 +8,18 @@
             "import { $0 } from \"@app/$1\"",
         ],
     },
-    "New Component with Props": {
-        "prefix": [
-            "component",
-            "component with props",
+    "New Component without Props": {
+        "prefix": "component without props",
+        "body": [
+            "export const ${1:name} = (_props: unknown): JSX.Element => {",
+            "\treturn (",
+            "\t\t<>$0</>",
+            "\t)",
+            "}",
         ],
+    },
+    "New Component w/ Props": {
+        "prefix":  "component with props",
         "body": [
             "export interface ${1:name}Props {",
             // "${2:\t}",
@@ -26,19 +33,29 @@
             "}",
         ],
     },
-    "New Component without Props": {
-        "prefix": [
-            "component",
-            "component without props",
-        ],
+    "New Component w/ Default Props": {
+        "prefix": "component with default props",
         "body": [
-            "export const ${1:name} = (_props: unknown): JSX.Element => {",
+            "export interface ${1:name}Props {",
+            // "${2:\t}",
+            "\t",
+            "}",
+            "",
+            "const defaultProps: Partial<${1:name}Props> = {",
+            "",
+            "}",
+            "",
+            "export const ${1:name} = (props: ${1:name}Props): JSX.Element => {",
+            "",
+            "\tprops = { ...defaultProps, ...props }",
+            "",
             "\treturn (",
-            "\t\t<>$0</>",
+            "\t\t${0:<></>}",
             "\t)",
             "}",
         ],
     },
+
 }
 
 
