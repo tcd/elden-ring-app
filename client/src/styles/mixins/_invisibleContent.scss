@@ -1,0 +1,7 @@
+/// Used to make empty elements take up space.
+@mixin invisibleContent() {
+    &::after {
+        content: "\200b";
+        visibility: hidden;
+    }
+}

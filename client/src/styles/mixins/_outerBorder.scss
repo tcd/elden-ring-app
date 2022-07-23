@@ -14,7 +14,7 @@ $top-bottom-border-stops: (
    100%: 1.0,
 );
 
-@mixin outerBorder {
+@mixin outerBorder() {
     height: 3px;
     background:
         functions.customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),

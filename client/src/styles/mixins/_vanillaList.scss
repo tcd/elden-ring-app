@@ -1,4 +1,4 @@
-@mixin vanillaList {
+@mixin vanillaList() {
     ul, li {
         /* type | image | position */
         list-style: none none none !important;

@@ -4,7 +4,7 @@ $scrollbar-thumb-color: #60604D;
 $scrollbar-thumb-border-radius: 10px;
 $scrollbar-width: 10px;
 
-@mixin customScrollbar {
+@mixin customScrollbar() {
     // // width
     // ::-webkit-scrollbar {
     //     cursor: pointer;

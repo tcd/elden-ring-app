@@ -6,7 +6,7 @@
 // #70715E R1
 // #646454 R2
 // #555447 R3
-@mixin erCardSideBorder {
+@mixin erCardSideBorder() {
     border-radius: 2px;
     background: linear-gradient(
         180deg,
