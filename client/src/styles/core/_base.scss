@@ -1,7 +1,7 @@
-@use "../variables"as v;
-@use "../mixins"as m;
+@use "@variables"as v;
+@use "@mixins"as mixins;
+@use "@functions" as functions;
 @use "../helpers" as h;
-@use "../helpers/functions" as functions;
 
 html, body {
     height: 100%;
@@ -28,12 +28,12 @@ body {
     flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
-    @include m.backgroundImage(h.$main-menu-encoded-background);
+    @include mixins.backgroundImage(h.$main-menu-encoded-background);
     // background-color: blue;
 }
 
 * {
-    @include m.customScrollbar();
+    @include mixins.customScrollbar();
     // @include m.invisibleScrollbar();
     box-sizing: border-box !important;
     font-size: 15px;
@@ -41,7 +41,7 @@ body {
 }
 
 a {
-    @include m.pointerOnHover;
+    @include mixins.pointerOnHover;
     text-decoration: none;
     // &:active,
     // &:focus,
@@ -99,5 +99,5 @@ hr.er__hr {
 }
 
 .er__hoverPointer {
-    @include m.pointerOnHover;
+    @include mixins.pointerOnHover;
 }

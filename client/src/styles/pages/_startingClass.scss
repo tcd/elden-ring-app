@@ -1,6 +1,6 @@
-@use "../variables"as v;
-@use "../mixins"as m;
-@use "../helpers/functions" as functions;
+@use "@variables"as v;
+@use "@mixins"as m;
+@use "@functions" as functions;
 
 #root.startingClassPage {
     background-image: none !important;

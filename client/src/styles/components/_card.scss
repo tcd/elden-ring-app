@@ -1,5 +1,5 @@
-@use "../variables"as v;
-@use "../mixins" as m;
+@use "@variables"as v;
+@use "@mixins" as mixins;
 
 // bottom left
 // #585949 L3
@@ -10,7 +10,7 @@
 // #646454 R2
 // #555447 R3
 .vertical-gradient {
-    @include m.erCardSideBorder;
+    @include mixins.erCardSideBorder;
 }
 
 article.er__card {

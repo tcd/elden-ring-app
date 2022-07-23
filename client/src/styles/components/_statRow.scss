@@ -1,4 +1,4 @@
-@use "../variables" as v;
+@use "@variables" as v;
 
 .er__statRow__column--color-blue { color: v.$blue; }
 .er__statRow__column--color-red  { color: v.$red;  }

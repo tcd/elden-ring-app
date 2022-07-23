@@ -1,8 +1,8 @@
 // https://cssgradient.io/
 
-@use "../variables" as v;
-@use "../mixins" as mixins;
-@use "../helpers/functions" as functions;
+@use "@variables" as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 .er__modal,
 .er__modal__overlay {

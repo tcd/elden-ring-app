@@ -1,6 +1,6 @@
-@use "../variables"as v;
-@use "../mixins" as m;
-@use "../helpers/functions" as functions;
+@use "@variables"as v;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
 
 .er__equipmentMenu {
 
@@ -13,7 +13,7 @@
 
     // width: 50%;
 
-    @include m.customScrollbar();
+    @include mixins.customScrollbar();
 
     .er__equipmentMenu__gridColumn {
         height: 75vh;
@@ -47,10 +47,10 @@
             &.active {
                 background-color: #615e4b;
             }
-            @include m.pointerOnHover;
+            @include mixins.pointerOnHover;
         }
         .er__equipmentMenu__imageWrapper {
-            @include m.square(100%);
+            @include mixins.square(100%);
             box-sizing: border-box;
             padding: 7px;
             position: relative;
@@ -63,7 +63,7 @@
                 position: absolute;
                 top:   v.$equipmentMenu-redX-padding;
                 right: v.$equipmentMenu-redX-padding;
-                @include m.square(v.$equipmentMenu-redX-size);
+                @include mixins.square(v.$equipmentMenu-redX-size);
             }
         }
     }

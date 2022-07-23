@@ -1,4 +1,4 @@
-@use "../variables" as v;
+@use "@variables" as v;
 
 .er__popover {
     z-index: v.$zindex-popover;

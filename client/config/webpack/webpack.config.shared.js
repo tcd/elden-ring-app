@@ -41,7 +41,7 @@ const webpackConfig = {
         }),
     ],
     resolve: {
-        extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
+        extensions: ["*", ".js", ".jsx", ".tsx", ".ts", ".scss"],
         modules: [ROOT_FOLDER, "src", "node_modules"],
         fallback: {
             console: false,
@@ -49,6 +49,11 @@ const webpackConfig = {
         plugins: [
             new TsconfigPathsPlugin(),
         ],
+        alias: {
+            "@functions": path.join(ROOT_FOLDER, "src", "styles", "helpers", "functions", "_index.scss"),
+            "@mixins":    path.join(ROOT_FOLDER, "src", "styles", "helpers", "mixins", "_index.scss"),
+            "@variables": path.join(ROOT_FOLDER, "src", "styles", "_variables.scss"),
+        },
     },
     optimization: {
         splitChunks: {
@@ -89,6 +94,7 @@ const webpackConfig = {
                         // https://webpack.js.org/loaders/sass-loader/
                         loader: "sass-loader",
                         options: {
+                            sourceMap: true,
                             // Prefer `dart-sass`
                             implementation: require.resolve("sass"),
                         },
