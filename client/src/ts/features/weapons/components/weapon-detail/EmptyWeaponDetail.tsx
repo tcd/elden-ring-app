@@ -1,17 +1,21 @@
 import { capitalize } from "lodash"
-import {
-    mdiSword,
-    mdiShield,
-    mdiArmFlex,
-    mdiHandExtended,
-    mdiTshirtCrew,
-} from "@mdi/js"
 
 import { Dmg } from "@app/types"
 import {
-    ErCard,
+    ErCard2,
+    ErCard2Props,
+    EquipmentDetail,
+    EquipmentDetailProps,
     StatRow,
 } from "@app/shared"
+
+const cardProps: Partial<ErCard2Props> = {
+    smallTitle: true,
+    sx: {
+        mx: 3,
+        my: 2,
+    },
+}
 
 export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
 
@@ -39,40 +43,36 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
         value="-"
     />)
 
+    const props: Partial<EquipmentDetailProps> = {
+        // primaryImage: { src: null },
+        includeSecondaryImage: true,
+        includePassiveEffects: true,
+        mainSectionRows: {
+            row1: { type: "StatRow", props: { title: "-", value: null } },
+            row2: { type: "StatRow", props: { title: "-", value: null } },
+            // row3: null,
+            row4: { type: "StatRow", props: { title: "-",       value: null } },
+            row5: { type: "StatRow", props: { title: "FP Cost", value: "-" } },
+            row6: { type: "StatRow", props: { title: "Weight",  value: "-" } },
+        },
+    }
+
     return (
-        <div className="er__equipmentDetail">
-            <section className="er__equipmentDetail__section">
-                <ErCard title={"-"}  contentClassName="er__equipmentDetail__cardContent">
-                    <ul>
-                        <StatRow title={"-"} value={null} />
-                        <StatRow title={"-"} value={null} />
-                        <br />
-                        <StatRow title={"-"} value={null} />
-                        <br />
-                        <StatRow title="FP Cost" value={<span>-&nbsp;(&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;)</span>} />
-                        <StatRow title="Weight"  value="-"  />
-                    </ul>
-                    <div className="er__equipmentDetail__imageColumn">
-                        <div className="er__equipmentDetail__imageWrapper empty">
-                            <div></div>
-                        </div>
-                    </div>
-                </ErCard>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword} margined={false} className="mx-3 my-2">
+        <EquipmentDetail {...props}>
+            <section className="er__equipmentDetail2__section">
+                <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
                     <ul>
                         {attackRows}
                     </ul>
-                </ErCard>
-                <ErCard title="Guarded Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
+                </ErCard2>
+                <ErCard2 title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
                     <ul>
                         {defenseRows}
                     </ul>
-                </ErCard>
+                </ErCard2>
             </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Attribute Scaling" smallTitle={true} iconPath={mdiArmFlex} margined={false} className="mx-3 my-2">
+            <section className="er__equipmentDetail2__section">
+                <ErCard2 title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
                     <div className="row">
                         <div className="col">
                             <StatRow title="Str" value="-" />
@@ -85,8 +85,8 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
                             <StatRow title="Fai" value="-" />
                         </div>
                     </div>
-                </ErCard>
-                <ErCard title="Attributes Required" smallTitle={true} iconPath={mdiHandExtended} margined={false} className="mx-3 my-2">
+                </ErCard2>
+                <ErCard2 title="Attributes Required" icon="AttributesRequired" {...cardProps}>
                     <div className="row">
                         <div className="col">
                             <StatRow title="Str" value="-" />
@@ -99,17 +99,8 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
                             <StatRow title="Fai" value="-" />
                         </div>
                     </div>
-                </ErCard>
+                </ErCard2>
             </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrew} margined={false} className="mx-3 my-2">
-                    <ul>
-                        <li> - </li>
-                        <li> - </li>
-                        <li> - </li>
-                    </ul>
-                </ErCard>
-            </section>
-        </div>
+        </EquipmentDetail>
     )
 }

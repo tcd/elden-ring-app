@@ -1,3 +1,3 @@
 export * from "./TalismanDetail"
-export * from "./NewTalismanDetailContent"
-export * from "./NewEmptyTalismanDetail"
+export * from "./TalismanDetailContent"
+export * from "./EmptyTalismanDetail"

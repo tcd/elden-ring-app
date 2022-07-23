@@ -1,18 +1,32 @@
 import { capitalize } from "lodash"
-import {
-    mdiSword,
-    mdiTshirtCrewOutline,
-} from "@mdi/js"
 
-import { Dmg } from "@app/types"
+import { Dmg, Ammunition } from "@app/types"
 import { SpecialCharacters } from "@app/util"
 import {
-    ErCard,
+    ErCard2,
+    ErCard2Props,
     StatRow,
-    StatRowPlus,
+    EquipmentDetail,
+    EquipmentDetailProps,
 } from "@app/shared"
 
+const cardProps: Partial<ErCard2Props> = {
+    smallTitle: true,
+    sx: {
+        mx: 3,
+        my: 2,
+    },
+}
+
 export const AmmunitionDetail = (_props: unknown): JSX.Element => {
+
+    const ammo: Ammunition = {
+        id: -1,
+        name: "-",
+        // @ts-ignore: next-line
+        ammunition_type: "-",
+        physical_damage_types: ["-"],
+    }
 
     const attackRows = Object.values(Dmg).map((dmg) => {
         const title = capitalize(dmg)
@@ -20,45 +34,42 @@ export const AmmunitionDetail = (_props: unknown): JSX.Element => {
         return (<StatRow key={key} title={title} value={"-"} />)
     })
 
+    const props: Partial<EquipmentDetailProps> = {
+        title: ammo.name,
+        includeSecondaryImage: false,
+        includePassiveEffects: true,
+        primaryImage: {
+            src: null,
+            alt: "ammunition",
+        },
+        mainSectionRows: {
+            row1: { type: "StatRow", props: { title: ammo?.ammunition_type, value: null } },
+            row2: { type: "StatRow", props: { title: ammo?.physical_damage_types?.join("/"), value: null } },
+            row3: { type: "StatRowPlus", props: {
+                title: "No. Held",
+                value_1: SpecialCharacters.infinity,
+                value_2: SpecialCharacters.infinity,
+                divider: "/",
+            } },
+            row4: { type: "StatRowPlus", props: {
+                title: "Stored",
+                value_1: SpecialCharacters.infinity,
+                value_2: SpecialCharacters.infinity,
+                divider: "/",
+            } },
+        },
+    }
+
     return (
-        <div className="er__equipmentDetail">
-            <section className="er__equipmentDetail__section">
-                <ErCard title="-">
-                    <div className="row">
-                        <div className="col">
-                            <ul className="h-100 flex-between-column">
-                                <span></span>
-                                <span></span>
-                                <StatRowPlus title="No. Held" value_1={SpecialCharacters.infinity} divider="/" value_2="?" />
-                                <StatRowPlus title="Stored"   value_1={SpecialCharacters.infinity} divider="/" value_2="?" />
-                            </ul>
-                        </div>
-                        <div className="col-1"></div>
-                        <div className="col er__equipmentDetail__imageColumn">
-                            <div className="er__equipmentDetail__imageWrapper empty">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </ErCard>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Attack Power" smallTitle={true} iconPath={mdiSword} margined={false} className="mx-3 my-2">
+        <EquipmentDetail {...props}>
+            <section className="er__equipmentDetail2__section">
+                <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
                     <ul>
                         {attackRows}
                     </ul>
-                </ErCard>
+                </ErCard2>
             </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2">
-                    <ul>
-                        <li> - </li>
-                        <li> - </li>
-                        <li> - </li>
-                    </ul>
-                </ErCard>
-            </section>
-        </div>
+        </EquipmentDetail>
     )
 }
 

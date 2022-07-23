@@ -1,3 +1,4 @@
+import { SxProps } from "@mui/material"
 import {
     mdiScript,
     mdiFileCode,
@@ -5,11 +6,24 @@ import {
 
 import { Talisman } from "@app/types"
 import { equipmentEffectDescription, getImageSrc, isBlank } from "@app/util"
-import { ErCard, StatRow } from "@app/shared"
+import {
+    ErCard2,
+    ErCard2Props,
+    EquipmentDetail,
+    EquipmentDetailProps,
+} from "@app/shared"
 import { EmptyTalismanDetail } from "."
 
 export interface TalismanDetailContentProps {
     talisman: Talisman
+}
+
+const cardProps: Partial<ErCard2Props> = {
+    smallTitle: true,
+    sx: {
+        mx: 3,
+        my: 2,
+    },
 }
 
 export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps): JSX.Element => {
@@ -26,33 +40,32 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
         )
     })
 
+    const props: Partial<EquipmentDetailProps> = {
+        title: talisman.name,
+        includePassiveEffects: true,
+        primaryImage: {
+            src: imageSrc,
+            alt: "Talisman",
+        },
+        mainSectionRows: {
+            row6: { type: "StatRow", props: { title: "Weight", value: talisman.weight.toFixed(1) } },
+        },
+    }
+
     return (
-        <div className="er__equipmentDetail">
+        <EquipmentDetail {...props}>
             <section className="er__equipmentDetail__section">
-                <ErCard title={talisman.name} contentClassName="er__equipmentDetail__cardContent">
-                    <ul className="h-100 flex-between-column">
-                        {/* <br /> */}
-                        <StatRow title="Weight" value={talisman.weight.toFixed(1)}/>
-                    </ul>
-                    <div className="er__equipmentDetail__imageColumn">
-                        <div className="er__equipmentDetail__imageWrapper">
-                            <img className="img-fluid" src={imageSrc} alt="talisman image" />
-                        </div>
-                    </div>
-                </ErCard>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Description" smallTitle={true} iconPath={mdiScript} margined={false} className="mx-3 my-2">
+                <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
                     <p>{talisman.description}</p>
-                </ErCard>
+                </ErCard2>
             </section>
             <section className="er__equipmentDetail__section">
-                <ErCard title="Item Effect" smallTitle={true} iconPath={mdiFileCode} margined={false} className="mx-3 my-2">
+                <ErCard2 title="Item Effect" icon='PassiveEffects' {...cardProps}>
                     <ul className="normal">
                         {effects}
                     </ul>
-                </ErCard>
+                </ErCard2>
             </section>
-        </div>
+        </EquipmentDetail>
     )
 }

@@ -1,38 +1,40 @@
 import {
-    mdiScript,
-    mdiFileCode,
-} from "@mdi/js"
+    EquipmentDetail,
+    EquipmentDetailProps,
+    ErCard2,
+    ErCard2Props,
+} from "@app/shared"
 
-import { ErCard, StatRow } from "@app/shared"
+const cardProps: Partial<ErCard2Props> = {
+    smallTitle: true,
+    sx: {
+        mx: 3,
+        my: 2,
+    },
+}
 
 export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
 
+    const props: Partial<EquipmentDetailProps> = {
+        includePassiveEffects: true,
+        mainSectionRows: {
+            row6: { type: "StatRow", props: { title: "Weight", value: "-" } },
+        },
+    }
+
     return (
-        <div className="er__equipmentDetail">
-            <section className="er__equipmentDetail__section">
-                <ErCard title="-" contentClassName="er__equipmentDetail__cardContent">
-                    <ul className="h-100 flex-between-column">
-                        <br />
-                        <StatRow title="Weight" value="-" />
-                    </ul>
-                    <div className="er__equipmentDetail__imageColumn">
-                        <div className="er__equipmentDetail__imageWrapper empty">
-                            <div></div>
-                        </div>
-                    </div>
-                </ErCard>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Description" smallTitle={true} iconPath={mdiScript} margined={false} className="mx-3 my-2">
+        <EquipmentDetail {...props}>
+            <section className="er__equipmentDetail2__section">
+                <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
                     <p>-</p>
-                </ErCard>
+                </ErCard2>
             </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Item Effect" smallTitle={true} iconPath={mdiFileCode} margined={false} className="mx-3 my-2">
+            <section className="er__equipmentDetail2__section">
+                <ErCard2 title="Item Effect" icon="PassiveEffects" {...cardProps}>
                     <ul className="normal">
                     </ul>
-                </ErCard>
+                </ErCard2>
             </section>
-        </div>
+        </EquipmentDetail>
     )
 }

@@ -1,20 +1,31 @@
 import {
-    mdiShield,
-    mdiShieldOutline,
-    mdiTshirtCrew,
-    mdiTshirtCrewOutline,
-} from "@mdi/js"
-
-import {
-    ErCard,
+    ErCard2,
+    ErCard2Props,
     StatRow,
+    EquipmentDetail,
+    EquipmentDetailProps,
 } from "@app/shared"
 import {
     ARMOR_DEFENSE_STATS,
     ARMOR_RESISTANCE_STATS,
 } from "."
 
+const cardProps: Partial<ErCard2Props> = {
+    smallTitle: true,
+    sx: {
+        mx: 3,
+        my: 2,
+    },
+}
+
 export const EmptyArmorDetail = (_props: unknown): JSX.Element => {
+
+    const props: Partial<EquipmentDetailProps> = {
+        includePassiveEffects: true,
+        mainSectionRows: {
+            row6: { type: "StatRow", props: { title: "Weight", value: "-" } },
+        },
+    }
 
     const defenseRows = ARMOR_DEFENSE_STATS.map(({ title }) => {
         return (<StatRow key={title} title={title} value="-" />)
@@ -25,46 +36,19 @@ export const EmptyArmorDetail = (_props: unknown): JSX.Element => {
     })
 
     return (
-        <div className="er__equipmentDetail">
-            <section className="er__equipmentDetail__section">
-                <ErCard title="-">
-                    <div className="row">
-                        <div className="col">
-                            <ul className="h-100 flex-between-column">
-                                <span></span>
-                                <StatRow title="Weight" value="-"/>
-                            </ul>
-                        </div>
-                        <div className="col-1"></div>
-                        <div className="col er__equipmentDetail__imageColumn">
-                            <div className="er__equipmentDetail__imageWrapper empty">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </ErCard>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Damage Negation" smallTitle={true} iconPath={mdiShield} margined={false} className="mx-3 my-2">
+        <EquipmentDetail {...props}>
+            <section className="er__equipmentDetail2__section">
+                <ErCard2 title="Damage Negation" icon="DamageNegation" {...cardProps}>
                     <ul>
                         {defenseRows}
                     </ul>
-                </ErCard>
-                <ErCard title="Resistance" smallTitle={true} iconPath={mdiShieldOutline} margined={false} className="mx-3 my-2">
+                </ErCard2>
+                <ErCard2 title="Resistance" icon="Resistance" {...cardProps}>
                     <ul>
                         {resistanceRows}
                     </ul>
-                </ErCard>
+                </ErCard2>
             </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Passive Effects" smallTitle={true} iconPath={mdiTshirtCrewOutline} margined={false} className="mx-3 my-2">
-                    <ul>
-                        <li> - </li>
-                        <li> - </li>
-                        <li> - </li>
-                    </ul>
-                </ErCard>
-            </section>
-        </div>
+        </EquipmentDetail>
     )
 }

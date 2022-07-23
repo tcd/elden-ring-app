@@ -55,7 +55,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
             },
         }
 
-        const primaryImage = isBlank(this.props.primaryImage) ? this.emptyPrimaryImage() : this.primaryImage()
+        const primaryImage = isBlank(this?.props?.primaryImage?.src) ? this.emptyPrimaryImage() : this.primaryImage()
 
         let secondaryImage = this.emptySecondaryImage()
         if (this.props.includeSecondaryImage === true) {
@@ -88,7 +88,6 @@ export class MainSection extends Component<EquipmentDetailProps> {
     private emptyPrimaryImage(): JSX.Element {
         return (
             <div className="er__equipmentDetail2__primaryImageWrapper--empty">
-                {/* <div>&nbsp;</div> */}
             </div>
         )
     }
@@ -96,7 +95,6 @@ export class MainSection extends Component<EquipmentDetailProps> {
     private emptySecondaryImage(): JSX.Element {
         return (
             <div className="er__equipmentDetail2__secondaryImageWrapper--empty">
-                {/* <div>&nbsp;</div> */}
             </div>
         )
     }
