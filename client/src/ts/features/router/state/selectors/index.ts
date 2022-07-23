@@ -1,5 +1,6 @@
 import * as Core from "./core"
 import * as Derived from "./derived"
+import { selectLastMainPage } from "./last-main-page"
 
 export const RouterSelectors = {
     // Core
@@ -10,4 +11,6 @@ export const RouterSelectors = {
     pathname: Derived.selectPathname,
     hash: Derived.selectHash,
     queryParams: Derived.selectQueryParams,
+    // Other
+    lastMainPage: selectLastMainPage,
 }

@@ -9,7 +9,7 @@ export const AshesOfWarFooter = (_props: unknown): JSX.Element => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const lastMainPage = useSelector(Selectors.Meta.Router.lastMainPage)
+    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
 
     // =========================================================================
 

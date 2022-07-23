@@ -1,7 +1,7 @@
 import { Action, Location } from "history"
 
 import { RootState } from "@app/state"
-import { _selectSlice } from "./selectSlice"
+import { _selectSlice } from "./select-slice"
 
 /**
  * An entry in the history stack. A location contains information about the

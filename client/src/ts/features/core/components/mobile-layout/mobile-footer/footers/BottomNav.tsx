@@ -23,7 +23,7 @@ export interface BottomNavProps {
 export const BottomNav = ({ actions, selector }: BottomNavProps): JSX.Element => {
 
     const tab = useSelector(selector)
-    const lastMainPage = useSelector(Selectors.Meta.Router.lastMainPage)
+    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
 
     const backAction: BottomNavActionProps = {
         label: "Back",
