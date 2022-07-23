@@ -13,7 +13,7 @@ const parentProps: GridProps = {
     justifyContent: "stretch",
     alignContent: "stretch",
     justifyItems: "stretch",
-    columns: 6,
+    columns: 12,
     // columnSpacing: 10,
     // sx: {
     //     width: "100%",
@@ -31,7 +31,7 @@ const childProps: GridProps = {
 
 const child1Props: GridProps = {
     ...childProps,
-    md: 2,
+    md: 4,
     sx: {
         // backgroundColor: "red",
         boxSizing: "border-box",
@@ -45,36 +45,28 @@ const child1Props: GridProps = {
 
 const child2Props: GridProps = {
     ...childProps,
-    md: 2,
+    md: 5,
     alignContent: "flex-start",
     pr: {
         xs: 0,
         sm: 0,
-        md: "96px",
+        md: "48px",
     },
     sx: {
         // backgroundColor: "orange",
     },
 }
 
-const child4Props: GridProps = {
-    ...childProps,
-    xs: 0,
-    sm: 0,
-    md: 0,
-    lg: 1,
-    xl: 1,
-    xxl: 1,
-    sx: {
-        // backgroundColor: "green",
-    },
-}
-
 const child3Props: GridProps = {
     ...childProps,
-    md: 1,
+    md: 3,
     sx: {
         // backgroundColor: "yellow",
+        pr: {
+            xs: 0,
+            sm: 0,
+            md: "48px",
+        },
     },
 }
 
@@ -92,7 +84,6 @@ export const EquipmentPage = (_props: unknown): JSX.Element => {
                 <Grid {...child3Props}>
                     <CharacterStatus />
                 </Grid>
-                <Grid {...child4Props}></Grid>
             </Grid>
         </Page>
     )

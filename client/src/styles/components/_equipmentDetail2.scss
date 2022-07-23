@@ -1,0 +1,82 @@
+@use "../variables"as v;
+@use "../mixins" as m;
+
+.er__equipmentDetail2 {
+    display: flex;
+    flex-direction: column;
+
+    .er__equipmentDetail2__cardContent {
+        display: flex;
+        flex-flow: row nowrap;
+        // width: 100%;
+        // justify-items: stretch;
+        // justify-content: stretch;
+        // align-items: stretch;
+        // align-content: stretch;
+
+        // &>* {
+        //     flex-grow: 1;
+        // }
+    }
+
+    .er__equipmentDetail2__section {
+        .er__card2 {
+            width: 100%;
+        }
+        display: flex;
+        flex-flow: row nowrap;
+        &--main {
+            @extend .er__equipmentDetail2__section;
+        }
+    }
+
+    .er__equipmentDetail2__imageColumn {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: end;
+        align-items: end;
+        // align-content: end;
+        // align-items: flex-end;
+        // justify-items: end;
+        // align-content: flex-end;
+        // justify-content: end;
+        // height: 50%;
+        // width: 50%;
+        // align-self: flex-end;
+    }
+
+}
+
+.er__equipmentDetail2__primaryImageWrapper {
+    @include m.square(v.$equipmentDetail-primary-image-size);
+    @include m.media-mobile { @include m.square(v.$equipmentDetail-primary-image-size--mobile); }
+    @include m.equipmentMenuBoxShadow;
+    padding: 5px;
+
+    &--empty {
+        @extend .er__equipmentDetail2__primaryImageWrapper;
+        @include m.square(v.$equipmentDetail-primary-image-size);
+        &::after {
+            content: "\200b";
+            visibility: hidden;
+        }
+    }
+}
+
+.er__equipmentDetail2__secondaryImageWrapper {
+    @include m.square(v.$equipmentDetail-secondary-image-size);
+    @include m.media-mobile { @include m.square(v.$equipmentDetail-secondary-image-size--mobile); }
+    @include m.equipmentMenuBoxShadow;
+    margin-right: 6px;
+    padding: 5px;
+
+    &--empty {
+        @extend .er__equipmentDetail2__secondaryImageWrapper;
+        @include m.square(v.$equipmentDetail-secondary-image-size);
+        box-shadow: none;
+        &::after {
+            content: "\200b";
+            visibility: hidden;
+        }
+    }
+}

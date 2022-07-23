@@ -12,7 +12,7 @@ export class EquipmentDetail extends Component<EquipmentDetailProps> {
 
     static defaultProps: Partial<EquipmentDetailProps> = {
         title: "-",
-        includeSecondaryImages: false,
+        includeSecondaryImage: false,
         includePassiveEffects: false,
     }
 

@@ -1,5 +1,7 @@
+export * from "./NewArmorDetail"
 export * from "./ArmorDetailProps"
-export * from "./ArmorDetail"
+
 export * from "./ArmorDefenseStats"
 export * from "./ArmorResistanceStats"
-export * from "./EmptyArmorDetail"
+// export * from "./EmptyArmorDetail"
+export * from "./NewEmptyArmorDetail"

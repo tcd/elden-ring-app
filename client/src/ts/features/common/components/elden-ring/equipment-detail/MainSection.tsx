@@ -2,11 +2,18 @@ import { Component } from "react"
 import { Grid, GridProps } from "@mui/material"
 
 import { isBlank } from "@app/util"
-import { ErCard } from "@app/shared"
+import { ErCard2, ErCard2Props } from "@app/shared"
 import {
     EquipmentDetailProps,
     MainSectionRows,
 } from "./_index"
+
+const cardProps: Partial<ErCard2Props> = {
+    sx: {
+        mx: 3,
+        my: 2,
+    },
+}
 
 export class MainSection extends Component<EquipmentDetailProps> {
 
@@ -19,33 +26,47 @@ export class MainSection extends Component<EquipmentDetailProps> {
         const containerProps: GridProps = {
             container: true,
             direction: "row",
+            wrap: "nowrap",
+            columnSpacing: 2,
+            sx: {
+                // backgroundColor: "papayawhip",
+            },
         }
 
         const firstColumnProps: GridProps = {
+            item: true,
             container: true,
             direction: "column",
             className: "er__equipmentDetail2__detailColumn",
+            sx: {
+                // backgroundColor: "blue",
+                width: "50%",
+            },
         }
         const secondColumnProps: GridProps = {
+            item: true,
             container: true,
             direction: "row",
             className: "er__equipmentDetail2__imageColumn",
+            sx: {
+                // backgroundColor: "violet",
+                width: "50%",
+                height: "50%",
+            },
         }
 
         const primaryImage = isBlank(this.props.primaryImage) ? this.emptyPrimaryImage() : this.primaryImage()
 
-        let secondaryImage = null
-        if (this.props.includeSecondaryImages === true) {
-            if (this.props.secondaryImage) {
+        let secondaryImage = this.emptySecondaryImage()
+        if (this.props.includeSecondaryImage === true) {
+            if (!isBlank(this.props.secondaryImage?.src)) {
                 secondaryImage = this.secondaryImage()
-            } else {
-                secondaryImage = this.emptySecondaryImage()
             }
         }
 
         return (
-            <section className="er__equipmentDetail2__section">
-                <ErCard title={this.mainSectionTitle()} contentClassName="er__equipmentDetail2__cardContent">
+            <section className="er__equipmentDetail2__section--main">
+                <ErCard2 title={this.mainSectionTitle()} {...cardProps}>
                     <Grid {...containerProps}>
                         <Grid {...firstColumnProps}>
                             <MainSectionRows {...this.props.mainSectionRows} />
@@ -55,7 +76,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
                             {primaryImage}
                         </Grid>
                     </Grid>
-                </ErCard>
+                </ErCard2>
             </section>
         )
     }
@@ -67,7 +88,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
     private emptyPrimaryImage(): JSX.Element {
         return (
             <div className="er__equipmentDetail2__primaryImageWrapper--empty">
-                <div>&nbsp;</div>
+                {/* <div>&nbsp;</div> */}
             </div>
         )
     }
@@ -75,7 +96,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
     private emptySecondaryImage(): JSX.Element {
         return (
             <div className="er__equipmentDetail2__secondaryImageWrapper--empty">
-                <div>&nbsp;</div>
+                {/* <div>&nbsp;</div> */}
             </div>
         )
     }

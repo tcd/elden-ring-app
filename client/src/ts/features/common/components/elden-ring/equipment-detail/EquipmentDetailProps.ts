@@ -10,7 +10,7 @@ export interface EquipmentDetailProps {
     children: ReactNode
     title: string
     mainSectionRows: MainSectionRowsProps
-    includeSecondaryImages?: boolean
+    includeSecondaryImage?: boolean
     includePassiveEffects?: boolean
     primaryImage: ImageOptions
     secondaryImage?: ImageOptions

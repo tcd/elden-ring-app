@@ -12,4 +12,6 @@ export const SpecialCharacters = {
     singleQuote: "'",
     /** &quot; */
     doubleQuote: '"',
+    /** &nbsp; */
+    space: " ",
 } as const

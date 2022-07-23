@@ -1,0 +1,13 @@
+@use "../mixins" as mixins;
+
+.er__icon__wrapper {
+    @include mixins.square(20px);
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    img.er__icon__image {
+        height: 100%;
+    }
+}

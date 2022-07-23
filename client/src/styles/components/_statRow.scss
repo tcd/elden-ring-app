@@ -20,12 +20,22 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+
+    span:empty::after {
+        content: "\200b";
+        visibility: hidden;
+    }
 }
 
 .er__statRow__column-plus {
     @include stat-row-styles;
     display: grid;
     grid-template-columns: 30% 45% 10% 15%;
+
+    // span:empty::after {
+    //     content: "\200b";
+    //     visibility: hidden;
+    // }
 
     span:nth-child(2) {
         text-align: right;
@@ -48,6 +58,11 @@
     @include stat-row-styles;
     display: grid;
     grid-template-columns: 30% 20% 5% 20% 25%;
+
+    // span:empty::after {
+    //     content: "\200b";
+    //     visibility: hidden;
+    // }
 
     // Damage Type
     span:nth-child(1) {

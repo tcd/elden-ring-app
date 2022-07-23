@@ -1,8 +1,12 @@
+export * from "./equipment-detail"
+export * from "./StatRow"
+
 export * from "./DamageTypes"
 export * from "./ErButton"
 export * from "./ErCard"
+export * from "./ErCard2"
+export * from "./ErIcon"
 export * from "./ErTallCard"
 export * from "./ErDialog"
 export * from "./EModal"
 export * from "./EPopoverContent"
-export * from "./StatRow"
