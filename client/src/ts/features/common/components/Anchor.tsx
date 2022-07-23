@@ -15,6 +15,11 @@ const defaultProps: Partial<AnchorProps> = {
     newTab: false,
 }
 
+/**
+ * Vanilla HTML link.
+ *
+ * @see [How to Use HTML to Open a Link in a New Tab](https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/)
+ */
 export const Anchor = (props: AnchorProps): JSX.Element => {
     const {
         href,
