@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { PageName } from "@app/types"
 import { Selectors } from "@app/state"
 import {
+    AboutFooter,
     ArmorFooter,
     BuilderFooter,
     EquipmentFooter,
@@ -12,7 +13,7 @@ import {
 } from "./footers"
 
 const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
-    "about":          <NoFooter />,
+    "about":          <AboutFooter />,
     "ammunition":     <NoFooter />,
     "armor":          <ArmorFooter />,
     "builder":        <BuilderFooter />,

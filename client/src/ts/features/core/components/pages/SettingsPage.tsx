@@ -6,7 +6,7 @@ import { Box, Button, Typography } from "@mui/material"
 import { Actions, Selectors, persistor } from "@app/state"
 import { exportJsonToFile } from "@app/util"
 
-export const SettingsPage = (): JSX.Element => {
+export const SettingsPage = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()

@@ -18,24 +18,26 @@ import { AnySelector, Selectors } from "@app/state"
 export interface BottomNavProps {
     actions: BottomNavActionProps[]
     selector: AnySelector<string>
+    excludeBack?: boolean
 }
 
-export const BottomNav = ({ actions, selector }: BottomNavProps): JSX.Element => {
+export const BottomNav = ({ actions, selector, excludeBack }: BottomNavProps): JSX.Element => {
 
     const tab = useSelector(selector)
     const lastMainPage = useSelector(Selectors.Router.lastMainPage)
 
-    const backAction: BottomNavActionProps = {
-        label: "Back",
-        value: "back",
-        to: lastMainPage,
-        icon: <ArrowBackIcon />,
+    if (excludeBack !== true) {
+        const backAction: BottomNavActionProps = {
+            label: "Back",
+            value: "back",
+            to: lastMainPage,
+            icon: <ArrowBackIcon />,
+        }
+        actions = [
+            backAction,
+            ...actions,
+        ]
     }
-
-    actions = [
-        backAction,
-        ...actions,
-    ]
 
     const elements = actions.map(({ value, label, to, icon }) =>
         <BottomNavigationAction

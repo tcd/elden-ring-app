@@ -28,7 +28,7 @@ const boxStyle = {
     // height: "200px",
 }
 
-export const TestPage = (): JSX.Element => {
+export const TestPage = (_props: unknown): JSX.Element => {
 
     const className = [
         "bg-success",

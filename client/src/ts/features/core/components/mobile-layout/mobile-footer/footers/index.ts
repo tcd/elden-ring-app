@@ -1,3 +1,4 @@
+export * from "./AboutFooter"
 export * from "./ArmorFooter"
 export * from "./BuilderFooter"
 export * from "./EquipmentFooter"

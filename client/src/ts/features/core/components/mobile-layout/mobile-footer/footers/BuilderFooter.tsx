@@ -20,6 +20,7 @@ export const BuilderFooter = (_props: unknown): JSX.Element => {
         <BottomNav
             actions={actionProps}
             selector={Selectors.Builder.mobileTab}
+            excludeBack={true}
         />
     )
 }

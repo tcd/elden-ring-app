@@ -1,6 +1,6 @@
 import { Heading } from "@app/shared"
 
-export const HomePage = (): JSX.Element => {
+export const HomePage = (_props: unknown): JSX.Element => {
 
     return (
         <>
