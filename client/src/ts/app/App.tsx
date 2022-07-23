@@ -7,7 +7,7 @@ import { logger, EldenRingMaterialTheme } from "@app/util"
 import { store, persistor, history } from "@app/state"
 import { LoggingProvider, ViewportProvider } from "@app/shared"
 import { AppHelmet } from "@app/features/core"
-import { AppRoutesComponent } from "./AppRoutesComponent"
+import { AppRoutesComponent } from "@app/features/router"
 
 export const App = () => {
     return (

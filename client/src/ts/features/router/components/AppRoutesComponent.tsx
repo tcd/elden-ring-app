@@ -1,5 +1,6 @@
 import { RouteObject, useRoutes } from "react-router-dom"
 
+import { useViewport } from "@app/shared"
 import {
     AppLayout,
     MobileLayout,
@@ -9,31 +10,44 @@ import {
     AboutPage,
     SettingsPage,
     TestPage,
+} from "@app/features/core"
+import {
     BuilderPage,
-    ChecklistPage,
     StatusPage,
+} from "@app/features/builder"
+import {
+    ChecklistPage,
+} from "@app/features/checklist"
+import {
     LevelUpPage,
-
+} from "@app/features/level-up"
+import {
+    StartingClassPage,
+} from "@app/features/starting-class"
+import {
     EquipmentPage,
     MobileEquipmentPage,
-
+} from "@app/features/equipment"
+import {
     TalismanPage,
     // TalismansTablePage,
     MobileTalismanPage,
-
+} from "@app/features/talismans"
+import {
     ArmorPage,
     // ArmorTablePage,
     MobileArmorPage,
-
+} from "@app/features/armor"
+import {
     WeaponsPage,
     // WeaponsTablePage,
     AshesOfWarPage,
     MobileWeaponPage,
-
+} from "@app/features/weapons"
+import {
     SpellMenu,
     SpellsTablePage,
-} from "@app/features"
-import { useViewport } from "@app/shared"
+} from "@app/features/spells"
 
 export const AppRoutesComponent = () => {
     // const onMobile = ScreenSize.onMobile
@@ -59,6 +73,8 @@ const desktopRoutes: RouteObject[] = [
             { path: "/test",      element: <TestPage /> },
             { path: "/level-up",  element: <LevelUpPage /> },
             { path: "/equipment", element: <EquipmentPage /> },
+
+            { path: "/starting-class", element: <StartingClassPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
             { path: "/talismans/:slotId", element: <TalismanPage /> },
@@ -97,6 +113,8 @@ const mobileRoutes: RouteObject[] = [
             { path: "/test",      element: <TestPage /> },
             { path: "/level-up",  element: <LevelUpPage /> },
             { path: "/equipment", element: <MobileEquipmentPage /> },
+
+            { path: "/starting-class", element: <StartingClassPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
             { path: "/talismans/:slotId", element: <MobileTalismanPage /> },
