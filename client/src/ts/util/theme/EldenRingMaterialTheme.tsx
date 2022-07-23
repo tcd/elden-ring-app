@@ -1,3 +1,4 @@
+// import { logger } from "@app/util"
 import { createTheme, Components, ThemeOptions } from "@mui/material"
 
 import { generalComponents } from "./components"
@@ -33,4 +34,4 @@ const options: ThemeOptions = {
  */
 export const EldenRingMaterialTheme = createTheme(options)
 
-console.log(EldenRingMaterialTheme)
+// logger.debug(EldenRingMaterialTheme)
