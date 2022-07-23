@@ -15,7 +15,7 @@ const sideNavItems: SideNavItemProps[] = [
         pageName: "builder",
         title: "Builder",
         cloudflareId: "smithing",
-        url: "/",
+        url: "/builder",
     },
     {
         pageName: "equipment",
