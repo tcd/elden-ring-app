@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FeatureKeys } from "@app/constants"
+import { FeatureKeys, QuickItemSlotId } from "@app/constants"
 import { reducers, extraReducers } from "./reducers"
 
 export interface QuickItemsState {
-    activeSlotId: any
+    activeSlotId: QuickItemSlotId
     mobileTab: "grid" | "detail" | "status"
 }
 

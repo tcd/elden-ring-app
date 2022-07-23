@@ -1,19 +1,11 @@
-// import { useSelector, useDispatch } from "react-redux"
-
-import { getImageSrcManual } from "@app/util"
-// import { Weapon, WeaponSlotId } from "@app/types"
-// import { BuilderActions, BuilderSelectors } from "@app/features"
-
-const quickItemSlotSrc = getImageSrcManual("bad/equipment-slots/quick-items", "256")
+import { QuickItemSlotContent } from "./QuickItemSlotContent"
 
 export const QuickItemSlots = (): JSX.Element => {
 
     const quickItemSlot = (id: string) => {
         const key = `quick-item-slot-${id}`
         return (
-            <li key={key} id={key} className="er__equipmentGrid__cell" >
-                <img className="img-fluid" src={quickItemSlotSrc} alt="quick-item" />
-            </li>
+            <QuickItemSlotContent key={key} id={id} item={null} />
         )
     }
 
