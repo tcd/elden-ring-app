@@ -7,6 +7,7 @@ import {
     CoreActions,
     EquipmentActions,
     LevelUpActions,
+    QuickItemsActions,
     SpellsActions,
     StartingClassActions,
     TalismansActions,
@@ -21,6 +22,7 @@ export interface AppActions {
     [FeatureKeys.Core]:          typeof CoreActions
     [FeatureKeys.Equipment]:     typeof EquipmentActions
     [FeatureKeys.LevelUp]:       typeof LevelUpActions
+    [FeatureKeys.QuickItems]:    typeof QuickItemsActions
     [FeatureKeys.Spells]:        typeof SpellsActions
     [FeatureKeys.StartingClass]: typeof StartingClassActions
     [FeatureKeys.Talismans]:     typeof TalismansActions
@@ -35,6 +37,7 @@ export const Actions: AppActions = {
     Core:          CoreActions,
     Equipment:     EquipmentActions,
     LevelUp:       LevelUpActions,
+    QuickItems:    QuickItemsActions,
     Spells:        SpellsActions,
     StartingClass: StartingClassActions,
     Talismans:     TalismansActions,

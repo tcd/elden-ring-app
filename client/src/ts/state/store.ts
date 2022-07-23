@@ -21,6 +21,7 @@ import {
     CoreSlice,
     EquipmentSlice,
     LevelUpSlice,
+    QuickItemsSlice,
     SpellsSlice,
     StartingClassSlice,
     TalismansSlice,
@@ -39,11 +40,12 @@ const rootReducer = combineReducers({
     [FeatureKeys.Core]:          CoreSlice.reducer,
     [FeatureKeys.Equipment]:     EquipmentSlice.reducer,
     [FeatureKeys.LevelUp]:       LevelUpSlice.reducer,
-    [FeatureKeys.StartingClass]: StartingClassSlice.reducer,
+    [FeatureKeys.QuickItems]:    QuickItemsSlice.reducer,
+    [FeatureKeys.Router]:        routerReducer,
     [FeatureKeys.Spells]:        SpellsSlice.reducer,
+    [FeatureKeys.StartingClass]: StartingClassSlice.reducer,
     [FeatureKeys.Talismans]:     TalismansSlice.reducer,
     [FeatureKeys.Weapons]:       WeaponsSlice.reducer,
-    [FeatureKeys.Router]:        routerReducer,
 })
 
 const persistConfig = getPersistConfig({

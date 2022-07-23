@@ -7,11 +7,12 @@ import {
     CoreSelectors,
     EquipmentSelectors,
     LevelUpSelectors,
+    QuickItemsSelectors,
+    RouterSelectors,
     SpellsSelectors,
     StartingClassSelectors,
     TalismansSelectors,
     WeaponsSelectors,
-    RouterSelectors,
 } from "@app/features"
 import { MetaSelectors } from "./meta-selectors"
 
@@ -23,12 +24,13 @@ export interface AppSelectors {
     [FeatureKeys.Core]:          typeof CoreSelectors
     [FeatureKeys.Equipment]:     typeof EquipmentSelectors
     [FeatureKeys.LevelUp]:       typeof LevelUpSelectors
+    [FeatureKeys.QuickItems]:    typeof QuickItemsSelectors
     [FeatureKeys.Router]:        typeof RouterSelectors
     [FeatureKeys.Spells]:        typeof SpellsSelectors
     [FeatureKeys.StartingClass]: typeof StartingClassSelectors
     [FeatureKeys.Talismans]:     typeof TalismansSelectors
     [FeatureKeys.Weapons]:       typeof WeaponsSelectors
-    Meta:                        typeof MetaSelectors,
+    Meta:                        typeof MetaSelectors
 }
 
 export const Selectors: AppSelectors = {
@@ -39,10 +41,11 @@ export const Selectors: AppSelectors = {
     Core:          CoreSelectors,
     Equipment:     EquipmentSelectors,
     LevelUp:       LevelUpSelectors,
+    Meta:          MetaSelectors,
+    QuickItems:    QuickItemsSelectors,
     Router:        RouterSelectors,
     Spells:        SpellsSelectors,
     StartingClass: StartingClassSelectors,
     Talismans:     TalismansSelectors,
     Weapons:       WeaponsSelectors,
-    Meta:          MetaSelectors,
 }
