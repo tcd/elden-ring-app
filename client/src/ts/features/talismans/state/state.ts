@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { TalismanSlotId } from "@app/constants"
+import { FeatureKeys, TalismanSlotId } from "@app/constants"
 import { TalismanSet } from "@app/types"
-import { FEATURE_KEYS, CONFIG } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export interface TalismansState {
@@ -41,7 +40,7 @@ const initialDevState: TalismansState = {
 const _initialState = INITIAL_TALISMANS_STATE
 
 export const TalismansSlice = createSlice({
-    name: FEATURE_KEYS.Talismans,
+    name: FeatureKeys.Talismans,
     initialState: _initialState,
     reducers: reducers,
     extraReducers: extraReducers,

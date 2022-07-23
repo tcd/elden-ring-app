@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { AmmunitionSlotId } from "@app/constants"
-import { FEATURE_KEYS } from "@app/util"
+import { FeatureKeys, AmmunitionSlotId } from "@app/constants"
 import { reducers, extraReducers } from "./reducers"
 
 export interface AmmunitionState {
@@ -15,7 +14,7 @@ export const INITIAL_AMMUNITION_STATE: AmmunitionState = {
 }
 
 export const AmmunitionSlice = createSlice({
-    name:          FEATURE_KEYS.Ammunition,
+    name:          FeatureKeys.Ammunition,
     initialState:  INITIAL_AMMUNITION_STATE,
     reducers:      reducers,
     extraReducers: extraReducers,

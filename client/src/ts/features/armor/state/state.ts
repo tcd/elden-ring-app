@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { ArmorType } from "@app/constants"
+import { FeatureKeys, ArmorType } from "@app/constants"
 import { ArmorSet } from "@app/types"
-import { CONFIG, FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./redeucers"
 
 export interface ArmorState {
@@ -37,7 +36,7 @@ const initialDevState: ArmorState = {
 const _initialState = INITIAL_ARMOR_STATE
 
 export const ArmorSlice = createSlice({
-    name: FEATURE_KEYS.Armor,
+    name: FeatureKeys.Armor,
     initialState: _initialState,
     reducers: reducers,
     extraReducers: extraReducers,

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import { FeatureKeys } from "@app/constants"
 import { Attributes } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export interface LevelUpState {
@@ -22,7 +22,7 @@ export const INITIAL_LEVEL_UP_STATE: LevelUpState = {
 }
 
 export const LevelUpSlice = createSlice({
-    name:          FEATURE_KEYS.LevelUp,
+    name:          FeatureKeys.LevelUp,
     initialState:  INITIAL_LEVEL_UP_STATE,
     reducers:      reducers,
     extraReducers: extraReducers,

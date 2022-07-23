@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { WeaponSlotId } from "@app/constants"
+import { FeatureKeys, WeaponSlotId } from "@app/constants"
 import {
     WeaponSlots,
     DEFAULT_WEAPON_SETTINGS,
     WeaponSettings,
 } from "@app/types"
-import { FEATURE_KEYS, CONFIG } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export interface WeaponsState {
@@ -62,7 +61,7 @@ const devState: WeaponsState = {
 const _initialState = INITIAL_WEAPONS_STATE
 
 export const WeaponsSlice = createSlice({
-    name: FEATURE_KEYS.Weapons,
+    name: FeatureKeys.Weapons,
     initialState: _initialState,
     reducers: reducers,
     extraReducers: extraReducers,

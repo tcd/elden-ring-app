@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { StartingClassName } from "@app/constants"
-import { FEATURE_KEYS } from "@app/util"
+import { FeatureKeys, StartingClassName } from "@app/constants"
 import { reducers, extraReducers } from "./reducers"
 
 export interface StartingClassState {
@@ -22,7 +21,7 @@ export const INITIAL_STARTING_CLASS_STATE: StartingClassState = {
 }
 
 export const StartingClassSlice = createSlice({
-    name:          FEATURE_KEYS.StartingClass,
+    name:          FeatureKeys.StartingClass,
     initialState:  INITIAL_STARTING_CLASS_STATE,
     reducers:      reducers,
     extraReducers: extraReducers,

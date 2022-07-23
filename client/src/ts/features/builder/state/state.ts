@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import { FeatureKeys } from "@app/constants"
 import {
     Attributes,
     KitchenSink,
     RequestState,
 } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 // Define a type for the slice state
@@ -78,7 +78,7 @@ const myBuild: BuilderState = {
 const _initialState = INITIAL_BUILDER_STATE
 
 export const BuilderSlice = createSlice({
-    name:          FEATURE_KEYS.Builder,
+    name:          FeatureKeys.Builder,
     initialState:  _initialState,
     reducers:      reducers,
     extraReducers: extraReducers,

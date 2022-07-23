@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import { FeatureKeys } from "@app/constants"
 import { PageName } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
+// FIXME: import error
 import { AppFooterActionProps } from "../components/layout/app-footer"
 
 export interface CoreState {
@@ -25,7 +26,7 @@ export const INITIAL_CORE_STATE: CoreState = {
 }
 
 export const CoreSlice = createSlice({
-    name: FEATURE_KEYS.Core,
+    name: FeatureKeys.Core,
     initialState: INITIAL_CORE_STATE,
     reducers: reducers,
     extraReducers: extraReducers,

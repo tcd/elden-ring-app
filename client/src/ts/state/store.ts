@@ -11,10 +11,8 @@ import {
 } from "redux-persist"
 import storage from "redux-persist/lib/storage" // defaults to localStorage for web
 import { getPersistConfig } from "redux-deep-persist"
-import { createReduxHistoryContext, IHistoryContextOptions } from "redux-first-history"
-import { createBrowserHistory } from "history"
 
-import { FEATURE_KEYS } from "@app/util"
+import { FeatureKeys } from "@app/constants"
 import {
     AmmunitionSlice,
     ArmorSlice,
@@ -27,34 +25,25 @@ import {
     StartingClassSlice,
     TalismansSlice,
     WeaponsSlice,
-} from "@app/features"
-
-
-const routerOptions: IHistoryContextOptions = {
-    history: createBrowserHistory(),
-    reduxTravelling: true,
-    savePreviousLocations: 25,
-}
-
-const {
+    // Router
     createReduxHistory,
     routerMiddleware,
     routerReducer,
-} = createReduxHistoryContext(routerOptions)
+} from "@app/features"
 
 const rootReducer = combineReducers({
-    [FEATURE_KEYS.Ammunition]:    AmmunitionSlice.reducer,
-    [FEATURE_KEYS.Armor]:         ArmorSlice.reducer,
-    [FEATURE_KEYS.Builder]:       BuilderSlice.reducer,
-    [FEATURE_KEYS.Checklist]:     ChecklistSlice.reducer,
-    [FEATURE_KEYS.Core]:          CoreSlice.reducer,
-    [FEATURE_KEYS.Equipment]:     EquipmentSlice.reducer,
-    [FEATURE_KEYS.LevelUp]:       LevelUpSlice.reducer,
-    [FEATURE_KEYS.StartingClass]: StartingClassSlice.reducer,
-    [FEATURE_KEYS.Spells]:        SpellsSlice.reducer,
-    [FEATURE_KEYS.Talismans]:     TalismansSlice.reducer,
-    [FEATURE_KEYS.Weapons]:       WeaponsSlice.reducer,
-    [FEATURE_KEYS.router]:        routerReducer,
+    [FeatureKeys.Ammunition]:    AmmunitionSlice.reducer,
+    [FeatureKeys.Armor]:         ArmorSlice.reducer,
+    [FeatureKeys.Builder]:       BuilderSlice.reducer,
+    [FeatureKeys.Checklist]:     ChecklistSlice.reducer,
+    [FeatureKeys.Core]:          CoreSlice.reducer,
+    [FeatureKeys.Equipment]:     EquipmentSlice.reducer,
+    [FeatureKeys.LevelUp]:       LevelUpSlice.reducer,
+    [FeatureKeys.StartingClass]: StartingClassSlice.reducer,
+    [FeatureKeys.Spells]:        SpellsSlice.reducer,
+    [FeatureKeys.Talismans]:     TalismansSlice.reducer,
+    [FeatureKeys.Weapons]:       WeaponsSlice.reducer,
+    [FeatureKeys.Router]:        routerReducer,
 })
 
 const persistConfig = getPersistConfig({

@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import { FeatureKeys } from "@app/constants"
 import {
     EquipmentType,
     EquipmentSlotId,
 } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export interface EquipmentState {
@@ -20,7 +20,7 @@ export const INITIAL_EQUIPMENT_STATE: EquipmentState = {
 }
 
 export const EquipmentSlice = createSlice({
-    name:          FEATURE_KEYS.Equipment,
+    name:          FeatureKeys.Equipment,
     initialState:  INITIAL_EQUIPMENT_STATE,
     reducers:      reducers,
     extraReducers: extraReducers,

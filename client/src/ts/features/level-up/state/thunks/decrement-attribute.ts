@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
 
+import { FeatureKeys } from "@app/constants"
 import { AttributeName } from "@app/types"
-import { FEATURE_KEYS } from "@app/util"
 import { RootState, Selectors } from "@app/state"
 
-const actionType = `${FEATURE_KEYS.LevelUp}/decrementAttribute`
+const actionType = `${FeatureKeys.LevelUp}/decrementAttribute`
 
 export interface DecrementAttributePayload {
     attribute: AttributeName

@@ -1,4 +1,4 @@
-import { FEATURE_KEYS } from "@app/util"
+import { FeatureKeys } from "@app/constants"
 import {
     AmmunitionActions,
     ArmorActions,
@@ -14,17 +14,17 @@ import {
 } from "@app/features"
 
 export interface AppActions {
-    [FEATURE_KEYS.Ammunition]:    typeof AmmunitionActions
-    [FEATURE_KEYS.Armor]:         typeof ArmorActions
-    [FEATURE_KEYS.Builder]:       typeof BuilderActions
-    [FEATURE_KEYS.Checklist]:     typeof ChecklistActions
-    [FEATURE_KEYS.Core]:          typeof CoreActions
-    [FEATURE_KEYS.Equipment]:     typeof EquipmentActions
-    [FEATURE_KEYS.LevelUp]:       typeof LevelUpActions
-    [FEATURE_KEYS.Spells]:        typeof SpellsActions
-    [FEATURE_KEYS.StartingClass]: typeof StartingClassActions
-    [FEATURE_KEYS.Talismans]:     typeof TalismansActions
-    [FEATURE_KEYS.Weapons]:       typeof WeaponsActions
+    [FeatureKeys.Ammunition]:    typeof AmmunitionActions
+    [FeatureKeys.Armor]:         typeof ArmorActions
+    [FeatureKeys.Builder]:       typeof BuilderActions
+    [FeatureKeys.Checklist]:     typeof ChecklistActions
+    [FeatureKeys.Core]:          typeof CoreActions
+    [FeatureKeys.Equipment]:     typeof EquipmentActions
+    [FeatureKeys.LevelUp]:       typeof LevelUpActions
+    [FeatureKeys.Spells]:        typeof SpellsActions
+    [FeatureKeys.StartingClass]: typeof StartingClassActions
+    [FeatureKeys.Talismans]:     typeof TalismansActions
+    [FeatureKeys.Weapons]:       typeof WeaponsActions
 }
 
 export const Actions: AppActions = {

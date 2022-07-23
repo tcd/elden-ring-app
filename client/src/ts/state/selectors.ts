@@ -1,4 +1,4 @@
-import { FEATURE_KEYS } from "@app/util"
+import { FeatureKeys } from "@app/constants"
 import {
     AmmunitionSelectors,
     ArmorSelectors,
@@ -15,17 +15,17 @@ import {
 import { MetaSelectors } from "./meta-selectors"
 
 export interface AppSelectors {
-    [FEATURE_KEYS.Ammunition]:    typeof AmmunitionSelectors
-    [FEATURE_KEYS.Armor]:         typeof ArmorSelectors
-    [FEATURE_KEYS.Builder]:       typeof BuilderSelectors
-    [FEATURE_KEYS.Checklist]:     typeof ChecklistSelectors
-    [FEATURE_KEYS.Core]:          typeof CoreSelectors
-    [FEATURE_KEYS.Equipment]:     typeof EquipmentSelectors
-    [FEATURE_KEYS.LevelUp]:       typeof LevelUpSelectors
-    [FEATURE_KEYS.Spells]:        typeof SpellsSelectors
-    [FEATURE_KEYS.StartingClass]: typeof StartingClassSelectors
-    [FEATURE_KEYS.Talismans]:     typeof TalismansSelectors
-    [FEATURE_KEYS.Weapons]:       typeof WeaponsSelectors
+    [FeatureKeys.Ammunition]:    typeof AmmunitionSelectors
+    [FeatureKeys.Armor]:         typeof ArmorSelectors
+    [FeatureKeys.Builder]:       typeof BuilderSelectors
+    [FeatureKeys.Checklist]:     typeof ChecklistSelectors
+    [FeatureKeys.Core]:          typeof CoreSelectors
+    [FeatureKeys.Equipment]:     typeof EquipmentSelectors
+    [FeatureKeys.LevelUp]:       typeof LevelUpSelectors
+    [FeatureKeys.Spells]:        typeof SpellsSelectors
+    [FeatureKeys.StartingClass]: typeof StartingClassSelectors
+    [FeatureKeys.Talismans]:     typeof TalismansSelectors
+    [FeatureKeys.Weapons]:       typeof WeaponsSelectors
     Meta:                         typeof MetaSelectors,
 }
 

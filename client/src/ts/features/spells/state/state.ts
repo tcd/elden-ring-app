@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import { FeatureKeys } from "@app/constants"
 import { Spell } from "@app/types"
-import { FEATURE_KEYS, CONFIG } from "@app/util"
+import { CONFIG } from "@app/util"
 import { reducers, extraReducers } from "./reducers"
 
 export interface SpellsState {
@@ -19,7 +20,7 @@ export const INITIAL_SPELLS_STATE: SpellsState = {
 const _initialState = CONFIG.production() ? INITIAL_SPELLS_STATE : INITIAL_SPELLS_STATE
 
 export const SpellsSlice = createSlice({
-    name: FEATURE_KEYS.Spells,
+    name: FeatureKeys.Spells,
     initialState: _initialState,
     reducers: reducers,
     extraReducers: extraReducers,

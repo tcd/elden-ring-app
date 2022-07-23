@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FEATURE_KEYS, CONFIG } from "@app/util"
+import { FeatureKeys } from "@app/constants"
 import {
     FiniteResourceChecklist,
     UpgradeMaterialsChecklist,
@@ -36,7 +36,7 @@ const initialDevState: ChecklistState = {
 const _initialState = INITIAL_CHECKLIST_STATE
 
 export const ChecklistSlice = createSlice({
-    name: FEATURE_KEYS.Checklist,
+    name: FeatureKeys.Checklist,
     initialState: _initialState,
     reducers: reducers,
     extraReducers: extraReducers,
