@@ -14,6 +14,7 @@ export type EquipmentSlotId =
     | TalismanSlotId
     | AmmunitionSlotId
     | QuickItemSlotId
+    | SpellSlotId
 
 export const EQUIPMENT_SLOT_SORT_ORDER: Record<EquipmentSlotId, Integer> = {
     R1: 1,

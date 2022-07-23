@@ -10,7 +10,7 @@ import { getImageSrcManual, EquipmentSlotImageUrls, cssUrl } from "@app/util"
 import { Actions } from "@app/state"
 
 const slotSx: SxProps = {
-    backgroundImage: cssUrl(EquipmentSlotImageUrls.Talisman),
+    backgroundImage: cssUrl(EquipmentSlotImageUrls.QuickItem),
 }
 
 interface QuickItemSlotProps {
