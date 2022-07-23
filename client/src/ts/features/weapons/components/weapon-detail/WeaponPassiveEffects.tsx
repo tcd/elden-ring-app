@@ -26,7 +26,7 @@ const PASSIVE_DAMAGE_NAMES: PassiveMap<string> = {
     blood_loss:  "blood loss",
 }
 
-export const WeaponPassiveEffects = (props: WeaponPassiveEffectsProps): JSX.Element => {
+export const weaponPassiveEffects = (props: WeaponPassiveEffectsProps): JSX.Element[] => {
 
     // const weapon = props?.weapon
     const calculatedPassive = props?.stats?.passive
@@ -42,13 +42,5 @@ export const WeaponPassiveEffects = (props: WeaponPassiveEffectsProps): JSX.Elem
     }
 
     const rows = data.map((x, i) => <li key={`passive-effect-${i + 1}`}>{x}</li>)
-    while (rows.length < 3) {
-        rows.push(<li key={`passive-effect-${rows.length + 1}`}> - </li>)
-    }
-
-    return (
-        <ul>
-            {rows}
-        </ul>
-    )
+    return rows
 }

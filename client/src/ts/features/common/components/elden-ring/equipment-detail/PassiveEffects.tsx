@@ -23,13 +23,17 @@ export class PassiveEffects extends Component<EquipmentDetailProps> {
             return null
         }
 
+        const rows = this.props.passiveEffects
+
+        while (rows.length < 3) {
+            rows.push(<li key={`passive-effect-${rows.length + 1}`}> - </li>)
+        }
+
         return (
             <section className="er__equipmentDetail2__section">
                 <ErCard2 title="Passive Effects" icon="PassiveEffects" {...cardProps}>
                     <ul>
-                        <li> - </li>
-                        <li> - </li>
-                        <li> - </li>
+                        {rows}
                     </ul>
                 </ErCard2>
             </section>

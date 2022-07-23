@@ -14,4 +14,5 @@ export interface EquipmentDetailProps {
     includePassiveEffects?: boolean
     primaryImage: ImageOptions
     secondaryImage?: ImageOptions
+    passiveEffects?: ReactNode[]
 }

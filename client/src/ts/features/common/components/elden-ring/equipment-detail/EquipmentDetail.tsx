@@ -14,6 +14,7 @@ export class EquipmentDetail extends Component<EquipmentDetailProps> {
         title: "-",
         includeSecondaryImage: false,
         includePassiveEffects: false,
+        passiveEffects: [],
     }
 
     constructor(props: EquipmentDetailProps) {

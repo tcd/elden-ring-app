@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux"
-import { SxProps } from "@mui/material"
 
 import { Selectors } from "@app/state"
 import {
@@ -18,9 +17,8 @@ import {
     WeaponScalingStats,
     WeaponDefenseStats,
     WeaponRequirementStats,
-    WeaponPassiveEffects,
-    // UnarmedWeaponDetail,
     EmptyWeaponDetail,
+    weaponPassiveEffects,
 } from "."
 
 const cardProps: Partial<ErCard2Props> = {
@@ -82,6 +80,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
             row5: { type: "StatRow", props: { title: "FP Cost", value: activeSkill?.metadata?.complex_fp_cost ?? activeSkill?.metadata?.basic_fp_cost } },
             row6: { type: "StatRow", props: { title: "Weight", value: weapon.weight.toFixed(1), color: weightColor } },
         },
+        passiveEffects: weaponPassiveEffects({ weapon, stats: newStats }),
     }
 
     return (
@@ -115,14 +114,6 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
                     <WeaponRequirementStats
                         weapon={weapon}
                         attributes={attributes}
-                    />
-                </ErCard2>
-            </section>
-            <section className="er__equipmentDetail2__section">
-                <ErCard2 title="Passive Effects" icon="PassiveEffects" {...cardProps}>
-                    <WeaponPassiveEffects
-                        weapon={weapon}
-                        stats={newStats}
                     />
                 </ErCard2>
             </section>
