@@ -263,3 +263,9 @@ aria-valuemax
 aria-valuemin
 aria-valuenow
 aria-valuetext
+# Anchor attributes
+noopener
+noreferrer
+# HTML Entity Codes
+apos
+quot

@@ -40,6 +40,7 @@ module.exports = {
         // https://github.com/yannickcr/eslint-plugin-react
         "react/react-in-jsx-scope": "off", // we've taken care of this with webpack
         "react/prop-types": "off",
+        "react/no-unescaped-entities": "warn",
         // https://github.com/typescript-eslint/typescript-eslint
         "@typescript-eslint/no-empty-interface": ["off"],
         // "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
