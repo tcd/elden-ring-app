@@ -1,12 +1,22 @@
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
-
-import { MainBuilderMenu, StartingClassPage } from "@app/features"
+import { MainBuilderMenu } from "@app/features"
 
 export const BuilderPage = (): JSX.Element => {
+
+    const navigate = useNavigate()
+
     const startingClassName = useSelector(Selectors.StartingClass.startingClassName)
-    const content = isBlank(startingClassName) ? <StartingClassPage /> : <MainBuilderMenu />
-    return content
+
+    useEffect(() => {
+        if (isBlank(startingClassName)) {
+            navigate("/starting-class")
+        }
+    }, [startingClassName, navigate])
+
+    return <MainBuilderMenu />
 }

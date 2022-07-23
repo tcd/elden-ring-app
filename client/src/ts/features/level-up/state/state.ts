@@ -21,6 +21,42 @@ export const INITIAL_LEVEL_UP_STATE: LevelUpState = {
     },
 }
 
+// const initialDevState: LevelUpState = {
+//     attributes: {
+//         ...INITIAL_LEVEL_UP_STATE.attributes,
+//     },
+//     // attributes: {
+//     //     "vigor":        30,
+//     //     "mind":         30,
+//     //     "endurance":    30,
+//     //     "strength":     30,
+//     //     "dexterity":    30,
+//     //     "intelligence": 30,
+//     //     "faith":        30,
+//     //     "arcane":       30,
+//     // },
+//     // attributes: {
+//     //     "vigor":        50,
+//     //     "mind":         40,
+//     //     "endurance":    60,
+//     //     "strength":     80,
+//     //     "dexterity":    50,
+//     //     "intelligence": 30,
+//     //     "faith":        80,
+//     //     "arcane":       33,
+//     // },
+//     // attributes: {
+//     //     vigor:        38,
+//     //     mind:         29,
+//     //     endurance:    47,
+//     //     strength:     68,
+//     //     dexterity:    35,
+//     //     intelligence: 21,
+//     //     faith:        72,
+//     //     arcane:       25,
+//     // },
+// }
+
 export const LevelUpSlice = createSlice({
     name:          FeatureKeys.LevelUp,
     initialState:  INITIAL_LEVEL_UP_STATE,
