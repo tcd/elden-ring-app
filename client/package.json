@@ -4,12 +4,12 @@
     "version": "0.5.2",
     "scripts": {
         "start": "npm run serve",
-        "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.config.dev.js",
+        "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack/webpack.config.dev.js",
         "build:dev:watch": "npm run build:dev -- --watch",
         "build:prod": "npm run build:prod:clean && npm run build:prod:build",
         "build:prod:clean": "rimraf ./dist/*",
-        "build:prod:build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js --mode production",
-        "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.dev.js --open",
+        "build:prod:build": "cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.config.prod.js --mode production",
+        "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack/webpack.config.dev.js --open",
         "build-and-deploy": "npm run build:prod && npm run deploy",
         "deploy": "./config/deploy.sh",
         "docs:sass": "cross-env sassdoc ./src/styles --config ./config/.sassdocrc.yml"

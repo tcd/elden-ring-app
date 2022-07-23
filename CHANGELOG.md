@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 <!-- ## [0.6.0] - 2022-07-19 -->
 ### Added
 - Add `react-helmet` dependency for meta tags
+### Changed
+- Update about page
+- Update webpack config (use separate *.env* files for dev/prod)
 ### Fixed
 - Assorted style fixes
 

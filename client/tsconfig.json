@@ -28,6 +28,7 @@
             "@app/shared": ["./src/ts/features/common/index.ts"],
             "@app/theme": ["./src/ts/util/theme/index.ts"],
             "@app/constants": ["./src/ts/types/constants/index.ts"],
+            "@app/config": ["./src/ts/util/Config.ts"],
         },
     },
     "include": [

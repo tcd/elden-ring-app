@@ -2,7 +2,8 @@
     // "terminal.integrated.defaultProfile.windows": "PowerShell",
     // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
     "files.associations": {
-        "conf.json": "jsonc", // jsdoc config
+        "conf.json": "jsonc",   // jsdoc config
+        ".env*":     "dotenv",
     },
     "files.exclude": {
         "client/src/ts/data/kitchen-sink/kitchen-sink.json": true,
@@ -27,6 +28,7 @@
     "cSpell.words": [
         "affectable",
         "Booleanish",
+        "callsite",
         "chunkhash",
         "clsx",
         "csstype",

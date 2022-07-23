@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-
 const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
-const dotEnv = require("dotenv-webpack")
 
-const rootFolder = path.resolve(__dirname, "..")
+const { ROOT_FOLDER } = require("./helpers")
+const version = require("../../package.json").version
 
 /**
  * See [Webpack Configuration docs](https://webpack.js.org/configuration/) for more information.
@@ -20,16 +19,15 @@ const webpackConfig = {
         // kitchenSink: "./src/ts/data/kitchen-sink/kitchen-sink-data.ts",
     },
     output: {
-        path: path.resolve(rootFolder, "dist"),
+        path: path.resolve(ROOT_FOLDER, "dist"),
         publicPath: "/",
         // filename: "bundle.js",
         // filename: "[name].[chunkhash:8].dist.js",
         filename: "[name].dist.js",
     },
     plugins: [
-        new dotEnv(),
         new HtmlWebpackPlugin({
-            template: "./src/index.html",
+            template: path.resolve(ROOT_FOLDER, "src", "index.html"),
             hash: true,
             inject: true,
         }),
@@ -38,10 +36,13 @@ const webpackConfig = {
             $:      "jquery",
             jQuery: "jquery",
         }),
+        new webpack.DefinePlugin({
+            "process.env.VERSION": JSON.stringify(`v${version}`),
+        }),
     ],
     resolve: {
         extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
-        modules: [rootFolder, "src", "node_modules"],
+        modules: [ROOT_FOLDER, "src", "node_modules"],
         fallback: {
             console: false,
         },
