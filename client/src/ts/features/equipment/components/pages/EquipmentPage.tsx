@@ -1,5 +1,10 @@
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
+import { useSelector } from "react-redux"
 import { Grid, GridProps } from "@mui/material"
 
+import { Selectors } from "@app/state"
+import { isBlank } from "@app/util"
 import { Page } from "@app/shared"
 import { CharacterStatus } from "@app/features/builder"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
@@ -70,8 +75,17 @@ const child3Props: GridProps = {
     },
 }
 
-
 export const EquipmentPage = (_props: unknown): JSX.Element => {
+
+    const navigate = useNavigate()
+    const baseClass = useSelector(Selectors.StartingClass.startingClassName)
+
+    useEffect(() => {
+        if (isBlank(baseClass)) {
+            navigate("/starting-class")
+        }
+    }, [baseClass, navigate])
+
     return (
         <Page pageName="equipment">
             <Grid {...parentProps}>

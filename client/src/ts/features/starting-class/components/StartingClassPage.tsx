@@ -1,25 +1,29 @@
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { Box } from "@mui/material"
+import { useNavigate } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-import { Actions } from "@app/state"
+import { Selectors } from "@app/state"
+import { Page } from "@app/shared"
 import { StartingClassMenu, StartingClassConfirmationDialog } from "."
 
 export const StartingClassPage = (_props: unknown): JSX.Element => {
 
-    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const shouldRedirect = useSelector(Selectors.StartingClass.shouldRedirectFromStartingClassPage)
+    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
 
     useEffect(() => {
-        dispatch(Actions.Core.setPageName("starting-class"))
+        if (shouldRedirect) {
+            navigate(lastMainPage)
+        }
         document.getElementById("root").classList.add("startingClassPage")
         return () => {
-            dispatch(Actions.Core.clearPageName())
             document.getElementById("root").classList.remove("startingClassPage")
         }
-    }, [dispatch])
+    }, [navigate, lastMainPage, shouldRedirect])
 
     return (
-        <Box className="er__startingClass">
+        <Page pageName="starting-class" className="er__startingClass">
             <StartingClassConfirmationDialog />
             <div className="er__startingClass__topBorder"></div>
             <StartingClassMenu />
@@ -29,6 +33,6 @@ export const StartingClassPage = (_props: unknown): JSX.Element => {
                     Select a base for creating your character
                 </span>
             </div>
-        </Box>
+        </Page>
     )
 }

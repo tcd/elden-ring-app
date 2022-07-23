@@ -1,24 +1,28 @@
 import { useEffect } from "react"
-import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-import { Actions, Selectors } from "@app/state"
+import { isBlank } from "@app/util"
+import { Selectors } from "@app/state"
+import { Page } from "@app/shared"
 import { CharacterStatus } from "@app/features/builder"
 import { Overview } from "./Overview"
 import { Attributes } from "./Attributes"
 
 export const LevelUpPage = (_props: unknown): JSX.Element => {
 
-    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const baseClass = useSelector(Selectors.StartingClass.startingClassName)
 
     useEffect(() => {
-        dispatch(Actions.Core.setPageName("level-up"))
-        return () => {
-            dispatch(Actions.Core.clearPageName())
+        if (isBlank(baseClass)) {
+            navigate("/starting-class")
         }
-    }, [dispatch])
+    }, [baseClass, navigate])
 
     return (
-        <main id="er__levelUpPage__root" className="container-fluid">
+        <Page pageName="level-up" className="container-fluid">
             <div className="row">
                 <div className="col">
                     <div className="row">
@@ -37,6 +41,6 @@ export const LevelUpPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-        </main>
+        </Page>
     )
 }

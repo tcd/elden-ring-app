@@ -18,6 +18,7 @@ export const reducers = {
     /** Action payload used by other slices */
     confirmStartingClassName(state: StartingClassState, _action: PayloadAction<{ name: string }>) {
         state.startingClassName = state.pendingStartingClassName
+        state.confirmingStartingClass = false
     },
 }
 

@@ -1,5 +1,6 @@
 import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { useSelector } from "react-redux"
 import {
     mdiAccount,
     mdiArmFlex,
@@ -10,9 +11,9 @@ import {
 } from "@mdi/js"
 
 import { DESCRIPTIONS } from "@app/data"
-import { Actions, Selectors } from "@app/state"
+import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
-import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { ErCard, Page, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 
 import { Attack, DefensePlus, EquipLoad, Resistance } from "@app/features/builder/components/stats"
 
@@ -30,7 +31,7 @@ const keepsakes = [
 
 export const StatusPage = (): JSX.Element => {
 
-    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const level = useSelector(Selectors.Meta.Levels.runeLevel)
     const runes = useSelector(Selectors.Meta.Levels.runesForNextLevel)
@@ -56,13 +57,9 @@ export const StatusPage = (): JSX.Element => {
 
     useEffect(() => {
         if (isBlank(baseClass)) {
-            window.location.pathname = "/"
+            navigate("/starting-class")
         }
-        dispatch(Actions.Core.setPageName("status"))
-        return () => {
-            dispatch(Actions.Core.clearPageName())
-        }
-    }, [dispatch, baseClass])
+    }, [baseClass, navigate])
 
     const attributeData: StatRowProps[] = [
         { title: "Vigor",        value: vigor        },
@@ -88,7 +85,7 @@ export const StatusPage = (): JSX.Element => {
     })
 
     return (
-        <main id="er__pageRoot">
+        <Page pageName="status">
             <div className="row">
                 <div className="col">
                     <div className="row">
@@ -152,6 +149,6 @@ export const StatusPage = (): JSX.Element => {
                     </ErCard>
                 </div>
             </div>
-        </main>
+        </Page>
     )
 }

@@ -11,6 +11,11 @@ const selectStartingClassName        = (rootState: RootState): StartingClassName
 const selectPendingStartingClassName = (rootState: RootState): StartingClassName =>  _selectSlice(rootState)?.pendingStartingClassName
 const selectConfirmingStartingClass  = (rootState: RootState): boolean           =>  _selectSlice(rootState)?.confirmingStartingClass
 
+const selectShouldRedirectFromStartingClassPage = (rootState: RootState): boolean => {
+    const startingClassName = selectStartingClassName(rootState)
+    return !isBlank(startingClassName)
+}
+
 const selectStartingClass = (rootState: RootState): StartingClass => {
     const startingClassName = selectStartingClassName(rootState)
     if (isBlank(startingClassName)) {
@@ -67,6 +72,7 @@ export const StartingClassSelectors = {
     baseRuneLevel:           selectBaseRuneLevel,
     allBaseAttributeLevels: selectStartingClassAttributes,
     baseAttribute: selectBaseAttribute,
+    shouldRedirectFromStartingClassPage: selectShouldRedirectFromStartingClassPage,
     baseAttributeLevels: {
         vigor:         selectBaseVigor,
         mind:          selectBaseMind,
