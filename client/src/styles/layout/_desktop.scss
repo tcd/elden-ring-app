@@ -13,6 +13,10 @@
         flex-grow: 1;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
+        // box-sizing: border-box;
+        // padding-top: 1.5rem;
+        // padding-bottom: 0.5rem;
+        // background-color: LightGoldenrodYellow;
     }
 
     #er__header {
@@ -51,18 +55,19 @@
     #er__footer {
         box-sizing: border-box;
         width: 100%;
-        padding: 25px;
+        // padding: 25px;
+        // height: 60px;
         display: flex;
+        flex-shrink: 0;
         flex-flow: row wrap;
         justify-content: start;
-        // /* vertical | horizontal */
-        // padding: 0px 25px;
+        /* vertical | horizontal */
+        padding: 0px 25px;
         // padding-bottom: 10px;
         // text-align: center;
         // height: 30px;
         // color: map-get(v.$EldenRingColor, menu-fg);
         // background-color: #292927;
-        // background-color: blue;;
     }
 }
 

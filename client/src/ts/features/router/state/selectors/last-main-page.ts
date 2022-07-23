@@ -3,9 +3,10 @@ import { _selectSlice } from "./select-slice"
 import { selectPreviousLocations } from "./core"
 
 const mainPagePathnames = [
-    "/",
+    // "/",
     "/equipment",
     "/builder",
+    "/status",
 ]
 
 export const selectLastMainPage = (rootState: RootState) => {
