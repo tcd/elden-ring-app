@@ -29,6 +29,7 @@ const selectGridTitle = (rootState: RootState): string => {
         case "Weapon":     return weaponSlotDisplayName(slotId as WeaponSlotId)
         case "Talisman":   return `Talisman ${slotId}`
         case "Ammunition": return ammunitionSlotDisplayName(slotId as AmmunitionSlotId)
+        case "QuickItem":  return `Quick Item ${slotId}`
         default: return "no title"
     }
 }
@@ -41,6 +42,7 @@ const selectGridDescription = (rootState: RootState): string => {
         case "Weapon":     return weaponSlotDisplayName(slotId as WeaponSlotId)
         case "Talisman":   return `Talisman ${slotId}`
         case "Ammunition": return ammunitionSlotDisplayName(slotId as AmmunitionSlotId)
+        case "QuickItem":  return `-`
         default: return "no title"
     }
 }

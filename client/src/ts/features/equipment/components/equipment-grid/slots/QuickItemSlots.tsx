@@ -4,19 +4,6 @@ import { getImageSrcManual } from "@app/util"
 // import { Weapon, WeaponSlotId } from "@app/types"
 // import { BuilderActions, BuilderSelectors } from "@app/features"
 
-const _QUICK_ITEM_SLOTS = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-]
-
 const quickItemSlotSrc = getImageSrcManual("bad/equipment-slots/quick-items", "256")
 
 export const QuickItemSlots = (): JSX.Element => {
