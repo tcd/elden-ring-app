@@ -1,8 +1,8 @@
+import { ElementType } from "react"
+import { Box } from "@mui/material"
 import { MouseOverPopover } from "@app/shared"
 
-import {
-    StatRowColor,
-} from "."
+import { StatRowColor } from "."
 
 export interface StatRowPlusPlusProps {
     title: string
@@ -16,6 +16,7 @@ export interface StatRowPlusPlusProps {
     value_1_color?: StatRowColor
     value_2_color?: StatRowColor
     value_3_color?: StatRowColor
+    component?: ElementType
 }
 
 const defaultProps: Partial<StatRowPlusPlusProps> = {
@@ -24,6 +25,7 @@ const defaultProps: Partial<StatRowPlusPlusProps> = {
     value_1_color: "default",
     divider_color: "default",
     value_2_color: "default",
+    component: "li",
 }
 
 export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
@@ -39,7 +41,7 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
         const id = `stat-row-${props.title}`
         return (
             <MouseOverPopover id={id} popoverContent={props.description}>
-                <li className="er__statRow__column-plus-plus">
+                <Box component={props.component} className="er__statRow__column-plus-plus">
                     <span>{props.title}</span>
                     <span className={`er__statRow__column--color-${props.value_1_color}`}>{props.value_1}</span>
                     <span className={`er__statRow__column--color-${props.divider_color}`}>{props.divider}</span>
@@ -49,12 +51,12 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
                         <span className={`er__statRow__column--color-${props.value_2_color}`}>{props.value_3})</span>
                         <span>{rightParen}</span>
                     </span>
-                </li>
+                </Box>
             </MouseOverPopover>
         )
     }
     return (
-        <li className="er__statRow__column-plus-plus">
+        <Box component={props.component} className="er__statRow__column-plus-plus">
             <span>{props.title}</span>
             <span className={`er__statRow__column--color-${props.value_1_color}`}>{props.value_1}</span>
             <span className={`er__statRow__column--color-${props.divider_color}`}>{props.divider}</span>
@@ -64,6 +66,6 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
                 <span className={`er__statRow__column--color-${props.value_3_color}`}>{props.value_3}</span>
                 <span>{rightParen}</span>
             </span>
-        </li>
+        </Box>
     )
 }
