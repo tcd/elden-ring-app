@@ -1,5 +1,5 @@
 @use "../variables"as v;
-@use "../mixins" as m;
+@use "../mixins" as mixins;
 
 .er__equipmentDetail {
 
@@ -44,13 +44,12 @@
     }
 
     .er__equipmentDetail__imageWrapper {
-        @include m.square(v.$equipmentDetail-primary-image-size);
-        @include m.media-mobile { @include m.square(v.$equipmentDetail-primary-image-size--mobile); }
-        @include m.equipmentMenuBoxShadow;
+        @include mixins.square($size: v.$equipmentDetail-primary-image-size, $max: true);
+        @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-primary-image-size--mobile, $max: true); }
+        @include mixins.equipmentMenuBoxShadow;
         padding: 5px;
 
         &.empty {
-            @include m.square(v.$equipmentDetail-primary-image-size);
             div:before {
                 content: "";
                 display: block;
@@ -59,13 +58,13 @@
     }
 
     .er__equipmentDetail__secondaryImageWrapper {
-        @include m.square(v.$equipmentDetail-secondary-image-size);
-        @include m.equipmentMenuBoxShadow;
+        @include mixins.square($size: v.$equipmentDetail-secondary-image-size, $max: true);
+        @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-secondary-image-size--mobile, $max: true); }
+        @include mixins.equipmentMenuBoxShadow;
         margin-right: 6px;
         padding: 5px;
 
         &.empty {
-            @include m.square(v.$equipmentDetail-secondary-image-size);
             box-shadow: none;
             div:before {
                 content: "";
@@ -73,8 +72,5 @@
             }
         }
 
-        @include m.media-mobile {
-            @include m.square(v.$equipmentDetail-secondary-image-size--mobile);
-        }
     }
 }

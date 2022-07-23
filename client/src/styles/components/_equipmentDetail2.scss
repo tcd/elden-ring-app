@@ -1,5 +1,5 @@
 @use "../variables"as v;
-@use "../mixins" as m;
+@use "../mixins" as mixins;
 
 .er__equipmentDetail2 {
     display: flex;
@@ -44,39 +44,30 @@
         // width: 50%;
         // align-self: flex-end;
     }
-
 }
 
 .er__equipmentDetail2__primaryImageWrapper {
-    @include m.square(v.$equipmentDetail-primary-image-size);
-    @include m.media-mobile { @include m.square(v.$equipmentDetail-primary-image-size--mobile); }
-    @include m.equipmentMenuBoxShadow;
+    @include mixins.square($size: v.$equipmentDetail-primary-image-size, $max: false);
+    @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-primary-image-size--mobile, $max: false); }
+    @include mixins.equipmentMenuBoxShadow;
     padding: 5px;
 
     &--empty {
         @extend .er__equipmentDetail2__primaryImageWrapper;
-        @include m.square(v.$equipmentDetail-primary-image-size);
-        &::after {
-            content: "\200b";
-            visibility: hidden;
-        }
+        @include mixins.invisibleContent();
     }
 }
 
 .er__equipmentDetail2__secondaryImageWrapper {
-    @include m.square(v.$equipmentDetail-secondary-image-size);
-    @include m.media-mobile { @include m.square(v.$equipmentDetail-secondary-image-size--mobile); }
-    @include m.equipmentMenuBoxShadow;
+    @include mixins.square($size: v.$equipmentDetail-secondary-image-size, $max: false);
+    @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-secondary-image-size--mobile, $max: false); }
+    @include mixins.equipmentMenuBoxShadow;
     margin-right: 6px;
     padding: 5px;
 
     &--empty {
         @extend .er__equipmentDetail2__secondaryImageWrapper;
-        @include m.square(v.$equipmentDetail-secondary-image-size);
+        @include mixins.invisibleContent();
         box-shadow: none;
-        &::after {
-            content: "\200b";
-            visibility: hidden;
-        }
     }
 }
