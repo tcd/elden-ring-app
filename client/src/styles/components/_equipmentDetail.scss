@@ -30,6 +30,12 @@
         }
     }
 
+    .er__equipmentDetail__detailColumn {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+
     .er__equipmentDetail__imageColumn {
         display: flex;
         flex-flow: row nowrap;
