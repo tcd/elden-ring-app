@@ -42,7 +42,7 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
 
     const props: Partial<EquipmentDetailProps> = {
         title: talisman.name,
-        includePassiveEffects: true,
+        includePassiveEffects: false,
         primaryImage: {
             src: imageSrc,
             alt: "Talisman",
