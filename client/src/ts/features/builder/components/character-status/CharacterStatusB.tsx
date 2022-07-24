@@ -1,5 +1,3 @@
-import { mdiAccount } from "@mdi/js"
-
 import { ErTallCard, ErTallCardSection } from "@app/shared"
 import { Attack, DefensePlus, Resistance } from "@app/features/builder/components/stats"
 
@@ -17,7 +15,7 @@ export const CharacterStatusB = (): JSX.Element => {
     return (
         <ErTallCard
             title="Character Status"
-            iconPath={mdiAccount}
+            icon="CharacterStatus"
             sections={sections}
         />
     )

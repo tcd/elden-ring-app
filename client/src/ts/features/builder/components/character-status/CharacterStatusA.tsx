@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { mdiAccount } from "@mdi/js"
 
 import { DESCRIPTIONS } from "@app/data"
-import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { ErCard, ErCard2, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 import { Selectors } from "@app/state"
 import { EquipLoad } from "@app/features/builder/components/stats"
 
@@ -48,7 +48,7 @@ export const CharacterStatusA = (): JSX.Element => {
     })
 
     return (
-        <ErCard title="Character Status" iconPath={mdiAccount}>
+        <ErCard2 title="Character Status" icon="CharacterStatus">
             <ul>
                 <StatRow title="Level" value={level} description={DESCRIPTIONS.LEVEL_UP_SCREEN.Level} />
                 <StatRow title="Runes Held" value="∞" description={DESCRIPTIONS.LEVEL_UP_SCREEN.RUNES_HELD} />
@@ -65,6 +65,6 @@ export const CharacterStatusA = (): JSX.Element => {
                 <StatRow title="Discovery" value={discovery} description={DESCRIPTIONS.LEVEL_UP_SCREEN.Discovery} />
                 <StatRow title="Memory Slots" value={10} description={DESCRIPTIONS.LEVEL_UP_SCREEN.MEMORY_SLOTS } />
             </ul>
-        </ErCard>
+        </ErCard2>
     )
 }

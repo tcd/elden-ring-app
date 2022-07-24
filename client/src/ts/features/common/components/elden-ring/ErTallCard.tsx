@@ -1,8 +1,7 @@
-// import { Component, CSSProperties } from "react"
-// import Typography from "@mui/material/Typography"
+import { Box, Typography } from "@mui/material"
 
-import { MdiIcon } from "@app/shared"
-// import { isBlank } from "@app/util"
+import { IconNamesKey } from "@app/constants"
+import { ErIcon } from "@app/shared"
 
 export interface ErTallCardSectionProps {
     title: string
@@ -24,8 +23,7 @@ export const ErTallCardSection = (props: ErTallCardSectionProps): JSX.Element =>
 
 export interface ErTallCardProps {
     title: string
-    /** SVG path content */
-    iconPath: string
+    icon: IconNamesKey
     sections?: JSX.Element[]
 }
 
@@ -41,14 +39,21 @@ export const ErTallCard = (props: ErTallCardProps): JSX.Element => {
     })
 
     return (
-        <article className="er__tallCard">
+        <Box
+            component="article"
+            className="er__tallCard"
+            sx={{
+                mx: 3,
+                my: 2,
+            }}
+        >
             <header className="er__tallCard__header">
                 <div className="er__tallCard__header--icon-holder">
-                    <MdiIcon path={props.iconPath} />
+                    <ErIcon icon={props.icon} />
                 </div>
-                <span className="er__tallCard__header--title">
+                <Typography className="er__tallCard__header--title" component="span">
                     {props.title}
-                </span>
+                </Typography>
             </header>
             <div className="er__tallCard__content--wrapper">
                 <div className="left-border-wrapper">
@@ -58,6 +63,6 @@ export const ErTallCard = (props: ErTallCardProps): JSX.Element => {
                     {props.sections && sections}
                 </div>
             </div>
-        </article>
+        </Box>
     )
 }

@@ -1,42 +1,36 @@
-import { Component, CSSProperties, ReactNode } from "react"
+import { Component, ReactNode } from "react"
 import { Box, Typography, SxProps } from "@mui/material"
 
 import { IconNamesKey } from "@app/constants"
-import { MdiIcon, ErIcon } from "@app/shared"
+import { ErIcon } from "@app/shared"
 import { isBlank } from "@app/util"
 
 export interface ErCard2Props {
     title: string
-    /** SVG path content */
-    iconPath?: string
     icon?: IconNamesKey
     content?: ReactNode
     className?: string
     contentClassName?: string
-    /**
-     * CSS properties to apply to the card.
-     * @default {}
-     */
-    style?: CSSProperties
     /**
      * @default false
      */
     smallTitle?: boolean
     /**
      * CSS properties to apply to the card.
-     * @default {}
+     * @default { mx: 3, my: 2 }
      */
     sx?: SxProps
 }
 
 export class ErCard2 extends Component<ErCard2Props> {
 
-    // Set default props
     static defaultProps: Partial<ErCard2Props> = {
         icon: null,
         smallTitle: false,
-        style: {},
-        sx: {},
+        sx: {
+            mx: 3,
+            my: 2,
+        },
     }
 
     constructor(props: ErCard2Props) {
@@ -54,7 +48,7 @@ export class ErCard2 extends Component<ErCard2Props> {
         if (this.props.smallTitle == true) {
             return "small-title"
         }
-        if (isBlank(this.props.iconPath)) {
+        if (isBlank(this.props.icon)) {
             return "no-icon"
         } else {
             return "with-icon"
@@ -68,7 +62,6 @@ export class ErCard2 extends Component<ErCard2Props> {
         }
         return names.join(" ")
     }
-
 
     public render(): JSX.Element {
         return (
