@@ -55,7 +55,15 @@
             "}",
         ],
     },
-
+    "Default Props": {
+        "prefix": "defaultprops",
+        "description": "default props for react component",
+        "body": [
+            "const defaultProps: Partial<$CLIPBOARD> = {",
+            "\t$0",
+            "}",
+        ],
+    },
 }
 
 
