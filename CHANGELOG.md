@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 ## [Unreleased]
 ### Added
 - Add GitHub issue templates
+### Changed 
+- Rename folder `right-side-panels` to `character-status`
+- Evenly distribute rows in main equipment detail section
+- Sync styles for both *Character Status* panels
+### Fixed
 
 
 ## [0.6.0] - 2022-07-19

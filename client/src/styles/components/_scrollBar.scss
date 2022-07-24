@@ -1,0 +1,115 @@
+@use "@variables" as var;
+@use "@mixins" as mixins;
+
+.er__scrollBar {
+
+    $sb-center-1: #35332b;
+    $sb-center-2: #3c3a31;
+
+    $sb-left-1: #414135;
+    $sb-left-2: #4c4c3e;
+    $sb-left-3: #444337;
+    $sb-right-1: #4e4c3f;
+    $sb-right-2: #49483c;
+    $sb-right-3: #36342a;
+
+    &__container {
+        // background-color: white;
+        // border: 1px solid #333;
+        // border-radius: 12px;
+        display: grid;
+        height: 100%;
+        grid-template: auto / 1fr 50px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__content {
+        // height: 90vh;
+        -ms-overflow-style: none;
+        overflow: auto;
+        /* vertical, horizontal */
+        padding: 0 1rem;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__scrollbar {
+        display: grid;
+        // gap: 1rem;
+        grid-auto-flow: row;
+        grid-template: auto 1fr auto / 1fr;
+        padding: 1rem;
+        place-items: center;
+    }
+
+    &__track-and-thumb {
+        display: block;
+        height: 100%;
+        position: relative;
+        // width: 16px;
+    }
+
+    &__track {
+        background-color: #38352d;
+        // border-radius: 12px;
+        bottom: 0;
+        cursor: pointer;
+        position: absolute;
+        padding-top: 0px;
+        margin-top: 0px;
+        top: 0;
+        width: 8px;
+    }
+
+    &__thumb {
+        // border-radius: 12px;
+        background-color: #5c5c4d;
+        position: absolute;
+        width: 8px;
+        padding-top: 0px;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    &__button {
+        // height: 20px;
+        // width: 20px;
+        background-color: greenyellow;
+        position: relative;
+        background-color: transparent;
+        border: none;
+        width: 0px;
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    &__button--top {
+        .triangle {
+            @include mixins.pointerOnHover();
+            margin: 0px;
+            padding: 0px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 4px 12px 4px;
+            border-color: transparent transparent #007bff transparent;
+        }
+    }
+    &__button--bottom {
+        .triangle {
+            @include mixins.pointerOnHover();
+            margin: 0px;
+            padding: 0px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 4px 0 4px;
+            border-color: #007bff transparent transparent transparent;
+        }
+    }
+}
