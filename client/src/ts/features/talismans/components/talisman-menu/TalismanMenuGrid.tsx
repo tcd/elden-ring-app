@@ -18,6 +18,7 @@ export const TalismanMenuGrid = (): JSX.Element => {
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = talismans.reduce((acc, value) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         acc[value.name] = useRef<HTMLDivElement>(null)
         return acc
     }, {})
@@ -62,7 +63,7 @@ export const TalismanMenuGrid = (): JSX.Element => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
             dispatch(Actions.Talismans.scrollMenu())
         })
-    }, [menuHasScrolled, activeName, refs, menuRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
 
     return (
         <div
