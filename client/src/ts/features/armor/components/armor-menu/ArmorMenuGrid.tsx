@@ -18,6 +18,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = armor.reduce((acc, value) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         acc[value.name] = useRef<HTMLDivElement>(null)
         return acc
     }, {})
@@ -63,7 +64,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
             dispatch(Actions.Armor.scrollMenu())
         })
-    }, [menuHasScrolled, activeName, refs, menuRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
 
 
     return (

@@ -38,8 +38,10 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
     const imageSrc = getImageSrc("Armor", armor.name, "256")
 
     let weightColor: StatRowColor = "default"
-    if      (armor.weight > oldArmor.weight) { weightColor = "red"  }
-    else if (armor.weight < oldArmor.weight) { weightColor = "blue" }
+    if (oldArmor.id != -1) {
+        if      (armor.weight > oldArmor.weight) { weightColor = "red"  }
+        else if (armor.weight < oldArmor.weight) { weightColor = "blue" }
+    }
 
     const props: Partial<EquipmentDetailProps> = {
         title: armor.name,
