@@ -1,27 +1,12 @@
 import {
-    mdiArmFlex,
-    mdiArmFlexOutline,
-    mdiShieldSword,
-    mdiShieldSwordOutline,
-    mdiShieldSun,
-    mdiSword,
-    mdiMagicStaff,
-    mdiBottleTonicPlus,
-    mdiBottleTonicPlusOutline,
-    mdiHandFrontRight,
-    mdiHandFrontRightOutline,
-    mdiAccount,
-} from "@mdi/js"
-
-
-import {
     Heading,
     ErCard,
     ErTallCard,
     EPopoverContent,
     ErTallCardSection,
+    Page,
 } from "@app/shared"
-import { CharacterStatusB } from "@app/features/builder/components/right-side-panels"
+import { CharacterStatusB } from "@app/features/builder"
 
 const boxStyle = {
     // width: "200px",
@@ -42,7 +27,7 @@ export const TestPage = (_props: unknown): JSX.Element => {
     ].join(" ")
 
     return (
-        <section className={className}>
+        <Page pageName="about" className={className}>
             <div className="row">
                 <div className="col">
                     <Heading title="Test" />
@@ -54,6 +39,6 @@ export const TestPage = (_props: unknown): JSX.Element => {
                     <CharacterStatusB />
                 </div>
             </div>
-        </section>
+        </Page>
     )
 }

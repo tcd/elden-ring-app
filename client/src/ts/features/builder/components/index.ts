@@ -1,4 +1,4 @@
 export * from "./MainBuilderMenu"
 export * from "./pages"
-export * from "./right-side-panels"
+export * from "./character-status"
 export * from "./LevelUpMenu"

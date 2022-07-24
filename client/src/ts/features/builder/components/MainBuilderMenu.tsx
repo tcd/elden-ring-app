@@ -3,8 +3,7 @@ import { useSelector } from "react-redux"
 import { Selectors } from "@app/state"
 import { ArmorBuilderMenu, Page, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/features"
 
-import { LevelUpMenu } from "."
-import { CharacterStatus } from "./right-side-panels"
+import { LevelUpMenu, CharacterStatus } from "."
 
 export const MainBuilderMenu = (_props: unknown): JSX.Element => {
 

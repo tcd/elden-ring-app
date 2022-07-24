@@ -2,7 +2,7 @@ import { Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { Actions, Selectors } from "@app/state"
-import { CharacterStatus } from "@app/features/builder/components/right-side-panels"
+import { CharacterStatus } from "@app/features/builder"
 import { SpellDetail, SpellMenuImage } from "@app/features/spells/components"
 
 const spellCategories = [
