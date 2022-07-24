@@ -1,0 +1,9 @@
+// ----------------------------------------------------------------------------
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+// ----------------------------------------------------------------------------
+
+// Prefix for :root CSS variables
+$variable-prefix: er-; // Deprecated in Bootstrap v5.2.0 for the shorter `$prefix`
+$prefix: $variable-prefix;
