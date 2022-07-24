@@ -27,5 +27,5 @@ x 2022-07-08 2022-07-06 Affinity option 'Undo Enhancement' does nothing
 x 2022-07-08 2022-07-07 Rewrite starting class scroll to be virtual @client
 2022-07-08 Add context menus
 2022-07-11 Fix talisman options
-2022-07-16 Equipment Detail first sections all have 6 rows, use that to style.
+x 2022-07-24 2022-07-16 Equipment Detail first sections all have 6 rows, use that to style.
 2022-07-23 Fix equipment detail image sizes.
