@@ -30,15 +30,21 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
         dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
     }
 
-    const slotSx: SxProps = {}
     const elementId = `weapon-slot-${slotId}`
     const classNames = ["er__equipmentGrid__cell"]
     let weaponImageElement: JSX.Element = null
+    let bgSrc: string = null
 
     if (slotId.startsWith("L")) {
-        slotSx["backgroundImage"] = cssUrl(EquipmentSlotImageUrls.WeaponLeft)
+        bgSrc = cssUrl(EquipmentSlotImageUrls.WeaponLeft)
     } else {
-        slotSx["backgroundImage"] = cssUrl(EquipmentSlotImageUrls.WeaponRight)
+        bgSrc = cssUrl(EquipmentSlotImageUrls.WeaponRight)
+    }
+
+    const slotSx: SxProps = {
+        "&::after": {
+            backgroundImage: bgSrc,
+        },
     }
 
     if (name) {
