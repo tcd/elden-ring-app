@@ -37,7 +37,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
             item: true,
             container: true,
             direction: "column",
-            className: "er__equipmentDetail2__detailColumn",
+            className: "er__equipmentDetail__detailColumn",
             sx: {
                 // backgroundColor: "blue",
                 width: "50%",
@@ -47,7 +47,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
             item: true,
             container: true,
             direction: "row",
-            className: "er__equipmentDetail2__imageColumn",
+            className: "er__equipmentDetail__imageColumn",
             sx: {
                 // backgroundColor: "violet",
                 width: "50%",
@@ -65,7 +65,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
         }
 
         return (
-            <section className="er__equipmentDetail2__section--main">
+            <section className="er__equipmentDetail__section--main">
                 <ErCard2 title={this.mainSectionTitle()} {...cardProps}>
                     <Grid {...containerProps}>
                         <Grid {...firstColumnProps}>
@@ -87,21 +87,21 @@ export class MainSection extends Component<EquipmentDetailProps> {
 
     private emptyPrimaryImage(): JSX.Element {
         return (
-            <div className="er__equipmentDetail2__primaryImageWrapper--empty">
+            <div className="er__equipmentDetail__primaryImageWrapper--empty">
             </div>
         )
     }
 
     private emptySecondaryImage(): JSX.Element {
         return (
-            <div className="er__equipmentDetail2__secondaryImageWrapper--empty">
+            <div className="er__equipmentDetail__secondaryImageWrapper--empty">
             </div>
         )
     }
 
     private primaryImage(): JSX.Element {
         return (
-            <div className="er__equipmentDetail2__primaryImageWrapper">
+            <div className="er__equipmentDetail__primaryImageWrapper">
                 <img
                     className="img-fluid"
                     src={this.props.primaryImage.src}
@@ -113,7 +113,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
 
     private secondaryImage(): JSX.Element {
         return (
-            <div className="er__equipmentDetail2__secondaryImageWrapper">
+            <div className="er__equipmentDetail__secondaryImageWrapper">
                 <img
                     className="img-fluid"
                     src={this.props.secondaryImage.src}

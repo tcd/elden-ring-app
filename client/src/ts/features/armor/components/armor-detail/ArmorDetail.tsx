@@ -53,7 +53,7 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail2__section">
+            <section className="er__equipmentDetail__section">
                 <ErCard2 title="Damage Negation" icon="DamageNegation" {...cardProps}>
                     <ul>
                         <ArmorDefenseStats

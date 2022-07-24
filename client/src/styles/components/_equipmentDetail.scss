@@ -2,7 +2,6 @@
 @use "@mixins" as mixins;
 
 .er__equipmentDetail {
-
     display: flex;
     flex-direction: column;
 
@@ -10,22 +9,25 @@
         display: flex;
         flex-flow: row nowrap;
         // width: 100%;
-        justify-items: stretch;
-        justify-content: stretch;
-        align-items: stretch;
-        align-content: stretch;
+        // justify-items: stretch;
+        // justify-content: stretch;
+        // align-items: stretch;
+        // align-content: stretch;
 
-        &>* {
-            flex-grow: 1;
-        }
+        // &>* {
+        //     flex-grow: 1;
+        // }
     }
 
-    section.er__equipmentDetail__section {
-        .er__card {
+    .er__equipmentDetail__section {
+        .er__card2 {
             width: 100%;
         }
         display: flex;
         flex-flow: row nowrap;
+        &--main {
+            @extend .er__equipmentDetail__section;
+        }
     }
 
     .er__equipmentDetail__imageColumn {
@@ -42,35 +44,30 @@
         // width: 50%;
         // align-self: flex-end;
     }
+}
 
-    .er__equipmentDetail__imageWrapper {
-        @include mixins.square($size: v.$equipmentDetail-primary-image-size, $max: true);
-        @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-primary-image-size--mobile, $max: true); }
-        @include mixins.equipmentMenuBoxShadow;
-        padding: 5px;
+.er__equipmentDetail__primaryImageWrapper {
+    @include mixins.square($size: v.$equipmentDetail-primary-image-size, $max: false);
+    @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-primary-image-size--mobile, $max: false); }
+    @include mixins.equipmentMenuBoxShadow;
+    padding: 5px;
 
-        &.empty {
-            div:before {
-                content: "";
-                display: block;
-            }
-        }
+    &--empty {
+        @extend .er__equipmentDetail__primaryImageWrapper;
+        @include mixins.invisibleContent();
     }
+}
 
-    .er__equipmentDetail__secondaryImageWrapper {
-        @include mixins.square($size: v.$equipmentDetail-secondary-image-size, $max: true);
-        @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-secondary-image-size--mobile, $max: true); }
-        @include mixins.equipmentMenuBoxShadow;
-        margin-right: 6px;
-        padding: 5px;
+.er__equipmentDetail__secondaryImageWrapper {
+    @include mixins.square($size: v.$equipmentDetail-secondary-image-size, $max: false);
+    @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-secondary-image-size--mobile, $max: false); }
+    @include mixins.equipmentMenuBoxShadow;
+    margin-right: 6px;
+    padding: 5px;
 
-        &.empty {
-            box-shadow: none;
-            div:before {
-                content: "";
-                display: block;
-            }
-        }
-
+    &--empty {
+        @extend .er__equipmentDetail__secondaryImageWrapper;
+        @include mixins.invisibleContent();
+        box-shadow: none;
     }
 }

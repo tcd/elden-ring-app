@@ -24,12 +24,12 @@ export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail2__section">
+            <section className="er__equipmentDetail__section">
                 <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
                     <p>-</p>
                 </ErCard2>
             </section>
-            <section className="er__equipmentDetail2__section">
+            <section className="er__equipmentDetail__section">
                 <ErCard2 title="Item Effect" icon="PassiveEffects" {...cardProps}>
                     <ul className="normal">
                     </ul>

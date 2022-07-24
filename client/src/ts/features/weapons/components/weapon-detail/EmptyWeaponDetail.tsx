@@ -59,7 +59,7 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail2__section">
+            <section className="er__equipmentDetail__section">
                 <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
                     <ul>
                         {attackRows}
@@ -71,7 +71,7 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
                     </ul>
                 </ErCard2>
             </section>
-            <section className="er__equipmentDetail2__section">
+            <section className="er__equipmentDetail__section">
                 <ErCard2 title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
                     <div className="row">
                         <div className="col">

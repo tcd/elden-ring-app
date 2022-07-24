@@ -55,7 +55,7 @@ export const MainSectionRows = (props: MainSectionRowsProps): JSX.Element => {
     ]
 
     const rows = rowProps.map(({ type, props }, index) => {
-        const key = `er__equipmentDetail2__mainSection--${index + 1}`
+        const key = `er__equipmentDetail__mainSection--${index + 1}`
         switch (type) {
             case "StatRow":         return <StatRow         key={key} {...props} />
             case "StatRowPlus":     return <StatRowPlus     key={key} {...props} />

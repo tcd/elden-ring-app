@@ -30,7 +30,7 @@ export class PassiveEffects extends Component<EquipmentDetailProps> {
         }
 
         return (
-            <section className="er__equipmentDetail2__section">
+            <section className="er__equipmentDetail__section">
                 <ErCard2 title="Passive Effects" icon="PassiveEffects" {...cardProps}>
                     <ul>
                         {rows}

@@ -34,7 +34,7 @@ export class EquipmentDetail extends Component<EquipmentDetailProps> {
     private boxProps(): BoxProps {
         return {
             component: "article",
-            className: "er__equipmentDetail2",
+            className: "er__equipmentDetail",
         }
     }
 
