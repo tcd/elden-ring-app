@@ -1,5 +1,6 @@
 import { Box, List, ListItem, SxProps, } from "@mui/material"
 
+import { CONFIG } from "@app/util"
 import { Anchor } from "@app/shared"
 import { AboutPageSection } from "."
 
@@ -40,12 +41,14 @@ export const About = (): JSX.Element => {
                 </ListItem>
                 <ListItem sx={sx}>
                     The source code for this website can be found <Anchor href={links.repo} content="on GitHub" />.
+                    <br />
+                    Current version is <strong>{CONFIG.version}</strong>.
                 </ListItem>
                 <ListItem sx={sx}>
                     The source code responsible for AR calculation is in a separate project <Anchor href={links.calculator} content="(also on GitHub)" />.
                 </ListItem>
                 <ListItem sx={sx}>
-                    <span>This website was built using:</span>
+                    <span>This was built using:</span>
                     <Box component="ul" sx={{ ml: 3 }}>
                         {$techItems}
                     </Box>

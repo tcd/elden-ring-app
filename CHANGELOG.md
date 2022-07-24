@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 <!-- ## [Unreleased] -->
 
-<!-- ## [0.6.0] - 2022-07-19 -->
+## [0.6.0] - 2022-07-19
 ### Added
 - Add `react-helmet` dependency for meta tags
 ### Changed
