@@ -9,14 +9,26 @@ import { ArmorState, INITIAL_ARMOR_STATE } from "../state"
 import { noArmorSelected, handleLocationChange } from "./helpers"
 
 export const reducers = {
+    setActiveSlotId(state: ArmorState, { payload: { type } }: PayloadAction<{ type: ArmorType }>) {
+        state.activeType = type
+        state.oldName = state.armorNames[type]
+        state.menuHasScrolled = false
+    },
+    clearActiveSlotId(state: ArmorState) {
+        state.activeType = null
+        state.oldName = null
+        state.menuHasScrolled = true
+    },
     scrollMenu(state: ArmorState) {
         state.menuHasScrolled = true
     },
+    // TODO: deprecate in favor of `setActiveSlotId`
     openArmorMenu(state: ArmorState, { payload: { type } }: PayloadAction<{ type: ArmorType }>) {
         state.activeType = type
         state.oldName = state.armorNames[type]
         state.menuHasScrolled = false
     },
+    // TODO: deprecate in favor of `clearActiveSlotId`
     closeArmorMenu(state: ArmorState) {
         state.activeType = null
         state.oldName = null

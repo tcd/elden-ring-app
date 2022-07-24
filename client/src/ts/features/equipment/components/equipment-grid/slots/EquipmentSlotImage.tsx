@@ -6,14 +6,17 @@ import { EquipmentSlotImageUrls, cssUrl, EquipmentSlotBackgroundId } from "@app/
 
 export interface EquipmentSlotImageProps {
     bgType: EquipmentSlotBackgroundId
-    filled: boolean
-    children: ReactNode | JSX.Element
+    children?: ReactNode | JSX.Element
+    img: {
+        src: string
+        alt: string
+    },
     BoxProps?: BoxProps
 }
 
 const defaultProps: Partial<EquipmentSlotImageProps> = {
     children: null,
-    filled: false,
+    img: { src: null, alt: null },
     BoxProps: {},
 }
 
@@ -22,16 +25,26 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
 
         const {
             bgType,
-            filled,
             children,
+            img,
             BoxProps,
         } = { ...defaultProps, ...props }
 
         const bgSrc = cssUrl(EquipmentSlotImageUrls[bgType])
+        const filled = img?.src != null
         const className = filled ? "er__equipmentGrid__cell--filled" :  "er__equipmentGrid__cell"
 
-        const slotSx: SxProps = {
-            position: "relative",
+        let $img: JSX.Element = null
+
+        if (filled) {
+            $img = <img
+                src={img.src}
+                alt={img.alt}
+                className="er__equipmentGrid__cellImage img-fluid"
+            />
+        }
+
+        const bgSx: SxProps = {
             "&::after": {
                 backgroundImage: bgSrc,
             },
@@ -42,9 +55,10 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
                 ref={ref}
                 component="li"
                 className={className}
-                sx={slotSx}
                 {...BoxProps}
             >
+                <Box sx={bgSx} className="er__equipmentGrid__cellBg" />
+                {$img}
                 {children && children}
             </Box>
         )

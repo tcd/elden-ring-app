@@ -10,12 +10,12 @@ import {
     WeaponAffinityName,
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"
-import { isBlank } from "@app/util"
+import { isBlank, isLocationChange } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { StartingClassActions } from "@app/features/starting-class"
 import { WeaponsState, INITIAL_WEAPONS_STATE } from "../state"
 // import { history } from "@app/state"
-import { isLocationChange, noWeaponsSelected, handleLocationChange } from "./helpers"
+import { noWeaponsSelected, handleLocationChange } from "./helpers"
 
 export const reducers = {
     setActiveSlotId(state: WeaponsState, { payload: { id } }: PayloadAction<{ id: WeaponSlotId }>) {
@@ -24,6 +24,13 @@ export const reducers = {
         }
         state.activeSlotId = id
         state.menuHasScrolled = false
+    },
+    clearActiveSlotId(state: WeaponsState) {
+        state.activeSlotId = null
+        state.oldWeapon = null
+        state.customizingWeapon = false
+        state.menuHasScrolled = true
+        state.choosingAffinity = false
     },
     startCustomizingWeapon(state: WeaponsState) {
         state.customizingWeapon = true

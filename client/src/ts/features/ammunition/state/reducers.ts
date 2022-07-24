@@ -5,8 +5,11 @@ import { CoreActions } from "@app/features/core"
 import { AmmunitionState, INITIAL_AMMUNITION_STATE } from "./state"
 
 export const reducers = {
-    setActiveSlot(state: AmmunitionState, { payload: { id } }: PayloadAction<{ id: AmmunitionSlotId }>) {
+    setActiveSlotId(state: AmmunitionState, { payload: { id } }: PayloadAction<{ id: AmmunitionSlotId }>) {
         state.activeSlotId = id
+    },
+    clearActiveSlotId(state: AmmunitionState) {
+        state.activeSlotId = null
     },
 }
 

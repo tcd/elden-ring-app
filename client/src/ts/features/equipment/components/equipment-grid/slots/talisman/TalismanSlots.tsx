@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { TalismanSlotIds } from "@app/constants"
 import { Selectors } from "@app/state"
 import { TalismanSlotContent } from "./TalismanSlotContent"
+import { EquipmentSlotPlaceholder } from "../EquipmentSlotPlaceholder"
 
 export const TalismanSlots = (): JSX.Element => {
 
@@ -17,6 +18,7 @@ export const TalismanSlots = (): JSX.Element => {
     return (
         <section className="er__equipmentGrid__row">
             {rows}
+            <EquipmentSlotPlaceholder />
         </section>
     )
 }

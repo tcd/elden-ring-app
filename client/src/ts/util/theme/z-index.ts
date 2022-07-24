@@ -25,13 +25,13 @@ export interface IErZIndex extends MuiZIndex {
     }
 }
 
-export const ErZIndex: IErZIndex = {
-    ...defaults,
-    mainContent: 500,
-    equipmentGrid: {
-        cell: 501,
-        cellBackground: 502,
-        cellContent: 503,
-        cellHover: 504,
-    },
-}
+// export const ErZIndex: IErZIndex = {
+//     ...defaults,
+//     // mainContent: 500,
+//     equipmentGrid: {
+//         cell: 501,
+//         cellBackground: 502,
+//         cellContent: 503,
+//         cellHover: 504,
+//     },
+// }

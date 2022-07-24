@@ -1,18 +1,18 @@
 import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { Box, SxProps } from "@mui/material"
 
 import { WeaponSlotId, WeaponSlotData } from "@app/types"
-import { getImageSrc, cssUrl, EquipmentSlotImageUrls } from "@app/util"
+import { getImageSrc, EquipmentSlotBackgroundId } from "@app/util"
 import { Actions } from "@app/state"
+import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 export interface WeaponSlotProps {
     slotId: WeaponSlotId
     data: WeaponSlotData
 }
 
-const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
+const weaponSlotContent = forwardRef<HTMLLIElement, WeaponSlotProps>((props: WeaponSlotProps, ref) => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -30,47 +30,35 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
         dispatch(Actions.Weapons.setActiveSlotId({ id: slotId }))
     }
 
+    const handleMouseExit = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Weapons.clearActiveSlotId())
+    }
+
     const elementId = `weapon-slot-${slotId}`
-    const classNames = ["er__equipmentGrid__cell"]
-    let weaponImageElement: JSX.Element = null
-    let bgSrc: string = null
-
-    if (slotId.startsWith("L")) {
-        bgSrc = cssUrl(EquipmentSlotImageUrls.WeaponLeft)
-    } else {
-        bgSrc = cssUrl(EquipmentSlotImageUrls.WeaponRight)
+    const imgProps = {
+        src: null,
+        alt: null,
     }
 
-    const slotSx: SxProps = {
-        "&::after": {
-            backgroundImage: bgSrc,
-        },
-    }
+    const type: EquipmentSlotBackgroundId = slotId.startsWith("L") ? "WeaponLeft" : "WeaponRight"
 
     if (name) {
-        classNames.push("er__equipmentGrid__cell--filled")
-        const src = getImageSrc("Weapon", name, "256")
-        weaponImageElement = (
-            <img
-                className="img-fluid"
-                src={src}
-                alt={`${name} image`}
-            />
-        )
+        imgProps.src = getImageSrc("Weapon", name, "256")
+        imgProps.alt = name
     }
 
     return (
-        <Box
+        <EquipmentSlotImage
             ref={ref}
-            component="li"
-            id={elementId}
-            sx={slotSx}
-            className={classNames.join(" ")}
-            onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-        >
-            {weaponImageElement && weaponImageElement}
-        </Box>
+            bgType={type}
+            img={imgProps}
+            BoxProps={{
+                id: elementId,
+                onClick: handleClick,
+                onMouseEnter: handleMouseEnter,
+                onmouseleave: handleMouseExit,
+            }}
+        />
     )
 })
 

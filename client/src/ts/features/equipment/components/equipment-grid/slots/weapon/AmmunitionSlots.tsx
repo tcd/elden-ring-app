@@ -1,27 +1,19 @@
 import { forwardRef } from "react"
-import { useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
-import { Box, SxProps } from "@mui/material"
+import { useDispatch } from "react-redux"
 
 import { AmmunitionSlotId } from "@app/constants"
-import { cssUrl, EquipmentSlotImageUrls } from "@app/util"
 import { Actions } from "@app/state"
-// import { WeaponSlot } from "./WeaponSlot"
-// import { WeaponSlotContextMenu as WeaponSlot } from "./WeaponSlotContextMenu"
+import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 export interface AmmunitionSlotProps {
     id: AmmunitionSlotId
 }
 
-const arrowSlot = forwardRef(({ id }: AmmunitionSlotProps, ref) => {
+const arrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(({ id }: AmmunitionSlotProps, ref) => {
 
     const dispatch = useDispatch()
-    const navigate = useNavigate()
 
     const elementId = `arrow-slot-${id}`
-    const slotSx: SxProps = {
-        backgroundImage: cssUrl(EquipmentSlotImageUrls.Arrow),
-    }
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.clickSlot({ type: "Ammunition", id: id }))
@@ -31,32 +23,33 @@ const arrowSlot = forwardRef(({ id }: AmmunitionSlotProps, ref) => {
         dispatch(Actions.Equipment.setActiveSlot({ type: "Ammunition", id: id }))
     }
 
+    const handleMouseExit = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Ammunition.clearActiveSlotId())
+    }
+
     return (
-        <Box
+        <EquipmentSlotImage
             ref={ref}
-            component="li"
-            id={elementId}
-            sx={slotSx}
-            className="er__equipmentGrid__cell"
-            onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-        >
-            {/* <img className="img-fluid" src={imagePath} alt="arrows" /> */}
-        </Box>
+            bgType="Arrow"
+            img={null}
+            BoxProps={{
+                id: elementId,
+                onClick: handleClick,
+                onMouseEnter: handleMouseEnter,
+                onmouseleave: handleMouseExit,
+            }}
+        />
     )
 })
 
 arrowSlot.displayName = "ArrowSlot"
 export const ArrowSlot = arrowSlot
 
-const boltSlot = forwardRef(({ id }: AmmunitionSlotProps, ref) => {
+const boltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(({ id }: AmmunitionSlotProps, ref) => {
 
     const dispatch = useDispatch()
 
     const elementId = `bolt-slot-${id}`
-    const slotSx: SxProps = {
-        backgroundImage: cssUrl(EquipmentSlotImageUrls.Arrow),
-    }
 
     const handleClick = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
         dispatch(Actions.Equipment.clickSlot({ type: "Ammunition", id: id }))
@@ -66,19 +59,24 @@ const boltSlot = forwardRef(({ id }: AmmunitionSlotProps, ref) => {
         dispatch(Actions.Equipment.setActiveSlot({ type: "Ammunition", id: id }))
     }
 
+    const handleMouseExit = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Ammunition.clearActiveSlotId())
+    }
+
     return (
-        <Box
+        <EquipmentSlotImage
             ref={ref}
-            component="li"
-            id={elementId}
-            sx={slotSx}
-            className="er__equipmentGrid__cell"
-            onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-        >
-            {/* <img className="img-fluid" src={imagePath} alt="arrows" /> */}
-        </Box>
+            bgType="Bolt"
+            img={null}
+            BoxProps={{
+                id: elementId,
+                onClick: handleClick,
+                onMouseEnter: handleMouseEnter,
+                onmouseleave: handleMouseExit,
+            }}
+        />
     )
+
 })
 
 boltSlot.displayName = "BoltSlot"

@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { ArmorTypes } from "@app/types"
 import { Selectors } from "@app/state"
 import { ArmorSlotContent } from "./ArmorSlotContent"
+import { EquipmentSlotPlaceholder } from "../EquipmentSlotPlaceholder"
 
 export const ArmorSlots = (): JSX.Element => {
 
@@ -17,6 +18,7 @@ export const ArmorSlots = (): JSX.Element => {
             <ArmorSlotContent type={ArmorTypes.Chest} armor={chest} />
             <ArmorSlotContent type={ArmorTypes.Arms}  armor={arms}  />
             <ArmorSlotContent type={ArmorTypes.Legs}  armor={legs}  />
+            <EquipmentSlotPlaceholder />
         </section>
     )
 }

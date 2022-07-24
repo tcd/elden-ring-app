@@ -1,24 +1,19 @@
 import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { Box, SxProps } from "@mui/material"
-
 
 import { TalismanSlotId } from "@app/constants"
 import { Talisman } from "@app/types"
-import { getImageSrc, EquipmentSlotImageUrls, cssUrl } from "@app/util"
+import { getImageSrc } from "@app/util"
 import { Actions } from "@app/state"
-
-const slotSx: SxProps = {
-    backgroundImage: cssUrl(EquipmentSlotImageUrls.Talisman),
-}
+import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 interface TalismanSlotProps {
     id: TalismanSlotId
     talisman: Talisman
 }
 
-const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref) => {
+const talismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(({ id, talisman }: TalismanSlotProps, ref) => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -34,31 +29,35 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
         dispatch(Actions.Talismans.setActiveSlotId({ id }))
     }
 
+    const handleMouseExit = (_event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+        dispatch(Actions.Talismans.clearActiveSlotId())
+    }
+
     const elementId = `talisman-slot-${id}`
-    const classNames = ["er__equipmentGrid__cell"]
-    let titleString = `Talisman ${id}`
-    let talismanImage: JSX.Element = null
+    const imgProps = {
+        src: null,
+        alt: null,
+    }
+    // let titleString = `Talisman ${id}`
 
     if (talisman) {
-        classNames.push("er__equipmentGrid__cell--filled")
-        const src = getImageSrc("Talisman", talisman.name, "256")
-        talismanImage = <img className="img-fluid" src={src} alt={talisman.name} />
-        titleString = talisman.name
+        imgProps.src = getImageSrc("Talisman", talisman.name, "256")
+        imgProps.alt = talisman.name
+        // titleString = talisman.name
     }
 
     return (
-        <Box
+        <EquipmentSlotImage
             ref={ref}
-            component="li"
-            sx={slotSx}
-            id={elementId}
-            className={classNames.join(" ")}
-            title={titleString}
-            onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-        >
-            {talismanImage}
-        </Box>
+            bgType="Talisman"
+            img={imgProps}
+            BoxProps={{
+                id: elementId,
+                onClick: handleClick,
+                onMouseEnter: handleMouseEnter,
+                onmouseleave: handleMouseExit,
+            }}
+        />
     )
 })
 

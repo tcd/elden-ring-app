@@ -12,6 +12,11 @@ export const reducers = {
         state.activeSlotId = id
         // state.menuHasScrolled = false
     },
+    clearActiveSlotId(state: TalismansState) {
+        state.oldTalismanName = null
+        state.activeSlotId = null
+        state.menuHasScrolled = true
+    },
     scrollMenu(state: TalismansState) {
         state.menuHasScrolled = true
     },

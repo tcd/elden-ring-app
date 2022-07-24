@@ -1,4 +1,4 @@
-@use "@variables" as v;
+@use "@variables" as var;
 @use "@mixins" as mixins;
 
 #er__equipmentGrid {
@@ -15,17 +15,17 @@
         display: flex;
         flex-flow: column nowrap;
         span.er__equipmentGrid__headerTitle {
-            color: v.$gold;
+            color: var.$gold;
             font-size: 24px;
             padding-top: .2em;
             margin-bottom: 0px;
             padding-bottom: 0px;
-            text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+            text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
             white-space: nowrap;
         }
         span.er__equipmentGrid__headerDescription {
             font-size: 18px;
-            text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+            text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
             white-space: nowrap;
         }
     }
@@ -52,29 +52,23 @@
             margin-left: 2.5px;
             margin-right: 2.5px;
 
-
-            // &::before {
-            //     background-repeat: no-repeat;
-            //     background-size: contain;
-            //     background-position: center;
-            // }
-
             &:hover {
-                &:before {
-                    content: '';
+                &::after {
+                    z-index: var.$zindex-equipmentGrid-cellHover; // 1008
+                    content: "\200b";
                     position: absolute;
-                    top: 0;
+                    top:  0;
                     left: 0;
                     width:  100%;
                     height: 100%;
                     border-radius: 1px;
                     background: radial-gradient(
                         ellipse,
-                        rgba(v.$equipment-slot-overlay-color, 0.0)  40%,
-                        rgba(v.$equipment-slot-overlay-color, 0.4) 100%
+                        rgba(var.$equipment-slot-overlay-color, 0.0)  40%,
+                        rgba(var.$equipment-slot-overlay-color, 0.4) 100%
                     );
                     /* offset-x | offset-y | blur-radius | spread-radius | color */
-                    box-shadow: 0px 0px 2px 1px rgba(v.$equipment-slot-overlay-color, 0.5);
+                    box-shadow: 0px 0px 2px 1px rgba(var.$equipment-slot-overlay-color, 0.5);
                 }
             }
 
@@ -83,8 +77,6 @@
                 display: flex;
                 flex-wrap: nowrap;
                 align-items: center;
-                // justify-content: center;
-                // align-content: center;
                 img {
                     padding: 10px;
                 }
@@ -94,31 +86,38 @@
 }
 
 .er__equipmentGrid__cell,
-.er__equipmentGrid__cell--filled {
-    background-color: palegoldenrod;
-    // position: relative;
-    overflow: hidden;
+.er__equipmentGrid__cell--filled { z-index: var.$zindex-equipmentGrid-cell; }
+.er__equipmentGrid__cell--placeholder { z-index: var.$zindex-equipmentGrid-cell; }
+.er__equipmentGrid__cellBg { z-index: var.$zindex-equipmentGrid-cellBg; }
+.er__equipmentGrid__cellImage { z-index: var.$zindex-equipmentGrid-cellImage; }
+
+.er__equipmentGrid__cell--placeholder {
+    @include mixins.media-tablet-down {
+        width:  55px;
+        height: 60px;
+    }
+    width:  80px;
+    height: 90px;
+
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+
+    @include mixins.invisibleContent();
+}
+
+.er__equipmentGrid__cellBg {
     &::after {
         content: "\200b";
         width: 100%;
         height: 100%;
-        background-color: turquoise;
         overflow: hidden;
         position: absolute;
-        // top: 50%;  /* position the top  edge of the element at the middle of the parent */
-        // left: 50%; /* position the left edge of the element at the middle of the parent */
         $absolute-position: 0;
         top:    $absolute-position;
         left:   $absolute-position;
         bottom: $absolute-position;
         right:  $absolute-position;
-
         transform: scale(1.25);
-
-        // transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
-        // position: absolute;
-        // top: 0;
-        // left: 0;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

@@ -1,24 +1,20 @@
 import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { Box, SxProps } from "@mui/material"
-
 
 import { QuickItemSlotId } from "@app/constants"
 import { QuickItem } from "@app/types"
-import { getImageSrcManual, EquipmentSlotImageUrls, cssUrl } from "@app/util"
+import { getImageSrcManual } from "@app/util"
 import { Actions } from "@app/state"
+import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
-const slotSx: SxProps = {
-    backgroundImage: cssUrl(EquipmentSlotImageUrls.QuickItem),
-}
 
 interface QuickItemSlotProps {
     id: QuickItemSlotId
     item: QuickItem
 }
 
-const quickItemSlotContent = forwardRef(({ id, item }: QuickItemSlotProps, ref) => {
+const quickItemSlotContent = forwardRef<HTMLLIElement, QuickItemSlotProps>(({ id, item }: QuickItemSlotProps, ref) => {
 
     const dispatch = useDispatch()
     // const navigate = useNavigate()
@@ -34,30 +30,29 @@ const quickItemSlotContent = forwardRef(({ id, item }: QuickItemSlotProps, ref) 
     }
 
     const elementId = `quick-item-slot-${id}`
-    const classNames = ["er__equipmentGrid__cell"]
-    let titleString = `Quick Item ${id}`
-    let itemImage: JSX.Element = null
+    const imgProps = {
+        src: null,
+        alt: null,
+    }
+    // let titleString = `Quick Item ${id}`
 
     if (item) {
-        classNames.push("er__equipmentGrid__cell--filled")
-        const src = getImageSrcManual("bad/equipment-slots/quick-items", "256")
-        itemImage = <img className="img-fluid" src={src} alt={item.name} />
-        titleString = item.name
+        imgProps.alt = item.name
+        imgProps.src = getImageSrcManual("bad/equipment-slots/quick-items", "256")
+        // titleString = item.name
     }
 
     return (
-        <Box
+        <EquipmentSlotImage
             ref={ref}
-            component="li"
-            sx={slotSx}
-            id={elementId}
-            className={classNames.join(" ")}
-            title={titleString}
-            onClick={handleClick}
-            onMouseEnter={handleMouseEnter}
-        >
-            {itemImage}
-        </Box>
+            bgType="QuickItem"
+            img={imgProps}
+            BoxProps={{
+                id: elementId,
+                onClick: handleClick,
+                onMouseEnter: handleMouseEnter,
+            }}
+        />
     )
 })
 

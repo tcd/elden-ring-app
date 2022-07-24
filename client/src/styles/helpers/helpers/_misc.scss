@@ -1,11 +1,16 @@
-@use "@variables"as v;
+@use "@variables"as var;
 
 .text-capitalize {
     text-transform: capitalize !important;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 .text-shadow {
-    text-shadow: v.$text-shadow-offset v.$text-shadow-offset black
+    text-shadow: var.$text-shadow-offset var.$text-shadow-offset black
 }
 
 .no-vertical-overflow {
