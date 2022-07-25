@@ -4,19 +4,21 @@ import {
     useRef,
     useCallback,
     forwardRef,
-    ComponentPropsWithoutRef,
     ReactNode,
+    useImperativeHandle,
 } from "react"
+import { Box, BoxProps } from "@mui/material"
 
 export interface ErScrollProps {
     children: ReactNode
+    contentRef: React.MutableRefObject<HTMLDivElement>
+    contentProps?: BoxProps
 }
 
 /**
  * @note original code by [Tom VanAntwerp](https://www.thisdot.co/blog/creating-custom-scrollbars-with-react)
  */
-export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScroll({ children }: ErScrollProps, ref) {
-    const contentRef = useRef<HTMLDivElement>(null)
+export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ children, contentRef, contentProps = {} }: ErScrollProps, ref) {
     const scrollTrackRef = useRef<HTMLDivElement>(null)
     const scrollThumbRef = useRef<HTMLDivElement>(null)
     const observer = useRef<ResizeObserver | null>(null)
@@ -56,7 +58,7 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
                 behavior: "smooth",
             })
         }
-    }, [thumbHeight])
+    }, [thumbHeight, contentRef])
 
     const handleThumbPosition = useCallback(() => {
         if (!contentRef.current || !scrollTrackRef.current || !scrollThumbRef.current) {
@@ -68,7 +70,7 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
         newTop = Math.min(newTop, trackHeight - thumbHeight)
         const thumb = scrollThumbRef.current
         thumb.style.top = `${newTop}px`
-    }, [thumbHeight])
+    }, [thumbHeight, contentRef])
 
     const handleThumbMousedown = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.preventDefault()
@@ -76,7 +78,7 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
         setScrollStartPosition(e.clientY)
         if (contentRef.current) setInitialScrollTop(contentRef.current.scrollTop)
         setIsDragging(true)
-    }, [])
+    }, [contentRef])
 
     const handleThumbMouseup = useCallback((e: MouseEvent) => {
         e.preventDefault()
@@ -100,10 +102,9 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
                 initialScrollTop + deltaY,
                 contentScrollHeight - contentOffsetHeight,
             )
-
             contentRef.current.scrollTop = newScrollTop
         }
-    }, [isDragging, scrollStartPosition, thumbHeight, initialScrollTop])
+    }, [isDragging, scrollStartPosition, thumbHeight, initialScrollTop, contentRef])
 
     // If the content and the scrollbar track exist, use a ResizeObserver
     // to adjust height of thumb and listen for scroll event to move the thumb
@@ -121,7 +122,7 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
                 ref.removeEventListener("scroll", handleThumbPosition)
             }
         }
-    }, [handleThumbPosition])
+    }, [handleThumbPosition, contentRef])
 
     // Listen for mouse events to handle scrolling by dragging the thumb
     useEffect(() => {
@@ -135,11 +136,19 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
         }
     }, [handleThumbMousemove, handleThumbMouseup])
 
+    useImperativeHandle(ref, () => ({
+        adjustScrollTrack: () => {
+            handleThumbPosition()
+        },
+    }))
+
+    contentProps.className = contentProps?.className ? ("er__scrollBar__content " + contentProps.className) : "er__scrollBar__content"
+
     return (
         <div className="er__scrollBar__container" ref={ref}>
-            <div className="er__scrollBar__content" ref={contentRef}>
+            <Box ref={contentRef} {...contentProps}>
                 {children}
-            </div>
+            </Box>
             <div className="er__scrollBar__scrollbar">
                 <button
                     className="er__scrollBar__button er__scrollBar__button--top"
@@ -147,7 +156,7 @@ export const ErScroll = forwardRef<HTMLDivElement, ErScrollProps>(function ErScr
                 >
                     <div className="triangle"></div>
                 </button>
-                <div className="er__scrollBar__button er__scrollBar__track-and-thumb">
+                <div className="er__scrollBar__track-and-thumb">
                     <div
                         className="er__scrollBar__track"
                         ref={scrollTrackRef}
