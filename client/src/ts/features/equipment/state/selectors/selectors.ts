@@ -1,9 +1,11 @@
 import { AmmunitionSlotId, WeaponSlotId } from "@app/constants"
 import { weaponSlotDisplayName, ammunitionSlotDisplayName } from "@app/util"
 import { RootState } from "@app/state"
-import { EquipmentState } from "./state"
+import { ArmorSelectors } from "@app/features/armor"
+import { TalismansSelectors } from "@app/features/talismans"
+import { WeaponsSelectors } from "@app/features/weapons"
 
-const _selectSlice = (rootState: RootState): EquipmentState => rootState?.Equipment
+import { _selectSlice } from "./select-slice"
 
 const _selectActiveType   = (rootState: RootState) => _selectSlice(rootState)?.activeType ?? null
 const _selectActiveSlotId = (rootState: RootState) => _selectSlice(rootState)?.activeSlotId ?? null
@@ -38,13 +40,38 @@ const selectGridDescription = (rootState: RootState): string => {
     const activeType = selectActiveType(rootState)
     const slotId     = selectActiveSlotId(rootState)
     switch (activeType) {
-        case "Armor":      return slotId?.toString()
-        case "Weapon":     return weaponSlotDisplayName(slotId as WeaponSlotId)
-        case "Talisman":   return `Talisman ${slotId}`
+        case "Armor":      return _selectArmorDescription(rootState)
+        case "Weapon":     return WeaponsSelectors.active.weaponDisplayName(rootState) ?? "Unarmed"
+        case "Talisman":   return _selectTalismanDescription(rootState)
         case "Ammunition": return ammunitionSlotDisplayName(slotId as AmmunitionSlotId)
         case "QuickItem":  return `-`
         default: return "no title"
     }
+}
+
+// =============================================================================
+// Description
+// =============================================================================
+
+const _selectWeaponDescription = (rootState: RootState): string => {
+    const slotId      = selectActiveSlotId(rootState)
+    const armorNames  = ArmorSelectors.slots(rootState)
+    const description = armorNames?.[slotId] ?? slotId?.toString()
+    return description
+}
+
+const _selectArmorDescription = (rootState: RootState): string => {
+    const slotId      = selectActiveSlotId(rootState)
+    const armorNames  = ArmorSelectors.slots(rootState)
+    const description = armorNames?.[slotId] ?? slotId?.toString()
+    return description
+}
+
+const _selectTalismanDescription = (rootState: RootState): string => {
+    const slotId        = selectActiveSlotId(rootState)
+    const talismanNames = TalismansSelectors.slots(rootState)
+    const description   = talismanNames?.[slotId] ?? `Talisman ${slotId}`
+    return description
 }
 
 export const EquipmentSelectors = {
