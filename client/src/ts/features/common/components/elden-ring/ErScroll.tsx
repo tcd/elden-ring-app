@@ -9,16 +9,40 @@ import {
 } from "react"
 import { Box, BoxProps } from "@mui/material"
 
+import { mergeProps } from "@app/util"
+
 export interface ErScrollProps {
     children: ReactNode
     contentRef: React.MutableRefObject<HTMLDivElement>
+    containerProps?: BoxProps
     contentProps?: BoxProps
+    disableScroll?: boolean
+}
+
+const defaultProps: Partial<ErScrollProps> = {
+    children: null,
+    contentRef: null,
+    containerProps: {
+        className: "er__scrollBar__container",
+    },
+    contentProps: {
+        className: "er__scrollBar__content",
+    },
+    disableScroll: false,
 }
 
 /**
  * @note original code by [Tom VanAntwerp](https://www.thisdot.co/blog/creating-custom-scrollbars-with-react)
  */
-export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ children, contentRef, contentProps = {} }: ErScrollProps, ref) {
+export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll(props: ErScrollProps, ref) {
+    const {
+        children,
+        contentRef,
+        containerProps,
+        contentProps,
+        disableScroll,
+    } = mergeProps(defaultProps, props)
+
     const scrollTrackRef = useRef<HTMLDivElement>(null)
     const scrollThumbRef = useRef<HTMLDivElement>(null)
     const observer = useRef<ResizeObserver | null>(null)
@@ -27,12 +51,13 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
     const [initialScrollTop, setInitialScrollTop] = useState<number>(0)
     const [isDragging, setIsDragging] = useState(false)
 
-    function handleResize(ref: HTMLDivElement, trackSize: number) {
+    function handleResize(ref: HTMLDivElement, trackSize: number): void {
         const { clientHeight, scrollHeight } = ref
         setThumbHeight(Math.max((clientHeight / scrollHeight) * trackSize, 20))
     }
 
-    function handleScrollButton(direction: "up" | "down") {
+    function handleScrollButton(direction: "up" | "down"): void {
+        if (disableScroll) { return null }
         const { current } = contentRef
         if (current) {
             const scrollAmount = direction === "down" ? 200 : -200
@@ -40,7 +65,8 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
         }
     }
 
-    const handleTrackClick = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const handleTrackClick = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
         const { current: trackCurrent } = scrollTrackRef
@@ -58,11 +84,12 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
                 behavior: "smooth",
             })
         }
-    }, [thumbHeight, contentRef])
+    }, [thumbHeight, contentRef, disableScroll])
 
-    const handleThumbPosition = useCallback(() => {
+    const handleThumbPosition = useCallback((): void => {
+        if (disableScroll) { return null }
         if (!contentRef.current || !scrollTrackRef.current || !scrollThumbRef.current) {
-            return
+            return null
         }
         const { scrollTop: contentTop, scrollHeight: contentHeight } = contentRef.current
         const { clientHeight: trackHeight } = scrollTrackRef.current
@@ -70,25 +97,28 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
         newTop = Math.min(newTop, trackHeight - thumbHeight)
         const thumb = scrollThumbRef.current
         thumb.style.top = `${newTop}px`
-    }, [thumbHeight, contentRef])
+    }, [thumbHeight, contentRef, disableScroll])
 
-    const handleThumbMousedown = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const handleThumbMousedown = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
         setScrollStartPosition(e.clientY)
         if (contentRef.current) setInitialScrollTop(contentRef.current.scrollTop)
         setIsDragging(true)
-    }, [contentRef])
+    }, [contentRef, disableScroll])
 
-    const handleThumbMouseup = useCallback((e: MouseEvent) => {
+    const handleThumbMouseup = useCallback((e: MouseEvent): void => {
+        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
         if (isDragging) {
             setIsDragging(false)
         }
-    }, [isDragging])
+    }, [isDragging, disableScroll])
 
-    const handleThumbMousemove = useCallback((e: MouseEvent) => {
+    const handleThumbMousemove = useCallback((e: MouseEvent): void => {
+        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
         if (isDragging) {
@@ -104,7 +134,7 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
             )
             contentRef.current.scrollTop = newScrollTop
         }
-    }, [isDragging, scrollStartPosition, thumbHeight, initialScrollTop, contentRef])
+    }, [isDragging, scrollStartPosition, thumbHeight, initialScrollTop, contentRef, disableScroll])
 
     // If the content and the scrollbar track exist, use a ResizeObserver
     // to adjust height of thumb and listen for scroll event to move the thumb
@@ -142,10 +172,8 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
         },
     }))
 
-    contentProps.className = contentProps?.className ? ("er__scrollBar__content " + contentProps.className) : "er__scrollBar__content"
-
     return (
-        <div className="er__scrollBar__container" ref={ref}>
+        <Box ref={ref} {...containerProps}>
             <Box ref={contentRef} {...contentProps}>
                 {children}
             </Box>
@@ -176,6 +204,6 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll({ child
                     <div className="triangle"></div>
                 </button>
             </div>
-        </div>
+        </Box>
     )
 })
