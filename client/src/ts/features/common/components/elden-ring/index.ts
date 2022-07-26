@@ -1,4 +1,5 @@
 export * from "./equipment-detail"
+export * from "./scroll"
 export * from "./StatRow"
 
 export * from "./DamageTypes"
@@ -10,4 +11,3 @@ export * from "./ErTallCard"
 export * from "./ErDialog"
 export * from "./EModal"
 export * from "./EPopoverContent"
-export * from "./ErScroll"
