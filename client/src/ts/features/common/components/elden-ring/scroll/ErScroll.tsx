@@ -11,6 +11,13 @@ import { Box, BoxProps } from "@mui/material"
 
 import { mergeProps } from "@app/util"
 
+export interface IErScroll {
+    /**
+     * Used to adjust scroll thumb position after programmatically scrolling.
+     */
+    adjustScrollTrack: () => void
+}
+
 export interface ErScrollProps {
     children: ReactNode
     contentRef: React.MutableRefObject<HTMLDivElement>
@@ -34,7 +41,7 @@ const defaultProps: Partial<ErScrollProps> = {
 /**
  * @note original code by [Tom VanAntwerp](https://www.thisdot.co/blog/creating-custom-scrollbars-with-react)
  */
-export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll(props: ErScrollProps, ref) {
+export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(props: ErScrollProps, ref) {
     const {
         children,
         contentRef,

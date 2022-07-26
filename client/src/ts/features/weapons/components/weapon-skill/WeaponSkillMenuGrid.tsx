@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { MouseOverPopover, ErScroll, ErScrollClass, IErScroll } from "@app/shared"
 import { WeaponSkillMenuImage, AffinityModal } from "@app/features/weapons/components"
 
 export const WeaponSkillMenuGrid = (): JSX.Element => {
@@ -27,8 +28,10 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     // }
 
     const menuRef = createRef<HTMLDivElement>()
+    const scrollRef = createRef<IErScroll>()
 
     const refs: RefMap = skills.reduce((acc, value) => {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         acc[value.name] = useRef<HTMLDivElement>(null)
         return acc
     }, {})
@@ -46,16 +49,21 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
                 classes = "er__equipmentMenu__gridCell active"
             }
             return (
-                <div
-                    key={key}
-                    ref={refs[skill.name]}
-                    className={classes}
-                    onClick={() => handleClick(skill.name)}
-                >
-                    <WeaponSkillMenuImage weaponSkill={skill} />
-                </div>
+                <MouseOverPopover id={key} key={key} popoverContent={skill.name}>
+                    <div
+                        ref={refs[skill.name]}
+                        className={classes}
+                        onClick={() => handleClick(skill.name)}
+                    >
+                        <WeaponSkillMenuImage weaponSkill={skill} />
+                    </div>
+                </MouseOverPopover>
             )
         })
+
+        if (skillCells.length == 0) {
+            return null
+        }
 
         const divider = (index + 1 < WEAPON_SKILL_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
@@ -67,23 +75,24 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
                 {divider}
             </Fragment>
         )
-    })
+    }).filter(x => x != null)
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
+            scrollRef.current?.adjustScrollTrack()
             dispatch(Actions.Weapons.scrollMenu())
         })
-    }, [menuHasScrolled, activeName, refs, menuRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
 
     return (
-        <div
-            id="weapon-skill-grid-menu"
-            // className={classNames.join(" ")}
-            className="er__equipmentMenu__gridColumn"
-            ref={menuRef}
+        <ErScroll
+            ref={scrollRef}
+            contentRef={menuRef}
+            contentProps={{
+                className: "er__equipmentMenu__gridColumn",
+            }}
         >
-            <AffinityModal />
             {sections}
-        </div>
+        </ErScroll>
     )
 }
