@@ -147,16 +147,18 @@
     }
     &__button--top {
         .triangle {
+            /* top | right | bottom | left */
             // border-width: 0 7px 10px 7px;
             // border-width: 0 4px 12px 4px;
-            border-width: 0 7.5px 10px 7.5px;
+            border-width: 0 7.5px 16px 7.5px;
             border-color: transparent transparent $sb-center-1 transparent;
         }
     }
     &__button--bottom {
         .triangle {
+            /* top | right | bottom | left */
             // border-width: 12px 4px 0 4px;
-            border-width: 10px 7.5px 0 7.5px;
+            border-width: 16px 7.5px 0 7.5px;
             border-color: $sb-center-1 transparent transparent transparent;
         }
     }
