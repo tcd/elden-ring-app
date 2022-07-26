@@ -3,6 +3,8 @@
 
 .er__scrollBar {
 
+    $sb-thumb-color: #5c5c4d;
+
     $sb-center-1: #35332b;
     $sb-center-2: #3c3a31;
 
@@ -13,7 +15,7 @@
     $sb-right-2: #49483c;
     $sb-right-3: #36342a;
 
-    $sb-triangle-color: rgb(78,76,63);
+    $sb-triangle-color: $sb-center-1;
 
     &__container {
         // background-color: white;
@@ -68,8 +70,6 @@
 
     &__track {
         z-index: var.$zindex-scrollBar-track;
-        // background-color: #38352d;
-        // border-radius: 12px;
         bottom: 0;
         cursor: pointer;
         position: absolute;
@@ -78,38 +78,36 @@
         top: 0;
         width: 9px;
         background: $sb-center-1;
-        background: linear-gradient(90deg, rgba(53,51,43,1) 0%, rgba(60,58,49,1) 100%);
+        background: linear-gradient(90deg, $sb-center-1 0%, $sb-center-2 100%);
 
         &::before {
             content: "\200b";
-            // @include mixins.invisibleContent();
             position: absolute;
             top: 0;
             left: -3px;
             // left: 0px;
             width: 3px;
             height: 100%;
-            background: rgb(65,65,53);
-            background: linear-gradient(90deg, rgba(65,65,53,1) 0%, rgba(76,76,62,1) 50%, rgba(68,67,55,1) 100%);
+            background: $sb-left-1;
+            background: linear-gradient(90deg, $sb-left-1 0%, $sb-left-2 50%, $sb-left-3 100%);
         }
         &::after {
             content: "\200b";
-            // @include mixins.invisibleContent();
             position: absolute;
             top: 0;
             right: -3px;
             // right: 0px;
             width: 3px;
             height: 100%;
-            background: rgb(78,76,63);
-            background: linear-gradient(90deg, rgba(78,76,63,1) 0%, rgba(73,72,60,1) 50%, rgba(54,52,42,1) 100%);
+            background: $sb-right-1;
+            background: linear-gradient(90deg, $sb-right-1 0%, $sb-right-2 50%, $sb-right-3 100%);
         }
     }
 
     &__thumb {
         z-index: var.$zindex-scrollBar-thumb;
         // border-radius: 12px;
-        background-color: #5c5c4d;
+        background-color: $sb-thumb-color;
         position: absolute;
         width: 9px;
         left: 0px;
@@ -152,14 +150,14 @@
             // border-width: 0 7px 10px 7px;
             // border-width: 0 4px 12px 4px;
             border-width: 0 7.5px 10px 7.5px;
-            border-color: transparent transparent $sb-triangle-color transparent;
+            border-color: transparent transparent $sb-center-1 transparent;
         }
     }
     &__button--bottom {
         .triangle {
             // border-width: 12px 4px 0 4px;
             border-width: 10px 7.5px 0 7.5px;
-            border-color: $sb-triangle-color transparent transparent transparent;
+            border-color: $sb-center-1 transparent transparent transparent;
         }
     }
 }
