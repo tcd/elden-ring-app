@@ -10,7 +10,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover, ErScroll } from "@app/shared"
+import { MouseOverPopover, ErScroll, ErScrollClass } from "@app/shared"
 import { WeaponMenuImage } from "@app/features/weapons/components"
 
 export const WeaponMenuGrid = (): JSX.Element => {
@@ -44,7 +44,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
     }
 
     const menuRef = createRef<HTMLDivElement>()
-    const scrollRef = createRef<HTMLDivElement>()
+    const scrollRef = createRef<ErScrollClass>()
 
     const refs: RefMap = weapons.reduce((acc, value) => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -96,14 +96,13 @@ export const WeaponMenuGrid = (): JSX.Element => {
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
-            // @ts-ignore: next-line
             scrollRef.current.adjustScrollTrack()
             dispatch(Actions.Weapons.scrollMenu())
         })
     }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
 
     return (
-        <ErScroll
+        <ErScrollClass
             ref={scrollRef}
             contentRef={menuRef}
             contentProps={{
@@ -111,6 +110,6 @@ export const WeaponMenuGrid = (): JSX.Element => {
             }}
         >
             {sections}
-        </ErScroll>
+        </ErScrollClass>
     )
 }

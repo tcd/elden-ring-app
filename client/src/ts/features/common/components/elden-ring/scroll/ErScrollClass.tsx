@@ -10,9 +10,9 @@ import { Box, BoxProps } from "@mui/material"
 import { mergeProps } from "@app/util"
 
 export interface ErScrollClassProps {
-    ref: Ref<ErScrollClass>
     children: ReactNode
-    contentRef: React.MutableRefObject<HTMLDivElement>
+    containerRef: MutableRefObject<ErScrollClass>
+    contentRef: MutableRefObject<HTMLDivElement>
     containerProps?: BoxProps
     contentProps?: BoxProps
     disableScroll?: boolean
@@ -32,14 +32,28 @@ const initialState: ErScrollClassState = {
     isDragging: false,
 }
 
+const defaultProps: Partial<ErScrollClassProps> = {
+    containerRef: null,
+    contentRef: null,
+    children: null,
+    containerProps: {
+        className: "er__scrollBar__container",
+    },
+    contentProps: {
+        className: "er__scrollBar__content",
+    },
+    disableScroll: false,
+}
+
 export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassState> {
 
-    private scrollTrackRef: MutableRefObject<HTMLDivElement>
-    private scrollThumbRef: MutableRefObject<HTMLDivElement>
-    private observer: ResizeObserver
+    public scrollTrackRef: MutableRefObject<HTMLDivElement>
+    public scrollThumbRef: MutableRefObject<HTMLDivElement>
+    public observer: ResizeObserver
+    public mergedProps: ErScrollClassProps
 
     static defaultProps: Partial<ErScrollClassProps> = {
-        ref: null,
+        containerRef: null,
         contentRef: null,
         children: null,
         containerProps: {
@@ -52,10 +66,20 @@ export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassSt
     }
 
     constructor(props: ErScrollClassProps) {
-        super(mergeProps(ErScrollClass.defaultProps, props))
+        super(props)
         this.state = { ...initialState }
         this.scrollTrackRef = createRef<HTMLDivElement>()
         this.scrollThumbRef = createRef<HTMLDivElement>()
+        this.mergedProps = mergeProps(defaultProps, props)
+
+        this.adjustScrollTrack    = this.adjustScrollTrack.bind(this)
+        this.handleResize         = this.handleResize.bind(this)
+        this.handleScrollButton   = this.handleScrollButton.bind(this)
+        this.handleTrackClick     = this.handleTrackClick.bind(this)
+        this.handleThumbPosition  = this.handleThumbPosition.bind(this)
+        this.handleThumbMousedown = this.handleThumbMousedown.bind(this)
+        this.handleThumbMouseup   = this.handleThumbMouseup.bind(this)
+        this.handleThumbMousemove = this.handleThumbMousemove.bind(this)
     }
 
     public adjustScrollTrack(): void {
@@ -64,9 +88,9 @@ export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassSt
 
     public render(): JSX.Element {
         return (
-            <Box ref={this.props.ref} {...this.props.containerProps}>
-                <Box ref={this.props.contentRef} {...this.props.contentProps}>
-                    {this.props.children}
+            <Box {...this.mergedProps.containerProps}>
+                <Box ref={this.mergedProps.contentRef} {...this.mergedProps.contentProps}>
+                    {this.mergedProps.children}
                 </Box>
                 <div className="er__scrollBar__scrollbar">
                     <button
@@ -103,7 +127,7 @@ export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassSt
         document.addEventListener("mousemove",  this.handleThumbMousemove)
         document.addEventListener("mouseup",    this.handleThumbMouseup)
         document.addEventListener("mouseleave", this.handleThumbMouseup)
-        const ref = this.props.contentRef.current
+        const ref = this.mergedProps.contentRef.current
         const { clientHeight: trackSize } = this.scrollTrackRef.current
         this.observer = new ResizeObserver(() => {
             this.handleResize(ref, trackSize)
@@ -116,31 +140,31 @@ export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassSt
         document.removeEventListener("mousemove",  this.handleThumbMousemove)
         document.removeEventListener("mouseup",    this.handleThumbMouseup)
         document.removeEventListener("mouseleave", this.handleThumbMouseup)
-        this.observer?.unobserve(this.props.contentRef.current)
-        this.props.contentRef.current.removeEventListener("scroll", this.handleThumbPosition)
+        this.observer?.unobserve(this.mergedProps.contentRef.current)
+        this.mergedProps.contentRef.current.removeEventListener("scroll", this.handleThumbPosition)
     }
 
-    private handleResize(ref: HTMLDivElement, trackSize: number): void {
+    public handleResize(ref: HTMLDivElement, trackSize: number): void {
         const { clientHeight, scrollHeight } = ref
         const thumbHeight = Math.max((clientHeight / scrollHeight) * trackSize, 20)
         this.setState({ thumbHeight })
     }
 
-    private handleScrollButton(direction: "up" | "down"): void {
-        if (this.props.disableScroll) { return null }
-        const { current } = this.props.contentRef
+    public handleScrollButton(direction: "up" | "down"): void {
+        if (this.mergedProps.disableScroll) { return null }
+        const { current } = this.mergedProps.contentRef
         if (current) {
             const scrollAmount = direction === "down" ? 200 : -200
             current.scrollBy({ top: scrollAmount, behavior: "smooth" })
         }
     }
 
-    private handleTrackClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
+    public handleTrackClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
         e.preventDefault()
         e.stopPropagation()
-        if (this.props.disableScroll) { return null }
+        if (this.mergedProps.disableScroll) { return null }
         const { current: trackCurrent } = this.scrollTrackRef
-        const { current: contentCurrent } = this.props.contentRef
+        const { current: contentCurrent } = this.mergedProps.contentRef
         if (trackCurrent && contentCurrent) {
             const { clientY } = e
             const target = e.target as HTMLDivElement
@@ -156,12 +180,12 @@ export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassSt
         }
     }
 
-    private handleThumbPosition(): void {
-        if (this.props.disableScroll) { return null }
-        if (!this.props.contentRef.current || !this.scrollTrackRef.current || !this.scrollThumbRef.current) {
+    public handleThumbPosition(): void {
+        if (this.mergedProps.disableScroll) { return null }
+        if (!this.mergedProps.contentRef.current || !this.scrollTrackRef.current || !this.scrollThumbRef.current) {
             return null
         }
-        const { scrollTop: contentTop, scrollHeight: contentHeight } = this.props.contentRef.current
+        const { scrollTop: contentTop, scrollHeight: contentHeight } = this.mergedProps.contentRef.current
         const { clientHeight: trackHeight } = this.scrollTrackRef.current
         let newTop = (+contentTop / +contentHeight) * trackHeight
         newTop = Math.min(newTop, trackHeight - this.state.thumbHeight)
@@ -169,42 +193,42 @@ export class ErScrollClass extends Component<ErScrollClassProps, ErScrollClassSt
         thumb.style.top = `${newTop}px`
     }
 
-    private handleThumbMousedown(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
+    public handleThumbMousedown(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void {
         e.preventDefault()
         e.stopPropagation()
-        if (this.props.disableScroll) { return null }
+        if (this.mergedProps.disableScroll) { return null }
         this.setState({ scrollStartPosition: e.clientY })
-        if (this.props.contentRef.current) {
-            this.setState({ initialScrollTop: this.props.contentRef.current.scrollTop })
+        if (this.mergedProps.contentRef.current) {
+            this.setState({ initialScrollTop: this.mergedProps.contentRef.current.scrollTop })
         }
         this.setState({ isDragging: true })
     }
 
-    private handleThumbMouseup(e: MouseEvent): void {
+    public handleThumbMouseup(e: MouseEvent): void {
         e.preventDefault()
         e.stopPropagation()
-        if (this.props.disableScroll) { return null }
+        if (this.mergedProps.disableScroll) { return null }
         if (this.state.isDragging) {
             this.setState({ isDragging: false })
         }
     }
 
-    private handleThumbMousemove(e: MouseEvent): void {
+    public handleThumbMousemove(e: MouseEvent): void {
         e.preventDefault()
         e.stopPropagation()
-        if (this.props.disableScroll) { return null }
+        if (this.mergedProps.disableScroll) { return null }
         if (this.state.isDragging) {
             const {
                 scrollHeight: contentScrollHeight,
                 offsetHeight: contentOffsetHeight,
-            } = this.props.contentRef.current
+            } = this.mergedProps.contentRef.current
 
             const deltaY = (e.clientY - this.state.scrollStartPosition) * (contentOffsetHeight / this.state.thumbHeight)
             const newScrollTop = Math.min(
                 this.state.initialScrollTop + deltaY,
                 contentScrollHeight - contentOffsetHeight,
             )
-            this.props.contentRef.current.scrollTop = newScrollTop
+            this.mergedProps.contentRef.current.scrollTop = newScrollTop
         }
     }
 
