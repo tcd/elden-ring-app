@@ -66,9 +66,9 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll(props: 
     }
 
     const handleTrackClick = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
-        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
+        if (disableScroll) { return null }
         const { current: trackCurrent } = scrollTrackRef
         const { current: contentCurrent } = contentRef
         if (trackCurrent && contentCurrent) {
@@ -100,27 +100,27 @@ export const ErScroll = forwardRef<any, ErScrollProps>(function ErScroll(props: 
     }, [thumbHeight, contentRef, disableScroll])
 
     const handleThumbMousedown = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
-        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
+        if (disableScroll) { return null }
         setScrollStartPosition(e.clientY)
         if (contentRef.current) setInitialScrollTop(contentRef.current.scrollTop)
         setIsDragging(true)
     }, [contentRef, disableScroll])
 
     const handleThumbMouseup = useCallback((e: MouseEvent): void => {
-        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
+        if (disableScroll) { return null }
         if (isDragging) {
             setIsDragging(false)
         }
     }, [isDragging, disableScroll])
 
     const handleThumbMousemove = useCallback((e: MouseEvent): void => {
-        if (disableScroll) { return null }
         e.preventDefault()
         e.stopPropagation()
+        if (disableScroll) { return null }
         if (isDragging) {
             const {
                 scrollHeight: contentScrollHeight,
