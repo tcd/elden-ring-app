@@ -53,6 +53,7 @@ const webpackConfig = {
             "@functions": path.join(ROOT_FOLDER, "src", "styles", "helpers", "functions", "_index.scss"),
             "@mixins":    path.join(ROOT_FOLDER, "src", "styles", "helpers", "mixins",    "_index.scss"),
             "@variables": path.join(ROOT_FOLDER, "src", "styles", "helpers", "variables", "_index.scss"),
+            "@media":     path.join(ROOT_FOLDER, "src", "styles", "helpers", "helpers",   "_mediaQueries.scss"),
         },
     },
     optimization: {

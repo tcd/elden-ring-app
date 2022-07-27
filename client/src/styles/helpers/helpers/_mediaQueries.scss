@@ -1,0 +1,7 @@
+/**
+ * - https://github.com/eduardoboucas/include-media/issues/194
+ */
+@use "@variables" as var;
+
+$breakpoints: var.$breakpoints;
+@import "include-media/dist/include-media";
