@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { TALISMAN_SORT_GROUPS, RefMap } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover } from "@app/shared"
+import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
 import { TalismanMenuImage } from "@app/features/talismans/components"
 
 export const TalismanMenuGrid = (): JSX.Element => {
@@ -15,6 +15,7 @@ export const TalismanMenuGrid = (): JSX.Element => {
     const talismans       = useSelector(Selectors.Builder.api.talismans)
     const menuHasScrolled = useSelector(Selectors.Talismans.menuHasScrolled)
 
+    const scrollRef = createRef<IErScroll>()
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = talismans.reduce((acc, value) => {
@@ -61,16 +62,20 @@ export const TalismanMenuGrid = (): JSX.Element => {
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
+            scrollRef.current?.adjustScrollTrack()
             dispatch(Actions.Talismans.scrollMenu())
         })
-    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
 
     return (
-        <div
-            ref={menuRef}
-            className="er__equipmentMenu__gridColumn"
+        <ErScroll
+            ref={scrollRef}
+            contentRef={menuRef}
+            contentProps={{
+                className: "er__equipmentMenu__gridColumn",
+            }}
         >
             {sections}
-        </div>
+        </ErScroll>
     )
 }

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { ARMOR_SORT_GROUPS, RefMap } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover } from "@app/shared"
+import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
 import { ArmorMenuImage } from "@app/features/armor/components"
 
 export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
@@ -15,6 +15,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     const activeName      = useSelector(Selectors.Armor.activeName)
     const menuHasScrolled = useSelector(Selectors.Armor.menuHasScrolled)
 
+    const scrollRef = createRef<IErScroll>()
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = armor.reduce((acc, value) => {
@@ -62,17 +63,20 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
+            scrollRef.current?.adjustScrollTrack()
             dispatch(Actions.Armor.scrollMenu())
         })
-    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
-
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
 
     return (
-        <div
-            ref={menuRef}
-            className="er__equipmentMenu__gridColumn"
+        <ErScroll
+            ref={scrollRef}
+            contentRef={menuRef}
+            contentProps={{
+                className: "er__equipmentMenu__gridColumn",
+            }}
         >
             {sections}
-        </div>
+        </ErScroll>
     )
 }
