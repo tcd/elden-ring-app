@@ -3,7 +3,7 @@ import { render } from "react-dom"
 import "bootstrap/dist/js/bootstrap.bundle"
 
 import { App } from "./ts"
-import "./styles/index.scss"
+import "./styles/main.scss"
 
 window.jail = window.jail ?? {}
 
