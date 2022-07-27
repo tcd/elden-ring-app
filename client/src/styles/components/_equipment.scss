@@ -1,5 +1,5 @@
-@use "@variables"as v;
-@use "@mixins"as m;
+@use "@variables"as var;
+@use "@mixins"as mixins;
 
 .er__equipmentSlotsRow {
     // width: 100%;
@@ -30,9 +30,9 @@
             padding: 10px;
         }
     }
-    @include m.pointerOnHover;
+    @include mixins.pointerOnHover;
 
-    @include m.media-tablet-down {
+    @include mixins.media-tablet-down {
         width:  55px;
         height: 60px;
     }
@@ -48,11 +48,11 @@
             border-radius: 1px;
             background: radial-gradient(
                 ellipse,
-                rgba(v.$equipment-slot-overlay-color, 0.0)  40%,
-                rgba(v.$equipment-slot-overlay-color, 0.4) 100%
+                rgba(var.$equipment-slot-overlay-color, 0.0)  40%,
+                rgba(var.$equipment-slot-overlay-color, 0.4) 100%
             );
             /* offset-x | offset-y | blur-radius | spread-radius | color */
-            box-shadow: 0px 0px 2px 1px rgba(v.$equipment-slot-overlay-color, 0.5);
+            box-shadow: 0px 0px 2px 1px rgba(var.$equipment-slot-overlay-color, 0.5);
         }
     }
 }

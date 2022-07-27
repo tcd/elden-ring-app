@@ -1,4 +1,4 @@
-@use "@variables"as v;
+@use "@variables"as var;
 @use "@mixins" as mixins;
 
 .er__tallCard {
@@ -28,7 +28,7 @@
         span.er__tallCard__section--title {
             white-space: nowrap;
             font-size: $sub-title-font-size;
-            color: v.$gold;
+            color: var.$gold;
         }
     }
 
@@ -40,23 +40,23 @@
         justify-content: start;
 
         svg {
-            color: v.$gold;
+            color: var.$gold;
             margin-left: 5px;
             margin-right: 5px;
             // https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
             // drop-shadow(offset-x offset-y blur-radius color)
-            filter: drop-shadow(v.$text-shadow-offset v.$text-shadow-offset 0.075px rgb(0, 0, 0));
+            filter: drop-shadow(var.$text-shadow-offset var.$text-shadow-offset 0.075px rgb(0, 0, 0));
         }
 
         span.er__tallCard__header--title {
             white-space: nowrap;
             height: 100%;
             padding-top: .2em;
-            color: v.$gold;
+            color: var.$gold;
             font-size: $main-title-font-size;
             margin-bottom: 0px;
             padding-bottom: 0px;
-            text-shadow: v.$text-shadow-offset v.$text-shadow-offset black
+            text-shadow: var.$text-shadow-offset var.$text-shadow-offset black
         }
     }
 

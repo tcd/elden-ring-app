@@ -1,16 +1,16 @@
 @use "sass:color";
-@use "@variables"as v;
+@use "@variables"as var;
 
 #er__aboutPage {
     height: calc(100vh - 60px - 101px - 1px);
     // height: 100vh;
     overflow-y: auto;
     a {
-        color: v.$gold;
+        color: var.$gold;
         &:active,
         &:focus,
         &:hover {
-            color: color.scale(v.$gold, $lightness: -15%);
+            color: color.scale(var.$gold, $lightness: -15%);
             text-decoration: underline;
         }
     }

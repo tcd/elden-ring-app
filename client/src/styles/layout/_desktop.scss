@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "@variables" as v;
+@use "@variables" as var;
 @use "@mixins" as mixins;
 @use "@functions" as functions;
 
@@ -37,7 +37,7 @@
             // padding-left: 40px;
 
             .er__header__icon {
-                @include mixins.square(v.$header-imageSize);
+                @include mixins.square(var.$header-imageSize);
                 margin-left: 40px;
                 margin-right: 15px;
 
@@ -46,7 +46,7 @@
 
             .er__header__title {
                 margin-bottom: 0px;
-                color: v.$gold;
+                color: var.$gold;
                 font-size: 34px;
             }
         }
@@ -72,9 +72,9 @@
 }
 
 #er__sideNav__backdrop {
-    z-index: v.$zindex-sideNav-backdrop;
+    z-index: var.$zindex-sideNav-backdrop;
     // background-color: blue !important;
-    background: functions.customGradient(90deg, v.$sideNav-bg, v.$sideNav-backdrop-bgStops);
+    background: functions.customGradient(90deg, var.$sideNav-bg, var.$sideNav-backdrop-bgStops);
     @include mixins.media-mobile {
         background: transparent;
     }
@@ -89,7 +89,7 @@
 // .MuiDrawer-paper,
 // .MuiDrawer-root,
 #er__sideNav {
-    z-index: v.$zindex-sideNav;
+    z-index: var.$zindex-sideNav;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -98,12 +98,12 @@
     // height: 100%;
     // margin: 0px;
     // padding: 0px;
-    width: v.$sideNav-width;
+    width: var.$sideNav-width;
     // background-color: v.$sideNav-bg;
-    background: functions.customGradient(90deg, v.$sideNav-bg, v.$sideNav-bgStops);
+    background: functions.customGradient(90deg, var.$sideNav-bg, var.$sideNav-bgStops);
 
     @include mixins.media-mobile {
-        width: math.div(v.$sideNav-width, 1.5);
+        width: math.div(var.$sideNav-width, 1.5);
     }
 
     ul#er__sideNavItems {
@@ -123,7 +123,7 @@
             }
             span.er__sideNavItemTitle {
                 margin-bottom: 0px;
-                color: v.$gold;
+                color: var.$gold;
                 font-size: 20px;
             }
 

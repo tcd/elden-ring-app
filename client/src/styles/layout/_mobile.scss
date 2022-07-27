@@ -1,5 +1,5 @@
 @use "include-media" as im;
-@use "@variables" as v;
+@use "@variables" as var;
 @use "@mixins" as mixins;
 @use "@functions" as functions;
 
@@ -30,13 +30,13 @@
         display: flex;
 
         // height: (v.$mobileHeader-height + (v.$mobileHeader-topMargin * 2));
-        height: v.$mobileHeader-height;
+        height: var.$mobileHeader-height;
 
         #er__appHeader__background {
             position: absolute;
             top: 0;
             left: 0;
-            margin-top: v.$mobileHeader-topMargin;
+            margin-top: var.$mobileHeader-topMargin;
             height: 86px;
             width: 100%;
             // background-image: m.cloudflareUrl("ui/header/400/public");
@@ -56,8 +56,8 @@
             left: 0;
 
             width: 100%;
-            height: v.$mobileHeader-contentHeight;
-            margin-top: v.$mobileHeader-topMargin;
+            height: var.$mobileHeader-contentHeight;
+            margin-top: var.$mobileHeader-topMargin;
 
             display: flex;
             flex-flow: row nowrap;
@@ -66,7 +66,7 @@
             // padding-left: 40px;
 
             .er__appHeader__icon {
-                @include mixins.square(v.$header-imageSize);
+                @include mixins.square(var.$header-imageSize);
                 margin-left: 35px;
                 margin-right: 20px;
 
@@ -75,7 +75,7 @@
 
             .er__appHeader__title {
                 margin-bottom: 0px;
-                color: v.$gold;
+                color: var.$gold;
                 font-size: 34px;
             }
         }

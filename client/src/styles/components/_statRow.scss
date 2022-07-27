@@ -1,15 +1,15 @@
-@use "@variables" as v;
+@use "@variables" as var;
 
-.er__statRow__column--color-blue { color: v.$blue; }
-.er__statRow__column--color-red  { color: v.$red;  }
+.er__statRow__column--color-blue { color: var.$blue; }
+.er__statRow__column--color-red  { color: var.$red;  }
 
 @mixin stat-row-styles {
-    font-size: v.$stat-row-font-size;
-    color: v.$body-color-fg;
+    font-size: var.$stat-row-font-size;
+    color: var.$body-color-fg;
 
     span {
         white-space: nowrap;
-        font-size: v.$stat-row-font-size;
+        font-size: var.$stat-row-font-size;
     }
 }
 

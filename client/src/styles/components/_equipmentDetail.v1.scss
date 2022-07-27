@@ -1,4 +1,4 @@
-@use "@variables"as v;
+@use "@variables"as var;
 @use "@mixins" as mixins;
 
 .er__equipmentDetailV1 {
@@ -44,8 +44,8 @@
     }
 
     .er__equipmentDetailV1__imageWrapper {
-        @include mixins.square($size: v.$equipmentDetail-primary-image-size, $max: true);
-        @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-primary-image-size--mobile, $max: true); }
+        @include mixins.square($size: var.$equipmentDetail-primary-image-size, $max: true);
+        @include mixins.media-mobile { @include mixins.square($size: var.$equipmentDetail-primary-image-size--mobile, $max: true); }
         @include mixins.equipmentMenuBoxShadow;
         padding: 5px;
 
@@ -58,8 +58,8 @@
     }
 
     .er__equipmentDetailV1__secondaryImageWrapper {
-        @include mixins.square($size: v.$equipmentDetail-secondary-image-size, $max: true);
-        @include mixins.media-mobile { @include mixins.square($size: v.$equipmentDetail-secondary-image-size--mobile, $max: true); }
+        @include mixins.square($size: var.$equipmentDetail-secondary-image-size, $max: true);
+        @include mixins.media-mobile { @include mixins.square($size: var.$equipmentDetail-secondary-image-size--mobile, $max: true); }
         @include mixins.equipmentMenuBoxShadow;
         margin-right: 6px;
         padding: 5px;

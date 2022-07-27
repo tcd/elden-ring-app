@@ -1,16 +1,16 @@
-@use "@variables" as v;
+@use "@variables" as var;
 
 .er__popover {
-    z-index: v.$zindex-popover;
+    z-index: var.$zindex-popover;
     box-sizing: border-box;
     // https://developer.mozilla.org/en-US/docs/Web/CSS/padding#syntax
     /* top | right | bottom | left */
     padding: 5px 15px 5px 10px;
     border-radius: 4px;
-    color: v.$popover-color-fg;
-    background-color: v.$popover-color-bg;
+    color: var.$popover-color-fg;
+    background-color: var.$popover-color-bg;
     opacity: 0.90;
-    border: v.$popover-border-size solid v.$popover-color-border;
+    border: var.$popover-border-size solid var.$popover-color-border;
     white-space: pre-wrap;
     font-size: 18px;
 }

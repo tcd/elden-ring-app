@@ -1,14 +1,14 @@
-@use "@variables" as v;
+@use "@variables" as var;
 
 @mixin rounded-top-border {
-    border-top-right-radius: v.$data-table-border-radius;
-    border-top-left-radius: v.$data-table-border-radius;
+    border-top-right-radius: var.$data-table-border-radius;
+    border-top-left-radius: var.$data-table-border-radius;
 };
 
 @mixin rounded-bottom-border {
     // border-radius: v.$data-table-border-radius;
-    border-bottom-right-radius: v.$data-table-border-radius;
-    border-bottom-left-radius: v.$data-table-border-radius;
+    border-bottom-right-radius: var.$data-table-border-radius;
+    border-bottom-left-radius: var.$data-table-border-radius;
 };
 
 @mixin transparent-background {
@@ -17,7 +17,7 @@
 };
 
 @mixin table-border {
-    border: 1px solid v.$data-table-border-color;
+    border: 1px solid var.$data-table-border-color;
 }
 
 .data-table-wrapper {
@@ -55,15 +55,15 @@
 }
 .rdt_TableCell {
     @include transparent-background;
-    color: v.$data-table-color-fg;
-    border-bottom: 1px solid v.$data-table-border-color;
-    border-left: 1px solid v.$data-table-border-color;
+    color: var.$data-table-color-fg;
+    border-bottom: 1px solid var.$data-table-border-color;
+    border-left: 1px solid var.$data-table-border-color;
     &:nth-child(1) {
         border-left: none;
     }
 }
 .rdt_TableHeader {
-    background-color: v.$data-table-header-color-bg;
+    background-color: var.$data-table-header-color-bg;
     // @include transparent-background;
     // position: sticky;
     // top: 0;
@@ -73,10 +73,10 @@
     @include transparent-background;
 }
 .rdt_TableHead {
-    background-color: v.$data-table-header-color-bg;
+    background-color: var.$data-table-header-color-bg;
     // @include transparent-background;
-    border-top: 1px solid v.$data-table-border-color;
-    border-bottom: 1px solid v.$data-table-border-color;
+    border-top: 1px solid var.$data-table-border-color;
+    border-bottom: 1px solid var.$data-table-border-color;
     // @include rounded-top-border;
     font-weight: bold;
     // position: sticky;
@@ -84,11 +84,11 @@
     // z-index: 10;
 }
 .rdt_TableHeadRow {
-    background-color: v.$data-table-header-color-bg;
+    background-color: var.$data-table-header-color-bg;
     @include transparent-background;
     @include rounded-top-border;
     height: 56px;
-    color: v.$data-table-color-fg;
+    color: var.$data-table-color-fg;
     // position: sticky;
     // top: 0;
     // z-index: 10;

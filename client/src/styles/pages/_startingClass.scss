@@ -1,15 +1,15 @@
-@use "@variables"as v;
-@use "@mixins"as m;
+@use "@variables"as var;
+@use "@mixins"as mixins;
 @use "@functions" as functions;
 
 #root.startingClassPage {
     background-image: none !important;
-    background: v.$startingClass-bg-gradient-color-left !important;
+    background: var.$startingClass-bg-gradient-color-left !important;
     background: linear-gradient(
         90deg,
-        v.$startingClass-bg-gradient-color-left    0%,
-        v.$startingClass-bg-gradient-color-right  50%,
-        v.$startingClass-bg-gradient-color-right 100%
+        var.$startingClass-bg-gradient-color-left    0%,
+        var.$startingClass-bg-gradient-color-right  50%,
+        var.$startingClass-bg-gradient-color-right 100%
     ) !important;
 }
 
@@ -129,7 +129,7 @@
 
                 // scroll-snap-align: start;
 
-                @include m.pointerOnHover;
+                @include mixins.pointerOnHover();
 
                 .er__startingClass__menu__optionHoverOverlay,
                 .er__startingClass__menu__optionOverlay {
@@ -141,18 +141,18 @@
                 }
 
                 .er__startingClass__menu__optionOverlay {
-                    z-index: v.$zindex-startingClass-background;
+                    z-index: var.$zindex-startingClass-background;
                     background: functions.customGradient(180deg, $option-overlay-color-bg, $option-overlay-stops);
                 }
 
                 .er__startingClass__menu__optionHoverOverlay {
-                    z-index: v.$zindex-startingClass-hover;
+                    z-index: var.$zindex-startingClass-hover;
                     &:hover {
                         // opacity: 0.1;
                         background: radial-gradient(
                             ellipse,
-                            rgba(v.$equipment-slot-overlay-color, 0.0)  40%,
-                            rgba(v.$equipment-slot-overlay-color, 0.4) 100%
+                            rgba(var.$equipment-slot-overlay-color, 0.0)  40%,
+                            rgba(var.$equipment-slot-overlay-color, 0.4) 100%
                         );
                     }
                 }
@@ -166,7 +166,7 @@
                     align-items: center;
                     justify-content: flex-end;
                     position: relative;
-                    z-index: v.$zindex-startingClass-content;
+                    z-index: var.$zindex-startingClass-content;
 
                     .er__statRow__column span { font-size: 1.25rem; }
                 }

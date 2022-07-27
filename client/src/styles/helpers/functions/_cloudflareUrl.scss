@@ -1,4 +1,4 @@
-@use "@variables"as v;
+@use "@variables"as var;
 
 /// Generates an image url for an asset on Cloudflare.
 ///
@@ -7,7 +7,7 @@
 
     // https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/Weapons/Blasphemous%20Blade/256
 
-    $url: "https://imagedelivery.net/" + v.$cloudflare-hash + "/" + $path;
+    $url: "https://imagedelivery.net/" + var.$cloudflare-hash + "/" + $path;
 
     @return url($url);
 }

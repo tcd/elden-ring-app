@@ -1,6 +1,6 @@
 // https://cssgradient.io/
 
-@use "@variables" as v;
+@use "@variables" as var;
 @use "@mixins" as mixins;
 @use "@functions" as functions;
 
@@ -22,7 +22,7 @@
 }
 
 .er__affinityModal__overlay {
-    z-index: v.$zindex-modal-backdrop;
+    z-index: var.$zindex-modal-backdrop;
     position: absolute;
     top: 0;
     left: 0;
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: v.$modal-backdrop-bg;
+    background-color: var.$modal-backdrop-bg;
 }
 
 .er__affinityModal {
@@ -76,8 +76,8 @@
         // 100%: 0.60,
     );
 
-    $affinity-item-color-bg: lighten(v.$modal-color-bg, 5%);
-    $affinity-item-color-active-bg: lighten(v.$modal-color-bg, 15%);
+    $affinity-item-color-bg: lighten(var.$modal-color-bg, 5%);
+    $affinity-item-color-active-bg: lighten(var.$modal-color-bg, 15%);
     // $affinity-item-color-active-bg: blue;
     $affinity-item-stops: (
         0%:   0.10,
@@ -97,8 +97,8 @@
     align-items: stretch;
     justify-content: stretch;
 
-    background-color: v.$modal-color-bg;
-    background: functions.customGradient(90deg, v.$modal-color-bg, $body-stops);
+    background-color: var.$modal-color-bg;
+    background: functions.customGradient(90deg, var.$modal-color-bg, $body-stops);
 
     header {
         text-align: center;
@@ -107,8 +107,8 @@
         span {
             font-size: 20px;
             // line-height: 20px;
-            color: v.$gold;
-            text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+            color: var.$gold;
+            text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
         }
     }
 
@@ -160,8 +160,8 @@
     .top-border {
         height: 3px;
         background:
-            functions.customGradient(90deg, v.$modal-color-bg, $top-bottom-border-stops),
-            v.$modal-color-border;
+            functions.customGradient(90deg, var.$modal-color-bg, $top-bottom-border-stops),
+            var.$modal-color-border;
     }
 
     .inner-border-wrapper {
@@ -174,7 +174,7 @@
             text-align: center;
             width: 90%;
             background:
-                functions.customGradient(90deg, v.$modal-color-bg, $inner-border-stops),
+                functions.customGradient(90deg, var.$modal-color-bg, $inner-border-stops),
                 linear-gradient(180deg, rgba(66,62,53,0.5) 0%, rgba(76,74,63,1) 50%, rgba(69,65,57,0.5) 100%);
             height: 2px;
         }
@@ -188,8 +188,8 @@
         width: 3px;
         // background-color: blue;
         background:
-            functions.customGradient(180deg, v.$modal-color-bg, $top-bottom-border-stops),
-            v.$modal-color-border;
+            functions.customGradient(180deg, var.$modal-color-bg, $top-bottom-border-stops),
+            var.$modal-color-border;
     }
 
     .right-border-wrapper {
@@ -200,8 +200,8 @@
         width: 3px;
         // background-color: blue;
         background:
-            functions.customGradient(180deg, v.$modal-color-bg, $top-bottom-border-stops),
-            v.$modal-color-border;
+            functions.customGradient(180deg, var.$modal-color-bg, $top-bottom-border-stops),
+            var.$modal-color-border;
     }
 
 }

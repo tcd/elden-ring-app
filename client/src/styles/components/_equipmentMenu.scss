@@ -1,11 +1,11 @@
-@use "@variables"as v;
+@use "@variables"as var;
 @use "@mixins" as mixins;
 @use "@functions" as functions;
 
 .er__equipmentMenu {
 
-    margin-left:  v.$equipment-menu-horizontal-margin;
-    margin-right: v.$equipment-menu-horizontal-margin;
+    margin-left:  var.$equipment-menu-horizontal-margin;
+    margin-right: var.$equipment-menu-horizontal-margin;
 
     // ======================================================================
     // Styles
@@ -22,14 +22,14 @@
         padding: 20px;
         margin-top: 25px;
         border-radius: 5px;
-        background-color: rgba(v.$equipmentMenu-grid-background, 0.3);
+        background-color: rgba(var.$equipmentMenu-grid-background, 0.3);
     }
 
     .er__equipmentMenu__gridSectionBorder {
         height:        3px;
         margin-top:    6px;
         margin-bottom: 6px;
-        background: functions.customGradient(90deg, v.$equipmentMenu-grid-divider, v.$equipmentGrid-border-stops);
+        background: functions.customGradient(90deg, var.$equipmentMenu-grid-divider, var.$equipmentGrid-border-stops);
     }
 
     section.er__equipmentMenu__gridSection {
@@ -41,12 +41,12 @@
                 @include mixins.pointerOnHover();
             }
             box-sizing: border-box;
-            min-height: v.$equipmentMenu-min-cell-size;
-            min-width:  v.$equipmentMenu-min-cell-size;
+            min-height: var.$equipmentMenu-min-cell-size;
+            min-width:  var.$equipmentMenu-min-cell-size;
             margin: 5px;
             border-radius: 2px;
             &.inactive {
-                background: functions.customGradient(180deg, v.$equipmentMenu-cell-color, v.$equipmentCell-border-stops);
+                background: functions.customGradient(180deg, var.$equipmentMenu-cell-color, var.$equipmentCell-border-stops);
             }
             &.active {
                 background-color: #615e4b;
@@ -59,14 +59,14 @@
             position: relative;
             .er__equipmentMenu__requirementsNotMet {
 
-                background-image: url(v.$image-red-x);
+                background-image: url(var.$image-red-x);
                 background-repeat: no-repeat;
                 background-size: 100% 100%;
 
                 position: absolute;
-                top:   v.$equipmentMenu-redX-padding;
-                right: v.$equipmentMenu-redX-padding;
-                @include mixins.square(v.$equipmentMenu-redX-size);
+                top:   var.$equipmentMenu-redX-padding;
+                right: var.$equipmentMenu-redX-padding;
+                @include mixins.square(var.$equipmentMenu-redX-size);
             }
         }
     }

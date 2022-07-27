@@ -1,6 +1,6 @@
 // https://cssgradient.io/
 
-@use "@variables" as v;
+@use "@variables" as var;
 @use "@functions" as functions;
 
 .er__dialog,
@@ -9,7 +9,7 @@
 }
 
 .er__dialog__overlay {
-    z-index: v.$zindex-modal-backdrop;
+    z-index: var.$zindex-modal-backdrop;
     position: absolute;
     top: 0;
     left: 0;
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: v.$modal-backdrop-bg;
+    background-color: var.$modal-backdrop-bg;
 }
 
 .er__dialog {
@@ -29,15 +29,15 @@
     align-items: stretch;
     justify-content: stretch;
 
-    background-color: v.$modal-color-bg;
-    background: functions.customGradient(90deg, v.$modal-color-bg, v.$modal-body-stops);
+    background-color: var.$modal-color-bg;
+    background: functions.customGradient(90deg, var.$modal-color-bg, var.$modal-body-stops);
 
     header {
         text-align: center;
         font-size: 25px;
         padding-top: 10px;
         padding-bottom: 10px;
-        text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+        text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
     }
 
     footer {
@@ -59,7 +59,7 @@
     .top-border {
         height: 3px;
         background:
-            functions.customGradient(90deg, v.$modal-color-bg, v.$modal-top-bottom-border-stops),
-            v.$modal-color-border;
+            functions.customGradient(90deg, var.$modal-color-bg, var.$modal-top-bottom-border-stops),
+            var.$modal-color-border;
     }
 }

@@ -1,4 +1,4 @@
-@use "@variables"as v;
+@use "@variables"as var;
 
 #er__builder__root {
     height: 100%;
@@ -21,8 +21,8 @@
         & > :nth-child(1) {
             box-sizing: border-box;
             width: 45%;
-            margin-left:  v.$variable-menu-horizontal-margin;
-            margin-right: v.$variable-menu-horizontal-margin;
+            margin-left:  var.$variable-menu-horizontal-margin;
+            margin-right: var.$variable-menu-horizontal-margin;
         }
 
         & > :nth-child(2) {
@@ -48,8 +48,8 @@
     justify-content: space-between;
     align-items: center;
     span {
-        color: v.$body-color-fg;
-        font-size: v.$stat-row-font-size;
+        color: var.$body-color-fg;
+        font-size: var.$stat-row-font-size;
     }
 }
 
@@ -71,7 +71,7 @@
     }
     svg {
         transform: scale(0.6);
-        filter: drop-shadow(v.$text-shadow-offset v.$text-shadow-offset 0.75px rgb(0, 0, 0));
-        color: v.$body-color-fg;
+        filter: drop-shadow(var.$text-shadow-offset var.$text-shadow-offset 0.75px rgb(0, 0, 0));
+        color: var.$body-color-fg;
     }
 }

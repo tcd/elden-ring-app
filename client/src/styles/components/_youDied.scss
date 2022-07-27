@@ -1,4 +1,4 @@
-@use "@variables" as v;
+@use "@variables" as var;
 @use "@mixins" as mixins;
 @use "@functions" as functions;
 
@@ -14,9 +14,9 @@
     align-items: center;
     background: linear-gradient(
         90deg,
-        v.$startingClass-bg-gradient-color-left    0%,
-        v.$startingClass-bg-gradient-color-right  50%,
-        v.$startingClass-bg-gradient-color-right 100%
+        var.$startingClass-bg-gradient-color-left    0%,
+        var.$startingClass-bg-gradient-color-right  50%,
+        var.$startingClass-bg-gradient-color-right 100%
     );
 
     div {
@@ -27,12 +27,12 @@
         height: 150px;
         width: 100%;
         text-align: center;
-        background: functions.customGradient(180deg, v.$youDied-black, v.$youDied-gradient-stops);
+        background: functions.customGradient(180deg, var.$youDied-black, var.$youDied-gradient-stops);
         a.er__youDied__link,
         span {
             font-family: "OptimusPrinceps";
             font-size: 4rem;
-            color: v.$youDied-red;
+            color: var.$youDied-red;
             text-decoration: none;
         }
     }
