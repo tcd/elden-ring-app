@@ -9,8 +9,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover, ErScroll, ErScrollClass, IErScroll } from "@app/shared"
-import { WeaponSkillMenuImage, AffinityModal } from "@app/features/weapons/components"
+import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
+import { AffinityModal, WeaponSkillMenuImage } from "@app/features/weapons/components"
 
 export const WeaponSkillMenuGrid = (): JSX.Element => {
 
@@ -19,13 +19,7 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     const activeName       = useSelector(Selectors.Weapons.smithing.activeSkillName)
     const skills           = useSelector(Selectors.Weapons.smithing.skillOptions)
     const menuHasScrolled  = useSelector(Selectors.Weapons.menuHasScrolled)
-    // const choosingAffinity = useSelector(Selectors.Weapons.smithing.choosingAffinity)
-
-    const classNames = ["er__equipmentMenu__gridColumn"]
-
-    // if (choosingAffinity) {
-    //     classNames.push("no-vertical-overflow")
-    // }
+    const choosingAffinity = useSelector(Selectors.Weapons.smithing.choosingAffinity)
 
     const menuRef = createRef<HTMLDivElement>()
     const scrollRef = createRef<IErScroll>()
@@ -88,11 +82,14 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
         <ErScroll
             ref={scrollRef}
             contentRef={menuRef}
+            disableScroll={choosingAffinity}
             contentProps={{
+                id: "weapon-skill-grid-menu",
                 className: "er__equipmentMenu__gridColumn",
             }}
         >
             {sections}
+            <AffinityModal />
         </ErScroll>
     )
 }

@@ -40,6 +40,10 @@ const defaultProps: Partial<ErScrollProps> = {
 
 /**
  * @note original code by [Tom VanAntwerp](https://www.thisdot.co/blog/creating-custom-scrollbars-with-react)
+ *
+ * ## Reference
+ *
+ * - [Element: wheel event](https://developer.mozilla.org/en-US/docs/Web/API/Element/wheel_event)
  */
 export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(props: ErScrollProps, ref) {
     const {
@@ -124,6 +128,14 @@ export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(p
         }
     }, [isDragging, disableScroll])
 
+    const handleWheel = useCallback((e: WheelEvent): void => {
+        if (disableScroll) {
+            e.preventDefault()
+            e.stopPropagation()
+        }
+        return null
+    }, [disableScroll])
+
     const handleThumbMousemove = useCallback((e: MouseEvent): void => {
         e.preventDefault()
         e.stopPropagation()
@@ -163,15 +175,17 @@ export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(p
 
     // Listen for mouse events to handle scrolling by dragging the thumb
     useEffect(() => {
-        document.addEventListener("mousemove", handleThumbMousemove)
-        document.addEventListener("mouseup", handleThumbMouseup)
+        document.addEventListener("mousemove",  handleThumbMousemove)
+        document.addEventListener("mouseup",    handleThumbMouseup)
         document.addEventListener("mouseleave", handleThumbMouseup)
+        document.addEventListener("wheel",      handleWheel, { passive: false })
         return () => {
-            document.removeEventListener("mousemove", handleThumbMousemove)
-            document.removeEventListener("mouseup", handleThumbMouseup)
+            document.removeEventListener("mousemove",  handleThumbMousemove)
+            document.removeEventListener("mouseup",    handleThumbMouseup)
             document.removeEventListener("mouseleave", handleThumbMouseup)
+            document.removeEventListener("wheel",      handleWheel)
         }
-    }, [handleThumbMousemove, handleThumbMouseup])
+    }, [handleThumbMousemove, handleThumbMouseup, handleWheel])
 
     useImperativeHandle(ref, () => ({
         adjustScrollTrack: () => {

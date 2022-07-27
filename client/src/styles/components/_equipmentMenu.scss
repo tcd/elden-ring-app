@@ -36,6 +36,10 @@
         display: grid;
         grid-template-columns: 20% 20% 20% 20% 20%;
         .er__equipmentMenu__gridCell {
+            @include mixins.pointerOnHover();
+            * {
+                @include mixins.pointerOnHover();
+            }
             box-sizing: border-box;
             min-height: v.$equipmentMenu-min-cell-size;
             min-width:  v.$equipmentMenu-min-cell-size;
@@ -47,7 +51,6 @@
             &.active {
                 background-color: #615e4b;
             }
-            @include mixins.pointerOnHover;
         }
         .er__equipmentMenu__imageWrapper {
             @include mixins.square(100%);
