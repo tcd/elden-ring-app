@@ -1,9 +1,8 @@
-import { useSelector, useDispatch } from "react-redux"
+import { useDispatch } from "react-redux"
 import { useNavigate, NavigateFunction, To } from "react-router-dom"
-import { Box } from "@mui/material"
 
 import { HeaderIconId, HeaderIconIds, PageName, PageTitle } from "@app/types"
-import { AppDispatch, Actions, Selectors } from "@app/state"
+import { AppDispatch, Actions } from "@app/state"
 import { getImageSrcManual } from "@app/util"
 
 // =============================================================================
