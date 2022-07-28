@@ -27,7 +27,7 @@ class Configuration implements IConfig {
     }
 
     public production(): boolean {
-        return this.nodeEnv == "production"
+        return this.nodeEnv != "development"
     }
 
     public toJson(): any {
