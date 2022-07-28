@@ -3,18 +3,24 @@ import {
     useEffect,
     Fragment,
     useRef,
+    CSSProperties,
+    useCallback,
+    useState,
 } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
+import { MouseOverPopover, ErScroll, IErScroll, useLogging } from "@app/shared"
 import { AffinityModal, WeaponSkillMenuImage } from "@app/features/weapons/components"
 
 export const WeaponSkillMenuGrid = (): JSX.Element => {
 
     const dispatch = useDispatch()
+    const log = useLogging()
+
+    const [offset, setOffset] = useState<number>(0)
 
     const activeName       = useSelector(Selectors.Weapons.smithing.activeSkillName)
     const skills           = useSelector(Selectors.Weapons.smithing.skillOptions)
@@ -23,6 +29,18 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
 
     const menuRef = createRef<HTMLDivElement>()
     const scrollRef = createRef<IErScroll>()
+
+    // const boxCSS: CSSProperties = {
+    //     top: scrollRef.current?.getTopOffset() ?? 0,
+    // }
+
+    const boxCSS = (): CSSProperties => {
+        const top =  scrollRef?.current?.topOffset
+        log.info({ top })
+        return {
+            top,
+        }
+    }
 
     const refs: RefMap = skills.reduce((acc, value) => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -74,6 +92,7 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
             scrollRef.current?.adjustScrollTrack()
+            // console.log({ topOffsetInCallback: scrollRef.current?.scrollTop })
             dispatch(Actions.Weapons.scrollMenu())
         })
     }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
@@ -90,6 +109,7 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
         >
             {sections}
             <AffinityModal />
+            <div id="er__target" style={boxCSS()}/>
         </ErScroll>
     )
 }

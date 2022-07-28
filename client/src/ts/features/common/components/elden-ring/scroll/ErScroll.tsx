@@ -44,6 +44,7 @@ const defaultProps: Partial<ErScrollProps> = {
  * ## Reference
  *
  * - [Element: wheel event](https://developer.mozilla.org/en-US/docs/Web/API/Element/wheel_event)
+ * - [horrible code don't use it as an example](https://github.com/tcd/elden-ring-app/blob/feature/mobile-styles/client/src/ts/features/builder/components/starting-class/utility/StartingMenuScroller.ts)
  */
 export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(props: ErScrollProps, ref) {
     const {
@@ -57,7 +58,7 @@ export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(p
     const scrollTrackRef = useRef<HTMLDivElement>(null)
     const scrollThumbRef = useRef<HTMLDivElement>(null)
     const observer = useRef<ResizeObserver | null>(null)
-    const [thumbHeight, setThumbHeight] = useState(20)
+    const [thumbHeight, setThumbHeight] = useState<number>(20)
     const [scrollStartPosition, setScrollStartPosition] = useState<number | null>(null)
     const [initialScrollTop, setInitialScrollTop] = useState<number>(0)
     const [isDragging, setIsDragging] = useState(false)
@@ -191,6 +192,7 @@ export const ErScroll = forwardRef<IErScroll, ErScrollProps>(function ErScroll(p
         adjustScrollTrack: () => {
             handleThumbPosition()
         },
+        scrollTop: contentRef.current.scrollTop,
     }))
 
     return (

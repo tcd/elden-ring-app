@@ -26,6 +26,11 @@
         grid-template: auto / 1fr 50px;
         overflow: hidden;
         position: relative;
+
+        @include media("<=tablet") {
+            background-color: blue;
+
+        }
     }
 
     &__content {
@@ -162,4 +167,13 @@
             border-color: $sb-center-1 transparent transparent transparent;
         }
     }
+}
+
+#er__target {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    height: 20px;
 }
