@@ -124,6 +124,20 @@ const webpackConfig = {
             //     test: /\.json$/,
             //     loader: "json-loader",
             // },
+            {
+                test: /\.mp3$/,
+                type: "asset/resource",
+                // generator: {
+                //     filename: "fonts/[name][ext][query]",
+                // },
+                // use: [{
+                //     loader: "file-loader",
+                //     options: {
+                //         name: "[name].[ext]",
+                //         outputPath: "fonts/",
+                //     },
+                // }],
+            },
         ],
     },
 }

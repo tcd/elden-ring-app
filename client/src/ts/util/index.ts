@@ -1,6 +1,7 @@
 export * from "./calculations"
 export * from "./theme"
 export * from "./srk"
+export * from "./audio"
 
 export * from "./ammunition-slot-display-name"
 export * from "./ApiClient"
