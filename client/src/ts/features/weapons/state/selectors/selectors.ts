@@ -278,7 +278,6 @@ export const selectAshOfWarOptions = (rootState: RootState): WeaponSkill[] => {
     if (isBlank(skills)) {
         return []
     }
-    // debugger
     return skills.filter(x => x.compatible_weapon_types.includes(weapon.weapon_type))
 }
 
