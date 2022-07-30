@@ -1,7 +1,7 @@
 {
     "private": true,
     "author": "Clay Dunston <dunstontc@gmail.com>",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "scripts": {
         "start": "npm run serve",
         "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack/webpack.config.dev.js",
@@ -11,7 +11,8 @@
         "build:prod:build": "cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.config.prod.js --mode production",
         "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack/webpack.config.dev.js --open",
         "build-and-deploy": "npm run build:prod && npm run deploy",
-        "deploy": "node ./config/scripts/deploy.js",
+        "deploy:prod": "cross-env NODE_ENV=production node ./config/scripts/deploy.js",
+        "deploy:staging": "cross-env NODE_ENV=staging node ./config/scripts/deploy.js",
         "tag": "node ./config/scripts/tag.mjs",
         "docs:sass": "cross-env sassdoc ./src/styles --config ./config/.sassdocrc.yml"
     },
@@ -93,6 +94,7 @@
         "@types/scheduler": "^0.16.2",
         "dotenv": "^16.0.1",
         "inquirer": "^9.0.2",
+        "moment": "^2.29.4",
         "rimraf": "^3.0.2",
         "s3-sync-client": "^3.0.3",
         "sassdoc": "^2.7.4",
