@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./.env
+source ./config/.env
 
 aws s3 sync ./dist $S3_BUCKET_URI
 

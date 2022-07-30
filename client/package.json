@@ -11,11 +11,12 @@
         "build:prod:build": "cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.config.prod.js --mode production",
         "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack/webpack.config.dev.js --open",
         "build-and-deploy": "npm run build:prod && npm run deploy",
-        "deploy": "./config/deploy.sh",
-        "tag": "node ./etc/scripts/tag.mjs",
+        "deploy": "node ./config/scripts/deploy.js",
+        "tag": "node ./config/scripts/tag.mjs",
         "docs:sass": "cross-env sassdoc ./src/styles --config ./config/.sassdocrc.yml"
     },
     "dependencies": {
+        "@aws-sdk/client-s3": "^3.137.0",
         "@babel/core": "^7.17.8",
         "@babel/plugin-transform-runtime": "^7.17.0",
         "@babel/preset-env": "^7.16.11",
@@ -80,6 +81,7 @@
         "webpack-dev-server": "^4.7.4"
     },
     "devDependencies": {
+        "@aws-sdk/client-cloudfront": "^3.137.0",
         "@types/jquery": "^3.5.14",
         "@types/lodash": "^4.14.180",
         "@types/node": "^17.0.23",

@@ -25,7 +25,8 @@ module.exports = {
         "@typescript-eslint",
     ],
     ignorePatterns: [
-        "./config/**.js",
+        "config/**/*.js",
+        "config/**/*.mjs",
     ],
     rules: {
         "semi": ["warn", "never"],
