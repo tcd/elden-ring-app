@@ -5,14 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][keep-a-changelog], and this project adheres to [Semantic Versioning][semver].
 
 
-## [Unreleased]
+## [0.6.1] - 2022-07-30
 ### Added
 - Add GitHub issue templates
+- Add cross-platform deployment scripts
+- Begin work on custom scroll-bars
 ### Changed 
 - Rename folder `right-side-panels` to `character-status`
 - Evenly distribute rows in main equipment detail section
 - Sync styles for both *Character Status* panels
-### Fixed
 
 
 ## [0.6.0] - 2022-07-19

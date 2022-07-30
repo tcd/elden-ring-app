@@ -1,7 +1,7 @@
 {
     "private": true,
     "author": "Clay Dunston <dunstontc@gmail.com>",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "scripts": {
         "start": "npm run serve",
         "build:dev": "cross-env NODE_ENV=development webpack --config ./config/webpack/webpack.config.dev.js",
