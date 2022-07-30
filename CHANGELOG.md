@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][keep-a-changelog], and this project adheres to [Semantic Versioning][semver].
 
 
+## [0.6.2] - 2022-07-30
+### Fixed 
+- Fixed new deployment script
+
+
 ## [0.6.1] - 2022-07-30
 ### Added
 - Add GitHub issue templates
