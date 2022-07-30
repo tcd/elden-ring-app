@@ -3,7 +3,7 @@ const path = require("path")
 const dotEnv = require("dotenv-webpack")
 
 const shared = require("./webpack.config.shared")
-const { ROOT_FOLDER } = require("./helpers")
+const { ROOT_FOLDER, ENV_FOLDER } = require("./helpers")
 
 /**
  * See [Webpack Configuration docs](https://webpack.js.org/configuration/) for more information.
@@ -33,7 +33,7 @@ const webpackConfig = {
     plugins: [
         ...shared.plugins,
         new dotEnv({
-            path: path.resolve(ROOT_FOLDER, ".env.dev"),
+            path: path.resolve(ENV_FOLDER, ".env.dev"),
         }),
     ],
 }
