@@ -1,4 +1,4 @@
-import mp3 from "../../../assets/audio/menu-click.mp3"
+import { MENU_CLICK } from "@app/data/audio"
 
 /**
  * ## Reference
@@ -6,7 +6,7 @@ import mp3 from "../../../assets/audio/menu-click.mp3"
  * - [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
  */
 export const menuClick = async () => {
-    const audioElement = new Audio(mp3)
+    const audioElement = new Audio(MENU_CLICK)
     await audioElement.play()
     audioElement.remove()
 }

@@ -1,4 +1,4 @@
-import mp3 from "../../../assets/audio/slider.mp3"
+import { SLIDER_AUDIO } from "@app/data/audio"
 
 /**
  * ## Reference
@@ -6,7 +6,7 @@ import mp3 from "../../../assets/audio/slider.mp3"
  * - [HTMLAudioElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement)
  */
 export const slider = async () => {
-    const audioElement = new Audio(mp3)
+    const audioElement = new Audio(SLIDER_AUDIO)
     await audioElement.play()
     audioElement.remove()
 }
