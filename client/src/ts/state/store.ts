@@ -13,6 +13,7 @@ import storage from "redux-persist/lib/storage" // defaults to localStorage for 
 import { getPersistConfig } from "redux-deep-persist"
 
 import { FeatureKeys } from "@app/constants"
+import { CONFIG } from "@app/util"
 import {
     AmmunitionSlice,
     ArmorSlice,
@@ -79,7 +80,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
     reducer: persistedReducer,
-    devTools: true,
+    devTools: !CONFIG.production(),
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         // immutableCheck:    { ignoredPaths: ["Builder.everythingRequest.response"] },
         // serializableCheck: { ignoredPaths: ["Builder.everythingRequest.response"] },
