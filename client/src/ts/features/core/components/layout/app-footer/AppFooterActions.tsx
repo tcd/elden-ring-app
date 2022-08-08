@@ -21,6 +21,7 @@ const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
     "equipment":      <EquipmentFooter />,
     "level-up":       <NoFooter />,
     "not-found":      <NoFooter />,
+    "quick-items":    <NoFooter />,
     "settings":       <NoFooter />,
     "spell":          <NoFooter />,
     "starting-class": <NoFooter />,
