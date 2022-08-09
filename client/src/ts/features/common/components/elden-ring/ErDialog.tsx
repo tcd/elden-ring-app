@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 import ReactModal from "react-modal"
 
 import { ErButton } from "@app/shared"
@@ -9,7 +9,7 @@ export interface ErDialogOption {
 }
 
 export interface ErDialogProps {
-    title: string | JSX.Element
+    title: string | ReactNode
     isOpen: boolean
     options: ErDialogOption[]
     onClose?: () => any
@@ -17,7 +17,7 @@ export interface ErDialogProps {
 
 export const ErDialog = (props: ErDialogProps): JSX.Element => {
 
-    const options = props.options.map(({ title, handler }) => {
+    const $options = props.options.map(({ title, handler }) => {
         return (
             <ErButton key={title} onClick={handler}>
                 {title}
@@ -33,17 +33,17 @@ export const ErDialog = (props: ErDialogProps): JSX.Element => {
             onRequestClose={props.onClose}
             ariaHideApp={false}
         >
-            <div className="top-border"></div>
+            <div className="er__dialog__topBorder" />
 
             <header>
                 {props.title}
             </header>
 
             <main className="er__dialog__content">
-                {options}
+                {$options}
             </main>
 
-            <div className="bottom-border"></div>
+            <div className="er__dialog__bottomBorder" />
         </ReactModal>
     )
 }

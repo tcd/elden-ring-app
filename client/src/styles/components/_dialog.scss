@@ -22,7 +22,11 @@
 }
 
 .er__dialog {
-    min-width: 45%;
+    min-width: 50%;
+
+    @include media("<=tablet") {
+        min-width: 75%;
+    }
 
     display: flex;
     flex-direction: column;
@@ -53,10 +57,17 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+
+        @include media("<=tablet") {
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
     }
 
-    .bottom-border,
-    .top-border {
+    .er__dialog__bottomBorder,
+    .er__dialog__topBorder {
         height: 3px;
         background:
             functions.customGradient(90deg, var.$modal-color-bg, var.$modal-top-bottom-border-stops),
