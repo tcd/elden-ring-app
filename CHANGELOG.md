@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][keep-a-changelog], and this project adheres to [Semantic Versioning][semver].
 
 ## [Unreleased]
-## Fixed
-- Disable redux devtools in production.
-- Fixed links in `CHANGELOG.md`.
+### Added
+- Add `soundsEnabled` to core state
+### Fixed
+- Disable redux devtools in production
+- Fix links in `CHANGELOG.md`
+- Fix starting class menu on mobile
 
 
 ## [0.6.2] - 2022-07-30

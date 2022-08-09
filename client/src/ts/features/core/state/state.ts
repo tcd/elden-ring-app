@@ -13,12 +13,14 @@ export interface CoreState {
     reduxReady: boolean
     sideNavOpened: boolean
     pageName: PageName
+    soundsEnabled: boolean
 }
 
 export const INITIAL_CORE_STATE: CoreState = {
     reduxReady: true,
     sideNavOpened: false,
     pageName: null,
+    soundsEnabled: true,
 }
 
 export const CoreSlice = createSlice({

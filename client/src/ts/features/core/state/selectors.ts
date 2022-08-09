@@ -17,6 +17,7 @@ const selectCoreSlice = (rootState: RootState): CoreState => {
 const selectReduxReady       = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.reduxReady
 const selectPageName         = (rootState: RootState): PageName => selectCoreSlice(rootState)?.pageName ?? null
 const selectSideNavOpened    = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.sideNavOpened
+const selectSoundsEnabled    = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.soundsEnabled ?? false
 
 const selectTitle = (rootState: RootState): PageTitle => {
     const pageName = selectPageName(rootState)
@@ -46,4 +47,5 @@ export const CoreSelectors = {
     title: selectTitle,
     titleIconUrl: selectTitleIconUrl,
     sideNavOpened: selectSideNavOpened,
+    soundsEnabled: selectSoundsEnabled,
 }
