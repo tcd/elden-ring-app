@@ -5,12 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][keep-a-changelog], and this project adheres to [Semantic Versioning][semver].
 
 ## [Unreleased]
+
+
+## [0.7.0] - 2022-08-08
 ### Added
 - Add `soundsEnabled` to core state
 ### Fixed
 - Disable redux devtools in production
 - Fix links in `CHANGELOG.md`
 - Fix starting class menu on mobile
+- Fix mobile styles on starting menu page.
 
 
 ## [0.6.2] - 2022-07-30
@@ -103,7 +107,8 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 [usehooks-ts]: https://github.com/juliencrn/usehooks-ts
 [react-hotkeys-hook]: https://github.com/JohannesKlauss/react-hotkeys-hook
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.6.2...HEAD
+[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/tcd/elden-ring-app/compare/v0.6.2...v0.7.0
 [0.6.2]: https://github.com/tcd/elden-ring-app/compare/v0.6.1...v0.6.2 
 [0.6.1]: https://github.com/tcd/elden-ring-app/compare/v0.6.0...v0.6.1 
 [0.6.0]: https://github.com/tcd/elden-ring-app/compare/v0.5.2...v0.6.0 
