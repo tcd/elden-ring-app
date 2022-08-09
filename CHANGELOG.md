@@ -97,6 +97,8 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 [keep-a-changelog]: https://keepachangelog.com/en/1.0.0/
 [semver]: https://semver.org/spec/v2.0.0.html
 [keen-slider]: https://github.com/rcbyr/keen-slider
+[usehooks-ts]: https://github.com/juliencrn/usehooks-ts
+[react-hotkeys-hook]: https://github.com/JohannesKlauss/react-hotkeys-hook
 
 [Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.6.2...HEAD
 [0.6.2]: https://github.com/tcd/elden-ring-app/compare/v0.6.1...v0.6.2 
