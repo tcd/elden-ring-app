@@ -34,4 +34,11 @@
             background: radial-gradient(ellipse, rgba(var.$equipment-slot-overlay-color, 0.0) 40%, rgba(var.$equipment-slot-overlay-color, 0.4) 100%);
         }
     }
+
+    .er__dialog__content & {
+        @include media("<=tablet") {
+            margin-top:    15px;
+            margin-bottom: 15px;
+        }
+    }
 }
