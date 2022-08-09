@@ -1,4 +1,5 @@
 export * from "./ComparisonColor"
+export * from "./DeviceSize"
 export * from "./Encumbrance"
 export * from "./EquipmentType"
 export * from "./ILinkData"

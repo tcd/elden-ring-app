@@ -1,4 +1,5 @@
-import { BreakpointsOptions } from "@mui/material"
+// import type { B}
+import type { BreakpointsOptions } from "@mui/material"
 
 const _defaults: BreakpointsOptions = {
     keys: [
@@ -35,3 +36,13 @@ export const breakpointsOptions: BreakpointsOptions = {
         xxl: 1400, // extra-extra-large
     },
 }
+
+type Breakpoint =
+    | "xs"
+    | "sm"
+    | "md"
+    | "lg"
+    | "xl"
+    | "xxl"
+
+export const breakpoints: Record<Breakpoint, number> = breakpointsOptions.values
