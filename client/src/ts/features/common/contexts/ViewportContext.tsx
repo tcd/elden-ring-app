@@ -4,10 +4,21 @@ import {
     useEffect,
     useContext,
     useCallback,
-    useRef,
 } from "react"
 
-import { isBlank, logger } from "@app/util"
+import type { DeviceSize } from "@app/types"
+import { isBlank, logger, ScreenSize } from "@app/util"
+import { breakpoints } from "@app/theme"
+
+/**
+ * - https://www.w3.org/TR/screen-orientation/#screen-orientation-types-and-locks
+ * - https://www.w3.org/TR/screen-orientation/#ref-for-dom-orientationtype-1
+ */
+type OrientationType =
+    | "portrait-primary"
+    | "portrait-secondary"
+    | "landscape-primary"
+    | "landscape-secondary"
 
 export type Orientation = "portrait" | "landscape"
 
@@ -16,6 +27,7 @@ export interface IViewportContext {
     height: number
     orientation: Orientation
     onMobile: boolean
+    deviceSize: DeviceSize
 }
 
 // const getOrientation = (width: number, height: number) => {
@@ -37,6 +49,7 @@ const viewportContext = createContext<IViewportContext>({
     height: 0,
     orientation: null,
     onMobile: (window.innerWidth < 700),
+    deviceSize: ScreenSize.deviceSize,
 })
 
 export const ViewportProvider = ({ children }) => {
@@ -45,22 +58,43 @@ export const ViewportProvider = ({ children }) => {
     const [height, setHeight]           = useState<number>(window.innerHeight)
     const [orientation, setOrientation] = useState<Orientation>(null)
     const [onMobile, setOnMobile]       = useState<boolean>(window.innerWidth < 700)
+    const [deviceSize, setDeviceSize]   = useState<DeviceSize>(ScreenSize.deviceSize)
 
-    const getOrientation = (): Orientation => {
-        // const screenOrientation = screen.orientation
-        return null
-    }
+    const getOrientation = useCallback((): Orientation => {
+        const screenOrientation = screen.orientation
+        if (!isBlank(screenOrientation)) {
+            return screenOrientation.type.startsWith("landscape") ? "landscape" : "portrait"
+        }
+        return (width > height) ? "landscape" : "portrait"
+    }, [width, height])
 
     const getOnMobile = useCallback((): boolean => {
         return (window.innerWidth < 700)
     }, [])
+
+    const getDeviceSize = useCallback((): DeviceSize => {
+        if (width >= breakpoints.xl) { return "desktop" }
+        if (width >= breakpoints.lg) { return "laptop"  }
+        if (width >= breakpoints.md) { return "tablet"  }
+        return "mobile"
+    }, [width])
 
     const handleWindowResize = useCallback(() => {
         setWidth(window.innerWidth)
         setHeight(window.innerHeight)
         setOrientation(getOrientation)
         setOnMobile(getOnMobile())
-    }, [setOnMobile, setHeight, setOrientation, setWidth, getOnMobile])
+        setDeviceSize(getDeviceSize())
+    }, [
+        setOnMobile,
+        setWidth,
+        setHeight,
+        setOrientation,
+        getOnMobile,
+        setDeviceSize,
+        getDeviceSize,
+        getOrientation,
+    ])
 
     useEffect(() => {
         window.addEventListener("resize", handleWindowResize)
@@ -73,6 +107,7 @@ export const ViewportProvider = ({ children }) => {
             height,
             orientation,
             onMobile,
+            deviceSize,
         }}>
             {children}
         </viewportContext.Provider>
