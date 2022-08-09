@@ -1,9 +1,9 @@
 import { isBlank } from "@app/util"
 
 // export type Orientation = "hamburger" | "hotdog" // it's funny. thanks for reading my code.
-export type Orientation = "portrait" | "landscape"
+type Orientation = "portrait" | "landscape"
 
-export type DeviceSize = "mobile" | "tablet" | "laptop" | "desktop"
+type DeviceSize = "mobile" | "tablet" | "laptop" | "desktop"
 
 /**
  * ## Reference

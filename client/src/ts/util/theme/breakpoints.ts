@@ -30,7 +30,7 @@ export const breakpointsOptions: BreakpointsOptions = {
     values: {
         xs:  0,    // extra-small
         sm:  550,  // small
-        md:  770,  // medium
+        md:  750,  // medium
         lg:  990,  // large
         xl:  1200, // extra-large
         xxl: 1400, // extra-extra-large

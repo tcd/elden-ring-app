@@ -1,42 +1,31 @@
-// import KeenSlider, { TrackSlidesConfigOption } from "keen-slider"
-import useTheme from "@mui/material/styles/useTheme"
-import useMediaQuery from "@mui/material/useMediaQuery"
-import { useKeenSlider } from "keen-slider/react"
 import IconButton from "@mui/material/IconButton"
+import { useKeenSlider } from "keen-slider/react"
 
+import type { DeviceSize } from "@app/types"
 import { STARTING_CLASSES } from "@app/data"
-import { getImageSrcManual } from "@app/util"
+import { getImageSrcManual, ScreenSize } from "@app/util"
 import { StartingClassOption } from "."
 
 const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
 const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
 
+const slidesByDevice: Record<DeviceSize, number> = {
+    mobile:  1,
+    tablet:  2,
+    laptop:  3,
+    desktop: 3,
+}
+
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
-    const theme = useTheme()
-    // @ts-ignore: next-line
-    const onMobile = useMediaQuery(theme.breakpoints.down("sm"))
-
-    // useEffect(() => {
-    //     const ignore = (event: Event) => {
-    //         // console.log(event)
-    //         event.stopPropagation()
-    //         event.preventDefault()
-    //     }
-    //     document.getElementById("er__startingClass__menu__options").addEventListener("scroll", ignore)
-    //     document.getElementById("er__startingClass__menu__options").addEventListener("mousewheel", ignore)
-    //     return () => {
-    //         document.getElementById("er__startingClass__menu__options")?.removeEventListener("scroll", ignore)
-    //         document.getElementById("er__startingClass__menu__options")?.removeEventListener("mousewheel", ignore)
-    //     }
-    // }, [])
+    const slidesPerView = slidesByDevice[ScreenSize.deviceSize] ?? 3
 
     const [refCallback, slider] = useKeenSlider(
         {
             selector: ".er__startingClass__menu__option",
             loop: true,
             slides: {
-                perView: onMobile ? 1 : 3,
+                perView: slidesPerView,
                 spacing: (): number => { return 20 },
             },
             defaultAnimation: {
