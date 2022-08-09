@@ -28,8 +28,7 @@
         position: relative;
 
         @include media("<=tablet") {
-            background-color: blue;
-
+            // background-color: blue;
         }
     }
 
@@ -169,11 +168,11 @@
     }
 }
 
-#er__target {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    background-color: red;
-    height: 20px;
-}
+// #er__target {
+//     position: absolute;
+//     top: 100px;
+//     left: 0;
+//     width: 100%;
+//     background-color: red;
+//     height: 20px;
+// }
