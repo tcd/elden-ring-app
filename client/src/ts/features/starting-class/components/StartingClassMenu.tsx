@@ -1,6 +1,8 @@
-import { IconButton } from "@mui/material"
 // import KeenSlider, { TrackSlidesConfigOption } from "keen-slider"
+import useTheme from "@mui/material/styles/useTheme"
+import useMediaQuery from "@mui/material/useMediaQuery"
 import { useKeenSlider } from "keen-slider/react"
+import IconButton from "@mui/material/IconButton"
 
 import { STARTING_CLASSES } from "@app/data"
 import { getImageSrcManual } from "@app/util"
@@ -10,6 +12,10 @@ const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
 const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
 
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
+
+    const theme = useTheme()
+    // @ts-ignore: next-line
+    const onMobile = useMediaQuery(theme.breakpoints.down("sm"))
 
     // useEffect(() => {
     //     const ignore = (event: Event) => {
@@ -30,7 +36,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
             selector: ".er__startingClass__menu__option",
             loop: true,
             slides: {
-                perView: 3,
+                perView: onMobile ? 1 : 3,
                 spacing: (): number => { return 20 },
             },
             defaultAnimation: {
