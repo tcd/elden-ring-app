@@ -14,7 +14,7 @@ interface QuickItemSlotProps {
     item: QuickItem
 }
 
-const quickItemSlotContent = forwardRef<HTMLLIElement, QuickItemSlotProps>(({ id, item }: QuickItemSlotProps, ref) => {
+export const QuickItemSlotContent = forwardRef<HTMLLIElement, QuickItemSlotProps>(function QuickItemSlotContent({ id, item }: QuickItemSlotProps, ref) {
 
     const dispatch = useDispatch()
     // const navigate = useNavigate()
@@ -55,6 +55,3 @@ const quickItemSlotContent = forwardRef<HTMLLIElement, QuickItemSlotProps>(({ id
         />
     )
 })
-
-quickItemSlotContent.displayName = "QuickItemSlotContent"
-export const QuickItemSlotContent = quickItemSlotContent

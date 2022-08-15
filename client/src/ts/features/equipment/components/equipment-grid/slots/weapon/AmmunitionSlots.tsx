@@ -9,7 +9,7 @@ export interface AmmunitionSlotProps {
     id: AmmunitionSlotId
 }
 
-const arrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(({ id }: AmmunitionSlotProps, ref) => {
+export const ArrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function ArrowSlot({ id }: AmmunitionSlotProps, ref) {
 
     const dispatch = useDispatch()
 
@@ -42,10 +42,7 @@ const arrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(({ id }: Ammuni
     )
 })
 
-arrowSlot.displayName = "ArrowSlot"
-export const ArrowSlot = arrowSlot
-
-const boltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(({ id }: AmmunitionSlotProps, ref) => {
+export const BoltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function BoltSlot({ id }: AmmunitionSlotProps, ref) {
 
     const dispatch = useDispatch()
 
@@ -78,6 +75,3 @@ const boltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(({ id }: Ammunit
     )
 
 })
-
-boltSlot.displayName = "BoltSlot"
-export const BoltSlot = boltSlot

@@ -13,7 +13,7 @@ interface TalismanSlotProps {
     talisman: Talisman
 }
 
-const talismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(({ id, talisman }: TalismanSlotProps, ref) => {
+export const TalismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(function TalismanSlotContent({ id, talisman }: TalismanSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -60,6 +60,3 @@ const talismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(({ id, 
         />
     )
 })
-
-talismanSlotContent.displayName = "TalismanSlotContent"
-export const TalismanSlotContent = talismanSlotContent

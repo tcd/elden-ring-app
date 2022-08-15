@@ -13,7 +13,7 @@ interface ArmorSlotProps {
     armor?: Armor
 }
 
-const armorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(({ type, armor }: ArmorSlotProps, ref) => {
+export const ArmorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(function ArmorSlotContent({ type, armor }: ArmorSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -58,6 +58,3 @@ const armorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(({ type, armo
         />
     )
 })
-
-armorSlotContent.displayName = "ArmorSlotContent"
-export const ArmorSlotContent = armorSlotContent

@@ -8,8 +8,9 @@ import {
 } from "@mui/icons-material"
 
 import { AttributeName } from "@app/types"
-import { ErCard } from "@app/shared"
+import { Audio } from "@app/util"
 import { Actions, Selectors } from "@app/state"
+import { ErCard } from "@app/shared"
 
 export interface AttributeRowProps {
     name: AttributeName
@@ -21,10 +22,12 @@ export const AttributeRow = ({ name, value }: AttributeRowProps): JSX.Element =>
     const dispatch = useDispatch()
 
     const incrementAttribute = () => {
+        Audio.slider()
         dispatch(Actions.LevelUp.incrementAttribute({ attribute: name }))
     }
 
     const decrementAttribute = () => {
+        Audio.slider()
         dispatch(Actions.LevelUp.decrementAttribute({ attribute: name }))
     }
 

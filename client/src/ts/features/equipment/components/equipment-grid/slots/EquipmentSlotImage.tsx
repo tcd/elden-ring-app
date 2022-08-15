@@ -2,7 +2,12 @@ import { forwardRef, ReactNode } from "react"
 import { Box, BoxProps, SxProps } from "@mui/material"
 
 // import { EquipmentType } from "@app/types"
-import { EquipmentSlotImageUrls, cssUrl, EquipmentSlotBackgroundId } from "@app/util"
+import {
+    EquipmentSlotImageUrls,
+    cssUrl,
+    EquipmentSlotBackgroundId,
+    Audio,
+} from "@app/util"
 
 export interface EquipmentSlotImageProps {
     bgType: EquipmentSlotBackgroundId
@@ -29,6 +34,14 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
             img,
             BoxProps,
         } = { ...defaultProps, ...props }
+
+        if (BoxProps?.onMouseEnter) {
+            const _onMouseEnter = BoxProps.onMouseEnter
+            BoxProps.onMouseEnter = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+                Audio.menuClick()
+                _onMouseEnter(event)
+            }
+        }
 
         const bgSrc = cssUrl(EquipmentSlotImageUrls[bgType])
         const filled = img?.src != null

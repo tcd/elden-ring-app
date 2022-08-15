@@ -12,7 +12,7 @@ export interface WeaponSlotProps {
     data: WeaponSlotData
 }
 
-const weaponSlotContent = forwardRef<HTMLLIElement, WeaponSlotProps>((props: WeaponSlotProps, ref) => {
+export const WeaponSlotContent = forwardRef<HTMLLIElement, WeaponSlotProps>(function WeaponSlotContent(props: WeaponSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -61,6 +61,3 @@ const weaponSlotContent = forwardRef<HTMLLIElement, WeaponSlotProps>((props: Wea
         />
     )
 })
-
-weaponSlotContent.displayName = "WeaponSlotContent"
-export const WeaponSlotContent = weaponSlotContent
