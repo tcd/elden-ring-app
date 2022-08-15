@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog][keep-a-changelog], and this project adheres to [Semantic Versioning][semver].
 
 ## [Unreleased]
+### Fixed
+- Update mobile dialog styles
+- Remove console.log statement in viewport context
 
 
 ## [0.7.0] - 2022-08-08
@@ -14,7 +17,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 - Disable redux devtools in production
 - Fix links in `CHANGELOG.md`
 - Fix starting class menu on mobile
-- Fix mobile styles on starting menu page.
+- Fix mobile styles on starting menu page
 
 
 ## [0.6.2] - 2022-07-30

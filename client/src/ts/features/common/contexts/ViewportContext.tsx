@@ -116,7 +116,7 @@ export const ViewportProvider = ({ children }) => {
 
 export const useViewport = (): IViewportContext => {
     const context = useContext(viewportContext)
-    logger.debug(context)
+    // logger.debug(context)
     return context
     // const {
     //     width,
