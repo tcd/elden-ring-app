@@ -13,6 +13,7 @@ import {
 } from "@app/features/core"
 import {
     BuilderPage,
+    MobileBuilderPage,
     StatusPage,
 } from "@app/features/builder"
 import {
@@ -104,9 +105,9 @@ const mobileRoutes: RouteObject[] = [
         children: [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },
-            { path: "/",          element: <BuilderPage /> },
+            { path: "/",          element: <MobileEquipmentPage /> },
             { path: "/about",     element: <AboutPage /> },
-            { path: "/builder",   element: <BuilderPage /> },
+            { path: "/builder",   element: <MobileBuilderPage /> },
             { path: "/checklist", element: <ChecklistPage /> },
             { path: "/settings",  element: <SettingsPage /> },
             { path: "/status",    element: <StatusPage /> },
