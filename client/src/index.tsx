@@ -1,7 +1,5 @@
 import { render } from "react-dom"
 
-import "bootstrap/dist/js/bootstrap.bundle"
-
 import { App } from "./ts"
 import "./styles/main.scss"
 
