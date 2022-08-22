@@ -3,6 +3,7 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const { ROOT_FOLDER } = require("./helpers")
 const version = require("../../package.json").version
@@ -39,6 +40,9 @@ const webpackConfig = {
         new webpack.DefinePlugin({
             "process.env.VERSION": JSON.stringify(`v${version}`),
         }),
+        // new BundleAnalyzerPlugin({
+        //     excludeAssets: "kitchenSink.dist.js"
+        // }),
     ],
     resolve: {
         extensions: ["*", ".js", ".jsx", ".tsx", ".ts", ".scss"],

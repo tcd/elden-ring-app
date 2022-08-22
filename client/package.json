@@ -102,6 +102,7 @@
         "sassdoc": "^2.7.4",
         "sassdoc-extras": "^3.0.0",
         "shelljs": "^0.8.5",
-        "typedoc": "^0.23.7"
+        "typedoc": "^0.23.7",
+        "webpack-bundle-analyzer": "^4.6.1"
     }
 }
