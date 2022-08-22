@@ -1,9 +1,0 @@
-name: Development Task
-description: Issues related to development & code
-body:
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-    validations:
-      required: true
