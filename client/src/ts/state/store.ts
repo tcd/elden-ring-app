@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit"
 import {
     persistStore,
     persistReducer,
@@ -12,42 +12,9 @@ import {
 import storage from "redux-persist/lib/storage" // defaults to localStorage for web
 import { getPersistConfig } from "redux-deep-persist"
 
-import { FeatureKeys } from "@app/constants"
 import { CONFIG } from "@app/util"
-import {
-    AmmunitionSlice,
-    ArmorSlice,
-    BuilderSlice,
-    ChecklistSlice,
-    CoreSlice,
-    EquipmentSlice,
-    LevelUpSlice,
-    QuickItemsSlice,
-    SpellsSlice,
-    StartingClassSlice,
-    TalismansSlice,
-    WeaponsSlice,
-    // Router
-    createReduxHistory,
-    routerMiddleware,
-    routerReducer,
-} from "@app/features"
-
-const rootReducer = combineReducers({
-    [FeatureKeys.Ammunition]:    AmmunitionSlice.reducer,
-    [FeatureKeys.Armor]:         ArmorSlice.reducer,
-    [FeatureKeys.Builder]:       BuilderSlice.reducer,
-    [FeatureKeys.Checklist]:     ChecklistSlice.reducer,
-    [FeatureKeys.Core]:          CoreSlice.reducer,
-    [FeatureKeys.Equipment]:     EquipmentSlice.reducer,
-    [FeatureKeys.LevelUp]:       LevelUpSlice.reducer,
-    [FeatureKeys.QuickItems]:    QuickItemsSlice.reducer,
-    [FeatureKeys.Router]:        routerReducer,
-    [FeatureKeys.Spells]:        SpellsSlice.reducer,
-    [FeatureKeys.StartingClass]: StartingClassSlice.reducer,
-    [FeatureKeys.Talismans]:     TalismansSlice.reducer,
-    [FeatureKeys.Weapons]:       WeaponsSlice.reducer,
-})
+import { createReduxHistory, routerMiddleware } from "@app/features"
+import { rootReducer } from "./root-reducer"
 
 const persistConfig = getPersistConfig({
     rootReducer,

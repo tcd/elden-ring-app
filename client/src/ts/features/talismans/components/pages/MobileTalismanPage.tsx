@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Selectors } from "@app/state"
 import { Page } from "@app/shared"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 
 export const MobileTalismanPage = (_props: unknown): JSX.Element => {
 

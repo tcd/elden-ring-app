@@ -3,6 +3,7 @@ import {
     AmmunitionActions,
     ArmorActions,
     BuilderActions,
+    CharacterStatusActions,
     ChecklistActions,
     CoreActions,
     EquipmentActions,
@@ -15,31 +16,33 @@ import {
 } from "@app/features"
 
 export interface AppActions {
-    [FeatureKeys.Ammunition]:    typeof AmmunitionActions
-    [FeatureKeys.Armor]:         typeof ArmorActions
-    [FeatureKeys.Builder]:       typeof BuilderActions
-    [FeatureKeys.Checklist]:     typeof ChecklistActions
-    [FeatureKeys.Core]:          typeof CoreActions
-    [FeatureKeys.Equipment]:     typeof EquipmentActions
-    [FeatureKeys.LevelUp]:       typeof LevelUpActions
-    [FeatureKeys.QuickItems]:    typeof QuickItemsActions
-    [FeatureKeys.Spells]:        typeof SpellsActions
-    [FeatureKeys.StartingClass]: typeof StartingClassActions
-    [FeatureKeys.Talismans]:     typeof TalismansActions
-    [FeatureKeys.Weapons]:       typeof WeaponsActions
+    [FeatureKeys.Ammunition]:      typeof AmmunitionActions
+    [FeatureKeys.Armor]:           typeof ArmorActions
+    [FeatureKeys.Builder]:         typeof BuilderActions
+    [FeatureKeys.CharacterStatus]: typeof CharacterStatusActions
+    [FeatureKeys.Checklist]:       typeof ChecklistActions
+    [FeatureKeys.Core]:            typeof CoreActions
+    [FeatureKeys.Equipment]:       typeof EquipmentActions
+    [FeatureKeys.LevelUp]:         typeof LevelUpActions
+    [FeatureKeys.QuickItems]:      typeof QuickItemsActions
+    [FeatureKeys.Spells]:          typeof SpellsActions
+    [FeatureKeys.StartingClass]:   typeof StartingClassActions
+    [FeatureKeys.Talismans]:       typeof TalismansActions
+    [FeatureKeys.Weapons]:         typeof WeaponsActions
 }
 
 export const Actions: AppActions = {
-    Ammunition:    AmmunitionActions,
-    Armor:         ArmorActions,
-    Builder:       BuilderActions,
-    Checklist:     ChecklistActions,
-    Core:          CoreActions,
-    Equipment:     EquipmentActions,
-    LevelUp:       LevelUpActions,
-    QuickItems:    QuickItemsActions,
-    Spells:        SpellsActions,
-    StartingClass: StartingClassActions,
-    Talismans:     TalismansActions,
-    Weapons:       WeaponsActions,
+    Ammunition:      AmmunitionActions,
+    Armor:           ArmorActions,
+    Builder:         BuilderActions,
+    CharacterStatus: CharacterStatusActions,
+    Checklist:       ChecklistActions,
+    Core:            CoreActions,
+    Equipment:       EquipmentActions,
+    LevelUp:         LevelUpActions,
+    QuickItems:      QuickItemsActions,
+    Spells:          SpellsActions,
+    StartingClass:   StartingClassActions,
+    Talismans:       TalismansActions,
+    Weapons:         WeaponsActions,
 }

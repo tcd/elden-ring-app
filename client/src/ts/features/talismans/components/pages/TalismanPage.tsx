@@ -7,7 +7,7 @@ import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { Page } from "@app/shared"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 
 export const TalismanPage = (_props: unknown): JSX.Element => {
 

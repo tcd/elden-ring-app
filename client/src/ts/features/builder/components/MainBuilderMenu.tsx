@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { ArmorBuilderMenu, Page, TalismanBuilderMenu, WeaponBuilderMenu } from "@app/features"
+import { ArmorBuilderMenu, Page, TalismanBuilderMenu, WeaponBuilderMenu, CharacterStatus } from "@app/features"
 
-import { LevelUpMenu, CharacterStatus } from "."
+import { LevelUpMenu } from "."
 
 export const MainBuilderMenu = (_props: unknown): JSX.Element => {
 

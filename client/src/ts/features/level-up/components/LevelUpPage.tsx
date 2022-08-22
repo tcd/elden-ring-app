@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 import { isBlank } from "@app/util"
 import { Selectors } from "@app/state"
 import { Page } from "@app/shared"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 import { Overview } from "./Overview"
 import { Attributes } from "./Attributes"
 

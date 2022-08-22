@@ -7,7 +7,7 @@ import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { Page } from "@app/shared"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 
 export const WeaponsPage = (_props: unknown): JSX.Element => {
 

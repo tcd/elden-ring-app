@@ -1,10 +1,8 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import {
-    CharacterStatusA,
-    CharacterStatusB,
-} from "."
+import { CharacterStatusA } from "./CharacterStatusA"
+import { CharacterStatusB } from "./CharacterStatusB"
 
 export const CharacterStatus = (): JSX.Element => {
 

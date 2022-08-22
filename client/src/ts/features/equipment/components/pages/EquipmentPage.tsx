@@ -6,7 +6,7 @@ import { Grid, GridProps } from "@mui/material"
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
 import { Page } from "@app/shared"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
 

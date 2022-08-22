@@ -7,7 +7,7 @@ import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { Page } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 
 export const ArmorPage = (_props: unknown): JSX.Element => {
 
