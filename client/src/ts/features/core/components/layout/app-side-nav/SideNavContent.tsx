@@ -14,13 +14,13 @@ const sideNavItems: SideNavItemProps[] = [
         pageName: "builder",
         title: "Builder",
         cloudflareId: "smithing",
-        url: "/builder",
+        url: "/builder#grid",
     },
     {
         pageName: "equipment",
         title: "Equipment",
         cloudflareId: "equipment",
-        url: "/equipment",
+        url: "/equipment#grid",
     },
     {
         pageName: "level-up",
