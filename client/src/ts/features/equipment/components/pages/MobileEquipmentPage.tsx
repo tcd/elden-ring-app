@@ -1,11 +1,10 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
-import { Tab, Tabs } from "@mui/material"
+import { useSelector } from "react-redux"
 
 import { isBlank } from "@app/util"
-import { Actions, Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { Selectors } from "@app/state"
+import { Page, useHash } from "@app/shared"
 import { CharacterStatus } from "@app/features/builder"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
@@ -13,8 +12,9 @@ import { EquipmentPageDetail } from "@app/features/equipment/components/Equipmen
 export const MobileEquipmentPage = (_props: unknown): JSX.Element => {
 
     const navigate = useNavigate()
+    const hash = useHash()
 
-    const tab = useSelector(Selectors.Equipment.mobileTab)
+    // const tab = useSelector(Selectors.Equipment.mobileTab)
     const baseClass = useSelector(Selectors.StartingClass.startingClassName)
 
     useEffect(() => {
@@ -25,11 +25,11 @@ export const MobileEquipmentPage = (_props: unknown): JSX.Element => {
 
     let content: JSX.Element = null
 
-    switch (tab) {
+    switch (hash) {
         case "grid":   content = <EquipmentGrid />;       break
         case "detail": content = <EquipmentPageDetail />; break
         case "status": content = <CharacterStatus />;     break
-        default:                                          break
+        default:       content = <EquipmentGrid />;       break
     }
 
     return (
