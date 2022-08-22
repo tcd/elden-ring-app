@@ -1,0 +1,14 @@
+name: Feature Request
+description: Suggest new functionality
+labels: ["type: enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to suggest a new feature!
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the new feature you'd like to see.
+    validations:
+      required: true
