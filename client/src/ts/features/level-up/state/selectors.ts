@@ -1,4 +1,4 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 
 import { AttributeName } from "@app/types"
 import { RootState } from "@app/state"

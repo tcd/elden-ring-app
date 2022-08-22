@@ -1,4 +1,4 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 
 import { Dmg } from "@app/types"
 import { isBlank } from "@app/util"

@@ -1,4 +1,4 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 

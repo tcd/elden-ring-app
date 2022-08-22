@@ -1,4 +1,4 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 
 import { Armor as IArmor } from "@app/types"
 import { RootState } from "@app/state"

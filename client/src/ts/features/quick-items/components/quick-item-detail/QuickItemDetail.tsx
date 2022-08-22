@@ -1,4 +1,4 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 
 import { Dmg, QuickItem } from "@app/types"
 import { SpecialCharacters } from "@app/util"

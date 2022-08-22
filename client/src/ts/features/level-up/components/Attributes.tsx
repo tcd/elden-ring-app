@@ -1,4 +1,4 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 import { useSelector, useDispatch } from "react-redux"
 import { mdiArmFlex } from "@mdi/js"
 import { IconButton } from "@mui/material"

@@ -1,4 +1,4 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 
 import {
     LEVEL_HP_MAP,
