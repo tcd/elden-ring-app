@@ -25,7 +25,7 @@ export const ArmorFooter = (_props: unknown): JSX.Element => {
     }
 
     const handleCharacterStatusClick = () => {
-        dispatch(Actions.Builder.cycleCharacterStatus())
+        dispatch(Actions.CharacterStatus.cycleCharacterStatus())
     }
 
     // =========================================================================

@@ -10,7 +10,7 @@ export const EquipmentFooter = (_props: unknown): JSX.Element => {
     // =========================================================================
 
     const handleCharacterStatusClick = () => {
-        dispatch(Actions.Builder.cycleCharacterStatus())
+        dispatch(Actions.CharacterStatus.cycleCharacterStatus())
     }
 
     // =========================================================================

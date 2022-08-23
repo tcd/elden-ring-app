@@ -2,8 +2,7 @@ import * as Api from "./api"
 import * as Misc from "./misc"
 
 export const BuilderSelectors = {
-    whichCharacterStatus: Misc.selectWhichCharacterStatus,
-    mobileTab:            Misc.selectMobileTab,
+    mobileTab: Misc.selectMobileTab,
     api: {
         loading:               Api.selectFetchingEverything,
         shouldFetchEverything: Api.selectShouldFetchEverything,

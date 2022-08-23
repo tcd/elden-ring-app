@@ -7,17 +7,7 @@ import { BuilderState, INITIAL_BUILDER_STATE } from "../state"
 import { fetchEverything } from "../thunks"
 import { handleLocationChange } from "./helpers"
 
-export const reducers = {
-    cycleCharacterStatus(state: BuilderState, _action?: PayloadAction<"A" | "B">) {
-        switch (state.whichCharacterStatus) {
-            case null: state.whichCharacterStatus = "A"; break
-            case "A":  state.whichCharacterStatus = "B"; break
-            case "B":  state.whichCharacterStatus = "A"; break
-            default:   state.whichCharacterStatus = "A"
-        }
-        // state.whichCharacterStatus = action.payload
-    },
-}
+export const reducers = {}
 
 export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) => {
     builder
