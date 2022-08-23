@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 
 import { DESCRIPTIONS } from "@app/data"
 import { Encumbrance } from "@app/types"
-import { COLORS } from "@app/util"
+import { COLORS } from "@app/theme"
 import { Selectors } from "@app/state"
 import { StatRow, StatRowPlus } from "@app/shared"
 

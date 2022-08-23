@@ -1,5 +1,4 @@
 export * from "./calculations"
-export * from "./theme"
 export * from "./srk"
 export * from "./audio"
 export * from "./images"
