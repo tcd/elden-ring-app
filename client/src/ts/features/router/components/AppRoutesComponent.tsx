@@ -14,8 +14,10 @@ import {
 import {
     BuilderPage,
     MobileBuilderPage,
-    StatusPage,
 } from "@app/features/builder"
+import {
+    StatusPage,
+} from "@app/features/character-status"
 import {
     ChecklistPage,
 } from "@app/features/checklist"

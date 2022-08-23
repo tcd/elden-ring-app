@@ -1,7 +1,7 @@
 import { mdiShield } from "@mdi/js"
 
 import { ErCard } from "@app/shared"
-import { Defense, DefensePlus } from "."
+import { DefensePlus } from "."
 
 export const DefenseCard = (): JSX.Element => {
     return (

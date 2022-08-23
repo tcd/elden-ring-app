@@ -15,7 +15,7 @@ import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
 import { ErCard, Page, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 
-import { Attack, DefensePlus, EquipLoad, Resistance } from "@app/features/builder/components/stats"
+import { Attack, DefensePlus, EquipLoad, Resistance } from "@app/features/character-status/components/stats"
 
 const keepsakes = [
     "Crimson Amber Medallion",
@@ -29,7 +29,7 @@ const keepsakes = [
     "Shabriri's Woe",
 ]
 
-export const StatusPage = (): JSX.Element => {
+export const StatusPage = (_props: unknown): JSX.Element => {
 
     const navigate = useNavigate()
 

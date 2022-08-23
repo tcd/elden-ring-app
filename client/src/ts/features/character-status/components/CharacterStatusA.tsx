@@ -4,7 +4,7 @@ import { mdiAccount } from "@mdi/js"
 import { DESCRIPTIONS } from "@app/data"
 import { ErCard, ErCard2, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
 import { Selectors } from "@app/state"
-import { EquipLoad } from "@app/features/builder/components/stats"
+import { EquipLoad } from "@app/features/character-status/components/stats"
 
 export const CharacterStatusA = (): JSX.Element => {
 
