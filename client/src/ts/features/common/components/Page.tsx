@@ -26,7 +26,7 @@ export const Page = (props: PageProps): JSX.Element => {
 
     const { id, pageName, children, className } = props
 
-    const correctedClassName = "er_page" + " " + className
+    const correctedClassName = `er_page ${className}`
 
     const dispatch = useDispatch()
 
