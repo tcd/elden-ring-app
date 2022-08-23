@@ -52,7 +52,7 @@ import {
     SpellsTablePage,
 } from "@app/features/spells"
 
-export const AppRoutesComponent = () => {
+export const AppRoutesComponent = (_props: unknown): JSX.Element => {
     // const onMobile = ScreenSize.onMobile
     const { onMobile } = useViewport()
 

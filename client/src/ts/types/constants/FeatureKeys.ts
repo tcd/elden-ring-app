@@ -9,6 +9,7 @@ export const FeatureKeys = {
     LevelUp:         "LevelUp",
     QuickItems:      "QuickItems",
     Router:          "Router",
+    Routing:         "Routing",
     Spells:          "Spells",
     StartingClass:   "StartingClass",
     Talismans:       "Talismans",

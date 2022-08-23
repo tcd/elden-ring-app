@@ -10,6 +10,7 @@ import {
     LevelUpSelectors,
     QuickItemsSelectors,
     RouterSelectors,
+    RoutingSelectors,
     SpellsSelectors,
     StartingClassSelectors,
     TalismansSelectors,
@@ -28,6 +29,7 @@ export interface AppSelectors {
     [FeatureKeys.LevelUp]:         typeof LevelUpSelectors
     [FeatureKeys.QuickItems]:      typeof QuickItemsSelectors
     [FeatureKeys.Router]:          typeof RouterSelectors
+    [FeatureKeys.Routing]:         typeof RoutingSelectors
     [FeatureKeys.Spells]:          typeof SpellsSelectors
     [FeatureKeys.StartingClass]:   typeof StartingClassSelectors
     [FeatureKeys.Talismans]:       typeof TalismansSelectors
@@ -47,6 +49,7 @@ export const Selectors: AppSelectors = {
     Meta:            MetaSelectors,
     QuickItems:      QuickItemsSelectors,
     Router:          RouterSelectors,
+    Routing:         RoutingSelectors,
     Spells:          SpellsSelectors,
     StartingClass:   StartingClassSelectors,
     Talismans:       TalismansSelectors,
