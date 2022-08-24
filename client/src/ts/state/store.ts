@@ -15,32 +15,33 @@ import { getPersistConfig } from "redux-deep-persist"
 import { CONFIG } from "@app/util"
 import { createReduxHistory, routerMiddleware } from "@app/features"
 import { rootReducer } from "./root-reducer"
+import type { RootState } from "./state"
+
+export const persistList: NestedKeyOf<RootState>[] = [
+    // "Armor.activeType",
+    "Armor.armorNames",
+    // "Armor.oldName",
+    "LevelUp.attributes",
+    // "Checklist.obtainedResources",
+    // "Spells.spellNames",
+    "StartingClass.startingClassName",
+    // "Talismans.activeSlotId",
+    // "Talismans.oldTalismanName",
+    "Talismans.talismanNames",
+    // "Weapons.activeSlotId",
+    // "Weapons.choosingAffinity",
+    // "Weapons.customizingWeapon",
+    // "Weapons.oldWeapon",
+    "Weapons.slots",
+]
 
 const persistConfig = getPersistConfig({
     rootReducer,
-    key: "root",
+    key: "elden-ring-app",
     version: 1,
     storage: storage,
-    // blacklist: [
-    //     "router",
-    // ],
-    whitelist: [
-        // "Armor.activeType",
-        "Armor.armorNames",
-        // "Armor.oldName",
-        "LevelUp.attributes",
-        // "Checklist.obtainedResources",
-        // "Spells.spellNames",
-        "StartingClass.startingClassName",
-        // "Talismans.activeSlotId",
-        // "Talismans.oldTalismanName",
-        "Talismans.talismanNames",
-        // "Weapons.activeSlotId",
-        // "Weapons.choosingAffinity",
-        // "Weapons.customizingWeapon",
-        // "Weapons.oldWeapon",
-        "Weapons.slots",
-    ],
+    // @ts-ignore: next-line
+    whitelist: persistList,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
@@ -61,9 +62,3 @@ export const store = configureStore({
 export const history = createReduxHistory(store)
 
 export const persistor = persistStore(store)
-
-export type RootState = ReturnType<typeof store.getState>
-
-export type AppDispatch = typeof store.dispatch
-
-export type AnySelector<T = any> = (rootState: RootState) => T
