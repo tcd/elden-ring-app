@@ -24,6 +24,7 @@ export const AboutFooter = (_props: unknown): JSX.Element => {
         <BottomNav
             actions={actionProps}
             selector={Selectors.Router.hash}
+            default="about"
         />
     )
 }

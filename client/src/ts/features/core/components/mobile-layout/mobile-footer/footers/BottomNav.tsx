@@ -7,9 +7,10 @@ import {
     BottomNavigationAction,
     BottomNavigation,
 } from "@mui/material"
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
-import { AnySelector, Selectors } from "@app/state"
+import { AppSelector, Selectors } from "@app/state"
+import { useHash } from "@app/shared"
 
 // =============================================================================
 // BottomNav
@@ -17,12 +18,14 @@ import { AnySelector, Selectors } from "@app/state"
 
 export interface BottomNavProps {
     actions: BottomNavActionProps[]
-    selector: AnySelector<string>
+    selector: AppSelector<string>
+    default?: string
     excludeBack?: boolean
 }
 
 export const BottomNav = ({ actions, selector, excludeBack }: BottomNavProps): JSX.Element => {
 
+    const hash = useHash()
     const tab = useSelector(selector)
     const lastMainPage = useSelector(Selectors.Router.lastMainPage)
 
