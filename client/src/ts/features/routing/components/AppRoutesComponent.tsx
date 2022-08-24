@@ -80,21 +80,20 @@ const desktopRoutes: RouteObject[] = [
             { path: "/starting-class", element: <StartingClassPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
-            { path: "/talismans/:slotId", element: <TalismanPage /> },
+            { path: "/talismans/:talismanSlotId", element: <TalismanPage /> },
 
             // { path: "/armor",      element: <ArmorTablePage /> },
-            { path: "/armor/:slotId", element: <ArmorPage /> },
+            { path: "/armor/:armorSlotId", element: <ArmorPage /> },
 
             // { path: "/weapons", element: <WeaponsTablePage /> },
-            { path: "/weapons/:slotId", element: <WeaponsPage /> },
-            { path: "/weapons/:slotId/ashes-of-war", element: <AshesOfWarPage /> },
+            { path: "/weapons/:weaponSlotId", element: <WeaponsPage /> },
+            { path: "/weapons/:weaponSlotId/ashes-of-war", element: <AshesOfWarPage /> },
 
             // { path: "/spells",     element: <SpellsTablePage /> },
             { path: "/spells", element: <SpellsTablePage /> },
             { path: "/spells/menu", element: <SpellMenu /> },
 
             { path: "*", element: <NotFoundPage /> },
-
         ],
     },
 ]
@@ -120,21 +119,20 @@ const mobileRoutes: RouteObject[] = [
             { path: "/starting-class", element: <StartingClassPage /> },
 
             // { path: "/talismans", element: <TalismansTablePage /> },
-            { path: "/talismans/:slotId", element: <MobileTalismanPage /> },
+            { path: "/talismans/:talismanSlotId", element: <MobileTalismanPage /> },
 
             // { path: "/armor",      element: <ArmorTablePage /> },
-            { path: "/armor/:slotId", element: <MobileArmorPage /> },
+            { path: "/armor/:armorSlotId", element: <MobileArmorPage /> },
 
             // { path: "/weapons", element: <WeaponsTablePage /> },
-            { path: "/weapons/:slotId", element: <MobileWeaponPage /> },
-            { path: "/weapons/:slotId/ashes-of-war", element: <AshesOfWarPage /> },
+            { path: "/weapons/:weaponSlotId", element: <MobileWeaponPage /> },
+            { path: "/weapons/:weaponSlotId/ashes-of-war", element: <AshesOfWarPage /> },
 
             // { path: "/spells",     element: <SpellsTablePage /> },
             { path: "/spells", element: <SpellsTablePage /> },
             { path: "/spells/menu", element: <SpellMenu /> },
 
             { path: "*", element: <NotFoundPage /> },
-
         ],
     },
 ]
