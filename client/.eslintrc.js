@@ -51,5 +51,6 @@ module.exports = {
         "@typescript-eslint/type-annotation-spacing": ["warn"],
         "@typescript-eslint/ban-ts-comment": ["off"],
         "@typescript-eslint/no-empty-function": ["warn"],
+        "@typescript-eslint/ban-types": ["warn"],
     },
 }
