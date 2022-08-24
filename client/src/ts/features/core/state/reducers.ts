@@ -31,7 +31,19 @@ export const reducers = {
     // -------------------------------------------------------------------------
     // Preferences
     // -------------------------------------------------------------------------
-    toggleSounds: (state: CoreState) => { state.preferences.sounds = (!state.preferences.sounds) },
+    toggleSounds: (state: CoreState) => {
+        state.preferences.sounds = (!state.preferences.sounds)
+    },
+    toggleConsole: (state: CoreState) => {
+        if (state.preferences.console == "Xbox") {
+            state.preferences.console = "PlayStation"
+        } else {
+            state.preferences.console = "Xbox"
+        }
+    },
+    setConsole: (state: CoreState, { payload }: PayloadAction<"Xbox" | "PlayStation">) => {
+        state.preferences.console = payload
+    },
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<CoreState>) => {

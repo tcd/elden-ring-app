@@ -15,6 +15,7 @@ export interface CoreState {
     pageName: PageName
     preferences: {
         sounds: boolean
+        console: "Xbox" | "PlayStation"
     }
 }
 
@@ -24,6 +25,7 @@ export const INITIAL_CORE_STATE: CoreState = {
     pageName: null,
     preferences: {
         sounds: false,
+        console: "Xbox",
     },
 }
 
