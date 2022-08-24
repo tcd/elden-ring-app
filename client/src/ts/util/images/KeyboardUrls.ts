@@ -28,6 +28,10 @@ export type LetterKey =
     | "y"
     | "z"
 
+export const isLetterKey = (value: string): value is LetterKey => {
+    return !!value.match(/^[a-z]$/)
+}
+
 export type ControlKey =
     | "arrow-keys"
     | "backspace"
