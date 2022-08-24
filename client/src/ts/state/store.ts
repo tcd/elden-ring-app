@@ -18,6 +18,7 @@ import { rootReducer } from "./root-reducer"
 import type { RootState } from "./state"
 
 export const persistList: NestedKeyOf<RootState>[] = [
+    "Core.preferences",
     // "Armor.activeType",
     "Armor.armorNames",
     // "Armor.oldName",
