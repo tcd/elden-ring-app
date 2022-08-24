@@ -1,6 +1,4 @@
-import { mdiShieldSwordOutline } from "@mdi/js"
-
-import { ErCard } from "@app/shared"
+import { ErCard2 } from "@app/shared"
 import {
     ArmorSlots,
     // QuickItems,
@@ -8,14 +6,13 @@ import {
     WeaponSlots,
 } from "."
 
-export const EquipmentSlots = (): JSX.Element => {
+export const EquipmentSlots = (_props: unknown): JSX.Element => {
     return (
-        <ErCard title="Equipment" iconPath={mdiShieldSwordOutline}>
-            <br/>
+        <ErCard2 title="Equipment" icon="Equipment">
             <WeaponSlots />
             <ArmorSlots />
             <TalismanSlots />
             {/* <QuickItems /> */}
-        </ErCard>
+        </ErCard2>
     )
 }
