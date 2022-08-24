@@ -28,6 +28,10 @@ export const reducers = {
     openSideNav:         (state: CoreState) => { state.sideNavOpened = true                   },
     closeSideNav:        (state: CoreState) => { state.sideNavOpened = false                  },
     toggleSideNavOpened: (state: CoreState) => { state.sideNavOpened = (!state.sideNavOpened) },
+    // -------------------------------------------------------------------------
+    // Preferences
+    // -------------------------------------------------------------------------
+    toggleSounds: (state: CoreState) => { state.preferences.sounds = (!state.preferences.sounds) },
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<CoreState>) => {

@@ -6,18 +6,13 @@ import {
     DEFAULT_PAGE_ICON,
     HEADER_ICONS,
 } from "@app/types"
-import { RootState } from "@app/state"
+import type { RootState } from "@app/state"
 import { selectCustomizing } from "@app/features/weapons/state/selectors/selectors"
-import { CoreState } from "."
+import { selectSlice } from "./select-slice"
 
-const selectCoreSlice = (rootState: RootState): CoreState => {
-    return rootState?.Core
-}
-
-const selectReduxReady       = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.reduxReady
-const selectPageName         = (rootState: RootState): PageName => selectCoreSlice(rootState)?.pageName ?? null
-const selectSideNavOpened    = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.sideNavOpened
-const selectSoundsEnabled    = (rootState: RootState): boolean  => selectCoreSlice(rootState)?.soundsEnabled ?? false
+const selectReduxReady       = (rootState: RootState): boolean  => selectSlice(rootState)?.reduxReady
+const selectPageName         = (rootState: RootState): PageName => selectSlice(rootState)?.pageName ?? null
+const selectSideNavOpened    = (rootState: RootState): boolean  => selectSlice(rootState)?.sideNavOpened
 
 const selectTitle = (rootState: RootState): PageTitle => {
     const pageName = selectPageName(rootState)
@@ -38,8 +33,6 @@ const selectTitleIconUrl = (rootState: RootState): string => {
 }
 
 // =============================================================================
-// Export
-// =============================================================================
 
 export const CoreSelectors = {
     reduxReady: selectReduxReady,
@@ -47,5 +40,4 @@ export const CoreSelectors = {
     title: selectTitle,
     titleIconUrl: selectTitleIconUrl,
     sideNavOpened: selectSideNavOpened,
-    soundsEnabled: selectSoundsEnabled,
 }
