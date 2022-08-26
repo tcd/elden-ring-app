@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@emotion/serialize": "^1.1.0",
+    "@vanilla-extract/webpack-plugin": "^2.1.12",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.0.0"
+  }
+}

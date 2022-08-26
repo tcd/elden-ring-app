@@ -3,6 +3,7 @@ export * from "./elden-ring"
 export * from "./Heading"
 export * from "./RawHtml"
 
+export * from "./AlignBottom"
 export * from "./Anchor"
 export * from "./CustomSelect"
 export * from "./CustomTable"

@@ -4,6 +4,7 @@ const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 
 const { ROOT_FOLDER } = require("./helpers")
 const version = require("../../package.json").version
@@ -93,8 +94,8 @@ const webpackConfig = {
             {
                 test: /\.s?css$/,
                 use: [
-                    "style-loader",
-                    "css-loader",
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
                     {
                         // https://webpack.js.org/loaders/sass-loader/
                         loader: "sass-loader",
@@ -102,6 +103,19 @@ const webpackConfig = {
                             sourceMap: true,
                             // Prefer `dart-sass`
                             implementation: require.resolve("sass"),
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.styl$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    {
+                        loader: "stylus-loader", // compiles Stylus to CSS
+                        options: {
+                            sourceMap: true,
                         },
                     },
                 ],
