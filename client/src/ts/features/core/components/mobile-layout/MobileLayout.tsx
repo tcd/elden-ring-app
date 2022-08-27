@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 
-import { MobileHeader, MobileFooter } from "."
 import { AppSideNav } from "@app/features/core/components/layout/app-side-nav"
+import { MobileHeader, MobileFooter } from "."
 
 export const MobileLayout = () => {
     return (

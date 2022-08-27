@@ -47,9 +47,7 @@ export const Page = (props: PageProps): JSX.Element => {
 
     return (
         <Box {...boxProps}>
-            <>
-                {children && children}
-            </>
+            {children && children}
         </Box>
     )
 }
