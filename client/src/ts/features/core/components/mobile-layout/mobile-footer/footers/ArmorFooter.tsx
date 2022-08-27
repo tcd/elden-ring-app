@@ -2,7 +2,6 @@ import GridViewIcon from "@mui/icons-material/GridView"
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import PersonIcon from "@mui/icons-material/Person"
 
-import { Selectors } from "@app/state"
 import { BottomNav, BottomNavActionProps } from "./BottomNav"
 
 const gridIcon    = <GridViewIcon />
@@ -19,7 +18,7 @@ export const ArmorFooter = (_props: unknown): JSX.Element => {
     return (
         <BottomNav
             actions={actionProps}
-            selector={Selectors.Armor.mobileTab}
+            default={"grid"}
         />
     )
 }

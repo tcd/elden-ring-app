@@ -5,7 +5,6 @@ import {
     mdiHandClap,
 } from "@mdi/js"
 
-import { Selectors } from "@app/state"
 import { MdiIcon } from "@app/shared"
 import { BottomNav, BottomNavActionProps } from "./BottomNav"
 
@@ -23,7 +22,6 @@ export const AboutFooter = (_props: unknown): JSX.Element => {
     return (
         <BottomNav
             actions={actionProps}
-            selector={Selectors.Router.hash}
             default="about"
         />
     )

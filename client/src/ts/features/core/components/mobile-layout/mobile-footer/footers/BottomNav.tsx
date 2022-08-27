@@ -9,7 +9,7 @@ import {
 } from "@mui/material"
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
-import { AppSelector, Selectors } from "@app/state"
+import { Selectors } from "@app/state"
 import { useHash } from "@app/shared"
 
 // =============================================================================
@@ -18,15 +18,13 @@ import { useHash } from "@app/shared"
 
 export interface BottomNavProps {
     actions: BottomNavActionProps[]
-    selector: AppSelector<string>
     default?: string
     excludeBack?: boolean
 }
 
-export const BottomNav = ({ actions, selector, excludeBack }: BottomNavProps): JSX.Element => {
+export const BottomNav = ({ actions, excludeBack }: BottomNavProps): JSX.Element => {
 
     const hash = useHash()
-    const tab = useSelector(selector)
     const lastMainPage = useSelector(Selectors.Router.lastMainPage)
 
     if (excludeBack !== true) {
@@ -56,7 +54,7 @@ export const BottomNav = ({ actions, selector, excludeBack }: BottomNavProps): J
     return (
         <BottomNavigation
             showLabels={true}
-            value={tab}
+            value={hash}
         >
             {elements}
         </BottomNavigation>
