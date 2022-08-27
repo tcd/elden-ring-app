@@ -19,7 +19,7 @@ export const ErDialog = (props: ErDialogProps): JSX.Element => {
 
     const $options = props.options.map(({ title, handler }) => {
         return (
-            <ErButton key={title} onClick={handler}>
+            <ErButton key={title} onClick={handler} sx={{ marginTop: "15px", marginBottom: "15px" }}>
                 {title}
             </ErButton>
         )
