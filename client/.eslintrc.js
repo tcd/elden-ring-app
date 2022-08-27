@@ -89,16 +89,24 @@ module.exports = {
             "groups": [
                 "builtin",
                 "external",
-                "internal",
-                "parent",
-                "sibling",
-                "index",
-                "object",
+                ["internal", "sibling", "parent"],
+                // "index",
+                // "object",
                 // "type",
             ],
             "pathGroups": [
                 {
-                    "pattern": "@app/*",
+                    "pattern": "{@app/**,@assets/**}",
+                    "group": "internal",
+                    // "position": "after",
+                },
+                {
+                    "pattern": "@app/**",
+                    "group": "internal",
+                    // "position": "after",
+                },
+                {
+                    "pattern": "@assets/**",
                     "group": "internal",
                     // "position": "after",
                 },
