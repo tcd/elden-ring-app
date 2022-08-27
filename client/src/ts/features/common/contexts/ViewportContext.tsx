@@ -8,7 +8,7 @@ import {
 
 import type { DeviceSize } from "@app/types"
 import { isBlank, logger, ScreenSize } from "@app/util"
-import { breakpoints } from "@app/theme"
+import { ThemeVars } from "@app/theme"
 
 /**
  * - https://www.w3.org/TR/screen-orientation/#screen-orientation-types-and-locks
@@ -73,9 +73,9 @@ export const ViewportProvider = ({ children }) => {
     }, [])
 
     const getDeviceSize = useCallback((): DeviceSize => {
-        if (width >= breakpoints.xl) { return "desktop" }
-        if (width >= breakpoints.lg) { return "laptop"  }
-        if (width >= breakpoints.md) { return "tablet"  }
+        if (width >= ThemeVars.gridBreakpoints.xl) { return "desktop" }
+        if (width >= ThemeVars.gridBreakpoints.lg) { return "laptop"  }
+        if (width >= ThemeVars.gridBreakpoints.md) { return "tablet"  }
         return "mobile"
     }, [width])
 

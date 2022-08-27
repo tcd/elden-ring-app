@@ -1,14 +1,13 @@
 // import type { SxProps } from "@mui/material"
-
+// import type { CSSInterpolation } from "@emotion/serialize"
+//
 // export const pointerOnHover: SxProps = {
 //     "&:hover": {
 //         cursor: "pointer",
 //     },
 // }
 
-import type { CSSInterpolation } from "@emotion/serialize"
-
-export const pointerOnHover: CSSInterpolation = {
+export const pointerOnHover = {
     "&:hover": {
         cursor: "pointer",
     },

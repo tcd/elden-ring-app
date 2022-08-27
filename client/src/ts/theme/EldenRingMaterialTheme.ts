@@ -1,14 +1,13 @@
 // import { logger } from "@app/util"
 import { createTheme, Components, ThemeOptions } from "@mui/material"
 
-import { generalComponents } from "./components"
-import { paletteOptions } from "./paletteOptions"
-import { breakpointsOptions } from "./breakpoints"
 import {
-    ExtendedTypographyOptions,
+    breakpointsOptions,
+    generalComponents,
+    paletteOptions,
     typographyComponents,
     typographyOptions,
-} from "./typography"
+} from "./mui"
 
 const components: Components = {
     ...generalComponents,
@@ -17,7 +16,7 @@ const components: Components = {
 
 const options: ThemeOptions = {
     palette: paletteOptions,
-    typography: typographyOptions as ExtendedTypographyOptions,
+    typography: typographyOptions,
     components: components,
     breakpoints: breakpointsOptions,
 }

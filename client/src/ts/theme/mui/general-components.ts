@@ -1,16 +1,6 @@
 import type { Components } from "@mui/material"
-import type { CSSInterpolation } from "@emotion/serialize"
 
-const pointerOnHover: CSSInterpolation = {
-    "&:hover": {
-        cursor: "pointer",
-    },
-    "& *": {
-        "&:hover": {
-            cursor: "pointer",
-        },
-    },
-}
+import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
 
 export const generalComponents: Components = {
     MuiButtonBase: {
@@ -48,23 +38,4 @@ export const generalComponents: Components = {
             },
         },
     },
-    // MuiToolbar: {
-    //     styleOverrides: {
-    //         root: {
-    //             height:    "46px !important",
-    //             minHeight: "46px !important",
-    //         },
-    //         regular: {
-    //             height:    "46px",
-    //             minHeight: "46px",
-    //         },
-    //     },
-    // },
-    // MuiDrawer: {
-    //     defaultProps: {
-    //     },
-    //     styleOverrides: {
-
-    //     }
-    // },
 }

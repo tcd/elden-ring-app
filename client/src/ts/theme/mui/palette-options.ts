@@ -1,14 +1,14 @@
 import { PaletteOptions } from "@mui/material"
 
-import { COLORS } from "."
+import { colors } from "../variables/colors"
 
 export const paletteOptions: PaletteOptions = {
     common: {
-        black: COLORS.black,
-        white: COLORS.white,
+        black: colors.black,
+        white: colors.white,
     },
     primary: {
-        main: COLORS.yellow,
+        main: colors.yellow,
     },
     secondary: {
         main: "#4ec9b0",
@@ -17,10 +17,10 @@ export const paletteOptions: PaletteOptions = {
     //     main: "#c586c0",
     // },
     error: {
-        main: COLORS.red,
+        main: colors.red,
     },
     success: {
-        main: COLORS.blue,
+        main: colors.blue,
     },
     warning: {
         main: "#d7ba7d",

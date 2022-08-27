@@ -1,4 +1,6 @@
-export { ZIndex } from "./z-index"
+export * from "./breakpoints"
+export * from "./colors"
 export * from "./gradients"
 export * from "./variables.scss"
 export * from "./vars"
+export * from "./z-index"

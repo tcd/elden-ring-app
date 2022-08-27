@@ -1,10 +1,10 @@
 import type { SxProps, Theme } from "@mui/material"
 
-import { ThemeVars, EldenRingMaterialTheme } from "@app/theme"
+import { ThemeVars } from "@app/theme"
 
 export const overlaySx: React.CSSProperties = {
     outline: "none !important",
-    zIndex: ThemeVars.ZIndex.modalBackdrop,
+    zIndex: ThemeVars.zIndex.modalBackdrop,
     position: "absolute",
     top: 0,
     left: 0,

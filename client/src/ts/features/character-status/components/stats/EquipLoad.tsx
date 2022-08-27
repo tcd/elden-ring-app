@@ -2,17 +2,17 @@ import { useSelector } from "react-redux"
 
 import { DESCRIPTIONS } from "@app/data"
 import { Encumbrance } from "@app/types"
-import { COLORS } from "@app/theme"
+import { ThemeVars } from "@app/theme"
 import { Selectors } from "@app/state"
 import { StatRow, StatRowPlus } from "@app/shared"
 
 const equipmentLoadColor = (load: Encumbrance) => {
     switch (load) {
-        case Encumbrance.Overloaded: return COLORS.red
-        case Encumbrance.Heavy:      return COLORS.yellow
-        case Encumbrance.Medium:     return COLORS.green
-        case Encumbrance.Light:      return COLORS.blue
-        default:                     return COLORS.white
+        case Encumbrance.Overloaded: return ThemeVars.colors.red
+        case Encumbrance.Heavy:      return ThemeVars.colors.yellow
+        case Encumbrance.Medium:     return ThemeVars.colors.green
+        case Encumbrance.Light:      return ThemeVars.colors.blue
+        default:                     return ThemeVars.colors.white
     }
 }
 

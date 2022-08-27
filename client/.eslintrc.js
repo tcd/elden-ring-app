@@ -11,9 +11,9 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "plugin:import/typescript",
+        // "plugin:import/errors",
+        // "plugin:import/warnings",
+        // "plugin:import/typescript",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -83,14 +83,14 @@ module.exports = {
         // https://github.com/import-js/eslint-plugin-import
         // ---------------------------------------------------------------------
         "import/no-unresolved": ["off"],
+        "import/export": ["off"],
         "import/first": ["warn"],
         "import/order": ["warn", {
             "newlines-between": "always",
             "groups": [
                 "builtin",
                 "external",
-                ["internal", "sibling", "parent"],
-                // "index",
+                ["internal", "sibling", "parent", "index"],
                 // "object",
                 // "type",
             ],
