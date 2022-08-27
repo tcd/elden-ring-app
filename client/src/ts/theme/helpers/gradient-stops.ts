@@ -2,27 +2,21 @@ import Color from "color"
 
 import type { Css } from "@app/types"
 import { addTransparency } from "./add-transparency"
-import { gradientStops } from "./gradient-stops"
-
-// export type GradientStop = [string, number]
-export interface GradientStop {
-    percentage: Integer | `${number}%` | `${number}.${number}%`
-    /**
-     * Inclusive value between `1.00` and `0.00`
-     */
-    transparency: Decimal
-    /** optional */
-    color?: string
-}
 
 /**
- * Generates a linear gradient.
+ * Generates color stops a CSS gradient.
  *
- * @param direction
+ * Original code by [Kitty Giraudel](https://www.sitepoint.com/building-linear-gradient-mixin-sass/).
+ *
+ * ## Reference
+ *
+ * - [MDN - `linear-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
+ * - [spec](https://drafts.csswg.org/css-images/#linear-gradients)
+ *
  * @param color
  * @param colorStops
  */
-export const linearGradient = (direction: Css.Direction, color: string, colorStops: GradientStop[]) => {
+export const gradientStops = (color: string, colorStops: Css.ColorStop[]): string => {
 
     const cleanColor = Color(color).alpha(1.0)
 
@@ -40,5 +34,5 @@ export const linearGradient = (direction: Css.Direction, color: string, colorSto
         stops.push(currentStop)
     }
 
-    return `linear-gradient(${direction}, ${stops.join(", ")})`
+    return stops.join(", ")
 }

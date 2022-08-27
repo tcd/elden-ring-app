@@ -5,3 +5,5 @@ export const addTransparency = (color: Color, alpha: Decimal): Color => {
     const result = Color({ r, g, b, a: alpha })
     return result
 }
+
+export const rgba = addTransparency

@@ -1,4 +1,4 @@
-const Directions = <const>{
+const LinearDirections = <const>{
     "to top":            "0deg",
     "to top right":     "45deg",
     "to right":         "90deg",
@@ -8,6 +8,6 @@ const Directions = <const>{
     "to bottom left":  "225deg",
     "to top left":     "315deg",
 }
-type DirectionsKey = keyof typeof Directions
-type DirectionsValue = typeof Directions[DirectionsKey]
-export type Direction = DirectionsKey | DirectionsValue
+type LinearDirectionsKey = keyof typeof LinearDirections
+type LinearDirectionsValue = typeof LinearDirections[LinearDirectionsKey]
+export type LinearDirection = LinearDirectionsKey | LinearDirectionsValue

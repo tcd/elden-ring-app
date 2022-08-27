@@ -1,3 +1,25 @@
+export const ZIndex = {
+    "startingClassBackground":     1_005,
+    "startingClassContent":        1_010,
+    "startingClassHover":          1_011,
+    "equipmentGridCell":           1_005,
+    "equipmentGridCellBackground": 1_006,
+    "equipmentGridCellImage":      1_007,
+    "equipmentGridCellHover":      1_008,
+    "modalBackdrop":               1_050,
+    "modal":                       1_055,
+    "popover":                     1_070,
+    "tooltip":                     1_080,
+    "toast":                       1_090,
+    "contextMenu":                 1_100,
+    "scrollBar":                   1_000,
+    "scrollBarButton":             1_005,
+    "scrollBarTrack":              1_010,
+    "scrollBarThumb":              1_020,
+    "sideNavBackdrop":             1_190,
+    "sideNav":                     1_200,
+}
+
 // export const ZIndex = {
 //     startingClassBackground: 1005,
 //     startingClassContent:    1010,
@@ -61,24 +83,3 @@
 
 // const _zIndex = reduceToObject(ZIndex, (item) => [`${item.context}${item.name}`, item.value])
 
-export const ZIndex = {
-    "startingClassBackground":     1_005,
-    "startingClassContent":        1_010,
-    "startingClassHover":          1_011,
-    "equipmentGridCell":           1_005,
-    "equipmentGridCellBackground": 1_006,
-    "equipmentGridCellImage":      1_007,
-    "equipmentGridCellHover":      1_008,
-    "modalBackdrop":               1_050,
-    "modal":                       1_055,
-    "popover":                     1_070,
-    "tooltip":                     1_080,
-    "toast":                       1_090,
-    "contextMenu":                 1_100,
-    "scrollBar":                   1_000,
-    "scrollBarButton":             1_005,
-    "scrollBarTrack":              1_010,
-    "scrollBarThumb":              1_020,
-    "sideNavBackdrop":             1_190,
-    "sideNav":                     1_200,
-}

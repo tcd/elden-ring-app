@@ -82,8 +82,8 @@ module.exports = {
         // Imports
         // https://github.com/import-js/eslint-plugin-import
         // ---------------------------------------------------------------------
+        "import/no-unresolved": ["off"],
         "import/first": ["warn"],
-        "import/no-unresolved": ["error"],
         "import/order": ["warn", {
             "newlines-between": "always",
             "groups": [

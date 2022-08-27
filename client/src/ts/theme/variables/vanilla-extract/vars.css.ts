@@ -20,7 +20,6 @@ export const vars = createGlobalTheme("#er__root", {
         red:  "#CD3138",
         blue: "#527ED5",
         gold: {
-            /**  */
             light: "#C9BBA1",
             /** Hover Gold */
             dark: "#B6AD84",
