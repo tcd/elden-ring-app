@@ -8,3 +8,6 @@ ignore/**
 client/dist
 client/docs
 client/config/env
+
+./package.json
+./package-lock.json
