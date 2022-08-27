@@ -1,2 +1,2 @@
 export * from "./add-transparency"
-export * from "./gradient"
+export * from "./linear-gradient"
