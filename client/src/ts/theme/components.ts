@@ -14,6 +14,9 @@ const pointerOnHover: CSSInterpolation = {
 
 export const generalComponents: Components = {
     MuiButtonBase: {
+        defaultProps: {
+            disableRipple: true,
+        },
         styleOverrides: {
             root: {
                 textTransform: "none",
@@ -28,6 +31,9 @@ export const generalComponents: Components = {
         },
     },
     MuiButton: {
+        defaultProps: {
+            disableRipple: true,
+        },
         styleOverrides: {
             root: {
                 textTransform: "none",

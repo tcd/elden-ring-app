@@ -1,8 +1,10 @@
+import type { Css } from "@app/types"
+
 // --------------------------------------
 // Layout
 // --------------------------------------
 
-const sideNav = [
+const sideNav: Css.ColorStop[] = [
     { percentage:   "0%",  transparency:  1.00 },
     { percentage:  "25%",  transparency:  0.90 },
     { percentage:  "50%",  transparency:  0.75 },
@@ -11,7 +13,7 @@ const sideNav = [
     { percentage: "100%",  transparency:  0.00 },
 ]
 
-const sideNavBackdrop = [
+const sideNavBackdrop: Css.ColorStop[] = [
     { percentage:   "0%",  transparency:  1.00 },
     { percentage:   "5%",  transparency:  0.90 },
     { percentage:   "6%",  transparency:  0.75 },
@@ -30,7 +32,7 @@ const sideNavBackdrop = [
 // Modal
 // --------------------------------------
 
-const modalBody = [
+const modalBody: Css.ColorStop[] = [
     { percentage:   "0%",  transparency:  0.10 },
     { percentage:   "1%",  transparency:  0.30 },
     { percentage:   "2%",  transparency:  0.50 },
@@ -49,14 +51,14 @@ const modalBody = [
     { percentage: "100%",  transparency:  0.10 },
 ]
 
-const modalTopBottomBorder = [
+const modalTopBottomBorder: Css.ColorStop[] = [
     { percentage: "0%",  transparency:    0.95 },
     { percentage: "10%",  transparency:   0.00 },
     { percentage: "90%",  transparency:   0.00 },
     { percentage: "100%",  transparency:  0.95 },
 ]
 
-const modalInnerBorder = [
+const modalInnerBorder: Css.ColorStop[] = [
     { percentage:   "0%", transparency: 1.0 },
     { percentage:  "10%", transparency: 0.0 },
     { percentage:  "90%", transparency: 0.0 },
@@ -67,7 +69,7 @@ const modalInnerBorder = [
 // Context Menu
 // --------------------------------------
 
-const contextMenuItem = [
+const contextMenuItem: Css.ColorStop[] = [
     { percentage:   "0%",    transparency:  0.10 },
     { percentage:  "10%",    transparency:  0.25 },
     { percentage:  "40%",    transparency:  0.60 },
@@ -81,7 +83,7 @@ const contextMenuItem = [
 // You Died
 // --------------------------------------
 
-const youDiedGradient = [
+const youDiedGradient: Css.ColorStop[] = [
     { percentage:   "0%",  transparency: 0.20 },
     { percentage:  "10%",  transparency: 0.40 },
     { percentage:  "25%",  transparency: 0.60 },
@@ -95,14 +97,14 @@ const youDiedGradient = [
 // Equipment Grid / Equipment Slots
 // --------------------------------------
 
-const equipmentGridBorder = [
+const equipmentGridBorder: Css.ColorStop[] = [
     { percentage:   "0%",  transparency:  0.0 },
     { percentage:  "10%",  transparency:  1.0 },
     { percentage:  "90%",  transparency:  1.0 },
     { percentage: "100%",  transparency:  0.0 },
 ]
 
-const equipmentCellBorder = [
+const equipmentCellBorder: Css.ColorStop[] = [
     { percentage:   "0%",  transparency: 0.00 },
     { percentage:  "25%",  transparency: 0.05 },
     { percentage:  "45%",  transparency: 0.10 },

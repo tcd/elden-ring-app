@@ -1,2 +1,2 @@
-export * from "./ErButton"
+export * from "./types"
 export * from "./ErDialog"

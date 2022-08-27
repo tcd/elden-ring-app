@@ -1,3 +1,4 @@
+import { forwardRef } from "react"
 import merge from "lodash/merge"
 import type { ButtonBaseProps } from "@mui/material"
 import { ButtonBase } from "@mui/material"
@@ -11,7 +12,7 @@ const defaultProps: Partial<ErButtonProps> = {
 
 export type ErButtonProps = Omit<ButtonBaseProps, "disableRipple">
 
-export const ErButton = (props: ErButtonProps): JSX.Element => {
+export const ErButton = forwardRef<HTMLButtonElement, ErButtonProps>(function ErButton(props, ref) {
 
     const {
         children,
@@ -21,8 +22,8 @@ export const ErButton = (props: ErButtonProps): JSX.Element => {
     const mergedProps = merge({}, defaultProps, rest)
 
     return (
-        <ButtonBase {...mergedProps} disableRipple={true}>
+        <ButtonBase {...mergedProps} disableRipple={true} ref={ref}>
             {children && children}
         </ButtonBase>
     )
-}
+})

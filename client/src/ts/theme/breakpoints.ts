@@ -25,15 +25,15 @@ export const breakpointsOptions: BreakpointsOptions = {
         "md",
         "lg",
         "xl",
-        "xxl",
+        // "xxl",
     ],
     values: {
         xs:  0,    // extra-small
-        sm:  550,  // small
-        md:  750,  // medium
-        lg:  990,  // large
-        xl:  1200, // extra-large
-        xxl: 1400, // extra-extra-large
+        sm:  550,  // mobile
+        md:  750,  // tablet
+        lg:  990,  // laptop
+        xl:  1200, // desktop
+        // xxl: 1400, // extra-extra-large
     },
 }
 
@@ -43,6 +43,6 @@ type Breakpoint =
     | "md"
     | "lg"
     | "xl"
-    | "xxl"
+    // | "xxl"
 
 export const breakpoints: Record<Breakpoint, number> = breakpointsOptions.values

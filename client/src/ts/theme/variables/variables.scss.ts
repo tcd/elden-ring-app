@@ -1,8 +1,8 @@
+import { rgba } from "../helpers"
+
 export const unsortedColors = {
     // "offWhite": "#636155",
     "offWhite":  "#ACAB94",
-    "gray": "#221e19",
-    "transparentGray": "rgba($gray, 0.55)",
     /** Hover Gold */
     "equipment-slot-overlay-color": "#B6AD84",
     EldenRingColor: {
@@ -143,7 +143,7 @@ export const dataTable = {
 // ----------------------------------------------------------------------------
 
 export const modal = {
-    backdropBg: unsortedColors.transparentGray,
+    backdropBg: rgba("#221e19", 0.55).hexa(),
     colorBg: "#26221C",
     colorBorder: "#4D4B3F",
     innerBorderColors: [
