@@ -2,7 +2,7 @@
 // Layout
 // --------------------------------------
 
-export const sideNav = [
+const sideNav = [
     { percentage:   "0%",  transparency:  1.00 },
     { percentage:  "25%",  transparency:  0.90 },
     { percentage:  "50%",  transparency:  0.75 },
@@ -11,7 +11,7 @@ export const sideNav = [
     { percentage: "100%",  transparency:  0.00 },
 ]
 
-export const sideNavBackdrop = [
+const sideNavBackdrop = [
     { percentage:   "0%",  transparency:  1.00 },
     { percentage:   "5%",  transparency:  0.90 },
     { percentage:   "6%",  transparency:  0.75 },
@@ -30,7 +30,7 @@ export const sideNavBackdrop = [
 // Modal
 // --------------------------------------
 
-export const modalBody = [
+const modalBody = [
     { percentage:   "0%",  transparency:  0.10 },
     { percentage:   "1%",  transparency:  0.30 },
     { percentage:   "2%",  transparency:  0.50 },
@@ -49,14 +49,14 @@ export const modalBody = [
     { percentage: "100%",  transparency:  0.10 },
 ]
 
-export const modalTopBottomBorder = [
+const modalTopBottomBorder = [
     { percentage: "0%",  transparency:    0.95 },
     { percentage: "10%",  transparency:   0.00 },
     { percentage: "90%",  transparency:   0.00 },
     { percentage: "100%",  transparency:  0.95 },
 ]
 
-export const modalInnerBorder = [
+const modalInnerBorder = [
     { percentage:   "0%", transparency: 1.0 },
     { percentage:  "10%", transparency: 0.0 },
     { percentage:  "90%", transparency: 0.0 },
@@ -67,7 +67,7 @@ export const modalInnerBorder = [
 // Context Menu
 // --------------------------------------
 
-export const contextMenuItem = [
+const contextMenuItem = [
     { percentage:   "0%",    transparency:  0.10 },
     { percentage:  "10%",    transparency:  0.25 },
     { percentage:  "40%",    transparency:  0.60 },
@@ -81,7 +81,7 @@ export const contextMenuItem = [
 // You Died
 // --------------------------------------
 
-export const youDiedGradient = [
+const youDiedGradient = [
     { percentage:   "0%",  transparency: 0.20 },
     { percentage:  "10%",  transparency: 0.40 },
     { percentage:  "25%",  transparency: 0.60 },
@@ -95,14 +95,14 @@ export const youDiedGradient = [
 // Equipment Grid / Equipment Slots
 // --------------------------------------
 
-export const equipmentGridBorder = [
+const equipmentGridBorder = [
     { percentage:   "0%",  transparency:  0.0 },
     { percentage:  "10%",  transparency:  1.0 },
     { percentage:  "90%",  transparency:  1.0 },
     { percentage: "100%",  transparency:  0.0 },
 ]
 
-export const equipmentCellBorder = [
+const equipmentCellBorder = [
     { percentage:   "0%",  transparency: 0.00 },
     { percentage:  "25%",  transparency: 0.05 },
     { percentage:  "45%",  transparency: 0.10 },
@@ -114,3 +114,24 @@ export const equipmentCellBorder = [
     { percentage:  "95%",  transparency: 0.75 },
     { percentage: "100%",  transparency: 0.00 },
 ]
+
+// =============================================================================
+// All Together
+// =============================================================================
+
+export const gradientStops = {
+    // Side Nav
+    sideNav,
+    sideNavBackdrop,
+    // Modal
+    modalBody,
+    modalTopBottomBorder,
+    modalInnerBorder,
+    // Context Menu
+    contextMenuItem,
+    // You Died
+    youDiedGradient,
+    // Equipment Grid / Equipment Slots
+    equipmentGridBorder,
+    equipmentCellBorder,
+}
