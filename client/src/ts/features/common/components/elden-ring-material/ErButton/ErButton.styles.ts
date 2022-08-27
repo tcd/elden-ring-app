@@ -10,7 +10,7 @@ import {
 
 const {
     button: vars,
-    vars: { colors },
+    colors,
 } = ThemeVars
 
 const hoverBg = radialGradient({
