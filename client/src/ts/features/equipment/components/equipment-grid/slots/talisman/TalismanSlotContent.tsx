@@ -55,7 +55,7 @@ export const TalismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onmouseleave: handleMouseExit,
+                onMouseLeave: handleMouseExit,
             }}
         />
     )

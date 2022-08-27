@@ -1,10 +1,12 @@
 import { Box } from "@mui/material"
 
+import { ComponentSx } from "@app/theme"
+
 export const EquipmentSlotPlaceholder = (_props: unknown): JSX.Element => {
     return (
         <Box
             component="li"
-            className="er__equipmentGrid__cell--placeholder"
+            sx={ComponentSx.EquipmentGrid.grid.cellPlaceholder}
         />
     )
 }

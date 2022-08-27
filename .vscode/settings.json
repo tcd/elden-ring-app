@@ -47,7 +47,8 @@
         "tslog",
         "unequip",
         "unstyled",
-        "zindex"
+        "zindex",
+        "ZWSP"
     ],
     "search.exclude": {
         ".vscode/**":  true,

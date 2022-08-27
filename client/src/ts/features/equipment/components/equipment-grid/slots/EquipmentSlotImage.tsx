@@ -1,7 +1,9 @@
-import { forwardRef, ReactNode } from "react"
-import { Box, BoxProps, SxProps } from "@mui/material"
+import type { ReactNode } from "react"
+import type { BoxProps } from "@mui/material"
+import { forwardRef } from "react"
+import { Box } from "@mui/material"
 
-// import { EquipmentType } from "@app/types"
+import { ComponentSx } from "@app/theme"
 import {
     EquipmentSlotImageUrls,
     cssUrl,
@@ -11,12 +13,12 @@ import {
 
 export interface EquipmentSlotImageProps {
     bgType: EquipmentSlotBackgroundId
-    children?: ReactNode | JSX.Element
+    children?: ReactNode
     img: {
         src: string
         alt: string
     },
-    BoxProps?: BoxProps
+    BoxProps?: BoxProps<"li">
 }
 
 const defaultProps: Partial<EquipmentSlotImageProps> = {
@@ -45,32 +47,28 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
 
         const bgSrc = cssUrl(EquipmentSlotImageUrls[bgType])
         const filled = img?.src != null
-        const className = filled ? "er__equipmentGrid__cell--filled" :  "er__equipmentGrid__cell"
+        const sx = filled ? ComponentSx.EquipmentGrid.grid.filledCell : ComponentSx.EquipmentGrid.grid.cell
 
         let $img: JSX.Element = null
 
         if (filled) {
-            $img = <img
+            $img = <Box
+                component="img"
                 src={img.src}
                 alt={img.alt}
-                className="er__equipmentGrid__cellImage img-fluid"
+                sx={ComponentSx.EquipmentGrid.grid.cellImage}
             />
-        }
 
-        const bgSx: SxProps = {
-            "&::after": {
-                backgroundImage: bgSrc,
-            },
         }
 
         return (
             <Box
                 ref={ref}
                 component="li"
-                className={className}
+                sx={sx}
                 {...BoxProps}
             >
-                <Box sx={bgSx} className="er__equipmentGrid__cellBg" />
+                <Box sx={ComponentSx.EquipmentGrid.grid.cellBackground(bgSrc)} />
                 {$img}
                 {children && children}
             </Box>

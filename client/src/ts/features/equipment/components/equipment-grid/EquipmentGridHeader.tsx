@@ -1,15 +1,22 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
+import { Box } from "@mui/material"
 
-import { ArmorSlots } from "./slots"
-import { Actions, Selectors } from "@app/state"
+import { Selectors } from "@app/state"
+import { ComponentSx } from "@app/theme"
 
 export const EquipmentGridHeader = (_props: unknown): JSX.Element => {
 
-    const dispatch = useDispatch()
+    const title       = useSelector(Selectors.Equipment.gridTitle)
+    const description = useSelector(Selectors.Equipment.gridDescription)
 
     return (
-        <div id="er__equipmentGrid">
-            <ArmorSlots />
-        </div>
+        <Box component="header" sx={ComponentSx.EquipmentGrid.header.root}>
+            <Box component="span" sx={ComponentSx.EquipmentGrid.header.title}>
+                {title}
+            </Box>
+            <Box component="span" sx={ComponentSx.EquipmentGrid.header.description}>
+                {description}
+            </Box>
+        </Box>
     )
 }

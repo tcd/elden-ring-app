@@ -36,7 +36,7 @@ export const ArrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onmouseleave: handleMouseExit,
+                onMouseLeave: handleMouseExit,
             }}
         />
     )
@@ -69,7 +69,7 @@ export const BoltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function 
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onmouseleave: handleMouseExit,
+                onMouseLeave: handleMouseExit,
             }}
         />
     )

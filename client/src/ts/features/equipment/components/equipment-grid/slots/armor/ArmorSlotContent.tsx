@@ -53,7 +53,7 @@ export const ArmorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(functi
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onmouseleave: handleMouseExit,
+                onMouseLeave: handleMouseExit,
             }}
         />
     )
