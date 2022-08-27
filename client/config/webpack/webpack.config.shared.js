@@ -4,7 +4,7 @@ const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 // const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
+// const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 
 const { ROOT_FOLDER } = require("./helpers")
 const version = require("../../package.json").version

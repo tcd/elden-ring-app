@@ -1,4 +1,5 @@
 export * from "./elden-ring"
+export * from "./elden-ring-material"
 
 export * from "./Heading"
 export * from "./RawHtml"

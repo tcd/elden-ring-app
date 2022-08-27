@@ -2,14 +2,14 @@ import merge from "lodash/merge"
 import type { ButtonBaseProps } from "@mui/material"
 import { ButtonBase } from "@mui/material"
 
-export type ErButtonProps = ButtonBaseProps
+import { sx } from "./ErButton.styles"
 
 const defaultProps: Partial<ErButtonProps> = {
-    className: "er__button",
-    sx: {
-
-    },
+    // className: "er__button",
+    sx: sx,
 }
+
+export type ErButtonProps = Omit<ButtonBaseProps, "disableRipple">
 
 export const ErButton = (props: ErButtonProps): JSX.Element => {
 
@@ -21,7 +21,7 @@ export const ErButton = (props: ErButtonProps): JSX.Element => {
     const mergedProps = merge({}, defaultProps, rest)
 
     return (
-        <ButtonBase {...mergedProps}>
+        <ButtonBase {...mergedProps} disableRipple={true}>
             {children && children}
         </ButtonBase>
     )
