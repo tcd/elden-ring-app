@@ -101,4 +101,6 @@ type Digit =
     | 99
     | 100
 
-export type Percentage = `${Digit}%` | `${Digit}.${Digit}%`
+export type Percentage =
+    | `${Digit}%`
+    | `${Digit}.${Digit}%`
