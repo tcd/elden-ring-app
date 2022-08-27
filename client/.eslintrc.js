@@ -11,6 +11,9 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -23,7 +26,22 @@ module.exports = {
     plugins: [
         "react",
         "@typescript-eslint",
+        "import",
+        "lodash",
     ],
+    "settings": {
+        "import/internal-regex": "^@app/",
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx",
+                ".d.ts",
+            ],
+        },
+        "import/resolver": {
+            "typescript": {},
+        },
+    },
     ignorePatterns: [
         "config/**/*.js",
         "config/**/*.mjs",
@@ -37,14 +55,20 @@ module.exports = {
         "object-curly-spacing": ["warn", "always"],
         "keyword-spacing": ["warn", { "after": true }],
         "space-before-blocks": ["warn"],
-        // "linebreak-style": ["error", "unix"],
+        "linebreak-style": ["error", "unix"],
         // "no-inline-comments": "off",
         // "no-console": "off",
+        // ---------------------------------------------------------------------
+        // React
         // https://github.com/yannickcr/eslint-plugin-react
+        // ---------------------------------------------------------------------
         "react/react-in-jsx-scope": "off", // we've taken care of this with webpack
         "react/prop-types": "off",
         "react/no-unescaped-entities": "warn",
+        // ---------------------------------------------------------------------
+        // TypeScript
         // https://github.com/typescript-eslint/typescript-eslint
+        // ---------------------------------------------------------------------
         "@typescript-eslint/no-empty-interface": ["off"],
         // "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
         "no-unused-vars": "off", // This doesn't play nice with TypeScript
@@ -53,6 +77,33 @@ module.exports = {
         "@typescript-eslint/type-annotation-spacing": ["warn"],
         "@typescript-eslint/ban-ts-comment": ["off"],
         "@typescript-eslint/no-empty-function": ["warn"],
-        "@typescript-eslint/ban-types": ["warn"],
+        "@typescript-eslint/ban-types": ["warn", { "types": { "Function": false }, "extendDefaults": true } ],
+        // ---------------------------------------------------------------------
+        // Imports
+        // https://github.com/import-js/eslint-plugin-import
+        // ---------------------------------------------------------------------
+        "import/first": ["warn"],
+        "import/no-unresolved": ["error"],
+        "import/order": ["warn", {
+            "newlines-between": "always",
+            "groups": [
+                "builtin",
+                "external",
+                "internal",
+                "parent",
+                "sibling",
+                "index",
+                "object",
+                // "type",
+            ],
+            "pathGroups": [
+                {
+                    "pattern": "@app/*",
+                    "group": "internal",
+                    // "position": "after",
+                },
+            ],
+            // "distinctGroup": false,
+        }],
     },
 }

@@ -114,7 +114,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 [usehooks-ts]: https://github.com/juliencrn/usehooks-ts
 [react-hotkeys-hook]: https://github.com/JohannesKlauss/react-hotkeys-hook
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.7.0...HEAD
+[Unreleased]: https://github.com/tcd/elden-ring-app/compare/v0.7.0...HEAD
 [0.7.0]: https://github.com/tcd/elden-ring-app/compare/v0.6.2...v0.7.0
 [0.6.2]: https://github.com/tcd/elden-ring-app/compare/v0.6.1...v0.6.2 
 [0.6.1]: https://github.com/tcd/elden-ring-app/compare/v0.6.0...v0.6.1 
