@@ -35,6 +35,7 @@
         }
     }
 
+    // FIXME: implement in react
     .er__dialog__content & {
         @include media("<=tablet") {
             margin-top:    15px;

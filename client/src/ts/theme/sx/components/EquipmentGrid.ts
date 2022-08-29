@@ -9,8 +9,8 @@ import {
     boxShadow,
 } from "@app/theme"
 import {
-    goldenHover,
     pointerOnHover,
+    invisibleContent,
     textShadow,
     imageFluid,
 } from "../mixins"
@@ -22,7 +22,8 @@ import {
 /** `#er__equipmentGrid` */
 const rootSx: SxProps = {
     boxSizing: "border-box",
-    "& *": {
+    maxHeight: "100%",
+    "& *, & > *": {
         boxSizing: "border-box",
     },
 }
@@ -130,15 +131,9 @@ const gridCellFilledSx: SxProps = {
     // },
 }
 
-/** `.er__equipmentGrid__cellImage` */
-const gridCellImageSx: SxProps = {
-    zIndex: ThemeVars.zIndex.equipmentGridCellImage,
-    padding: "10px",
-    ...imageFluid,
-}
-
 /** `.er__equipmentGrid__cell--placeholder` */
 const gridCellPlaceholderSx: SxProps = {
+    ...invisibleContent,
     zIndex: ThemeVars.zIndex.equipmentGridCell,
     width:  "80px",
     height: "90px",
@@ -149,6 +144,13 @@ const gridCellPlaceholderSx: SxProps = {
         width:  "55px",
         height: "60px",
     },
+}
+
+/** `.er__equipmentGrid__cellImage` */
+const gridCellImageSx: SxProps = {
+    zIndex: ThemeVars.zIndex.equipmentGridCellImage,
+    padding: "10px",
+    ...imageFluid,
 }
 
 /** `.er__equipmentGrid__cellBg` */

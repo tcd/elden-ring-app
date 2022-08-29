@@ -1,6 +1,7 @@
 import { QuickItemSlotContent } from "./QuickItemSlotContent"
+import { EquipmentGridRow } from "../EquipmentGridRow"
 
-export const QuickItemSlots = (): JSX.Element => {
+export const QuickItemSlots = (_props: unknown): JSX.Element => {
 
     const quickItemSlot = (id: string) => {
         const key = `quick-item-slot-${id}`
@@ -14,12 +15,12 @@ export const QuickItemSlots = (): JSX.Element => {
 
     return (
         <>
-            <section className="er__equipmentGrid__row">
+            <EquipmentGridRow>
                 {row1}
-            </section>
-            <section className="er__equipmentGrid__row">
+            </EquipmentGridRow>
+            <EquipmentGridRow>
                 {row2}
-            </section>
+            </EquipmentGridRow>
         </>
     )
 }

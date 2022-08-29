@@ -3,32 +3,32 @@
 
 #er__equipmentGrid {
 
-    // box-sizing: border-box;
-    // // padding-left: 48px;
-    // // padding-left: 15px;
+    box-sizing: border-box;
+    // padding-left: 48px;
+    // padding-left: 15px;
 
-    // * {
-    //     box-sizing: border-box;
-    // }
+    * {
+        box-sizing: border-box;
+    }
 
-    // header.er__equipmentGrid__header {
-    //     display: flex;
-    //     flex-flow: column nowrap;
-    //     span.er__equipmentGrid__headerTitle {
-    //         color: var.$gold;
-    //         font-size: 24px;
-    //         padding-top: .2em;
-    //         margin-bottom: 0px;
-    //         padding-bottom: 0px;
-    //         text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
-    //         white-space: nowrap;
-    //     }
-    //     span.er__equipmentGrid__headerDescription {
-    //         font-size: 18px;
-    //         text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
-    //         white-space: nowrap;
-    //     }
-    // }
+    header.er__equipmentGrid__header {
+        display: flex;
+        flex-flow: column nowrap;
+        span.er__equipmentGrid__headerTitle {
+            color: var.$gold;
+            font-size: 24px;
+            padding-top: .2em;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
+            white-space: nowrap;
+        }
+        span.er__equipmentGrid__headerDescription {
+            font-size: 18px;
+            text-shadow: var.$text-shadow-offset var.$text-shadow-offset black;
+            white-space: nowrap;
+        }
+    }
 
     .er__equipmentGrid__grid {
         .er__equipmentGrid__row {

@@ -4,6 +4,7 @@ import { ArmorTypes } from "@app/types"
 import { Selectors } from "@app/state"
 import { ArmorSlotContent } from "./ArmorSlotContent"
 import { EquipmentSlotPlaceholder } from "../EquipmentSlotPlaceholder"
+import { EquipmentGridRow } from "../EquipmentGridRow"
 
 export const ArmorSlots = (): JSX.Element => {
 
@@ -13,12 +14,12 @@ export const ArmorSlots = (): JSX.Element => {
     const legs  = useSelector(Selectors.Armor.equipped.legs)
 
     return (
-        <section className="er__equipmentGrid__row">
+        <EquipmentGridRow>
             <ArmorSlotContent type={ArmorTypes.Head}  armor={head}  />
             <ArmorSlotContent type={ArmorTypes.Chest} armor={chest} />
             <ArmorSlotContent type={ArmorTypes.Arms}  armor={arms}  />
             <ArmorSlotContent type={ArmorTypes.Legs}  armor={legs}  />
             <EquipmentSlotPlaceholder />
-        </section>
+        </EquipmentGridRow>
     )
 }
