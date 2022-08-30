@@ -1,40 +1,23 @@
-import { useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
+import Grid from "@mui/material/Unstable_Grid2"
 
-import { ArmorType } from "@app/constants"
-import { isBlank } from "@app/util"
-import { Actions, Selectors } from "@app/state"
 import { Page } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/character-status"
 
 export const ArmorPage = (_props: unknown): JSX.Element => {
-
-    const dispatch = useDispatch()
-    const { slotId } = useParams<{ slotId: ArmorType }>()
-
-    const activeType = useSelector(Selectors.Armor.activeType)
-
-    // useEffect(() => {
-    //     if (isBlank(activeType)) {
-    //         dispatch(Actions.Armor.setActiveType({ type: slotId }))
-    //     }
-    // }, [activeType, slotId, dispatch])
-
     return (
         <Page pageName="armor">
-            <div className="row">
-                <div className="col">
+            <Grid container direction="row">
+                <Grid xs={6}>
                     <ArmorMenu />
-                </div>
-                <div className="col">
+                </Grid>
+                <Grid xs>
                     <ArmorDetail />
-                </div>
-                <div className="col">
+                </Grid>
+                <Grid xs={2.5}>
                     <CharacterStatus />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         </Page>
     )
 }
