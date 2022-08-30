@@ -15,12 +15,8 @@ export const QuickItemSlots = (_props: unknown): JSX.Element => {
 
     return (
         <>
-            <EquipmentGridRow>
-                {row1}
-            </EquipmentGridRow>
-            <EquipmentGridRow>
-                {row2}
-            </EquipmentGridRow>
+            {row1}
+            {row2}
         </>
     )
 }

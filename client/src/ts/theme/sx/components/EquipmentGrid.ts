@@ -71,19 +71,36 @@ const gridRowSx: SxProps = {
     flexFlow: "row nowrap",
 }
 
-/** `.er__equipmentGrid__cell` */
-const gridCellSx: SxProps = {
+/** `.er__equipmentGrid__row` */
+const gridContainerSx: SxProps = {
+    width: "100%",
+    display: "flex",
+    flexFlow: "row wrap",
+}
+
+// =============================================================================
+// Cell
+// =============================================================================
+
+const _cellShared: SxProps = {
     zIndex: ThemeVars.zIndex.equipmentGridCell,
-    position: "relative",
-    width:  "80px",
-    height: "90px",
+    aspectRatio: "8/9",
+    // width:  "80px",
+    // height: "90px",
     marginLeft: "2.5px",
     marginRight: "2.5px",
     // tablet or smaller
-    [ErTheme.breakpoints.down("md")]: {
-        width:  "55px",
-        height: "60px",
-    },
+    // [ErTheme.breakpoints.down("md")]: {
+    //     width:  "55px",
+    //     height: "60px",
+    // },
+    flex: "1 0 calc(20% - 5px)",
+}
+
+/** `.er__equipmentGrid__cell` */
+const gridCellSx: SxProps = {
+    ..._cellShared,
+    position: "relative",
     "& *": {
         "&:hover": {
             cursor: "pointer",
@@ -134,16 +151,7 @@ const gridCellFilledSx: SxProps = {
 /** `.er__equipmentGrid__cell--placeholder` */
 const gridCellPlaceholderSx: SxProps = {
     ...invisibleContent,
-    zIndex: ThemeVars.zIndex.equipmentGridCell,
-    width:  "80px",
-    height: "90px",
-    marginLeft:  "2.5px",
-    marginRight: "2.5px",
-    // tablet or smaller
-    [ErTheme.breakpoints.down("md")]: {
-        width:  "55px",
-        height: "60px",
-    },
+    ..._cellShared,
 }
 
 /** `.er__equipmentGrid__cellImage` */
@@ -187,6 +195,7 @@ export const EquipmentGrid = {
         description: headerDescription,
     },
     grid: {
+        container: gridContainerSx,
         row: gridRowSx,
         cell: gridCellSx,
         filledCell: gridCellFilledSx,

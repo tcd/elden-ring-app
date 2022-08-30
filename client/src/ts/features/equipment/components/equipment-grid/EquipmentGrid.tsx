@@ -13,7 +13,7 @@ export const EquipmentGrid = (_props: unknown): JSX.Element => {
     return (
         <Box sx={ComponentSx.EquipmentGrid.root}>
             <EquipmentGridHeader />
-            <Box>
+            <Box sx={ComponentSx.EquipmentGrid.grid.container}>
                 <WeaponSlots />
                 <ArmorSlots />
                 <TalismanSlots />

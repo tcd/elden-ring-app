@@ -4,7 +4,6 @@ import { TalismanSlotIds } from "@app/constants"
 import { Selectors } from "@app/state"
 import { TalismanSlotContent } from "./TalismanSlotContent"
 import { EquipmentSlotPlaceholder } from "../EquipmentSlotPlaceholder"
-import { EquipmentGridRow } from "../EquipmentGridRow"
 
 export const TalismanSlots = (): JSX.Element => {
 
@@ -17,9 +16,9 @@ export const TalismanSlots = (): JSX.Element => {
     })
 
     return (
-        <EquipmentGridRow>
+        <>
             {rows}
             <EquipmentSlotPlaceholder />
-        </EquipmentGridRow>
+        </>
     )
 }
