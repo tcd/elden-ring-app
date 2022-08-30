@@ -3,7 +3,7 @@ import type { SxProps } from "@mui/material"
 import {
     ThemeVars,
     rgba,
-    margins,
+    scrollbar,
 } from "@app/theme"
 import {
     pointerOnHover,
@@ -28,17 +28,19 @@ const topLevel: SxProps = {
 const root: SxProps = {
     height: "75vh",
     // height: "80%",
-    // overflowY: "scroll",
+    overflowY: "scroll",
     padding: "20px",
     marginTop: "25px",
     borderRadius: "5px",
-    bgcolor: rgba(ThemeVars.equipmentMenu.backgroundColor, 0.3).hexa(),
+    backgroundColor: rgba(ThemeVars.equipmentMenu.backgroundColor, 0.3).string(),
+    ...scrollbar(),
 }
 
 /** `.er__equipmentMenu__gridSectionBorder` */
 const divider: SxProps = {
     height: "3px",
-    margin: margins({ y: "6px" }),
+    marginTop: "6px",
+    marginBottom: "6px",
     background: ThemeVars.gradients.equipmentMenuDivider,
 }
 

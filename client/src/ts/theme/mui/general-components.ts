@@ -1,8 +1,16 @@
 import type { Components } from "@mui/material"
 
 import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
+import { scrollbar } from "../helpers/scrollbar"
 
 export const generalComponents: Components = {
+    MuiCssBaseline: {
+        styleOverrides: {
+            body: {
+                ...scrollbar(),
+            },
+        },
+    },
     MuiButtonBase: {
         defaultProps: {
             disableRipple: true,
