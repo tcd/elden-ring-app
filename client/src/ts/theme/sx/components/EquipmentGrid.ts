@@ -1,9 +1,7 @@
-// import merge from "lodash/merge"
 import type { SxProps } from "@mui/material"
 
 import {
     ThemeVars,
-    EldenRingMaterialTheme as ErTheme,
     rgba,
     radialGradient,
     boxShadow,
