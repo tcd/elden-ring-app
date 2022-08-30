@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
 import { Talisman, TalismanSlotId } from "@app/types"
-import { getImageSrc, EquipmentSlotImageUrls, cssUrl } from "@app/util"
+import { cssUrl } from "@app/theme"
+import { getImageSrc, EquipmentSlotImageUrls } from "@app/util"
 import { Actions } from "@app/state"
 
 const slotSx: SxProps = {

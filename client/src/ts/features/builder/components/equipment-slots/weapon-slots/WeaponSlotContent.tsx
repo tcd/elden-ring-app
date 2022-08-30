@@ -5,7 +5,8 @@ import { Box, SxProps } from "@mui/material"
 
 import { WeaponSlotId } from "@app/constants"
 import { WeaponSlotData } from "@app/types"
-import { getImageSrc, cssUrl, EquipmentSlotImageUrls } from "@app/util"
+import { cssUrl } from "@app/theme"
+import { getImageSrc, EquipmentSlotImageUrls } from "@app/util"
 import { Actions } from "@app/state"
 
 export interface WeaponSlotProps {

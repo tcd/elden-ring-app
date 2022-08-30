@@ -3,10 +3,9 @@ import type { BoxProps } from "@mui/material"
 import { forwardRef } from "react"
 import { Box } from "@mui/material"
 
-import { ComponentSx } from "@app/theme"
+import { ComponentSx, cssUrl } from "@app/theme"
 import {
     EquipmentSlotImageUrls,
-    cssUrl,
     EquipmentSlotBackgroundId,
     Audio,
 } from "@app/util"
