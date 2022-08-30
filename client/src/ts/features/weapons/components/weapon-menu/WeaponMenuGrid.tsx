@@ -98,6 +98,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
         <EquipmentMenu.EquipmentMenu
             title="FIXME: weapon menu title"
             description={activeName}
+            ref={menuRef}
         >
             {sections}
         </EquipmentMenu.EquipmentMenu>
