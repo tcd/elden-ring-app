@@ -55,7 +55,6 @@ module.exports = {
         "object-curly-spacing": ["warn", "always"],
         "keyword-spacing": ["warn", { "after": true }],
         "space-before-blocks": ["warn"],
-        "linebreak-style": ["error", "unix"],
         // "no-inline-comments": "off",
         // "no-console": "off",
         // ---------------------------------------------------------------------
