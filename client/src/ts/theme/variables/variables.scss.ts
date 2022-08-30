@@ -235,13 +235,16 @@ export const equipmentSlots = {
 // ----------------------------------------------------------------------------
 
 export const equipmentMenu = {
-    "equipmentMenu-image-background": "#3A3931",
-    "equipmentMenu-grid-background": "#3d3b32",
-    "equipmentMenu-grid-divider": "#4c4a41",
-    "equipmentMenu-cell-color": "#36352d",
-    "equipmentMenu-min-cell-size": "50px",
-    "equipmentMenu-redX-size": "16px",
-    "equipmentMenu-redX-padding": "4px",
+    imageBackgroundColor: "#3A3931",
+    backgroundColor: "#3d3b32",
+    dividerColor: "#4c4a41",
+    cellColor: "#36352d",
+    minCellSize: "50px",
+}
+
+export const RedX = {
+    size: "16px",
+    padding: "4px",
 }
 
 
