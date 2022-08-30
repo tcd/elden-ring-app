@@ -7,7 +7,7 @@ import { RedX, MuiImg, MouseOverPopover } from "@app/shared"
 
 const sx = ComponentSx.EquipmentMenu.grid
 
-export type EquipmentMenuCellProps = Omit<BoxProps, "title" | "onClick"> & {
+export type CellProps = Omit<BoxProps, "title" | "onClick"> & {
     img: string
     title: string
     onClick: (title: string) => void
@@ -17,7 +17,7 @@ export type EquipmentMenuCellProps = Omit<BoxProps, "title" | "onClick"> & {
     redX?: boolean
 }
 
-export const EquipmentMenuCell = forwardRef(function EquipmentMenuCell(props: EquipmentMenuCellProps, ref) {
+export const Cell = forwardRef(function EquipmentMenuCell(props: CellProps, ref) {
 
     const {
         active = false,

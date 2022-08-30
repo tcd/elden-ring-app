@@ -1,6 +1,6 @@
 export * from "./elden-ring"
 export * from "./elden-ring-material"
-export * from "./equipment-menu"
+export * as EquipmentMenu from "./equipment-menu"
 
 export * from "./Heading"
 export * from "./RawHtml"

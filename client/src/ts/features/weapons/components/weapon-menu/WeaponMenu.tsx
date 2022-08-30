@@ -11,12 +11,8 @@ export const WeaponMenu = (_props: unknown): JSX.Element => {
 
     if (isBlank(activeSlot)) {
         return null
-    } else {
-        return (
-            <div className="er__equipmentMenu">
-                <WeaponMenuGrid />
-            </div>
-        )
     }
+
+    return <WeaponMenuGrid />
 }
 

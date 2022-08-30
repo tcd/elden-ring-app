@@ -1,17 +1,21 @@
 import {
     createRef,
     useEffect,
-    Fragment,
     useRef,
 } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 
-import { RefMap } from "@app/types"
-import { scrollToEquipmentCell } from "@app/util"
+import type { RefMap } from "@app/types"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
-import { WeaponMenuImage } from "@app/features/weapons/components"
+import {
+    scrollToEquipmentCell,
+    meetsRequirements,
+    getImageSrc,
+} from "@app/util"
+import {
+    EquipmentMenu,
+} from "@app/shared"
 
 export const WeaponMenuGrid = (): JSX.Element => {
 
@@ -44,7 +48,6 @@ export const WeaponMenuGrid = (): JSX.Element => {
     }
 
     const menuRef = createRef<HTMLDivElement>()
-    const scrollRef = createRef<IErScroll>()
 
     const refs: RefMap = weapons.reduce((acc, value) => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -61,55 +64,42 @@ export const WeaponMenuGrid = (): JSX.Element => {
     const sections = weaponTypes.map((weaponType, index) => {
         const sectionWeapons = weapons.filter(x => x.weapon_type_id == weaponType.id)
         const weaponCells = sectionWeapons.map((weapon) => {
-            const key = `weapon-${weapon.name}`
-            let classes = "er__equipmentMenu__gridCell inactive"
-            if (weapon.name === activeName) {
-                classes = "er__equipmentMenu__gridCell active"
-            }
             return (
-                <MouseOverPopover id={key} key={key} popoverContent={weapon.name}>
-                    <div
-                        ref={refs[weapon.name]}
-                        className={classes}
-                        onClick={() => handleClick(weapon.name)}
-                    >
-                        <WeaponMenuImage weapon={weapon} attributes={stats} />
-                    </div>
-                </MouseOverPopover>
+                <EquipmentMenu.Cell
+                    key={`weapon-${weapon.name}`}
+                    title={weapon.name}
+                    active={weapon.name === activeName}
+                    onClick={handleClick}
+                    img={getImageSrc("Weapon", weapon.name, "256")}
+                    ref={refs[weapon.name]}
+                    redX={!meetsRequirements(stats, weapon)}
+                />
             )
         })
 
-        const divider = (index + 1 < weaponTypes.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
-
         return (
-            <Fragment key={weaponType.plural_name}>
-                <section
-                    id={weaponType.plural_name}
-                    className="er__equipmentMenu__gridSection"
-                >
-                    {weaponCells}
-                </section>
-                {divider}
-            </Fragment>
+            <EquipmentMenu.Section
+                key={weaponType.plural_name}
+                id={weaponType.plural_name}
+                divider={index + 1 < weaponTypes.length}
+            >
+                {weaponCells}
+            </EquipmentMenu.Section>
         )
     })
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
-            scrollRef.current?.adjustScrollTrack()
             dispatch(Actions.Weapons.scrollMenu())
         })
-    }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
 
     return (
-        <ErScroll
-            ref={scrollRef}
-            contentRef={menuRef}
-            contentProps={{
-                className: "er__equipmentMenu__gridColumn",
-            }}
+        <EquipmentMenu.EquipmentMenu
+            title="FIXME: weapon menu title"
+            description={activeName}
         >
             {sections}
-        </ErScroll>
+        </EquipmentMenu.EquipmentMenu>
     )
 }
