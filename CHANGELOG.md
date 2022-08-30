@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 ### Added
 - Add `CharacterStatus` feature
 - Add initial audio features
+### Changed
+- Try out new responsive styles for equipment slot grid.
 ### Fixed
 - Update mobile dialog styles
 - Remove console.log statement in viewport context

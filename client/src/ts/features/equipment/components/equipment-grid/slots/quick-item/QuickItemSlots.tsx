@@ -1,5 +1,4 @@
 import { QuickItemSlotContent } from "./QuickItemSlotContent"
-import { EquipmentGridRow } from "../EquipmentGridRow"
 
 export const QuickItemSlots = (_props: unknown): JSX.Element => {
 
