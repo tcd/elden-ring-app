@@ -47,10 +47,10 @@ import {
     AshesOfWarPage,
     MobileWeaponPage,
 } from "@app/features/weapons"
-import {
-    // SpellMenu,
-    // SpellsTablePage,
-} from "@app/features/spells"
+// import {
+//     // SpellMenu,
+//     // SpellsTablePage,
+// } from "@app/features/spells"
 
 export const AppRoutesComponent = (_props: unknown): JSX.Element => {
     // const onMobile = ScreenSize.onMobile
