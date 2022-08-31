@@ -1,2 +1,2 @@
 export * from "./CharacterStatus"
-export * from "./StatusPage"
+export * from "./status-page"
