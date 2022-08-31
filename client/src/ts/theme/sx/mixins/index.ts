@@ -1,3 +1,4 @@
+export * from "./card-side-border"
 export * from "./golden-hover"
 export * from "./image-fluid"
 export * from "./invisible-content"
