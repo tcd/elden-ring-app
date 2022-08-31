@@ -12,9 +12,7 @@ export const WeaponSkillMenu = (): JSX.Element => {
         return null
     } else {
         return (
-            <div className="er__equipmentMenu">
-                <WeaponSkillMenuGrid />
-            </div>
+            <WeaponSkillMenuGrid />
         )
     }
 

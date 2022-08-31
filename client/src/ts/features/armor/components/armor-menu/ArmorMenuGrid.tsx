@@ -1,11 +1,10 @@
-import { createRef, useEffect, useRef, Fragment } from "react"
+import { createRef, useEffect, useRef } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { ARMOR_SORT_GROUPS, RefMap } from "@app/types"
-import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
-import { ArmorMenuImage } from "@app/features/armor/components"
+import { scrollToEquipmentCell, getImageSrc } from "@app/util"
+import { EquipmentMenu } from "@app/shared"
 
 export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
 
@@ -15,7 +14,6 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     const activeName      = useSelector(Selectors.Armor.activeName)
     const menuHasScrolled = useSelector(Selectors.Armor.menuHasScrolled)
 
-    const scrollRef = createRef<IErScroll>()
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = armor.reduce((acc, value) => {
@@ -31,52 +29,42 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     const sections = ARMOR_SORT_GROUPS.map((sortGroup, index) => {
         const sectionArmor = armor.filter(x => x.sort_group == sortGroup)
         const armorCells = sectionArmor.map((armor) => {
-            const key = `armor-${armor.name}`
-            let classes = "er__equipmentMenu__gridCell inactive"
-            if (armor.name === activeName) {
-                classes = "er__equipmentMenu__gridCell active"
-            }
             return (
-                <MouseOverPopover id={key} key={key} popoverContent={armor.name}>
-                    <div
-                        key={`armor-${armor.name}`}
-                        ref={refs[armor.name]}
-                        className={classes}
-                        onClick={() => handleClick(armor.name)}
-                    >
-                        <ArmorMenuImage armor={armor} />
-                    </div>
-                </MouseOverPopover>
+                <EquipmentMenu.Cell
+                    key={`armor-${armor.name}`}
+                    title={armor.name}
+                    active={armor.name === activeName}
+                    onClick={handleClick}
+                    img={getImageSrc("Armor", armor.name, "256")}
+                    ref={refs[armor.name]}
+                />
             )
         })
-        const divider = (index + 1 < ARMOR_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
         return (
-            <Fragment key={sortGroup}>
-                <section id={sortGroup.toString()} className="er__equipmentMenu__gridSection">
-                    {armorCells}
-                </section>
-                {divider}
-            </Fragment>
+            <EquipmentMenu.Section
+                key={sortGroup}
+                id={`armor-group-${sortGroup}`}
+                divider={index + 1 < ARMOR_SORT_GROUPS.length}
+            >
+                {armorCells}
+            </EquipmentMenu.Section>
         )
     })
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
-            scrollRef.current?.adjustScrollTrack()
             dispatch(Actions.Armor.scrollMenu())
         })
-    }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
 
     return (
-        <ErScroll
-            ref={scrollRef}
-            contentRef={menuRef}
-            contentProps={{
-                className: "er__equipmentMenu__gridColumn",
-            }}
+        <EquipmentMenu.EquipmentMenu
+            title="FIXME: armor menu title"
+            description={activeName}
+            ref={menuRef}
         >
             {sections}
-        </ErScroll>
+        </EquipmentMenu.EquipmentMenu>
     )
 }

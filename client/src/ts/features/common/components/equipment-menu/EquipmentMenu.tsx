@@ -10,7 +10,7 @@ export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentM
     const { children } = props
 
     return (
-        <Box sx={ComponentSx.EquipmentMenu.root}>
+        <Box sx={ComponentSx.EquipmentMenu.root} id={props?.id || undefined}>
             <EquipmentMenuHeader {...props}/>
             <Box sx={ComponentSx.EquipmentMenu.grid.root} ref={ref}>
                 {children && children}

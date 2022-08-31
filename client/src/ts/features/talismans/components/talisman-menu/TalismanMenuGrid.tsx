@@ -1,21 +1,20 @@
-import { createRef, useEffect, useRef, Fragment } from "react"
+import { createRef, useEffect, useRef } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { TALISMAN_SORT_GROUPS, RefMap } from "@app/types"
-import { scrollToEquipmentCell } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { MouseOverPopover, ErScroll, IErScroll } from "@app/shared"
-import { TalismanMenuImage } from "@app/features/talismans/components"
+import { scrollToEquipmentCell, getImageSrc } from "@app/util"
+import { EquipmentMenu } from "@app/shared"
 
 export const TalismanMenuGrid = (): JSX.Element => {
 
     const dispatch = useDispatch()
 
+    const activeSlot      = useSelector(Selectors.Talismans.activeSlotId)
     const activeName      = useSelector(Selectors.Talismans.activeName)
     const talismans       = useSelector(Selectors.Builder.api.talismans)
     const menuHasScrolled = useSelector(Selectors.Talismans.menuHasScrolled)
 
-    const scrollRef = createRef<IErScroll>()
     const menuRef = createRef<HTMLDivElement>()
 
     const refs: RefMap = talismans.reduce((acc, value) => {
@@ -31,51 +30,42 @@ export const TalismanMenuGrid = (): JSX.Element => {
     const sections = TALISMAN_SORT_GROUPS.map((sortGroup, index) => {
         const sectionTalismans = talismans.filter(x => x.sort_group == sortGroup)
         const talismanCells = sectionTalismans.map((talisman) => {
-            const key = `talisman-${talisman.name}`
-            let classes = "er__equipmentMenu__gridCell inactive"
-            if (talisman.name === activeName) {
-                classes = "er__equipmentMenu__gridCell active"
-            }
             return (
-                <MouseOverPopover id={key} key={key} popoverContent={talisman.name} >
-                    <div
-                        ref={refs[talisman.name]}
-                        className={classes}
-                        onClick={() => handleClick(talisman.name)}
-                    >
-                        <TalismanMenuImage talisman={talisman}/>
-                    </div>
-                </MouseOverPopover>
+                <EquipmentMenu.Cell
+                    key={`talisman-${talisman.name}`}
+                    title={talisman.name}
+                    active={talisman.name === activeName}
+                    onClick={handleClick}
+                    img={getImageSrc("Talisman", talisman.name, "256")}
+                    ref={refs[talisman.name]}
+                />
             )
         })
-        const divider = (index + 1 < TALISMAN_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
 
         return (
-            <Fragment key={sortGroup}>
-                <section id={sortGroup.toString()} className="er__equipmentMenu__gridSection">
-                    {talismanCells}
-                </section>
-                {divider}
-            </Fragment>
+            <EquipmentMenu.Section
+                key={sortGroup}
+                id={`talisman-group-${sortGroup}`}
+                divider={index + 1 < TALISMAN_SORT_GROUPS.length}
+            >
+                {talismanCells}
+            </EquipmentMenu.Section>
         )
     })
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
-            scrollRef.current?.adjustScrollTrack()
             dispatch(Actions.Talismans.scrollMenu())
         })
-    }, [dispatch, menuHasScrolled, activeName, refs, menuRef, scrollRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
 
     return (
-        <ErScroll
-            ref={scrollRef}
-            contentRef={menuRef}
-            contentProps={{
-                className: "er__equipmentMenu__gridColumn",
-            }}
+        <EquipmentMenu.EquipmentMenu
+            title={`Talisman ${activeSlot}`}
+            description={activeName}
+            ref={menuRef}
         >
             {sections}
-        </ErScroll>
+        </EquipmentMenu.EquipmentMenu>
     )
 }

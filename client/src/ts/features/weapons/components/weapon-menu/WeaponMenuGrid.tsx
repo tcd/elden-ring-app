@@ -12,16 +12,16 @@ import {
     scrollToEquipmentCell,
     meetsRequirements,
     getImageSrc,
+    weaponSlotDisplayName,
 } from "@app/util"
-import {
-    EquipmentMenu,
-} from "@app/shared"
+import { EquipmentMenu } from "@app/shared"
 
 export const WeaponMenuGrid = (): JSX.Element => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
+    const activeSlot       = useSelector(Selectors.Weapons.activeSlotId)
     const activeName       = useSelector(Selectors.Weapons.active.weaponName)
     const weapons          = useSelector(Selectors.Weapons.allWeapons)
     const weaponTypes      = useSelector(Selectors.Builder.api.weaponTypes)
@@ -35,6 +35,8 @@ export const WeaponMenuGrid = (): JSX.Element => {
     const intelligence = useSelector(Selectors.Meta.Levels.corrected.intelligence)
     const faith        = useSelector(Selectors.Meta.Levels.corrected.faith)
     const arcane       = useSelector(Selectors.Meta.Levels.corrected.arcane)
+
+    const title = weaponSlotDisplayName(activeSlot)
 
     const stats = {
         vigor,
@@ -96,7 +98,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
 
     return (
         <EquipmentMenu.EquipmentMenu
-            title="FIXME: weapon menu title"
+            title={title}
             description={activeName}
             ref={menuRef}
         >
