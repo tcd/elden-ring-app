@@ -1,5 +1,5 @@
 import { Heading } from "@app/shared"
-import { SpellsTable } from "@app/features/spells"
+// import { SpellsTable } from "@app/features/spells"
 
 export const SpellsTablePage = (): JSX.Element => {
     return (
@@ -11,7 +11,7 @@ export const SpellsTablePage = (): JSX.Element => {
             </div>
             <div className="row">
                 <div className="col">
-                    <SpellsTable />
+                    {/* <SpellsTable /> */}
                 </div>
             </div>
         </div>

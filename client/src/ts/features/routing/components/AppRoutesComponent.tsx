@@ -48,8 +48,8 @@ import {
     MobileWeaponPage,
 } from "@app/features/weapons"
 import {
-    SpellMenu,
-    SpellsTablePage,
+    // SpellMenu,
+    // SpellsTablePage,
 } from "@app/features/spells"
 
 export const AppRoutesComponent = (_props: unknown): JSX.Element => {
@@ -90,8 +90,8 @@ const desktopRoutes: RouteObject[] = [
             { path: "/weapons/:weaponSlotId/ashes-of-war", element: <AshesOfWarPage /> },
 
             // { path: "/spells",     element: <SpellsTablePage /> },
-            { path: "/spells", element: <SpellsTablePage /> },
-            { path: "/spells/menu", element: <SpellMenu /> },
+            // { path: "/spells", element: <SpellsTablePage /> },
+            // { path: "/spells/menu", element: <SpellMenu /> },
 
             { path: "*", element: <NotFoundPage /> },
         ],
@@ -129,8 +129,8 @@ const mobileRoutes: RouteObject[] = [
             { path: "/weapons/:weaponSlotId/ashes-of-war", element: <AshesOfWarPage /> },
 
             // { path: "/spells",     element: <SpellsTablePage /> },
-            { path: "/spells", element: <SpellsTablePage /> },
-            { path: "/spells/menu", element: <SpellMenu /> },
+            // { path: "/spells", element: <SpellsTablePage /> },
+            // { path: "/spells/menu", element: <SpellMenu /> },
 
             { path: "*", element: <NotFoundPage /> },
         ],
