@@ -1,6 +1,6 @@
 import {
-    ErCard2,
-    ErCard2Props,
+    ErCard,
+    ErCardProps,
     StatRow,
     EquipmentDetail,
     EquipmentDetailProps,
@@ -10,7 +10,7 @@ import {
     ARMOR_RESISTANCE_STATS,
 } from "."
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
@@ -38,16 +38,16 @@ export const EmptyArmorDetail = (_props: unknown): JSX.Element => {
     return (
         <EquipmentDetail {...props}>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Damage Negation" icon="DamageNegation" {...cardProps}>
+                <ErCard title="Damage Negation" icon="DamageNegation" {...cardProps}>
                     <ul>
                         {defenseRows}
                     </ul>
-                </ErCard2>
-                <ErCard2 title="Resistance" icon="Resistance" {...cardProps}>
+                </ErCard>
+                <ErCard title="Resistance" icon="Resistance" {...cardProps}>
                     <ul>
                         {resistanceRows}
                     </ul>
-                </ErCard2>
+                </ErCard>
             </section>
         </EquipmentDetail>
     )

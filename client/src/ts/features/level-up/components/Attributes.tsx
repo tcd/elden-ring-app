@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 
 import { AttributeName } from "@app/types"
 import { Selectors } from "@app/state"
-import { ErCard2 } from "@app/shared"
+import { ErCard } from "@app/shared"
 import { AttributeRow } from "./AttributeRow"
 
 export const Attributes = (_props: unknown): JSX.Element => {
@@ -38,10 +38,10 @@ export const Attributes = (_props: unknown): JSX.Element => {
     })
 
     return (
-        <ErCard2 title="Attribute Points" icon="AttributePoints">
+        <ErCard title="Attribute Points" icon="AttributePoints">
             <ul>
                 {attributeRows}
             </ul>
-        </ErCard2>
+        </ErCard>
     )
 }

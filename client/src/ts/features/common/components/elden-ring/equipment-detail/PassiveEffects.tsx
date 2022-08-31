@@ -1,9 +1,9 @@
 import { Component } from "react"
 
-import { ErCard2, ErCard2Props, } from "@app/shared"
+import { ErCard, ErCardProps, } from "@app/shared"
 import { EquipmentDetailProps } from "./_index"
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
@@ -31,11 +31,11 @@ export class PassiveEffects extends Component<EquipmentDetailProps> {
 
         return (
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Passive Effects" icon="PassiveEffects" {...cardProps}>
+                <ErCard title="Passive Effects" icon="PassiveEffects" {...cardProps}>
                     <ul>
                         {rows}
                     </ul>
-                </ErCard2>
+                </ErCard>
             </section>
         )
     }

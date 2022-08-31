@@ -7,8 +7,8 @@ import {
 import { Talisman } from "@app/types"
 import { equipmentEffectDescription, getImageSrc, isBlank } from "@app/util"
 import {
-    ErCard2,
-    ErCard2Props,
+    ErCard,
+    ErCardProps,
     EquipmentDetail,
     EquipmentDetailProps,
 } from "@app/shared"
@@ -18,7 +18,7 @@ export interface TalismanDetailContentProps {
     talisman: Talisman
 }
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
@@ -55,16 +55,16 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
     return (
         <EquipmentDetail {...props}>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
+                <ErCard title="Description" icon="ItemEffect" {...cardProps}>
                     <p>{talisman.description}</p>
-                </ErCard2>
+                </ErCard>
             </section>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Item Effect" icon='PassiveEffects' {...cardProps}>
+                <ErCard title="Item Effect" icon='PassiveEffects' {...cardProps}>
                     <ul className="normal">
                         {effects}
                     </ul>
-                </ErCard2>
+                </ErCard>
             </section>
         </EquipmentDetail>
     )

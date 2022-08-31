@@ -8,7 +8,7 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp"
 import VolumeMuteIcon from "@mui/icons-material/VolumeMute"
 
 import { Actions, Selectors } from "@app/state"
-import { ErCard2, MdiIcon } from "@app/shared"
+import { ErCard, MdiIcon } from "@app/shared"
 
 export const PreferencesCard = (_props: unknown): JSX.Element => {
 
@@ -25,7 +25,7 @@ export const PreferencesCard = (_props: unknown): JSX.Element => {
     const $consoleIcon = console == "Xbox" ? <MdiIcon path={mdiMicrosoftXbox} /> : <MdiIcon path={mdiSonyPlaystation} />
 
     return (
-        <ErCard2 title="Preferences">
+        <ErCard title="Preferences">
             <List>
                 <ListItem>
                     <ListItemIcon>
@@ -49,7 +49,7 @@ export const PreferencesCard = (_props: unknown): JSX.Element => {
                     <ConsoleButtons />
                 </ListItem>
             </List>
-        </ErCard2>
+        </ErCard>
     )
 }
 

@@ -1,11 +1,11 @@
 import {
     EquipmentDetail,
     EquipmentDetailProps,
-    ErCard2,
-    ErCard2Props,
+    ErCard,
+    ErCardProps,
 } from "@app/shared"
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
@@ -25,15 +25,15 @@ export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
     return (
         <EquipmentDetail {...props}>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
+                <ErCard title="Description" icon="ItemEffect" {...cardProps}>
                     <p>-</p>
-                </ErCard2>
+                </ErCard>
             </section>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Item Effect" icon="PassiveEffects" {...cardProps}>
+                <ErCard title="Item Effect" icon="PassiveEffects" {...cardProps}>
                     <ul className="normal">
                     </ul>
-                </ErCard2>
+                </ErCard>
             </section>
         </EquipmentDetail>
     )

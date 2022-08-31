@@ -7,7 +7,7 @@ import IosShareIcon from "@mui/icons-material/IosShare"
 import RestartAltIcon from "@mui/icons-material/RestartAlt"
 
 import { Actions, Selectors, persistor } from "@app/state"
-import { ErCard2 } from "@app/shared"
+import { ErCard } from "@app/shared"
 import { exportJsonToFile } from "@app/util"
 import { useState } from "react"
 
@@ -32,7 +32,7 @@ export const ActionsCard = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <ErCard2 title="Actions">
+        <ErCard title="Actions">
             <List>
                 <ListItem>
                     <ListItemButton>
@@ -57,7 +57,7 @@ export const ActionsCard = (_props: unknown): JSX.Element => {
                     </ListItemButton>
                 </ListItem>
             </List>
-        </ErCard2>
+        </ErCard>
     )
 
     return (

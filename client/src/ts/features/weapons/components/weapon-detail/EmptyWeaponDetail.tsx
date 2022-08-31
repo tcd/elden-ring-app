@@ -2,14 +2,14 @@ import capitalize from "lodash/capitalize"
 
 import { Dmg } from "@app/types"
 import {
-    ErCard2,
-    ErCard2Props,
+    ErCard,
+    ErCardProps,
     EquipmentDetail,
     EquipmentDetailProps,
     StatRow,
 } from "@app/shared"
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
@@ -60,19 +60,19 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
     return (
         <EquipmentDetail {...props}>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
+                <ErCard title="Attack Power" icon="AttackPower" {...cardProps}>
                     <ul>
                         {attackRows}
                     </ul>
-                </ErCard2>
-                <ErCard2 title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
+                </ErCard>
+                <ErCard title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
                     <ul>
                         {defenseRows}
                     </ul>
-                </ErCard2>
+                </ErCard>
             </section>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
+                <ErCard title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
                     <div className="row">
                         <div className="col">
                             <StatRow title="Str" value="-" />
@@ -85,8 +85,8 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
                             <StatRow title="Fai" value="-" />
                         </div>
                     </div>
-                </ErCard2>
-                <ErCard2 title="Attributes Required" icon="AttributesRequired" {...cardProps}>
+                </ErCard>
+                <ErCard title="Attributes Required" icon="AttributesRequired" {...cardProps}>
                     <div className="row">
                         <div className="col">
                             <StatRow title="Str" value="-" />
@@ -99,7 +99,7 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
                             <StatRow title="Fai" value="-" />
                         </div>
                     </div>
-                </ErCard2>
+                </ErCard>
             </section>
         </EquipmentDetail>
     )

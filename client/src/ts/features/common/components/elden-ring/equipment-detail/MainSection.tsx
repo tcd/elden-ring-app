@@ -2,13 +2,13 @@ import { Component } from "react"
 import { Grid, GridProps } from "@mui/material"
 
 import { isBlank } from "@app/util"
-import { ErCard2, ErCard2Props } from "@app/shared"
+import { ErCard, ErCardProps } from "@app/shared"
 import {
     EquipmentDetailProps,
     MainSectionRows,
 } from "./_index"
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     sx: {
         mx: 3,
         my: 2,
@@ -66,7 +66,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
 
         return (
             <section className="er__equipmentDetail__section--main">
-                <ErCard2 title={this.mainSectionTitle()} {...cardProps}>
+                <ErCard title={this.mainSectionTitle()} {...cardProps}>
                     <Grid {...containerProps}>
                         <Grid {...firstColumnProps}>
                             <MainSectionRows {...this.props.mainSectionRows} />
@@ -76,7 +76,7 @@ export class MainSection extends Component<EquipmentDetailProps> {
                             {primaryImage}
                         </Grid>
                     </Grid>
-                </ErCard2>
+                </ErCard>
             </section>
         )
     }

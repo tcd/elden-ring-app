@@ -3,14 +3,14 @@ import capitalize from "lodash/capitalize"
 import { Dmg, QuickItem } from "@app/types"
 import { SpecialCharacters } from "@app/util"
 import {
-    ErCard2,
-    ErCard2Props,
+    ErCard,
+    ErCardProps,
     StatRow,
     EquipmentDetail,
     EquipmentDetailProps,
 } from "@app/shared"
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
