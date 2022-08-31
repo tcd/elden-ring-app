@@ -1,12 +1,10 @@
-import { mdiSword } from "@mdi/js"
-
-import { ErCard } from "@app/shared"
+import { ErCard2 } from "@app/shared"
 import { Attack } from "."
 
-export const AttackCard = (): JSX.Element => {
+export const AttackCard = (_props: unknown): JSX.Element => {
     return (
-        <ErCard title="Attack Power" iconPath={mdiSword}>
+        <ErCard2 title="Attack Power" icon="AttackPower">
             <Attack />
-        </ErCard>
+        </ErCard2>
     )
 }

@@ -28,9 +28,5 @@ export const Resistance = (): JSX.Element => {
         />
     })
 
-    return (
-        <ul>
-            {rows}
-        </ul>
-    )
+    return <>{rows}</>
 }

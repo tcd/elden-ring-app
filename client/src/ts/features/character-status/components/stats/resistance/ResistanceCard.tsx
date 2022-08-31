@@ -1,15 +1,12 @@
-import { mdiHeartPulse } from "@mdi/js"
-
-import { ErCard } from "@app/shared"
+import { ErCard2 } from "@app/shared"
 import { Resistance } from "."
 
-export const ResistanceCard = (): JSX.Element => {
-
+export const ResistanceCard = (_props: unknown): JSX.Element => {
     return (
-        <ErCard title="Resistance" iconPath={mdiHeartPulse}>
+        <ErCard2 title="Resistance" icon="Resistance">
             <ul>
                 <Resistance />
             </ul>
-        </ErCard>
+        </ErCard2>
     )
 }
