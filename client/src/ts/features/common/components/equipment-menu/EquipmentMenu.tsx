@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
 import { EquipmentMenuProps } from "./types"
-import { EquipmentMenuHeader } from "./EquipmentMenuHeader"
+import { Header } from "./Header"
 
 export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentMenuProps, ref) {
 
@@ -11,7 +11,7 @@ export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentM
 
     return (
         <Box sx={ComponentSx.EquipmentMenu.root} id={props?.id || undefined}>
-            <EquipmentMenuHeader {...props}/>
+            <Header {...props}/>
             <Box sx={ComponentSx.EquipmentMenu.grid.root} ref={ref}>
                 {children && children}
             </Box>

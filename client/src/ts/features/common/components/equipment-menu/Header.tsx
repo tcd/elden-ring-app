@@ -4,7 +4,7 @@ import { isBlank } from "@app/util"
 import { ComponentSx } from "@app/theme"
 import type { EquipmentMenuProps } from "./types"
 
-export const EquipmentMenuHeader = ({ title, description }: EquipmentMenuProps): JSX.Element => {
+export const Header = ({ title, description }: EquipmentMenuProps): JSX.Element => {
 
     description = isBlank(description) ? "-" : description
 
