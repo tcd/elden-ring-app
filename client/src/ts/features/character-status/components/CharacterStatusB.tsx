@@ -11,7 +11,7 @@ const sections = [
     resistanceSection,
 ]
 
-export const CharacterStatusB = (): JSX.Element => {
+export const CharacterStatusB = (_props: unknown): JSX.Element => {
     return (
         <ErTallCard
             title="Character Status"
