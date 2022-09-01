@@ -1,2 +1,2 @@
-export * from "./EquipmentDetailProps"
+export * from "./types"
 export * from "./EquipmentDetail"

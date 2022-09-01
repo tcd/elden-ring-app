@@ -1,52 +1,28 @@
-import { Component } from "react"
-import { Box, BoxProps } from "@mui/material"
+import { Box } from "@mui/material"
 
-import { isBlank } from "@app/util"
+import { ComponentSx } from "@app/theme"
 import {
     EquipmentDetailProps,
     MainSection,
     PassiveEffects,
 } from "./_index"
 
-export class EquipmentDetail extends Component<EquipmentDetailProps> {
-
-    static defaultProps: Partial<EquipmentDetailProps> = {
-        title: "-",
-        includeSecondaryImage: false,
-        includePassiveEffects: false,
-        passiveEffects: [],
-    }
-
-    constructor(props: EquipmentDetailProps) {
-        super(props)
-    }
-
-    public render(): JSX.Element {
-        return (
-            <Box {...this.boxProps()}>
-                <MainSection {...this.props} />
-                {this.children()}
-                <PassiveEffects {...this.props} />
-            </Box>
-        )
-    }
-
-    private boxProps(): BoxProps {
-        return {
-            component: "article",
-            className: "er__equipmentDetail",
-        }
-    }
-
-    private children(): JSX.Element {
-        if (isBlank(this.props?.children)) {
-            return null
-        }
-        return (
-            <>
-                {this.props.children}
-            </>
-        )
-    }
+const defaultProps: Partial<EquipmentDetailProps> = {
+    title: "-",
+    includeSecondaryImage: false,
+    includePassiveEffects: false,
+    passiveEffects: [],
 }
 
+export const EquipmentDetail = (props: EquipmentDetailProps): JSX.Element => {
+
+    props = { ...defaultProps, ...props }
+
+    return (
+        <Box sx={ComponentSx.EquipmentDetail.root}>
+            <MainSection {...props} />
+            {props?.children && props.children}
+            <PassiveEffects {...props} />
+        </Box>
+    )
+}

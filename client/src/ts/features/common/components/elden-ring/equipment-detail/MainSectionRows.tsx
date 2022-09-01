@@ -2,37 +2,12 @@ import {
     StatRow,
     StatRowPlus,
     StatRowPlusPlus,
-    StatRowProps,
-    StatRowPlusProps,
-    StatRowPlusPlusProps,
 } from "@app/features"
+import type { MainSectionRowsProps } from "./_index"
 
-// TODO: open an issue in the TypeScript repo, there needs to be a shorthand for this.
-const OptionNames = {
-    "StatRow":         "StatRow",
-    "StatRowPlus":     "StatRowPlus",
-    "StatRowPlusPlus": "StatRowPlusPlus",
-} as const
-type OptionName = typeof OptionNames[keyof typeof OptionNames]
+const defaultStatRowProps = { title: "", value: "" }
 
-type IOptions<Type extends OptionName, Props> = { type: Type, props: Props }
-
-type RowProps =
-    | IOptions<"StatRow",         StatRowProps>
-    | IOptions<"StatRowPlus",     StatRowPlusProps>
-    | IOptions<"StatRowPlusPlus", StatRowPlusPlusProps>
-
-export interface MainSectionRowsProps {
-    row1?: RowProps
-    row2?: RowProps
-    row3?: RowProps
-    row4?: RowProps
-    row5?: RowProps
-    row6?: RowProps
-}
-
-const defaultStatRowProps: StatRowProps = { title: "", value: "" }
-const defaultProps: Partial<MainSectionRowsProps> = {
+const defaultProps: MainSectionRowsProps = {
     row1: { type: "StatRow", props: defaultStatRowProps },
     row2: { type: "StatRow", props: defaultStatRowProps },
     row3: { type: "StatRow", props: defaultStatRowProps },
@@ -63,5 +38,7 @@ export const MainSectionRows = (props: MainSectionRowsProps): JSX.Element => {
         }
     })
 
-    return (<>{rows}</>)
+    return (
+        <>{rows}</>
+    )
 }
