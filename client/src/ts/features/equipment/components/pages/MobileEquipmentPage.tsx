@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 
 import { isBlank } from "@app/util"
 import { Selectors } from "@app/state"
-import { Page, useHash } from "@app/shared"
+import { ErPage, useHash } from "@app/shared"
 import { CharacterStatus } from "@app/features/character-status"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
@@ -33,8 +33,8 @@ export const MobileEquipmentPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="equipment">
+        <ErPage pageName="equipment">
             {content}
-        </Page>
+        </ErPage>
     )
 }

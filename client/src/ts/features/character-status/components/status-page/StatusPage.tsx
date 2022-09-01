@@ -1,10 +1,10 @@
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { StatusPageContent } from "./StatusPageContent"
 
 export const StatusPage = (_props: unknown): JSX.Element => {
     return (
-        <Page pageName="status">
+        <ErPage pageName="status">
             <StatusPageContent />
-        </Page>
+        </ErPage>
     )
 }

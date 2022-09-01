@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { ArmorBuilderMenu, Page, TalismanBuilderMenu, WeaponBuilderMenu, CharacterStatus } from "@app/features"
+import { ArmorBuilderMenu, ErPage, TalismanBuilderMenu, WeaponBuilderMenu, CharacterStatus } from "@app/features"
 
 import { LevelUpMenu } from "."
 
@@ -28,11 +28,11 @@ export const MobileBuilderMenu = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="builder" id="er__builder__root" className="container-fluid">
+        <ErPage pageName="builder" id="er__builder__root" className="container-fluid">
             <div id="er__builder__body" className="row">
                 {$content}
             </div>
-        </Page>
+        </ErPage>
     )
 }
 

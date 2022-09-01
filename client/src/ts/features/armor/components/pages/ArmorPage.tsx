@@ -1,12 +1,12 @@
 import Grid from "@mui/material/Unstable_Grid2"
 
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/character-status"
 
 export const ArmorPage = (_props: unknown): JSX.Element => {
     return (
-        <Page pageName="armor">
+        <ErPage pageName="armor">
             <Grid container direction="row">
                 <Grid xs={6}>
                     <ArmorMenu />
@@ -18,6 +18,6 @@ export const ArmorPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </Grid>
             </Grid>
-        </Page>
+        </ErPage>
     )
 }

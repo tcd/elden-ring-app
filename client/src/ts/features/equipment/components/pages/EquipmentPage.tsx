@@ -5,7 +5,7 @@ import { Grid, GridProps } from "@mui/material"
 
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { CharacterStatus } from "@app/features/character-status"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
@@ -87,7 +87,7 @@ export const EquipmentPage = (_props: unknown): JSX.Element => {
     }, [baseClass, navigate])
 
     return (
-        <Page pageName="equipment">
+        <ErPage pageName="equipment">
             <Grid {...parentProps}>
                 <Grid {...child1Props}>
                     <EquipmentGrid />
@@ -99,6 +99,6 @@ export const EquipmentPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </Grid>
             </Grid>
-        </Page>
+        </ErPage>
     )
 }

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { WeaponSlotId } from "@app/constants"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 import { CharacterStatus } from "@app/features/character-status"
 
@@ -23,7 +23,7 @@ export const WeaponsPage = (_props: unknown): JSX.Element => {
     }, [activeSlotId, slotId, dispatch])
 
     return (
-        <Page pageName="weapon">
+        <ErPage pageName="weapon">
             <div className="row">
                 <div className="col">
                     <WeaponMenu />
@@ -35,6 +35,6 @@ export const WeaponsPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-        </Page>
+        </ErPage>
     )
 }

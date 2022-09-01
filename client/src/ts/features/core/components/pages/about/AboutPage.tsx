@@ -3,7 +3,7 @@ import { Container } from "@mui/material"
 
 import { Selectors } from "@app/state"
 import { ComponentSx } from "@app/theme"
-import { Page, useViewport } from "@app/shared"
+import { ErPage, useViewport } from "@app/shared"
 
 import { About, Credit, Related } from "./sections"
 
@@ -16,13 +16,13 @@ export const AboutPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="about" sx={ComponentSx.AboutPage.root}>
+        <ErPage pageName="about" sx={ComponentSx.AboutPage.root}>
             <Container>
                 <About />
                 <Credit />
                 <Related />
             </Container>
-        </Page>
+        </ErPage>
     )
 }
 
@@ -42,10 +42,10 @@ export const MobileAboutPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="about" sx={ComponentSx.AboutPage.root}>
+        <ErPage pageName="about" sx={ComponentSx.AboutPage.root}>
             <Container>
                 {content}
             </Container>
-        </Page>
+        </ErPage>
     )
 }

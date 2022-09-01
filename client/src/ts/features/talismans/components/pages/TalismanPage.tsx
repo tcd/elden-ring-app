@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { TalismanSlotId } from "@app/constants"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
 import { CharacterStatus } from "@app/features/character-status"
 
@@ -23,7 +23,7 @@ export const TalismanPage = (_props: unknown): JSX.Element => {
     }, [activeSlotId, slotId, dispatch])
 
     return (
-        <Page pageName="talisman">
+        <ErPage pageName="talisman">
             <div className="row">
                 <div className="col">
                     <TalismanMenu />
@@ -35,6 +35,6 @@ export const TalismanPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-        </Page>
+        </ErPage>
     )
 }

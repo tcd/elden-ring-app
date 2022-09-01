@@ -6,7 +6,7 @@ import type { BoxProps, SxProps } from "@mui/material"
 import type { PageName } from "@app/types"
 import { Actions } from "@app/state"
 
-export interface PageProps {
+export interface ErPageProps {
     id?: string
     pageName: PageName
     className?: string
@@ -14,7 +14,7 @@ export interface PageProps {
     sx?: SxProps
 }
 
-const DEFAULT_PROPS: Partial<PageProps> = {
+const DEFAULT_PROPS: Partial<ErPageProps> = {
     id: undefined,
     className: "",
     sx: {
@@ -25,7 +25,7 @@ const DEFAULT_PROPS: Partial<PageProps> = {
     },
 }
 
-export const Page = (props: PageProps): JSX.Element => {
+export const ErPage = (props: ErPageProps): JSX.Element => {
 
     const {
         children,

@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 import { Actions, Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/character-status"
 
@@ -20,8 +20,8 @@ export const MobileArmorPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="armor">
+        <ErPage pageName="armor">
             {content}
-        </Page>
+        </ErPage>
     )
 }

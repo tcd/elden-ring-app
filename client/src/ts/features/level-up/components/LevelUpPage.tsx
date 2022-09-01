@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 
 import { isBlank } from "@app/util"
 import { Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 import { CharacterStatus } from "@app/features/character-status"
 import { Overview } from "./Overview"
 import { Attributes } from "./Attributes"
@@ -22,7 +22,7 @@ export const LevelUpPage = (_props: unknown): JSX.Element => {
     }, [baseClass, navigate])
 
     return (
-        <Page pageName="level-up" className="container-fluid">
+        <ErPage pageName="level-up" className="container-fluid">
             <div className="row">
                 <div className="col">
                     <div className="row">
@@ -41,6 +41,6 @@ export const LevelUpPage = (_props: unknown): JSX.Element => {
                     <CharacterStatus />
                 </div>
             </div>
-        </Page>
+        </ErPage>
     )
 }

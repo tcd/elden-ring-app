@@ -1,7 +1,7 @@
 import { Container } from "@mui/material"
 import Grid from "@mui/material/Unstable_Grid2"
 
-import { Page } from "@app/shared"
+import { ErPage } from "@app/shared"
 
 import {
     ActionsCard,
@@ -10,7 +10,7 @@ import {
 
 export const SettingsPage = (_props: unknown): JSX.Element => {
     return (
-        <Page pageName="settings">
+        <ErPage pageName="settings">
             <Container>
                 <Grid container direction="column">
                     <Grid>
@@ -21,6 +21,6 @@ export const SettingsPage = (_props: unknown): JSX.Element => {
                     </Grid>
                 </Grid>
             </Container>
-        </Page>
+        </ErPage>
     )
 }
