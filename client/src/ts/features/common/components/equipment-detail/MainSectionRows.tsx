@@ -3,7 +3,8 @@ import {
     StatRowPlus,
     StatRowPlusPlus,
 } from "@app/features"
-import type { MainSectionRowsProps } from "./_index"
+
+import type { MainSectionRowsProps } from "./types"
 
 const defaultStatRowProps = { title: "", value: "" }
 

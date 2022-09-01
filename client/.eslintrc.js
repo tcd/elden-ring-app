@@ -55,8 +55,7 @@ module.exports = {
         "object-curly-spacing": ["warn", "always"],
         "keyword-spacing": ["warn", { "after": true }],
         "space-before-blocks": ["warn"],
-        // "no-inline-comments": "off",
-        // "no-console": "off",
+        "no-console": "warn",
         // ---------------------------------------------------------------------
         // React
         // https://github.com/yannickcr/eslint-plugin-react
@@ -89,7 +88,8 @@ module.exports = {
             "groups": [
                 "builtin",
                 "external",
-                ["internal", "sibling", "parent", "index"],
+                "internal",
+                ["sibling", "parent", "index"],
                 // "object",
                 // "type",
             ],

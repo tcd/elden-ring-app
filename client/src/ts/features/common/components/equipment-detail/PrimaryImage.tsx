@@ -3,7 +3,8 @@ import { Box } from "@mui/material"
 import { isBlank } from "@app/util"
 import { ComponentSx } from "@app/theme"
 import { MuiImg } from "@app/shared"
-import type { ImageOptions } from "./_index"
+
+import type { ImageOptions } from "./types"
 
 export interface PrimaryImage extends ImageOptions {
     include: boolean

@@ -2,7 +2,8 @@ import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
 import { MuiImg } from "@app/shared"
-import type { ImageOptions } from "./_index"
+
+import type { ImageOptions } from "./types"
 
 export interface SecondaryImageProps extends ImageOptions {
     include: boolean

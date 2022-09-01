@@ -1,7 +1,0 @@
-export * from "./types"
-export * from "./EquipmentDetail"
-export * from "./MainSection"
-export * from "./MainSectionRows"
-export * from "./PassiveEffects"
-export * from "./PrimaryImage"
-export * from "./SecondaryImage"

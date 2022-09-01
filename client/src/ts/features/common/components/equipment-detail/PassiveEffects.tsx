@@ -1,42 +1,28 @@
-import { Component } from "react"
+import Grid from "@mui/material/Unstable_Grid2"
 
-import { ErCard, ErCardProps, } from "@app/shared"
-import { EquipmentDetailProps } from "./_index"
+import { ComponentSx } from "@app/theme"
+import { ErCard } from "@app/shared"
+import { EquipmentDetailProps } from "./types"
 
-const cardProps: Partial<ErCardProps> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
+export const PassiveEffects = (props: EquipmentDetailProps): JSX.Element => {
 
-export class PassiveEffects extends Component<EquipmentDetailProps> {
-
-    constructor(props: EquipmentDetailProps) {
-        super(props)
+    if (props.includePassiveEffects !== true) {
+        return null
     }
 
-    public render(): JSX.Element {
+    const rows = props.passiveEffects
 
-        if (this.props.includePassiveEffects !== true) {
-            return null
-        }
-
-        const rows = this.props.passiveEffects
-
-        while (rows.length < 3) {
-            rows.push(<li key={`passive-effect-${rows.length + 1}`}> - </li>)
-        }
-
-        return (
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Passive Effects" icon="PassiveEffects" {...cardProps}>
-                    <ul>
-                        {rows}
-                    </ul>
-                </ErCard>
-            </section>
-        )
+    while (rows.length < 3) {
+        rows.push(<li key={`passive-effect-${rows.length + 1}`}> - </li>)
     }
+
+    return (
+        <Grid {...ComponentSx.EquipmentDetail.bodyGrid.itemProps}>
+            <ErCard title="Passive Effects" icon="PassiveEffects" smallTitle={true}>
+                <ul>
+                    {rows}
+                </ul>
+            </ErCard>
+        </Grid>
+    )
 }
