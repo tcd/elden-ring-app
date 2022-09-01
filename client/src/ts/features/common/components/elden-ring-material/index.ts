@@ -1,4 +1,6 @@
 export * from "./ErButton"
 export * from "./ErCard"
 export * from "./ErDialog"
+export * from "./ErIcon"
 export * from "./ErTallCard"
+export * from "./stat-rows"
