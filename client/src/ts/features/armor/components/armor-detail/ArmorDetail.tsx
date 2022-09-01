@@ -4,25 +4,17 @@ import { NO_ARMOR } from "@app/data"
 import { getImageSrc, isBlank } from "@app/util"
 import type { ComparisonColor } from "@app/types"
 import {
-    ErCard,
-    ErCardProps,
     EquipmentDetail,
     EquipmentDetailProps,
+    EquipmentDetailCard,
 } from "@app/shared"
 import { Selectors } from "@app/state"
+
 import {
     ArmorDefenseStats,
     ArmorResistanceStats,
     EmptyArmorDetail,
 } from "."
-
-const cardProps: Partial<ErCardProps> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
 
 export const ArmorDetail = (_props: unknown): JSX.Element => {
 
@@ -55,24 +47,25 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Damage Negation" icon="DamageNegation" {...cardProps}>
-                    <ul>
-                        <ArmorDefenseStats
-                            armor={armor}
-                            oldArmor={oldArmor}
-                        />
-                    </ul>
-                </ErCard>
-                <ErCard title="Resistance" icon="Resistance" {...cardProps}>
-                    <ul>
-                        <ArmorResistanceStats
-                            armor={armor}
-                            oldArmor={oldArmor}
-                        />
-                    </ul>
-                </ErCard>
-            </section>
+
+            <EquipmentDetailCard title="Damage Negation" icon="DamageNegation">
+                <ul>
+                    <ArmorDefenseStats
+                        armor={armor}
+                        oldArmor={oldArmor}
+                    />
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Resistance" icon="Resistance">
+                <ul>
+                    <ArmorResistanceStats
+                        armor={armor}
+                        oldArmor={oldArmor}
+                    />
+                </ul>
+            </EquipmentDetailCard>
+
         </EquipmentDetail>
     )
 }
