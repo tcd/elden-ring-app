@@ -1,4 +1,4 @@
-export const colors = {
+export const colors = <const>{
     black:  "#292927",
     white:  "#d6cdb8",
     red:    "#cd3138", // good
@@ -7,7 +7,7 @@ export const colors = {
     blue:   "#527ed5", // good
     purple: "#c586c0",
     cyan:   "#4ec9b0",
-    gold: {
+    gold: { // good
         /** H1, other titles */
         light: "#C9BBA1",
         /** Hover Gold */

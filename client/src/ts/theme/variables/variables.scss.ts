@@ -1,3 +1,5 @@
+import Color from "color"
+
 import { rgba } from "../helpers"
 
 export const unsortedColors = {
@@ -158,11 +160,11 @@ export const modal = {
 // ----------------------------------------------------------------------------
 
 export const contextMenu = {
-    colorBg: "$modal-color-bg",
-    colorBorder: "$modal-color-border",
+    colorBg: modal.colorBg,
+    colorBorder: modal.colorBorder,
     item: {
-        colorBg: "lighten($modal-color-bg, 11%)",
-        colorBgActive: "lighten($modal-color-bg, 30%)",
+        colorBg:       Color(modal.colorBg).lighten(0.11).hexa(),
+        colorBgActive: Color(modal.colorBg).lighten(0.31).hexa(),
     },
 }
 
@@ -194,6 +196,10 @@ export const popover = {
 export const startingClass = {
     bgGradientColorLeft: "#3d3b34",
     bgGradientColorRight: "#221f17",
+    topBottomBorderColor: "#5b5749",
+    optionOverlayColorBg: "#181815",
+    optionTitleColorBg: "#201f1a",
+    optionTitleBorderHeight: "2px",
 }
 
 // ----------------------------------------------------------------------------
