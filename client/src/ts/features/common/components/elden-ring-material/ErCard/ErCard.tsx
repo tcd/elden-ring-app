@@ -5,6 +5,7 @@ import { IconNamesKey } from "@app/constants"
 import { ErIcon } from "@app/shared"
 import { isBlank } from "@app/util"
 import { ComponentSx } from "@app/theme"
+import { ErCardBorder } from "./ErCardBorder"
 
 export interface ErCardProps {
     title: string
@@ -38,7 +39,7 @@ export class ErCard extends Component<ErCardProps> {
 
     public render(): JSX.Element {
         return (
-            <Box component="article" sx={this.props.sx}>
+            <Box component="article" sx={this.sx()}>
                 <Box component="header" sx={ComponentSx.ErCard.header}>
                     {this.iconElement()}
                     <Box component="span" sx={this.titleSx()}>
@@ -46,7 +47,7 @@ export class ErCard extends Component<ErCardProps> {
                     </Box>
                 </Box>
                 <Box component="section" sx={ComponentSx.ErCard.content.root}>
-                    <Border />
+                    <ErCardBorder />
                     <Box sx={ComponentSx.ErCard.content.content}>
                         {this?.props?.children && this.props.children}
                     </Box>
@@ -56,6 +57,13 @@ export class ErCard extends Component<ErCardProps> {
     }
 
     // =========================================================================
+
+    private sx(): SxProps {
+        return {
+            ...ErCard.defaultProps.sx,
+            ...(this.props?.sx ?? {}),
+        }
+    }
 
     private iconElement(): JSX.Element {
         if (isBlank(this.props.icon)) {
@@ -77,12 +85,3 @@ export class ErCard extends Component<ErCardProps> {
     }
 }
 
-// =============================================================================
-
-export const Border = (_props: unknown): JSX.Element => {
-    return (
-        <Box sx={ComponentSx.ErCard.content.leftBorderWrapper}>
-            <Box sx={ComponentSx.ErCard.content.leftBorderInner} />
-        </Box>
-    )
-}
