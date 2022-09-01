@@ -2,10 +2,10 @@ import { useSelector } from "react-redux"
 
 import { NO_ARMOR } from "@app/data"
 import { getImageSrc, isBlank } from "@app/util"
+import type { ComparisonColor } from "@app/types"
 import {
     ErCard,
     ErCardProps,
-    StatRowColor,
     EquipmentDetail,
     EquipmentDetailProps,
 } from "@app/shared"
@@ -37,13 +37,13 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
 
     const imageSrc = getImageSrc("Armor", armor.name, "256")
 
-    let weightColor: StatRowColor = "default"
+    let weightColor: ComparisonColor = "default"
     if (oldArmor.id != -1) {
         if      (armor.weight > oldArmor.weight) { weightColor = "red"  }
         else if (armor.weight < oldArmor.weight) { weightColor = "blue" }
     }
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         title: armor.name,
         primaryImage: { src: imageSrc, alt: "armor" },
         includeSecondaryImage: false,

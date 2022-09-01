@@ -1,9 +1,10 @@
 import { Box } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
-import type { StatRowColor, StatColumnProps } from "./types"
+import type { ComparisonColor } from "@app/types"
+import type { StatColumnProps } from "./types"
 
-const COLOR_MAP: Record<StatRowColor, string> = {
+const COLOR_MAP: Record<ComparisonColor, string> = {
     default: undefined,
     red: ThemeVars.colors.red,
     blue: ThemeVars.colors.blue,

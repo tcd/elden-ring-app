@@ -5,10 +5,9 @@ import {
     getImageSrc,
     isBlank,
 } from "@app/util"
+import type { ComparisonColor } from "@app/types"
 import {
     ErCard,
-    ErCardProps,
-    StatRowColor,
     EquipmentDetail,
     EquipmentDetailProps,
 } from "@app/shared"
@@ -46,7 +45,7 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
 
     const weaponImgSrc = getImageSrc("Weapon", weapon.name, "256")
 
-    let weightColor: StatRowColor = "default"
+    let weightColor: ComparisonColor = "default"
 
     const newWeight = weapon.weight
     const oldWeight = oldWeapon.weight

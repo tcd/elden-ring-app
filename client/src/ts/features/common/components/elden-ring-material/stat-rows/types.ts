@@ -1,17 +1,17 @@
 import type { SxProps } from "@mui/material"
 
-export type StatRowColor = "default" | "red" | "blue"
+import type { ComparisonColor } from "@app/types"
 
 export interface StatColumnProps {
     value: React.ReactNode
     sx: SxProps
-    color?: StatRowColor
+    color?: ComparisonColor
 }
 
 export interface StatRowProps {
     title: string
     value: any
-    color?: StatRowColor
+    color?: ComparisonColor
     description?: string
     component?: React.ElementType
 }
@@ -22,9 +22,9 @@ export interface StatRowPlusProps {
     divider?: string
     value_1: any
     value_2: any
-    divider_color?: StatRowColor
-    value_1_color?: StatRowColor
-    value_2_color?: StatRowColor
+    divider_color?: ComparisonColor
+    value_1_color?: ComparisonColor
+    value_2_color?: ComparisonColor
     component?: React.ElementType
 }
 
@@ -36,9 +36,9 @@ export interface StatRowPlusPlusProps {
     value_1: any
     value_2: any
     value_3: any
-    divider_color?: StatRowColor
-    value_1_color?: StatRowColor
-    value_2_color?: StatRowColor
-    value_3_color?: StatRowColor
+    divider_color?: ComparisonColor
+    value_1_color?: ComparisonColor
+    value_2_color?: ComparisonColor
+    value_3_color?: ComparisonColor
     component?: React.ElementType
 }
