@@ -7,6 +7,7 @@ const statRowStyles: SxProps = {
     fontSize: ThemeVars.typography.statRowFontSize,
     color: ThemeVars.body.colorFg,
     "& span": {
+        // FIXME: should this be "pre"?
         whiteSpace: "nowrap",
         fontSize: ThemeVars.typography.statRowFontSize,
     },

@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import Grid from "@mui/material/Unstable_Grid2"
 
 import { Selectors } from "@app/state"
 import {
@@ -19,14 +20,11 @@ import {
     EmptyWeaponDetail,
     weaponPassiveEffects,
 } from "."
-
-const cardProps: Partial<ErCardProps> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
+import {
+    containerProps,
+    itemProps,
+    cardProps,
+} from "./shared"
 
 export const WeaponDetail = (_props: unknown): JSX.Element => {
 
@@ -59,10 +57,10 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
         weaponSkillImgSrc = getImageSrc("Weapon Skill", activeSkill.name, "256")
     }
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         title: displayName,
         includePassiveEffects: true,
-        includeSecondaryImage: true,
+        includeSecondaryImage: !weapon.is_special,
         primaryImage: {
             src: weaponImgSrc,
             alt: "weapon",
@@ -84,38 +82,45 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Attack Power" icon="AttackPower" {...cardProps}>
-                    <ul>
-                        <WeaponAttackStats
+            <Grid {...containerProps}>
+                <Grid {...itemProps}>
+                    <ErCard title="Attack Power" icon="AttackPower" {...cardProps}>
+                        <ul>
+                            <WeaponAttackStats
+                                newStats={newStats}
+                                oldStats={oldStats}
+                            />
+                        </ul>
+                    </ErCard>
+
+                </Grid>
+                <Grid {...itemProps}>
+                    <ErCard title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
+                        <ul>
+                            <WeaponDefenseStats
+                                newWeapon={weapon}
+                                oldWeapon={oldWeapon}
+                            />
+                        </ul>
+                    </ErCard>
+                </Grid>
+                <Grid {...itemProps}>
+                    <ErCard title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
+                        <WeaponScalingStats
                             newStats={newStats}
                             oldStats={oldStats}
                         />
-                    </ul>
-                </ErCard>
-                <ErCard title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
-                    <ul>
-                        <WeaponDefenseStats
-                            newWeapon={weapon}
-                            oldWeapon={oldWeapon}
+                    </ErCard>
+                </Grid>
+                <Grid {...itemProps}>
+                    <ErCard title="Attributes Required" icon="AttributesRequired" {...cardProps}>
+                        <WeaponRequirementStats
+                            weapon={weapon}
+                            attributes={attributes}
                         />
-                    </ul>
-                </ErCard>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
-                    <WeaponScalingStats
-                        newStats={newStats}
-                        oldStats={oldStats}
-                    />
-                </ErCard>
-                <ErCard title="Attributes Required" icon="AttributesRequired" {...cardProps}>
-                    <WeaponRequirementStats
-                        weapon={weapon}
-                        attributes={attributes}
-                    />
-                </ErCard>
-            </section>
+                    </ErCard>
+                </Grid>
+            </Grid>
         </EquipmentDetail>
     )
 }

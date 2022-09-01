@@ -5,6 +5,7 @@ import { Attr } from "@app/types"
 import { isBlank } from "@app/util"
 import { StatRow, StatRowProps } from "@app/shared"
 import { ComparableWeaponProps } from "."
+import { FlexBox } from "./FlexBox"
 
 export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element => {
 
@@ -38,17 +39,20 @@ export const WeaponScalingStats = (props: ComparableWeaponProps): JSX.Element =>
     }
 
     return (
-        <div className="row">
-            <div className="col">
-                <StatRow { ...data.strength     } />
-                <StatRow { ...data.intelligence } />
-                <StatRow { ...data.arcane       } />
-            </div>
-            <div className="col-1"></div>
-            <div className="col">
-                <StatRow { ...data.dexterity } />
-                <StatRow { ...data.faith } />
-            </div>
-        </div>
+        <FlexBox
+            left={
+                <>
+                    <StatRow { ...data.strength     } />
+                    <StatRow { ...data.intelligence } />
+                    <StatRow { ...data.arcane       } />
+                </>
+            }
+            right={
+                <>
+                    <StatRow { ...data.dexterity } />
+                    <StatRow { ...data.faith } />
+                </>
+            }
+        />
     )
 }
