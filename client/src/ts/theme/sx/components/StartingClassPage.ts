@@ -2,7 +2,18 @@ import type { SxProps } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
 
-import { pointerOnHover } from "../../mixins"
+import { pointerOnHover } from "../mixins"
+
+/**
+ * This is meant to be applied to the most top level application component possible.
+ *
+ * When using `.scss`, it was applied to `#root.startingClassPage`.
+ */
+const appRoot: SxProps = {
+    backgroundImage: "none !important",
+    // background: ThemeVars.startingClass.bgGradientColorLeft + " !important",
+    background: ThemeVars.gradients.startingClassBackground + " !important",
+}
 
 /** `.er__startingClass` */
 const root: SxProps = {
@@ -197,12 +208,12 @@ const footer: SxProps = {
     marginRight: "100px",
 }
 
-
 // =============================================================================
 // All Together
 // =============================================================================
 
 export const StartingClassPage = {
+    appRoot,
     root,
     menu,
     arrowContainer,
