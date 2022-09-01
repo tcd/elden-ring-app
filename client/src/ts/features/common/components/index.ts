@@ -17,5 +17,6 @@ export * from "./MuiImage"
 export * from "./Page"
 export * from "./PreloadOverlay"
 export * from "./RedX"
+export * from "./YouDied"
 
 export * from "./NullableNumber"

@@ -1,6 +1,7 @@
 import type { SxProps } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
+
 import { invisibleContent } from "../mixins"
 
 const statRowStyles: SxProps = {
