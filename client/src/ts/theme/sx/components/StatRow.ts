@@ -1,12 +1,7 @@
 import type { SxProps } from "@mui/material"
 
-import {
-    ThemeVars,
-    EldenRingMaterialTheme as Theme,
-} from "@app/theme"
-import {
-    invisibleContent,
-} from "../mixins"
+import { ThemeVars } from "@app/theme"
+import { invisibleContent } from "../mixins"
 
 const statRowStyles: SxProps = {
     fontSize: ThemeVars.typography.statRowFontSize,
