@@ -20,7 +20,7 @@ import type { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
 const rootSx: SxProps = {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "rgba(112,128,144, 0.1)",
+    // backgroundColor: "rgba(112,128,144, 0.1)",
 }
 
 const bodyRootProps: GridProps = {

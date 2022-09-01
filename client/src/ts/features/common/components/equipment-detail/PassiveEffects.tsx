@@ -1,7 +1,8 @@
 import Grid from "@mui/material/Unstable_Grid2"
 
-import { ComponentSx } from "@app/theme"
+// import { ComponentSx } from "@app/theme"
 import { ErCard } from "@app/shared"
+
 import { EquipmentDetailProps } from "./types"
 
 export const PassiveEffects = (props: EquipmentDetailProps): JSX.Element => {
@@ -17,7 +18,7 @@ export const PassiveEffects = (props: EquipmentDetailProps): JSX.Element => {
     }
 
     return (
-        <Grid {...ComponentSx.EquipmentDetail.bodyGrid.itemProps}>
+        <Grid xs={2}>
             <ErCard title="Passive Effects" icon="PassiveEffects" smallTitle={true}>
                 <ul>
                     {rows}
