@@ -12,7 +12,6 @@ import type { SxProps } from "@mui/material"
 //     imageFluid,
 // } from "../../mixins"
 
-
 // =============================================================================
 // Root
 // =============================================================================
@@ -21,8 +20,8 @@ import type { SxProps } from "@mui/material"
 const rootSx: SxProps = {
     display: "flex",
     flexDirection: "column",
+    backgroundColor: "rgba(112,128,144, 0.1)",
 }
-
 
 // =============================================================================
 // All Together

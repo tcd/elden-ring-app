@@ -1,52 +1,45 @@
 import type { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
 
-// import {
-//     ThemeVars,
-//     EldenRingMaterialTheme as Theme,
-//     rgba,
-//     boxShadow,
-// } from "@app/theme"
-// import {
-//     invisibleContent,
-//     imageFluid,
-// } from "../../mixins"
+const columns: GridProps = {
+    xs: 2,
+    md: 1,
+}
+
+// =============================================================================
 
 /** `.er__equipmentDetail__section` */
 const containerProps: GridProps = {
     container: true,
     columns: 2,
     direction: "row",
-    wrap: "wrap",
-    alignContent: "stretch",
-    alignItems: "stretch",
-    justifyContent: "stretch",
-    justifyItems: "stretch",
-    // sx: {
-    //     // width: "100%",
-    //     backgroundColor: "rebeccapurple",
-    // },
+    // alignContent: "stretch",
+    // alignItems: "stretch",
+    // justifyContent: "stretch",
+    // justifyItems: "stretch",
+    sx: {
+        flexWrap: {
+            xs: "wrap-reverse",
+            md: "wrap",
+        },
+    },
 }
 
 /** `.er__equipmentDetail__detailColumn ` */
 const detailColumnProps: GridProps = {
-    xs: 1,
-    // md: 2,
+    ...columns,
     sx: {
         display: "flex",
-        flexDirection: "column",
-        flexWrap: "nowrap",
+        flexFlow: "column nowrap",
         justifyContent: "space-between",
     },
 }
 
 /** `.er__equipmentDetail__imageColumn` */
 const imageColumnProps: GridProps = {
-    xs: 1,
-    // md: 2,
+    ...columns,
     sx: {
         display: "flex",
-        flexDirection: "row",
-        flexWrap: "nowrap",
+        flexFlow: "row nowrap",
         justifyContent: "end",
         alignItems: "end",
     },
