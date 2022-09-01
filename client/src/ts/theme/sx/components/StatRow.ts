@@ -51,13 +51,13 @@ const rowPlus: SxProps = {
 
 /** Title */
 const colPlus_1: SxProps = {
-    backgroundColor: "red",
+    // backgroundColor: "red",
     textAlign: "left",
 }
 
 /** Value 1 */
 const colPlus_2: SxProps = {
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     textAlign: "right",
     boxSizing: "border-box",
     marginRight: "5px",
@@ -65,13 +65,13 @@ const colPlus_2: SxProps = {
 
 /** Divider */
 const colPlus_3: SxProps = {
-    backgroundColor: "green",
+    // backgroundColor: "green",
     textAlign: "left",
 }
 
 /** Value 2 */
 const colPlus_4: SxProps = {
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     textAlign: "right",
 }
 
@@ -88,27 +88,27 @@ const rowPlusPlus: SxProps = {
 
 /** Title (Damage Type) */
 const colPlusPlus_1: SxProps = {
-    backgroundColor: "red",
+    // backgroundColor: "red",
     textAlign: "left",
     boxSizing: "border-box",
 }
 
 /** Base Damage */
 const colPlusPlus_2: SxProps = {
-    backgroundColor: "yellow",
+    // backgroundColor: "yellow",
     textAlign: "right",
     boxSizing: "border-box",
 }
 
 /** Plus Sign */
 const colPlusPlus_3: SxProps = {
-    backgroundColor: "green",
+    // backgroundColor: "green",
     marginLeft: "5px",
 }
 
 /** Scaled Damage */
 const colPlusPlus_4: SxProps = {
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     textAlign: "right",
 }
 
@@ -119,13 +119,13 @@ const _padded: SxProps = {
 
 /** Total Damage */
 const colPlusPlus_5: SxProps = {
-    backgroundColor: "indigo",
+    // backgroundColor: "indigo",
     textAlign: "right",
     ..._padded,
 }
 
 const parens: SxProps = {
-    backgroundColor: "violet",
+    // backgroundColor: "violet",
     color: "gray",
     ..._padded,
 }
