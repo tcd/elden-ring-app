@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux"
 import { Container } from "@mui/material"
 
-import { Page, useViewport } from "@app/shared"
 import { Selectors } from "@app/state"
+import { ComponentSx } from "@app/theme"
+import { Page, useViewport } from "@app/shared"
+
 import { About, Credit, Related } from "./sections"
 
 export const AboutPage = (_props: unknown): JSX.Element => {
@@ -14,7 +16,7 @@ export const AboutPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="about" id="er__aboutPage">
+        <Page pageName="about" sx={ComponentSx.AboutPage.root}>
             <Container>
                 <About />
                 <Credit />
@@ -40,7 +42,7 @@ export const MobileAboutPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="about" id="er__aboutPage">
+        <Page pageName="about" sx={ComponentSx.AboutPage.root}>
             <Container>
                 {content}
             </Container>

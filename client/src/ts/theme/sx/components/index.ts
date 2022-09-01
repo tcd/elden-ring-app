@@ -1,3 +1,4 @@
+export * from "./AboutPage"
 export * from "./EquipmentDetail"
 export * from "./EquipmentGrid"
 export * from "./EquipmentMenu"

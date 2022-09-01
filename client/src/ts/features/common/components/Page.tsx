@@ -1,8 +1,9 @@
 import { useEffect, ReactNode } from "react"
 import { useDispatch } from "react-redux"
-import { Box, BoxProps } from "@mui/material"
+import { Box } from "@mui/material"
+import type { BoxProps, SxProps } from "@mui/material"
 
-import { PageName } from "@app/types"
+import type { PageName } from "@app/types"
 import { Actions } from "@app/state"
 
 export interface PageProps {
@@ -10,23 +11,36 @@ export interface PageProps {
     pageName: PageName
     className?: string
     children?: ReactNode
+    sx?: SxProps
 }
 
 const DEFAULT_PROPS: Partial<PageProps> = {
-    id: null,
+    id: undefined,
     className: "",
+    sx: {
+        boxSizing: "border-box",
+        height: "100%",
+        margin: "0px",
+        padding: "0px",
+    },
 }
 
 export const Page = (props: PageProps): JSX.Element => {
 
-    props = {
+    const {
+        children,
+        ...otherProps
+    } = props
+
+    const {
+        id,
+        sx,
+        pageName,
+        className,
+    } = {
         ...DEFAULT_PROPS,
-        ...props,
+        ...otherProps,
     }
-
-    const { id, pageName, children, className } = props
-
-    const correctedClassName = `er_page ${className}`
 
     const dispatch = useDispatch()
 
@@ -38,11 +52,9 @@ export const Page = (props: PageProps): JSX.Element => {
     }, [dispatch, pageName])
 
     const boxProps: BoxProps = {
-        className: correctedClassName,
-    }
-
-    if (id) {
-        boxProps.id = id
+        id,
+        sx,
+        className,
     }
 
     return (
