@@ -1,8 +1,10 @@
-import type { SxProps } from "@mui/material"
 import { Box } from "@mui/material"
 
 import type { ComparisonColor } from "@app/types"
+import { ComponentSx } from "@app/theme"
 import { StatColumn } from "./StatColumn"
+
+const sx = ComponentSx.WeaponFpCost
 
 export interface WeaponFpCostProps {
     v1?: number | string
@@ -25,42 +27,12 @@ export const WeaponFpCost = (props: WeaponFpCostProps): JSX.Element => {
     } = props
 
     return (
-        <Box>
-            <StatColumn sx={col1} value={v1}  color={c1} />
-            <StatColumn sx={col2} value={"("}            />
-            <StatColumn sx={col3} value={v2}  color={c2} />
-            <StatColumn sx={col4} value={v3}  color={c3} />
-            <StatColumn sx={col5} value={")"}            />
+        <Box sx={sx.root}>
+            <StatColumn sx={sx.col1} value={v1} color={c1} />
+            <StatColumn sx={sx.col2} value={"("} />
+            <StatColumn sx={sx.col3} value={v2} color={c2} />
+            <StatColumn sx={sx.col4} value={v3} color={c3} />
+            <StatColumn sx={sx.col5} value={")"} />
         </Box>
     )
-}
-
-// =============================================================================
-// Styles
-// =============================================================================
-
-
-/** base */
-const col1: SxProps = {
-
-}
-
-/** opening parenthesis */
-const col2: SxProps = {
-
-}
-
-/** light */
-const col3: SxProps = {
-
-}
-
-/** heavy/charge/chain/tick */
-const col4: SxProps = {
-
-}
-
-/** closing parenthesis */
-const col5: SxProps = {
-
 }
