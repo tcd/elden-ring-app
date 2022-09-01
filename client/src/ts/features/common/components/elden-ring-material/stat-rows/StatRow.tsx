@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 
 import { MouseOverPopover } from "@app/shared"
 import { ComponentSx } from "@app/theme"
+
 import type { StatRowProps } from "./types"
 import { StatColumn } from "./StatColumn"
 

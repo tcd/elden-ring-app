@@ -1,5 +1,6 @@
-import { AttrMap } from "elden-ring-calculator"
-import { Weapon } from "@app/types"
+import type { AttrMap } from "elden-ring-calculator"
+
+import type { Weapon } from "@app/types"
 
 export const getRequirements = (weapon: Weapon): AttrMap<Integer> => {
     return {
