@@ -16,8 +16,8 @@ export const itemProps: GridProps = {
 export const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
-        mx: 3,
-        my: 2,
+        // mx: 3,
+        // my: 2,
         // width: "100%",
     },
 }

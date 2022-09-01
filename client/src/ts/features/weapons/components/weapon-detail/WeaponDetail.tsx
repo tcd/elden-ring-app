@@ -48,9 +48,8 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
     const newWeight = weapon.weight
     const oldWeight = oldWeapon.weight
 
-    if      (newWeight >  oldWeight) { weightColor = "blue"    }
-    else if (newWeight == oldWeight) { weightColor = "default" }
-    else if (newWeight <  oldWeight) { weightColor = "red"     }
+    if      (newWeight > oldWeight) { weightColor = "blue" }
+    else if (newWeight < oldWeight) { weightColor = "red"  }
 
     let weaponSkillImgSrc = null
     if (activeSkill?.ash_of_war) {

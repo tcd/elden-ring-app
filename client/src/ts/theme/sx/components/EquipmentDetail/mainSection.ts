@@ -31,6 +31,10 @@ const detailColumnProps: GridProps = {
         display: "flex",
         flexFlow: "column nowrap",
         justifyContent: "space-between",
+        pr: {
+            xs: 0,
+            md: 5,
+        },
     },
 }
 

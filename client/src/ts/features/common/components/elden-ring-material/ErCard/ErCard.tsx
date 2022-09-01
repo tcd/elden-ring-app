@@ -1,3 +1,4 @@
+import merge from "lodash/merge"
 import type { SxProps } from "@mui/material"
 import { Box } from "@mui/material"
 
@@ -11,7 +12,6 @@ export interface ErCardProps {
     children?: React.ReactNode
     title: string
     icon?: IconNamesKey
-    content?: React.ReactNode
     /**
      * @default false
      */
@@ -33,23 +33,27 @@ const defaultProps: Partial<ErCardProps> = {
 }
 
 export const ErCard = (props: ErCardProps): JSX.Element => {
+    const {
+        children = null,
+        ...rest
+    } = props
 
-    props = { ...defaultProps, ...props }
+    const mergedProps = merge({}, defaultProps, rest)
 
     return (
-        <Box component="article" sx={props.sx}>
+        <Box component="article" sx={mergedProps.sx}>
             <Box component="header" sx={ComponentSx.ErCard.header}>
-                {props?.icon &&
-                    <ErIcon icon={props.icon} />
+                {mergedProps?.icon &&
+                    <ErIcon icon={mergedProps.icon} />
                 }
-                <Box component="span" sx={titleSx(props)}>
-                    {props.title}
+                <Box component="span" sx={titleSx(mergedProps)}>
+                    {mergedProps.title}
                 </Box>
             </Box>
             <Box component="section" sx={ComponentSx.ErCard.content.root}>
                 <ErCardBorder />
                 <Box sx={ComponentSx.ErCard.content.content}>
-                    {props?.children && props.children}
+                    {children && children}
                 </Box>
             </Box>
         </Box>
