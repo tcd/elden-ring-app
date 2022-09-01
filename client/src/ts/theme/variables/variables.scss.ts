@@ -173,7 +173,7 @@ export const contextMenu = {
 
 export const youDied = {
     red: "#520000",
-    black: colorSystem.black,
+    black: "black",
 }
 
 // ----------------------------------------------------------------------------
