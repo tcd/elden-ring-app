@@ -8,9 +8,12 @@ import {
 } from "./_index"
 
 const defaultProps: Partial<EquipmentDetailProps> = {
+    children: null,
     title: "-",
     includeSecondaryImage: false,
     includePassiveEffects: false,
+    primaryImage: {},
+    secondaryImage: {},
     passiveEffects: [],
 }
 
@@ -20,9 +23,13 @@ export const EquipmentDetail = (props: EquipmentDetailProps): JSX.Element => {
 
     return (
         <Box sx={ComponentSx.EquipmentDetail.root}>
+
             <MainSection {...props} />
-            {props?.children && props.children}
+
+            {props.children}
+
             <PassiveEffects {...props} />
+
         </Box>
     )
 }
