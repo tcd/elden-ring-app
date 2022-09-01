@@ -1,19 +1,14 @@
 import capitalize from "lodash/capitalize"
-import Grid from "@mui/material/Unstable_Grid2"
 
 import { Dmg } from "@app/types"
 import {
-    ErCard,
     EquipmentDetail,
     EquipmentDetailProps,
+    EquipmentDetailCard,
     StatRow,
     WeaponFpCost,
 } from "@app/shared"
-import {
-    containerProps,
-    itemProps,
-    cardProps,
-} from "./shared"
+
 import { FlexBox } from "./FlexBox"
 
 export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
@@ -58,61 +53,55 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <Grid {...containerProps}>
-                <Grid {...itemProps}>
-                    <ErCard title="Attack Power" icon="AttackPower" {...cardProps}>
-                        <ul>
-                            {attackRows}
-                        </ul>
-                    </ErCard>
 
-                </Grid>
-                <Grid {...itemProps}>
-                    <ErCard title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
-                        <ul>
-                            {defenseRows}
-                        </ul>
-                    </ErCard>
-                </Grid>
-                <Grid {...itemProps}>
-                    <ErCard title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
-                        <FlexBox
-                            left={
-                                <>
-                                    <StatRow title="Str" value="-" />
-                                    <StatRow title="Int" value="-" />
-                                    <StatRow title="Arc" value="-" />
-                                </>
-                            }
-                            right={
-                                <>
-                                    <StatRow title="Dex" value="-" />
-                                    <StatRow title="Fai" value="-" />
-                                </>
-                            }
-                        />
-                    </ErCard>
-                </Grid>
-                <Grid {...itemProps}>
-                    <ErCard title="Attributes Required" icon="AttributesRequired" {...cardProps}>
-                        <FlexBox
-                            left={
-                                <>
-                                    <StatRow title="Str" value="-" />
-                                    <StatRow title="Int" value="-" />
-                                    <StatRow title="Arc" value="-" />
-                                </>
-                            }
-                            right={
-                                <>
-                                    <StatRow title="Dex" value="-" />
-                                    <StatRow title="Fai" value="-" />
-                                </>
-                            }
-                        />
-                    </ErCard>
-                </Grid>
-            </Grid>
+            <EquipmentDetailCard title="Attack Power" icon="AttackPower">
+                <ul>
+                    {attackRows}
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Guarded Damage Negation" icon="GuardedDmgNegation">
+                <ul>
+                    {defenseRows}
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attribute Scaling" icon="AttributeScaling">
+                <FlexBox
+                    left={
+                        <>
+                            <StatRow title="Str" value="-" />
+                            <StatRow title="Int" value="-" />
+                            <StatRow title="Arc" value="-" />
+                        </>
+                    }
+                    right={
+                        <>
+                            <StatRow title="Dex" value="-" />
+                            <StatRow title="Fai" value="-" />
+                        </>
+                    }
+                />
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attributes Required" icon="AttributesRequired">
+                <FlexBox
+                    left={
+                        <>
+                            <StatRow title="Str" value="-" />
+                            <StatRow title="Int" value="-" />
+                            <StatRow title="Arc" value="-" />
+                        </>
+                    }
+                    right={
+                        <>
+                            <StatRow title="Dex" value="-" />
+                            <StatRow title="Fai" value="-" />
+                        </>
+                    }
+                />
+            </EquipmentDetailCard>
+
         </EquipmentDetail>
     )
 }

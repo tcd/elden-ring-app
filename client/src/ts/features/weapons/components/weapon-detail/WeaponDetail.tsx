@@ -8,10 +8,11 @@ import {
 } from "@app/util"
 import type { ComparisonColor } from "@app/types"
 import {
-    ErCard,
     EquipmentDetail,
     EquipmentDetailProps,
+    EquipmentDetailCard,
 } from "@app/shared"
+
 import {
     WeaponAttackStats,
     WeaponScalingStats,
@@ -20,11 +21,6 @@ import {
     EmptyWeaponDetail,
     weaponPassiveEffects,
 } from "."
-import {
-    containerProps,
-    itemProps,
-    cardProps,
-} from "./shared"
 
 export const WeaponDetail = (_props: unknown): JSX.Element => {
 
@@ -81,45 +77,39 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <Grid {...containerProps}>
-                <Grid {...itemProps}>
-                    <ErCard title="Attack Power" icon="AttackPower" {...cardProps}>
-                        <ul>
-                            <WeaponAttackStats
-                                newStats={newStats}
-                                oldStats={oldStats}
-                            />
-                        </ul>
-                    </ErCard>
 
-                </Grid>
-                <Grid {...itemProps}>
-                    <ErCard title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
-                        <ul>
-                            <WeaponDefenseStats
-                                newWeapon={weapon}
-                                oldWeapon={oldWeapon}
-                            />
-                        </ul>
-                    </ErCard>
-                </Grid>
-                <Grid {...itemProps}>
-                    <ErCard title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
-                        <WeaponScalingStats
-                            newStats={newStats}
-                            oldStats={oldStats}
-                        />
-                    </ErCard>
-                </Grid>
-                <Grid {...itemProps}>
-                    <ErCard title="Attributes Required" icon="AttributesRequired" {...cardProps}>
-                        <WeaponRequirementStats
-                            weapon={weapon}
-                            attributes={attributes}
-                        />
-                    </ErCard>
-                </Grid>
-            </Grid>
+            <EquipmentDetailCard title="Attack Power" icon="AttackPower">
+                <ul>
+                    <WeaponAttackStats
+                        newStats={newStats}
+                        oldStats={oldStats}
+                    />
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Guarded Damage Negation" icon="GuardedDmgNegation">
+                <ul>
+                    <WeaponDefenseStats
+                        newWeapon={weapon}
+                        oldWeapon={oldWeapon}
+                    />
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attribute Scaling" icon="AttributeScaling">
+                <WeaponScalingStats
+                    newStats={newStats}
+                    oldStats={oldStats}
+                />
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attributes Required" icon="AttributesRequired">
+                <WeaponRequirementStats
+                    weapon={weapon}
+                    attributes={attributes}
+                />
+            </EquipmentDetailCard>
+
         </EquipmentDetail>
     )
 }
