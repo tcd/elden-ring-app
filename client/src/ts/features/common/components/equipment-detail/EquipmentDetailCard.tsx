@@ -22,3 +22,20 @@ export const EquipmentDetailCard = (props: EquipmentDetailCardProps): JSX.Elemen
         </Grid>
     )
 }
+
+export const EquipmentDetailFullCard = (props: EquipmentDetailCardProps): JSX.Element => {
+
+    const {
+        title,
+        icon,
+        children,
+    } = props
+
+    return (
+        <Grid {...ComponentSx.EquipmentDetail.bodyGrid.fullItemProps}>
+            <ErCard title={title} icon={icon} smallTitle={true}>
+                {children && children}
+            </ErCard>
+        </Grid>
+    )
+}

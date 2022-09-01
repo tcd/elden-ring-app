@@ -15,7 +15,7 @@ export interface EquipmentDetailProps {
     mainSectionRows: MainSectionRowsProps
     includeSecondaryImage?: boolean
     includePassiveEffects?: boolean
-    primaryImage: ImageOptions
+    primaryImage?: ImageOptions
     secondaryImage?: ImageOptions
     passiveEffects?: React.ReactNode[]
 }

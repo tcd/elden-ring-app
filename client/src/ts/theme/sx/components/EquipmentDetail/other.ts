@@ -34,6 +34,10 @@ const bodyItemProps: GridProps = {
     md: 1,
 }
 
+const fullBodyItemProps: GridProps = {
+    xs: 2,
+}
+
 // =============================================================================
 // All Together
 // =============================================================================
@@ -43,5 +47,6 @@ export const other = {
     bodyGrid: {
         rootProps: bodyRootProps,
         itemProps: bodyItemProps,
+        fullItemProps: fullBodyItemProps,
     },
 }
