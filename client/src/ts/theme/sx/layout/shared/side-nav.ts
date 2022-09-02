@@ -8,11 +8,6 @@ import {
     transition,
 } from "@app/theme"
 
-import {
-    pointerOnHover,
-    // textShadow,
-} from "../../mixins"
-
 /** `#er__sideNav__backdrop` */
 const overlay: SxProps = {
     zIndex: ThemeVars.zIndex.sideNavBackdrop,
