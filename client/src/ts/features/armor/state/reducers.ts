@@ -7,7 +7,10 @@ import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
 
-import { ArmorState, INITIAL_ARMOR_STATE as INITIAL_STATE } from "../state"
+import {
+    ArmorState,
+    INITIAL_ARMOR_STATE as INITIAL_STATE,
+} from "./state"
 import { noArmorSelected } from "./helpers"
 
 export const reducers = {
@@ -86,12 +89,7 @@ export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
                 }
             }
 
-            if (payload?.location?.pathname?.includes("armor")) {
-                if (payload?.hash) {
-                    state.mobileTab = payload.hash
-                }
-            } else {
-                state.mobileTab       = INITIAL_STATE.mobileTab
+            if (!payload?.location?.pathname?.includes("armor")) {
                 state.oldName         = INITIAL_STATE.oldName         // null
                 state.menuHasScrolled = INITIAL_STATE.menuHasScrolled // false
             }

@@ -18,7 +18,6 @@ const selectArmorSlice = (rootState: RootState) => {
 const selectMenuHasScrolled  = (rootState: RootState): boolean => selectArmorSlice(rootState)?.menuHasScrolled
 const selectActiveType       = (rootState: RootState) => selectArmorSlice(rootState)?.activeType
 const selectOldName          = (rootState: RootState): string => selectArmorSlice(rootState)?.oldName
-const selectMobileTab        = (rootState: RootState) => selectArmorSlice(rootState)?.mobileTab
 
 export const selectArmorNames = (rootState: RootState): ArmorSet => selectArmorSlice(rootState)?.armorNames
 
@@ -104,7 +103,6 @@ export const ArmorSelectors = {
     options: selectArmorOptions,
     menuHasScrolled: selectMenuHasScrolled,
     oldArmor: selectOldArmor,
-    mobileTab: selectMobileTab,
     equipped: {
         head: selectHead,
         chest: selectChest,

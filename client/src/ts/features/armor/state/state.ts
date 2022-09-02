@@ -10,7 +10,6 @@ export interface ArmorState {
     activeType?: "all" | ArmorType
     oldName: string
     menuHasScrolled: boolean
-    mobileTab: "grid" | "detail" | "status"
 }
 
 export const INITIAL_ARMOR_STATE: ArmorState = {
@@ -23,7 +22,6 @@ export const INITIAL_ARMOR_STATE: ArmorState = {
     activeType: null,
     oldName: null,
     menuHasScrolled: false,
-    mobileTab: "grid",
 }
 const initialDevState: ArmorState = {
     ...INITIAL_ARMOR_STATE,
@@ -33,12 +31,9 @@ const initialDevState: ArmorState = {
     },
 }
 
-// const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = INITIAL_ARMOR_STATE
-
 export const ArmorSlice = createSlice({
     name: FeatureKeys.Armor,
-    initialState: _initialState,
+    initialState: INITIAL_ARMOR_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })

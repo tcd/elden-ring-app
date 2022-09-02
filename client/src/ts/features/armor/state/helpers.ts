@@ -1,4 +1,4 @@
-import type { ArmorState } from "../state"
+import type { ArmorState } from "./state"
 
 export const noArmorSelected = (slice: ArmorState): boolean => {
     const armorNames = slice?.armorNames
