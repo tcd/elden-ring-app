@@ -31,6 +31,23 @@ const sideNavBackdrop: Css.ColorStop[] = [
     { percentage: "100%", transparency: 1.00 },
 ]
 
+const sideNavMobileBackdrop: Css.ColorStop[] = [
+    { percentage:   "0%", transparency: 1.00 },
+    { percentage:  "10%", transparency: 0.95 },
+    { percentage:  "20%", transparency: 0.90 },
+    { percentage:  "30%", transparency: 0.85 },
+    { percentage:  "40%", transparency: 0.80 },
+    { percentage:  "50%", transparency: 0.75 },
+    { percentage:  "60%", transparency: 0.70 },
+    { percentage:  "70%", transparency: 0.65 },
+    { percentage:  "75%", transparency: 0.60 },
+    { percentage:  "80%", transparency: 0.50 },
+    { percentage:  "85%", transparency: 0.40 },
+    { percentage:  "90%", transparency: 0.30 },
+    { percentage:  "95%", transparency: 0.20 },
+    { percentage: "100%", transparency: 0.10 },
+]
+
 // --------------------------------------
 // Modal
 // --------------------------------------
@@ -189,6 +206,7 @@ export const gradientStops = {
     // Side Nav
     sideNav,
     sideNavBackdrop,
+    sideNavMobileBackdrop,
     // Modal
     modalBody,
     modalTopBottomBorder,

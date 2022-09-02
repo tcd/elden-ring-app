@@ -11,9 +11,9 @@ import {
 
 export const gradients = <const>{
     // Side Nav
-    sideNav:         linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNav            }),
-    // FIXME: Add mobile sidenav backdrop
-    sideNavBackdrop: linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNavBackdrop    }),
+    sideNav:               linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNav               }),
+    sideNavBackdrop:       linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNavBackdrop       }),
+    sideNavMobileBackdrop: linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNavMobileBackdrop }),
     // Modal
     modalBody:            linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalBody            }),
     modalTopBottomBorder: linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalTopBottomBorder }),

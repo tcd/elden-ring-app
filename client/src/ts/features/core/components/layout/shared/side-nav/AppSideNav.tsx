@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { Drawer } from "@mui/material"
 
 import { Actions, Selectors } from "@app/state"
+import { LayoutSx } from "@app/theme"
+
 import { SideNavContent } from "./SideNavContent"
 
 export const AppSideNav = (_props: unknown): JSX.Element => {
@@ -26,11 +28,11 @@ export const AppSideNav = (_props: unknown): JSX.Element => {
             }}
             BackdropProps={{
                 invisible: true,
-                id: "er__sideNav__backdrop",
+                sx: LayoutSx.shared.sideNav.overlay,
             }}
             PaperProps={{
-                id: "er__sideNav",
                 elevation: 0,
+                sx: LayoutSx.shared.sideNav.root,
             }}
         >
             <SideNavContent />

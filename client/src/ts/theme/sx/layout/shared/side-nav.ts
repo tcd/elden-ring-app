@@ -16,7 +16,7 @@ const overlay: SxProps = {
     zIndex: ThemeVars.zIndex.sideNavBackdrop,
     background: ThemeVars.gradients.sideNavBackdrop,
     [Theme.breakpoints.down("sm")]: {
-        background: "transparent",
+        background: ThemeVars.gradients.sideNavMobileBackdrop,
     },
 }
 
