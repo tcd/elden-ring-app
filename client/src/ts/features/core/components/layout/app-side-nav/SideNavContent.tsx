@@ -1,9 +1,8 @@
-import { useDispatch } from "react-redux"
-import { useNavigate, NavigateFunction, To } from "react-router-dom"
+import { Box } from "@mui/material"
 
-import { HeaderIconId, HeaderIconIds, PageName, PageTitle } from "@app/types"
-import { AppDispatch, Actions } from "@app/state"
-import { getImageSrcManual } from "@app/util"
+import { LayoutSx } from "@app/theme"
+
+import { SideNavItem, SideNavItemProps } from "./SideNavItem"
 
 // =============================================================================
 // SideNavContent
@@ -56,53 +55,8 @@ const sideNavItems: SideNavItemProps[] = [
 export const SideNavContent = (_props: unknown): JSX.Element => {
     const items = sideNavItems.map((x) => <SideNavItem key={x.title} {...x} />)
     return (
-        <ul id="er__sideNavItems">
+        <Box component="ul" sx={LayoutSx.shared.sideNav.items}>
             {items}
-        </ul>
-    )
-}
-
-// =============================================================================
-// SideNavItem
-// =============================================================================
-
-export interface SideNavItemProps {
-    pageName: PageName
-    title: PageTitle
-    cloudflareId: HeaderIconId
-    url?: To
-    action?: any
-    actionPayload?: any
-}
-
-export const SideNavItem = (props: SideNavItemProps): JSX.Element => {
-
-    const dispatch: AppDispatch      = useDispatch()
-    const navigate: NavigateFunction = useNavigate()
-
-    const imgSrc = getImageSrcManual(HeaderIconIds[props.cloudflareId], "256")
-
-    const handleClick = () => {
-        if (props?.action) {
-            if (props?.actionPayload) {
-                dispatch(props.action(props.actionPayload))
-            } else {
-                dispatch(props.action())
-            }
-        }
-        if (props?.url) {
-            dispatch(Actions.Core.setPageName(props.pageName))
-            navigate(props.url)
-            dispatch(Actions.Core.closeSideNav())
-        }
-    }
-
-    return (
-        <li className="er__sideNavItem" onClick={handleClick}>
-            <img className="er__sideNavItemImage" src={imgSrc} />
-            <span className="er__sideNavItemTitle">
-                {props.title}
-            </span>
-        </li>
+        </Box>
     )
 }

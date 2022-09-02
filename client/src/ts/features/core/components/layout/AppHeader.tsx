@@ -1,6 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
+import { Box } from "@mui/material"
 
+import { LayoutSx } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
+import { MuiImg } from "@app/shared"
 
 export const AppHeader = (_props: unknown): JSX.Element => {
 
@@ -17,19 +20,18 @@ export const AppHeader = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <header id="er__header">
-            <div className="er__header__content">
-                {/* <img src="https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public" alt="title-background" /> */}
-                <img
-                    className="er__header__icon"
+        <Box component="header" sx={LayoutSx.desktop.header.root}>
+            <Box sx={LayoutSx.desktop.header.content}>
+                <MuiImg
                     src={imageUrl}
                     alt={title}
+                    sx={LayoutSx.desktop.header.icon}
                     onClick={handleIconClick}
                 />
-                <h1 className="er__header__title">
+                <Box component="h1" sx={LayoutSx.desktop.header.title}>
                     {title}
-                </h1>
-            </div>
-        </header>
+                </Box>
+            </Box>
+        </Box>
     )
 }

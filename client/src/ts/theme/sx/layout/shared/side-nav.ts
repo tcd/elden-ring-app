@@ -8,7 +8,7 @@ import {
 
 import {
     pointerOnHover,
-    textShadow,
+    // textShadow,
 } from "../../mixins"
 
 /** `#er__sideNav__backdrop` */
