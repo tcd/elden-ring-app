@@ -3,7 +3,7 @@ import type { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
 
 // import { ThemeVars } from "@app/theme"
 
-const rootProps: GridProps = {
+const container: GridProps = {
     container: true,
     direction: "row",
 }
@@ -25,7 +25,7 @@ const col3: GridProps = {
 // =============================================================================
 
 export const TriPage = {
-    rootProps,
+    container,
     col1,
     col2,
     col3,

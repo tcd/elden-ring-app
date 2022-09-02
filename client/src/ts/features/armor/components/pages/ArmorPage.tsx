@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Unstable_Grid2"
 
+import { ComponentSx } from "@app/theme"
 import { ErPage } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/character-status"
@@ -7,14 +8,14 @@ import { CharacterStatus } from "@app/features/character-status"
 export const ArmorPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="armor">
-            <Grid container direction="row">
-                <Grid xs={6}>
+            <Grid {...ComponentSx.TriPage.container}>
+                <Grid {...ComponentSx.TriPage.col1}>
                     <ArmorMenu />
                 </Grid>
-                <Grid xs>
+                <Grid {...ComponentSx.TriPage.col2}>
                     <ArmorDetail />
                 </Grid>
-                <Grid xs={2.5}>
+                <Grid {...ComponentSx.TriPage.col3}>
                     <CharacterStatus />
                 </Grid>
             </Grid>

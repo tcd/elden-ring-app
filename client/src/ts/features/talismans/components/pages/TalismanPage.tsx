@@ -1,40 +1,24 @@
-import { useEffect } from "react"
-import { useParams } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux"
+import Grid from "@mui/material/Unstable_Grid2"
 
-import { TalismanSlotId } from "@app/constants"
-import { isBlank } from "@app/util"
-import { Actions, Selectors } from "@app/state"
+import { ComponentSx } from "@app/theme"
 import { ErPage } from "@app/shared"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
 import { CharacterStatus } from "@app/features/character-status"
 
 export const TalismanPage = (_props: unknown): JSX.Element => {
-
-    const dispatch = useDispatch()
-    const { slotId } = useParams<{ slotId: TalismanSlotId }>()
-
-    const activeSlotId = useSelector(Selectors.Talismans.activeSlotId)
-
-    useEffect(() => {
-        if (isBlank(activeSlotId)) {
-            dispatch(Actions.Talismans.setActiveSlotId({ id: slotId }))
-        }
-    }, [activeSlotId, slotId, dispatch])
-
     return (
         <ErPage pageName="talisman">
-            <div className="row">
-                <div className="col">
+            <Grid {...ComponentSx.TriPage.container}>
+                <Grid {...ComponentSx.TriPage.col1}>
                     <TalismanMenu />
-                </div>
-                <div className="col">
+                </Grid>
+                <Grid {...ComponentSx.TriPage.col2}>
                     <TalismanDetail />
-                </div>
-                <div className="col">
+                </Grid>
+                <Grid {...ComponentSx.TriPage.col3}>
                     <CharacterStatus />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         </ErPage>
     )
 }
