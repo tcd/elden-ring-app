@@ -9,7 +9,6 @@ import { _selectSlice } from "./select-slice"
 
 const _selectActiveType   = (rootState: RootState) => _selectSlice(rootState)?.activeType ?? null
 const _selectActiveSlotId = (rootState: RootState) => _selectSlice(rootState)?.activeSlotId ?? null
-const selectMobileTab     = (rootState: RootState) => _selectSlice(rootState)?.mobileTab
 
 const selectActiveType = (rootState: RootState) => {
     return _selectActiveType(rootState) ?? "Weapon"
@@ -78,5 +77,4 @@ export const EquipmentSelectors = {
     gridTitle: selectGridTitle,
     gridDescription: selectGridDescription,
     activeType: selectActiveType,
-    mobileTab: selectMobileTab,
 }
