@@ -25,7 +25,7 @@ export const EmptyAmmunitionDetail = (_props: unknown): JSX.Element => {
         return (<StatRow key={key} title={title} value={"-"} />)
     })
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         includeSecondaryImage: false,
         includePassiveEffects: true,
         primaryImage: {

@@ -1,7 +1,6 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
-import { Actions, Selectors } from "@app/state"
+import { Selectors } from "@app/state"
 import { ErPage } from "@app/shared"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 import { CharacterStatus } from "@app/features/character-status"

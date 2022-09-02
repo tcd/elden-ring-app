@@ -2,18 +2,19 @@ import Grid from "@mui/material/Unstable_Grid2"
 
 import { ComponentSx } from "@app/theme"
 import { ErPage } from "@app/shared"
-import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 import { CharacterStatus } from "@app/features/character-status"
 
-export const WeaponsPage = (_props: unknown): JSX.Element => {
+import { AmmunitionDetail } from "../ammunition-detail/AmmunitionDetail"
+
+export const AmmunitionPage = (_props: unknown): JSX.Element => {
     return (
-        <ErPage pageName="weapon">
+        <ErPage pageName="ammunition">
             <Grid {...ComponentSx.TriPage.container}>
                 <Grid {...ComponentSx.TriPage.col1}>
-                    <WeaponMenu />
+                    <span>TODO: ammo grid</span>
                 </Grid>
                 <Grid {...ComponentSx.TriPage.col2}>
-                    <WeaponDetail />
+                    <AmmunitionDetail />
                 </Grid>
                 <Grid {...ComponentSx.TriPage.col3}>
                     <CharacterStatus />
