@@ -10,7 +10,7 @@ export const ArmorFooter = (_props: unknown): JSX.Element => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
+    const lastMainPage = useSelector(Selectors.Routing.lastMainPage)
 
     // =========================================================================
 

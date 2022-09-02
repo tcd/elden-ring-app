@@ -9,7 +9,6 @@ import {
     EquipmentSelectors,
     LevelUpSelectors,
     QuickItemsSelectors,
-    RouterSelectors,
     RoutingSelectors,
     SpellsSelectors,
     StartingClassSelectors,
@@ -29,7 +28,6 @@ export interface AppSelectors {
     [FeatureKeys.Equipment]:       typeof EquipmentSelectors
     [FeatureKeys.LevelUp]:         typeof LevelUpSelectors
     [FeatureKeys.QuickItems]:      typeof QuickItemsSelectors
-    [FeatureKeys.Router]:          typeof RouterSelectors
     [FeatureKeys.Routing]:         typeof RoutingSelectors
     [FeatureKeys.Spells]:          typeof SpellsSelectors
     [FeatureKeys.StartingClass]:   typeof StartingClassSelectors
@@ -49,7 +47,6 @@ export const Selectors: AppSelectors = {
     LevelUp:         LevelUpSelectors,
     Meta:            MetaSelectors,
     QuickItems:      QuickItemsSelectors,
-    Router:          RouterSelectors,
     Routing:         RoutingSelectors,
     Spells:          SpellsSelectors,
     StartingClass:   StartingClassSelectors,

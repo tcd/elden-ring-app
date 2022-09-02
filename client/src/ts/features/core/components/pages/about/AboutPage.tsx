@@ -28,7 +28,7 @@ export const AboutPage = (_props: unknown): JSX.Element => {
 
 export const MobileAboutPage = (_props: unknown): JSX.Element => {
 
-    const hash = useSelector(Selectors.Router.hash)
+    const hash = useSelector(Selectors.Routing.hash)
 
     let content = <About />
 

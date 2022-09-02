@@ -1,4 +1,5 @@
-import { RootState } from "@app/state"
+import type  { RootState } from "@app/state"
+
 import { _selectSlice } from "./select-slice"
 import { CoreSelectors } from "./core"
 
@@ -12,8 +13,11 @@ const mainPagePathnames = [
 export const selectLastMainPage = (rootState: RootState) => {
     const previousStates = CoreSelectors.previousLocations(rootState)
     let lastMainPage = "/"
+    if (previousStates.length === 0) {
+        return lastMainPage
+    }
     for (const location of previousStates) {
-        if (mainPagePathnames.includes(location.pathname)) {
+        if (mainPagePathnames.includes(location?.pathname)) {
             lastMainPage = location.pathname
             break
         }

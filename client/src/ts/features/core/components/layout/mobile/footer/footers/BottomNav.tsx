@@ -25,7 +25,7 @@ export interface BottomNavProps {
 export const BottomNav = ({ actions, excludeBack }: BottomNavProps): JSX.Element => {
 
     const hash = useHash()
-    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
+    const lastMainPage = useSelector(Selectors.Routing.lastMainPage)
 
     if (excludeBack !== true) {
         const backAction: BottomNavActionProps = {

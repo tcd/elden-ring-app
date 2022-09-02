@@ -4,13 +4,14 @@ import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import { ErPage } from "@app/shared"
+
 import { StartingClassMenu, StartingClassConfirmationDialog } from "."
 
 export const StartingClassPage = (_props: unknown): JSX.Element => {
 
     const navigate = useNavigate()
     const shouldRedirect = useSelector(Selectors.StartingClass.shouldRedirectFromStartingClassPage)
-    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
+    const lastMainPage = useSelector(Selectors.Routing.lastMainPage)
 
     useEffect(() => {
         if (shouldRedirect) {
