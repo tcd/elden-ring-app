@@ -3,7 +3,6 @@ import Color from "color"
 
 import { ThemeVars } from "@app/theme"
 
-
 const link: SxProps = {
     color: ThemeVars.colors.gold.light,
     "&:active, &:focus, &:hover": {
