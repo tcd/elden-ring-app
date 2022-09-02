@@ -32,9 +32,9 @@ export const ArmorFooter = (_props: unknown): JSX.Element => {
     // =========================================================================
 
     const props: AppFooterActionProps[] = [
-        { name: "Close",               onClick: handleRequestClose         },
-        { name: "Clear",               onClick: handleRequestClear         },
-        { name: "Switch view (right)", onClick: handleCharacterStatusClick },
+        { shortcut: "backspace", name: "Close",               onClick: handleRequestClose         },
+        { shortcut: "x",         name: "Remove",              onClick: handleRequestClear         },
+        { shortcut: "y",         name: "Switch view (right)", onClick: handleCharacterStatusClick },
     ]
 
     const actions = props.map(p => <AppFooterAction key={p.name} {...p} />)

@@ -2,12 +2,12 @@ import { useHotkeys } from "react-hotkeys-hook"
 import { Box, Button } from "@mui/material"
 
 import { LayoutSx } from "@app/theme"
-import { isBlank, LetterKey, LetterKeyUrls } from "@app/util"
+import { isBlank, KeyboardKey, KeyboardKeyUrls } from "@app/util"
 import { ErButton, MuiImg } from "@app/shared"
 
 export interface AppFooterActionProps {
     name: string
-    shortcut?: LetterKey
+    shortcut?: KeyboardKey
     onClick: () => void
 }
 
@@ -37,7 +37,7 @@ const AppFooterActionWithShortcut = (props: AppFooterActionProps): JSX.Element =
     return (
         <Button onClick={props.onClick} sx={LayoutSx.desktop.footer.action.root}>
             <MuiImg
-                src={LetterKeyUrls[props.shortcut]}
+                src={KeyboardKeyUrls[props.shortcut]}
                 alt={props.shortcut}
                 sx={LayoutSx.desktop.footer.action.image}
             />

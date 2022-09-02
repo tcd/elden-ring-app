@@ -28,10 +28,6 @@ export type LetterKey =
     | "y"
     | "z"
 
-export const isLetterKey = (value: string): value is LetterKey => {
-    return !!value.match(/^[a-z]$/)
-}
-
 export type ControlKey =
     | "arrow-keys"
     | "backspace"
@@ -42,6 +38,30 @@ export type ControlKey =
     | "return"
     | "space"
     | "tab"
+
+export type KeyboardKey = LetterKey | ControlKey
+
+export const isLetterKey = (value: string): value is LetterKey => {
+    return !!value.match(/^[a-z]$/)
+}
+
+export const isControlKey = (value: string): value is ControlKey => {
+    return [
+        "arrow-keys",
+        "backspace",
+        "esc",
+        "left-right-arrows",
+        "minus",
+        "plus",
+        "return",
+        "space",
+        "tab",
+    ].includes(value)
+}
+
+export const isKeyboardKey = (value: string): value is KeyboardKey => {
+    return isLetterKey(value) || isControlKey(value)
+}
 
 export const ControlKeyUrls: Record<ControlKey, string> = {
     "arrow-keys":        getImageSrcManual("keyboard/control/arrow-keys", "public"),
@@ -82,4 +102,9 @@ export const LetterKeyUrls: Record<LetterKey, string> = {
     "x": getImageSrcManual("keyboard/letters/x", "public"),
     "y": getImageSrcManual("keyboard/letters/y", "public"),
     "z": getImageSrcManual("keyboard/letters/z", "public"),
+}
+
+export const KeyboardKeyUrls: Record<KeyboardKey, string> = {
+    ...ControlKeyUrls,
+    ...LetterKeyUrls,
 }
