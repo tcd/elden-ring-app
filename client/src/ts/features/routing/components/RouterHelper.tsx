@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useLocation, useParams } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
+import { Box } from "@mui/material"
 
 import { Actions, Selectors } from "@app/state"
 
@@ -21,7 +22,5 @@ export const RouterHelper = (_props: unknown): JSX.Element => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    return (
-        <></>
-    )
+    return <Box sx={{ display: "none" }}/>
 }

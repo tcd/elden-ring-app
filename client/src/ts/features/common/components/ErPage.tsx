@@ -5,6 +5,7 @@ import type { BoxProps, SxProps } from "@mui/material"
 
 import type { PageName } from "@app/types"
 import { Actions } from "@app/state"
+import { RouterHelper } from "@app/features/routing/components/RouterHelper"
 
 export interface ErPageProps {
     id?: string
@@ -59,6 +60,7 @@ export const ErPage = (props: ErPageProps): JSX.Element => {
 
     return (
         <Box {...boxProps}>
+            <RouterHelper />
             {children && children}
         </Box>
     )

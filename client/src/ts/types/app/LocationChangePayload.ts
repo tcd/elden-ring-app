@@ -1,10 +1,10 @@
 import type { Location } from "react-router-dom"
 
 export const PathParamValues = <const>{
-    armorSlotId:   "armorSlotId",
-    spellSlotId: "spellSlotId",
+    armorSlotId:    "armorSlotId",
+    spellSlotId:    "spellSlotId",
     talismanSlotId: "talismanSlotId",
-    weaponSlotId: "weaponSlotId",
+    weaponSlotId:   "weaponSlotId",
 }
 
 export type PathParamValue = typeof PathParamValues[keyof typeof PathParamValues]
