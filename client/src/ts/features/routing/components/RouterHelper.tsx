@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from "react-redux"
 import { Box } from "@mui/material"
 
 import { Actions, Selectors } from "@app/state"
+import { useHash } from "@app/shared"
 
 export const RouterHelper = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
     const params = useParams()
     const location = useLocation()
-
-    const hash = window.location.hash.replace("#", "")
+    const hash = useHash()
 
     const previousLocation = useSelector(Selectors.Routing.previousLocation)
 

@@ -1,13 +1,17 @@
-import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-import { Selectors } from "@app/state"
-import { ErPage } from "@app/shared"
+import { ErPage, useHash } from "@app/shared"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 import { CharacterStatus } from "@app/features/character-status"
 
 export const MobileWeaponPage = (_props: unknown): JSX.Element => {
 
-    const tab = useSelector(Selectors.Weapons.mobileTab)
+    const tab = useHash()
+    const navigate = useNavigate()
+
+    if (tab === "") {
+        navigate("#grid", { replace: true })
+    }
 
     let content: JSX.Element = null
 

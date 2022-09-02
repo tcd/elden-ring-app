@@ -2,7 +2,7 @@ import GridViewIcon from "@mui/icons-material/GridView"
 import PersonIcon from "@mui/icons-material/Person"
 import PlusOneIcon from "@mui/icons-material/PlusOne"
 
-import { BottomNav, BottomNavActionProps } from "./BottomNav"
+import { BottomNav, BottomNavActionProps } from "../bottom-nav"
 
 const plusOneIcon = <PlusOneIcon />
 const gridIcon    = <GridViewIcon />

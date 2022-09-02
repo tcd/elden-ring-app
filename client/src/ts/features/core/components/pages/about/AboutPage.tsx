@@ -1,9 +1,8 @@
-import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 import { Container } from "@mui/material"
 
-import { Selectors } from "@app/state"
 import { ComponentSx } from "@app/theme"
-import { ErPage, useViewport } from "@app/shared"
+import { ErPage, useHash, useViewport } from "@app/shared"
 
 import { About, Credit, Related } from "./sections"
 
@@ -28,17 +27,20 @@ export const AboutPage = (_props: unknown): JSX.Element => {
 
 export const MobileAboutPage = (_props: unknown): JSX.Element => {
 
-    const hash = useSelector(Selectors.Routing.hash)
+    const tab = useHash()
+    const navigate = useNavigate()
 
-    let content = <About />
+    if (tab === "") {
+        navigate("#about", { replace: true })
+    }
 
-    if (hash != null) {
-        switch (hash) {
-            case "about":   content = <About />;   break
-            case "credit":  content = <Credit />;  break
-            case "related": content = <Related />; break
-            default:                               break
-        }
+    let content: JSX.Element = null
+
+    switch (tab) {
+        case "about":   content = <About />;   break
+        case "credit":  content = <Credit />;  break
+        case "related": content = <Related />; break
+        default:                               break
     }
 
     return (

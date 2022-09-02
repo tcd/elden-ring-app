@@ -2,7 +2,7 @@ import GridViewIcon from "@mui/icons-material/GridView"
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import PersonIcon from "@mui/icons-material/Person"
 
-import { BottomNav, BottomNavActionProps } from "./BottomNav"
+import { BottomNav, BottomNavActionProps } from "../bottom-nav"
 
 const gridIcon    = <GridViewIcon />
 const detailsIcon = <VisibilityIcon />

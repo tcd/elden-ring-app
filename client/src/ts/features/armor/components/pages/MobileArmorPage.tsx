@@ -1,14 +1,17 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-import { Actions, Selectors } from "@app/state"
-import { ErPage } from "@app/shared"
+import { ErPage, useHash } from "@app/shared"
 import { ArmorDetail, ArmorMenu } from "@app/features/armor/components"
 import { CharacterStatus } from "@app/features/character-status"
 
 export const MobileArmorPage = (_props: unknown): JSX.Element => {
 
-    const tab = useSelector(Selectors.Armor.mobileTab)
+    const tab = useHash()
+    const navigate = useNavigate()
+
+    if (tab === "") {
+        navigate("#grid", { replace: true })
+    }
 
     let content: JSX.Element = null
 

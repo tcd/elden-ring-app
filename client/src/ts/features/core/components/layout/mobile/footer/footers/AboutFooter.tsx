@@ -1,13 +1,11 @@
 // import ShareIcon from "@mui/icons-material/Share"
 import HubIcon from "@mui/icons-material/Hub"
 import InfoIcon from "@mui/icons-material/Info"
-import {
-    mdiHandClap,
-} from "@mdi/js"
+import { mdiHandClap } from "@mdi/js"
 
 import { MdiIcon } from "@app/shared"
 
-import { BottomNav, BottomNavActionProps } from "./BottomNav"
+import { BottomNav, BottomNavActionProps } from "../bottom-nav"
 
 const hubIcon  = <HubIcon />
 const infoIcon = <InfoIcon />

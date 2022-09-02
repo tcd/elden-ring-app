@@ -11,17 +11,18 @@ import { EquipmentPageDetail } from "@app/features/equipment/components/Equipmen
 
 export const MobileEquipmentPage = (_props: unknown): JSX.Element => {
 
-    const navigate = useNavigate()
     const hash = useHash()
-
-    // const tab = useSelector(Selectors.Equipment.mobileTab)
+    const navigate = useNavigate()
     const baseClass = useSelector(Selectors.StartingClass.startingClassName)
 
     useEffect(() => {
         if (isBlank(baseClass)) {
             navigate("/starting-class")
         }
-    }, [baseClass, navigate])
+        if (hash === "") {
+            navigate("#grid", { replace: true })
+        }
+    }, [baseClass, navigate, hash])
 
     let content: JSX.Element = null
 

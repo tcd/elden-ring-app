@@ -1,13 +1,17 @@
-import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-import { Selectors } from "@app/state"
-import { ErPage } from "@app/shared"
+import { ErPage, useHash } from "@app/shared"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
 import { CharacterStatus } from "@app/features/character-status"
 
 export const MobileTalismanPage = (_props: unknown): JSX.Element => {
 
-    const tab = useSelector(Selectors.Talismans.mobileTab)
+    const tab = useHash()
+    const navigate = useNavigate()
+
+    if (tab === "") {
+        navigate("#grid", { replace: true })
+    }
 
     let content: JSX.Element = null
 
