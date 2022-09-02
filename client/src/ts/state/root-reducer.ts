@@ -16,7 +16,6 @@ import {
     StartingClassSlice,
     TalismansSlice,
     WeaponsSlice,
-    routerReducer,
 } from "@app/features"
 
 export const rootReducer = combineReducers({
@@ -29,7 +28,6 @@ export const rootReducer = combineReducers({
     [FeatureKeys.Equipment]:       EquipmentSlice.reducer,
     [FeatureKeys.LevelUp]:         LevelUpSlice.reducer,
     [FeatureKeys.QuickItems]:      QuickItemsSlice.reducer,
-    [FeatureKeys.Router]:          routerReducer,
     [FeatureKeys.Routing]:         RoutingSlice.reducer,
     [FeatureKeys.Spells]:          SpellsSlice.reducer,
     [FeatureKeys.StartingClass]:   StartingClassSlice.reducer,

@@ -1,17 +1,19 @@
-import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
+import type { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import { KitchenSink } from "@app/types"
-import { isLocationChange } from "@app/util"
+import type { KitchenSink } from "@app/types"
 import { CoreActions } from "@app/features/core"
-import { BuilderState, INITIAL_BUILDER_STATE } from "../state"
+
+import {
+    BuilderState,
+    INITIAL_BUILDER_STATE as INITIAL_STATE,
+} from "../state"
 import { fetchEverything } from "../thunks"
-import { handleLocationChange } from "./helpers"
 
 export const reducers = {}
 
 export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) => {
     builder
-        .addCase(CoreActions.resetState, () => INITIAL_BUILDER_STATE)
+        .addCase(CoreActions.resetState, () => INITIAL_STATE)
         // ---------------------------------------------------------------------
         // Fetch Everything
         // ---------------------------------------------------------------------
@@ -26,5 +28,4 @@ export const extraReducers = (builder: ActionReducerMapBuilder<BuilderState>) =>
             state.everythingRequest.status = "fulfilled"
             state.everythingRequest.response = action.payload
         })
-        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
 }
