@@ -17,6 +17,7 @@ export const RouterHelper = (_props: unknown): JSX.Element => {
 
     useEffect(() => {
         dispatch(Actions.Routing.locationChange({
+            // @ts-ignore: next-line
             pathParams: params,
             location: location,
             previousLocation: previousLocation,

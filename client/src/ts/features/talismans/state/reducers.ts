@@ -52,7 +52,10 @@ export const extraReducers = (builder: ActionReducerMapBuilder<TalismansState>) 
         .addCase(CoreActions.resetState, () => INITIAL_STATE)
         .addCase(RoutingActions.locationChange, (state, { payload }) => {
             if (payload?.pathParams?.talismanSlotId) {
-                state.activeSlotId = payload?.pathParams?.talismanSlotId
+                if (isBlank(state?.activeSlotId)) {
+                    state.activeSlotId    = payload.pathParams.talismanSlotId
+                    state.oldTalismanName = state.talismanNames[payload.pathParams.talismanSlotId]
+                }
             } else {
                 if (payload?.location?.pathname != "/") {
                     state.activeSlotId = INITIAL_STATE.activeSlotId
@@ -64,7 +67,9 @@ export const extraReducers = (builder: ActionReducerMapBuilder<TalismansState>) 
                     state.mobileTab = payload.hash
                 }
             } else {
-                state.mobileTab = INITIAL_STATE.mobileTab
+                state.mobileTab       = INITIAL_STATE.mobileTab
+                state.oldTalismanName = INITIAL_STATE.oldTalismanName // null
+                state.menuHasScrolled = INITIAL_STATE.menuHasScrolled // false
             }
         })
 }

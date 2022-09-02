@@ -1,5 +1,4 @@
-import { ActionReducerMapBuilder, AnyAction, PayloadAction } from "@reduxjs/toolkit"
-import { RouterActions, LOCATION_CHANGE } from "redux-first-history"
+import type { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import {
     startingClassByName,
@@ -10,12 +9,13 @@ import {
     WeaponAffinityName,
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"
-import { isBlank, isLocationChange } from "@app/util"
+import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
+import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
-import { WeaponsState, INITIAL_WEAPONS_STATE } from "../state"
-// import { history } from "@app/state"
-import { noWeaponsSelected, handleLocationChange } from "./helpers"
+
+import { WeaponsState, INITIAL_WEAPONS_STATE as INITIAL_STATE } from "../state"
+import { noWeaponsSelected } from "./helpers"
 
 export const reducers = {
     setActiveSlotId(state: WeaponsState, { payload: { id } }: PayloadAction<{ id: WeaponSlotId }>) {
@@ -134,7 +134,7 @@ export const reducers = {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
     builder
-        .addCase(CoreActions.resetState, () => INITIAL_WEAPONS_STATE)
+        .addCase(CoreActions.resetState, () => INITIAL_STATE)
         .addCase(StartingClassActions.confirmStartingClassName, (state: WeaponsState, { payload: { name } }) => {
             if (noWeaponsSelected(state)) {
                 const sClass = startingClassByName(name)
@@ -145,5 +145,36 @@ export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) =>
                 return state
             }
         })
-        .addCase(LOCATION_CHANGE, (state: WeaponsState, action) => handleLocationChange(state, action))
+        .addCase(RoutingActions.locationChange, (state: WeaponsState, { payload }) => {
+            if (payload?.pathParams?.weaponSlotId) {
+                if (isBlank(state.activeSlotId)) {
+                    state.oldWeapon = { ...state.slots[payload.pathParams.weaponSlotId] }
+                    state.activeSlotId = payload.pathParams.weaponSlotId
+                    // state.menuHasScrolled = false
+                }
+                state.activeSlotId = payload?.pathParams?.weaponSlotId
+            } else {
+                if (payload?.location?.pathname != "/") {
+                    state.activeSlotId = INITIAL_STATE.activeSlotId
+                }
+            }
+
+            if (payload?.location?.pathname?.includes("ashes-of-war")) {
+                state.customizingWeapon = true
+            } else {
+                state.customizingWeapon = false
+            }
+
+            if (payload?.location?.pathname?.includes("weapon")) {
+                if (payload?.hash) {
+                    state.mobileTab = payload.hash
+                }
+            } else {
+                state.mobileTab = INITIAL_STATE.mobileTab
+                // FIXME: should we be using an empty object?
+                state.oldWeapon = { ...INITIAL_STATE.oldWeapon }
+                state.menuHasScrolled = INITIAL_STATE.menuHasScrolled // false
+            }
+        })
+
 }

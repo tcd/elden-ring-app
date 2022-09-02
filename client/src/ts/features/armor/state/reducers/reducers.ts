@@ -1,12 +1,14 @@
-import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
+import type { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { startingClassByName } from "@app/data"
-import { ArmorType } from "@app/constants"
-import { isBlank, isLocationChange } from "@app/util"
+import type { ArmorType } from "@app/constants"
+import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
+import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
-import { ArmorState, INITIAL_ARMOR_STATE } from "../state"
-import { noArmorSelected, handleLocationChange } from "./helpers"
+
+import { ArmorState, INITIAL_ARMOR_STATE as INITIAL_STATE } from "../state"
+import { noArmorSelected } from "./helpers"
 
 export const reducers = {
     setActiveSlotId(state: ArmorState, { payload: { type } }: PayloadAction<{ type: ArmorType }>) {
@@ -59,7 +61,7 @@ export const reducers = {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
     builder
-        .addCase(CoreActions.resetState, () => INITIAL_ARMOR_STATE)
+        .addCase(CoreActions.resetState, () => INITIAL_STATE)
         .addCase(StartingClassActions.confirmStartingClassName, (state: ArmorState, { payload: { name } }) => {
             if (noArmorSelected(state)) {
                 const sClass = startingClassByName(name)
@@ -72,5 +74,26 @@ export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
                 return state
             }
         })
-        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
+        .addCase(RoutingActions.locationChange, (state, { payload }) => {
+            if (payload?.pathParams?.armorSlotId) {
+                if (isBlank(state?.activeType)) {
+                    state.activeType = payload.pathParams.armorSlotId
+                    state.oldName    = state.armorNames[payload.pathParams.armorSlotId]
+                }
+            } else {
+                if (payload?.location?.pathname != "/") {
+                    state.activeType = INITIAL_STATE.activeType
+                }
+            }
+
+            if (payload?.location?.pathname?.includes("armor")) {
+                if (payload?.hash) {
+                    state.mobileTab = payload.hash
+                }
+            } else {
+                state.mobileTab       = INITIAL_STATE.mobileTab
+                state.oldName         = INITIAL_STATE.oldName         // null
+                state.menuHasScrolled = INITIAL_STATE.menuHasScrolled // false
+            }
+        })
 }
