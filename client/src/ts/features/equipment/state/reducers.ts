@@ -1,13 +1,15 @@
-import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
+import type { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import {
+import type {
     EquipmentType,
     EquipmentSlotId,
 } from "@app/types"
-import { isLocationChange } from "@app/util"
 import { CoreActions } from "@app/features/core"
-import { EquipmentState, INITIAL_EQUIPMENT_STATE } from "../state"
-import { handleLocationChange } from "./helpers"
+
+import {
+    EquipmentState,
+    INITIAL_EQUIPMENT_STATE as INITIAL_STATE,
+} from "./state"
 
 interface SetActiveSlotPayload {
     type: EquipmentType
@@ -33,6 +35,5 @@ export const reducers = {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<EquipmentState>) => {
     builder
-        .addCase(CoreActions.resetState, () => INITIAL_EQUIPMENT_STATE)
-        .addMatcher(isLocationChange, (state, action) => handleLocationChange(state, action))
+        .addCase(CoreActions.resetState, () => INITIAL_STATE)
 }

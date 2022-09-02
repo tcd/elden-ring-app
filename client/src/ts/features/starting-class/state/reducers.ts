@@ -2,7 +2,11 @@ import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { StartingClassName } from "@app/constants"
 import { CoreActions } from "@app/features/core"
-import { StartingClassState, INITIAL_STARTING_CLASS_STATE } from "./state"
+
+import {
+    StartingClassState,
+    INITIAL_STARTING_CLASS_STATE as INITIAL_STATE,
+} from "./state"
 
 export const reducers = {
     setPendingStartingClass(state: StartingClassState, { payload: { name } }: PayloadAction<{ name: StartingClassName }>) {
@@ -24,5 +28,5 @@ export const reducers = {
 
 export const extraReducers = (builder: ActionReducerMapBuilder<StartingClassState>) => {
     builder
-        .addCase(CoreActions.resetState, () => INITIAL_STARTING_CLASS_STATE)
+        .addCase(CoreActions.resetState, () => INITIAL_STATE)
 }
