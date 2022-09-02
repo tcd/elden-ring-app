@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 import { FeatureKeys, TalismanSlotId } from "@app/constants"
 import { TalismanSet } from "@app/types"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface TalismansState {

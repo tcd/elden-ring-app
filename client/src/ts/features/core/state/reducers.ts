@@ -1,12 +1,12 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import { PageName } from "@app/types"
-import { CoreState, INITIAL_CORE_STATE } from "./state"
-
 import { StartingClassActions } from "@app/features/starting-class"
 import { ArmorActions } from "@app/features/armor"
 import { TalismansActions } from "@app/features/talismans"
 import { WeaponsActions } from "@app/features/weapons"
+
+import { CoreState, INITIAL_CORE_STATE } from "./state"
 
 export const reducers = {
     // -------------------------------------------------------------------------

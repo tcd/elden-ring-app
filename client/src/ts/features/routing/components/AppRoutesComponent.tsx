@@ -15,18 +15,10 @@ import {
     BuilderPage,
     MobileBuilderPage,
 } from "@app/features/builder"
-import {
-    StatusPage,
-} from "@app/features/character-status"
-import {
-    ChecklistPage,
-} from "@app/features/checklist"
-import {
-    LevelUpPage,
-} from "@app/features/level-up"
-import {
-    StartingClassPage,
-} from "@app/features/starting-class"
+import { StatusPage } from "@app/features/character-status"
+import { ChecklistPage } from "@app/features/checklist"
+import { LevelUpPage } from "@app/features/level-up"
+import { StartingClassPage } from "@app/features/starting-class"
 import {
     EquipmentPage,
     MobileEquipmentPage,

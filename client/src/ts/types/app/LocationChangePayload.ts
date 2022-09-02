@@ -15,4 +15,5 @@ export interface LocationChangePayload {
     pathParams: IPathParams
     location: Location
     previousLocation?: Location
+    hash: string
 }
