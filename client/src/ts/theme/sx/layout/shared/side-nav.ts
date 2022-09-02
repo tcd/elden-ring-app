@@ -1,9 +1,11 @@
 import type { SxProps } from "@mui/material"
 
+import { getImageSrcManual } from "@app/util"
 import {
     ThemeVars,
     EldenRingMaterialTheme as Theme,
-    CssMath,
+    cssUrl,
+    transition,
 } from "@app/theme"
 
 import {
@@ -48,12 +50,32 @@ const items: SxProps = {
 
 /** `.er__sideNavItem` */
 const item: SxProps = {
-    ...pointerOnHover,
     zIndex: ThemeVars.zIndex.sideNavItem,
+
     display: "flex",
     flexFlow: "row nowrap",
     alignItems: "center",
     my: "25px",
+    borderRadius: "5px",
+
+    willChange: "background-image",
+    // transition: "background-image 0.1s ease-in 0s",
+    transition: transition({ property: "background-image", duration: "0.1s", timing: "ease-in-out" }),
+
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 100%", /** width height */
+    backgroundImage: cssUrl("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="),
+
+    "&:hover": {
+        cursor: "pointer",
+        backgroundImage: cssUrl(getImageSrcManual("ui/header/cropped", "public")),
+    },
+
+    "& *": {
+        "&:hover": {
+            cursor: "pointer",
+        },
+    },
 }
 
 /** `img.er__sideNavItemImage` */
