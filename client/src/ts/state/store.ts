@@ -13,7 +13,7 @@ import storage from "redux-persist/lib/storage" // defaults to localStorage for 
 import { getPersistConfig } from "redux-deep-persist"
 
 import { CONFIG } from "@app/util"
-import { createReduxHistory, routerMiddleware } from "@app/features"
+
 import { rootReducer } from "./root-reducer"
 import type { RootState } from "./state"
 
@@ -57,9 +57,7 @@ export const store = configureStore({
         serializableCheck: {
             ignoredActions: [ FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER ],
         },
-    }).concat(routerMiddleware),
+    }),
 })
-
-export const history = createReduxHistory(store)
 
 export const persistor = persistStore(store)

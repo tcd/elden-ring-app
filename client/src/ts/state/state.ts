@@ -7,7 +7,6 @@ import { configureStore } from "@reduxjs/toolkit"
 import { persistReducer } from "redux-persist"
 import { getPersistConfig } from "redux-deep-persist"
 
-import { routerMiddleware } from "@app/features"
 import { rootReducer } from "./root-reducer"
 
 const persistConfig = getPersistConfig({
@@ -25,7 +24,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
  */
 const store = configureStore({
     reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat(routerMiddleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({}),
 })
 
 export type RootState = ReturnType<typeof store.getState>
