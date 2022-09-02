@@ -1,4 +1,4 @@
-export const zIndex = {
+export const zIndex = <const>{
     startingClassBackground:     1_005,
     startingClassContent:        1_010,
     startingClassHover:          1_011,

@@ -2,7 +2,7 @@ import Color from "color"
 
 import { rgba } from "../helpers"
 
-export const unsortedColors = {
+export const unsortedColors = <const>{
     // "offWhite": "#636155",
     "offWhite":  "#ACAB94",
     /** Hover Gold */
@@ -57,7 +57,7 @@ const colorSystemTheme = <const>{
     dark:          "gray-900",
 }
 
-export const colorSystem = {
+export const colorSystem = <const>{
     ...colorSystemRoot,
     ...colorSystemTheme,
 }
@@ -68,13 +68,13 @@ export const colorSystem = {
 // ----------------------------------------------------------------------------
 
 /** Settings for the `<body>` element. */
-export const body = {
+export const body = <const>{
     colorBg: colorSystem.black,
     colorFg: "#d3d3d3",
 }
 
 /** Font, line-height, and color for body text, headings, and more. */
-export const typography = {
+export const typography = <const>{
     headingsColor: "#cfc1a6",
     textShadowOffset: "1px",
     // statRowFontSize: "16px",
@@ -85,7 +85,7 @@ export const typography = {
 // Layout
 // ----------------------------------------------------------------------------
 
-export const layout = {
+export const layout = <const>{
     headerImageSize: "55px",
     sideNavWidth: "400px",
     // sideNavBg: "#35352f",
@@ -96,7 +96,7 @@ export const layout = {
 // Mobile Layout
 // ----------------------------------------------------------------------------
 
-export const mobileHeader = {
+export const mobileHeader = <const>{
     height: "86px",
     contentHeight: "86px",
     topMargin: "5px",
@@ -106,7 +106,7 @@ export const mobileHeader = {
 // Button
 // ----------------------------------------------------------------------------
 
-export const button = {
+export const button = <const>{
     bgColor: "#14120F",
     fgColor: "#D3D3D3",
     borderColor: "#999999",
@@ -125,7 +125,7 @@ export const navbarHeight = "48px"
 // Tables
 // ----------------------------------------------------------------------------
 
-export const table = {
+export const table = <const>{
     colorFg: body.colorFg, // !default
     colorBg: "transparent !default",
 }
@@ -134,7 +134,7 @@ export const table = {
 // Data Table
 // ----------------------------------------------------------------------------
 
-export const dataTable = {
+export const dataTable = <const>{
     colorFg: body.colorFg,
     headerColorBg: "#1c1c19",
     borderRadius: "0.25rem !important",
@@ -144,7 +144,7 @@ export const dataTable = {
 // Modal
 // ----------------------------------------------------------------------------
 
-export const modal = {
+export const modal = <const>{
     backdropBg: rgba("#221e19", 0.55).hexa(),
     colorBg: "#26221C",
     colorBorder: "#4D4B3F",
@@ -159,7 +159,7 @@ export const modal = {
 // Context Menu
 // ----------------------------------------------------------------------------
 
-export const contextMenu = {
+export const contextMenu = <const>{
     colorBg: modal.colorBg,
     colorBorder: modal.colorBorder,
     item: {
@@ -173,7 +173,7 @@ export const contextMenu = {
 // You Died
 // ----------------------------------------------------------------------------
 
-export const youDied = {
+export const youDied = <const>{
     red: "#520000",
     black: "black",
 }
@@ -182,7 +182,7 @@ export const youDied = {
 // Popover
 // ----------------------------------------------------------------------------
 
-export const popover = {
+export const popover = <const>{
     borderSize: "2.5px",
     colorBg: "#181813",
     colorFg: body.colorFg,
@@ -193,7 +193,7 @@ export const popover = {
 // Starting Class
 // ----------------------------------------------------------------------------
 
-export const startingClass = {
+export const startingClass = <const>{
     bgGradientColorLeft: "#3d3b34",
     bgGradientColorRight: "#221f17",
     topBottomBorderColor: "#5b5749",
@@ -206,20 +206,20 @@ export const startingClass = {
 // Equipment Detail
 // ----------------------------------------------------------------------------
 
-const equipmentDetailPrimaryImage = {
+const equipmentDetailPrimaryImage = <const>{
     /** pixels */
     size: 155,
     /** pixels */
     mobileSize: 100,
 }
 
-const equipmentDetailSecondaryImage = {
+const equipmentDetailSecondaryImage = <const>{
     size: (equipmentDetailPrimaryImage.size / 2),
     mobileSize: (equipmentDetailPrimaryImage.mobileSize / 2),
 
 }
 
-export const equipmentDetail = {
+export const equipmentDetail = <const>{
     primaryImage: equipmentDetailPrimaryImage,
     secondaryImage: equipmentDetailSecondaryImage,
 }
@@ -229,7 +229,7 @@ export const equipmentDetail = {
 // ----------------------------------------------------------------------------
 
 /** Equipment Grid / Equipment Slots */
-export const equipmentSlots = {
+export const equipmentSlots = <const>{
     "equipment-slot-overlay-color": "#B6AD84",
     "equipment-menu-horizontal-margin": "10%",
     "equipment-grid-cell-width":  "150px",
@@ -240,7 +240,7 @@ export const equipmentSlots = {
 // Equipment Menu
 // ----------------------------------------------------------------------------
 
-export const equipmentMenu = {
+export const equipmentMenu = <const>{
     imageBackgroundColor: "#3A3931",
     backgroundColor: "#3d3b32",
     dividerColor: "#4c4a41",
@@ -248,7 +248,7 @@ export const equipmentMenu = {
     minCellSize: "50px",
 }
 
-export const RedX = {
+export const RedX = <const>{
     size: "16px",
     padding: "4px",
 }

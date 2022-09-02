@@ -9,9 +9,10 @@ import {
     youDied,
 } from "./variables.scss"
 
-export const gradients = {
+export const gradients = <const>{
     // Side Nav
     sideNav:         linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNav            }),
+    // FIXME: Add mobile sidenav backdrop
     sideNavBackdrop: linearGradient({ direction: "90deg", color: layout.sideNavBg, stops: gradientStops.sideNavBackdrop    }),
     // Modal
     modalBody:            linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalBody            }),
