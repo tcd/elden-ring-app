@@ -1,14 +1,6 @@
-import { Box } from "@mui/material"
+import { SideNavItemProps } from "./SideNavItem"
 
-import { LayoutSx } from "@app/theme"
-
-import { SideNavItem, SideNavItemProps } from "./SideNavItem"
-
-// =============================================================================
-// SideNavContent
-// =============================================================================
-
-const sideNavItems: SideNavItemProps[] = [
+export const sideNavItems: SideNavItemProps[] = [
     {
         pageName: "builder",
         title: "Builder",
@@ -51,12 +43,3 @@ const sideNavItems: SideNavItemProps[] = [
         url: "/settings",
     },
 ]
-
-export const SideNavContent = (_props: unknown): JSX.Element => {
-    const items = sideNavItems.map((x) => <SideNavItem key={x.title} {...x} />)
-    return (
-        <Box component="ul" sx={LayoutSx.shared.sideNav.items}>
-            {items}
-        </Box>
-    )
-}

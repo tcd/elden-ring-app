@@ -6,6 +6,7 @@ import {
 } from "@mdi/js"
 
 import { MdiIcon } from "@app/shared"
+
 import { BottomNav, BottomNavActionProps } from "./BottomNav"
 
 const hubIcon  = <HubIcon />

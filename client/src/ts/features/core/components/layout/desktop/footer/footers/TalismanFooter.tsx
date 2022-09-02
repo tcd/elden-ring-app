@@ -1,7 +1,8 @@
-import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
 
 import { Actions, Selectors } from "@app/state"
+
 import { AppFooterAction, AppFooterActionProps } from "../AppFooterAction"
 
 export const TalismanFooter = (_props: unknown): JSX.Element => {

@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux"
 
 import { Actions } from "@app/state"
+
 import { AppFooterAction, AppFooterActionProps } from "../AppFooterAction"
 
-export const EquipmentFooter = (_props: unknown): JSX.Element => {
+export const BuilderFooter = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
@@ -16,7 +17,7 @@ export const EquipmentFooter = (_props: unknown): JSX.Element => {
     // =========================================================================
 
     const props: AppFooterActionProps[] = [
-        { shortcut: "y", name: "Switch view (right)", onClick: handleCharacterStatusClick },
+        { name: "Switch view (right)", onClick: handleCharacterStatusClick },
     ]
 
     const actions = props.map(p => <AppFooterAction key={p.name} {...p} />)

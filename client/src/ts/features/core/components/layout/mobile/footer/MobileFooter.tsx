@@ -1,7 +1,10 @@
 import { useSelector } from "react-redux"
+import { Box } from "@mui/material"
 
-import { PageName } from "@app/types"
+import type { PageName } from "@app/types"
 import { Selectors } from "@app/state"
+import { LayoutSx } from "@app/theme"
+
 import {
     AboutFooter,
     ArmorFooter,
@@ -37,8 +40,8 @@ export const MobileFooter = (_props: unknown): JSX.Element => {
     const footerForPage = FOOTERS_BY_PAGE[pageName] ?? <NoFooter />
 
     return (
-        <footer id="er__mobileLayout__footerRoot">
+        <Box component="footer" sx={LayoutSx.mobile.footer}>
             {footerForPage}
-        </footer>
+        </Box>
     )
 }

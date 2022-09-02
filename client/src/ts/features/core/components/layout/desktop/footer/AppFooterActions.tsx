@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 
-import { PageName } from "@app/types"
+import type { PageName } from "@app/types"
 import { Selectors } from "@app/state"
 
 import {

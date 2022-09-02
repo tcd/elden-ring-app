@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
+import { Box } from "@mui/material"
 
-import { getImageSrcManual } from "@app/util"
+import { LayoutSx } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
-
-// const headerBackgroundSrc = getImageSrcManual("ui/header/400", "public")
+import { MuiImg } from "@app/shared"
 
 export const MobileHeader = (_props: unknown): JSX.Element => {
 
@@ -20,20 +20,19 @@ export const MobileHeader = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <header id="er__appHeader__root">
-            {/* <img id="er__appHeader__background" src={headerBackgroundSrc} alt="header background" /> */}
-            <div id="er__appHeader__background"></div>
-            <div id="er__appHeader__content">
-                <img
-                    className="er__appHeader__icon"
+        <Box component="header" sx={LayoutSx.mobile.header.root}>
+            <Box sx={LayoutSx.mobile.header.background} />
+            <Box sx={LayoutSx.mobile.header.content}>
+                <MuiImg
                     src={imageUrl}
                     alt={title}
                     onClick={handleIconClick}
+                    sx={LayoutSx.mobile.header.icon}
                 />
-                <h1 className="er__appHeader__title">
+                <Box component="h1" sx={LayoutSx.mobile.header.title}>
                     {title}
-                </h1>
-            </div>
-        </header>
+                </Box>
+            </Box>
+        </Box>
     )
 }
