@@ -1,16 +1,29 @@
+import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { ArmorBuilderMenu, ErPage, TalismanBuilderMenu, WeaponBuilderMenu, CharacterStatus } from "@app/features"
+import {
+    ErPage,
+    ArmorBuilderMenu,
+    TalismanBuilderMenu,
+    WeaponBuilderMenu,
+    CharacterStatus,
+    useHash,
+} from "@app/features"
 
 import { LevelUpMenu } from "."
 
 export const MobileBuilderMenu = (_props: unknown): JSX.Element => {
 
+    const tab = useHash()
+    const navigate = useNavigate()
     const pageName = useSelector(Selectors.Core.pageName)
-    const tab = useSelector(Selectors.Builder.mobileTab)
 
-    let $menuElement: JSX.Element = <LevelUpMenu />
+    if (tab === "") {
+        navigate("#level")
+    }
+
+    let $menuElement: JSX.Element = null
     switch (pageName) {
         case null:       $menuElement = <LevelUpMenu />; break
         case "armor":    $menuElement = <ArmorBuilderMenu />; break
@@ -21,8 +34,8 @@ export const MobileBuilderMenu = (_props: unknown): JSX.Element => {
 
     let $content: JSX.Element = null
     switch (tab) {
-        case "level":  $content = <LevelUpMenu />;     break
-        case "status": $content = <CharacterStatus />; break
+        case "level":     $content = <LevelUpMenu />; break
+        case "status":    $content = <CharacterStatus />; break
         case "equipment": $content = $menuElement; break
         default: break
     }

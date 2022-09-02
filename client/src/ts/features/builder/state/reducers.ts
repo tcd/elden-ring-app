@@ -6,8 +6,8 @@ import { CoreActions } from "@app/features/core"
 import {
     BuilderState,
     INITIAL_BUILDER_STATE as INITIAL_STATE,
-} from "../state"
-import { fetchEverything } from "../thunks"
+} from "./state"
+import { fetchEverything } from "./thunks"
 
 export const reducers = {}
 
