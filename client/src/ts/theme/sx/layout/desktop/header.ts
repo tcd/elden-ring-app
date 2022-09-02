@@ -1,5 +1,6 @@
 import type { SxProps } from "@mui/material"
 
+import { getImageSrcManual } from "@app/util"
 import {
     ThemeVars,
     cssUrl,
@@ -7,7 +8,7 @@ import {
 
 import {
     pointerOnHover,
-    textShadow,
+    // textShadow,
 } from "../../mixins"
 
 /** `#er__header` */
@@ -24,7 +25,7 @@ const content: SxProps = {
     flexFlow: "row nowrap",
     alignItems: "center",
 
-    backgroundImage: cssUrl("https://imagedelivery.net/tIYDWdG54zSW0jZ2i4FVmQ/ui/title-background/public"),
+    backgroundImage: cssUrl(getImageSrcManual("ui/title-background", "public")),
     backgroundRepeat: "no-repeat",
     // backgroundPosition: "center",
     // backgroundSize: "cover",

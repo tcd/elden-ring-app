@@ -17,6 +17,13 @@ export const AppSideNav = (_props: unknown): JSX.Element => {
         }
     }
 
+    const handleBackdropClick = (_event) => {
+        // alert("CLICK!")
+        if (sideNavOpened) {
+            dispatch(Actions.Core.closeSideNav())
+        }
+    }
+
     return (
         <Drawer
             anchor="left"
@@ -29,6 +36,8 @@ export const AppSideNav = (_props: unknown): JSX.Element => {
             BackdropProps={{
                 invisible: true,
                 sx: LayoutSx.shared.sideNav.overlay,
+                onClick: handleBackdropClick,
+                // onTouchStart: handleBackdropClick,
             }}
             PaperProps={{
                 elevation: 0,

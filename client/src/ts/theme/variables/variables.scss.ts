@@ -87,9 +87,14 @@ export const typography = <const>{
 
 export const layout = <const>{
     headerImageSize: "55px",
-    sideNavWidth: "400px",
-    // sideNavBg: "#35352f",
-    sideNavBg: "#36342f",
+    sideNav: {
+        // colorBg: "#35352f",
+        colorBg: "#36342f",
+        width: {
+            desktop: "400px",
+            mobile: "75%",
+        },
+    },
 }
 
 // ----------------------------------------------------------------------------

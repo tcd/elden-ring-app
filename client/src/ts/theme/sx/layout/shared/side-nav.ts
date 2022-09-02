@@ -24,7 +24,7 @@ const overlay: SxProps = {
 const root: SxProps = {
     zIndex: ThemeVars.zIndex.sideNav,
     background: ThemeVars.gradients.sideNav,
-    width: ThemeVars.layout.sideNavWidth,
+    width: ThemeVars.layout.sideNav.width.desktop,
 
     display: "flex",
     flexFlow: "column nowrap",
@@ -37,7 +37,7 @@ const root: SxProps = {
     // padding: "0px",
 
     [Theme.breakpoints.down("sm")]: {
-        background: CssMath.divide(ThemeVars.layout.sideNavWidth, 1.5),
+        width: ThemeVars.layout.sideNav.width.mobile,
     },
 }
 
@@ -49,6 +49,7 @@ const items: SxProps = {
 /** `.er__sideNavItem` */
 const item: SxProps = {
     ...pointerOnHover,
+    zIndex: ThemeVars.zIndex.sideNavItem,
     display: "flex",
     flexFlow: "row nowrap",
     alignItems: "center",

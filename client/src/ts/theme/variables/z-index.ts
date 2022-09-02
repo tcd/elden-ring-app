@@ -18,6 +18,8 @@ export const zIndex = <const>{
     scrollBarThumb:              1_020,
     sideNavBackdrop:             1_190,
     sideNav:                     1_200,
+    sideNavItemBackground:       1_205,
+    sideNavItem:                 1_210,
 }
 
 // export const ZIndex = {

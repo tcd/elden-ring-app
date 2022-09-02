@@ -1,13 +1,15 @@
 import isString from "lodash/isString"
 
-interface ICssUnit {
+type CssUnit = "" | "px" | "em" | "rem"
+type CssValue = `${number}${CssUnit}` | `${number}.${number}${CssUnit}`
+interface ICssValueDetails {
     value: number
-    unit: "" | "px" | "em" | "rem"
+    unit: CssUnit
 }
 
 const CSS_UNIT = /^(?<value>\d*\.?\d*)(?<units>(px|em|rem))?$/i
 
-const cleanUnit = (input: string | number): ICssUnit => {
+const cleanUnit = (input: CssValue): ICssValueDetails => {
     if (isString(input)) {
         const matches = CSS_UNIT.exec(input)
         if (matches?.groups === undefined) {
@@ -27,13 +29,20 @@ const cleanUnit = (input: string | number): ICssUnit => {
     }
 }
 
-const divide = (dividend: string | number, divisor: number): string => {
+const divide = (dividend: CssValue, divisor: number): CssValue => {
     const { value, unit } = cleanUnit(dividend)
     const quotient = (value / divisor)
     return `${quotient}${unit}`
 }
 
+const multiply = (v1: CssValue, v2: number): CssValue => {
+    const { value, unit } = cleanUnit(v1)
+    return `${value * v2}${unit}`
+
+}
+
 export const CssMath = {
     cleanUnit,
     divide,
+    multiply,
 }
