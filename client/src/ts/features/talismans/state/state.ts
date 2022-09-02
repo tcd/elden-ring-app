@@ -10,7 +10,6 @@ export interface TalismansState {
     activeSlotId: TalismanSlotId
     oldTalismanName?: string
     menuHasScrolled: boolean
-    mobileTab: "grid" | "detail" | "status"
 }
 
 export const INITIAL_TALISMANS_STATE: TalismansState = {
@@ -23,7 +22,6 @@ export const INITIAL_TALISMANS_STATE: TalismansState = {
     activeSlotId: null,
     oldTalismanName: null,
     menuHasScrolled: false,
-    mobileTab: "grid",
 }
 
 const initialDevState: TalismansState = {
@@ -37,12 +35,9 @@ const initialDevState: TalismansState = {
     },
 }
 
-// const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = INITIAL_TALISMANS_STATE
-
 export const TalismansSlice = createSlice({
     name: FeatureKeys.Talismans,
-    initialState: _initialState,
+    initialState: INITIAL_TALISMANS_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })

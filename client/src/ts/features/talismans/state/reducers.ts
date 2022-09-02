@@ -62,12 +62,7 @@ export const extraReducers = (builder: ActionReducerMapBuilder<TalismansState>) 
                 }
             }
 
-            if (payload?.location?.pathname?.includes("talisman")) {
-                if (payload?.hash) {
-                    state.mobileTab = payload.hash
-                }
-            } else {
-                state.mobileTab       = INITIAL_STATE.mobileTab
+            if (!payload?.location?.pathname?.includes("talisman")) {
                 state.oldTalismanName = INITIAL_STATE.oldTalismanName // null
                 state.menuHasScrolled = INITIAL_STATE.menuHasScrolled // false
             }
