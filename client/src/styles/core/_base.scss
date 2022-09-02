@@ -32,6 +32,10 @@ body {
     // background-color: blue;
 }
 
+// *, *::before, *::after {
+//     box-sizing: border-box;
+// }
+
 * {
     @include mixins.customScrollbar();
     // @include m.invisibleScrollbar();
