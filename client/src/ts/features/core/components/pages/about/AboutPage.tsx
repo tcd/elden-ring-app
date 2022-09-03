@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Container } from "@mui/material"
 
@@ -8,7 +9,15 @@ import { About, Credit, Related } from "./sections"
 
 export const AboutPage = (_props: unknown): JSX.Element => {
 
+    const hash = useHash()
+    const navigate = useNavigate()
     const { onMobile } = useViewport()
+
+    useEffect(() => {
+        if (hash === "") {
+            navigate("#about", { replace: true })
+        }
+    }, [navigate, hash])
 
     if (onMobile) {
         return (<MobileAboutPage/>)
@@ -28,11 +37,11 @@ export const AboutPage = (_props: unknown): JSX.Element => {
 export const MobileAboutPage = (_props: unknown): JSX.Element => {
 
     const tab = useHash()
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    if (tab === "") {
-        navigate("#about", { replace: true })
-    }
+    // if (tab === "") {
+    //     navigate("#about", { replace: true })
+    // }
 
     let content: JSX.Element = null
 
