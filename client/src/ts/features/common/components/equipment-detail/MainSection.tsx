@@ -12,7 +12,7 @@ const gridProps = ComponentSx.EquipmentDetail.mainSection.props
 
 export const MainSection = (props: EquipmentDetailProps): JSX.Element => {
     return (
-        <ErCard title={props.title}>
+        <ErCard title={props.title} sx={ComponentSx.EquipmentDetail.bodyGrid.cardSx}>
             <Grid {...gridProps.container}>
 
                 <Grid {...gridProps.detailColumn}>
