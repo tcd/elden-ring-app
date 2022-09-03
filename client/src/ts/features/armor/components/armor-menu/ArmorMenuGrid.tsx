@@ -12,6 +12,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
 
     const armor           = useSelector(Selectors.Armor.options)
     const activeName      = useSelector(Selectors.Armor.activeName)
+    const activeSlot      = useSelector(Selectors.Armor.activeType)
     const menuHasScrolled = useSelector(Selectors.Armor.menuHasScrolled)
 
     const menuRef = createRef<HTMLDivElement>()
@@ -60,7 +61,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentMenu.EquipmentMenu
-            title="FIXME: armor menu title"
+            title={activeSlot}
             description={activeName}
             ref={menuRef}
         >

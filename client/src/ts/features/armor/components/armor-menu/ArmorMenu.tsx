@@ -9,11 +9,7 @@ export const ArmorMenu = (_props: unknown): JSX.Element => {
 
     if (isBlank(activeType)) {
         return null
-    } else {
-        return (
-            <div className="er__equipmentMenu">
-                <ArmorMenuGrid />
-            </div>
-        )
     }
+
+    return <ArmorMenuGrid />
 }
