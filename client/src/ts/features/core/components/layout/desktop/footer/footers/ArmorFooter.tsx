@@ -21,8 +21,7 @@ export const ArmorFooter = (_props: unknown): JSX.Element => {
 
     const handleRequestClear = () => {
         dispatch(Actions.Armor.removeArmor())
-        dispatch(Actions.Armor.closeArmorMenu())
-        navigate(lastMainPage)
+        // navigate(lastMainPage)
     }
 
     const handleCharacterStatusClick = () => {
@@ -32,7 +31,7 @@ export const ArmorFooter = (_props: unknown): JSX.Element => {
     // =========================================================================
 
     const props: AppFooterActionProps[] = [
-        { shortcut: "backspace", name: "Close",               onClick: handleRequestClose         },
+        { shortcut: "backspace", name: "Back" ,               onClick: handleRequestClose         },
         { shortcut: "x",         name: "Remove",              onClick: handleRequestClear         },
         { shortcut: "y",         name: "Switch view (right)", onClick: handleCharacterStatusClick },
     ]

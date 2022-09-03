@@ -22,9 +22,9 @@ export const WeaponFooter = (_props: unknown): JSX.Element => {
     }
 
     const handleRequestClear = () => {
-        dispatch(Actions.Weapons.removeWeapon())
-        dispatch(Actions.Weapons.closeWeaponsMenu())
-        navigate(lastMainPage)
+        dispatch(Actions.Weapons.unequip())
+        // dispatch(Actions.Weapons.closeWeaponsMenu())
+        // navigate(lastMainPage)
     }
 
     const handleRequestCustomize = () => {
@@ -38,13 +38,14 @@ export const WeaponFooter = (_props: unknown): JSX.Element => {
 
     // =========================================================================
 
-    const aowProps: AppFooterActionProps = { name: "Ash of War", onClick: handleRequestCustomize }
+    const aowProps: AppFooterActionProps = { shortcut: "c", name: "Ash of War", onClick: handleRequestCustomize }
 
+    // @ts-ignore: next-line
     const props: AppFooterActionProps[] = [
-        { name: "Close",               onClick: handleRequestClose         },
-        { name: "Clear",               onClick: handleRequestClear         },
+        { shortcut: "backspace", name: "Back",   onClick: handleRequestClose         },
+        { shortcut: "a",         name: "Remove", onClick: handleRequestClear         },
         (canCustomize ? aowProps : null),
-        { name: "Switch view (right)", onClick: handleCharacterStatusClick },
+        { shortcut: "y", name: "Switch view (right)", onClick: handleCharacterStatusClick },
     ].filter(x => x != null)
 
     const actions = props.map(p => <AppFooterAction key={p.name} {...p} />)

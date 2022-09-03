@@ -85,18 +85,6 @@ export const reducers = {
             weapon_name: name,
         }
     },
-    removeWeaponSkill(state: WeaponsState) {
-        const activeSlotId = state.activeSlotId
-        if (isBlank(activeSlotId)) {
-            return
-        }
-        state.oldWeapon = {
-            ...state.slots[activeSlotId],
-        }
-        state.slots[activeSlotId].weapon_skill_name = null
-        state.slots[activeSlotId].affinity_name = null
-        state.choosingAffinity = false
-    },
     setWeaponSkill(state: WeaponsState, { payload: { name } }: PayloadAction<{ name: string }>) {
         const activeSlotId = state.activeSlotId
         if (isBlank(activeSlotId)) {
@@ -128,6 +116,39 @@ export const reducers = {
             ...state.slots[activeSlotId],
         }
         state.slots[activeSlotId].affinity_name = name as WeaponAffinityName
+        state.choosingAffinity = false
+    },
+    unequip(state: WeaponsState) {
+        state.oldWeapon = {
+            ...state.slots[state.activeSlotId],
+        }
+        state.slots[state.activeSlotId] = {
+            ...DEFAULT_WEAPON_SETTINGS,
+        }
+        // state.customizingWeapon = false
+        // state.menuHasScrolled = true
+        // state.choosingAffinity = false
+    },
+    removeWeaponSkill(state: WeaponsState) {
+        const activeSlotId = state.activeSlotId
+        if (isBlank(activeSlotId)) {
+            return
+        }
+        state.oldWeapon = {
+            ...state.slots[activeSlotId],
+        }
+        state.slots[activeSlotId].weapon_skill_name = null
+        state.slots[activeSlotId].affinity_name = null
+    },
+    removeAffinity(state: WeaponsState) {
+        const activeSlotId = state.activeSlotId
+        if (isBlank(activeSlotId)) {
+            return
+        }
+        state.oldWeapon = {
+            ...state.slots[activeSlotId],
+        }
+        state.slots[activeSlotId].affinity_name = null
         state.choosingAffinity = false
     },
 }

@@ -48,6 +48,7 @@ export const reducers = {
     },
     removeArmor(state: ArmorState) {
         if (!isBlank(state.activeType)) {
+            state.oldName = state.armorNames[state.activeType]
             state.armorNames[state.activeType] = null
         }
     },

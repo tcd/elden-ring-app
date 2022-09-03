@@ -32,9 +32,11 @@ export const reducers = {
         state.menuHasScrolled = true
     },
     removeTalisman(state: TalismansState) {
+        state.oldTalismanName = state.talismanNames[state.activeSlotId]
         state.talismanNames[state.activeSlotId] = null
     },
     removeTalismanBySlot(state: TalismansState, { payload: { id } }: PayloadAction<{ id: TalismanSlotId }>) {
+        state.oldTalismanName = state.talismanNames[id]
         state.talismanNames[id] = null
     },
     setActiveName(state: TalismansState, { payload: { name } }: PayloadAction<{ name: string }>) {

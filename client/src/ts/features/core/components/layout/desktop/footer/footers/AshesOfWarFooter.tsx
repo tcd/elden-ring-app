@@ -10,19 +10,18 @@ export const AshesOfWarFooter = (_props: unknown): JSX.Element => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const lastMainPage = useSelector(Selectors.Routing.lastMainPage)
+    // const lastMainPage = useSelector(Selectors.Routing.lastMainPage)
+    const activeSlotId = useSelector(Selectors.Weapons.activeSlotId)
 
     // =========================================================================
 
     const handleRequestClose = () => {
         dispatch(Actions.Weapons.stopCustomizingWeapon())
-        navigate(lastMainPage)
+        navigate(`/weapons/${activeSlotId}#detail`)
     }
 
     const handleRequestClear = () => {
-        // dispatch(Actions.Weapons.removeWeapon())
-        dispatch(Actions.Weapons.stopCustomizingWeapon())
-        navigate(lastMainPage)
+        dispatch(Actions.Weapons.removeWeaponSkill())
     }
 
     const handleCharacterStatusClick = () => {
@@ -32,9 +31,9 @@ export const AshesOfWarFooter = (_props: unknown): JSX.Element => {
     // =========================================================================
 
     const props: AppFooterActionProps[] = [
-        { name: "Close",               onClick: handleRequestClose         },
-        { name: "Clear",               onClick: handleRequestClear         },
-        { name: "Switch view (right)", onClick: handleCharacterStatusClick },
+        { shortcut: "backspace", name: "Back",                onClick: handleRequestClose         },
+        { shortcut: "a",         name: "Remove",              onClick: handleRequestClear         },
+        { shortcut: "y",         name: "Switch view (right)", onClick: handleCharacterStatusClick },
     ]
 
     const actions = props.map(p => <AppFooterAction key={p.name} {...p} />)
