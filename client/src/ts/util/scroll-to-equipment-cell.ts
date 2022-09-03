@@ -10,10 +10,15 @@ export const scrollToEquipmentCell = (
     menuRef:         RefObject<HTMLDivElement>,
     callback:        () => void,
 ): void => {
-    if (isBlank(activeName))            { return null }
+    // if (isBlank(activeName))            { return null }
     if (menuHasScrolled)                { return null }
     if (!cellRefs[activeName]?.current) { return null }
     if (!menuRef?.current)              { return null }
+
+    if (isBlank(activeName)) {
+        callback()
+        return
+    }
 
     const yOffset = -375
     const y = cellRefs[activeName].current.getBoundingClientRect().top + window.scrollY + yOffset
