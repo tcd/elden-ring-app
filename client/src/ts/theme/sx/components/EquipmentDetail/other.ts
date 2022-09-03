@@ -25,7 +25,7 @@ const fullBodyItemProps: GridProps = {
 
 const cardSx: SxProps = {
     mx: 3,
-    my: 2,
+    my: 1,
 }
 
 // =============================================================================
