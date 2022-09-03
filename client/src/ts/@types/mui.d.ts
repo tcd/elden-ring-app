@@ -1,4 +1,4 @@
-// declare module "@mui/system" {
+// export declare module "@mui/system" {
 //     // interface Theme {
 //     // //   status: {
 //     // //     danger: string;
@@ -11,15 +11,15 @@
 //     // //   };
 //     // }
 //     interface BreakpointOverrides {
-//         xs: true// removes the `xs` breakpoint
+//         xs: true
 //         sm: true
 //         md: true
 //         lg: true
 //         xl: true
-//         xxl: true
-//         // tablet: true; // adds the `tablet` breakpoint
-//         // laptop: true;
-//         // desktop: true;
+//         phone: true;
+//         tablet: true;
+//         laptop: true;
+//         desktop: true;
 //     }
 // }
 
