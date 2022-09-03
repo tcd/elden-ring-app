@@ -5,7 +5,7 @@ import { LayoutSx } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
 import { MuiImg } from "@app/shared"
 
-export const MobileHeader = (_props: unknown): JSX.Element => {
+export const AppHeader = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
@@ -20,16 +20,16 @@ export const MobileHeader = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Box component="header" sx={LayoutSx.mobile.header.root}>
-            <Box sx={LayoutSx.mobile.header.background} />
-            <Box sx={LayoutSx.mobile.header.content}>
+        <Box component="header" sx={LayoutSx.shared.header.root}>
+            <Box sx={LayoutSx.shared.header.background} />
+            <Box sx={LayoutSx.shared.header.content}>
                 <MuiImg
                     src={imageUrl}
                     alt={title}
                     onClick={handleIconClick}
-                    sx={LayoutSx.mobile.header.icon}
+                    sx={LayoutSx.shared.header.icon}
                 />
-                <Box component="h1" sx={LayoutSx.mobile.header.title}>
+                <Box component="h1" sx={LayoutSx.shared.header.title}>
                     {title}
                 </Box>
             </Box>
