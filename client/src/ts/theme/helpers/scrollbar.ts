@@ -50,16 +50,20 @@ export const scrollbar = () => {
 
     const activeBg = Color(COLORS.thumb).darken(0.2).string()
 
+    const borderRadius = 6
+    const width = 12 // console.log(`${window.innerWidth - document.body.clientWidth}px`)
+
     return {
         "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+            width: width,
             background: `${COLORS.center1} ${trackGradient}`,
-            // borderRadius: 6,
+            borderRadius: borderRadius,
         },
         "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
-            borderRadius: 8,
+            borderRadius: borderRadius,
             backgroundColor: COLORS.thumb,
-            minHeight: 24,
-            border: `3px solid ${trackGradient}`,
+            minHeight: 22,
+            border: `3x solid ${trackGradient}`,
         },
         "&::-webkit-scrollbar-thumb:focus,  & *::-webkit-scrollbar-thumb:focus":  { backgroundColor: activeBg },
         "&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active": { backgroundColor: activeBg },
