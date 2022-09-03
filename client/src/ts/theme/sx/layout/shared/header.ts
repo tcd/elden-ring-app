@@ -3,17 +3,14 @@ import type { SxProps } from "@mui/material"
 import { getImageSrcManual } from "@app/util"
 import {
     ThemeVars,
-    EldenRingMaterialTheme as Theme,
+    // EldenRingMaterialTheme as Theme,
     cssUrl,
     mediaQuery,
 } from "@app/theme"
 
-import {
-    pointerOnHover,
-    textShadow,
-} from "../../mixins"
+import { pointerOnHover } from "../../mixins"
 
-const HEADER_HEIGHT = 86 // 86px
+const HEADER_HEIGHT = "86px"
 const HEADER_MARGINS = {
     xs: "5px",
     sm: "10px",
@@ -50,7 +47,7 @@ const shared: SxProps = {
     marginTop: {
         xs: "5px",
         sm: "10px",
-        md: "15px",
+        // md: "15px",
     },
 }
 
@@ -59,6 +56,7 @@ const background: SxProps = {
     ...shared,
 
     backgroundRepeat: "no-repeat",
+    backgroundPosition: "left center",
 
     [mediaQuery({ maxWidth: "349px" })]:                    { backgroundImage: cssUrl(getImageSrcManual("ui/header/300", "public")) },
     [mediaQuery({ minWidth: "350px", maxWidth: "399px" })]: { backgroundImage: cssUrl(getImageSrcManual("ui/header/350", "public")) },
@@ -93,7 +91,6 @@ const title: SxProps = {
     mb: 0,
     color: ThemeVars.colors.gold.light,
     fontSize: "34px",
-    // ...textShadow,
 }
 
 export const headerStyles = {
