@@ -48,7 +48,7 @@ const viewportContext = createContext<IViewportContext>({
     width: 0,
     height: 0,
     orientation: null,
-    onMobile: (window.innerWidth < 700),
+    onMobile: (window.innerWidth < ThemeVars.gridBreakpoints.lg),
     deviceSize: ScreenSize.deviceSize,
 })
 
@@ -57,7 +57,7 @@ export const ViewportProvider = ({ children }) => {
     const [width, setWidth]             = useState<number>(window.innerWidth)
     const [height, setHeight]           = useState<number>(window.innerHeight)
     const [orientation, setOrientation] = useState<Orientation>(null)
-    const [onMobile, setOnMobile]       = useState<boolean>(window.innerWidth < 700)
+    const [onMobile, setOnMobile]       = useState<boolean>(window.innerWidth < ThemeVars.gridBreakpoints.lg)
     const [deviceSize, setDeviceSize]   = useState<DeviceSize>(ScreenSize.deviceSize)
 
     const getOrientation = useCallback((): Orientation => {
@@ -69,7 +69,7 @@ export const ViewportProvider = ({ children }) => {
     }, [width, height])
 
     const getOnMobile = useCallback((): boolean => {
-        return (window.innerWidth < 700)
+        return (window.innerWidth < ThemeVars.gridBreakpoints.lg)
     }, [])
 
     const getDeviceSize = useCallback((): DeviceSize => {
