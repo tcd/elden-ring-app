@@ -23,6 +23,11 @@ const fullBodyItemProps: GridProps = {
     xs: 2,
 }
 
+const cardSx: SxProps = {
+    mx: 3,
+    my: 2,
+}
+
 // =============================================================================
 // All Together
 // =============================================================================
@@ -33,5 +38,6 @@ export const other = {
         rootProps: bodyRootProps,
         itemProps: bodyItemProps,
         fullItemProps: fullBodyItemProps,
+        cardSx: cardSx,
     },
 }

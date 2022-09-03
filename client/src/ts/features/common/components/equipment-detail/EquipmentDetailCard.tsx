@@ -7,34 +7,30 @@ import type { ErCardProps } from "@app/shared"
 export type EquipmentDetailCardProps = Pick<ErCardProps, "title" | "icon" | "children">
 
 export const EquipmentDetailCard = (props: EquipmentDetailCardProps): JSX.Element => {
-
-    const {
-        title,
-        icon,
-        children,
-    } = props
-
     return (
         <Grid {...ComponentSx.EquipmentDetail.bodyGrid.itemProps}>
-            <ErCard title={title} icon={icon} smallTitle={true}>
-                {children && children}
+            <ErCard
+                title={props?.title}
+                icon={props?.icon}
+                smallTitle={true}
+                sx={ComponentSx.EquipmentDetail.bodyGrid.cardSx}
+            >
+                {props?.children && props.children}
             </ErCard>
         </Grid>
     )
 }
 
 export const EquipmentDetailFullCard = (props: EquipmentDetailCardProps): JSX.Element => {
-
-    const {
-        title,
-        icon,
-        children,
-    } = props
-
     return (
         <Grid {...ComponentSx.EquipmentDetail.bodyGrid.fullItemProps}>
-            <ErCard title={title} icon={icon} smallTitle={true}>
-                {children && children}
+            <ErCard
+                title={props?.title}
+                icon={props?.icon}
+                smallTitle={true}
+                sx={ComponentSx.EquipmentDetail.bodyGrid.cardSx}
+            >
+                {props?.children && props.children}
             </ErCard>
         </Grid>
     )
