@@ -9,15 +9,29 @@ const container: GridProps = {
 }
 
 const col1: GridProps = {
-    xs: 6,
+    xs: 12,
+    sm: 5,
+    sx: {
+        mx: {
+            // sm: 1,
+        },
+    },
 }
 
 const col2: GridProps = {
-    xs: true,
+    xs: 12,
+    sm: true,
+    sx: {
+
+    },
 }
 
 const col3: GridProps = {
-    xs: 2.5,
+    xs: 12,
+    sm: 2.5,
+    sx: {
+
+    },
 }
 
 // =============================================================================

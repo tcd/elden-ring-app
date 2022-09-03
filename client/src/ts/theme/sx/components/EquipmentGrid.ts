@@ -21,7 +21,7 @@ import {
 /** `#er__equipmentGrid` */
 const rootSx: SxProps = {
     boxSizing: "border-box",
-    maxHeight: "100%",
+    // maxHeight: "100%",
     "& *, & > *": {
         boxSizing: "border-box",
     },

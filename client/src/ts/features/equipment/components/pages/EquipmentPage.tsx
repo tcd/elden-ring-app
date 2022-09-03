@@ -1,14 +1,62 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import { Grid, GridProps } from "@mui/material"
+import type { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
+import Grid from "@mui/material/Unstable_Grid2"
 
+import { ComponentSx } from "@app/theme"
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
 import { ErPage } from "@app/shared"
 import { CharacterStatus } from "@app/features/character-status"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
+
+export const EquipmentPage = (_props: unknown): JSX.Element => {
+
+    const navigate = useNavigate()
+    const baseClass = useSelector(Selectors.StartingClass.startingClassName)
+
+    useEffect(() => {
+        if (isBlank(baseClass)) {
+            navigate("/starting-class")
+        }
+    }, [baseClass, navigate])
+
+    // return (
+    //     <ErPage pageName="equipment">
+    //         <Grid {...ComponentSx.TriPage.container}>
+    //             <Grid {...ComponentSx.TriPage.col1}>
+    //                 <EquipmentGrid />
+    //             </Grid>
+    //             <Grid {...ComponentSx.TriPage.col2}>
+    //                 <EquipmentPageDetail />
+    //             </Grid>
+    //             <Grid {...ComponentSx.TriPage.col3}>
+    //                 <CharacterStatus />
+    //             </Grid>
+    //         </Grid>
+    //     </ErPage>
+    // )
+
+    return (
+        <ErPage pageName="equipment">
+            <Grid {...parentProps}>
+                <Grid {...child1Props}>
+                    <EquipmentGrid />
+                </Grid>
+                <Grid {...child2Props}>
+                    <EquipmentPageDetail />
+                </Grid>
+                <Grid {...child3Props}>
+                    <CharacterStatus />
+                </Grid>
+            </Grid>
+        </ErPage>
+    )
+}
+
+// =============================================================================
 
 const parentProps: GridProps = {
     container: true,
@@ -27,7 +75,6 @@ const parentProps: GridProps = {
 }
 
 const childProps: GridProps = {
-    item: true,
     flexGrow: 1,
     xs: "auto",
     sm: "auto",
@@ -73,32 +120,4 @@ const child3Props: GridProps = {
             md: "48px",
         },
     },
-}
-
-export const EquipmentPage = (_props: unknown): JSX.Element => {
-
-    const navigate = useNavigate()
-    const baseClass = useSelector(Selectors.StartingClass.startingClassName)
-
-    useEffect(() => {
-        if (isBlank(baseClass)) {
-            navigate("/starting-class")
-        }
-    }, [baseClass, navigate])
-
-    return (
-        <ErPage pageName="equipment">
-            <Grid {...parentProps}>
-                <Grid {...child1Props}>
-                    <EquipmentGrid />
-                </Grid>
-                <Grid {...child2Props}>
-                    <EquipmentPageDetail />
-                </Grid>
-                <Grid {...child3Props}>
-                    <CharacterStatus />
-                </Grid>
-            </Grid>
-        </ErPage>
-    )
 }
