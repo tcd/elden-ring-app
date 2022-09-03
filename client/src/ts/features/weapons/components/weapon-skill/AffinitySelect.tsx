@@ -15,7 +15,7 @@ export const AffinitySelect = (_props: unknown): JSX.Element => {
     }
 
     const handleUndoEffectClick = (): void => {
-        dispatch(Actions.Weapons.removeWeaponSkill())
+        dispatch(Actions.Weapons.removeAffinity())
     }
 
     const itemElements = affinityOptions.map((name) => {
