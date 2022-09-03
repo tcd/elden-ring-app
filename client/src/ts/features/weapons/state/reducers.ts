@@ -14,7 +14,7 @@ import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
 
-import { WeaponsState, INITIAL_WEAPONS_STATE as INITIAL_STATE } from "../state"
+import { WeaponsState, INITIAL_WEAPONS_STATE as INITIAL_STATE } from "./state"
 import { noWeaponsSelected } from "./helpers"
 
 export const reducers = {
@@ -165,12 +165,7 @@ export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) =>
                 state.customizingWeapon = false
             }
 
-            if (payload?.location?.pathname?.includes("weapon")) {
-                if (payload?.hash) {
-                    state.mobileTab = payload.hash
-                }
-            } else {
-                state.mobileTab = INITIAL_STATE.mobileTab
+            if (!payload?.location?.pathname?.includes("weapon")) {
                 // FIXME: should we be using an empty object?
                 state.oldWeapon = { ...INITIAL_STATE.oldWeapon }
                 state.menuHasScrolled = INITIAL_STATE.menuHasScrolled // false

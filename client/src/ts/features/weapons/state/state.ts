@@ -6,6 +6,7 @@ import {
     DEFAULT_WEAPON_SETTINGS,
     WeaponSettings,
 } from "@app/types"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface WeaponsState {
@@ -15,7 +16,6 @@ export interface WeaponsState {
     customizingWeapon: boolean
     choosingAffinity: boolean
     menuHasScrolled: boolean
-    mobileTab: "grid" | "detail" | "status"
 }
 
 const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
@@ -34,7 +34,6 @@ export const INITIAL_WEAPONS_STATE: WeaponsState = {
     customizingWeapon: false,
     choosingAffinity:  false,
     menuHasScrolled:   false,
-    mobileTab: null,
 }
 
 const devState: WeaponsState = {
@@ -57,12 +56,9 @@ const devState: WeaponsState = {
     // oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
 }
 
-// const _initialState = CONFIG.production() ? initialState : devState
-const _initialState = INITIAL_WEAPONS_STATE
-
 export const WeaponsSlice = createSlice({
     name: FeatureKeys.Weapons,
-    initialState: _initialState,
+    initialState: INITIAL_WEAPONS_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })
