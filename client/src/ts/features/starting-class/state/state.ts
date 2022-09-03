@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 import { FeatureKeys, StartingClassName } from "@app/constants"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface StartingClassState {
