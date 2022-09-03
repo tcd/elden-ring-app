@@ -4,6 +4,7 @@ import { useKeenSlider } from "keen-slider/react"
 import type { DeviceSize } from "@app/types"
 import { STARTING_CLASSES } from "@app/data"
 import { getImageSrcManual, ScreenSize } from "@app/util"
+
 import { StartingClassOption } from "."
 
 const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
