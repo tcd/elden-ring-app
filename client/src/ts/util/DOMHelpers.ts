@@ -1,5 +1,3 @@
-import $ from "jquery"
-
 // =============================================================================
 // Types
 // =============================================================================
@@ -54,9 +52,4 @@ export class DOMHelpers {
             right:  parseFloat(elementStyles.borderRightWidth),
         }
     }
-
-    public static flashElement(el: Element | HTMLElement): void {
-        $(el).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100)
-    }
-
 }

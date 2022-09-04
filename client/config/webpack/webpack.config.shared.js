@@ -35,8 +35,6 @@ const webpackConfig = {
         }),
         new webpack.ProvidePlugin({
             process: "process/browser",
-            $:      "jquery",
-            jQuery: "jquery",
         }),
         new webpack.DefinePlugin({
             "process.env.VERSION": JSON.stringify(`v${version}`),
