@@ -8,6 +8,7 @@ import {
 } from "@app/types"
 import type { RootState } from "@app/state"
 import { selectCustomizing } from "@app/features/weapons/state/selectors/selectors"
+
 import { selectSlice } from "./select-slice"
 
 const selectReduxReady       = (rootState: RootState): boolean  => selectSlice(rootState)?.reduxReady

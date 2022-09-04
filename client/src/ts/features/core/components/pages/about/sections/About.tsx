@@ -2,6 +2,7 @@ import { Box, List, ListItem, SxProps, } from "@mui/material"
 
 import { CONFIG } from "@app/util"
 import { Anchor } from "@app/shared"
+
 import { AboutPageSection } from "."
 
 const links = {
