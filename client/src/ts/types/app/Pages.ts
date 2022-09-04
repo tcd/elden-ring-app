@@ -4,50 +4,48 @@ import { CloudflareVariant, getImageSrcManual } from "@app/util"
 // Page Name (used internally)
 // =============================================================================
 
-export const PageNames = {
-    "about":          "about",
-    "ammunition":     "ammunition",
-    "armor":          "armor",
-    "ashes-of-war":   "ashes-of-war",
-    "builder":        "builder",
-    "equipment":      "equipment",
-    "level-up":       "level-up",
-    "not-found":      "not-found",
-    "quick-items":    "quick-items",
-    "settings":       "settings",
-    "spell":          "spell",
-    "starting-class": "starting-class",
-    "status":         "status",
-    "talisman":       "talisman",
-    "weapon":         "weapon",
-} as const
-type PageNameKey = keyof typeof PageNames
-export type PageName = typeof PageNames[PageNameKey];
+export type PageName =
+    | "about"
+    | "ammunition"
+    | "armor"
+    | "ashes-of-war"
+    | "builder"
+    | "checklist"
+    | "equipment"
+    | "level-up"
+    | "not-found"
+    | "quick-items"
+    | "settings"
+    | "spell"
+    | "starting-class"
+    | "status"
+    | "talisman"
+    | "weapon"
+
 
 // =============================================================================
 // Page Title (displayed on header)
 // =============================================================================
 
-export const PageTitles = {
-    "About":                 "About",
-    "Ammunition":            "Ammunition",
-    "Armor":                 "Armor",
-    "Ashes of War":          "Ashes of War",
-    "Builder":               "Builder",
-    "Equipment":             "Equipment",
-    "Level Up":              "Level Up",
-    "Memorize Spells":       "Memorize Spells",
-    "Not Found":             "Not Found",
-    "Quick Items":           "Quick Items",
-    "Select Character Base": "Select Character Base",
-    "Settings":              "Settings",
-    "Status":                "Status",
-    "System":                "System",
-    "Talisman":              "Talisman",
-    "Weapon":                "Weapon",
-} as const
-type PageTitleKey = keyof typeof PageTitles
-export type PageTitle = typeof PageTitles[PageTitleKey];
+export type PageTitle =
+    | "About"
+    | "Ammunition"
+    | "Armor"
+    | "Ashes of War"
+    | "Builder"
+    | "Checklist"
+    | "Equipment"
+    | "Finite Resources"
+    | "Level Up"
+    | "Memorize Spells"
+    | "Not Found"
+    | "Quick Items"
+    | "Select Character Base"
+    | "Settings"
+    | "Status"
+    | "System"
+    | "Talisman"
+    | "Weapon"
 
 // =============================================================================
 // Utilities
@@ -59,6 +57,7 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "armor":          "Armor",
     "ashes-of-war":   "Ashes of War",
     "builder":        "Builder",
+    "checklist":      "Finite Resources",
     "equipment":      "Equipment",
     "level-up":       "Level Up",
     "not-found":      "Not Found",
@@ -112,6 +111,7 @@ export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "armor":          HEADER_ICONS.equipment,
     "ashes-of-war":   HEADER_ICONS["ashes-of-war"],
     "builder":        HEADER_ICONS.smithing,
+    "checklist":      HEADER_ICONS.inventory,
     "equipment":      HEADER_ICONS.equipment,
     "level-up":       HEADER_ICONS["level-up"],
     "not-found":      HEADER_ICONS["site-of-grace"],
