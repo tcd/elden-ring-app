@@ -7,13 +7,17 @@
 //     },
 // }
 
-export const pointerOnHover = {
-    "&:hover": {
-        cursor: "pointer",
-    },
+export const pointerOnHoverChildren = {
     "& *": {
         "&:hover": {
             cursor: "pointer",
         },
     },
+}
+
+export const pointerOnHover = {
+    "&:hover": {
+        cursor: "pointer",
+    },
+    ...pointerOnHoverChildren,
 }

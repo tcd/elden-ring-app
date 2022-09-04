@@ -8,6 +8,10 @@ import {
     transition,
 } from "@app/theme"
 
+import {
+    pointerOnHoverChildren,
+} from "../../mixins"
+
 /** `#er__sideNav__backdrop` */
 const overlay: SxProps = {
     zIndex: ThemeVars.zIndex.sideNavBackdrop,
@@ -65,12 +69,7 @@ const item: SxProps = {
         cursor: "pointer",
         backgroundImage: cssUrl(getImageSrcManual("ui/header/cropped", "public")),
     },
-
-    "& *": {
-        "&:hover": {
-            cursor: "pointer",
-        },
-    },
+    ...pointerOnHoverChildren,
 }
 
 /** `img.er__sideNavItemImage` */

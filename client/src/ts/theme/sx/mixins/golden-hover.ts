@@ -7,12 +7,10 @@ import {
     boxShadow,
 } from "@app/theme"
 
+import { pointerOnHoverChildren } from "./pointer-on-hover"
+
 export const goldenHover: SxProps = {
-    "& *": {
-        "&:hover": {
-            cursor: "pointer",
-        },
-    },
+    ...pointerOnHoverChildren,
     "&:hover": {
         cursor: "pointer",
         boxShadow: boxShadow({

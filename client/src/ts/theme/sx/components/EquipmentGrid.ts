@@ -9,6 +9,7 @@ import {
 
 import {
     pointerOnHover,
+    pointerOnHoverChildren,
     invisibleContent,
     textShadow,
     imageFluid,
@@ -99,12 +100,8 @@ const _cellShared: SxProps = {
 /** `.er__equipmentGrid__cell` */
 const gridCellSx: SxProps = {
     ..._cellShared,
+    ...pointerOnHoverChildren,
     position: "relative",
-    "& *": {
-        "&:hover": {
-            cursor: "pointer",
-        },
-    },
     "&:hover": {
         cursor: "pointer",
         "&::after": {
