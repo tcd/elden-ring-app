@@ -1,14 +1,16 @@
 import type { SxProps } from "@mui/material"
-import Color from "color"
 
 import { ThemeVars } from "@app/theme"
 
 import {
     textShadow,
-    cardSideBorder,
-    pointerOnHover,
     pointerOnHoverChildren,
 } from "../mixins"
+
+// TODO: `#weapon-skill-grid-menu`
+// "#weapon-skill-grid-menu": {
+//     position: "relative",
+// }
 
 // =============================================================================
 // Root
@@ -49,8 +51,6 @@ const modalSx: SxProps = {
     background: ThemeVars.gradients.affinityModalBody,
 }
 
-
-
 // =============================================================================
 // Header
 // =============================================================================
@@ -68,19 +68,56 @@ const headerTitle: SxProps = {
     ...textShadow,
 }
 
-
 // =============================================================================
 // Borders
 // =============================================================================
 
-// $topBottomBorderStops = modalInnerBorder1
+/**
+ * - `er__affinityModal > .top-border`
+ * - `er__affinityModal > .bottom-border`
+ */
+const horizontalBorder: SxProps = {
+    height: "3px",
+    background: [
+        ThemeVars.gradients.affinityModalHorizontalBorder,
+        ThemeVars.modal.colorBorder,
+    ].join(", "),
+}
 
-const sideBorderShared: SxProps = {
+/** `.inner-border-wrapper` */
+const innerBorderWrapper: SxProps = {
+    content: ThemeVars.ZWSP,
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+}
+
+/** `.inner-border-wrapper > .inner-border` */
+const innerBorderContent: SxProps = {
+    textAlign: "center",
+    width: "90%",
+    height: "2px",
+    background: ThemeVars.gradients.modalInnerBorder,
+}
+
+const _verticalBorder: SxProps = {
     position: "absolute",
     top: 0,
     height: "100%",
     width: "3px",
-    // backgroundColor: "blue",
+    backgroundColor: ThemeVars.gradients.affinityModalVerticalBorder,
+}
+
+/** `.left-border-wrapper` */
+const leftBorder: SxProps = {
+    ..._verticalBorder,
+    left: 0,
+}
+
+/** `.right-border-wrapper` */
+const rightBorder: SxProps = {
+    ..._verticalBorder,
+    right: 0,
 }
 
 // =============================================================================
@@ -143,60 +180,6 @@ const optionTitle: SxProps = {
 }
 
 // =============================================================================
-// Unsorted
-// =============================================================================
-
-
-
-const _styles: Record<string, SxProps> = {
-    "#weapon-skill-grid-menu": {
-        position: "relative",
-    },
-    ".er__affinityModal, .er__affinityModal__overlay": {
-        outline: "none !important",
-    },
-    ".er__affinityModal__overlay": {
-        zIndex: ThemeVars.zIndex.modalBackdrop,
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: ThemeVars.modal.backdropBg,
-    },
-    ".er__affinityModal": {
-        width: "70%",
-        // minWidth: "45%",
-        // minHeight: "50%",
-        position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "stretch",
-        justifyContent: "stretch",
-        backgroundColor: ThemeVars.modal.colorBg,
-        background: "TODO: gradient",
-    },
-    "header": {
-        textAlign: "center",
-        paddingTop:    "6px",
-        paddingBottom: "3px",
-    },
-    "header > span": {
-        fontSize: "20px",
-        // lineHeight: "20px",
-        color: ThemeVars.colors.gold.light,
-        ...textShadow,
-    },
-    "ul.er__affinityModal__options": {},
-    "li.er__affinityModal__option": {
-        ...pointerOnHover,
-    },
-}
-
-// =============================================================================
 // All Together
 // =============================================================================
 
@@ -206,6 +189,15 @@ export const AffinityModal = {
     header: {
         root: headerRoot,
         title: headerTitle,
+    },
+    borders: {
+        horizontal: horizontalBorder,
+        left: leftBorder,
+        right: rightBorder,
+        innerBorder: {
+            wrapper: innerBorderWrapper,
+            content: innerBorderContent,
+        },
     },
     options: {
         root: optionsRoot,
