@@ -1,44 +1,12 @@
 import ReactDataTable, {
-    TableProps as RdtTableProps,
     TableColumn as RdtTableColumn,
 } from "react-data-table-component"
 import ArrowDownward from "@mui/icons-material/ArrowDownward"
 
-// These aren't exported from "react-data-table-component", but that's where they're from
-export declare type Primitive = string | number | boolean | bigint;
-export declare type Selector<T> = (row: T, rowIndex?: number) => Primitive;
-
-// =============================================================================
-// Types
-// =============================================================================
-
-export type Field<T> = keyof(T) | Selector<T>
-
-export type ColumnAlignment =
-    | "left"
-    | "center"
-    | "right"
-
-export interface CustomTableColumn<T> {
-    field: Field<T>
-    headerName: string
-    align?: ColumnAlignment
-    sortable?: boolean
-    width?: number
-    renderCell?: (t: T) => JSX.Element
-}
-
-interface CustomTableProps<T> {
-    rows: T[]
-    columns: CustomTableColumn<T>[]
-}
-
-type TablePropsMinus<T> = Omit<
-    RdtTableProps<T>,
-    "columns" | "data"
->
-
-export type CustomTablePropsPlus<T,> = CustomTableProps<T> & TablePropsMinus<T>
+import {
+    CustomTableColumn,
+    CustomTablePropsPlus,
+} from "./types"
 
 // =============================================================================
 // Component
@@ -78,7 +46,7 @@ const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): RdtTableColu
     for (const customColumn of customColumns) {
         const newColumn: RdtTableColumn<T> = {}
         newColumn.sortable = customColumn.sortable ?? false
-        newColumn.name = customColumn.header
+        newColumn.name = customColumn.headerName
         if (typeof(customColumn.field) == "string") {
             // @ts-ignore:next-line
             newColumn.selector = (row) => { return row[customColumn.field] }
@@ -86,8 +54,8 @@ const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): RdtTableColu
             // @ts-ignore:next-line
             newColumn.selector = customColumn.field
         }
-        if (customColumn.renderFunc) {
-            newColumn.cell = (row) => customColumn.renderFunc(row)
+        if (customColumn.renderCell) {
+            newColumn.cell = (row) => customColumn.renderCell(row)
         }
         if (customColumn.width) {
             newColumn.width = customColumn.width + "px"
