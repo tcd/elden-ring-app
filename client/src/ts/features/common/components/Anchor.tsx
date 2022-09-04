@@ -1,3 +1,10 @@
+import { styled } from "@mui/material"
+
+import { ComponentSx } from "@app/theme"
+
+// @ts-ignore: next-line
+const A = styled("a")(ComponentSx.Anchor)
+
 export interface AnchorProps {
     href: string
     content: React.ReactNode
@@ -28,8 +35,8 @@ export const Anchor = (props: AnchorProps): JSX.Element => {
     }
 
     return (
-        <a {...aProps}>
+        <A {...aProps}>
             {content}
-        </a>
+        </A>
     )
 }

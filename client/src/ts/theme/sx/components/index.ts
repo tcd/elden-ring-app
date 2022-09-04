@@ -1,5 +1,6 @@
 export * from "./AboutPage"
 export * from "./AffinityModal"
+export * from "./Anchor"
 export * from "./EquipmentDetail"
 export * from "./EquipmentGrid"
 export * from "./EquipmentMenu"

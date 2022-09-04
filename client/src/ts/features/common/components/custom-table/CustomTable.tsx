@@ -18,9 +18,10 @@ export const CustomTable = <T,>(props: CustomTablePropsPlus<T>): JSX.Element => 
     const {
         rows,
         columns,
+        centerAll,
         ...otherProps
     } = props
-    const validColumns = convertColumns(columns)
+    const validColumns = convertColumns(columns, centerAll)
     return (
         <div className="data-table-wrapper">
             <ReactDataTable
@@ -41,7 +42,7 @@ export const CustomTable = <T,>(props: CustomTablePropsPlus<T>): JSX.Element => 
     )
 }
 
-const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): RdtTableColumn<T>[] => {
+const convertColumns = <T,>(customColumns: CustomTableColumn<T>[], centerAll = false): RdtTableColumn<T>[] => {
     const newColumns: RdtTableColumn<T>[] = []
     for (const customColumn of customColumns) {
         const newColumn: RdtTableColumn<T> = {}
@@ -60,10 +61,14 @@ const convertColumns = <T,>(customColumns: CustomTableColumn<T>[]): RdtTableColu
         if (customColumn.width) {
             newColumn.width = customColumn.width + "px"
         }
-        if (customColumn.align == "center") {
+        if (centerAll) {
             newColumn.center = true
-        } else if (customColumn.align == "right") {
-            newColumn.right = true
+        } else {
+            if (customColumn.align == "center") {
+                newColumn.center = true
+            } else if (customColumn.align == "right") {
+                newColumn.right = true
+            }
         }
         newColumns.push(newColumn)
     }

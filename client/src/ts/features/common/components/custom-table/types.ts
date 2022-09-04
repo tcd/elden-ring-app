@@ -29,6 +29,7 @@ export interface CustomTableColumn<T> {
 interface CustomTableProps<T> {
     rows: T[]
     columns: CustomTableColumn<T>[]
+    centerAll?: boolean
 }
 
 type TablePropsMinus<T> = Omit<
