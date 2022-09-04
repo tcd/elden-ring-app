@@ -79,10 +79,7 @@ const headerTitle: SxProps = {
  */
 const horizontalBorder: SxProps = {
     height: "3px",
-    background: [
-        ThemeVars.gradients.affinityModalHorizontalBorder,
-        ThemeVars.modal.colorBorder,
-    ].join(", "),
+    background: ThemeVars.gradients.affinityModalHorizontalBorder,
 }
 
 /** `.inner-border-wrapper` */
@@ -102,11 +99,12 @@ const innerBorderContent: SxProps = {
 }
 
 const _verticalBorder: SxProps = {
+    content: ThemeVars.ZWSP,
     position: "absolute",
     top: 0,
     height: "100%",
     width: "3px",
-    backgroundColor: ThemeVars.gradients.affinityModalVerticalBorder,
+    background: ThemeVars.gradients.affinityModalVerticalBorder,
 }
 
 /** `.left-border-wrapper` */
