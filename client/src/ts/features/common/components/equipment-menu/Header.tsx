@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 
 import { isBlank } from "@app/util"
 import { ComponentSx } from "@app/theme"
+
 import type { EquipmentMenuProps } from "./types"
 
 export const Header = ({ title, description }: EquipmentMenuProps): JSX.Element => {

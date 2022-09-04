@@ -2,7 +2,8 @@ import { forwardRef } from "react"
 import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { EquipmentMenuProps } from "./types"
+
+import type { EquipmentMenuProps } from "./types"
 import { Header } from "./Header"
 
 export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentMenuProps, ref) {
