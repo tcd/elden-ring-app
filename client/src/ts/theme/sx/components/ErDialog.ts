@@ -46,7 +46,6 @@ const contentSx: SxProps = {
     paddingTop: "25px",
     paddingBottom: "25px",
     display: "flex",
-    flexDirection: "",
     justifyContent: "space-around",
     // tablet or smaller
     [Theme.breakpoints.down("md")]: {
