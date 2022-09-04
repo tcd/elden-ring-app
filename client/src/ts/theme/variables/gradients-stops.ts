@@ -79,6 +79,10 @@ const modalTopBottomBorder: Css.ColorStop[] = [
     { percentage: "100%", transparency: 0.95 },
 ]
 
+/**
+ * `.er__affinityModal > $top-bottom-border-stops`
+ * `.er__affinityModal > $inner-border-stops`
+ */
 const modalInnerBorder1: Css.ColorStop[] = [
     { percentage:   "0%", transparency: 1.0 },
     { percentage:  "10%", transparency: 0.0 },
@@ -96,6 +100,9 @@ const modalInnerBorder2: Css.ColorStop[] = [
 // Affinity Modal
 // --------------------------------------
 
+/**
+ * `.er__affinityModal > $body-stops`
+ */
 const affinityModalBody: Css.ColorStop[]  = [
     // { percentage:   "0%", transparency: 0.60 },
     // { percentage:   "1%", transparency: 0.65 },
@@ -115,6 +122,9 @@ const affinityModalBody: Css.ColorStop[]  = [
     // { percentage: "100%", transparency: 0.60 },
 ]
 
+/**
+ * - `.er__affinityModal > $affinity-item-stops`
+ */
 const affinityModalItem: Css.ColorStop[]  = [
     { percentage:   "0%", transparency: 0.10 },
     { percentage:  "10%", transparency: 0.25 },

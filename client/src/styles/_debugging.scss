@@ -1,0 +1,59 @@
+/* ========================================================================== */
+/* debugging */
+/* ========================================================================== */
+
+@function hsl-str($color) {
+    @return unquote("hsl(#{hue($color)}, #{saturation($color)}, #{lightness($color)})");
+}
+
+$modal-color-bg:     #26221C; // have this in SX
+
+$affinity-item-color-bg:        lighten($modal-color-bg,  5%);
+$affinity-item-color-active-bg: lighten($modal-color-bg, 15%);
+
+// :root {
+//     --modal-color-bg: #{$modal-color-bg};
+//     --affinity-item-color-bg: #{$affinity-item-color-bg};
+//     --affinity-item-color-active-bg: #{$affinity-item-color-active-bg};
+// }
+
+:root {
+    --hex-modal-color-bg:                #{$modal-color-bg};
+    --hex-affinity-item-color-bg:        #{$affinity-item-color-bg};
+    --hex-affinity-item-color-active-bg: #{$affinity-item-color-active-bg};
+
+    --hsl-modal-color-bg:                #{hsl-str($modal-color-bg)};
+    --hsl-affinity-item-color-bg:        #{hsl-str($affinity-item-color-bg)};
+    --hsl-affinity-item-color-active-bg: #{hsl-str($affinity-item-color-active-bg)};
+}
+
+.modal-color-bg                { color: $modal-color-bg; }
+.affinity-item-color-bg        { color: $affinity-item-color-bg;        }
+.affinity-item-color-active-bg { color: $affinity-item-color-active-bg; }
+
+
+/* ========================================================================== */
+/* compiled */
+/* ========================================================================== */
+
+li.er__affinityModal__option {
+    background: linear-gradient(
+        90deg,
+        #352f271a   0%,
+        #352f2740  10%,
+        #352f27bf  50%,
+        #352f2740  90%,
+        #352f271a 100%
+    );
+}
+
+li.er__affinityModal__option.active {
+    background: linear-gradient(
+        90deg,
+        #52493c1a   0%,
+        #52493c40  10%,
+        #52493cbf  50%,
+        #52493c40  90%,
+        #52493c1a 100%
+    );
+}

@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell, getImageSrc } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-// import { AffinityModal } from "@app/features/weapons/components/affinity-modal"
-import { AffinityModal } from "@app/features/weapons/components"
 import { EquipmentMenu } from "@app/shared"
+
+import { AffinityModal } from "../affinity-modal"
 
 export const WeaponSkillMenuGrid = (_props: unknown): JSX.Element => {
 

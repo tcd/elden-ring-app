@@ -85,6 +85,7 @@ export const layout = <const>{
     header: {
         height: "86px",
         imageSize: "55px",
+        /** vertical margins */
         margins: {
             xs: "5px",
             sm: "10px",
@@ -104,16 +105,6 @@ export const layout = <const>{
     },
 }
 
-// // ----------------------------------------------------------------------------
-// // Mobile Layout
-// // ----------------------------------------------------------------------------
-
-// export const mobileHeader = <const>{
-//     height: "86px",
-//     contentHeight: "86px",
-//     topMargin: "5px",
-// }
-
 // ----------------------------------------------------------------------------
 // Button
 // ----------------------------------------------------------------------------
@@ -125,13 +116,6 @@ export const button = <const>{
     horizontalPadding: "75px",
     verticalPadding: "5px",
 }
-
-// // ----------------------------------------------------------------------------
-// // Navbar
-// // ----------------------------------------------------------------------------
-
-// /** 48px / 56px / 64px */
-// export const navbarHeight = "48px"
 
 // ----------------------------------------------------------------------------
 // Tables
@@ -152,6 +136,7 @@ export const dataTable = <const>{
     borderRadius: "0.25rem !important",
     borderColor: "#515151",
 }
+
 // ----------------------------------------------------------------------------
 // Modal
 // ----------------------------------------------------------------------------
@@ -167,16 +152,30 @@ export const modal = <const>{
     ],
 }
 
+export const debugging = {
+    hex: {
+        modalColorBg:  modal.colorBg,
+        itemBg:        Color(modal.colorBg).lighten(.05).hexa(),
+        itemActiveBg:  Color(modal.colorBg).lighten(.15).hexa(),
+    },
+    hsl: {
+        modalColorBg:  Color(modal.colorBg).hsl().string(),
+        itemBg:        Color(modal.colorBg).lighten(.05).hsl().string(),
+        itemActiveBg:  Color(modal.colorBg).lighten(.15).hsl().string(),
+    },
+}
+
 export const affinityModal = <const>{
     option: {
         fontSize: "16px",
         horizontalPadding: "16px",
         verticalPadding: "6px",
     },
-    item: {
-        colorBg: Color(modal.colorBg).lighten(.05).hexa(), // affinity-item-color-bg
-        colorActiveBg: Color(modal.colorBg).lighten(.15).hexa(), // affinity-item-color-active-bg
-    },
+    // // FIXME: incorrect color conversion
+    // item: {
+    //     colorBg: Color(modal.colorBg).lighten(.05).hexa(),
+    //     colorActiveBg: Color(modal.colorBg).lighten(.15).hexa(),
+    // },
 }
 
 // ----------------------------------------------------------------------------
@@ -191,7 +190,6 @@ export const contextMenu = <const>{
         colorBgActive: Color(modal.colorBg).lighten(0.31).hexa(),
     },
 }
-
 
 // ----------------------------------------------------------------------------
 // You Died

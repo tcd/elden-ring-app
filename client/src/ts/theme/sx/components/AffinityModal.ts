@@ -13,6 +13,28 @@ import {
 //     position: "relative",
 // }
 
+const itemGradient = `
+    linear-gradient(
+        90deg,
+        #352f271a   0%,
+        #352f2740  10%,
+        #352f27bf  50%,
+        #352f2740  90%,
+        #352f271a 100%
+    )
+`.replace(/\n/ig, "").replace(/\s+/ig, " ")
+
+const itemActiveGradient = `
+    linear-gradient(
+        90deg,
+        #52493c1a   0%,
+        #52493c40  10%,
+        #52493cbf  50%,
+        #52493c40  90%,
+        #52493c1a 100%
+    )
+`.replace(/\n/ig, "").replace(/\s+/ig, " ")
+
 // =============================================================================
 // Root
 // =============================================================================
@@ -44,10 +66,12 @@ const modalSx: SxProps = {
     // minWidth: "45%",
     // minHeight: "50%",
     position: "relative",
+
     display: "flex",
     flexDirection: "column",
     alignItems: "stretch",
     justifyContent: "stretch",
+
     backgroundColor: ThemeVars.modal.colorBg,
     background: ThemeVars.gradients.affinityModalBody,
 }
@@ -138,15 +162,15 @@ const optionsRoot: SxProps = {
  * - `li.er__affinityModal__option.active`
  */
 const _optionActive: SxProps = {
-    background: ThemeVars.gradients.affinityModalItemActive,
     cursor: "pointer",
+    background: itemActiveGradient,
 }
 
 /** `li.er__affinityModal__option` */
 const option: SxProps = {
     ...pointerOnHoverChildren,
 
-    background: ThemeVars.gradients.affinityModalItem,
+    background: itemGradient,
 
     height: "25px",
     mx: ThemeVars.affinityModal.option.horizontalPadding,
