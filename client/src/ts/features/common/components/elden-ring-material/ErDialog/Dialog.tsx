@@ -1,13 +1,11 @@
 import { forwardRef } from "react"
-import { Box, styled } from "@mui/material"
-import type { BoxProps } from "@mui/material"
+import { Box } from "@mui/material"
 
+import { ComponentSx } from "@app/theme"
 import { ErButton } from "@app/shared"
-import { ErDialogProps } from "./types"
-import { Content } from "./Content"
-import * as Styles from "./styles"
 
-const StyledDialog = styled(Box)<BoxProps>(({ theme }) => Styles.dialogStyles(theme))
+import type { ErDialogProps } from "./types"
+import { Content } from "./Content"
 
 export const Dialog = forwardRef<HTMLDivElement, ErDialogProps>(function Dialog(props, ref) {
 
@@ -24,11 +22,11 @@ export const Dialog = forwardRef<HTMLDivElement, ErDialogProps>(function Dialog(
     })
 
     return (
-        <StyledDialog ref={ref}>
+        <Box ref={ref} sx={ComponentSx.ErDialog.dialogSx}>
 
-            <Box sx={Styles.borderSx} />
+            <Box sx={ComponentSx.ErDialog.borderSx} />
 
-            <Box component="header" sx={Styles.headerSx}>
+            <Box component="header" sx={ComponentSx.ErDialog.headerSx}>
                 {props.title}
             </Box>
 
@@ -36,8 +34,8 @@ export const Dialog = forwardRef<HTMLDivElement, ErDialogProps>(function Dialog(
                 {$options}
             </Content>
 
-            <Box sx={Styles.borderSx} />
+            <Box sx={ComponentSx.ErDialog.borderSx} />
 
-        </StyledDialog>
+        </Box>
     )
 })
