@@ -10,45 +10,29 @@ import {
 
 import { pointerOnHover } from "../../mixins"
 
-const HEADER_HEIGHT = "86px"
-const HEADER_MARGINS = {
-    xs: "5px",
-    sm: "10px",
-    md: "15px",
-}
-
 /** `#er__appHeader__root` */
 const root: SxProps = {
     width: "100%",
-    height: HEADER_HEIGHT,
+    height: ThemeVars.layout.header.height,
     flexShrink: 0,
     alignSelf: "flex-start",
     justifySelf: "flex-start",
     p: 0,
     m: 0,
-    // marginTop: {
-    //     xs: "5px",
-    //     sm: "10px",
-    //     md: "15px",
-    // },
+    // marginTop: ThemeVars.layout.header.margins,
     // position: "relative",
     display: "flex",
 }
 
 /** `#er__appHeader__background` */
 const shared: SxProps = {
-
     position: "absolute",
     top: 0,
     left: 0,
 
     width: "100%",
-    height: HEADER_HEIGHT,
-    marginTop: {
-        xs: "5px",
-        sm: "10px",
-        // md: "15px",
-    },
+    height: ThemeVars.layout.header.height,
+    marginTop: ThemeVars.layout.header.margins,
 }
 
 /** `#er__appHeader__background` */
@@ -79,8 +63,8 @@ const content: SxProps = {
 const icon: SxProps = {
     ...pointerOnHover,
 
-    width: ThemeVars.layout.headerImageSize,
-    height: ThemeVars.layout.headerImageSize,
+    width: ThemeVars.layout.header.imageSize,
+    height: ThemeVars.layout.header.imageSize,
 
     marginLeft:  { xs: "35px", md: "40px" },
     marginRight: { xs: "20px", md: "15px" },

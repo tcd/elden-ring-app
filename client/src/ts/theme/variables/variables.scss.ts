@@ -82,7 +82,18 @@ export const typography = <const>{
 // ----------------------------------------------------------------------------
 
 export const layout = <const>{
-    headerImageSize: "55px",
+    header: {
+        height: "86px",
+        imageSize: "55px",
+        margins: {
+            xs: "5px",
+            sm: "10px",
+            // md: "15px",
+        },
+    },
+    footer: {
+
+    },
     sideNav: {
         // colorBg: "#35352f",
         colorBg: "#36342f",
