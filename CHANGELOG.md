@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 
 ## [Unreleased]
+
+
+## [0.8.0] - 2022-09-03
 ### Added
 - Add `CharacterStatus` feature
 - Add initial audio features
@@ -14,6 +17,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 - Remove dependencies:
     - `@mdi/react`
 ### Fixed
+- Major style fixes.
 - Update mobile dialog styles
 - Remove console.log statement in viewport context
 
