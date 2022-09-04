@@ -3,10 +3,8 @@ import Color from "color"
 import { rgba } from "../helpers"
 
 export const unsortedColors = <const>{
-    // "offWhite": "#636155",
-    "offWhite":  "#ACAB94",
-    /** Hover Gold */
-    "equipment-slot-overlay-color": "#B6AD84",
+    // offWhite: "#636155",
+    offWhite:  "#ACAB95",
     EldenRingColor: {
         // menuBg: "#292927",
         menuBg: "#201F19",
@@ -17,7 +15,6 @@ export const unsortedColors = <const>{
     gold: "#C9BBA1", // ECard
     // $black: "#2A2923",
     // $erColors: {
-    //     offwhite: "#636155",
     //     gray: "#221e19",
     //     transparentGray: "rgba(#221e19, 0.85)",
     // },
@@ -64,7 +61,6 @@ export const colorSystem = <const>{
 
 // ----------------------------------------------------------------------------
 // Body
-//
 // ----------------------------------------------------------------------------
 
 /** Settings for the `<body>` element. */
@@ -97,15 +93,15 @@ export const layout = <const>{
     },
 }
 
-// ----------------------------------------------------------------------------
-// Mobile Layout
-// ----------------------------------------------------------------------------
+// // ----------------------------------------------------------------------------
+// // Mobile Layout
+// // ----------------------------------------------------------------------------
 
-export const mobileHeader = <const>{
-    height: "86px",
-    contentHeight: "86px",
-    topMargin: "5px",
-}
+// export const mobileHeader = <const>{
+//     height: "86px",
+//     contentHeight: "86px",
+//     topMargin: "5px",
+// }
 
 // ----------------------------------------------------------------------------
 // Button
@@ -119,12 +115,12 @@ export const button = <const>{
     verticalPadding: "5px",
 }
 
-// ----------------------------------------------------------------------------
-// Navbar
-// ----------------------------------------------------------------------------
+// // ----------------------------------------------------------------------------
+// // Navbar
+// // ----------------------------------------------------------------------------
 
-/** 48px / 56px / 64px */
-export const navbarHeight = "48px"
+// /** 48px / 56px / 64px */
+// export const navbarHeight = "48px"
 
 // ----------------------------------------------------------------------------
 // Tables
@@ -221,7 +217,6 @@ const equipmentDetailPrimaryImage = <const>{
 const equipmentDetailSecondaryImage = <const>{
     size: (equipmentDetailPrimaryImage.size / 2),
     mobileSize: (equipmentDetailPrimaryImage.mobileSize / 2),
-
 }
 
 export const equipmentDetail = <const>{
@@ -235,7 +230,6 @@ export const equipmentDetail = <const>{
 
 /** Equipment Grid / Equipment Slots */
 export const equipmentSlots = <const>{
-    "equipment-slot-overlay-color": "#B6AD84",
     "equipment-menu-horizontal-margin": "10%",
     "equipment-grid-cell-width":  "150px",
     "equipment-grid-cell-height": "170px",
