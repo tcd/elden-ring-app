@@ -13,27 +13,38 @@ import {
 //     position: "relative",
 // }
 
-const itemGradient = `
-    linear-gradient(
-        90deg,
-        #352f271a   0%,
-        #352f2740  10%,
-        #352f27bf  50%,
-        #352f2740  90%,
-        #352f271a 100%
-    )
-`.replace(/\n/ig, "").replace(/\s+/ig, " ")
 
-const itemActiveGradient = `
-    linear-gradient(
-        90deg,
-        #52493c1a   0%,
-        #52493c40  10%,
-        #52493cbf  50%,
-        #52493c40  90%,
-        #52493c1a 100%
-    )
-`.replace(/\n/ig, "").replace(/\s+/ig, " ")
+/**
+ * Couldn't recreate the SASS calculations for this in JS.
+ *
+ * ```css
+ * linear-gradient(
+ *     90deg,
+ *     #352f271a   0%,
+ *     #352f2740  10%,
+ *     #352f27bf  50%,
+ *     #352f2740  90%,
+ *     #352f271a 100%
+ * )
+ * ```
+ */
+const itemGradient = "linear-gradient(90deg, #352f271a 0%, #352f2740 10%, #352f27bf 50%, #352f2740 90%, #352f271a 100%)"
+
+/**
+ * Couldn't recreate the SASS calculations for this in JS.
+ *
+ * ```css
+ * linear-gradient(
+ *      90deg,
+ *      #52493c1a   0%,
+ *      #52493c40  10%,
+ *      #52493cbf  50%,
+ *      #52493c40  90%,
+ *      #52493c1a 100%
+ * );
+ * ```
+ */
+const itemActiveGradient = "linear-gradient(90deg, #52493c1a 0%, #52493c40 10%, #52493cbf 50%, #52493c40 90%, #52493c1a 100%)"
 
 // =============================================================================
 // Root
