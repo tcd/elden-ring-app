@@ -3,6 +3,8 @@ import type { BoxProps } from "@mui/material"
 import { Box } from "@mui/material"
 // import BrokenImageIcon from "@mui/icons-material/BrokenImage"
 
+
+import { imageFluid } from "@app/theme"
 import { ErBlank } from "@app/shared"
 
 type Omissions =
@@ -14,6 +16,7 @@ type Omissions =
 
 export type MuiImgProps = Omit<BoxProps<"img">, Omissions> & {
     fallbackComponent?: React.ReactNode
+    responsive?: boolean
 }
 
 /**
@@ -25,7 +28,7 @@ export const MuiImg = (props: MuiImgProps): JSX.Element => {
 
     const handleError = (_event: React.SyntheticEvent<HTMLImageElement, Event>) => {
         setBroken(true)
-        debugger
+        // debugger
     }
     const handleLoad  = (_event: React.SyntheticEvent<HTMLImageElement, Event>) => {
         setBroken(false)
@@ -38,12 +41,27 @@ export const MuiImg = (props: MuiImgProps): JSX.Element => {
         return <ErBlank />
     }
 
+    let {
+        sx = {},
+        responsive = false,
+        ...otherProps
+    } = props
+
+    if (responsive) {
+        // @ts-ignore: next-line
+        sx = {
+            ...sx,
+            ...imageFluid,
+        }
+    }
+
     return (
         <Box
             component="img"
             onError={handleError}
             onLoad={handleLoad}
-            {...props}
+            sx={sx}
+            {...otherProps}
         />
     )
 }

@@ -1,12 +1,6 @@
-import {
-    ReactNode,
-    AnchorHTMLAttributes,
-    DetailedHTMLProps,
-} from "react"
-
 export interface AnchorProps {
     href: string
-    content: ReactNode
+    content: React.ReactNode
     newTab?: false
 }
 
@@ -27,7 +21,7 @@ export const Anchor = (props: AnchorProps): JSX.Element => {
         newTab,
     }= { ...defaultProps, ...props }
 
-    const aProps: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> = {
+    const aProps: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> = {
         href: href,
         target: newTab ? "_blank" : undefined,
         rel: "noopener noreferrer",
