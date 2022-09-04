@@ -4,9 +4,14 @@ import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
-import { MainBuilderMenu } from "@app/features"
+import {
+    ErPage,
+    CharacterStatus,
+} from "@app/features"
 
-export const BuilderPage = (): JSX.Element => {
+import { LevelUpMenu } from "../LevelUpMenu"
+
+export const BuilderPage = (_props: unknown): JSX.Element => {
 
     const navigate = useNavigate()
 
@@ -18,5 +23,14 @@ export const BuilderPage = (): JSX.Element => {
         }
     }, [startingClassName, navigate])
 
-    return <MainBuilderMenu />
+    return (
+        <ErPage pageName="builder" id="er__builder__root" sx={{ width: "90vw" }}>
+            <div id="er__builder__body">
+                <LevelUpMenu />
+                <div id="er__builder__characterStatus">
+                    <CharacterStatus />
+                </div>
+            </div>
+        </ErPage>
+    )
 }
