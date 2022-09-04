@@ -1,6 +1,4 @@
-// import { Container } from "@mui/material"
 import Grid from "@mui/material/Unstable_Grid2"
-// import { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
 
 import { ComponentSx } from "@app/theme"
 import { CharacterStatus } from "@app/features/character-status"
