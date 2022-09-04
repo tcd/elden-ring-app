@@ -17,7 +17,7 @@ export const QuickItemDetail = (_props: unknown): JSX.Element => {
                 <p>-</p>
             </EquipmentDetailFullCard>
 
-            <AttributeScaling />
+            {/* <AttributeScaling /> */}
 
         </EquipmentDetail>
     )
