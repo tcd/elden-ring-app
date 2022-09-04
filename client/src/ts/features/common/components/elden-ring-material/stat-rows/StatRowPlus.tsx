@@ -2,12 +2,14 @@ import { Box } from "@mui/material"
 
 import { MouseOverPopover } from "@app/shared"
 import { ComponentSx } from "@app/theme"
+
 import { StatColumn } from "./StatColumn"
 import type { StatRowPlusProps } from "./types"
 
 const styles = ComponentSx.StatRow.plus
 
 const defaultProps: Partial<StatRowPlusProps> = {
+    sx: styles.row,
     divider: "/",
     divider_color: "default",
     value_1_color: "default",
@@ -19,7 +21,7 @@ const defaultProps: Partial<StatRowPlusProps> = {
 
 export const StatRowPlus = (props: StatRowPlusProps): JSX.Element => {
 
-    props = { ...defaultProps, ...props }
+    props = { ...defaultProps, ...props, ...{ sx: { ...defaultProps.sx, ...(props?.sx ?? {}) } } }
 
     if (props?.description) {
         return (
@@ -38,7 +40,7 @@ const _StatRowPlus = (props: StatRowPlusProps): JSX.Element => {
     props = { ...defaultProps, ...props }
 
     return (
-        <Box component={props.component} sx={styles.row}>
+        <Box component={props.component} sx={props.sx}>
             <StatColumn sx={styles.col1} value={props.title}                               />
             <StatColumn sx={styles.col2} value={props.value_1} color={props.value_1_color} />
             <StatColumn sx={styles.col3} value={props.divider} color={props.divider_color} />

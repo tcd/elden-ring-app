@@ -28,11 +28,7 @@ export const StartingClassPage = (_props: unknown): JSX.Element => {
     }, [navigate, lastMainPage, shouldRedirect])
 
     return (
-        <ErPage
-            pageName="starting-class"
-            sx={ComponentSx.StartingClassPage.root}
-            className="er__startingClass"
-        >
+        <ErPage pageName="starting-class" sx={ComponentSx.StartingClassPage.root}>
             <ConfirmationDialog />
             <BigBorder />
             <StartingClassMenu />

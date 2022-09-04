@@ -1,6 +1,7 @@
 import type { SxProps } from "@mui/material"
 
-import { ThemeVars } from "@app/theme"
+import { getImageSrcManual } from "@app/util"
+import { ThemeVars, cssUrl } from "@app/theme"
 
 import { pointerOnHover } from "../../mixins"
 
@@ -18,10 +19,8 @@ const item: SxProps = {
     backgroundSize:     "contain",
     backgroundPosition: "center",
 
-    marginTop:    "0px",
-    marginBottom: "0px",
-    paddingTop:    "0px",
-    paddingBottom: "0px",
+    my: "0px",
+    py: "0px",
     backgroundColor: "#1f1c16",
     border: "3px solid #312d26",
     ...pointerOnHover,
@@ -29,14 +28,17 @@ const item: SxProps = {
 
 /** `.er__startingClass__menu__optionContent` */
 const content: SxProps = {
+    zIndex: ThemeVars.zIndex.startingClassContent,
+    position: "relative",
+
     width:  "100%",
     height: "100%",
+
     display: "flex",
     flexDirection: "column",
     flexWrap: "nowrap",
     alignItems: "center",
     justifyContent: "flex-end",
-    position: "relative",
 
     // .er__statRow__column span { font-size: 1.25rem; }
 }
@@ -46,41 +48,65 @@ const attributes: SxProps = {
     width: "50%",
 }
 
+/** `ul.er__startingClass__menu__option__attributes` */
+const attributeStatRow: SxProps = {
+    "& span": { fontSize: "1.25rem" },
+}
+
+// =============================================================================
+// Equipment
+// =============================================================================
+
 /** `ul.er__startingClass__menu__option__equipment` */
 const equipmentRoot: SxProps = {
     width: "50%",
+    // marginTop:    "10px",
+    marginBottom: "10px",
+
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    // marginTop:    "10px",
-    marginBottom: "10px",
 }
 
 /** `ul.er__startingClass__menu__option__equipment > li` */
 const equipmentItem: SxProps = {
+
     width:  "50px",
     height: "50px",
+
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    "& img": {
-        padding: "10px",
-    },
+
+    backgroundImage: cssUrl(getImageSrcManual("ui/equipment-menu/empty", "128")),
 }
+
+/** `ul.er__startingClass__menu__option__equipment > li > img` */
+const equipmentImage: SxProps = {
+    padding: "10px",
+}
+
+// =============================================================================
+// Title
+// =============================================================================
 
 /** `.er__startingClass__menu__option__title` */
 const optionTitle: SxProps = {
+    position: "relative",
+
     width: "50%",
-    paddingTop:    ThemeVars.startingClass.optionTitleBorderHeight,
-    paddingBottom: ThemeVars.startingClass.optionTitleBorderHeight,
+    py: ThemeVars.startingClass.optionTitleBorderHeight,
+    // marginBottom: "80px",
     marginBottom: "20px",
     backgroundColor: "#201f1a",
+
     textAlign: "center",
+
     display: "flex",
     flexDirection: "column",
     flexWrap: "nowrap",
     justifyContent: "center",
-    position: "relative",
+
     background: ThemeVars.gradients.startingClassTitle,
 
     "& span": {
@@ -108,6 +134,10 @@ const optionTitleBottomBorder: SxProps = {
     ..._optionTitleBorderShared,
     bottom: 0,
 }
+
+// =============================================================================
+// Layers
+// =============================================================================
 
 /**
  * - `.er__startingClass__menu__optionHoverOverlay`
@@ -146,8 +176,10 @@ export const Options = {
     item,
     content,
     attributes,
+    attributeStatRow,
     equipmentRoot,
     equipmentItem,
+    equipmentImage,
     title: optionTitle,
     titleTopBorder: optionTitleTopBorder,
     titleBottomBorder: optionTitleBottomBorder,

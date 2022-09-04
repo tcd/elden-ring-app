@@ -9,6 +9,7 @@ export interface StatColumnProps {
 }
 
 export interface StatRowProps {
+    sx?: SxProps
     title: string
     value: any
     color?: ComparisonColor
@@ -17,6 +18,7 @@ export interface StatRowProps {
 }
 
 export interface StatRowPlusProps {
+    sx?: SxProps
     title: string
     description?: string
     divider?: string
@@ -29,6 +31,7 @@ export interface StatRowPlusProps {
 }
 
 export interface StatRowPlusPlusProps {
+    sx?: SxProps
     title: string
     description?: string
     divider?: string

@@ -2,6 +2,10 @@ import type { SxProps } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
 
+import {
+    pointerOnHover,
+} from "../../mixins"
+
 /**
  * This is meant to be applied to the most top level application component possible.
  *
@@ -55,10 +59,15 @@ const menu: SxProps = {
 const arrowContainer: SxProps = {
     height: "100%",
     width: "100px",
+
     display: "flex",
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
+}
+
+const arrow: SxProps = {
+    ...pointerOnHover,
 }
 
 // -----------------------------------------------------------------------------
@@ -81,6 +90,7 @@ export const StartingClassPage = {
     root,
     menu,
     arrowContainer,
+    arrow,
     borders,
     footer,
 }

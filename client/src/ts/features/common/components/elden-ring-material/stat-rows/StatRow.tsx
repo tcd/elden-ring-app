@@ -9,6 +9,7 @@ import { StatColumn } from "./StatColumn"
 const styles = ComponentSx.StatRow.basic
 
 const defaultProps: Partial<StatRowProps> = {
+    sx: styles.row,
     color: "default",
     component: "li",
 }
@@ -17,7 +18,7 @@ const defaultProps: Partial<StatRowProps> = {
 
 export const StatRow = (props: StatRowProps): JSX.Element => {
 
-    props = { ...defaultProps, ...props }
+    props = { ...defaultProps, ...props, ...{ sx: { ...defaultProps.sx, ...(props?.sx ?? {}) } } }
 
     if (props?.description) {
         return (
@@ -37,7 +38,7 @@ export const StatRow = (props: StatRowProps): JSX.Element => {
 
 const _StatRow = (props: StatRowProps): JSX.Element => {
     return (
-        <Box component={props.component} sx={styles.row}>
+        <Box component={props.component} sx={props.sx}>
             <StatColumn sx={styles.col1} value={props.title}                     />
             <StatColumn sx={styles.col2} value={props.value} color={props.color} />
         </Box>

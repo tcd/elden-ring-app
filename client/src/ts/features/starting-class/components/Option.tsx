@@ -2,12 +2,15 @@ import capitalize from "lodash/capitalize"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { StartingClass, AttributeNames } from "@app/types"
+import type { StartingClass } from "@app/types"
+import { AttributeNames } from "@app/types"
+import { ComponentSx } from "@app/theme"
 import { getImageSrc } from "@app/util"
 import { StatRow } from "@app/shared"
 import { Actions } from "@app/state"
 
 import { Equipment } from "./Equipment"
+import { TitleTopBorder, TitleBottomBorder } from "./borders"
 
 export interface OptionProps {
     sClass: StartingClass
@@ -28,10 +31,8 @@ export const Option = (props: OptionProps): JSX.Element => {
     const imageSrc = getImageSrc("Starting Class", sClass.name, "public")
 
     const sx: SxProps = {
+        ...ComponentSx.StartingClassPage.options.item,
         backgroundImage: `url("${imageSrc}")`,
-        // backgroundSize: "cover",
-        // backgroundRepeat: "no-repeat",
-        // backgroundPosition: "center center",
     }
 
     const attributes = Object.values(AttributeNames).map((attr) => (
@@ -39,6 +40,7 @@ export const Option = (props: OptionProps): JSX.Element => {
             key={attr}
             title={capitalize(attr)}
             value={sClass[attr]}
+            sx={ComponentSx.StartingClassPage.options.attributeStatRow}
         />
     ))
 
@@ -47,6 +49,7 @@ export const Option = (props: OptionProps): JSX.Element => {
             key="level"
             title="Level"
             value={sClass["level"]}
+            sx={ComponentSx.StartingClassPage.options.attributeStatRow}
         />,
     )
 
@@ -57,19 +60,19 @@ export const Option = (props: OptionProps): JSX.Element => {
             sx={sx}
             onClick={handleClick}
         >
-            <div className="er__startingClass__menu__optionOverlay"></div>
-            <div className="er__startingClass__menu__optionHoverOverlay"></div>
-            <div className="er__startingClass__menu__optionContent">
-                <ul className="er__startingClass__menu__option__attributes">
+            <Box sx={ComponentSx.StartingClassPage.options.overlay}/>
+            <Box sx={ComponentSx.StartingClassPage.options.hover}/>
+            <Box sx={ComponentSx.StartingClassPage.options.content}>
+                <Box component="ul" sx={ComponentSx.StartingClassPage.options.attributes}>
                     {attributes}
-                </ul>
+                </Box>
                 <Equipment sClass={sClass} />
-                <div className="er__startingClass__menu__option__title">
-                    <div className="er__startingClass__menu__option__title__topBorder"></div>
+                <Box sx={ComponentSx.StartingClassPage.options.title}>
+                    <TitleTopBorder />
                     <span>{sClass.name}</span>
-                    <div className="er__startingClass__menu__option__title__bottomBorder"></div>
-                </div>
-            </div>
+                    <TitleBottomBorder />
+                </Box>
+            </Box>
         </Box>
     )
 }

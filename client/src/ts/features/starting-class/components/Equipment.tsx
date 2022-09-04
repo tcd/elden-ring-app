@@ -1,19 +1,12 @@
-import { Box, SxProps } from "@mui/material"
+import { Box } from "@mui/material"
 
-import { ComponentSx } from "@app/theme"
 import type { StartingClass } from "@app/types"
-import { getImageSrc, getImageSrcManual } from "@app/util"
+import { getImageSrc } from "@app/util"
+import { ComponentSx } from "@app/theme"
 import { MuiImg } from "@app/shared"
 
 export interface EquipmentProps {
     sClass: StartingClass
-}
-
-const slotSx: SxProps = {
-    backgroundImage: `url("${getImageSrcManual("ui/equipment-menu/empty", "128")}")`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
 }
 
 const weaponProperties  = [ "R1", "R2", "L1", "L2" ]
@@ -29,11 +22,12 @@ export const Equipment = ({ sClass }: EquipmentProps): JSX.Element => {
         if (propertyValue) {
             const src = getImageSrc("Weapon", propertyValue, "128")
             $slots.push(
-                <Box component="li" key={property} sx={slotSx}>
+                <Box component="li" key={property} sx={ComponentSx.StartingClassPage.options.equipmentItem}>
                     <MuiImg
                         src={src}
                         alt={propertyValue}
                         responsive={true}
+                        sx={ComponentSx.StartingClassPage.options.equipmentImage}
                     />
                 </Box>,
             )
@@ -45,11 +39,12 @@ export const Equipment = ({ sClass }: EquipmentProps): JSX.Element => {
     //     if (propertyValue) {
     //         const src = getImageSrc("Armor", propertyValue, "128")
     //         slots.push(
-    //             <Box component="li" key={property} sx={slotSx}>
+    //             <Box component="li" key={property} sx={ComponentSx.StartingClassPage.options.equipmentItem}>
     //                 <MuiImg
     //                     src={src}
     //                     alt={propertyValue}
     //                     responsive={true}
+    //                     sx={ComponentSx.StartingClassPage.options.equipmentImage}
     //                 />
     //             </Box>,
     //         )
@@ -61,26 +56,21 @@ export const Equipment = ({ sClass }: EquipmentProps): JSX.Element => {
         if (propertyValue) {
             const src = getImageSrc("Spell", propertyValue, "128")
             $slots.push(
-                <Box component="li" key={property} sx={slotSx}>
+                <Box component="li" key={property} sx={ComponentSx.StartingClassPage.options.equipmentItem}>
                     <MuiImg
                         src={src}
                         alt={propertyValue}
                         responsive={true}
+                        sx={ComponentSx.StartingClassPage.options.equipmentImage}
                     />
                 </Box>,
             )
         }
     }
 
-    // return (
-    //     <Box component="ul" sx={ComponentSx.StartingClassPage.options.equipmentRoot}>
-    //         {$slots}
-    //     </Box>
-    // )
-
     return (
-        <ul className="er__startingClass__menu__option__equipment">
+        <Box component="ul" sx={ComponentSx.StartingClassPage.options.equipmentRoot}>
             {$slots}
-        </ul>
+        </Box>
     )
 }
