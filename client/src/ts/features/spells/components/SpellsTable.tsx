@@ -7,16 +7,18 @@ import {
     NullableNumber,
     SpellDamageTypes,
     CustomTableColumn,
+    MuiImg,
 } from "@app/shared"
 
 const renderImageCell = (spell: Spell): JSX.Element => {
     return (
+        // FIXME: bootstrap
         <div className="flex-center" style={{ width: "150px", textAlign: "center" }}>
             <div style={{ width: "75px" }}>
-                <img
-                    className="img-fluid"
+                <MuiImg
                     src={spell.image_url}
                     alt="spell"
+                    responsive={true}
                 />
             </div>
         </div>

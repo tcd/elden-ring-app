@@ -1,13 +1,4 @@
-@use "@variables"as var;
-
-.text-capitalize {
-    text-transform: capitalize !important;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
+@use "@variables" as var;
 
 .text-shadow {
     text-shadow: var.$text-shadow-offset var.$text-shadow-offset black

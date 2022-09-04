@@ -7,6 +7,7 @@ import {
     Heading,
     CustomTable,
     CustomTableColumn,
+    MuiImg,
 } from "@app/shared"
 import { getImageSrc } from "@app/util"
 import { Actions, Selectors } from "@app/state"
@@ -15,10 +16,11 @@ const renderImageCell = (armor: Armor) => {
     const imagePath = getImageSrc("Armor", armor.name, "256")
     return (
         <div style={{ width: "75px" }}>
-            <img
-                className="img-fluid my-2"
+            <MuiImg
                 src={imagePath}
                 alt="armor image"
+                responsive={true}
+                sx={{ my: 2 }}
             />
         </div>
     )
@@ -58,6 +60,7 @@ export const ArmorTablePage = (): JSX.Element => {
         dispatch(Actions.Armor.setActiveType({ type: value }))
     }
 
+    // FIXME: bootstrap
     return (
         <div className="container mb-5">
             <div className="row">

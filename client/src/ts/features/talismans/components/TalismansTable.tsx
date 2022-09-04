@@ -6,16 +6,17 @@ import { Selectors } from "@app/state"
 import {
     CustomTable,
     CustomTableColumn,
+    MuiImg,
 } from "@app/shared"
 
 const renderImageCell = (talisman: Talisman) => {
     const imageSrc = getImageSrc("Talisman", talisman.name, "256")
     return (
         <div style={{ width: "75px" }}>
-            <img
-                className="img-fluid"
+            <MuiImg
                 src={imageSrc}
                 alt="talisman"
+                responsive={true}
             />
         </div>
     )

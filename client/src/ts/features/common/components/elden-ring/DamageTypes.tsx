@@ -4,6 +4,8 @@ import {
     Weapon,
 } from "@app/types"
 
+import { MuiImg } from "../MuiImage"
+
 export interface SpellDamageTypesProps {
     spell: Spell
 }
@@ -32,11 +34,12 @@ const damageTypesComponent = (id: number, types: DamageTypePlus[]): JSX.Element 
                 key={key}
                 className="damage-type-icon-wrapper"
             >
-                <img
+                <MuiImg
                     src={imagePath}
                     alt={altText}
                     title={altText}
-                    className="img-fluid damage-type-icon"
+                    responsive={true}
+                    className="damage-type-icon"
                 />
             </div>
         )
@@ -65,6 +68,7 @@ const damageTypesForSpell = (spell: Spell): DamageTypePlus[] => {
     return types
 }
 
+// FIXME: this doesn't apply anymore
 const damageTypesForWeapon = (weapon: Weapon): DamageTypePlus[] => {
     const types: DamageTypePlus[] = []
     if (weapon.attack_physical     > 0) { types.push("Physical")     }

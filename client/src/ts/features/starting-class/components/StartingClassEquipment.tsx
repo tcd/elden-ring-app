@@ -2,6 +2,7 @@ import { Box, SxProps } from "@mui/material"
 
 import { StartingClass } from "@app/types"
 import { getImageSrc, getImageSrcManual } from "@app/util"
+import { MuiImg } from "@app/shared"
 
 export interface StartingClassEquipmentProps {
     sClass: StartingClass
@@ -28,7 +29,11 @@ export const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps):
             const src = getImageSrc("Weapon", propertyValue, "128")
             slots.push(
                 <Box component="li" key={property} sx={slotSx}>
-                    <img src={src} alt={propertyValue} className="img-fluid" />
+                    <MuiImg
+                        src={src}
+                        alt={propertyValue}
+                        responsive={true}
+                    />
                 </Box>,
             )
         }
@@ -40,7 +45,11 @@ export const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps):
     //         const src = getImageSrc("Armor", propertyValue, "128")
     //         slots.push(
     //             <Box component="li" key={property} sx={slotSx}>
-    //                 <img src={src} alt={propertyValue} className="img-fluid" />
+    //                 <MuiImg
+    //                     src={src}
+    //                     alt={propertyValue}
+    //                     responsive={true}
+    //                 />
     //             </Box>,
     //         )
     //     }
@@ -52,7 +61,11 @@ export const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps):
             const src = getImageSrc("Spell", propertyValue, "128")
             slots.push(
                 <Box component="li" key={property} sx={slotSx}>
-                    <img src={src} alt={propertyValue} className="img-fluid" />
+                    <MuiImg
+                        src={src}
+                        alt={propertyValue}
+                        responsive={true}
+                    />
                 </Box>,
             )
         }

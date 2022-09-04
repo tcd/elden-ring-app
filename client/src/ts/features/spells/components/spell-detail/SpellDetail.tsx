@@ -56,7 +56,7 @@ export const SpellDetail = ({ spell }: SpellDetailProps): JSX.Element => {
     //                         <div className="col-1"></div>
     //                         <div className="col er__equipmentDetail__imageColumn">
     //                             <div className="er__equipmentDetail__imageWrapper">
-    //                                 <img className="img-fluid" src={src} alt={spell.name}/>
+    //                                 <img className="img-not-using-bootstrap-anymore-fluid" src={src} alt={spell.name}/>
     //                             </div>
     //                         </div>
     //                     </div>

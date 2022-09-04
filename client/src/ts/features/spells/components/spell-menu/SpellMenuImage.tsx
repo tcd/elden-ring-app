@@ -1,5 +1,6 @@
 import { Attributes, Spell } from "@app/types"
 import { getImageSrc, meetsRequirements } from "@app/util"
+import { MuiImg } from "@app/shared"
 
 export interface SpellMenuImageProps {
     spell: Spell
@@ -15,10 +16,10 @@ export const SpellMenuImage = ({ spell, attributes }: SpellMenuImageProps) => {
     return (
         <div className="er__equipmentMenu__imageWrapper">
             {cantUse}
-            <img
-                className="img-fluid"
+            <MuiImg
                 src={src}
                 alt={spell.name}
+                responsive={true}
             />
         </div>
     )

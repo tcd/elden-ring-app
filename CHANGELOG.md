@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 ### Changed
 - Remove dependencies:
     - `jquery`
+    - `bootstrap`
 - Bump material ui version
 
 

@@ -7,16 +7,17 @@ import {
     WeaponDamageTypes,
     CustomTable,
     CustomTableColumn,
+    MuiImg,
 } from "@app/shared"
 
 const renderImageCell = (weapon: Weapon): JSX.Element => {
     const src = getImageSrc("Weapon", weapon.name, "128")
     return (
         <div style={{ width: "75px" }}>
-            <img
-                className="img-fluid"
+            <MuiImg
                 src={src}
                 alt="weapon"
+                responsive={true}
             />
         </div>
     )
@@ -27,16 +28,17 @@ const renderWeaponSkillCell = (weapon: Weapon) => {
     if (skill?.ash_of_war) {
         const src = getImageSrc("Weapon Skill", skill.name, "128")
         return (
+            // FIXME: bootstrap
             <div className="flex-between">
                 <span className="align-self-center">
                     {skill.name}
                 </span>
                 <div style={{ width: "50px" }}>
-                    <img
-                        className="img-fluid"
+                    <MuiImg
                         src={src}
                         alt={skill.name}
                         title={skill.name}
+                        responsive={true}
                     />
                 </div>
             </div>
