@@ -1,7 +1,7 @@
 // import type { SxProps } from "@mui/material"
 import type { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
 
-// import { ThemeVars } from "@app/theme"
+import { ThemeVars } from "@app/theme"
 
 const container: GridProps = {
     container: true,
@@ -12,9 +12,7 @@ const col1: GridProps = {
     xs: 12,
     sm: 5,
     sx: {
-        mx: {
-            // sm: 1,
-        },
+        height: `calc(100vh - ${ThemeVars.layout.footer.height} - ${ThemeVars.layout.header.height} - 1rem)`,
     },
 }
 

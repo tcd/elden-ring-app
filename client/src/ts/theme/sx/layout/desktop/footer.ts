@@ -51,10 +51,10 @@ const actionName: SxProps = {
 const actionNameSegment: SxProps = {
     my: "0 !important",
     py: "0 !important",
-    ":nth-child(1)": {
+    ":nth-of-type(1)": {
         marginRight: "1px",
     },
-    // ":nth-child(2)": {
+    // ":nth-of-type(2)": {
     //     background: "green",
     // },
 }

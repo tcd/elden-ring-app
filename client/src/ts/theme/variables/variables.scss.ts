@@ -220,7 +220,7 @@ export const startingClass = <const>{
 
 const equipmentDetailPrimaryImage = <const>{
     /** pixels */
-    size: 155,
+    size: 100,
     /** pixels */
     mobileSize: 100,
 }

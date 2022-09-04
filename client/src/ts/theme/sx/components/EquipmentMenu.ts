@@ -2,6 +2,7 @@ import type { SxProps } from "@mui/material"
 
 import {
     ThemeVars,
+    EldenRingMaterialTheme as Theme,
     rgba,
     scrollbar,
 } from "@app/theme"
@@ -16,9 +17,10 @@ import {
 // =============================================================================
 
 /** `.er__equipmentMenu` */
-const topLevel: SxProps = {
+const root: SxProps = {
     marginLeft:  "10%",
     marginRight: "10%",
+    height:      "100%",
 }
 
 // =============================================================================
@@ -26,12 +28,14 @@ const topLevel: SxProps = {
 // =============================================================================
 
 /** `.er__equipmentMenu__gridColumn` */
-const root: SxProps = {
-    height: "75vh",
+const gridRoot: SxProps = {
+    flexShrink: 1,
+    height: `calc(100% - 24px - 0.2em - 18px - 20px)`,
+    // maxHeight: "min(75vh, 700px)",
+    // height: "70vh",
     // height: "80%",
     overflowY: "scroll",
     padding: "20px",
-    marginTop: "25px",
     borderRadius: "5px",
     backgroundColor: rgba(ThemeVars.equipmentMenu.backgroundColor, 0.3).string(),
     ...scrollbar(),
@@ -86,9 +90,9 @@ const imageWrapper: SxProps = {
 // =============================================================================
 
 export const EquipmentMenu = {
-    root: topLevel,
+    root: root,
     grid: {
-        root: root,
+        root: gridRoot,
         divider: divider,
         section: section,
         cell: {
