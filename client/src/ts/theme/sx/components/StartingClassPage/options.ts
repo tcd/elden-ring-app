@@ -2,76 +2,16 @@ import type { SxProps } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
 
-import { pointerOnHover } from "../mixins"
-
-/**
- * This is meant to be applied to the most top level application component possible.
- *
- * When using `.scss`, it was applied to `#root.startingClassPage`.
- */
-const appRoot: SxProps = {
-    backgroundImage: "none !important",
-    // background: ThemeVars.startingClass.bgGradientColorLeft + " !important",
-    background: ThemeVars.gradients.startingClassBackground + " !important",
-}
-
-/** `.er__startingClass` */
-const root: SxProps = {
-    "& ul": {
-        paddingLeft: "0px",
-        listStyle: "none",
-    },
-    height: "100%",
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    flexWrap: "nowrap",
-
-    // FIXME: I really don't think we need all four of these.
-    alignItems:     "stretch",
-    alignContent:   "stretch",
-    justifyItems:   "stretch",
-    justifyContent: "stretch",
-}
-
-/**
- * - `.er__startingClass__topBorder`
- * - `.er__startingClass__bottomBorder`
- */
-const borders: SxProps = {
-    alignSelf: "center",
-    width: "90%",
-    marginTop:    "10px",
-    marginBottom: "10px",
-    height: "3px",
-    background: ThemeVars.gradients.startingClassTopBottomBorder,
-}
-
-/** `#er__startingClass__menu` */
-const menu: SxProps = {
-    flexGrow: 1,
-    display: "flex",
-    flexDirection: "row",
-}
-
-/** `#er__startingClass__menu > .er__startingClass__menu__arrowContainer` */
-const arrowContainer: SxProps = {
-    height: "100%",
-    width: "100px",
-    display: "flex",
-    flexWrap: "nowrap",
-    justifyContent: "center",
-    alignItems: "center",
-}
+import { pointerOnHover } from "../../mixins"
 
 /** `ul#er__startingClass__menu__options` */
-const options: SxProps = {
+const root: SxProps = {
     height: "100%",
     width: "100%",
 }
 
 /** `ul#er__startingClass__menu__options > .er__startingClass__menu__option` */
-const option: SxProps = {
+const item: SxProps = {
     height: "100%",
 
     backgroundRepeat:   "no-repeat",
@@ -88,7 +28,7 @@ const option: SxProps = {
 }
 
 /** `.er__startingClass__menu__optionContent` */
-const optionContent: SxProps = {
+const content: SxProps = {
     width:  "100%",
     height: "100%",
     display: "flex",
@@ -102,12 +42,12 @@ const optionContent: SxProps = {
 }
 
 /** `ul.er__startingClass__menu__option__attributes` */
-const optionAttributes: SxProps = {
+const attributes: SxProps = {
     width: "50%",
 }
 
 /** `ul.er__startingClass__menu__option__equipment` */
-const optionEquipmentRoot: SxProps = {
+const equipmentRoot: SxProps = {
     width: "50%",
     display: "flex",
     flexDirection: "row",
@@ -117,7 +57,7 @@ const optionEquipmentRoot: SxProps = {
 }
 
 /** `ul.er__startingClass__menu__option__equipment > li` */
-const optionEquipmentItem: SxProps = {
+const equipmentItem: SxProps = {
     width:  "50px",
     height: "50px",
     backgroundRepeat: "no-repeat",
@@ -182,14 +122,14 @@ const _optionOverlayShared: SxProps = {
 }
 
 /** `.er__startingClass__menu__optionOverlay` */
-const optionOverlay: SxProps = {
+const overlay: SxProps = {
     ..._optionOverlayShared,
     zIndex: ThemeVars.zIndex.startingClassBackground,
     background: ThemeVars.gradients.startingClassOverlay,
 }
 
 /** `.er__startingClass__menu__optionOverlay` */
-const optionOverlayHover: SxProps = {
+const hover: SxProps = {
     ..._optionOverlayShared,
     zIndex: ThemeVars.zIndex.startingClassHover,
     "&:hover": {
@@ -197,39 +137,20 @@ const optionOverlayHover: SxProps = {
     },
 }
 
-// -----------------------------------------------------------------------------
-// Footer
-// -----------------------------------------------------------------------------
-
-/** `.er__startingClass__footer` */
-const footer: SxProps = {
-    height: "50px",
-    marginLeft:  "100px",
-    marginRight: "100px",
-}
-
 // =============================================================================
 // All Together
 // =============================================================================
 
-export const StartingClassPage = {
-    appRoot,
+export const Options = {
     root,
-    menu,
-    arrowContainer,
-    borders,
-    footer,
-    options: {
-        root: options,
-        item: option,
-        content: optionContent,
-        attributes: optionAttributes,
-        equipmentRoot: optionEquipmentRoot,
-        equipmentItem: optionEquipmentItem,
-        title: optionTitle,
-        titleTopBorder: optionTitleTopBorder,
-        titleBottomBorder: optionTitleBottomBorder,
-        overlay: optionOverlay,
-        hover: optionOverlayHover,
-    },
+    item,
+    content,
+    attributes,
+    equipmentRoot,
+    equipmentItem,
+    title: optionTitle,
+    titleTopBorder: optionTitleTopBorder,
+    titleBottomBorder: optionTitleBottomBorder,
+    overlay,
+    hover,
 }
