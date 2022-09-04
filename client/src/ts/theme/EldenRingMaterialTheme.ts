@@ -1,4 +1,3 @@
-// import { logger } from "@app/util"
 import { createTheme, Components, ThemeOptions } from "@mui/material"
 
 import {
@@ -32,5 +31,4 @@ const options: ThemeOptions = {
  * - [Components](https://mui.com/customization/theme-components/)
  */
 export const EldenRingMaterialTheme = createTheme(options)
-
-// logger.debug(EldenRingMaterialTheme)
+export type IEldenRingMaterialTheme = typeof EldenRingMaterialTheme
