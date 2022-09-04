@@ -1,11 +1,13 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
+import Grid from "@mui/material/Unstable_Grid2/Grid2"
 
 import { isBlank } from "@app/util"
 import { Selectors } from "@app/state"
 import { ErPage } from "@app/shared"
 import { CharacterStatus } from "@app/features/character-status"
+
 import { Overview } from "./Overview"
 import { Attributes } from "./Attributes"
 
@@ -22,25 +24,18 @@ export const LevelUpPage = (_props: unknown): JSX.Element => {
     }, [baseClass, navigate])
 
     return (
-        <ErPage pageName="level-up" className="container-fluid">
-            <div className="row">
-                <div className="col">
-                    <div className="row">
-                        <div className="col">
-                            <Overview />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <Attributes />
-                        </div>
-                    </div>
-                </div>
-                <div className="col"></div>
-                <div className="col">
+        <ErPage pageName="level-up">
+            <Grid container direction="row">
+                <Grid xs sx={{ display: "flex", flexDirection: "column"}}>
+                    <Overview />
+                    <Attributes />
+                </Grid>
+                <Grid xs>
+                </Grid>
+                <Grid xs>
                     <CharacterStatus />
-                </div>
-            </div>
+                </Grid>
+            </Grid>
         </ErPage>
     )
 }

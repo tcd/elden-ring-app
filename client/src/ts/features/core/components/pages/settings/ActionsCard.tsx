@@ -1,15 +1,13 @@
-import { useSelector, useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import { Box, Button, Typography, Paper, List, ListItem, ListItemIcon, ListItemText, Switch, ListItemButton } from "@mui/material"
-import Grid from "@mui/material/Unstable_Grid2"
-import VolumeUpIcon from "@mui/icons-material/VolumeUp"
+import { useSelector, useDispatch } from "react-redux"
+import { Button, List, ListItem, ListItemIcon, ListItemText, ListItemButton } from "@mui/material"
+// import VolumeUpIcon from "@mui/icons-material/VolumeUp"
 import IosShareIcon from "@mui/icons-material/IosShare"
 import RestartAltIcon from "@mui/icons-material/RestartAlt"
 
 import { Actions, Selectors, persistor } from "@app/state"
 import { ErCard } from "@app/shared"
 import { exportJsonToFile } from "@app/util"
-import { useState } from "react"
 
 export const ActionsCard = (_props: unknown): JSX.Element => {
 
@@ -28,7 +26,7 @@ export const ActionsCard = (_props: unknown): JSX.Element => {
     const handleResetClick = async () => {
         await persistor.purge()
         await dispatch(Actions.Core.resetState())
-        navigate("/")
+        navigate("/", { replace: true })
     }
 
     return (
@@ -58,30 +56,5 @@ export const ActionsCard = (_props: unknown): JSX.Element => {
                 </ListItem>
             </List>
         </ErCard>
-    )
-
-    return (
-        <Box className="container">
-            <section>
-                <Typography variant="h5">
-                    Export Data
-                    <br />
-                    <Button
-                        onClick={handleExportClick}
-                    >
-                        Export Build
-                    </Button>
-                </Typography>
-            </section>
-            <section>
-                <Typography variant="h5">
-                    Reset
-                    <br />
-                    <Button onClick={handleResetClick}>
-                        Reset App State
-                    </Button>
-                </Typography>
-            </section>
-        </Box>
     )
 }
