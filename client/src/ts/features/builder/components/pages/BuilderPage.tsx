@@ -7,9 +7,11 @@ import { isBlank } from "@app/util"
 import {
     ErPage,
     CharacterStatus,
+    Attributes,
+    Overview,
 } from "@app/features"
 
-import { LevelUpMenu } from "../LevelUpMenu"
+import { EquipmentSlots } from "../equipment-slots"
 
 export const BuilderPage = (_props: unknown): JSX.Element => {
 
@@ -26,7 +28,15 @@ export const BuilderPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="builder" id="er__builder__root" sx={{ width: "90vw" }}>
             <div id="er__builder__body">
-                <LevelUpMenu />
+                <div id="variable-menu">
+                    <div className="builder-column">
+                        <Overview />
+                        <Attributes />
+                    </div>
+                    <div className="builder-column">
+                        <EquipmentSlots />
+                    </div>
+                </div>
                 <div id="er__builder__characterStatus">
                     <CharacterStatus />
                 </div>

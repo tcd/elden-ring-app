@@ -1,12 +1,12 @@
 import { SideNavItemProps } from "./SideNavItem"
 
 export const sideNavItems: SideNavItemProps[] = [
-    {
-        pageName: "builder",
-        title: "Builder",
-        cloudflareId: "smithing",
-        url: "/builder#grid",
-    },
+    // {
+    //     pageName: "builder",
+    //     title: "Builder",
+    //     cloudflareId: "smithing",
+    //     url: "/builder#grid",
+    // },
     {
         pageName: "equipment",
         title: "Equipment",
