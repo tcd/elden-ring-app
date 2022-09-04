@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 ### Changed
 - Remove dependencies:
     - `jquery`
+- Bump material ui version
 
 
 ## [0.8.0] - 2022-09-03
@@ -16,7 +17,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 - Add `CharacterStatus` feature
 - Add initial audio features
 ### Changed
-- Try out new responsive styles for equipment slot grid.
+- Try out new responsive styles for equipment slot grid
 - Remove dependencies:
     - `@mdi/react`
 ### Fixed
