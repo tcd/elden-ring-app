@@ -5,7 +5,7 @@ import {
     PopoverOrigin,
 } from "@mui/material"
 
-import { EPopoverContent } from "@app/shared"
+import { ErTooltipContent } from "@app/shared"
 
 /**
  * This is the point on the anchor where the popover's anchorEl will attach to.
@@ -80,11 +80,11 @@ export const MouseOverPopover = (props: MouseOverPopoverProps): JSX.Element => {
                 onClose={handlePopoverClose}
                 disableRestoreFocus
             >
-                <EPopoverContent>
+                <ErTooltipContent>
                     <>
                         {props.popoverContent}
                     </>
-                </EPopoverContent>
+                </ErTooltipContent>
             </Popover>
         </>
     )
