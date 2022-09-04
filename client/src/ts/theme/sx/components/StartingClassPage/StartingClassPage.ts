@@ -39,8 +39,7 @@ const root: SxProps = {
 const borders: SxProps = {
     alignSelf: "center",
     width: "90%",
-    marginTop:    "10px",
-    marginBottom: "10px",
+    my: "10px",
     height: "3px",
     background: ThemeVars.gradients.startingClassTopBottomBorder,
 }

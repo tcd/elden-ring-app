@@ -3,10 +3,13 @@ import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
+import { ComponentSx } from "@app/theme"
 import { ErPage } from "@app/shared"
 
-import { StartingClassMenu } from "."
+import { StartingClassMenu } from "./StartingClassMenu"
 import { ConfirmationDialog } from "./ConfirmationDialog"
+import { Footer } from "./Footer"
+import { BigBorder  } from "./borders"
 
 export const StartingClassPage = (_props: unknown): JSX.Element => {
 
@@ -25,16 +28,16 @@ export const StartingClassPage = (_props: unknown): JSX.Element => {
     }, [navigate, lastMainPage, shouldRedirect])
 
     return (
-        <ErPage pageName="starting-class" className="er__startingClass">
+        <ErPage
+            pageName="starting-class"
+            sx={ComponentSx.StartingClassPage.root}
+            className="er__startingClass"
+        >
             <ConfirmationDialog />
-            <div className="er__startingClass__topBorder"></div>
+            <BigBorder />
             <StartingClassMenu />
-            <div className="er__startingClass__bottomBorder"></div>
-            <div className="er__startingClass__footer">
-                <span className="er__startingClass__bottomText">
-                    Select a base for creating your character
-                </span>
-            </div>
+            <BigBorder />
+            <Footer />
         </ErPage>
     )
 }
