@@ -25,7 +25,7 @@ export interface CustomTableColumn<T> {
     align?: ColumnAlignment
     sortable?: boolean
     width?: number
-    renderFunc?: (t: T) => JSX.Element
+    renderCell?: (t: T) => JSX.Element
 }
 
 interface CustomTableProps<T> {

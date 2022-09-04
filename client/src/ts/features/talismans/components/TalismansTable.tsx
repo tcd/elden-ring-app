@@ -22,7 +22,7 @@ const renderImageCell = (talisman: Talisman) => {
 }
 
 const columns: CustomTableColumn<Talisman>[] = [
-    { field: "id",          headerName: "",             sortable: false, width: 200, align: "center", renderFunc: renderImageCell },
+    { field: "id",          headerName: "",             sortable: false, width: 200, align: "center", renderCell: renderImageCell },
     { field: "name",        headerName: "Name",         sortable: true,  width: 250 },
     { field: "weight",      headerName: "Weight",       sortable: false, width: 150, align: "right" },
     { field: "description", headerName: "Description",  sortable: false, width: null },

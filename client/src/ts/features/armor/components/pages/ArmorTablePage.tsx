@@ -26,7 +26,7 @@ const renderImageCell = (armor: Armor) => {
 
 const columns: CustomTableColumn<Armor>[] = [
     // { field: "type",   headerName: "Type",   sortable: true,  width: 100 },
-    { field: "id",     headerName: "",       sortable: false, width: 200, align: "center", renderFunc: renderImageCell },
+    { field: "id",     headerName: "",       sortable: false, width: 200, align: "center", renderCell: renderImageCell },
     { field: "name",   headerName: "Name",   sortable: true,  width: 250                 },
     { field: "weight", headerName: "Weight", sortable: true,  width: 100, align: "right" },
     { field: "poise",  headerName: "Poise",  sortable: true,  width:  90, align: "right" },

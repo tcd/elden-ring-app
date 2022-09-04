@@ -69,11 +69,11 @@ const weapon_skill = (weapon: Weapon): string => weapon.weapon_skill.name
 
 const columns: CustomTableColumn<Weapon>[] = [
     { field: "weapon_type", headerName: "Type",         sortable: true,  width: 200 },
-    { field: "id",          headerName: "",             sortable: false, width: 200, align: "center", renderFunc: renderImageCell },
-    { field: "name",        headerName: "Name",         sortable: true,  width: 200,                  renderFunc: renderNameCell },
-    { field: weapon_skill,  headerName: "Weapon Skill", sortable: true,                               renderFunc: renderWeaponSkillCell },
+    { field: "id",          headerName: "",             sortable: false, width: 200, align: "center", renderCell: renderImageCell },
+    { field: "name",        headerName: "Name",         sortable: true,  width: 200,                  renderCell: renderNameCell },
+    { field: weapon_skill,  headerName: "Weapon Skill", sortable: true,                               renderCell: renderWeaponSkillCell },
     { field: "weight",      headerName: "Weight",       sortable: false, width: 100, align: "right" },
-    { field: "id",          headerName: "Damage Types", sortable: false, renderFunc:                  renderDamageTypesCell },
+    { field: "id",          headerName: "Damage Types", sortable: false, renderCell:                  renderDamageTypesCell },
 ]
 
 export const WeaponsTable = (): JSX.Element => {

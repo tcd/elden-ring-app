@@ -25,14 +25,14 @@ const renderImageCell = (spell: Spell): JSX.Element => {
 
 const columns: CustomTableColumn<Spell>[] = [
     { headerName: "Type",         field: "spell_type",            sortable: true },
-    { headerName: "",             field: "id",                    sortable: false, renderFunc: renderImageCell },
+    { headerName: "",             field: "id",                    sortable: false, renderCell: renderImageCell },
     { headerName: "Name",         field: "name",                  sortable: true, width: 250 },
     { headerName: "FP Cost",      field: "fp_cost",               sortable: true, align: "right" },
     { headerName: "Slots Used",   field: "slots_required",        sortable: true, align: "right" },
-    { headerName: "Int",          field: "required_intelligence", sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_intelligence} /> },
-    { headerName: "Fai",          field: "required_faith",        sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_faith} />        },
-    { headerName: "Arc",          field: "required_arcane",       sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_arcane} />       },
-    { headerName: "Damage Types", field: "id",                    sortable: false, renderFunc: (row) => <SpellDamageTypes spell={row} /> },
+    { headerName: "Int",          field: "required_intelligence", sortable: true, align: "right", renderCell: (row) => <NullableNumber number={row.required_intelligence} /> },
+    { headerName: "Fai",          field: "required_faith",        sortable: true, align: "right", renderCell: (row) => <NullableNumber number={row.required_faith} />        },
+    { headerName: "Arc",          field: "required_arcane",       sortable: true, align: "right", renderCell: (row) => <NullableNumber number={row.required_arcane} />       },
+    { headerName: "Damage Types", field: "id",                    sortable: false,                renderCell: (row) => <SpellDamageTypes spell={row} /> },
 ]
 
 export const SpellsTable = (): JSX.Element => {
