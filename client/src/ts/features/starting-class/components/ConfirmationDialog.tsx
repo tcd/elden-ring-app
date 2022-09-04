@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { ErDialog } from "@app/shared"
 import { Actions, Selectors } from "@app/state"
 
-export const StartingClassConfirmationDialog = (_props: unknown): JSX.Element => {
+export const ConfirmationDialog = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
     // const navigate = useNavigate()

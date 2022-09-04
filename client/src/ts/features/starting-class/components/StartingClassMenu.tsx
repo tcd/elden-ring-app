@@ -1,11 +1,13 @@
-import IconButton from "@mui/material/IconButton"
 import { useKeenSlider } from "keen-slider/react"
+import { Box } from "@mui/material"
+import IconButton from "@mui/material/IconButton"
 
 import type { DeviceSize } from "@app/types"
+import { ComponentSx } from "@app/theme"
 import { STARTING_CLASSES } from "@app/data"
 import { getImageSrcManual, ScreenSize } from "@app/util"
 
-import { StartingClassOption } from "."
+import { Option } from "./Option"
 
 const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
 const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
@@ -41,7 +43,7 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
         ],
     )
 
-    const options = STARTING_CLASSES.map((sClass) => <StartingClassOption key={sClass.name} sClass={sClass} />)
+    const options = STARTING_CLASSES.map((sClass) => <Option key={sClass.name} sClass={sClass} />)
 
     const handleScrollLeft = (): void => {
         slider.current.prev()

@@ -6,15 +6,16 @@ import { StartingClass, AttributeNames } from "@app/types"
 import { getImageSrc } from "@app/util"
 import { StatRow } from "@app/shared"
 import { Actions } from "@app/state"
-import { StartingClassEquipment } from "."
 
-export interface StartingClassOptionProps {
+import { Equipment } from "./Equipment"
+
+export interface OptionProps {
     sClass: StartingClass
     selected?: boolean
     hovering?: boolean
 }
 
-export const StartingClassOption = (props: StartingClassOptionProps): JSX.Element => {
+export const Option = (props: OptionProps): JSX.Element => {
 
     const dispatch = useDispatch()
 
@@ -62,7 +63,7 @@ export const StartingClassOption = (props: StartingClassOptionProps): JSX.Elemen
                 <ul className="er__startingClass__menu__option__attributes">
                     {attributes}
                 </ul>
-                <StartingClassEquipment sClass={sClass} />
+                <Equipment sClass={sClass} />
                 <div className="er__startingClass__menu__option__title">
                     <div className="er__startingClass__menu__option__title__topBorder"></div>
                     <span>{sClass.name}</span>

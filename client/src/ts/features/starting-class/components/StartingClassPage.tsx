@@ -5,7 +5,8 @@ import { useSelector } from "react-redux"
 import { Selectors } from "@app/state"
 import { ErPage } from "@app/shared"
 
-import { StartingClassMenu, StartingClassConfirmationDialog } from "."
+import { StartingClassMenu } from "."
+import { ConfirmationDialog } from "./ConfirmationDialog"
 
 export const StartingClassPage = (_props: unknown): JSX.Element => {
 
@@ -25,7 +26,7 @@ export const StartingClassPage = (_props: unknown): JSX.Element => {
 
     return (
         <ErPage pageName="starting-class" className="er__startingClass">
-            <StartingClassConfirmationDialog />
+            <ConfirmationDialog />
             <div className="er__startingClass__topBorder"></div>
             <StartingClassMenu />
             <div className="er__startingClass__bottomBorder"></div>

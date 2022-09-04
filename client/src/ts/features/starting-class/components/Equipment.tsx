@@ -5,7 +5,7 @@ import type { StartingClass } from "@app/types"
 import { getImageSrc, getImageSrcManual } from "@app/util"
 import { MuiImg } from "@app/shared"
 
-export interface StartingClassEquipmentProps {
+export interface EquipmentProps {
     sClass: StartingClass
 }
 
@@ -20,7 +20,7 @@ const weaponProperties  = [ "R1", "R2", "L1", "L2" ]
 // const armorProperties   = [ "Head", "Chest", "Arms", "Legs"]
 const spellProperties   = [ "Spell1", "Spell2" ]
 
-export const StartingClassEquipment = ({ sClass }: StartingClassEquipmentProps): JSX.Element => {
+export const Equipment = ({ sClass }: EquipmentProps): JSX.Element => {
 
     const $slots: JSX.Element[] = []
 
