@@ -1,4 +1,12 @@
 {
+    "Ignore TypeScript Error/Warning": {
+        "prefix": [
+            "ts-ignore",
+        ],
+        "body": [
+            "// @ts-ignore: next-line",
+        ],
+    },
     "Import from \"@app/\"": {
         "prefix": [
             "@app",
