@@ -26,7 +26,7 @@ export const LevelUpPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="level-up">
             <Grid container direction="row">
-                <Grid xs sx={{ display: "flex", flexDirection: "column"}}>
+                <Grid xs sx={{ display: "flex", flexDirection: "column" }}>
                     <Overview />
                     <Attributes />
                 </Grid>
