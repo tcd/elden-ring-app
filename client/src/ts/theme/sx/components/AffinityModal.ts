@@ -6,55 +6,147 @@ import { ThemeVars } from "@app/theme"
 import {
     textShadow,
     cardSideBorder,
+    pointerOnHover,
+    pointerOnHoverChildren,
 } from "../mixins"
 
-const rootSx: SxProps = {
-    display:       "flex",
+// =============================================================================
+// Root
+// =============================================================================
+
+/**
+ * Same styles as the regular modal.
+ *
+ * - `.er__affinityModal__overlay`
+ * - `.er__modal__overlay`
+ */
+const overlaySx: SxProps = {
+    zIndex: ThemeVars.zIndex.modalBackdrop,
+    outline: "none !important",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: ThemeVars.modal.backdropBg,
+}
+
+/** `.er__affinityModal` */
+const modalSx: SxProps = {
+    outline: "none !important",
+    width: "70%",
+    // minWidth: "45%",
+    // minHeight: "50%",
+    position: "relative",
+    display: "flex",
     flexDirection: "column",
-    flexWrap:      "nowrap",
+    alignItems: "stretch",
+    justifyContent: "stretch",
+    backgroundColor: ThemeVars.modal.colorBg,
+    background: ThemeVars.gradients.affinityModalBody,
 }
 
-const _variables = {
-    "affinityModal-option-font-size": "16px",
-    "affinityModal-option-horizontal-padding": "16px",
-    "affinity-item-color-bg": Color(ThemeVars.modal.colorBg).lighten(.05).hexa(),
-    "affinity-item-color-active-bg": Color(ThemeVars.modal.colorBg).lighten(.15).hexa(),
 
-    "inner-border-1": "#423E35",
-    "inner-border-2": "#4C4A3F",
-    "inner-border-3": "#454139",
-    "top-bottom-border-stops": [
-        { percentage:   "0%", transparency: 1.0 },
-        { percentage:  "10%", transparency: 0.0 },
-        { percentage:  "90%", transparency: 0.0 },
-        { percentage: "100%", transparency: 1.0 },
-    ],
-    "body-stops": [
-        // { percentage:   "0%", transparency: 0.60 },
-        // { percentage:   "1%", transparency: 0.65 },
-        // { percentage:   "2%", transparency: 0.70 },
-        // { percentage:   "3%", transparency: 0.75 },
-        { percentage:   "4%", transparency: 0.80 },
-        { percentage:   "5%", transparency: 0.85 },
-        { percentage:   "6%", transparency: 0.90 },
-        { percentage:  "10%", transparency: 0.95 },
-        { percentage:  "90%", transparency: 0.95 },
-        { percentage:  "94%", transparency: 0.90 },
-        { percentage:  "95%", transparency: 0.85 },
-        { percentage:  "96%", transparency: 0.80 },
-        // { percentage:  "97%", transparency: 0.75 },
-        // { percentage:  "98%", transparency: 0.70 },
-        // { percentage:  "99%", transparency: 0.65 },
-        // { percentage: "100%", transparency: 0.60 },
-    ],
-    "affinity-item-stops": [
-        { percentage:    "0%", transparency: 0.10 },
-        { percentage:   "10%", transparency: 0.25 },
-        { percentage:   "50%", transparency: 0.75 },
-        { percentage:   "90%", transparency: 0.25 },
-        { percentage:  "100%", transparency: 0.10 },
-    ],
+
+// =============================================================================
+// Header
+// =============================================================================
+
+const headerRoot: SxProps = {
+    textAlign: "center",
+    pt: "6px",
+    pb: "3px",
 }
+
+const headerTitle: SxProps = {
+    fontSize: "20px",
+    // lineHeight: "20px",
+    color: ThemeVars.colors.gold.light,
+    ...textShadow,
+}
+
+
+// =============================================================================
+// Borders
+// =============================================================================
+
+// $topBottomBorderStops = modalInnerBorder1
+
+const sideBorderShared: SxProps = {
+    position: "absolute",
+    top: 0,
+    height: "100%",
+    width: "3px",
+    // backgroundColor: "blue",
+}
+
+// =============================================================================
+// Option
+// =============================================================================
+
+/** `ul.er__affinityModal__options` */
+const optionsRoot: SxProps = {
+    marginTop: "10px",
+    paddingLeft: "0px",
+    listStyle: "none",
+    display: "flex",
+    flexFlow: "column nowrap",
+    alignItems: "stretch",
+}
+
+/**
+ * - `li.er__affinityModal__option:hover`
+ * - `li.er__affinityModal__option.active`
+ */
+const optionActive: SxProps = {
+    background: ThemeVars.gradients.affinityModalItemActive,
+    cursor: "pointer",
+}
+
+/** `li.er__affinityModal__option` */
+const option: SxProps = {
+    ...pointerOnHoverChildren,
+
+    background: ThemeVars.gradients.affinityModalItem,
+
+    height: "25px",
+    mx: ThemeVars.affinityModal.option.horizontalPadding,
+    my: ThemeVars.affinityModal.option.verticalPadding,
+
+    display: "flex",
+    flexFlow: "row nowrap",
+    alignItems: "center",
+
+    "&:hover": {
+        ...optionActive,
+    },
+}
+
+/**
+ * - `.er__affinityModal__option__imagePlaceholder`
+ * - `img.er__affinityModal__option__image`
+ */
+const optionImage: SxProps = {
+    width:  "24px",
+    height: "24px",
+}
+
+/** `li.er__affinityModal__option > span` */
+const optionTitle: SxProps = {
+    // ...pointerOnHover, // don't need it here, have it on option root
+    px: "8px",
+    fontSize:   ThemeVars.affinityModal.option.fontSize,
+    lineHeight: ThemeVars.affinityModal.option.fontSize,
+}
+
+// =============================================================================
+// Unsorted
+// =============================================================================
+
+
 
 const _styles: Record<string, SxProps> = {
     "#weapon-skill-grid-menu": {
@@ -98,6 +190,10 @@ const _styles: Record<string, SxProps> = {
         color: ThemeVars.colors.gold.light,
         ...textShadow,
     },
+    "ul.er__affinityModal__options": {},
+    "li.er__affinityModal__option": {
+        ...pointerOnHover,
+    },
 }
 
 // =============================================================================
@@ -105,5 +201,17 @@ const _styles: Record<string, SxProps> = {
 // =============================================================================
 
 export const AffinityModal = {
-    root: rootSx,
+    modal: modalSx,
+    overlay: overlaySx,
+    header: {
+        root: headerRoot,
+        title: headerTitle,
+    },
+    options: {
+        root: optionsRoot,
+        option: option,
+        image: optionImage,
+        title: optionTitle,
+        active: optionActive,
+    },
 }

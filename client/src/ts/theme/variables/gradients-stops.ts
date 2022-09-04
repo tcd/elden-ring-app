@@ -93,6 +93,37 @@ const modalInnerBorder2: Css.ColorStop[] = [
 ]
 
 // --------------------------------------
+// Affinity Modal
+// --------------------------------------
+
+const affinityModalBody: Css.ColorStop[]  = [
+    // { percentage:   "0%", transparency: 0.60 },
+    // { percentage:   "1%", transparency: 0.65 },
+    // { percentage:   "2%", transparency: 0.70 },
+    // { percentage:   "3%", transparency: 0.75 },
+    { percentage:   "4%", transparency: 0.80 },
+    { percentage:   "5%", transparency: 0.85 },
+    { percentage:   "6%", transparency: 0.90 },
+    { percentage:  "10%", transparency: 0.95 },
+    { percentage:  "90%", transparency: 0.95 },
+    { percentage:  "94%", transparency: 0.90 },
+    { percentage:  "95%", transparency: 0.85 },
+    { percentage:  "96%", transparency: 0.80 },
+    // { percentage:  "97%", transparency: 0.75 },
+    // { percentage:  "98%", transparency: 0.70 },
+    // { percentage:  "99%", transparency: 0.65 },
+    // { percentage: "100%", transparency: 0.60 },
+]
+
+const affinityModalItem: Css.ColorStop[]  = [
+    { percentage:   "0%", transparency: 0.10 },
+    { percentage:  "10%", transparency: 0.25 },
+    { percentage:  "50%", transparency: 0.75 },
+    { percentage:  "90%", transparency: 0.25 },
+    { percentage: "100%", transparency: 0.10 },
+]
+
+// --------------------------------------
 // Context Menu
 // --------------------------------------
 
@@ -213,6 +244,9 @@ export const gradientStops = {
     modalTopBottomBorder,
     modalInnerBorder1,
     modalInnerBorder2,
+    // Affinity Modal
+    affinityModalBody,
+    affinityModalItem,
     // Context Menu
     contextMenuItem,
     // You Died

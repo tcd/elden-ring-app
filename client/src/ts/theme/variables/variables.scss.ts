@@ -167,6 +167,18 @@ export const modal = <const>{
     ],
 }
 
+export const affinityModal = <const>{
+    option: {
+        fontSize: "16px",
+        horizontalPadding: "16px",
+        verticalPadding: "6px",
+    },
+    item: {
+        colorBg: Color(modal.colorBg).lighten(.05).hexa(), // affinity-item-color-bg
+        colorActiveBg: Color(modal.colorBg).lighten(.15).hexa(), // affinity-item-color-active-bg
+    },
+}
+
 // ----------------------------------------------------------------------------
 // Context Menu
 // ----------------------------------------------------------------------------

@@ -5,6 +5,7 @@ import {
     equipmentMenu,
     layout,
     modal,
+    affinityModal,
     startingClass,
     youDied,
 } from "./variables.scss"
@@ -21,6 +22,10 @@ export const gradients = <const>{
     //     linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalInnerBorder1 }),
     //     linearGradient({ direction: "90deg",                       stops: gradientStops.modalInnerBorder2 }),
     // ].join(", "),
+    // Affinity Modal
+    affinityModalBody:       linearGradient({ direction: "90deg", color: modal.colorBg,                    stops: gradientStops.affinityModalBody }),
+    affinityModalItem:       linearGradient({ direction: "90deg", color: affinityModal.item.colorBg,       stops: gradientStops.affinityModalItem }),
+    affinityModalItemActive: linearGradient({ direction: "90deg", color: affinityModal.item.colorActiveBg, stops: gradientStops.affinityModalItem }),
     // Context Menu
     /* contextMenu = modalBody */
     contextMenuItem:       linearGradient({ direction: "90deg", color: contextMenu.item.colorBg,       stops: gradientStops.contextMenuItem }),
