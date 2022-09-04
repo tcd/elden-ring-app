@@ -7,7 +7,7 @@ import { Actions, Selectors } from "@app/state"
 import { AffinityModal } from "@app/features/weapons/components"
 import { EquipmentMenu } from "@app/shared"
 
-export const WeaponSkillMenuGrid = (): JSX.Element => {
+export const WeaponSkillMenuGrid = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 

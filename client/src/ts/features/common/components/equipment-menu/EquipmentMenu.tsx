@@ -10,6 +10,7 @@ export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentM
 
     const { children } = props
 
+    // FIXME: may need to move id to the grid component.
     return (
         <Box sx={ComponentSx.EquipmentMenu.root} id={props?.id || undefined}>
             <Header {...props}/>

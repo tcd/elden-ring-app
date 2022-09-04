@@ -5,6 +5,7 @@ import { ThemeVars } from "@app/theme"
 import {
     textShadow,
     pointerOnHoverChildren,
+    invisibleContent,
 } from "../mixins"
 
 // TODO: `#weapon-skill-grid-menu`
@@ -22,11 +23,11 @@ import {
  * - `.er__affinityModal__overlay`
  * - `.er__modal__overlay`
  */
-const overlaySx: SxProps = {
+const overlaySx: React.CSSProperties = {
     zIndex: ThemeVars.zIndex.modalBackdrop,
     outline: "none !important",
     position: "absolute",
-    top: 0,
+    // top: 0,
     left: 0,
     width: "100%",
     height: "100%",
@@ -138,7 +139,7 @@ const optionsRoot: SxProps = {
  * - `li.er__affinityModal__option:hover`
  * - `li.er__affinityModal__option.active`
  */
-const optionActive: SxProps = {
+const _optionActive: SxProps = {
     background: ThemeVars.gradients.affinityModalItemActive,
     cursor: "pointer",
 }
@@ -158,17 +159,24 @@ const option: SxProps = {
     alignItems: "center",
 
     "&:hover": {
-        ...optionActive,
+        ..._optionActive,
+    },
+
+    "&[data-is-selected='true']": {
+        ..._optionActive,
     },
 }
 
-/**
- * - `.er__affinityModal__option__imagePlaceholder`
- * - `img.er__affinityModal__option__image`
- */
+/** `.er__affinityModal__option__image` */
 const optionImage: SxProps = {
     width:  "24px",
     height: "24px",
+}
+
+/** `.er__affinityModal__option__imagePlaceholder` */
+const optionImagePlaceholder: SxProps = {
+    ...optionImage,
+    ...invisibleContent,
 }
 
 /** `li.er__affinityModal__option > span` */
@@ -202,8 +210,8 @@ export const AffinityModal = {
     options: {
         root: optionsRoot,
         option: option,
-        image: optionImage,
         title: optionTitle,
-        active: optionActive,
+        image: optionImage,
+        imagePlaceholder: optionImagePlaceholder,
     },
 }

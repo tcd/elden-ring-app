@@ -1,4 +1,7 @@
-import type { SxProps, Theme as MuiTheme } from "@mui/material"
+import type {
+    SxProps,
+    // Theme as MuiTheme,
+} from "@mui/material"
 
 import {
     ThemeVars,
