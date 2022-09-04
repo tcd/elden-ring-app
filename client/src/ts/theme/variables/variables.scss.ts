@@ -92,7 +92,7 @@ export const layout = <const>{
         },
     },
     footer: {
-
+        height: "40px",
     },
     sideNav: {
         // colorBg: "#35352f",

@@ -1,6 +1,6 @@
 import type { SxProps } from "@mui/material"
 
-// import { ThemeVars } from "@app/theme"
+import { ThemeVars } from "@app/theme"
 
 /** `#er__footer` */
 const root: SxProps = {
@@ -12,6 +12,7 @@ const root: SxProps = {
     justifyContent: "start",
     /* vertical | horizontal */
     padding: "0px 25px",
+
     // padding: "25px",
     // height: "60px",
     // paddingBottom: "10px",
@@ -19,26 +20,43 @@ const root: SxProps = {
     // height: "30px",
     // color: ThemeVars.unsortedColors.EldenRingColor.menuFg,
     // backgroundColor: "#292927",
+
+    height: ThemeVars.layout.footer.height,
 }
+
+// =============================================================================
+// Action Button
+// =============================================================================
 
 const actionRoot: SxProps = {
     display: "flex",
     flexFlow: "row nowrap",
     justifyContent: "flex-end",
+    alignContent: "flex-end",
 }
 
 const actionImage: SxProps = {
-    width: "20px",
+    height: "20px",
 }
 
 const actionName: SxProps = {
-    ml: 1,
+    ml: 0.5,
     padding: 0,
-    verticalAlign: "bottom",
     color: "#d8d8d8",
     "&:hover": {
         color: "inherit",
     },
+}
+
+const actionNameSegment: SxProps = {
+    my: "0 !important",
+    py: "0 !important",
+    ":nth-child(1)": {
+        marginRight: "1px",
+    },
+    // ":nth-child(2)": {
+    //     background: "green",
+    // },
 }
 
 export const footerStyles = {
@@ -47,5 +65,6 @@ export const footerStyles = {
         root: actionRoot,
         image: actionImage,
         name: actionName,
+        nameSegment: actionNameSegment,
     },
 }
