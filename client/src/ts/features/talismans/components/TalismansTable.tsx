@@ -22,10 +22,10 @@ const renderImageCell = (talisman: Talisman) => {
 }
 
 const columns: CustomTableColumn<Talisman>[] = [
-    { field: "id",          header: "",             sortable: false, width: 200, align: "center", renderFunc: renderImageCell },
-    { field: "name",        header: "Name",         sortable: true,  width: 250 },
-    { field: "weight",      header: "Weight",       sortable: false, width: 150, align: "right" },
-    { field: "description", header: "Description",  sortable: false, width: null },
+    { field: "id",          headerName: "",             sortable: false, width: 200, align: "center", renderFunc: renderImageCell },
+    { field: "name",        headerName: "Name",         sortable: true,  width: 250 },
+    { field: "weight",      headerName: "Weight",       sortable: false, width: 150, align: "right" },
+    { field: "description", headerName: "Description",  sortable: false, width: null },
 ]
 
 export const TalismansTable = (): JSX.Element => {

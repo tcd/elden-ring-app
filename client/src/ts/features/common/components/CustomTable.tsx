@@ -21,7 +21,7 @@ export type ColumnAlignment =
 
 export interface CustomTableColumn<T> {
     field: Field<T>
-    header: string
+    headerName: string
     align?: ColumnAlignment
     sortable?: boolean
     width?: number

@@ -24,15 +24,15 @@ const renderImageCell = (spell: Spell): JSX.Element => {
 }
 
 const columns: CustomTableColumn<Spell>[] = [
-    { header: "Type",         field: "spell_type",            sortable: true },
-    { header: "",             field: "id",                    sortable: false, renderFunc: renderImageCell },
-    { header: "Name",         field: "name",                  sortable: true, width: 250 },
-    { header: "FP Cost",      field: "fp_cost",               sortable: true, align: "right" },
-    { header: "Slots Used",   field: "slots_required",        sortable: true, align: "right" },
-    { header: "Int",          field: "required_intelligence", sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_intelligence} /> },
-    { header: "Fai",          field: "required_faith",        sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_faith} />        },
-    { header: "Arc",          field: "required_arcane",       sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_arcane} />       },
-    { header: "Damage Types", field: "id",                    sortable: false, renderFunc: (row) => <SpellDamageTypes spell={row} /> },
+    { headerName: "Type",         field: "spell_type",            sortable: true },
+    { headerName: "",             field: "id",                    sortable: false, renderFunc: renderImageCell },
+    { headerName: "Name",         field: "name",                  sortable: true, width: 250 },
+    { headerName: "FP Cost",      field: "fp_cost",               sortable: true, align: "right" },
+    { headerName: "Slots Used",   field: "slots_required",        sortable: true, align: "right" },
+    { headerName: "Int",          field: "required_intelligence", sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_intelligence} /> },
+    { headerName: "Fai",          field: "required_faith",        sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_faith} />        },
+    { headerName: "Arc",          field: "required_arcane",       sortable: true, align: "right", renderFunc: (row) => <NullableNumber number={row.required_arcane} />       },
+    { headerName: "Damage Types", field: "id",                    sortable: false, renderFunc: (row) => <SpellDamageTypes spell={row} /> },
 ]
 
 export const SpellsTable = (): JSX.Element => {
