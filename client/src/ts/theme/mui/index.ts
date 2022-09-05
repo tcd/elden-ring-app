@@ -1,5 +1,5 @@
 export * from "./breakpoints-options"
-export * from "./general-components"
+export * from "./components"
 export * from "./palette-options"
-export * from "./typography"
+export * from "./typography-options"
 export * from "./z-index-options"

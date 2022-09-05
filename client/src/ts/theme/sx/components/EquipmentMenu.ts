@@ -2,7 +2,7 @@ import type { SxProps } from "@mui/material"
 
 import {
     ThemeVars,
-    EldenRingMaterialTheme as Theme,
+    // EldenRingMaterialTheme as Theme,
     rgba,
     scrollbar,
 } from "@app/theme"
@@ -82,6 +82,8 @@ const imageWrapper: SxProps = {
 
     "& img": {
         ...imageFluid,
+        // minWidth: "20px",
+        // aspectRatio: "1/1",
     },
 }
 

@@ -1,17 +1,12 @@
-import { createTheme, Components, ThemeOptions } from "@mui/material"
+import type { ThemeOptions } from "@mui/material"
+import { createTheme } from "@mui/material"
 
 import {
     breakpointsOptions,
-    generalComponents,
+    components,
     paletteOptions,
-    typographyComponents,
     typographyOptions,
 } from "./mui"
-
-const components: Components = {
-    ...generalComponents,
-    ...typographyComponents,
-}
 
 const options: ThemeOptions = {
     palette: paletteOptions,

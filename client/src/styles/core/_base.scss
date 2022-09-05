@@ -3,33 +3,8 @@
 @use "@functions" as functions;
 @use "../helpers" as h;
 
-html, body {
-    height: 100%;
-    margin: 0px !important;
-    padding: 0px !important;
-    padding-right: 0px !important;
-    overflow: auto !important;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    color: v.$body-color-fg;
-    background-color: v.$body-color-bg;
-}
-
 #root {
-    margin:  0px;
-    padding: 0px;
-    // height: 100vh;
-    height: 100%;
-    // overflow-y: scroll;
-    flex-grow: 1;
-    display: flex;
-    flex-flow: column nowrap;
     @include mixins.backgroundImage(h.$main-menu-encoded-background);
-    // background-color: blue;
 }
 
 // *, *::before, *::after {

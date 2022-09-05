@@ -2,15 +2,15 @@ import type { Components } from "@mui/material"
 // import type {} from "@mui/x-data-grid/themeAugmentation"
 
 import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
-import { scrollbar } from "../helpers/scrollbar"
 // import { colors } from "../variables/colors"
+import { baseStyles } from "./base-styles"
 
-export const generalComponents: Components = {
+export const components: Components = {
     MuiCssBaseline: {
         styleOverrides: {
-            body: {
-                ...scrollbar(),
-            },
+            html: baseStyles.html,
+            body: baseStyles.body,
+            "#root": baseStyles.root,
         },
     },
     MuiSvgIcon: {
