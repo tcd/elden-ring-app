@@ -6,8 +6,9 @@ import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
 import { ErPage } from "@app/features/common"
 import { ErGrid } from "@app/features/er-grid"
-import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
-import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
+
+import { EquipmentSlots } from "../equipment-slots"
+import { EquipmentPageDetail } from "../EquipmentPageDetail"
 
 export const EquipmentPage = (_props: unknown): JSX.Element => {
 
@@ -23,7 +24,7 @@ export const EquipmentPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="equipment">
             <ErGrid
-                column1={<EquipmentGrid />}
+                column1={<EquipmentSlots />}
                 column2={<EquipmentPageDetail />}
             />
         </ErPage>

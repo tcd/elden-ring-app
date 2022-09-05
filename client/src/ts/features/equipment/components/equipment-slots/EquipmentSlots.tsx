@@ -12,15 +12,15 @@ import {
     TalismanSlots,
 } from "./slots"
 
-export const EquipmentGrid = (_props: unknown): JSX.Element => {
+export const EquipmentSlots = (_props: unknown): JSX.Element => {
 
     const title    = useSelector(Selectors.Equipment.gridTitle)
     const subTitle = useSelector(Selectors.Equipment.gridDescription)
 
     return (
-        <Box sx={ComponentSx.EquipmentGrid.root}>
+        <Box sx={ComponentSx.EquipmentSlots.root}>
             <ErGridHeader title={title} subTitle={subTitle} />
-            <Box sx={ComponentSx.EquipmentGrid.grid.container}>
+            <Box sx={ComponentSx.EquipmentSlots.grid.container}>
                 <WeaponSlots />
                 <ArmorSlots />
                 <TalismanSlots />

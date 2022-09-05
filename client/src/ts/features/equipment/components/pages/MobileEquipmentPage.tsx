@@ -6,8 +6,9 @@ import { isBlank, useHash } from "@app/util"
 import { Selectors } from "@app/state"
 import { ErPage } from "@app/features/common"
 import { CharacterStatus } from "@app/features/character-status"
-import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
-import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
+
+import { EquipmentSlots } from "../equipment-slots"
+import { EquipmentPageDetail } from "../EquipmentPageDetail"
 
 export const MobileEquipmentPage = (_props: unknown): JSX.Element => {
 
@@ -27,10 +28,10 @@ export const MobileEquipmentPage = (_props: unknown): JSX.Element => {
     let content: JSX.Element = null
 
     switch (hash) {
-        case "grid":   content = <EquipmentGrid />;       break
+        case "grid":   content = <EquipmentSlots />;       break
         case "detail": content = <EquipmentPageDetail />; break
         case "status": content = <CharacterStatus />;     break
-        default:       content = <EquipmentGrid />;       break
+        default:       content = <EquipmentSlots />;       break
     }
 
     return (
