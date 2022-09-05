@@ -27,9 +27,13 @@ const heightCalculation = [
 
 /** `.er__equipmentMenu` */
 const root: SxProps = {
-    marginLeft:  "10%",
-    marginRight: "10%",
-    height:      "100%",
+    height: "100%",
+    width: "100%",
+    // backgroundColor: "DarkKhaki",
+    boxSizing: "border-box",
+    "& *, & > *": {
+        boxSizing: "border-box",
+    },
 }
 
 // =============================================================================
@@ -38,7 +42,8 @@ const root: SxProps = {
 
 /** `.er__equipmentMenu__gridColumn` */
 const gridRoot: SxProps = {
-    flexShrink: 1,
+    // backgroundColor: "green",
+    // flexShrink: 1,
     height: `calc(${heightCalculation})`,
     // maxHeight: "min(75vh, 700px)",
     // height: "70vh",
@@ -46,7 +51,7 @@ const gridRoot: SxProps = {
     overflowY: "scroll",
     padding: "20px",
     borderRadius: "5px",
-    backgroundColor: rgba(ThemeVars.equipmentMenu.backgroundColor, 0.3).string(),
+    // backgroundColor: rgba(ThemeVars.equipmentMenu.backgroundColor, 0.3).string(),
     ...scrollbar(),
 }
 

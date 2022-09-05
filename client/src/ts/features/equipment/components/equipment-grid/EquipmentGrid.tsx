@@ -1,6 +1,7 @@
 import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
+
 import { EquipmentGridHeader } from "./EquipmentGridHeader"
 import {
     ArmorSlots,

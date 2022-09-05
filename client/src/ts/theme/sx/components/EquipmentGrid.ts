@@ -15,14 +15,26 @@ import {
     imageFluid,
 } from "../mixins"
 
+const heightCalculation = [
+    "100%",
+    "24px",  // EquipmentGrid.header.title - fontSize
+    "0.2em", // EquipmentGrid.header.title - paddingBottom
+    "18px",  // EquipmentGrid.headerDescription - fontSize
+    "20px",  // EquipmentMenu.grid.root - padding
+    "20px", // little extra breathing room
+].join(" - ")
+
 // =============================================================================
 // Root
 // =============================================================================
 
 /** `#er__equipmentGrid` */
 const rootSx: SxProps = {
-    boxSizing: "border-box",
+    height: "100%",
+    width: "100%",
     // maxHeight: "100%",
+    boxSizing: "border-box",
+    // backgroundColor: "DarkKhaki",
     "& *, & > *": {
         boxSizing: "border-box",
     },
@@ -65,17 +77,21 @@ const headerDescription: SxProps = {
 // =============================================================================
 
 /** `.er__equipmentGrid__row` */
-const gridRowSx: SxProps = {
-    width: "100%",
-    display: "flex",
-    flexFlow: "row nowrap",
-}
-
-/** `.er__equipmentGrid__row` */
 const gridContainerSx: SxProps = {
-    width: "100%",
+    height: `calc(${heightCalculation})`,
+    // maxHeight: "75vh",
+    // width: "auto",
+    // width: "100%",
     display: "flex",
     flexFlow: "row wrap",
+    // [ThemeBreakpoints.up("sm")]: {
+    //     padding: "75px",
+    // },
+    paddingTop: "0px",
+    // backgroundColor: "green",
+    // "&:nth-of-type(1)": {
+    //     backgroundColor: "tomato",
+    // },
 }
 
 // =============================================================================
@@ -94,7 +110,10 @@ const _cellShared: SxProps = {
     //     width:  "55px",
     //     height: "60px",
     // },
+    /* flex-grow | flex-shrink | flex-basis */
     flex: "1 0 calc(20% - 5px)",
+    // width: `calc(20% - 5px)`,
+    // maxHeight: "calc(100% / 6)",
 }
 
 /** `.er__equipmentGrid__cell` */
@@ -192,7 +211,6 @@ export const EquipmentGrid = {
     },
     grid: {
         container: gridContainerSx,
-        row: gridRowSx,
         cell: gridCellSx,
         filledCell: gridCellFilledSx,
         cellBackground: gridCellBackgroundSx,

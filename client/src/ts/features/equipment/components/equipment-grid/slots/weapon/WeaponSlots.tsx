@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
+
 import { WeaponSlotContent as WeaponSlot } from "./WeaponSlotContent"
 import { ArrowSlot, BoltSlot } from "./AmmunitionSlots"
 

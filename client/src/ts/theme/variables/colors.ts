@@ -2,8 +2,8 @@ export const colors = <const>{
     black:  "#292927",
     white:  "#d6cdb8",
     red:    "#CD3138", // 👍
-    yellow: "#ceaf49",
-    green:  "#608b4e", // don't remember where I got this
+    yellow: "#b6ad84",
+    green:  "#608b4e",
     blue:   "#527ED5", // 👍
     purple: "#c586c0",
     cyan:   "#4ec9b0",
@@ -21,5 +21,6 @@ const _contenders = {
         "#b6ad84", // "original value", don't know where it came from. Was too light
         "#e4cf61", // pulled from healing spell
         "#ebbd6c", // pulled from healing spell
+        "#ceaf49", // pulled from healing spell
     ],
 }

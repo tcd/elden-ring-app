@@ -4,10 +4,10 @@ import { useSelector } from "react-redux"
 import type { Grid2Props as GridProps } from "@mui/material/Unstable_Grid2"
 import Grid from "@mui/material/Unstable_Grid2"
 
-import { ComponentSx } from "@app/theme"
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
 import { ErPage } from "@app/shared"
+import { TriPage } from "@app/features/common2"
 import { CharacterStatus } from "@app/features/character-status"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"
@@ -23,21 +23,14 @@ export const EquipmentPage = (_props: unknown): JSX.Element => {
         }
     }, [baseClass, navigate])
 
-    // return (
-    //     <ErPage pageName="equipment">
-    //         <Grid {...ComponentSx.TriPage.container}>
-    //             <Grid {...ComponentSx.TriPage.col1}>
-    //                 <EquipmentGrid />
-    //             </Grid>
-    //             <Grid {...ComponentSx.TriPage.col2}>
-    //                 <EquipmentPageDetail />
-    //             </Grid>
-    //             <Grid {...ComponentSx.TriPage.col3}>
-    //                 <CharacterStatus />
-    //             </Grid>
-    //         </Grid>
-    //     </ErPage>
-    // )
+    return (
+        <ErPage pageName="equipment">
+            <TriPage
+                column1={<EquipmentGrid />}
+                column2={<EquipmentPageDetail />}
+            />
+        </ErPage>
+    )
 
     return (
         <ErPage pageName="equipment">

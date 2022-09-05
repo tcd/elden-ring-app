@@ -11,7 +11,8 @@ const root: SxProps = {
 /** `#er__layout` */
 const outletWrapper: SxProps = {
     flexGrow: 1,
-    // marginTop: "1rem",
+    boxSizing: "border-box",
+    marginTop: "1rem",
     marginBottom: "0.5rem",
 }
 
