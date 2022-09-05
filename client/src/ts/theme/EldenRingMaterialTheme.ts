@@ -2,11 +2,11 @@ import type { ThemeOptions } from "@mui/material"
 import { createTheme } from "@mui/material"
 
 import {
-    breakpointsOptions,
     components,
     paletteOptions,
     typographyOptions,
 } from "./mui"
+import { breakpointsOptions } from "./variables/breakpoints"
 
 const options: ThemeOptions = {
     palette: paletteOptions,

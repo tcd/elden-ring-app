@@ -69,14 +69,6 @@ export const body = <const>{
     colorFg: "#d3d3d3",
 }
 
-/** Font, line-height, and color for body text, headings, and more. */
-export const typography = <const>{
-    headingsColor: "#cfc1a6",
-    textShadowOffset: "1px",
-    // statRowFontSize: "16px",
-    statRowFontSize: "0.875rem",
-}
-
 // ----------------------------------------------------------------------------
 // Layout
 // ----------------------------------------------------------------------------

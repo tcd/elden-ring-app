@@ -1,4 +1,3 @@
-export * from "./breakpoints-options"
 export * from "./components"
 export * from "./palette-options"
 export * from "./typography-options"
