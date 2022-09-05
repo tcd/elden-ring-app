@@ -37,7 +37,6 @@ export const typography = <const>{
         caption: [garamondPremier.caption, ...fallbackFonts ].join(","),
     },
     colorFg: "#d3d3d3",
-    // headingsColor: "#CFC1A6", // replaced with colors.gold.light (#C9BBA1)
     textShadowOffset: "1px",
     // statRowFontSize: "16px",
     statRowFontSize: "0.875rem", // 13.125px
