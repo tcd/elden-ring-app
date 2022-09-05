@@ -2,7 +2,6 @@ import type { SxProps } from "@mui/material"
 
 import {
     ThemeVars,
-    // EldenRingMaterialTheme as Theme,
     rgba,
     scrollbar,
 } from "@app/theme"
@@ -10,7 +9,7 @@ import {
 import {
     pointerOnHover,
     imageFluid,
-} from "../mixins"
+} from "../../mixins"
 
 const heightCalculation = [
     "100%",
@@ -42,16 +41,12 @@ const root: SxProps = {
 
 /** `.er__equipmentMenu__gridColumn` */
 const gridRoot: SxProps = {
-    // backgroundColor: "green",
-    // flexShrink: 1,
     height: `calc(${heightCalculation})`,
-    // maxHeight: "min(75vh, 700px)",
-    // height: "70vh",
-    // height: "80%",
     overflowY: "scroll",
     padding: "20px",
     borderRadius: "5px",
     // backgroundColor: rgba(ThemeVars.equipmentMenu.backgroundColor, 0.3).string(),
+    backgroundColor: "green",
     ...scrollbar(),
 }
 

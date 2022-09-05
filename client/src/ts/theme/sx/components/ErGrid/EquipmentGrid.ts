@@ -13,7 +13,7 @@ import {
     invisibleContent,
     textShadow,
     imageFluid,
-} from "../mixins"
+} from "../../mixins"
 
 const heightCalculation = [
     "100%",
@@ -32,9 +32,8 @@ const heightCalculation = [
 const rootSx: SxProps = {
     height: "100%",
     width: "100%",
-    // maxHeight: "100%",
     boxSizing: "border-box",
-    // backgroundColor: "DarkKhaki",
+    backgroundColor: "DarkKhaki",
     "& *, & > *": {
         boxSizing: "border-box",
     },
@@ -79,19 +78,10 @@ const headerDescription: SxProps = {
 /** `.er__equipmentGrid__row` */
 const gridContainerSx: SxProps = {
     height: `calc(${heightCalculation})`,
-    // maxHeight: "75vh",
-    // width: "auto",
-    // width: "100%",
     display: "flex",
     flexFlow: "row wrap",
-    // [ThemeBreakpoints.up("sm")]: {
-    //     padding: "75px",
-    // },
     paddingTop: "0px",
-    // backgroundColor: "green",
-    // "&:nth-of-type(1)": {
-    //     backgroundColor: "tomato",
-    // },
+    backgroundColor: "green",
 }
 
 // =============================================================================
@@ -112,8 +102,6 @@ const _cellShared: SxProps = {
     // },
     /* flex-grow | flex-shrink | flex-basis */
     flex: "1 0 calc(20% - 5px)",
-    // width: `calc(20% - 5px)`,
-    // maxHeight: "calc(100% / 6)",
 }
 
 /** `.er__equipmentGrid__cell` */
