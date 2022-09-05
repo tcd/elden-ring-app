@@ -1,6 +1,6 @@
 export interface EquipmentMenuProps {
     id?: string
     title: string
-    description: string
+    subTitle: string
     children?: React.ReactNode
 }

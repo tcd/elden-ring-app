@@ -5,9 +5,9 @@ import { ComponentSx } from "@app/theme"
 
 import type { EquipmentMenuProps } from "./types"
 
-export const Header = ({ title, description }: EquipmentMenuProps): JSX.Element => {
+export const Header = ({ title, subTitle }: EquipmentMenuProps): JSX.Element => {
 
-    description = isBlank(description) ? "-" : description
+    subTitle = isBlank(subTitle) ? "-" : subTitle
 
     return (
         <Box component="header" sx={ComponentSx.EquipmentGrid.header.root}>
@@ -15,7 +15,7 @@ export const Header = ({ title, description }: EquipmentMenuProps): JSX.Element 
                 {title}
             </Box>
             <Box component="span" sx={ComponentSx.EquipmentGrid.header.description}>
-                {description}
+                {subTitle}
             </Box>
         </Box>
     )

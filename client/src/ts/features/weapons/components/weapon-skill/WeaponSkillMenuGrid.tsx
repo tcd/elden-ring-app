@@ -69,7 +69,7 @@ export const WeaponSkillMenuGrid = (_props: unknown): JSX.Element => {
         <EquipmentMenu.EquipmentMenu
             id="weapon-skill-grid-menu"
             title="Melee Armaments"
-            description={activeName}
+            subTitle={activeName}
             ref={menuRef}
         >
             {sections}

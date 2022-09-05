@@ -62,7 +62,7 @@ export const TalismanMenuGrid = (): JSX.Element => {
     return (
         <EquipmentMenu.EquipmentMenu
             title={`Talisman ${activeSlot}`}
-            description={activeName}
+            subTitle={activeName}
             ref={menuRef}
         >
             {sections}

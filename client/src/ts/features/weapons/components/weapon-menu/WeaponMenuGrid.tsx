@@ -99,7 +99,7 @@ export const WeaponMenuGrid = (): JSX.Element => {
     return (
         <EquipmentMenu.EquipmentMenu
             title={title}
-            description={activeName}
+            subTitle={activeName}
             ref={menuRef}
         >
             {sections}

@@ -62,7 +62,7 @@ export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
     return (
         <EquipmentMenu.EquipmentMenu
             title={activeSlot}
-            description={activeName}
+            subTitle={activeName}
             ref={menuRef}
         >
             {sections}
