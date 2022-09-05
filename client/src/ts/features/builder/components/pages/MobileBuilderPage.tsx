@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 import { Box } from "@mui/material"
 
-import { isBlank } from "@app/util"
+import { isBlank, useHash } from "@app/util"
 import { Selectors } from "@app/state"
 import {
     ErPage,
     CharacterStatus,
     Attributes,
     Overview,
-    useHash,
 } from "@app/features"
 
 import { EquipmentSlots } from "../equipment-slots"
