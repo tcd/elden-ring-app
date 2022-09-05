@@ -1,6 +1,7 @@
 import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
+
 import { EquipmentMenuDivider } from "./Divider"
 
 export interface SectionProps {

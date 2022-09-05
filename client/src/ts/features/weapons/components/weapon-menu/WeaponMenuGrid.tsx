@@ -14,7 +14,7 @@ import {
     getImageSrc,
     weaponSlotDisplayName,
 } from "@app/util"
-import { EquipmentMenu } from "@app/features/common"
+import { EquipmentMenu } from "@app/features/equipment-menu"
 
 export const WeaponMenuGrid = (): JSX.Element => {
 

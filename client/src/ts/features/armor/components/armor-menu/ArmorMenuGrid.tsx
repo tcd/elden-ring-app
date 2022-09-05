@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { ARMOR_SORT_GROUPS, RefMap } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { scrollToEquipmentCell, getImageSrc } from "@app/util"
-import { EquipmentMenu } from "@app/features/common"
+import { EquipmentMenu } from "@app/features/equipment-menu"
 
 export const ArmorMenuGrid = (_props: unknown): JSX.Element => {
 

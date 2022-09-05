@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
 import { scrollToEquipmentCell, getImageSrc } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { EquipmentMenu } from "@app/features/common"
+import { EquipmentMenu } from "@app/features/equipment-menu"
 
 import { AffinityModal } from "../affinity-modal"
 
