@@ -11,7 +11,6 @@ import {
     pointerOnHover,
     pointerOnHoverChildren,
     invisibleContent,
-    textShadow,
     imageFluid,
 } from "../../mixins"
 
@@ -37,38 +36,6 @@ const rootSx: SxProps = {
     "& *, & > *": {
         boxSizing: "border-box",
     },
-}
-
-// =============================================================================
-// Header
-// =============================================================================
-
-/** `header.er__equipmentGrid__header` */
-const headerRoot: SxProps = {
-    display: "flex",
-    flexFlow: "column nowrap",
-}
-
-const headerShared: SxProps = {
-    whiteSpace: "nowrap",
-    ...textShadow,
-}
-
-/** `.er__equipmentGrid__headerTitle` */
-const headerTitle: SxProps = {
-    display: "flex",
-    color: ThemeVars.colors.gold.light,
-    fontSize: "24px",
-    paddingTop: "0.2em",
-    marginBottom: "0px",
-    paddingBottom: "0px",
-    ...headerShared,
-}
-
-/** `.er__equipmentGrid__headerDescription` */
-const headerDescription: SxProps = {
-    fontSize: "18px",
-    ...headerShared,
 }
 
 // =============================================================================
@@ -192,11 +159,6 @@ const gridCellBackgroundSx = (backgroundImage: string): SxProps => ({
 
 export const EquipmentGrid = {
     root: rootSx,
-    header: {
-        root: headerRoot,
-        title: headerTitle,
-        description: headerDescription,
-    },
     grid: {
         container: gridContainerSx,
         cell: gridCellSx,

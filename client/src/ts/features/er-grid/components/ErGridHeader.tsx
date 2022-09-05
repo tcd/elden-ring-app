@@ -9,7 +9,7 @@ export interface ErGridHeaderProps {
 
 export const ErGridHeader = ({ title, subTitle }: ErGridHeaderProps): JSX.Element => {
     return (
-        <Box component="header" sx={ComponentSx.EquipmentGrid.header.root}>
+        <Box component="header" sx={ComponentSx.ErGridHeader.root}>
             <Box component="span" sx={ComponentSx.ErGridHeader.title}>
                 {title}
             </Box>

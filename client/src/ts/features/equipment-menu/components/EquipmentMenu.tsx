@@ -4,7 +4,12 @@ import { Box } from "@mui/material"
 import { ComponentSx } from "@app/theme"
 import { ErGridHeader } from "@app/features/er-grid"
 
-import type { EquipmentMenuProps } from "./types"
+export interface EquipmentMenuProps {
+    id?: string
+    title: string
+    subTitle: string
+    children?: React.ReactNode
+}
 
 export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentMenuProps, ref) {
 
