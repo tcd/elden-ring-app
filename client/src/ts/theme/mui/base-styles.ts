@@ -2,7 +2,9 @@ import type { CSSObject } from "@mui/material"
 
 // import { getImageSrcManual } from "@app/util"
 
+import { startingClass } from "../variables/variables.scss"
 import { defaultFontFamily } from "../variables/default-font-family"
+import { gradients } from "../variables/gradients"
 // import { colors } from "../variables/colors"
 // import { cssUrl } from "../helpers/css-url"
 import { scrollbar } from "../helpers/scrollbar"
@@ -56,9 +58,15 @@ const root: CSSObject = {
     // overflowY: "scroll",
 
     // backgroundImage: cssUrl(getImageSrcManual("ui/background", "public")),
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
+    // backgroundPosition: "center",
+    // backgroundSize: "cover",
+
+    "&.startingClassPage": {
+        backgroundImage: "none !important",
+        backgroundColor: startingClass.bgGradientColorLeft,
+        background: gradients.startingClassBackground + " !important",
+    },
 }
 
 // =============================================================================

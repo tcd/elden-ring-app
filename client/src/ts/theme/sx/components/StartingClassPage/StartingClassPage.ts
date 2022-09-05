@@ -6,17 +6,6 @@ import {
     pointerOnHover,
 } from "../../mixins"
 
-/**
- * This is meant to be applied to the most top level application component possible.
- *
- * When using `.scss`, it was applied to `#root.startingClassPage`.
- */
-const appRoot: SxProps = {
-    backgroundImage: "none !important",
-    // background: ThemeVars.startingClass.bgGradientColorLeft + " !important",
-    background: ThemeVars.gradients.startingClassBackground + " !important",
-}
-
 /** `.er__startingClass` */
 const root: SxProps = {
     "& ul": {
@@ -86,7 +75,6 @@ const footer: SxProps = {
 // =============================================================================
 
 export const StartingClassPage = {
-    appRoot,
     root,
     menu,
     arrowContainer,

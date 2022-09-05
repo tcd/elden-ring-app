@@ -5,8 +5,6 @@ import {
     EldenRingMaterialTheme as Theme,
 } from "@app/theme"
 
-import { startingClassGradient } from "../mixins"
-
 // =============================================================================
 
 const rootSx: SxProps = {
@@ -19,7 +17,7 @@ const rootSx: SxProps = {
     flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
-    ...startingClassGradient,
+    background: ThemeVars.gradients.startingClassBackground,
 }
 
 const bannerSx: SxProps = {
