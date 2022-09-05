@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 
 import { DESCRIPTIONS } from "@app/data"
-import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/features/common"
 import { Selectors } from "@app/state"
 import { EquipLoad } from "@app/features/character-status/components/stats"
 

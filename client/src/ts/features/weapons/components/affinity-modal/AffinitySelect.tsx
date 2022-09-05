@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 import { getImageSrc } from "@app/util"
 
 export const AffinitySelect = (_props: unknown): JSX.Element => {

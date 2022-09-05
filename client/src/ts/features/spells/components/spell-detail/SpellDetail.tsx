@@ -1,6 +1,6 @@
 
 import type { Spell } from "@app/types"
-import { StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { StatRow, StatRowPlus, StatRowProps } from "@app/features/common"
 import { getImageSrc, isBlank, numberOrDash } from "@app/util"
 
 export interface SpellDetailProps {

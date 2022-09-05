@@ -1,6 +1,6 @@
 import { Attributes, Spell } from "@app/types"
 import { getImageSrc, meetsRequirements } from "@app/util"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 export interface SpellMenuImageProps {
     spell: Spell

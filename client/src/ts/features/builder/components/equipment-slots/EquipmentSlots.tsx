@@ -1,4 +1,4 @@
-import { ErCard } from "@app/shared"
+import { ErCard } from "@app/features/common"
 import {
     ArmorSlots,
     // QuickItems,

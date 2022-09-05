@@ -1,6 +1,6 @@
 import { Box, Container, Divider, Typography } from "@mui/material"
 
-import { ErPage } from "@app/shared"
+import { ErPage } from "@app/features/common"
 
 import { RdtChecklist } from "./Checklist.rdt"
 

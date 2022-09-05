@@ -8,7 +8,7 @@ import {
     CustomTable,
     CustomTableColumn,
     MuiImg,
-} from "@app/shared"
+} from "@app/features/common"
 import { getImageSrc } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 

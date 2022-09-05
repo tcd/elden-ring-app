@@ -4,7 +4,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailFullCard,
-} from "@app/shared"
+} from "@app/features/common"
 
 import { EmptyTalismanDetail } from "./EmptyTalismanDetail"
 

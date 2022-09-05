@@ -6,7 +6,7 @@ import type { DeviceSize } from "@app/types"
 import { STARTING_CLASSES } from "@app/data"
 import { getImageSrcManual, ScreenSize } from "@app/util"
 import { ComponentSx } from "@app/theme"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 import { Option } from "./Option"
 

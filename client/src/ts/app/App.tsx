@@ -6,7 +6,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material"
 import { EldenRingMaterialTheme } from "@app/theme"
 import { logger } from "@app/util"
 import { store, persistor } from "@app/state"
-import { LoggingProvider, ViewportProvider } from "@app/shared"
+import { LoggingProvider, ViewportProvider } from "@app/features/common"
 import { AppHelmet } from "@app/features/core"
 import { AppRoutesComponent } from "@app/features/routing"
 

@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 import type { StartingClass } from "@app/types"
 import { getImageSrc } from "@app/util"
 import { ComponentSx } from "@app/theme"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 export interface EquipmentProps {
     sClass: StartingClass

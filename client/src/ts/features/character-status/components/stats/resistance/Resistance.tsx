@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { Stat } from "@app/types"
 import { Selectors } from "@app/state"
 import { DESCRIPTIONS } from "@app/data"
-import { StatRow, StatRowProps } from "@app/shared"
+import { StatRow, StatRowProps } from "@app/features/common"
 
 export const Resistance = (): JSX.Element => {
 

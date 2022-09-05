@@ -7,7 +7,7 @@ import {
     CustomTable,
     CustomTableColumn,
     MuiImg,
-} from "@app/shared"
+} from "@app/features/common"
 
 const renderImageCell = (talisman: Talisman) => {
     const imageSrc = getImageSrc("Talisman", talisman.name, "256")

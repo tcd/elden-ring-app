@@ -1,7 +1,7 @@
 import { Box, List, ListItem, SxProps, } from "@mui/material"
 
 import { CONFIG } from "@app/util"
-import { Anchor } from "@app/shared"
+import { Anchor } from "@app/features/common"
 
 import { AboutPageSection } from "."
 

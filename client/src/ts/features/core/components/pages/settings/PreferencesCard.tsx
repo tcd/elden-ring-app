@@ -8,7 +8,7 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp"
 import VolumeMuteIcon from "@mui/icons-material/VolumeMute"
 
 import { Actions, Selectors } from "@app/state"
-import { ErCard, MdiIcon } from "@app/shared"
+import { ErCard, MdiIcon } from "@app/features/common"
 
 export const PreferencesCard = (_props: unknown): JSX.Element => {
 

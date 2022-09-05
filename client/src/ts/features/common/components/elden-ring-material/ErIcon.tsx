@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 import { IconNamesKey } from "@app/constants"
 import { IconUrls } from "@app/util"
 import { ComponentSx } from "@app/theme"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 export interface ErIconProps {
     icon: IconNamesKey

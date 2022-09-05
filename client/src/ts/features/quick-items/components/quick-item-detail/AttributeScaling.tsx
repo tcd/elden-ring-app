@@ -10,7 +10,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailFullCard,
-} from "@app/shared"
+} from "@app/features/common"
 
 type Scaling = Partial<AttrMap<ScalingTier>>
 

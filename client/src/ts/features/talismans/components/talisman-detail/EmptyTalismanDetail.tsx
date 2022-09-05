@@ -2,7 +2,7 @@ import {
     EquipmentDetail,
     EquipmentDetailFullCard,
     EquipmentDetailProps,
-} from "@app/shared"
+} from "@app/features/common"
 
 export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
     return (

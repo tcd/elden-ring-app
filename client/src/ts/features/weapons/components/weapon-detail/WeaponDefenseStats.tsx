@@ -11,7 +11,7 @@ import {
 import {
     StatRow,
     StatRowProps,
-} from "@app/shared"
+} from "@app/features/common"
 
 export interface WeaponDefenseStatsProps {
     newWeapon: Weapon

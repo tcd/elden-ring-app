@@ -3,7 +3,7 @@ import { AttrMap } from "elden-ring-calculator"
 
 import { Attr, Attributes, Weapon } from "@app/types"
 import { isBlank } from "@app/util"
-import { StatRow, StatRowProps } from "@app/shared"
+import { StatRow, StatRowProps } from "@app/features/common"
 import { FlexBox } from "./FlexBox"
 
 export interface WeaponRequirementStatsProps {

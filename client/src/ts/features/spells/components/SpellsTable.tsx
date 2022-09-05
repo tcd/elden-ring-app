@@ -8,7 +8,7 @@ import {
     SpellDamageTypes,
     CustomTableColumn,
     MuiImg,
-} from "@app/shared"
+} from "@app/features/common"
 
 const renderImageCell = (spell: Spell): JSX.Element => {
     return (

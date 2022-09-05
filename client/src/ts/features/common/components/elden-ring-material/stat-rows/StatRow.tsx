@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 
-import { MouseOverPopover } from "@app/shared"
+import { MouseOverPopover } from "@app/features/common"
 import { ComponentSx } from "@app/theme"
 
 import type { StatRowProps } from "./types"

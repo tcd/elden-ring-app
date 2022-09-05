@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-import { ErPage, useHash } from "@app/shared"
+import { ErPage, useHash } from "@app/features/common"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 import { CharacterStatus } from "@app/features/character-status"
 

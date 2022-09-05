@@ -7,7 +7,7 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 import { Selectors } from "@app/state"
-import { useHash } from "@app/shared"
+import { useHash } from "@app/features/common"
 
 import { BottomNavActionProps } from "./BottomNavAction"
 

@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material"
 
-import { Heading } from "@app/shared"
+import { Heading } from "@app/features/common"
 import { WeaponsTable } from "@app/features/weapons"
 
 export const WeaponsTablePage = (): JSX.Element => {

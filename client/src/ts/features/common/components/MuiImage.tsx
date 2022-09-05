@@ -5,7 +5,7 @@ import { Box } from "@mui/material"
 
 
 import { imageFluid } from "@app/theme"
-import { ErBlank } from "@app/shared"
+import { ErBlank } from "@app/features/common"
 
 type Omissions =
     | "component"

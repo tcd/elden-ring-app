@@ -6,7 +6,7 @@ import IosShareIcon from "@mui/icons-material/IosShare"
 import RestartAltIcon from "@mui/icons-material/RestartAlt"
 
 import { Actions, Selectors, persistor } from "@app/state"
-import { ErCard } from "@app/shared"
+import { ErCard } from "@app/features/common"
 import { exportJsonToFile } from "@app/util"
 
 export const ActionsCard = (_props: unknown): JSX.Element => {

@@ -7,7 +7,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailCard,
-} from "@app/shared"
+} from "@app/features/common"
 
 export const AmmunitionDetail = (_props: unknown): JSX.Element => {
     return (

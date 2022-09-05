@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { Container } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { ErPage, useHash, useViewport } from "@app/shared"
+import { ErPage, useHash, useViewport } from "@app/features/common"
 
 import { About, Credit, Related } from "./sections"
 

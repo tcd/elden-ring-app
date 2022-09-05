@@ -7,7 +7,7 @@ import { HeaderIconIds } from "@app/types"
 import { AppDispatch, Actions } from "@app/state"
 import { getImageSrcManual } from "@app/util"
 import { LayoutSx } from "@app/theme"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 export interface SideNavItemProps {
     pageName: PageName

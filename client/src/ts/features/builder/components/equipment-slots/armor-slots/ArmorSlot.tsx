@@ -6,7 +6,7 @@ import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
 import { ArmorType } from "@app/constants"
 import { Armor } from "@app/types"
-import { MouseOverPopover } from "@app/shared"
+import { MouseOverPopover } from "@app/features/common"
 import { Actions } from "@app/state"
 import { ArmorSlotContent } from "./ArmorSlotContent"
 

@@ -1,4 +1,4 @@
-import { ErCard } from "@app/shared"
+import { ErCard } from "@app/features/common"
 import { Resistance } from "."
 
 export const ResistanceCard = (_props: unknown): JSX.Element => {

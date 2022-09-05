@@ -6,7 +6,7 @@ import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 
 import { TalismanSlotId } from "@app/constants"
 import { Talisman } from "@app/types"
-import { MouseOverPopover } from "@app/shared"
+import { MouseOverPopover } from "@app/features/common"
 import { Actions } from "@app/state"
 import { TalismanSlotContent } from "./TalismanSlotContent"
 

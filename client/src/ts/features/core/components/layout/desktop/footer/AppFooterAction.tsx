@@ -3,7 +3,7 @@ import { Box, Button } from "@mui/material"
 
 import { LayoutSx } from "@app/theme"
 import { KeyboardKey, KeyboardKeyUrls } from "@app/util"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 export interface AppFooterActionProps {
     name: string

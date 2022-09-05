@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import { ComponentSx } from "@app/theme"
-import { ErPage } from "@app/shared"
+import { ErPage } from "@app/features/common"
 
 import { StartingClassMenu } from "./StartingClassMenu"
 import { ConfirmationDialog } from "./ConfirmationDialog"

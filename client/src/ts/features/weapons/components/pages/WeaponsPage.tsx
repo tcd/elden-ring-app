@@ -1,4 +1,4 @@
-import { ErPage } from "@app/shared"
+import { ErPage } from "@app/features/common"
 import { ErGrid } from "@app/features/er-grid"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 

@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
 
 import { ThemeVars } from "@app/theme"
-import { ErPage } from "@app/shared"
+import { ErPage } from "@app/features/common"
 import { SpecialCharacters, Audio } from "@app/util"
 
 export const TestPage = (_props: unknown): JSX.Element => {

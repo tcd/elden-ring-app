@@ -1,8 +1,8 @@
 import Grid from "@mui/material/Unstable_Grid2"
 
 import { ComponentSx } from "@app/theme"
-import { ErCard } from "@app/shared"
-import type { ErCardProps } from "@app/shared"
+import { ErCard } from "@app/features/common"
+import type { ErCardProps } from "@app/features/common"
 
 export type EquipmentDetailCardProps = Pick<ErCardProps, "title" | "icon" | "children">
 

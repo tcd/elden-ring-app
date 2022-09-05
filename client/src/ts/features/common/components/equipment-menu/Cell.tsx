@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 import type { BoxProps } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { RedX, MuiImg, MouseOverPopover } from "@app/shared"
+import { RedX, MuiImg, MouseOverPopover } from "@app/features/common"
 
 const sx = ComponentSx.EquipmentMenu.grid
 

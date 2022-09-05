@@ -8,7 +8,7 @@ import {
     CustomTable,
     CustomTableColumn,
     MuiImg,
-} from "@app/shared"
+} from "@app/features/common"
 
 const renderImageCell = (weapon: Weapon): JSX.Element => {
     const src = getImageSrc("Weapon", weapon.name, "128")

@@ -5,7 +5,7 @@ import {
     PopoverOrigin,
 } from "@mui/material"
 
-import { ErTooltipContent } from "@app/shared"
+import { ErTooltipContent } from "@app/features/common"
 
 /**
  * This is the point on the anchor where the popover's anchorEl will attach to.

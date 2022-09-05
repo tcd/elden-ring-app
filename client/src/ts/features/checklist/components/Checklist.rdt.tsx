@@ -12,7 +12,7 @@ import {
     MuiImg,
     RawHtml,
     Anchor,
-} from "@app/shared"
+} from "@app/features/common"
 
 export const RdtChecklist = (_props: unknown): JSX.Element => {
 

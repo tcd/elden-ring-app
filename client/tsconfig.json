@@ -28,7 +28,6 @@
         "baseUrl": "src/",
         "paths": {
             "@app/*":         ["ts/*"],
-            "@app/shared":    ["ts/features/common/index.ts"],
             "@app/theme":     ["ts/theme/index.ts"],
             "@app/constants": ["ts/types/constants/index.ts"],
             "@app/config":    ["ts/util/Config.ts"],

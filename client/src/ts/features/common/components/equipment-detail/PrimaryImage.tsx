@@ -2,7 +2,7 @@ import { Box } from "@mui/material"
 
 import { isBlank } from "@app/util"
 import { ComponentSx } from "@app/theme"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 import type { ImageOptions } from "./types"
 

@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 
 import { LayoutSx } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 export const AppHeader = (_props: unknown): JSX.Element => {
 

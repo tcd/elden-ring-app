@@ -7,7 +7,7 @@ import Grid from "@mui/material/Unstable_Grid2"
 import { DESCRIPTIONS } from "@app/data"
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
-import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/shared"
+import { ErCard, StatRow, StatRowPlus, StatRowProps } from "@app/features/common"
 import { Attack, DefensePlus, EquipLoad, Resistance } from "@app/features/character-status/components/stats"
 
 const keepsakes = [

@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material"
 
-import { Heading } from "@app/shared"
+import { Heading } from "@app/features/common"
 import { TalismansTable } from "@app/features/talismans"
 
 export const TalismansTablePage = (_props: unknown): JSX.Element => {

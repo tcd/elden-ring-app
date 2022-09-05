@@ -2,7 +2,7 @@ import { forwardRef } from "react"
 import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { ErButton } from "@app/shared"
+import { ErButton } from "@app/features/common"
 
 import type { ErDialogProps } from "./types"
 import { Content } from "./Content"

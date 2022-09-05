@@ -5,7 +5,7 @@ import { isBlank } from "@app/util"
 import {
     StatRowPlusPlus,
     StatRowPlusPlusProps,
-} from "@app/shared"
+} from "@app/features/common"
 import { ComparableWeaponProps } from "."
 
 export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => {

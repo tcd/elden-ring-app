@@ -1,4 +1,4 @@
-import { Heading } from "@app/shared"
+import { Heading } from "@app/features/common"
 // import { SpellsTable } from "@app/features/spells"
 
 export const SpellsTablePage = (_props: unknown): JSX.Element => {

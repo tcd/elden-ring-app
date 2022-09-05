@@ -1,7 +1,7 @@
 // import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 
-import { ErDialog } from "@app/shared"
+import { ErDialog } from "@app/features/common"
 import { Actions, Selectors } from "@app/state"
 
 export const ConfirmationDialog = (_props: unknown): JSX.Element => {

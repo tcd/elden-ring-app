@@ -8,7 +8,7 @@ import { WeaponSlotId } from "@app/constants"
 import { WeaponSlotData } from "@app/types"
 import { weaponSlotDisplayName } from "@app/util"
 import { Actions } from "@app/state"
-import { MouseOverPopover } from "@app/shared"
+import { MouseOverPopover } from "@app/features/common"
 import { WeaponSlotContent } from "./WeaponSlotContent"
 
 // export interface ContextMenuState {

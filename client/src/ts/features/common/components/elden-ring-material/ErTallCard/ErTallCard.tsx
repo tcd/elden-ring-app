@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import { Box } from "@mui/material"
 
-import { ErIcon, ErCardBorder } from "@app/shared"
+import { ErIcon, ErCardBorder } from "@app/features/common"
 import { ComponentSx } from "@app/theme"
 import type { ErTallCardProps } from "./types"
 

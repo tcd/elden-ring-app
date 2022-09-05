@@ -1,7 +1,7 @@
 import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { MuiImg } from "@app/shared"
+import { MuiImg } from "@app/features/common"
 
 import type { ImageOptions } from "./types"
 

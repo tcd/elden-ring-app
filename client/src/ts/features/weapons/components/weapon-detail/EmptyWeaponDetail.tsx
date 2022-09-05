@@ -7,7 +7,7 @@ import {
     EquipmentDetailCard,
     StatRow,
     WeaponFpCost,
-} from "@app/shared"
+} from "@app/features/common"
 
 import { FlexBox } from "./FlexBox"
 

@@ -1,4 +1,4 @@
-import { ErPage, YouDied } from "@app/shared"
+import { ErPage, YouDied } from "@app/features/common"
 
 export const NotFoundPage = (_props: unknown): JSX.Element => {
     return (

@@ -6,7 +6,7 @@ import type { StartingClass } from "@app/types"
 import { AttributeNames } from "@app/types"
 import { ComponentSx } from "@app/theme"
 import { getImageSrc } from "@app/util"
-import { StatRow } from "@app/shared"
+import { StatRow } from "@app/features/common"
 import { Actions } from "@app/state"
 
 import { Equipment } from "./Equipment"

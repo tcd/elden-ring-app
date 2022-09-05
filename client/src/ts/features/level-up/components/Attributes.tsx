@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 
 import { AttributeName } from "@app/types"
 import { Selectors } from "@app/state"
-import { ErCard } from "@app/shared"
+import { ErCard } from "@app/features/common"
 import { AttributeRow } from "./AttributeRow"
 
 export const Attributes = (_props: unknown): JSX.Element => {

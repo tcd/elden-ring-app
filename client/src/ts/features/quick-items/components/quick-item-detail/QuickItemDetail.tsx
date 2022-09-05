@@ -5,7 +5,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailFullCard,
-} from "@app/shared"
+} from "@app/features/common"
 
 import { AttributeScaling } from "./AttributeScaling"
 

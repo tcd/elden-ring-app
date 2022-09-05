@@ -1,6 +1,6 @@
 import { RouteObject, useRoutes } from "react-router-dom"
 
-import { useViewport } from "@app/shared"
+import { useViewport } from "@app/features/common"
 import {
     AppLayout,
     MobileLayout,

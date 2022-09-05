@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-import { ErPage, useHash } from "@app/shared"
+import { ErPage, useHash } from "@app/features/common"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
 import { CharacterStatus } from "@app/features/character-status"
 

@@ -5,7 +5,7 @@ import { Box } from "@mui/material"
 import { IconNamesKey } from "@app/constants"
 import { ComponentSx } from "@app/theme"
 import { isBlank } from "@app/util"
-import { ErIcon } from "@app/shared"
+import { ErIcon } from "@app/features/common"
 
 import { ErCardBorder } from "./ErCardBorder"
 

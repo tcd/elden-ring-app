@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 
 import { isBlank } from "@app/util"
 import { Selectors } from "@app/state"
-import { ErPage, useHash } from "@app/shared"
+import { ErPage, useHash } from "@app/features/common"
 import { CharacterStatus } from "@app/features/character-status"
 import { EquipmentGrid } from "@app/features/equipment/components/equipment-grid"
 import { EquipmentPageDetail } from "@app/features/equipment/components/EquipmentPageDetail"

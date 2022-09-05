@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { TALISMAN_SORT_GROUPS, RefMap } from "@app/types"
 import { Actions, Selectors } from "@app/state"
 import { scrollToEquipmentCell, getImageSrc } from "@app/util"
-import { EquipmentMenu } from "@app/shared"
+import { EquipmentMenu } from "@app/features/common"
 
 export const TalismanMenuGrid = (): JSX.Element => {
 

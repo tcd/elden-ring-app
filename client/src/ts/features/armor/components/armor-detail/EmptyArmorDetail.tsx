@@ -3,7 +3,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailCard,
-} from "@app/shared"
+} from "@app/features/common"
 
 import {
     ARMOR_DEFENSE_STATS,

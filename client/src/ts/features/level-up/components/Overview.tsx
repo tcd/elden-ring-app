@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 
 import { DESCRIPTIONS } from "@app/data"
 import { Selectors } from "@app/state"
-import { ErCard, StatRow } from "@app/shared"
+import { ErCard, StatRow } from "@app/features/common"
 
 export const Overview = (_props: unknown): JSX.Element => {
 

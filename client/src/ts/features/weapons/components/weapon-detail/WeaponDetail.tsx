@@ -10,7 +10,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailCard,
-} from "@app/shared"
+} from "@app/features/common"
 
 import {
     WeaponAttackStats,

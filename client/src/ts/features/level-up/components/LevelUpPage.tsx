@@ -5,7 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2"
 
 import { isBlank } from "@app/util"
 import { Selectors } from "@app/state"
-import { ErPage } from "@app/shared"
+import { ErPage } from "@app/features/common"
 import { CharacterStatus } from "@app/features/character-status"
 
 import { Overview } from "./Overview"

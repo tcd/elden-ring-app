@@ -1,5 +1,5 @@
 
-import { ErCard } from "@app/shared"
+import { ErCard } from "@app/features/common"
 import { DefensePlus } from "."
 
 export const DefenseCard = (_props: unknown): JSX.Element => {

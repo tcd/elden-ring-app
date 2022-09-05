@@ -4,7 +4,7 @@ import { DESCRIPTIONS } from "@app/data"
 import { Encumbrance } from "@app/types"
 import { ThemeVars } from "@app/theme"
 import { Selectors } from "@app/state"
-import { StatRow, StatRowPlus } from "@app/shared"
+import { StatRow, StatRowPlus } from "@app/features/common"
 
 const equipmentLoadColor = (load: Encumbrance) => {
     switch (load) {

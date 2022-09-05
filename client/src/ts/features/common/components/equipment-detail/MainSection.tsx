@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Unstable_Grid2"
 
 import { ComponentSx } from "@app/theme"
-import { ErCard } from "@app/shared"
+import { ErCard } from "@app/features/common"
 
 import { MainSectionRows } from "./MainSectionRows"
 import { PrimaryImage } from "./PrimaryImage"

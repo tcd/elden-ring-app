@@ -7,7 +7,7 @@ import {
     StatRow,
     EquipmentDetail,
     EquipmentDetailProps,
-} from "@app/shared"
+} from "@app/features/common"
 
 const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
