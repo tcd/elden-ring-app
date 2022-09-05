@@ -1,4 +1,4 @@
 export * from "./ErGrid"
 export * from "./ErGridHeader"
-export * from "./EquipmentGrid"
+export * from "./EquipmentSlots"
 export * from "./EquipmentMenu"

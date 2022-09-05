@@ -157,7 +157,7 @@ const gridCellBackgroundSx = (backgroundImage: string): SxProps => ({
 // All Together
 // =============================================================================
 
-export const EquipmentGrid = {
+export const EquipmentSlots = {
     root: rootSx,
     grid: {
         container: gridContainerSx,

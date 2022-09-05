@@ -6,7 +6,7 @@ export const EquipmentSlotPlaceholder = (_props: unknown): JSX.Element => {
     return (
         <Box
             component="li"
-            sx={ComponentSx.EquipmentGrid.grid.cellPlaceholder}
+            sx={ComponentSx.EquipmentSlots.grid.cellPlaceholder}
         />
     )
 }

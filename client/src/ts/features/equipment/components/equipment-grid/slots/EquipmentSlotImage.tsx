@@ -46,7 +46,7 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
 
         const bgSrc = cssUrl(EquipmentSlotImageUrls[bgType])
         const filled = img?.src != null
-        const sx = filled ? ComponentSx.EquipmentGrid.grid.filledCell : ComponentSx.EquipmentGrid.grid.cell
+        const sx = filled ? ComponentSx.EquipmentSlots.grid.filledCell : ComponentSx.EquipmentSlots.grid.cell
 
         let $img: JSX.Element = null
 
@@ -55,7 +55,7 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
                 component="img"
                 src={img.src}
                 alt={img.alt}
-                sx={ComponentSx.EquipmentGrid.grid.cellImage}
+                sx={ComponentSx.EquipmentSlots.grid.cellImage}
             />
 
         }
@@ -67,7 +67,7 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
                 sx={sx}
                 {...BoxProps}
             >
-                <Box sx={ComponentSx.EquipmentGrid.grid.cellBackground(bgSrc)} />
+                <Box sx={ComponentSx.EquipmentSlots.grid.cellBackground(bgSrc)} />
                 {$img}
                 {children && children}
             </Box>
