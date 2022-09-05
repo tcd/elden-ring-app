@@ -15,7 +15,6 @@ export * from "./MdiIcon"
 export * from "./MouseOverPopover"
 export * from "./MuiImage"
 export * from "./ErPage"
-export * from "./PreloadOverlay"
 export * from "./RedX"
 export * from "./YouDied"
 
