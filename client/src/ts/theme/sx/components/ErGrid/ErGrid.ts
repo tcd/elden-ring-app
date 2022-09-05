@@ -61,7 +61,7 @@ const col3: GridProps = {
 // All Together
 // =============================================================================
 
-export const TriPage = {
+export const ErGrid = {
     container,
     col1Content,
     col1,

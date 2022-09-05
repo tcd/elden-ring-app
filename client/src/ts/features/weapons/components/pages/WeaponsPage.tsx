@@ -1,11 +1,11 @@
 import { ErPage } from "@app/shared"
-import { TriPage } from "@app/features/common2"
+import { ErGrid } from "@app/features/er-grid"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
 
 export const WeaponsPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="weapon">
-            <TriPage
+            <ErGrid
                 column1={<WeaponMenu />}
                 column2={<WeaponDetail />}
             />

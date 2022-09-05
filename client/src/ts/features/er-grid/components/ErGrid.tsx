@@ -4,7 +4,7 @@ import { Box } from "@mui/material"
 import { ComponentSx } from "@app/theme"
 import { CharacterStatus } from "@app/features/character-status"
 
-export interface TriPageProps {
+export interface ErGridProps {
     column1: React.ReactNode
     column2: React.ReactNode
 }
@@ -12,18 +12,18 @@ export interface TriPageProps {
 /**
  * Three column layout.
  */
-export const TriPage = (props: TriPageProps): JSX.Element => {
+export const ErGrid = (props: ErGridProps): JSX.Element => {
     return (
-        <Grid {...ComponentSx.TriPage.container}>
-            <Grid {...ComponentSx.TriPage.col1}>
-                <Box sx={ComponentSx.TriPage.col1Content}>
+        <Grid {...ComponentSx.ErGrid.container}>
+            <Grid {...ComponentSx.ErGrid.col1}>
+                <Box sx={ComponentSx.ErGrid.col1Content}>
                     {props?.column1 && props.column1}
                 </Box>
             </Grid>
-            <Grid {...ComponentSx.TriPage.col2}>
+            <Grid {...ComponentSx.ErGrid.col2}>
                 {props?.column2 && props.column2}
             </Grid>
-            <Grid {...ComponentSx.TriPage.col3}>
+            <Grid {...ComponentSx.ErGrid.col3}>
                 <CharacterStatus />
             </Grid>
         </Grid>
