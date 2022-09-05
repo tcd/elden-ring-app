@@ -1,6 +1,6 @@
 import { RouteObject, useRoutes } from "react-router-dom"
 
-import { useViewport } from "@app/features/common"
+import { useViewport } from "@app/util"
 import {
     AppLayout,
     MobileLayout,
@@ -8,6 +8,7 @@ import {
     // HomePage,
     NotFoundPage,
     AboutPage,
+    MobileAboutPage,
     SettingsPage,
     TestPage,
 } from "@app/features/core"
@@ -99,7 +100,7 @@ const mobileRoutes: RouteObject[] = [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },
             { path: "/",          element: <MobileEquipmentPage /> },
-            { path: "/about",     element: <AboutPage /> },
+            { path: "/about",     element: <MobileAboutPage /> },
             { path: "/builder",   element: <MobileBuilderPage /> },
             { path: "/checklist", element: <ChecklistPage /> },
             { path: "/settings",  element: <SettingsPage /> },

@@ -7,8 +7,8 @@ import {
 } from "react"
 
 import type { DeviceSize } from "@app/types"
-import { isBlank, logger, ScreenSize } from "@app/util"
 import { ThemeVars } from "@app/theme"
+import { isBlank, logger, ScreenSize } from "@app/util"
 
 /**
  * - https://www.w3.org/TR/screen-orientation/#screen-orientation-types-and-locks

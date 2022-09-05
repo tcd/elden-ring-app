@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react"
 
-import { ILogger } from "@app/types"
+import type { ILogger } from "@app/types"
 
 const loggingContext = createContext<ILogger | null>(null)
 loggingContext.displayName = "LoggingContext"
