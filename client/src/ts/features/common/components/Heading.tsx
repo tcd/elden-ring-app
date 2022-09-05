@@ -32,7 +32,7 @@ export const Heading = (props: HeadingProps): JSX.Element => {
         <Box>
 
             <Box sx={{ display: "flex", justifyContent: "space-between" }} style={style}>
-                <Typography variant="h4" gutterBottom component="div">
+                <Typography variant="h1" gutterBottom component="div">
                     {props.title}
                 </Typography>
                 <Box sx={{ height: "100%", display: "flex", justifyContent: "center", alignItems: "end" }}>

@@ -3,7 +3,7 @@ import type { CSSObject } from "@mui/material"
 // import { getImageSrcManual } from "@app/util"
 
 import { startingClass } from "../variables/variables.scss"
-import { defaultFontFamily } from "../variables/typography"
+import { typography } from "../variables/typography"
 import { gradients } from "../variables/gradients"
 // import { colors } from "../variables/colors"
 // import { cssUrl } from "../helpers/css-url"
@@ -28,11 +28,11 @@ const body: CSSObject = {
     ..._htmlAndBody,
     display: "flex",
     flexFlow: "column nowrap",
-    color: "#D3D3D3",
+    color: typography.colorFg,
     backgroundColor: "black",
-    fontFamily: defaultFontFamily,
+    fontFamily: typography.fontFamily.display,
     "& *": {
-        fontFamily: defaultFontFamily,
+        fontFamily: typography.fontFamily.display,
     },
 }
 

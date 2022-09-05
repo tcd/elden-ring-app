@@ -75,7 +75,7 @@ const title: SxProps = {
     my: 0,
     fontWeight: 500,
     lineHeight: 1.2,
-    fontFamily: ThemeVars.defaultFontFamily,
+    fontFamily: ThemeVars.typography.fontFamily.display,
     color: ThemeVars.colors.gold.light,
     fontSize: "34px",
 }

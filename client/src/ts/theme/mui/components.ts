@@ -13,6 +13,11 @@ export const components: Components = {
             "#root": baseStyles.root,
         },
     },
+    MuiTypography: {
+        defaultProps: {
+            display: "inline",
+        },
+    },
     MuiSvgIcon: {
         styleOverrides: {
             root: {

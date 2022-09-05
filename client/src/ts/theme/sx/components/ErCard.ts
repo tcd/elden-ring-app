@@ -70,7 +70,7 @@ const title_smallTitle: SxProps = {
 const title_noIcon: SxProps = {
     ...title,
     fontSize: "32px",
-    color: "#D3D3D3",
+    color: ThemeVars.typography.colorFg,
 }
 
 // =============================================================================

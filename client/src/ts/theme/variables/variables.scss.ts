@@ -1,6 +1,7 @@
 import Color from "color"
 
 import { rgba } from "../helpers"
+import { typography } from "./typography"
 
 export const unsortedColors = <const>{
     // offWhite: "#636155",
@@ -60,16 +61,6 @@ export const colorSystem = <const>{
 }
 
 // ----------------------------------------------------------------------------
-// Body
-// ----------------------------------------------------------------------------
-
-/** Settings for the `<body>` element. */
-export const body = <const>{
-    colorBg: colorSystem.black,
-    colorFg: "#d3d3d3",
-}
-
-// ----------------------------------------------------------------------------
 // Layout
 // ----------------------------------------------------------------------------
 
@@ -102,28 +93,20 @@ export const layout = <const>{
 // ----------------------------------------------------------------------------
 
 export const button = <const>{
-    bgColor: "#14120F",
-    fgColor: "#D3D3D3",
+    colorBg: "#14120F",
+    colorFg: typography.colorFg,
     borderColor: "#999999",
     horizontalPadding: "75px",
     verticalPadding: "5px",
 }
 
 // ----------------------------------------------------------------------------
-// Tables
+// Table
 // ----------------------------------------------------------------------------
 
 export const table = <const>{
-    colorFg: body.colorFg, // !default
-    colorBg: "transparent !default",
-}
-
-// ----------------------------------------------------------------------------
-// Data Table
-// ----------------------------------------------------------------------------
-
-export const dataTable = <const>{
-    colorFg: body.colorFg,
+    colorFg: typography.colorFg,
+    // colorBg: "transparent !default",
     headerColorBg: "#1c1c19",
     borderRadius: "0.25rem !important",
     borderColor: "#515151",
@@ -199,7 +182,7 @@ export const youDied = <const>{
 export const popover = <const>{
     borderSize: "2.5px",
     colorBg: "#181813",
-    colorFg: body.colorFg,
+    colorFg: typography.colorFg,
     colorBorder: "#938b7c",
 }
 
