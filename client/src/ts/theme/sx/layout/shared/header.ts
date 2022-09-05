@@ -72,7 +72,10 @@ const icon: SxProps = {
 
 /** `.er__appHeader__title` */
 const title: SxProps = {
-    mb: 0,
+    my: 0,
+    fontWeight: 500,
+    lineHeight: 1.2,
+    fontFamily: ThemeVars.defaultFontFamily,
     color: ThemeVars.colors.gold.light,
     fontSize: "34px",
 }

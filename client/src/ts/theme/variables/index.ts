@@ -1,5 +1,6 @@
 export * from "./breakpoints"
 export * from "./colors"
+export * from "./default-font-family"
 export * from "./gradients"
 export * from "./variables.scss"
 export * from "./z-index"

@@ -2,6 +2,7 @@ import type { CSSObject } from "@mui/material"
 
 // import { getImageSrcManual } from "@app/util"
 
+import { defaultFontFamily } from "../variables/default-font-family"
 // import { colors } from "../variables/colors"
 // import { cssUrl } from "../helpers/css-url"
 import { scrollbar } from "../helpers/scrollbar"
@@ -27,6 +28,10 @@ const body: CSSObject = {
     flexFlow: "column nowrap",
     color: "#D3D3D3",
     backgroundColor: "black",
+    fontFamily: defaultFontFamily,
+    "& *": {
+        fontFamily: defaultFontFamily,
+    },
 }
 
 // =============================================================================

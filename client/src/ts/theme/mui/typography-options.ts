@@ -1,13 +1,9 @@
 import type { TypographyOptions } from "@mui/material/styles/createTypography"
 
+import { defaultFontFamily } from "../variables/default-font-family"
+
 export const typographyOptions: TypographyOptions = {
     allVariants: {
-        fontFamily: [
-            "garamond-premier-pro-display",
-            "Garamond",
-            "Georgia",
-            `"Times New Roman"`,
-            "serif",
-        ].join(","),
+        fontFamily: defaultFontFamily,
     },
 }
