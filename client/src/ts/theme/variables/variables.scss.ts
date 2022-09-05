@@ -9,7 +9,7 @@ export const unsortedColors = <const>{
     EldenRingColor: {
         // menuBg: "#292927",
         menuBg: "#201F19",
-        menuFg: "#D6CDB8",
+        menuFg: "#D6CDB8", // used for footer
         green: "#265139",
         gold: "#C9BBA1",
     },
@@ -19,45 +19,6 @@ export const unsortedColors = <const>{
     //     gray: "#221e19",
     //     transparentGray: "rgba(#221e19, 0.85)",
     // },
-    CorrectColors: {
-        red:   "#CD3138",
-        blue:  "#527ED5",
-    },
-}
-
-// ----------------------------------------------------------------------------
-// Color System
-// ----------------------------------------------------------------------------
-
-const colorSystemRoot = <const>{
-    white:    "#d4d4d4",
-    black:    "#1e1e1e",
-    blue:    "#527ED5",
-    // indigo:  "#6610f2",
-    // purple:  "#6f42c1",
-    // pink:    "#d63384",
-    red:     "#CD3138",
-    // orange:  "#fd7e14",
-    yellow:  "#ebbd6c", // don't remember where I got these
-    green:   "#338636", // don't remember where I got these
-    teal:    "#20c997", // not final
-    // cyan:    "#0dcaf0",
-}
-
-const colorSystemTheme = <const>{
-    primary:       colorSystemRoot.blue,
-    secondary:     "gray-600",
-    success:       colorSystemRoot.teal,
-    info:          colorSystemRoot.blue,
-    warning:       colorSystemRoot.yellow,
-    danger:        colorSystemRoot.red,
-    light:         "gray-100",
-    dark:          "gray-900",
-}
-
-export const colorSystem = <const>{
-    ...colorSystemRoot,
-    ...colorSystemTheme,
 }
 
 // ----------------------------------------------------------------------------
