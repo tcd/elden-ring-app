@@ -12,6 +12,15 @@ import {
     imageFluid,
 } from "../mixins"
 
+const heightCalculation = [
+    "100%",
+    "24px",  // EquipmentGrid.header.title - fontSize
+    "0.2em", // EquipmentGrid.header.title - paddingBottom
+    "18px",  // EquipmentGrid.headerDescription - fontSize
+    "20px",  // EquipmentMenu.grid.root - padding
+    "20px", // little extra breathing room
+].join(" - ")
+
 // =============================================================================
 // Root
 // =============================================================================
@@ -30,7 +39,7 @@ const root: SxProps = {
 /** `.er__equipmentMenu__gridColumn` */
 const gridRoot: SxProps = {
     flexShrink: 1,
-    height: `calc(100% - 24px - 0.2em - 18px - 20px)`,
+    height: `calc(${heightCalculation})`,
     // maxHeight: "min(75vh, 700px)",
     // height: "70vh",
     // height: "80%",
