@@ -3,7 +3,7 @@ import type { SxProps } from "@mui/material"
 import { getImageSrcManual } from "@app/util"
 import {
     ThemeVars,
-    EldenRingMaterialTheme as Theme,
+    ThemeBreakpoints,
     cssUrl,
     transition,
 } from "@app/theme"
@@ -16,7 +16,7 @@ import {
 const overlay: SxProps = {
     zIndex: ThemeVars.zIndex.sideNavBackdrop,
     background: ThemeVars.gradients.sideNavBackdrop,
-    [Theme.breakpoints.down("sm")]: {
+    [ThemeBreakpoints.down("sm")]: {
         background: ThemeVars.gradients.sideNavMobileBackdrop,
     },
 }
@@ -37,7 +37,7 @@ const root: SxProps = {
     // margin: "0px",
     // padding: "0px",
 
-    [Theme.breakpoints.down("sm")]: {
+    [ThemeBreakpoints.down("sm")]: {
         width: ThemeVars.layout.sideNav.width.mobile,
     },
 }

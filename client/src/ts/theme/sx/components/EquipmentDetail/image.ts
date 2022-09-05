@@ -2,7 +2,7 @@ import type { SxProps } from "@mui/material"
 
 import {
     ThemeVars,
-    EldenRingMaterialTheme as Theme,
+    ThemeBreakpoints,
     rgba,
     boxShadow,
 } from "@app/theme"
@@ -30,7 +30,7 @@ const primaryImageWrapper: SxProps = {
     padding: "5px",
     width:  ThemeVars.equipmentDetail.primaryImage.size,
     height: ThemeVars.equipmentDetail.primaryImage.size,
-    [Theme.breakpoints.down("sm")]: {
+    [ThemeBreakpoints.down("sm")]: {
         width:  ThemeVars.equipmentDetail.primaryImage.mobileSize,
         height: ThemeVars.equipmentDetail.primaryImage.mobileSize,
     },
@@ -46,7 +46,7 @@ const secondaryImageWrapper: SxProps = {
     marginRight: "6px",
     width:  ThemeVars.equipmentDetail.secondaryImage.size,
     height: ThemeVars.equipmentDetail.secondaryImage.size,
-    [Theme.breakpoints.down("sm")]: {
+    [ThemeBreakpoints.down("sm")]: {
         width:  ThemeVars.equipmentDetail.secondaryImage.mobileSize,
         height: ThemeVars.equipmentDetail.secondaryImage.mobileSize,
     },

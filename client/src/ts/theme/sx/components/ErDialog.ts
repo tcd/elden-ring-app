@@ -5,7 +5,7 @@ import type {
 
 import {
     ThemeVars,
-    EldenRingMaterialTheme as Theme,
+    ThemeBreakpoints,
 } from "@app/theme"
 
 import {
@@ -51,7 +51,7 @@ const contentSx: SxProps = {
     display: "flex",
     justifyContent: "space-around",
     // tablet or smaller
-    [Theme.breakpoints.down("md")]: {
+    [ThemeBreakpoints.down("md")]: {
         flexDirection: "column",
         justifyContent: "space-between",
         paddingRight: "25px",
@@ -69,7 +69,7 @@ const dialogSx: SxProps = {
     backgroundColor: ThemeVars.modal.colorBg,
     background: ThemeVars.gradients.modalBody,
     // tablet or smaller
-    [Theme.breakpoints.down("md")]: {
+    [ThemeBreakpoints.down("md")]: {
         width: "90%",
     },
 }
@@ -81,7 +81,7 @@ const dialogSx: SxProps = {
 //     flexDirection: "",
 //     justifyContent: "space-around",
 //     // tablet or smaller
-//     [theme.breakpoints.down("md")]: {
+//     [ThemeBreakpoints.down("md")]: {
 //         flexDirection: "column",
 //         justifyContent: "space-between",
 //         paddingRight: "25px",
@@ -99,7 +99,7 @@ const dialogSx: SxProps = {
 //     backgroundColor: ThemeVars.modal.colorBg,
 //     background: ThemeVars.gradients.modalBody,
 //     // tablet or smaller
-//     [theme.breakpoints.down("md")]: {
+//     [ThemeBreakpoints.down("md")]: {
 //         width: "90%",
 //     },
 // })

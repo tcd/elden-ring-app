@@ -2,7 +2,7 @@ import type { SxProps } from "@mui/material"
 
 import {
     ThemeVars,
-    EldenRingMaterialTheme as Theme,
+    ThemeBreakpoints,
 } from "@app/theme"
 
 // =============================================================================
@@ -29,7 +29,7 @@ const bannerSx: SxProps = {
     width: "100%",
     textAlign: "center",
     background: ThemeVars.gradients.youDied,
-    [Theme.breakpoints.down("md")]: {
+    [ThemeBreakpoints.down("md")]: {
         height: "150px",
         width: "100%",
     },
@@ -40,7 +40,7 @@ const linkSx: SxProps = {
     fontSize: "4rem",
     color: ThemeVars.youDied.red,
     textDecoration: "none",
-    [Theme.breakpoints.down("md")]: {
+    [ThemeBreakpoints.down("md")]: {
         fontSize: "1.75rem",
     },
 }
