@@ -2,7 +2,7 @@ import { forwardRef } from "react"
 import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { ErGridHeader } from "@app/features/er-grid"
+import { ErGridHeader, ErGridWrapper } from "@app/features/er-grid"
 
 export interface EquipmentMenuProps {
     id?: string
@@ -22,11 +22,13 @@ export const EquipmentMenu = forwardRef(function EquipmentMenu(props: EquipmentM
 
     // FIXME: may need to move id to the grid component.
     return (
-        <Box sx={ComponentSx.EquipmentMenu.root} id={id}>
-            <ErGridHeader title={title} subTitle={subTitle} />
-            <Box sx={ComponentSx.EquipmentMenu.grid.root} ref={ref}>
-                {children && children}
+        <ErGridWrapper>
+            <Box sx={ComponentSx.EquipmentMenu.root} id={id}>
+                <ErGridHeader title={title} subTitle={subTitle} />
+                <Box sx={ComponentSx.EquipmentMenu.grid.root} ref={ref}>
+                    {children && children}
+                </Box>
             </Box>
-        </Box>
+        </ErGridWrapper>
     )
 })

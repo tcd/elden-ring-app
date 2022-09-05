@@ -57,6 +57,20 @@ const col3: GridProps = {
     },
 }
 
+
+/**
+ * Wraps the following components:
+ * - `EquipmentMenu`
+ * - `EquipmentSlots`
+ *
+ * They aren't always used inside of an `ErGrid`, so this makes sure they behave elsewhere.
+ */
+const gridWrapper: SxProps = {
+    height: "100%",
+    width: "100%",
+    boxSizing: "border-box",
+}
+
 // =============================================================================
 // All Together
 // =============================================================================
@@ -67,4 +81,5 @@ export const ErGrid = {
     col1,
     col2,
     col3,
+    gridWrapper,
 }

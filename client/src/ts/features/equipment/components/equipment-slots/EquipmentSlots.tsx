@@ -3,7 +3,7 @@ import { Box } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
 import { Selectors } from "@app/state"
-import { ErGridHeader } from "@app/features/er-grid"
+import { ErGridHeader, ErGridWrapper } from "@app/features/er-grid"
 
 import {
     ArmorSlots,
@@ -18,14 +18,16 @@ export const EquipmentSlots = (_props: unknown): JSX.Element => {
     const subTitle = useSelector(Selectors.Equipment.gridDescription)
 
     return (
-        <Box sx={ComponentSx.EquipmentSlots.root}>
-            <ErGridHeader title={title} subTitle={subTitle} />
-            <Box sx={ComponentSx.EquipmentSlots.grid.container}>
-                <WeaponSlots />
-                <ArmorSlots />
-                <TalismanSlots />
-                <QuickItemSlots />
+        <ErGridWrapper>
+            <Box sx={ComponentSx.EquipmentSlots.root}>
+                <ErGridHeader title={title} subTitle={subTitle} />
+                <Box sx={ComponentSx.EquipmentSlots.grid.container}>
+                    <WeaponSlots />
+                    <ArmorSlots />
+                    <TalismanSlots />
+                    <QuickItemSlots />
+                </Box>
             </Box>
-        </Box>
+        </ErGridWrapper>
     )
 }
