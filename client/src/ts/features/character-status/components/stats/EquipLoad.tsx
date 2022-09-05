@@ -23,6 +23,8 @@ export const EquipLoad = (_props: unknown): JSX.Element => {
     const equipLoadDescription = useSelector(Selectors.Meta.EquipLoad.description)
     // const equipLoadPercentage  = useSelector(Selectors.Meta.EquipLoad.percentage)
 
+    const color = equipmentLoadColor(equipLoadDescription) + " !important"
+
     return (
         <div>
             <StatRowPlus
@@ -31,9 +33,7 @@ export const EquipLoad = (_props: unknown): JSX.Element => {
                 value_2={maxEquipLoad.toFixed(1)}
                 description={DESCRIPTIONS.LEVEL_UP_SCREEN["Max Equip Load"]}
             />
-            <div style={{ color: equipmentLoadColor(equipLoadDescription) }}>
-                <StatRow title="" value={equipLoadDescription} />
-            </div>
+            <StatRow title="" value={equipLoadDescription} sx={{ color }} />
         </div>
     )
 }
