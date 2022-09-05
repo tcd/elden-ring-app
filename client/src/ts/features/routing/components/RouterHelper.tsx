@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Box } from "@mui/material"
 
 import { Actions, Selectors } from "@app/state"
-import { useHash } from "@app/features/common"
+import { useHash } from "@app/util"
 
 export const RouterHelper = (_props: unknown): JSX.Element => {
 

@@ -1,5 +1,6 @@
 import { ErTallCard, ErTallCardSection } from "@app/features/common"
-import { Attack, DefensePlus, Resistance } from "@app/features/character-status/components/stats"
+
+import { Attack, DefensePlus, Resistance } from "./stats"
 
 const attackSection     = <ErTallCardSection title="Attack Power"         content={<Attack/>} />
 const defenseSection    = <ErTallCardSection title="Defense/Dmg Negation" content={<DefensePlus/>} />

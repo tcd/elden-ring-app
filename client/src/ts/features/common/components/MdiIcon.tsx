@@ -1,4 +1,5 @@
-import SvgIcon, { SvgIconProps } from "@mui/material/SvgIcon"
+import type { SvgIconProps } from "@mui/material"
+import { SvgIcon } from "@mui/material"
 
 type MaterialColor = "inherit" | "disabled" | "action" | "primary" | "secondary" | "error" | "info" | "success" | "warning"
 

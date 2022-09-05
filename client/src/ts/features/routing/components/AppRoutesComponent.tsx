@@ -12,10 +12,10 @@ import {
     SettingsPage,
     TestPage,
 } from "@app/features/core"
-import {
-    BuilderPage,
-    MobileBuilderPage,
-} from "@app/features/builder"
+// import {
+//     BuilderPage,
+//     MobileBuilderPage,
+// } from "@app/features/builder"
 import { StatusPage } from "@app/features/character-status"
 import { ChecklistPage } from "@app/features/checklist"
 import { LevelUpPage } from "@app/features/level-up"
@@ -62,7 +62,7 @@ const desktopRoutes: RouteObject[] = [
             // { path: "/", element: <HomePage /> },
             { path: "/",          element: <EquipmentPage /> },
             { path: "/about",     element: <AboutPage /> },
-            { path: "/builder",   element: <BuilderPage /> },
+            // { path: "/builder",   element: <BuilderPage /> },
             { path: "/checklist", element: <ChecklistPage /> },
             { path: "/settings",  element: <SettingsPage /> },
             { path: "/status",    element: <StatusPage /> },
@@ -101,7 +101,7 @@ const mobileRoutes: RouteObject[] = [
             // { path: "/", element: <HomePage /> },
             { path: "/",          element: <MobileEquipmentPage /> },
             { path: "/about",     element: <MobileAboutPage /> },
-            { path: "/builder",   element: <MobileBuilderPage /> },
+            // { path: "/builder",   element: <MobileBuilderPage /> },
             { path: "/checklist", element: <ChecklistPage /> },
             { path: "/settings",  element: <SettingsPage /> },
             { path: "/status",    element: <StatusPage /> },
