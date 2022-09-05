@@ -6,7 +6,7 @@ import { invisibleContent } from "../mixins"
 
 const statRowStyles: SxProps = {
     fontSize: ThemeVars.typography.statRowFontSize,
-    color: ThemeVars.body.colorFg,
+    color: ThemeVars.typography.colorFg,
     "& span": {
         // FIXME: should this be "pre"?
         whiteSpace: "nowrap",

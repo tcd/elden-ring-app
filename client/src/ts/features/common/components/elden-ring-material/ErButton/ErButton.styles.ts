@@ -17,6 +17,6 @@ export const sx: SxProps = {
     padding: `${vars.verticalPadding} ${vars.horizontalPadding}`,
     backgroundColor: vars.bgColor,
     color: vars.fgColor,
-    textShadow: `${ThemeVars.typography.textShadowOffset} black`,
+    textShadow: ThemeVars.defaultTextShadow,
     ...goldenHover,
 }

@@ -4,9 +4,9 @@ import { createTheme } from "@mui/material"
 import {
     components,
     paletteOptions,
-    typographyOptions,
 } from "./mui"
 import { breakpointsOptions } from "./variables/breakpoints"
+import { typographyOptions } from "./variables/typography"
 
 const options: ThemeOptions = {
     palette: paletteOptions,
