@@ -6,7 +6,7 @@ import type {
     Weapon,
 } from "@app/types"
 
-import { MuiImg } from "../MuiImage"
+import { MuiImg } from "./MuiImage"
 
 export interface SpellDamageTypesProps {
     spell: Spell
