@@ -1,16 +1,15 @@
-export const QuickItemSlotIds = {
-    "1":   "1",
-    "2":   "2",
-    "3":   "3",
-    "4":   "4",
-    "5":   "5",
-    "6":   "6",
-    "7":   "7",
-    "8":   "8",
-    "9":   "9",
-    "10": "10",
+export const QuickItemSlotIds = <const>{
+    "1":   "Q1",
+    "2":   "Q2",
+    "3":   "Q3",
+    "4":   "Q4",
+    "5":   "Q5",
+    "6":   "Q6",
+    "7":   "Q7",
+    "8":   "Q8",
+    "9":   "Q9",
+    "10": "Q10",
 }
 
 type QuickItemSlotIdsKey = keyof typeof QuickItemSlotIds
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type QuickItemSlotId = typeof QuickItemSlotIds[QuickItemSlotIdsKey] & {}
+export type QuickItemSlotId = typeof QuickItemSlotIds[QuickItemSlotIdsKey]

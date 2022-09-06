@@ -4,7 +4,6 @@ import {
     TalismanSlotId,
     AmmunitionSlotId,
     QuickItemSlotId,
-    // SpellSlotId,
 } from "@app/constants"
 
 export type EquipmentType = "Weapon" | "Armor" | "Talisman" | "Ammunition" | "QuickItem"
@@ -14,7 +13,6 @@ export type EquipmentSlotId =
     | TalismanSlotId
     | AmmunitionSlotId
     | QuickItemSlotId
-    // | SpellSlotId
 
 export const EQUIPMENT_SLOT_SORT_ORDER: Record<EquipmentSlotId, Integer> = {
     R1:     1,
@@ -35,4 +33,14 @@ export const EQUIPMENT_SLOT_SORT_ORDER: Record<EquipmentSlotId, Integer> = {
     T2:    16,
     T3:    17,
     T4:    18,
+    Q1:    19,
+    Q2:    20,
+    Q3:    21,
+    Q4:    22,
+    Q5:    23,
+    Q6:    24,
+    Q7:    25,
+    Q8:    26,
+    Q9:    27,
+    Q10:   28,
 }
