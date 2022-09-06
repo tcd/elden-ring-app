@@ -54,10 +54,20 @@ const gridContainerSx: SxProps = {
     height: `calc(${heightCalculation})`,
     paddingTop: "0px",
 
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: "wrap",
-    // whiteSpace: "nowrap",
+    // display: "flex",
+    // flexDirection: "row",
+    // flexWrap: "wrap",
+    // // whiteSpace: "nowrap",
+
+    /**
+     * - [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+     * - [MDN - `repeat()`](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
+     *
+     */
+    display: "inline-grid",
+    gridTemplateColumns: "repeat(5, 1fr)",
+    gridGap: "0px",
+    gridAutoRows: "minmax(min-content, max-content)",
 }
 
 // =============================================================================
@@ -77,8 +87,8 @@ const _cellShared: SxProps = {
     // },
 
     aspectRatio: "8/9",
-    /* flex-grow | flex-shrink | flex-basis */
-    flex: "1 0 calc(20% - 5px)",
+    // /* flex-grow | flex-shrink | flex-basis */
+    // flex: "1 0 calc(20% - 5px)",
 }
 
 /** `.er__equipmentGrid__cell--placeholder` */
