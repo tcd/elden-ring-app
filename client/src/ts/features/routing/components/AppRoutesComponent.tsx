@@ -101,7 +101,7 @@ const mobileRoutes: RouteObject[] = [
             // { path: "/", element: <HomePage /> },
             { path: "/",          element: <MobileEquipmentPage /> },
             { path: "/about",     element: <MobileAboutPage /> },
-            // { path: "/builder",   element: <MobileBuilderPage /> },
+            // { path: "/builder",   element: <BuilderPage /> },
             { path: "/checklist", element: <ChecklistPage /> },
             { path: "/settings",  element: <SettingsPage /> },
             { path: "/status",    element: <StatusPage /> },
