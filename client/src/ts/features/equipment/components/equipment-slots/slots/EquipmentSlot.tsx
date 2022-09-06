@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
-import type { BoxProps } from "@mui/material"
-import { forwardRef } from "react"
+import type { BoxProps, SxProps } from "@mui/material"
+import { forwardRef, useEffect, useState } from "react"
 import { Box } from "@mui/material"
 
 import type { EquipmentSlotId } from "@app/types"
@@ -37,6 +37,8 @@ export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
             BoxProps,
         } = { ...defaultProps, ...props }
 
+        const [extraSx, setExtraSx] = useState<SxProps>()
+
         const activeSlotId = useSelector(Selectors.Equipment.activeSlotId)
 
         if (BoxProps?.onMouseEnter) {
@@ -60,14 +62,23 @@ export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
                 alt={img.alt}
                 sx={ComponentSx.EquipmentSlots.grid.cellImage}
             />
-
         }
+
+        useEffect(() => {
+            if (slotId === activeSlotId) {
+                // setExtraSx({ backgroundColor: "blue" })
+            } else {
+                setExtraSx({})
+            }
+        }, [activeSlotId, slotId, setExtraSx])
 
         return (
             <Box
                 ref={ref}
                 component="li"
-                sx={sx}
+                // FIXME: what tf is this error
+                // @ts-ignore: next-line
+                sx={{ ...sx, ...extraSx }}
                 {...BoxProps}
             >
                 <Box sx={ComponentSx.EquipmentSlots.grid.cellBackground(bgSrc)} />
