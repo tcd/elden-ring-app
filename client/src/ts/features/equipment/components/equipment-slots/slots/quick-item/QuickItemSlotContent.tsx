@@ -7,7 +7,7 @@ import type { QuickItem } from "@app/types"
 import { getImageSrcManual } from "@app/util"
 import { Actions } from "@app/state"
 
-import { EquipmentSlot } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlot"
 
 
 interface QuickItemSlotProps {

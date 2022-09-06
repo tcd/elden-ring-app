@@ -7,7 +7,7 @@ import type { Armor } from "@app/types"
 import { Actions } from "@app/state"
 import { getImageSrc } from "@app/util"
 
-import { EquipmentSlot } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlot"
 
 interface ArmorSlotProps {
     type: ArmorType

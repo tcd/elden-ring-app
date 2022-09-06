@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"
 import type { AmmunitionSlotId } from "@app/constants"
 import { Actions } from "@app/state"
 
-import { EquipmentSlot } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlot"
 
 export interface AmmunitionSlotProps {
     id: AmmunitionSlotId

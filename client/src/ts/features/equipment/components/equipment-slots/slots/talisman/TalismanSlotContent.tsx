@@ -7,7 +7,7 @@ import type { Talisman } from "@app/types"
 import { getImageSrc } from "@app/util"
 import { Actions } from "@app/state"
 
-import { EquipmentSlot } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlot"
 
 interface TalismanSlotProps {
     id: TalismanSlotId

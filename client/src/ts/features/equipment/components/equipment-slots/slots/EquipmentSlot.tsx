@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux"
 import type { BoxProps } from "@mui/material"
 import { forwardRef } from "react"
 import { Box } from "@mui/material"
@@ -9,6 +10,7 @@ import {
     EquipmentSlotBackgroundId,
     Audio,
 } from "@app/util"
+import { Selectors } from "@app/state"
 
 export interface EquipmentSlotProps {
     slotId: EquipmentSlotId
@@ -31,8 +33,11 @@ export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
         const {
             bgType,
             img,
+            slotId,
             BoxProps,
         } = { ...defaultProps, ...props }
+
+        const activeSlotId = useSelector(Selectors.Equipment.activeSlotId)
 
         if (BoxProps?.onMouseEnter) {
             const _onMouseEnter = BoxProps.onMouseEnter
