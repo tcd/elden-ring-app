@@ -1,18 +1,17 @@
-export const SpellSlotIds = {
-    "1":   "1",
-    "2":   "2",
-    "3":   "3",
-    "4":   "4",
-    "5":   "5",
-    "6":   "6",
-    "7":   "7",
-    "8":   "8",
-    "9":   "9",
-    "10": "10",
-    "11": "11",
-    "12": "12",
+export const SpellSlotIds = <const>{
+    "1":   "S1",
+    "2":   "S2",
+    "3":   "S3",
+    "4":   "S4",
+    "5":   "S5",
+    "6":   "S6",
+    "7":   "S7",
+    "8":   "S8",
+    "9":   "S9",
+    "10": "S10",
+    "11": "S11",
+    "12": "S12",
 }
 
 type SpellSlotIdsKey = keyof typeof SpellSlotIds
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type SpellSlotId = typeof SpellSlotIds[SpellSlotIdsKey] & {}
+export type SpellSlotId = typeof SpellSlotIds[SpellSlotIdsKey]
