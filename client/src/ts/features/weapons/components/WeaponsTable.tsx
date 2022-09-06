@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux"
+import { Box } from "@mui/material"
 
 import { Weapon } from "@app/types"
+import { ThemeVars } from "@app/theme"
 import { getImageSrc } from "@app/util"
 import { Selectors } from "@app/state"
 import {
@@ -45,9 +47,9 @@ const renderWeaponSkillCell = (weapon: Weapon) => {
         )
     } else {
         return (
-            <span className="text-special">
+            <Box component="span" sx={{ color: ThemeVars.colors.gold.light }}>
                 {skill.name}
-            </span>
+            </Box>
         )
     }
 }
@@ -59,11 +61,10 @@ const renderDamageTypesCell = (weapon: Weapon) => {
 }
 
 const renderNameCell = (weapon: Weapon) => {
-    const className = weapon.is_special ? "text-special" : ""
     return (
-        <span className={className}>
+        <Box component="span" sx={{ color: (weapon.is_special ? ThemeVars.colors.gold.light : undefined) }}>
             {weapon.name}
-        </span>
+        </Box>
     )
 }
 
