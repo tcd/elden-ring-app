@@ -32,7 +32,7 @@ const bigScreens = mediaQuery({ minHeight: "580px" })
 
 /** `#er__equipmentGrid` */
 const rootSx: SxProps = {
-    backgroundColor: "DarkKhaki",
+    // backgroundColor: "DarkKhaki",
 
     height: "100%",
     width: "100%",
@@ -49,7 +49,7 @@ const rootSx: SxProps = {
 
 /** `.er__equipmentGrid__row` */
 const gridContainerSx: SxProps = {
-    backgroundColor: "green",
+    // backgroundColor: "green",
 
     height: `calc(${heightCalculation})`,
     paddingTop: "0px",
@@ -73,6 +73,36 @@ const gridContainerSx: SxProps = {
 // =============================================================================
 // Cell
 // =============================================================================
+
+const _cellActive: SxProps = {
+    "&::after": {
+        zIndex: ThemeVars.zIndex.equipmentGridCellHover,
+        content: ThemeVars.ZWSP,
+        position: "absolute",
+        top:    "12%",
+        bottom: "10%",
+        left:   "10%",
+        right:  "10%",
+        cursor: "pointer",
+        borderRadius: "1px",
+        // FIXME: move to `ThemeVars.gradients
+        background: radialGradient({
+            direction: "ellipse",
+            color: ThemeVars.colors.gold.dark,
+            stops: [
+                { percentage:  "40%", transparency: 0.0 },
+                { percentage: "100%", transparency: 0.4 },
+            ],
+        }),
+        boxShadow: boxShadow({
+            x:      "0px",
+            y:      "0px",
+            blur:   "2px",
+            spread: "1px",
+            color:  rgba(ThemeVars.colors.gold.dark, 0.5).hexa(),
+        }),
+    },
+}
 
 const _cellShared: SxProps = {
     zIndex: ThemeVars.zIndex.equipmentGridCell,
@@ -104,33 +134,7 @@ const gridCellSx: SxProps = {
     position: "relative",
     "&:hover": {
         cursor: "pointer",
-        "&::after": {
-            zIndex: ThemeVars.zIndex.equipmentGridCellHover,
-            content: ThemeVars.ZWSP,
-            position: "absolute",
-            top:    "12%",
-            bottom: "10%",
-            left:   "10%",
-            right:  "10%",
-            cursor: "pointer",
-            borderRadius: "1px",
-            // FIXME: move to `ThemeVars.gradients
-            background: radialGradient({
-                direction: "ellipse",
-                color: ThemeVars.colors.gold.dark,
-                stops: [
-                    { percentage:  "40%", transparency: 0.0 },
-                    { percentage: "100%", transparency: 0.4 },
-                ],
-            }),
-            boxShadow: boxShadow({
-                x:      "0px",
-                y:      "0px",
-                blur:   "2px",
-                spread: "1px",
-                color:  rgba(ThemeVars.colors.gold.dark, 0.5).hexa(),
-            }),
-        },
+        ..._cellActive,
     },
 }
 

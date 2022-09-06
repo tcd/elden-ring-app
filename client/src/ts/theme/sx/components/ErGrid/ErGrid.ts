@@ -24,15 +24,16 @@ const col1: GridProps = {
     sm: 5,
     sx: {
         height: `calc(${heightCalculation})`,
-        backgroundColor: "indianRed",
+        // backgroundColor: "indianRed",
     },
 }
 
 const col1Content: SxProps = {
+    // backgroundColor: "DarkOrange",
+
     height: "100%",
     width: "100%",
     boxSizing: "border-box",
-    backgroundColor: "DarkOrange",
     [ThemeBreakpoints.down("sm")]: {
         px: "10%",
     },
