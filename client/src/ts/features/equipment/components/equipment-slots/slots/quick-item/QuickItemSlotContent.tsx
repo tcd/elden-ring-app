@@ -46,6 +46,7 @@ export const QuickItemSlotContent = forwardRef<HTMLLIElement, QuickItemSlotProps
     return (
         <EquipmentSlotImage
             ref={ref}
+            slotId={id}
             bgType="QuickItem"
             img={imgProps}
             BoxProps={{

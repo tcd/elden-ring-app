@@ -48,6 +48,7 @@ export const ArmorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(functi
     return (
         <EquipmentSlotImage
             ref={ref}
+            slotId={type}
             bgType={type}
             img={imgProps}
             BoxProps={{

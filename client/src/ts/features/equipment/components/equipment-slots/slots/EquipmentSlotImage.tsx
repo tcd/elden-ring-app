@@ -1,8 +1,8 @@
-import type { ReactNode } from "react"
 import type { BoxProps } from "@mui/material"
 import { forwardRef } from "react"
 import { Box } from "@mui/material"
 
+import type { EquipmentSlotId } from "@app/types"
 import { ComponentSx, cssUrl } from "@app/theme"
 import {
     EquipmentSlotImageUrls,
@@ -11,17 +11,16 @@ import {
 } from "@app/util"
 
 export interface EquipmentSlotImageProps {
+    slotId: EquipmentSlotId
     bgType: EquipmentSlotBackgroundId
-    children?: ReactNode
     img: {
         src: string
         alt: string
     },
-    BoxProps?: BoxProps<"li">
+    BoxProps?: Omit<BoxProps<"li">, "children">
 }
 
 const defaultProps: Partial<EquipmentSlotImageProps> = {
-    children: null,
     img: { src: null, alt: null },
     BoxProps: {},
 }
@@ -31,7 +30,6 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
 
         const {
             bgType,
-            children,
             img,
             BoxProps,
         } = { ...defaultProps, ...props }
@@ -69,7 +67,6 @@ export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImagePr
             >
                 <Box sx={ComponentSx.EquipmentSlots.grid.cellBackground(bgSrc)} />
                 {$img}
-                {children && children}
             </Box>
         )
     },

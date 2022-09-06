@@ -2,9 +2,10 @@ import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import { WeaponSlotId, WeaponSlotData } from "@app/types"
+import type { WeaponSlotId, WeaponSlotData } from "@app/types"
 import { getImageSrc, EquipmentSlotBackgroundId } from "@app/util"
 import { Actions } from "@app/state"
+
 import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 export interface WeaponSlotProps {
@@ -50,6 +51,7 @@ export const WeaponSlotContent = forwardRef<HTMLLIElement, WeaponSlotProps>(func
     return (
         <EquipmentSlotImage
             ref={ref}
+            slotId={slotId}
             bgType={type}
             img={imgProps}
             BoxProps={{

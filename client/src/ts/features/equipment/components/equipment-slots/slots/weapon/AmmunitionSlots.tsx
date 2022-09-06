@@ -31,6 +31,7 @@ export const ArrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function
     return (
         <EquipmentSlotImage
             ref={ref}
+            slotId={id}
             bgType="Arrow"
             img={null}
             BoxProps={{
@@ -64,6 +65,7 @@ export const BoltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function 
     return (
         <EquipmentSlotImage
             ref={ref}
+            slotId={id}
             bgType="Bolt"
             img={null}
             BoxProps={{

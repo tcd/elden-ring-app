@@ -50,6 +50,7 @@ export const TalismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(
     return (
         <EquipmentSlotImage
             ref={ref}
+            slotId={id}
             bgType="Talisman"
             img={imgProps}
             BoxProps={{
