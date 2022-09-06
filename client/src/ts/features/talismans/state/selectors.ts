@@ -20,10 +20,10 @@ const _selectTalismanNameBySlotId = (rootState: RootState, slotId: TalismanSlotI
     return selectTalismanNames(rootState)?.[slotId]
 }
 
-const selectTalisman1Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "1")
-const selectTalisman2Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "2")
-const selectTalisman3Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "3")
-const selectTalisman4Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "4")
+const selectTalisman1Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T1")
+const selectTalisman2Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T2")
+const selectTalisman3Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T3")
+const selectTalisman4Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T4")
 
 const selectTalisman1 = (rootState: RootState): Talisman => { return _selectTalisman(rootState, selectTalisman1Name(rootState)) }
 const selectTalisman2 = (rootState: RootState): Talisman => { return _selectTalisman(rootState, selectTalisman2Name(rootState)) }

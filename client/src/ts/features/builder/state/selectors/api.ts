@@ -1,4 +1,6 @@
-import { RootState } from "@app/state"
+import type { RootState } from "@app/state"
+import type { Armor, AttackElementCorrectParam, Spell, Talisman, Weapon, WeaponSkill, WeaponType } from "@app/types"
+
 import { selectBuilderSlice } from "./select-slice"
 import { KITCHEN_SINK_DATA } from "../../../../data/kitchen-sink"
 
@@ -28,11 +30,10 @@ export const selectFetchSuccessful = (rootState: RootState) => {
     return (status === "fulfilled")
 }
 
-export const selectArmor                      = (rootState: RootState) => KITCHEN_SINK_DATA.armor                         ?? []
-export const selectSpells                     = (rootState: RootState) => KITCHEN_SINK_DATA.spells                        ?? []
-export const selectTalismans                  = (rootState: RootState) => KITCHEN_SINK_DATA.talismans                     ?? []
-export const selectWeapons                    = (rootState: RootState) => KITCHEN_SINK_DATA.weapons                       ?? []
-export const selectWeaponSkills               = (rootState: RootState) => KITCHEN_SINK_DATA.weapon_skills                 ?? []
-export const selectWeaponTypes                = (rootState: RootState) => KITCHEN_SINK_DATA.weapon_types                  ?? []
-export const selectAttackElementCorrectParams = (rootState: RootState) => KITCHEN_SINK_DATA.attack_element_correct_params ?? []
-
+export const selectArmor                      = (_rootState: RootState): Armor[]                     => KITCHEN_SINK_DATA.armor                         ?? []
+export const selectSpells                     = (_rootState: RootState): Spell[]                     => KITCHEN_SINK_DATA.spells                        ?? []
+export const selectTalismans                  = (_rootState: RootState): Talisman[]                  => KITCHEN_SINK_DATA.talismans                     ?? []
+export const selectWeapons                    = (_rootState: RootState): Weapon[]                    => KITCHEN_SINK_DATA.weapons                       ?? []
+export const selectWeaponSkills               = (_rootState: RootState): WeaponSkill[]               => KITCHEN_SINK_DATA.weapon_skills                 ?? []
+export const selectWeaponTypes                = (_rootState: RootState): WeaponType[]                => KITCHEN_SINK_DATA.weapon_types                  ?? []
+export const selectAttackElementCorrectParams = (_rootState: RootState): AttackElementCorrectParam[] => KITCHEN_SINK_DATA.attack_element_correct_params ?? []

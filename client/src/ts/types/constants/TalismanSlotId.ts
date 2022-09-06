@@ -1,10 +1,9 @@
-export const TalismanSlotIds = {
-    "1": "1",
-    "2": "2",
-    "3": "3",
-    "4": "4",
+export const TalismanSlotIds = <const>{
+    "1": "T1",
+    "2": "T2",
+    "3": "T3",
+    "4": "T4",
 }
 
 type TalismanSlotIdsKey = keyof typeof TalismanSlotIds
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type TalismanSlotId = typeof TalismanSlotIds[TalismanSlotIdsKey] & {}
+export type TalismanSlotId = typeof TalismanSlotIds[TalismanSlotIdsKey]

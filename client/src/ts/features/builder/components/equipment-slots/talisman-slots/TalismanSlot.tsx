@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import { TalismanSlotId } from "@app/constants"
+import type { TalismanSlotId } from "@app/constants"
 import { Talisman } from "@app/types"
 import { MouseOverPopover, ErContextMenu } from "@app/features/common"
 import { Actions } from "@app/state"
@@ -15,17 +15,22 @@ interface TalismanSlotProps {
 
 export const TalismanSlot = (props: TalismanSlotProps): JSX.Element => {
 
+    const {
+        id,
+        talisman = null,
+    } = props
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const titleString = props?.talisman ? props.talisman.name : `Talisman ${props.id}`
+    const titleString = talisman ? talisman.name : `Talisman ${id?.[1]}`
 
     const handleClickChange = () => {
-        navigate(`/talismans/${props.id}#grid`)
+        navigate(`/talismans/${id}#grid`)
     }
 
     const handleClickUnequip = () => {
-        dispatch(Actions.Talismans.removeTalismanBySlot({ id: props.id }))
+        dispatch(Actions.Talismans.removeTalismanBySlot({ id }))
     }
 
     let menuItems = [
@@ -40,8 +45,8 @@ export const TalismanSlot = (props: TalismanSlotProps): JSX.Element => {
     }
 
     return (
-        <ErContextMenu id={`${props.id}-slot--context-menu`} options={menuItems}>
-            <MouseOverPopover id={`talisman-slot-${props.id}--popover`} popoverContent={titleString}>
+        <ErContextMenu id={`${id}-slot--context-menu`} options={menuItems}>
+            <MouseOverPopover id={`talisman-slot-${id}--popover`} popoverContent={titleString}>
                 <TalismanSlotContent {...props} />
             </MouseOverPopover>
         </ErContextMenu>

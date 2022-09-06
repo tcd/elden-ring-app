@@ -2,9 +2,10 @@ import { useSelector } from "react-redux"
 
 import { TalismanSlotIds } from "@app/types"
 import { Selectors } from "@app/state"
+
 import { TalismanSlot } from "./TalismanSlot"
 
-export const TalismanSlots = (): JSX.Element => {
+export const TalismanSlots = (_props: unknown): JSX.Element => {
 
     const talismans = useSelector(Selectors.Talismans.array)
 

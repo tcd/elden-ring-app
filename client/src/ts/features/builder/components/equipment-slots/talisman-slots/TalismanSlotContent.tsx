@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { Talisman, TalismanSlotId } from "@app/types"
+import type { Talisman, TalismanSlotId } from "@app/types"
 import { cssUrl } from "@app/theme"
 import { getImageSrc, EquipmentSlotImageUrls } from "@app/util"
 import { Actions } from "@app/state"
@@ -29,7 +29,7 @@ export const TalismanSlotContent = forwardRef(function TalismanSlotContent({ id,
 
     const elementId = `talisman-slot-${id}`
     const classNames = ["er__equipmentSlot"]
-    let titleString = `Talisman ${id}`
+    let titleString = `Talisman ${id?.[1]}`
     let talismanImage: JSX.Element = null
 
     if (talisman) {
