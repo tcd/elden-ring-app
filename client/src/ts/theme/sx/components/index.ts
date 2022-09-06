@@ -1,6 +1,7 @@
 export * from "./AboutPage"
 export * from "./AffinityModal"
 export * from "./Anchor"
+export * from "./ContextMenu"
 export * from "./EquipmentDetail"
 export * from "./ErCard"
 export * from "./ErDialog"
