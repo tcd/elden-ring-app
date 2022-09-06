@@ -33,10 +33,10 @@ const body: CSSObject = {
     backgroundColor: "black",
     fontFamily: typography.fontFamily.display,
     // "*::before, *::after": {
-    //     boxSizing: "borderBox",
+    //     boxSizing: "border-box",
     // },
     "& *": {
-        boxSizing: "borderBox",
+        boxSizing: "border-box",
         fontFamily: typography.fontFamily.display,
     },
     "& a": {
