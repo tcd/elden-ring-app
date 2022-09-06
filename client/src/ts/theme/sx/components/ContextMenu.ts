@@ -10,8 +10,10 @@ import {
 } from "../mixins"
 
 /** `#er__contextMenu` */
-const root: SxProps = {
+const root: React.CSSProperties = {
     zIndex: ThemeVars.zIndex.contextMenu,
+
+    width: "200px",
 
     display: "flex",
     flexFlow: "column nowrap",

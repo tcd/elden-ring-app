@@ -10,6 +10,7 @@ export interface EPopoverContentProps {
 export const ErTooltipContent = (props: EPopoverContentProps): JSX.Element => {
     return (
         <Box sx={ComponentSx.ErTooltip.root}>
+            {/* FIXME: this className isn't referenced anywhere; can probably be removed */}
             <Box className="er__popover__content">
                 <>{props?.children}</>
             </Box>
