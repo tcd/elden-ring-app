@@ -77,6 +77,12 @@ const _cellShared: SxProps = {
     flex: "1 0 calc(20% - 5px)",
 }
 
+/** `.er__equipmentGrid__cell--placeholder` */
+const gridCellPlaceholderSx: SxProps = {
+    ...invisibleContent,
+    ..._cellShared,
+}
+
 /** `.er__equipmentGrid__cell` */
 const gridCellSx: SxProps = {
     ..._cellShared,
@@ -123,12 +129,6 @@ const gridCellFilledSx: SxProps = {
     // "& > img": {
     //     padding: "10px",
     // },
-}
-
-/** `.er__equipmentGrid__cell--placeholder` */
-const gridCellPlaceholderSx: SxProps = {
-    ...invisibleContent,
-    ..._cellShared,
 }
 
 /** `.er__equipmentGrid__cellImage` */
