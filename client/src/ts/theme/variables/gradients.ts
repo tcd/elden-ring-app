@@ -24,7 +24,10 @@ export const gradients = <const>{
     // -------------------------------------------------------------------------
 
     modalBody:            linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalBody            }),
-    modalTopBottomBorder: linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalTopBottomBorder }),
+    modalHorizontalBorder: [
+        linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalTopBottomBorder }),
+        modal.colorBorder,
+    ].join(", "),
     modalInnerBorder: [
         linearGradient({ direction: "90deg", color: modal.colorBg, stops: gradientStops.modalInnerBorder1 }),
         linearGradient({ direction: "180deg",                      stops: gradientStops.modalInnerBorder2 }),
@@ -48,7 +51,6 @@ export const gradients = <const>{
     // Context Menu
     // -------------------------------------------------------------------------
 
-    /* contextMenu = modalBody */
     contextMenuItem:       linearGradient({ direction: "90deg", color: contextMenu.item.colorBg,       stops: gradientStops.contextMenuItem }),
     contextMenuItemActive: linearGradient({ direction: "90deg", color: contextMenu.item.colorBgActive, stops: gradientStops.contextMenuItem }),
 

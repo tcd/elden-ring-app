@@ -42,7 +42,7 @@ const footerSx: SxProps = {
 
 const borderSx: SxProps = {
     height: "3px",
-    background: `${ThemeVars.gradients.modalTopBottomBorder}, ${ThemeVars.modal.colorBorder}`,
+    background: ThemeVars.gradients.modalHorizontalBorder,
 }
 
 const contentSx: SxProps = {
