@@ -13,7 +13,7 @@ export const ErGridHeader = ({ title, subTitle }: ErGridHeaderProps): JSX.Elemen
             <Box component="span" sx={ComponentSx.ErGridHeader.title}>
                 {title}
             </Box>
-            <Box component="span" sx={ComponentSx.ErGridHeader.title}>
+            <Box component="span" sx={ComponentSx.ErGridHeader.subTitle}>
                 {subTitle}
             </Box>
         </Box>
