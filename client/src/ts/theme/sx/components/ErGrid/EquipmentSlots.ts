@@ -5,6 +5,7 @@ import {
     rgba,
     radialGradient,
     boxShadow,
+    mediaQuery,
 } from "@app/theme"
 
 import {
@@ -22,6 +23,8 @@ const heightCalculation = [
     "20px",  // EquipmentMenu.grid.root - padding
     "20px", // little extra breathing room
 ].join(" - ")
+
+const bigScreens = mediaQuery({ minHeight: "580px" })
 
 // =============================================================================
 // Root
@@ -46,7 +49,9 @@ const rootSx: SxProps = {
 const gridContainerSx: SxProps = {
     height: `calc(${heightCalculation})`,
     display: "flex",
-    flexFlow: "row wrap",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    // whiteSpace: "nowrap",
     paddingTop: "0px",
     backgroundColor: "green",
 }
@@ -57,7 +62,6 @@ const gridContainerSx: SxProps = {
 
 const _cellShared: SxProps = {
     zIndex: ThemeVars.zIndex.equipmentGridCell,
-    aspectRatio: "8/9",
     // width:  "80px",
     // height: "90px",
     marginLeft: "2.5px",
@@ -67,6 +71,8 @@ const _cellShared: SxProps = {
     //     width:  "55px",
     //     height: "60px",
     // },
+
+    aspectRatio: "8/9",
     /* flex-grow | flex-shrink | flex-basis */
     flex: "1 0 calc(20% - 5px)",
 }
@@ -88,6 +94,7 @@ const gridCellSx: SxProps = {
             right:  "10%",
             cursor: "pointer",
             borderRadius: "1px",
+            // FIXME: move to `ThemeVars.gradients
             background: radialGradient({
                 direction: "ellipse",
                 color: ThemeVars.colors.gold.dark,
