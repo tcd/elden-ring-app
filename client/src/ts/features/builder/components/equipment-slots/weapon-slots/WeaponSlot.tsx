@@ -120,9 +120,9 @@ export const WeaponSlot = (props: WeaponSlotContextMenuProps): JSX.Element => {
 
     return (
         <Box
+            ref={containerRef}
             onContextMenu={handleContextMenu}
             style={{ cursor: "context-menu" }}
-            ref={containerRef}
         >
             <MouseOverPopover id={elementId} popoverContent={titleString}>
                 <WeaponSlotContent {...props} ref={slotRef} />

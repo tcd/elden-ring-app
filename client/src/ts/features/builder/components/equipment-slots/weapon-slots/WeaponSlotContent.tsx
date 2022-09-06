@@ -14,7 +14,7 @@ export interface WeaponSlotProps {
     data: WeaponSlotData
 }
 
-const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
+export const WeaponSlotContent = forwardRef(function WeaponSlotContent(props: WeaponSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -45,6 +45,7 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
                 className="img-fluid"
                 src={src}
                 alt={`${name} image`}
+                style={{ width: "90%" }}
             />
         )
     }
@@ -62,6 +63,3 @@ const weaponSlotContent = forwardRef((props: WeaponSlotProps, ref) => {
         </Box>
     )
 })
-
-weaponSlotContent.displayName = "WeaponSlotContent"
-export const WeaponSlotContent = weaponSlotContent

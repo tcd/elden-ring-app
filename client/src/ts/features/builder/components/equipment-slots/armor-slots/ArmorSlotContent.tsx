@@ -14,7 +14,7 @@ interface ArmorSlotProps {
     armor?: Armor
 }
 
-const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
+export const ArmorSlotContent = forwardRef(function ArmorSlotContent({ type, armor }: ArmorSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -30,9 +30,10 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
     if (armor) {
         classNames.push("er__equipmentSlot--filled")
         armorImage  = <img
-            className="img-fluid"
+            // className="img-fluid"
             alt={armor.name}
             src={getImageSrc("Armor", armor.name, "256")}
+            style={{ width: "90%" }}
         />
     }
 
@@ -54,6 +55,3 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
         </Box>
     )
 })
-
-armorSlotContent.displayName = "ArmorSlotContent"
-export const ArmorSlotContent = armorSlotContent

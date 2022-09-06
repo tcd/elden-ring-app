@@ -17,7 +17,7 @@ interface TalismanSlotProps {
     talisman: Talisman
 }
 
-const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref) => {
+export const TalismanSlotContent = forwardRef(function TalismanSlotContent({ id, talisman }: TalismanSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -35,7 +35,7 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
     if (talisman) {
         classNames.push("er__equipmentSlot--filled")
         const src = getImageSrc("Talisman", talisman.name, "256")
-        talismanImage = <img className="img-fluid" src={src} alt={talisman.name} />
+        talismanImage = <img className="img-fluid" src={src} alt={talisman.name} style={{ width: "90%" }} />
         titleString = talisman.name
     }
 
@@ -53,6 +53,3 @@ const talismanSlotContent = forwardRef(({ id, talisman }: TalismanSlotProps, ref
         </Box>
     )
 })
-
-talismanSlotContent.displayName = "TalismanSlotContent"
-export const TalismanSlotContent = talismanSlotContent
