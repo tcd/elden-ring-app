@@ -1,4 +1,10 @@
-import { useState, useRef, useEffect, forwardRef, useCallback } from "react"
+import {
+    forwardRef,
+    useState,
+    useRef,
+    // useEffect,
+    // useCallback,
+} from "react"
 import { PopperUnstyled, ClickAwayListener } from "@mui/base"
 import { Box } from "@mui/material"
 
@@ -25,19 +31,18 @@ export const ErContextMenu = forwardRef(function ErContextMenu(props: ErContextM
 
     // -------------------------------------------------------------------------
 
-    const handleGlobalContextMenu = useCallback((event: MouseEvent) => {
-        event.preventDefault()
-        event.stopPropagation()
-        if (anchorEl) {
-            // @ts-ignore: next-line
-            if (event?.target?.id != props?.id) {
-                setAnchorEl(null)
-            }
-        }
-    }, [anchorEl, setAnchorEl, props])
+    // const handleGlobalContextMenu = useCallback((event: MouseEvent) => {
+    //     event.preventDefault()
+    //     event.stopPropagation()
+    //     if (anchorEl) {
+    //         // @ts-ignore: next-line
+    //         if (event?.target?.id != props?.id) {
+    //             setAnchorEl(null)
+    //         }
+    //     }
+    // }, [anchorEl, setAnchorEl, props])
 
     const handleContextMenu = (event: React.MouseEvent) => {
-        console.log("contextMenu click")
         event.preventDefault()
         if (anchorEl) {
             setAnchorEl(null)
@@ -47,6 +52,10 @@ export const ErContextMenu = forwardRef(function ErContextMenu(props: ErContextM
     }
 
     const handleClickAway = () => {
+        setAnchorEl(null)
+    }
+
+    const handleMouseLeave = (_event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
         setAnchorEl(null)
     }
 
@@ -79,7 +88,7 @@ export const ErContextMenu = forwardRef(function ErContextMenu(props: ErContextM
 
     return (
         <Box
-            // ref={ref}
+            ref={ref}
             id={props?.id}
             onContextMenu={handleContextMenu}
             sx={{ cursor: "context-menu" }}
@@ -97,6 +106,7 @@ export const ErContextMenu = forwardRef(function ErContextMenu(props: ErContextM
                         root: {
                             id: props?.id,
                             style: ComponentSx.ContextMenu.root,
+                            onMouseLeave: handleMouseLeave,
                         },
                     }}
                 >
@@ -114,4 +124,4 @@ export const ErContextMenu = forwardRef(function ErContextMenu(props: ErContextM
 
 // =============================================================================
 
-export const Border = (_props: unknown): JSX.Element => <Box sx={ComponentSx.ContextMenu.borders} />
+const Border = (_props: unknown): JSX.Element => <Box sx={ComponentSx.ContextMenu.borders} />
