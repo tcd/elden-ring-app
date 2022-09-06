@@ -141,7 +141,7 @@ const contextMenuItem: Css.ColorStop[] = [
     { percentage:   "0%", transparency: 0.10 },
     { percentage:  "10%", transparency: 0.25 },
     { percentage:  "40%", transparency: 0.60 },
-    { percentage:  "50%", transparency: 0.75 },
+    // { percentage:  "50%", transparency: 0.75 },
     { percentage:  "60%", transparency: 0.60 },
     { percentage:  "90%", transparency: 0.25 },
     { percentage: "100%", transparency: 0.10 },
