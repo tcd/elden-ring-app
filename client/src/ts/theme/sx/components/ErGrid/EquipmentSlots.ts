@@ -32,10 +32,12 @@ const bigScreens = mediaQuery({ minHeight: "580px" })
 
 /** `#er__equipmentGrid` */
 const rootSx: SxProps = {
+    backgroundColor: "DarkKhaki",
+
     height: "100%",
     width: "100%",
+
     boxSizing: "border-box",
-    backgroundColor: "DarkKhaki",
     "& *, & > *": {
         boxSizing: "border-box",
     },
@@ -47,13 +49,15 @@ const rootSx: SxProps = {
 
 /** `.er__equipmentGrid__row` */
 const gridContainerSx: SxProps = {
+    backgroundColor: "green",
+
     height: `calc(${heightCalculation})`,
+    paddingTop: "0px",
+
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     // whiteSpace: "nowrap",
-    paddingTop: "0px",
-    backgroundColor: "green",
 }
 
 // =============================================================================
