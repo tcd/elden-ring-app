@@ -1,4 +1,6 @@
-import {
+import { Box } from "@mui/material"
+
+import type {
     DamageTypePlus,
     Spell,
     Weapon,
@@ -26,13 +28,12 @@ export const WeaponDamageTypes = ({ weapon }: WeaponDamageTypesProps): JSX.Eleme
 
 const damageTypesComponent = (id: number, types: DamageTypePlus[]): JSX.Element => {
     const typeElements = types.map((t) => {
-        const key = `${id}-${t}`
         const altText = `${t} Damage`
         const imagePath = `/public/images/damage-types/${t}.png`
         return (
-            <div
-                key={key}
-                className="damage-type-icon-wrapper"
+            <Box
+                key={`${id}-${t}`}
+                sx={{ width: "25px", mx: "2.5px" }}
             >
                 <MuiImg
                     src={imagePath}
@@ -41,13 +42,13 @@ const damageTypesComponent = (id: number, types: DamageTypePlus[]): JSX.Element 
                     responsive={true}
                     className="damage-type-icon"
                 />
-            </div>
+            </Box>
         )
     })
     return (
-        <div className="damage-types">
+        <Box sx={{ display: "flex", flexDirection: "row" }}>
             {typeElements}
-        </div>
+        </Box>
     )
 }
 
@@ -71,17 +72,17 @@ const damageTypesForSpell = (spell: Spell): DamageTypePlus[] => {
 // FIXME: this doesn't apply anymore
 const damageTypesForWeapon = (weapon: Weapon): DamageTypePlus[] => {
     const types: DamageTypePlus[] = []
-    if (weapon.attack_physical     > 0) { types.push("Physical")     }
-    if (weapon.attack_magic        > 0) { types.push("Magic")        }
-    if (weapon.attack_fire         > 0) { types.push("Fire")         }
-    if (weapon.attack_lightning    > 0) { types.push("Lightning")    }
-    if (weapon.attack_holy         > 0) { types.push("Holy")         }
-    if (weapon.damage_blood_loss   > 0) { types.push("Blood Loss")   }
-    if (weapon.damage_frost        > 0) { types.push("Frost")        }
-    if (weapon.damage_madness      > 0) { types.push("Madness")      }
-    if (weapon.damage_poison       > 0) { types.push("Poison")       }
-    if (weapon.damage_sleep        > 0) { types.push("Sleep")        }
-    if (weapon.damage_death_blight > 0) { types.push("Death Blight") }
-    if (weapon.damage_scarlet_rot  > 0) { types.push("Scarlet Rot")  }
+    // if (weapon.attack_physical     > 0) { types.push("Physical")     }
+    // if (weapon.attack_magic        > 0) { types.push("Magic")        }
+    // if (weapon.attack_fire         > 0) { types.push("Fire")         }
+    // if (weapon.attack_lightning    > 0) { types.push("Lightning")    }
+    // if (weapon.attack_holy         > 0) { types.push("Holy")         }
+    // if (weapon.damage_blood_loss   > 0) { types.push("Blood Loss")   }
+    // if (weapon.damage_frost        > 0) { types.push("Frost")        }
+    // if (weapon.damage_madness      > 0) { types.push("Madness")      }
+    // if (weapon.damage_poison       > 0) { types.push("Poison")       }
+    // if (weapon.damage_sleep        > 0) { types.push("Sleep")        }
+    // if (weapon.damage_death_blight > 0) { types.push("Death Blight") }
+    // if (weapon.damage_scarlet_rot  > 0) { types.push("Scarlet Rot")  }
     return types
 }
