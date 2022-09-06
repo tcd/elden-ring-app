@@ -53,6 +53,14 @@ export const components: Components = {
             },
         },
     },
+    MuiMenuItem: {
+        styleOverrides: {
+            root: {
+                listStylePosition: "unset",
+                paddingLeft: "0.5rem !important",
+            },
+        },
+    },
     // MuiDataGrid: {
     //     styleOverrides: {
     //         root: {

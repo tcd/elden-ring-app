@@ -4,6 +4,7 @@ import {
     EquipmentDetail,
     EquipmentDetailProps,
     EquipmentDetailFullCard,
+    NormalList,
 } from "@app/features/common"
 
 import { EmptyTalismanDetail } from "./EmptyTalismanDetail"
@@ -46,9 +47,9 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
             </EquipmentDetailFullCard>
 
             <EquipmentDetailFullCard title="Item Effect" icon="PassiveEffects">
-                <ul className="normal">
+                <NormalList>
                     {effects}
-                </ul>
+                </NormalList>
             </EquipmentDetailFullCard>
 
         </EquipmentDetail>

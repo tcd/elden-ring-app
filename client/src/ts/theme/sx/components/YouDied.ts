@@ -36,6 +36,7 @@ const bannerSx: SxProps = {
 }
 
 const linkSx: SxProps = {
+    // FIXME: need to move this font import from sass.
     fontFamily: "OptimusPrinceps",
     fontSize: "4rem",
     color: ThemeVars.youDied.red,

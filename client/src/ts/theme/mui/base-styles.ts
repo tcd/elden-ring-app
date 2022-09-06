@@ -8,6 +8,7 @@ import { gradients } from "../variables/gradients"
 // import { colors } from "../variables/colors"
 // import { cssUrl } from "../helpers/css-url"
 import { scrollbar } from "../helpers/scrollbar"
+import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
 
 // =============================================================================
 // Resets
@@ -31,8 +32,33 @@ const body: CSSObject = {
     color: typography.colorFg,
     backgroundColor: "black",
     fontFamily: typography.fontFamily.display,
+    // "*::before, *::after": {
+    //     boxSizing: "borderBox",
+    // },
     "& *": {
+        boxSizing: "borderBox",
         fontFamily: typography.fontFamily.display,
+    },
+    "& a": {
+        textDecoration: "none",
+        "&:hover, &:active, &:focus": {
+            cursor: "pointer",
+            // textDecoration: "underline",
+        },
+        "& *": {
+            "&:hover": {
+                cursor: "pointer",
+            },
+        },
+    },
+    "& ol, & ul, & li": {
+        listStyle: "none",
+        listStylePosition: "inside",
+        paddingLeft: "0px",
+        marginLeft: "0px",
+        marginBottom: "default",
+        marginBlockStart: "0px",
+        marginBlockEnd: "0px",
     },
 }
 

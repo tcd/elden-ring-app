@@ -2,6 +2,7 @@ import {
     EquipmentDetail,
     EquipmentDetailFullCard,
     EquipmentDetailProps,
+    NormalList,
 } from "@app/features/common"
 
 export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
@@ -13,8 +14,8 @@ export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
             </EquipmentDetailFullCard>
 
             <EquipmentDetailFullCard title="Item Effect" icon="PassiveEffects">
-                <ul className="normal">
-                </ul>
+                <NormalList>
+                </NormalList>
             </EquipmentDetailFullCard>
 
         </EquipmentDetail>
