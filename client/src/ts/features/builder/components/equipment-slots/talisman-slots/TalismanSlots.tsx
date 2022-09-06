@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 
-import { TalismanSlotIds } from "@app/types"
+import { TalismanSlotIds } from "@app/constants"
 import { Selectors } from "@app/state"
 
 import { TalismanSlot } from "./TalismanSlot"

@@ -29,7 +29,6 @@
         "paths": {
             "@app/*":         ["ts/*"],
             "@app/theme":     ["ts/theme/index.ts"],
-            "@app/constants": ["ts/types/constants/index.ts"],
             "@app/config":    ["ts/util/Config.ts"],
             "@assets/*":      ["assets/*"],
         },

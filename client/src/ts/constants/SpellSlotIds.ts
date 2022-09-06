@@ -12,6 +12,3 @@ export const SpellSlotIds = <const>{
     "11": "S11",
     "12": "S12",
 }
-
-type SpellSlotIdsKey = keyof typeof SpellSlotIds
-export type SpellSlotId = typeof SpellSlotIds[SpellSlotIdsKey]

@@ -10,6 +10,3 @@ export const QuickItemSlotIds = <const>{
     "9":   "Q9",
     "10": "Q10",
 }
-
-type QuickItemSlotIdsKey = keyof typeof QuickItemSlotIds
-export type QuickItemSlotId = typeof QuickItemSlotIds[QuickItemSlotIdsKey]

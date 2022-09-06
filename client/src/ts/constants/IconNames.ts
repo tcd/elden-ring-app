@@ -1,4 +1,4 @@
-export const IconNames = {
+export const IconNames = <const>{
     AttackPower:        "attack-power",
     AttributePoints:    "attribute-points",
     AttributeScaling:   "attribute-scaling",
@@ -17,8 +17,4 @@ export const IconNames = {
     RequiredItems:      "required-items",
     ResistancePlus:     "resistance-plus",
     Resistance:         "resistance",
-} as const
-
-export type IconNamesKey = keyof typeof IconNames
-
-export type IconName = typeof IconNames[IconNamesKey];
+}

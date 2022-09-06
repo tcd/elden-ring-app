@@ -1,4 +1,4 @@
-export const FeatureKeys = {
+export const FeatureKeys = <const>{
     Ammunition:      "Ammunition",
     Armor:           "Armor",
     Builder:         "Builder",
@@ -14,7 +14,4 @@ export const FeatureKeys = {
     StartingClass:   "StartingClass",
     Talismans:       "Talismans",
     Weapons:         "Weapons",
-} as const
-
-type FeatureKeyKey = keyof typeof FeatureKeys
-export type FeatureKey = typeof FeatureKeys[FeatureKeyKey];
+}

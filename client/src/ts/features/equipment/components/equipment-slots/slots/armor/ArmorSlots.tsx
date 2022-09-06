@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux"
 
-import { ArmorTypes } from "@app/types"
+import { ArmorTypes } from "@app/constants"
 import { Selectors } from "@app/state"
+
 import { ArmorSlotContent } from "./ArmorSlotContent"
 import { EquipmentSlotPlaceholder } from "../EquipmentSlotPlaceholder"
 
