@@ -77,4 +77,5 @@ export const EquipmentSelectors = {
     gridTitle: selectGridTitle,
     gridDescription: selectGridDescription,
     activeType: selectActiveType,
+    activeSlotId: selectActiveSlotId,
 }
