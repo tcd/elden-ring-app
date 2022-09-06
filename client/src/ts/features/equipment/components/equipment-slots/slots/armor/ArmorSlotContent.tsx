@@ -2,10 +2,11 @@ import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import { ArmorType } from "@app/constants"
-import { Armor } from "@app/types"
+import type { ArmorType } from "@app/constants"
+import type { Armor } from "@app/types"
 import { Actions } from "@app/state"
 import { getImageSrc } from "@app/util"
+
 import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 interface ArmorSlotProps {
@@ -53,7 +54,7 @@ export const ArmorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(functi
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onMouseLeave: handleMouseExit,
+                // onMouseLeave: handleMouseExit,
             }}
         />
     )

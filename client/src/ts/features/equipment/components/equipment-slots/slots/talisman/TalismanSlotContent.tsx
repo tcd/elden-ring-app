@@ -2,10 +2,11 @@ import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import { TalismanSlotId } from "@app/constants"
-import { Talisman } from "@app/types"
+import type { TalismanSlotId } from "@app/constants"
+import type { Talisman } from "@app/types"
 import { getImageSrc } from "@app/util"
 import { Actions } from "@app/state"
+
 import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 interface TalismanSlotProps {
@@ -55,7 +56,7 @@ export const TalismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onMouseLeave: handleMouseExit,
+                // onMouseLeave: handleMouseExit,
             }}
         />
     )

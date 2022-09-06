@@ -1,8 +1,9 @@
 import { forwardRef } from "react"
 import { useDispatch } from "react-redux"
 
-import { AmmunitionSlotId } from "@app/constants"
+import type { AmmunitionSlotId } from "@app/constants"
 import { Actions } from "@app/state"
+
 import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 export interface AmmunitionSlotProps {
@@ -36,7 +37,7 @@ export const ArrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onMouseLeave: handleMouseExit,
+                // onMouseLeave: handleMouseExit,
             }}
         />
     )

@@ -56,7 +56,7 @@ export const WeaponSlotContent = forwardRef<HTMLLIElement, WeaponSlotProps>(func
                 id: elementId,
                 onClick: handleClick,
                 onMouseEnter: handleMouseEnter,
-                onMouseLeave: handleMouseExit,
+                // onMouseLeave: handleMouseExit,
             }}
         />
     )

@@ -2,10 +2,11 @@ import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import { QuickItemSlotId } from "@app/constants"
-import { QuickItem } from "@app/types"
+import type { QuickItemSlotId } from "@app/constants"
+import type { QuickItem } from "@app/types"
 import { getImageSrcManual } from "@app/util"
 import { Actions } from "@app/state"
+
 import { EquipmentSlotImage } from "../EquipmentSlotImage"
 
 
