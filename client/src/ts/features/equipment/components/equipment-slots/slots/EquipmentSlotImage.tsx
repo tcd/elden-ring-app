@@ -10,7 +10,7 @@ import {
     Audio,
 } from "@app/util"
 
-export interface EquipmentSlotImageProps {
+export interface EquipmentSlotProps {
     slotId: EquipmentSlotId
     bgType: EquipmentSlotBackgroundId
     img: {
@@ -20,13 +20,13 @@ export interface EquipmentSlotImageProps {
     BoxProps?: Omit<BoxProps<"li">, "children">
 }
 
-const defaultProps: Partial<EquipmentSlotImageProps> = {
+const defaultProps: Partial<EquipmentSlotProps> = {
     img: { src: null, alt: null },
     BoxProps: {},
 }
 
-export const EquipmentSlotImage = forwardRef<HTMLLIElement, EquipmentSlotImageProps>(
-    function EquipmentSlotImage(props: EquipmentSlotImageProps, ref): JSX.Element {
+export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
+    function EquipmentSlot(props: EquipmentSlotProps, ref): JSX.Element {
 
         const {
             bgType,

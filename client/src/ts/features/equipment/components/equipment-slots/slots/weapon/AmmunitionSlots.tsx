@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"
 import type { AmmunitionSlotId } from "@app/constants"
 import { Actions } from "@app/state"
 
-import { EquipmentSlotImage } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlotImage"
 
 export interface AmmunitionSlotProps {
     id: AmmunitionSlotId
@@ -29,7 +29,7 @@ export const ArrowSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function
     }
 
     return (
-        <EquipmentSlotImage
+        <EquipmentSlot
             ref={ref}
             slotId={id}
             bgType="Arrow"
@@ -63,7 +63,7 @@ export const BoltSlot = forwardRef<HTMLLIElement, AmmunitionSlotProps>(function 
     }
 
     return (
-        <EquipmentSlotImage
+        <EquipmentSlot
             ref={ref}
             slotId={id}
             bgType="Bolt"

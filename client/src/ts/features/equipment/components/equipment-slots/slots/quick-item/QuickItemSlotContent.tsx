@@ -7,7 +7,7 @@ import type { QuickItem } from "@app/types"
 import { getImageSrcManual } from "@app/util"
 import { Actions } from "@app/state"
 
-import { EquipmentSlotImage } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlotImage"
 
 
 interface QuickItemSlotProps {
@@ -44,7 +44,7 @@ export const QuickItemSlotContent = forwardRef<HTMLLIElement, QuickItemSlotProps
     }
 
     return (
-        <EquipmentSlotImage
+        <EquipmentSlot
             ref={ref}
             slotId={id}
             bgType="QuickItem"

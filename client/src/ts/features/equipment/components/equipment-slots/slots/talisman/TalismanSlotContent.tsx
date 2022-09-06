@@ -7,7 +7,7 @@ import type { Talisman } from "@app/types"
 import { getImageSrc } from "@app/util"
 import { Actions } from "@app/state"
 
-import { EquipmentSlotImage } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlotImage"
 
 interface TalismanSlotProps {
     id: TalismanSlotId
@@ -48,7 +48,7 @@ export const TalismanSlotContent = forwardRef<HTMLLIElement, TalismanSlotProps>(
     }
 
     return (
-        <EquipmentSlotImage
+        <EquipmentSlot
             ref={ref}
             slotId={id}
             bgType="Talisman"

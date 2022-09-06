@@ -7,7 +7,7 @@ import type { Armor } from "@app/types"
 import { Actions } from "@app/state"
 import { getImageSrc } from "@app/util"
 
-import { EquipmentSlotImage } from "../EquipmentSlotImage"
+import { EquipmentSlot } from "../EquipmentSlotImage"
 
 interface ArmorSlotProps {
     type: ArmorType
@@ -46,7 +46,7 @@ export const ArmorSlotContent = forwardRef<HTMLLIElement, ArmorSlotProps>(functi
     }
 
     return (
-        <EquipmentSlotImage
+        <EquipmentSlot
             ref={ref}
             slotId={type}
             bgType={type}
