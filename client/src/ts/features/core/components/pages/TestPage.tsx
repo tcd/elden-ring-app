@@ -3,7 +3,7 @@ import { useHotkeys } from "react-hotkeys-hook"
 
 import { ThemeVars } from "@app/theme"
 import { ErPage } from "@app/features/common"
-import { SpecialCharacters, Audio } from "@app/util"
+import { SpecialCharacters, Audio, getCssVariable } from "@app/util"
 
 export const TestPage = (_props: unknown): JSX.Element => {
 
@@ -35,22 +35,37 @@ export const TestPage = (_props: unknown): JSX.Element => {
 
 // =============================================================================
 
-const logCssVariables = () => {
-    const sass = {
-        hex: {
-            modalColorBg: getComputedStyle(document.documentElement).getPropertyValue("--hex-modal-color-bg").trim(),
-            itemBg:       getComputedStyle(document.documentElement).getPropertyValue("--hex-affinity-item-color-bg").trim(),
-            itemActiveBg: getComputedStyle(document.documentElement).getPropertyValue("--hex-affinity-item-color-active-bg").trim(),
-        },
-        hsl: {
-            modalColorBg: getComputedStyle(document.documentElement).getPropertyValue("--hsl-modal-color-bg").trim(),
-            itemBg:       getComputedStyle(document.documentElement).getPropertyValue("--hsl-affinity-item-color-bg").trim(),
-            itemActiveBg: getComputedStyle(document.documentElement).getPropertyValue("--hsl-affinity-item-color-active-bg").trim(),
-        },
+const logCssVariables = (): void => {
+
+    const cssVariables = {
+        // "hex-modal-color-bg":                getCssVariable("--hex-modal-color-bg"),
+        // "hex-affinity-item-color-bg":        getCssVariable("--hex-affinity-item-color-bg"),
+        // "hex-affinity-item-color-active-bg": getCssVariable("--hex-affinity-item-color-active-bg"),
+        // "hsl-modal-color-bg":                getCssVariable("--hsl-modal-color-bg"),
+        // "hsl-affinity-item-color-bg":        getCssVariable("--hsl-affinity-item-color-bg"),
+        // "hsl-affinity-item-color-active-b":  getCssVariable("--hsl-affinity-item-color-active-bg"),
+
+        "contextMenuItem-color-bg":          getCssVariable("--contextMenuItem-color-bg"),
+        "contextMenuItem-color-bg-active":   getCssVariable("--contextMenuItem-color-bg-active"),
     }
 
-    console.log({
-        sass,
-        sx: ThemeVars?.debugging,
-    })
+    console.log(cssVariables)
+
+    // const sass = {
+    //     hex: {
+    //         modalColorBg: cssVariables["hex-modal-color-bg"],
+    //         itemBg:       cssVariables["hex-affinity-item-color-bg"],
+    //         itemActiveBg: cssVariables["hex-affinity-item-color-active-bg"],
+    //     },
+    //     hsl: {
+    //         modalColorBg: cssVariables["hsl-modal-color-bg"],
+    //         itemBg:       cssVariables["hsl-affinity-item-color-bg"],
+    //         itemActiveBg: cssVariables["hsl-affinity-item-color-active-bg"],
+    //     },
+    // }
+//
+//     console.log({
+//         sass,
+//         sx: ThemeVars?.debugging,
+//     })
 }

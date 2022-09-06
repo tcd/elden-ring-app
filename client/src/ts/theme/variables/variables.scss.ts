@@ -122,8 +122,18 @@ export const contextMenu = <const>{
     colorBg: modal.colorBg,
     colorBorder: modal.colorBorder,
     item: {
-        colorBg:       Color(modal.colorBg).lighten(0.11).hexa(),
-        colorBgActive: Color(modal.colorBg).lighten(0.31).hexa(),
+        /**
+         * ```scss
+         * lighten($modal-color-bg, 11%)
+         *```
+         */
+        colorBg: "#463f34",
+        /**
+         * ```scss
+         * lighten($modal-color-bg, 30%)
+         *```
+         */
+        colorBgActive: "#7e715d",
     },
 }
 
