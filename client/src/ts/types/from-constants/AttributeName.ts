@@ -1,16 +1,7 @@
-export const AttributeNames = {
-    vigor:        "vigor",
-    mind:         "mind",
-    endurance:    "endurance",
-    strength:     "strength",
-    dexterity:    "dexterity",
-    intelligence: "intelligence",
-    faith:        "faith",
-    arcane:       "arcane",
-} as const
+import { AttributeNames } from "@app/constants"
 
 export type AttributeName = keyof typeof AttributeNames
-export type TAttributeName = typeof AttributeNames[AttributeName];
+// type TAttributeName = typeof AttributeNames[AttributeName];
 
 // export const AttributeNames = Object.keys(AttributeName)
 

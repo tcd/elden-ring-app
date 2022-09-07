@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
 import type { StartingClass } from "@app/types"
-import { AttributeNames } from "@app/types"
+import { AttributeNames } from "@app/constants"
 import { ComponentSx } from "@app/theme"
 import { getImageSrc } from "@app/util"
 import { StatRow } from "@app/features/common"

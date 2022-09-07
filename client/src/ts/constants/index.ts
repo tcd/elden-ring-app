@@ -1,4 +1,5 @@
 export * from "./AmmunitionSlotIds"
+export * from "./AttributeNames"
 export * from "./AmmunitionTypes"
 export * from "./ArmorType"
 export * from "./FeatureKeys"

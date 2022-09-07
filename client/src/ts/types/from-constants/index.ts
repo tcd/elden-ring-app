@@ -3,6 +3,7 @@
 export * from "./AmmunitionSlotId"
 export * from "./AmmunitionType"
 export * from "./ArmorType"
+export * from "./AttributeName"
 export * from "./IconName"
 export * from "./QuickItemSlotId"
 export * from "./SpellSlotId"

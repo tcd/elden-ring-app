@@ -4,7 +4,6 @@ export * from "./entities"
 export * from "./calculations"
 export * from "./from-constants"
 
-export * from "./Attributes"
 export * from "./BodyType"
 export * from "./BuildData"
 export * from "./Damage"
