@@ -14,8 +14,8 @@ export interface EquipmentState {
 }
 
 export const INITIAL_EQUIPMENT_STATE: EquipmentState = {
-    activeType: null,
-    activeSlotId: null,
+    activeType: "Weapon",
+    activeSlotId: "R1",
 }
 
 export const EquipmentSlice = createSlice({

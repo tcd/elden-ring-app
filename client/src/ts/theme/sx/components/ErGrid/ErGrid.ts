@@ -34,12 +34,12 @@ const col1Content: SxProps = {
     height: "100%",
     width: "100%",
     boxSizing: "border-box",
-    [ThemeBreakpoints.down("sm")]: {
-        px: "10%",
-    },
-    [ThemeBreakpoints.up("sm")]: {
-        px: "20%",
-    },
+    // [ThemeBreakpoints.down("sm")]: {
+    //     px: "10%",
+    // },
+    // [ThemeBreakpoints.up("sm")]: {
+    //     px: "20%",
+    // },
 }
 
 const col2: GridProps = {
@@ -70,6 +70,13 @@ const gridWrapper: SxProps = {
     height: "100%",
     width: "100%",
     boxSizing: "border-box",
+    [ThemeBreakpoints.down("sm")]: {
+        px: "10%",
+        height: "90%",
+    },
+    [ThemeBreakpoints.up("sm")]: {
+        px: "20%",
+    },
 }
 
 // =============================================================================

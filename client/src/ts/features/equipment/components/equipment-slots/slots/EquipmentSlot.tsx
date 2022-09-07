@@ -66,7 +66,7 @@ export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
 
         useEffect(() => {
             if (slotId === activeSlotId) {
-                // setExtraSx({ backgroundColor: "blue" })
+                setExtraSx({ backgroundColor: "blue" })
             } else {
                 setExtraSx({})
             }
