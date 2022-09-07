@@ -1,4 +1,4 @@
-import { WeaponSlotId } from "@app/constants"
+import { WeaponSlotId } from "@app/types"
 
 const DISPLAY_NAMES: Record<WeaponSlotId, string> = {
     "R1": "Right Hand Armament 1",

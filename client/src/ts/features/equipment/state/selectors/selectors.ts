@@ -1,4 +1,4 @@
-import { AmmunitionSlotId, WeaponSlotId } from "@app/constants"
+import type { AmmunitionSlotId, WeaponSlotId } from "@app/types"
 import { weaponSlotDisplayName, ammunitionSlotDisplayName } from "@app/util"
 import { RootState } from "@app/state"
 import { ArmorSelectors } from "@app/features/armor"

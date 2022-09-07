@@ -1,4 +1,4 @@
-import type { IconNamesKey } from "@app/constants"
+import type { IconNamesKey } from "@app/types"
 
 export interface ErTallCardSectionProps {
     title: string

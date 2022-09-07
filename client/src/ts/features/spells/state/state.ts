@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import type { Spell } from "@app/types"
 import { FeatureKeys } from "@app/constants"
-import { Spell } from "@app/types"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface SpellsState {

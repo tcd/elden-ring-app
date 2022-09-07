@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import type { PageName } from "@app/types"
 import { FeatureKeys } from "@app/constants"
-import { PageName } from "@app/types"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface CoreState {

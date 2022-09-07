@@ -4,9 +4,10 @@ import {
     startingClassByName,
     WEAPON_SKILL_DEFAULT_AFFINITIES,
 } from "@app/data"
-import { WeaponSlotId } from "@app/constants"
 import {
+    WeaponSlotId,
     WeaponAffinityName,
+    // FIXME: move out of `@app/types`
     DEFAULT_WEAPON_SETTINGS,
 } from "@app/types"
 import { isBlank } from "@app/util"

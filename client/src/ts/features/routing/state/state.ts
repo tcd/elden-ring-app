@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 
 import type { LocationChangePayload } from "@app/types"
 import { FeatureKeys } from "@app/constants"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface RoutingState {

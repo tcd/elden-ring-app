@@ -1,5 +1,4 @@
-import { WeaponSlotId } from "@app/constants"
-import { WeaponSettings } from "@app/types"
+import type { WeaponSlotId, WeaponSettings } from "@app/types"
 
 export type WeaponSlots = Record<WeaponSlotId, WeaponSettings>
 

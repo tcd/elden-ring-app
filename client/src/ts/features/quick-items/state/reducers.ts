@@ -1,6 +1,6 @@
 import type { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import type { QuickItemSlotId } from "@app/constants"
+import type { QuickItemSlotId } from "@app/types"
 import { CoreActions } from "@app/features/core"
 
 import { QuickItemsState, INITIAL_QUICK_ITEMS_STATE as INITIAL_STATE } from "./state"

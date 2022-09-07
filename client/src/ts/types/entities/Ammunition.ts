@@ -1,5 +1,4 @@
-import { AmmunitionType } from "@app/constants"
-import { BaseEntity } from "@app/types"
+import type { BaseEntity, AmmunitionType } from "@app/types"
 
 export interface Ammunition extends BaseEntity {
     name: string

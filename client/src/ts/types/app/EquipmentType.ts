@@ -4,7 +4,7 @@ import {
     TalismanSlotId,
     AmmunitionSlotId,
     QuickItemSlotId,
-} from "@app/constants"
+} from "@app/types"
 
 export type EquipmentType = "Weapon" | "Armor" | "Talisman" | "Ammunition" | "QuickItem"
 export type EquipmentSlotId =

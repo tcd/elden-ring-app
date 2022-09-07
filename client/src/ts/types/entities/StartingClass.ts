@@ -1,4 +1,4 @@
-import { StartingClassName } from "@app/constants"
+import type { StartingClassName } from "@app/types"
 
 export interface StartingClass {
 

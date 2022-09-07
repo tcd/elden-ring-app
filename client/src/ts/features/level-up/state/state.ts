@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+import type { Attributes } from "@app/types"
 import { FeatureKeys } from "@app/constants"
-import { Attributes } from "@app/types"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface LevelUpState {

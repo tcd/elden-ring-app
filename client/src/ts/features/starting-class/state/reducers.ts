@@ -1,6 +1,6 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import { StartingClassName } from "@app/constants"
+import type { StartingClassName } from "@app/types"
 import { CoreActions } from "@app/features/core"
 
 import {

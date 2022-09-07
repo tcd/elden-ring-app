@@ -8,6 +8,7 @@ export interface WeaponSettings {
     weapon_skill_name?: string
 }
 
+// FIXME: move out of `@app/types`
 export const DEFAULT_WEAPON_SETTINGS: WeaponSettings = {
     // weapon_id: null,
     weapon_name: null,

@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FeatureKeys, WeaponSlotId } from "@app/constants"
+import { FeatureKeys } from "@app/constants"
 import {
+    WeaponSlotId,
     WeaponSlots,
     DEFAULT_WEAPON_SETTINGS,
     WeaponSettings,

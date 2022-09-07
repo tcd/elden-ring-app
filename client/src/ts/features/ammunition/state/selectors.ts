@@ -1,7 +1,8 @@
-import { AmmunitionSlotId, AmmunitionType } from "@app/constants"
+import type { AmmunitionSlotId, AmmunitionType } from "@app/types"
+import type { RootState } from "@app/state"
 import { isBlank } from "@app/util"
-import { RootState } from "@app/state"
-import { AmmunitionState } from "./state"
+
+import type { AmmunitionState } from "./state"
 
 const _selectSlice = (rootState: RootState): AmmunitionState => rootState?.Ammunition
 
