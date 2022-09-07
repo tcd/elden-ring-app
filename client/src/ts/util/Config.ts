@@ -7,6 +7,7 @@ export interface IConfig {
     cloudflareHash: string
     apiServerRoot: string
     version: string
+    clientUrl: string
     logLevel: LogLevel
 }
 
@@ -16,6 +17,7 @@ class Configuration implements IConfig {
     public cloudflareHash: string
     public apiServerRoot: string
     public version: string
+    public clientUrl: string
     public logLevel: LogLevel
 
     constructor() {
@@ -23,6 +25,7 @@ class Configuration implements IConfig {
         this.cloudflareHash = process?.env["CLOUDFLARE_HASH"] ?? ""
         this.apiServerRoot  = process?.env["API_SERVER_ROOT"] ?? ""
         this.version        = process?.env["VERSION"] ?? ""
+        this.clientUrl      = process?.env["CLIENT_URL"] ?? ""
         this.logLevel       = process?.env["ER_LOG_LEVEL"] as LogLevel ?? "error"
     }
 
@@ -36,6 +39,7 @@ class Configuration implements IConfig {
             cloudflareHash: this.cloudflareHash,
             apiServerRoot:  this.apiServerRoot,
             version:        this.version,
+            clientUrl:      this.clientUrl,
             logLevel:       this.logLevel,
         }
     }
