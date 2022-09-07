@@ -1,6 +1,7 @@
 import { ILogger, LogLevel } from "@app/types"
 import { CONFIG } from "@app/config"
 import { isBlank, isObject } from "@app/util"
+
 import { getCallsite, getCallingFunction } from "./callsite"
 
 const LogLevelIds: Record<LogLevel, number> = {
