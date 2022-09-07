@@ -1,4 +1,7 @@
-import type { EquipmentSlotId, EquipmentType } from "@app/types"
+import type {
+    EquipmentSlotId,
+    EquipmentType,
+} from "@app/types"
 
 export const EQUIPMENT_SLOT_TYPES: Record<EquipmentSlotId, EquipmentType> = {
     R1:    "Weapon",

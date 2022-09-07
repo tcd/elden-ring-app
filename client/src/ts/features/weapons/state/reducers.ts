@@ -14,8 +14,12 @@ import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
+import { EquipmentActions } from "@app/features/equipment"
 
-import { WeaponsState, INITIAL_WEAPONS_STATE as INITIAL_STATE } from "./state"
+import {
+    WeaponsState,
+    INITIAL_WEAPONS_STATE as INITIAL_STATE,
+} from "./state"
 import { noWeaponsSelected } from "./helpers"
 
 export const reducers = {
@@ -165,6 +169,13 @@ export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) =>
                 state.slots.L1.weapon_name = sClass?.L1 ?? null
                 state.slots.L2.weapon_name = sClass?.L2 ?? null
                 return state
+            }
+        })
+        .addCase(EquipmentActions.navigate.fulfilled, (state: WeaponsState, { payload: { id, type } }) => {
+            if (type === "Weapon") {
+                state.oldWeapon = { ...state.slots[id] }
+                // @ts-ignore: next-line
+                state.activeSlotId = id
             }
         })
         .addCase(RoutingActions.locationChange, (state: WeaponsState, { payload }) => {

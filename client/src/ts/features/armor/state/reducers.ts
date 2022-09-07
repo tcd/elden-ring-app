@@ -6,6 +6,7 @@ import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
+import { EquipmentActions } from "@app/features/equipment"
 
 import {
     ArmorState,
@@ -76,6 +77,13 @@ export const extraReducers = (builder: ActionReducerMapBuilder<ArmorState>) => {
                     Legs:  sClass?.Legs  ?? null,
                 }
                 return state
+            }
+        })
+        .addCase(EquipmentActions.navigate.fulfilled, (state: ArmorState, { payload: { id, type } }) => {
+            if (type === "Armor") {
+                state.oldName = state.armorNames[id]
+                // @ts-ignore: next-line
+                state.activeType = id
             }
         })
         .addCase(RoutingActions.locationChange, (state, { payload }) => {

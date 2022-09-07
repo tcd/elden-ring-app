@@ -6,13 +6,22 @@ import type { AmmunitionSlotId } from "@app/types"
 import { reducers, extraReducers } from "./reducers"
 
 export interface AmmunitionState {
+    slots: Record<AmmunitionSlotId, string>
     activeSlotId: AmmunitionSlotId
-    mobileTab: "grid" | "detail" | "status"
+    oldName: string
+    menuHasScrolled: boolean
 }
 
 export const INITIAL_AMMUNITION_STATE: AmmunitionState = {
+    slots:  {
+        "A1": null,
+        "A2": null,
+        "B1": null,
+        "B2": null,
+    },
     activeSlotId: null,
-    mobileTab: "grid",
+    oldName: null,
+    menuHasScrolled: false,
 }
 
 export const AmmunitionSlice = createSlice({

@@ -5,24 +5,17 @@ import type {
     TalismanSlotId,
     SpellSlotId,
     WeaponSlotId,
-} from "../constants"
-
-// export const PathParamValues = <const>{
-//     armorSlotId:    "armorSlotId",
-//     spellSlotId:    "spellSlotId",
-//     talismanSlotId: "talismanSlotId",
-//     weaponSlotId:   "weaponSlotId",
-// }
-//
-// export type PathParamValue = typeof PathParamValues[keyof typeof PathParamValues]
-//
-// export type IPathParams = Partial<Record<PathParamValue, string>>;
+    AmmunitionSlotId,
+    QuickItemSlotId,
+} from "@app/types"
 
 export type PathParams = {
     armorSlotId?: ArmorType
-    spellSlotId: SpellSlotId
-    talismanSlotId: TalismanSlotId
-    weaponSlotId: WeaponSlotId
+    spellSlotId?: SpellSlotId
+    talismanSlotId?: TalismanSlotId
+    weaponSlotId?: WeaponSlotId
+    ammunitionSlotId?: AmmunitionSlotId,
+    quickItemSlotId?: QuickItemSlotId,
 }
 
 export interface LocationChangePayload {

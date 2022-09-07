@@ -4,8 +4,12 @@ import type { TalismanSlotId } from "@app/types"
 import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
+import { EquipmentActions } from "@app/features/equipment"
 
-import { TalismansState, INITIAL_TALISMANS_STATE as INITIAL_STATE } from "./state"
+import {
+    TalismansState,
+    INITIAL_TALISMANS_STATE as INITIAL_STATE,
+} from "./state"
 
 export const reducers = {
     setActiveSlotId(state: TalismansState, { payload: { id } }: PayloadAction<{ id: TalismanSlotId }>) {
@@ -52,6 +56,13 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<TalismansState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_STATE)
+        .addCase(EquipmentActions.navigate.fulfilled, (state: TalismansState, { payload: { id, type } }) => {
+            if (type === "Talisman") {
+                state.oldTalismanName = state.talismanNames[id]
+                // @ts-ignore: next-line
+                state.activeSlotId = id
+            }
+        })
         .addCase(RoutingActions.locationChange, (state, { payload }) => {
             if (payload?.pathParams?.talismanSlotId) {
                 if (isBlank(state?.activeSlotId)) {
