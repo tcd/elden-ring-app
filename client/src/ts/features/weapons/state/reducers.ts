@@ -63,8 +63,7 @@ export const reducers = {
         state.menuHasScrolled = false
     },
     closeWeaponsMenu(state: WeaponsState) {
-        state.activeSlotId = null
-        state.oldWeapon = null
+        state.oldWeapon = { ...state.slots[state.activeSlotId] }
         state.menuHasScrolled = true
     },
     removeWeapon(state: WeaponsState) {

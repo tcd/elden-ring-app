@@ -31,7 +31,7 @@ const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
 export const INITIAL_WEAPONS_STATE: WeaponsState = {
     slots: { ...DEFAULT_WEAPON_SLOTS },
     oldWeapon: null,
-    activeSlotId: null,
+    activeSlotId: "R1",
     customizingWeapon: false,
     choosingAffinity:  false,
     menuHasScrolled:   false,

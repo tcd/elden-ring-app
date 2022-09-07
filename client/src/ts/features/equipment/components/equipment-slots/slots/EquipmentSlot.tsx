@@ -10,6 +10,7 @@ import {
     EquipmentSlotBackgroundId,
     Audio,
 } from "@app/util"
+import { MuiImg } from "@app/features/common"
 import { Selectors } from "@app/state"
 
 export interface EquipmentSlotProps {
@@ -56,8 +57,7 @@ export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
         let $img: JSX.Element = null
 
         if (filled) {
-            $img = <Box
-                component="img"
+            $img = <MuiImg
                 src={img.src}
                 alt={img.alt}
                 sx={ComponentSx.EquipmentSlots.grid.cellImage}
@@ -66,7 +66,7 @@ export const EquipmentSlot = forwardRef<HTMLLIElement, EquipmentSlotProps>(
 
         useEffect(() => {
             if (slotId === activeSlotId) {
-                setExtraSx({ backgroundColor: "blue" })
+                setExtraSx(ComponentSx.EquipmentSlots.grid.cellActive)
             } else {
                 setExtraSx({})
             }

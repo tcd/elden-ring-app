@@ -74,7 +74,7 @@ const gridContainerSx: SxProps = {
 // Cell
 // =============================================================================
 
-const _cellActive: SxProps = {
+const cellActive: SxProps = {
     "&::after": {
         zIndex: ThemeVars.zIndex.equipmentGridCellHover,
         content: ThemeVars.ZWSP,
@@ -130,11 +130,11 @@ const gridCellPlaceholderSx: SxProps = {
 /** `.er__equipmentGrid__cell` */
 const gridCellSx: SxProps = {
     ..._cellShared,
-    ...pointerOnHoverChildren,
+    ...pointerOnHover,
     position: "relative",
     "&:hover": {
         cursor: "pointer",
-        ..._cellActive,
+        // ...cellActive,
     },
 }
 
@@ -191,5 +191,6 @@ export const EquipmentSlots = {
         cellBackground: gridCellBackgroundSx,
         cellImage: gridCellImageSx,
         cellPlaceholder: gridCellPlaceholderSx,
+        cellActive: cellActive,
     },
 }
