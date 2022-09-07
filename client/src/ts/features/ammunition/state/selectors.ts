@@ -4,11 +4,10 @@ import { isBlank } from "@app/util"
 
 import type { AmmunitionState } from "./state"
 
-const _selectSlice = (rootState: RootState): AmmunitionState => rootState?.Ammunition
+const selectSlice = (rootState: RootState): AmmunitionState => rootState?.Ammunition
 
-const selectActiveSlotId = (rootState: RootState): AmmunitionSlotId => {
-    return _selectSlice(rootState)?.activeSlotId
-}
+const selectSlots = (rootState: RootState) => selectSlice(rootState)?.slots
+const selectActiveSlotId = (rootState: RootState): AmmunitionSlotId => selectSlice(rootState)?.activeSlotId
 
 const selectActiveType = (rootState: RootState): AmmunitionType => {
     const activeSlotId = selectActiveSlotId(rootState)
@@ -23,6 +22,7 @@ const selectActiveType = (rootState: RootState): AmmunitionType => {
 }
 
 export const AmmunitionSelectors = {
+    slots: selectSlots,
     activeSlotId: selectActiveSlotId,
     activeType: selectActiveType,
 }

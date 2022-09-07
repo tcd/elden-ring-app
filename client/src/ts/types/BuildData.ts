@@ -1,15 +1,19 @@
-import { StartingClassName } from "@app/constants"
-import {
+import type {
+    StartingClassName,
     ArmorSet,
     Attributes,
     TalismanSet,
     WeaponSlots,
+    AmmunitionSlotId,
+    SpellSlotId,
 } from "@app/types"
 
 export interface BuildData {
-    startingClassName: StartingClassName
+    startingClass: StartingClassName
     attributes: Attributes
-    armorNames: ArmorSet
-    talismanNames: TalismanSet
-    weaponNames: WeaponSlots
+    armor: ArmorSet
+    talismans: TalismanSet
+    weapons: WeaponSlots
+    ammunition: Record<AmmunitionSlotId, string>
+    spells: Record<SpellSlotId, string>
 }

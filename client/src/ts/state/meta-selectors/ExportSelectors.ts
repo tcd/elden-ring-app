@@ -1,20 +1,24 @@
-import { RootState } from "@app/state"
-import { BuildData } from "@app/types"
+import type { RootState } from "@app/state"
+import type { BuildData } from "@app/types"
 import {
-    ArmorSelectors         as Armor,
-    TalismansSelectors     as Talismans,
-    WeaponsSelectors       as Weapons,
-    StartingClassSelectors as StartingClass,
-    LevelUpSelectors       as LevelUp,
+    ArmorSelectors,
+    TalismansSelectors,
+    WeaponsSelectors,
+    StartingClassSelectors,
+    LevelUpSelectors,
+    AmmunitionSelectors,
+    SpellsSelectors,
 } from "@app/features"
 
 export const selectBuildData = (rootState: RootState): BuildData => {
     return {
-        startingClassName: StartingClass.startingClassName(rootState),
-        armorNames:        Armor.slots(rootState),
-        talismanNames:     Talismans.slots(rootState),
-        weaponNames:       Weapons.slots(rootState),
-        attributes:        LevelUp.allAddedAttributes(rootState),
+        ammunition:    AmmunitionSelectors.slots(rootState),
+        armor:         ArmorSelectors.slots(rootState),
+        attributes:    LevelUpSelectors.allAddedAttributes(rootState),
+        spells:        SpellsSelectors.slots(rootState),
+        startingClass: StartingClassSelectors.startingClassName(rootState),
+        talismans:     TalismansSelectors.slots(rootState),
+        weapons:       WeaponsSelectors.slots(rootState),
     }
 }
 
