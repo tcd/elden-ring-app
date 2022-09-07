@@ -11,6 +11,7 @@ export type PageName =
     | "ashes-of-war"
     | "builder"
     | "checklist"
+    | "data"
     | "equipment"
     | "level-up"
     | "not-found"
@@ -34,6 +35,7 @@ export type PageTitle =
     | "Ashes of War"
     | "Builder"
     | "Checklist"
+    | "Data"
     | "Equipment"
     | "Finite Resources"
     | "Level Up"
@@ -58,6 +60,7 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "ashes-of-war":   "Ashes of War",
     "builder":        "Builder",
     "checklist":      "Finite Resources",
+    "data":           "Data",
     "equipment":      "Equipment",
     "level-up":       "Level Up",
     "not-found":      "Not Found",
@@ -75,24 +78,30 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
 // =============================================================================
 
 export const HeaderIconIds = {
-    "alter-garments":  "ui/title-icons/alter-garments",
-    "ashes-of-war":    "ui/title-icons/ashes-of-war",
-    "crafting":        "ui/title-icons/crafting",
-    "equipment":       "ui/title-icons/equipment",
-    "great-runes":     "ui/title-icons/great-runes",
-    "inventory":       "ui/title-icons/inventory",
-    "level-up":        "ui/title-icons/level-up",
-    "map":             "ui/title-icons/map",
-    "messages":        "ui/title-icons/messages",
-    "multiplayer":     "ui/title-icons/multiplayer",
-    "physick":         "ui/title-icons/physick",
-    "site-of-grace":   "ui/title-icons/site-of-grace",
-    "smithing":        "ui/title-icons/smithing",
-    "sort-chest":      "ui/title-icons/sort-chest",
-    "spells":          "ui/title-icons/spells",
-    "starting-class":  "ui/title-icons/starting-class",
-    "status":          "ui/title-icons/status",
-    "system":          "ui/title-icons/system",
+    "alter-garments": "ui/title-icons/alter-garments",
+    "ashes-of-war":   "ui/title-icons/ashes-of-war",
+    "crafting":       "ui/title-icons/crafting",
+    "equipment":      "ui/title-icons/equipment",
+    "finger-reader":  "ui/title-icons/finger-reader",
+    "gestures":       "ui/title-icons/gestures",
+    "great-runes":    "ui/title-icons/great-runes",
+    "inventory":      "ui/title-icons/inventory",
+    "level-up":       "ui/title-icons/level-up",
+    "map":            "ui/title-icons/map",
+    "materials":      "ui/title-icons/materials",
+    "mausoleum":      "ui/title-icons/mausoleum",
+    "messages":       "ui/title-icons/messages",
+    "multiplayer":    "ui/title-icons/multiplayer",
+    "physick":        "ui/title-icons/physick",
+    "rebirth":        "ui/title-icons/rebirth",
+    "site-of-grace":  "ui/title-icons/site-of-grace",
+    "smithing":       "ui/title-icons/smithing",
+    "sort-chest":     "ui/title-icons/sort-chest",
+    "spells":         "ui/title-icons/spells",
+    "starting-class": "ui/title-icons/starting-class",
+    "status":         "ui/title-icons/status",
+    "system":         "ui/title-icons/system",
+    "weapon-skill":   "ui/title-icons/weapon-skill",
 } as const
 export type HeaderIconId = keyof typeof HeaderIconIds
 
@@ -109,9 +118,11 @@ export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "about":          HEADER_ICONS.map,
     "ammunition":     HEADER_ICONS.equipment,
     "armor":          HEADER_ICONS.equipment,
-    "ashes-of-war":   HEADER_ICONS["ashes-of-war"],
+    "ashes-of-war":   HEADER_ICONS["weapon-skill"],
     "builder":        HEADER_ICONS.smithing,
     "checklist":      HEADER_ICONS.inventory,
+    // "data":           HEADER_ICONS["finger-reader"],
+    "data":           HEADER_ICONS["system"],
     "equipment":      HEADER_ICONS.equipment,
     "level-up":       HEADER_ICONS["level-up"],
     "not-found":      HEADER_ICONS["site-of-grace"],

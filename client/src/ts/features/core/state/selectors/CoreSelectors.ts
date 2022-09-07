@@ -11,9 +11,9 @@ import { selectCustomizing } from "@app/features/weapons/state/selectors/selecto
 
 import { selectSlice } from "./select-slice"
 
-const selectReduxReady       = (rootState: RootState): boolean  => selectSlice(rootState)?.reduxReady
-const selectPageName         = (rootState: RootState): PageName => selectSlice(rootState)?.pageName ?? null
-const selectSideNavOpened    = (rootState: RootState): boolean  => selectSlice(rootState)?.sideNavOpened
+const selectReduxReady    = (rootState: RootState): boolean  => selectSlice(rootState)?.reduxReady
+const selectPageName      = (rootState: RootState): PageName => selectSlice(rootState)?.pageName ?? null
+const selectSideNavOpened = (rootState: RootState): boolean  => selectSlice(rootState)?.sideNavOpened
 
 const selectTitle = (rootState: RootState): PageTitle => {
     const pageName = selectPageName(rootState)
