@@ -17,7 +17,7 @@ const spellCategories = [
     "Frenzied Flame Incantations",
     "Godskin Apostle Incantations",
     "Golden Order Incantations",
-    "Servants OF Rot Incantations",
+    "Servants Of Rot Incantations",
     "Two Fingers Incantations",
     // Sorceries
     "Aberrant Sorceries",
