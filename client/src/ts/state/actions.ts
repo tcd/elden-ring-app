@@ -9,6 +9,7 @@ import {
     EquipmentActions,
     ImportExportActions,
     LevelUpActions,
+    NotificationsActions,
     QuickItemsActions,
     RoutingActions,
     SpellsActions,
@@ -27,6 +28,7 @@ export interface AppActions {
     [FeatureKeys.Equipment]:       typeof EquipmentActions
     [FeatureKeys.ImportExport]:    typeof ImportExportActions
     [FeatureKeys.LevelUp]:         typeof LevelUpActions
+    [FeatureKeys.Notifications]:   typeof NotificationsActions
     [FeatureKeys.QuickItems]:      typeof QuickItemsActions
     [FeatureKeys.Routing]:         typeof RoutingActions
     [FeatureKeys.Spells]:          typeof SpellsActions
@@ -45,6 +47,7 @@ export const Actions: AppActions = {
     Equipment:       EquipmentActions,
     ImportExport:    ImportExportActions,
     LevelUp:         LevelUpActions,
+    Notifications:   NotificationsActions,
     QuickItems:      QuickItemsActions,
     Routing:         RoutingActions,
     Spells:          SpellsActions,

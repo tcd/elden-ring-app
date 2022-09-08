@@ -8,6 +8,7 @@ export const FeatureKeys = <const>{
     Equipment:       "Equipment",
     ImportExport:    "ImportExport",
     LevelUp:         "LevelUp",
+    Notifications:   "Notifications",
     QuickItems:      "QuickItems",
     Router:          "Router",
     Routing:         "Routing",

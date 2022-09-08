@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 
 ## [Unreleased]
+### Added
+- Add app features:
+    - `ImportExport` 
+    - `Notifications` 
+- Add Dependencies: 
+    - `@mui/x-data-grid`
 ### Changed
 - Remove dependencies:
     - `jquery`

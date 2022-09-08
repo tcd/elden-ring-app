@@ -9,6 +9,7 @@ import {
     EquipmentSelectors,
     ImportExportSelectors,
     LevelUpSelectors,
+    NotificationsSelectors,
     QuickItemsSelectors,
     RoutingSelectors,
     SpellsSelectors,
@@ -29,6 +30,7 @@ export interface AppSelectors {
     [FeatureKeys.Equipment]:       typeof EquipmentSelectors
     [FeatureKeys.ImportExport]:    typeof ImportExportSelectors
     [FeatureKeys.LevelUp]:         typeof LevelUpSelectors
+    [FeatureKeys.Notifications]:   typeof NotificationsSelectors
     [FeatureKeys.QuickItems]:      typeof QuickItemsSelectors
     [FeatureKeys.Routing]:         typeof RoutingSelectors
     [FeatureKeys.Spells]:          typeof SpellsSelectors
@@ -49,6 +51,7 @@ export const Selectors: AppSelectors = {
     ImportExport:    ImportExportSelectors,
     LevelUp:         LevelUpSelectors,
     Meta:            MetaSelectors,
+    Notifications:   NotificationsSelectors,
     QuickItems:      QuickItemsSelectors,
     Routing:         RoutingSelectors,
     Spells:          SpellsSelectors,

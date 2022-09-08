@@ -20,6 +20,8 @@ export const zIndex = <const>{
     sideNav:                     1_200,
     sideNavItem:                 1_205,
     sideNavItemHover:            1_210,
+    notificationsContainer:      2_000,
+    notification:                2_100,
 }
 
 // export const ZIndex = {

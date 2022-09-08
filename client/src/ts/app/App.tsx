@@ -8,6 +8,7 @@ import { store, persistor } from "@app/state"
 import { LoggingProvider, ViewportProvider, logger } from "@app/util"
 import { AppHelmet } from "@app/features/core"
 import { AppRoutesComponent } from "@app/features/routing"
+import { AppNotifications } from "@app/features/notifications"
 
 export const App = (_props: unknown): JSX.Element => {
     return (
@@ -18,6 +19,7 @@ export const App = (_props: unknown): JSX.Element => {
                         <ThemeProvider theme={EldenRingMaterialTheme}>
                             <AppHelmet />
                             <CssBaseline />
+                            <AppNotifications />
                             <Router>
                                 <AppRoutesComponent />
                             </Router>
