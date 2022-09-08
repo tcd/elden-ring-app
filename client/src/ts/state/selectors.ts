@@ -7,6 +7,7 @@ import {
     ChecklistSelectors,
     CoreSelectors,
     EquipmentSelectors,
+    ImportExportSelectors,
     LevelUpSelectors,
     QuickItemsSelectors,
     RoutingSelectors,
@@ -26,6 +27,7 @@ export interface AppSelectors {
     [FeatureKeys.Checklist]:       typeof ChecklistSelectors
     [FeatureKeys.Core]:            typeof CoreSelectors
     [FeatureKeys.Equipment]:       typeof EquipmentSelectors
+    [FeatureKeys.ImportExport]:    typeof ImportExportSelectors
     [FeatureKeys.LevelUp]:         typeof LevelUpSelectors
     [FeatureKeys.QuickItems]:      typeof QuickItemsSelectors
     [FeatureKeys.Routing]:         typeof RoutingSelectors
@@ -44,6 +46,7 @@ export const Selectors: AppSelectors = {
     Checklist:       ChecklistSelectors,
     Core:            CoreSelectors,
     Equipment:       EquipmentSelectors,
+    ImportExport:    ImportExportSelectors,
     LevelUp:         LevelUpSelectors,
     Meta:            MetaSelectors,
     QuickItems:      QuickItemsSelectors,

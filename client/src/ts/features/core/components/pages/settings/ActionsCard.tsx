@@ -14,7 +14,7 @@ export const ActionsCard = (_props: unknown): JSX.Element => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const buildData = useSelector(Selectors.Meta.Export.build)
+    const buildData = useSelector(Selectors.ImportExport.buildData.raw)
 
     const handleExportClick = () => {
         exportJsonToFile({

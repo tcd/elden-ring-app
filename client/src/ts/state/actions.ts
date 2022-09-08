@@ -7,6 +7,7 @@ import {
     ChecklistActions,
     CoreActions,
     EquipmentActions,
+    ImportExportActions,
     LevelUpActions,
     QuickItemsActions,
     RoutingActions,
@@ -24,6 +25,7 @@ export interface AppActions {
     [FeatureKeys.Checklist]:       typeof ChecklistActions
     [FeatureKeys.Core]:            typeof CoreActions
     [FeatureKeys.Equipment]:       typeof EquipmentActions
+    [FeatureKeys.ImportExport]:    typeof ImportExportActions
     [FeatureKeys.LevelUp]:         typeof LevelUpActions
     [FeatureKeys.QuickItems]:      typeof QuickItemsActions
     [FeatureKeys.Routing]:         typeof RoutingActions
@@ -41,6 +43,7 @@ export const Actions: AppActions = {
     Checklist:       ChecklistActions,
     Core:            CoreActions,
     Equipment:       EquipmentActions,
+    ImportExport:    ImportExportActions,
     LevelUp:         LevelUpActions,
     QuickItems:      QuickItemsActions,
     Routing:         RoutingActions,

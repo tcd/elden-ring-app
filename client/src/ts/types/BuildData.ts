@@ -9,11 +9,11 @@ import type {
 } from "@app/types"
 
 export interface BuildData {
-    startingClass: StartingClassName
-    attributes: Attributes
+    ammunition?: Record<AmmunitionSlotId, string>
     armor: ArmorSet
+    attributes: Attributes
+    spells?: Record<SpellSlotId, string>
+    startingClass: StartingClassName
     talismans: TalismanSet
     weapons: WeaponSlots
-    ammunition: Record<AmmunitionSlotId, string>
-    spells: Record<SpellSlotId, string>
 }

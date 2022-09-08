@@ -6,6 +6,7 @@ export const FeatureKeys = <const>{
     Checklist:       "Checklist",
     Core:            "Core",
     Equipment:       "Equipment",
+    ImportExport:    "ImportExport",
     LevelUp:         "LevelUp",
     QuickItems:      "QuickItems",
     Router:          "Router",

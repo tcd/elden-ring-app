@@ -6,6 +6,7 @@ export * from "./from-constants"
 
 export * from "./BodyType"
 export * from "./BuildData"
+export * as CompactBuildData from "./CompactBuildData"
 export * from "./Damage"
 export * from "./IFpCost"
 export * from "./KitchenSink"
