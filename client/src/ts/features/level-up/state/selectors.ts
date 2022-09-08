@@ -1,8 +1,9 @@
 import sum from "lodash/sum"
 
-import { AttributeName } from "@app/types"
-import { RootState } from "@app/state"
-import { LevelUpState } from "./state"
+import type { AttributeName } from "@app/types"
+import type { RootState } from "@app/state"
+
+import type { LevelUpState } from "./state"
 
 // =============================================================================
 // Helpers
