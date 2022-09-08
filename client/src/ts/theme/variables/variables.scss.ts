@@ -66,11 +66,13 @@ export const button = <const>{
 // ----------------------------------------------------------------------------
 
 export const table = <const>{
+    fontSize: "16px",
     colorFg: typography.colorFg,
     // colorBg: "transparent !default",
     headerColorBg: "#1c1c19",
     borderRadius: "0.25rem !important",
     borderColor: "#515151",
+    border: `1px solid #515151`,
 }
 
 // ----------------------------------------------------------------------------
