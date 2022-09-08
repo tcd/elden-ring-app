@@ -5,7 +5,7 @@ import { CONFIG, JsUrl } from "@app/util"
 
 import { BuildDataSelectors } from "./BuildDataSelectors"
 
-const { raw, compact } = BuildDataSelectors
+const { raw, compact, minifiedCompact } = BuildDataSelectors
 
 // const selectDataUrl = (rootState: RootState): string => {
 //     const json = selectBuildData(rootState)
@@ -22,23 +22,15 @@ const withJsonStringify = (rootState: RootState): string => {
     return url
 }
 
-// Way too big.
-// const withUriEncode = (rootState: RootState): string => {
-//     const json = selectBuildData(rootState)
-//     const encodedData = encodeURIComponent(JSON.stringify(json))
-//     const url = `${CONFIG.clientUrl}/data?data=${encodedData}`
-//     return url
-// }
-
 const withBtoa = (rootState: RootState): string => {
-    const json = raw(rootState)
+    const json = compact(rootState)
     const encodedData = btoa(JSON.stringify(json))
     const url = `${CONFIG.clientUrl}/data?data=${encodedData}`
     return url
 }
 
 const withJsUrl = (rootState: RootState): string => {
-    const json = raw(rootState)
+    const json = compact(rootState)
     const encodedData = JsUrl.stringify(json)
     const url = `${CONFIG.clientUrl}/data?data=${encodedData}`
     return url
@@ -52,9 +44,16 @@ const withJsonCrush = (rootState: RootState): string => {
     return url
 }
 
+const withMinify = (rootState: RootState): string => {
+    const json = minifiedCompact(rootState)
+    const encodedData = encodeURIComponent(JSON.stringify(json))
+    const url = `${CONFIG.clientUrl}/data?data=${encodedData}`
+    return url
+}
+
 export const WipSelectors = {
     json: withJsonStringify,
-    // uriEncode: withUriEncode,
+    minifiedCompact: withMinify,
     btoa: withBtoa,
     jsurl: withJsUrl,
     jsonCrush: withJsonCrush,

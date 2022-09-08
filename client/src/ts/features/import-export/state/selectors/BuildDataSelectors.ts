@@ -31,6 +31,10 @@ const selectCompact = (rootState: RootState): Partial<BuildData> => {
 }
 
 const selectMinified = (rootState: RootState): Partial<CompactBuildData.CompactBuildData> => {
+    return minifyBuildData(selectRawBuildData(rootState))
+}
+
+const selectMinifiedCompact = (rootState: RootState): Partial<CompactBuildData.CompactBuildData> => {
     return compact(minifyBuildData(selectRawBuildData(rootState)))
 }
 
@@ -38,4 +42,5 @@ export const BuildDataSelectors = {
     raw: selectRawBuildData,
     compact: selectCompact,
     minified: selectMinified,
+    minifiedCompact: selectMinifiedCompact,
 }
