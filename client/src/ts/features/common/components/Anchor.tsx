@@ -8,7 +8,7 @@ const A = styled("a")(ComponentSx.Anchor)
 export interface AnchorProps {
     href: string
     content: React.ReactNode
-    newTab?: false
+    newTab?: boolean
 }
 
 const defaultProps: Partial<AnchorProps> = {
