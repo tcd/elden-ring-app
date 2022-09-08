@@ -29,6 +29,7 @@
         "@mdi/js": "^6.6.95",
         "@mui/icons-material": "^5.10.3",
         "@mui/material": "^5.10.3",
+        "@mui/x-data-grid": "^5.17.1",
         "@reduxjs/toolkit": "^1.8.0",
         "@reecelucas/react-use-hotkeys": "^1.3.5",
         "@typescript-eslint/eslint-plugin": "^5.16.0",

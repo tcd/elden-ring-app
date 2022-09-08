@@ -1,8 +1,8 @@
 import type { Components } from "@mui/material"
-// import type {} from "@mui/x-data-grid/themeAugmentation"
+import type {} from "@mui/x-data-grid/themeAugmentation"
 
 import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
-// import { colors } from "../variables/colors"
+import { colors } from "../variables/colors"
 import { baseStyles } from "./base-styles"
 
 export const components: Components = {
@@ -61,15 +61,18 @@ export const components: Components = {
             },
         },
     },
-    // MuiDataGrid: {
-    //     styleOverrides: {
-    //         root: {
-    //             backgroundColor: colors.black,
-    //             ".MuiDataGrid-cell": {
-    //                 outline: "none !important",
-    //                 boxShadow: "none !important",
-    //             },
-    //         },
-    //     },
-    // },
+    MuiDataGrid: {
+        styleOverrides: {
+            root: {
+                backgroundColor: colors.black,
+                ".MuiDataGrid-cell": {
+                    outline: "none !important",
+                    boxShadow: "none !important",
+                },
+                "*": {
+                    textShadow: "none",
+                },
+            },
+        },
+    },
 }
