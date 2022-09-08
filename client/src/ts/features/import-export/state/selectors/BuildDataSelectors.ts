@@ -4,15 +4,15 @@ import type {
     CompactBuildData,
 } from "@app/types"
 import {
+    // AmmunitionSelectors,
     ArmorSelectors,
+    LevelUpSelectors,
+    // SpellsSelectors,
+    StartingClassSelectors,
     TalismansSelectors,
     WeaponsSelectors,
-    StartingClassSelectors,
-    LevelUpSelectors,
-    // AmmunitionSelectors,
-    // SpellsSelectors,
 } from "@app/features"
-import { compact } from "@app/util"
+import { compact, minifyBuildData } from "@app/util"
 
 const selectRawBuildData = (rootState: RootState): BuildData => {
     return {
@@ -31,11 +31,11 @@ const selectCompact = (rootState: RootState): Partial<BuildData> => {
 }
 
 const selectMinified = (rootState: RootState): Partial<CompactBuildData.CompactBuildData> => {
-    throw new Error("not implemented")
+    return compact(minifyBuildData(selectRawBuildData(rootState)))
 }
 
 export const BuildDataSelectors = {
     raw: selectRawBuildData,
     compact: selectCompact,
-    // minified: selectMinified,
+    minified: selectMinified,
 }
