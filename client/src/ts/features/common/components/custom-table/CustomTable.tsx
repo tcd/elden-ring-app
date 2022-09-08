@@ -1,16 +1,15 @@
 import ReactDataTable, {
     TableColumn as RdtTableColumn,
+    createTheme,
 } from "react-data-table-component"
 import ArrowDownward from "@mui/icons-material/ArrowDownward"
+
+import { ComponentSx } from "@app/theme"
 
 import {
     CustomTableColumn,
     CustomTablePropsPlus,
 } from "./types"
-
-// =============================================================================
-// Component
-// =============================================================================
 
 // const selectProps = { indeterminate: (isIndeterminate: boolean) => isIndeterminate }
 
@@ -36,11 +35,16 @@ export const CustomTable = <T,>(props: CustomTablePropsPlus<T>): JSX.Element => 
                 sortIcon={<ArrowDownward/>}
                 data={rows}
                 columns={validColumns}
+                theme="er-data-table"
                 {...otherProps}
             />
         </div>
     )
 }
+
+// =============================================================================
+
+createTheme("er-data-table", ComponentSx.Rdtc.theme)
 
 const convertColumns = <T,>(customColumns: CustomTableColumn<T>[], centerAll = false): RdtTableColumn<T>[] => {
     const newColumns: RdtTableColumn<T>[] = []

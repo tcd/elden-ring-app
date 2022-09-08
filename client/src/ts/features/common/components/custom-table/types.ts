@@ -18,7 +18,7 @@ export type ColumnAlignment =
     | "right"
 
 export interface CustomTableColumn<T> {
-    field: Field<T> // | "actions" | "image"
+    field: Field<T> | "actions" | "image"
     headerName: string
     align?: ColumnAlignment
     sortable?: boolean
