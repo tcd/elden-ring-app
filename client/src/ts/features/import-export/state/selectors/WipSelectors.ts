@@ -5,7 +5,7 @@ import { CONFIG, JsUrl } from "@app/util"
 
 import { BuildDataSelectors } from "./BuildDataSelectors"
 
-const { raw, compact, minifiedCompact } = BuildDataSelectors
+const { compact, minifiedCompact } = BuildDataSelectors
 
 // const selectDataUrl = (rootState: RootState): string => {
 //     const json = selectBuildData(rootState)
