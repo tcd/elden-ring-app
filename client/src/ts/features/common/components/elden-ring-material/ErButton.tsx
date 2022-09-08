@@ -3,11 +3,11 @@ import merge from "lodash/merge"
 import type { ButtonBaseProps } from "@mui/material"
 import { ButtonBase } from "@mui/material"
 
-import { sx } from "./ErButton.styles"
+import { ComponentSx } from "@app/theme"
 
 const defaultProps: Partial<ErButtonProps> = {
     // className: "er__button",
-    sx: sx,
+    sx: ComponentSx.ErButton,
 }
 
 export type ErButtonProps = Omit<ButtonBaseProps, "disableRipple">
