@@ -8,7 +8,7 @@ export const QrExportCard = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const buildData = useSelector(Selectors.Meta.Export.build)
+    const buildData = useSelector(Selectors.ImportExport.buildData.compact)
 
     const encodedBuildData = JSON.stringify(buildData)
     console.log(encodedBuildData.length)

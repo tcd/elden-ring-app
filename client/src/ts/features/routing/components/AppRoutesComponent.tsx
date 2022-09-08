@@ -20,6 +20,7 @@ import { StatusPage } from "@app/features/character-status"
 import { ChecklistPage } from "@app/features/checklist"
 import { LevelUpPage } from "@app/features/level-up"
 import { StartingClassPage } from "@app/features/starting-class"
+import { DataPage } from "@app/features/import-export"
 import {
     EquipmentPage,
     MobileEquipmentPage,
@@ -67,6 +68,7 @@ const desktopRoutes: RouteObject[] = [
             { path: "/settings",  element: <SettingsPage /> },
             { path: "/status",    element: <StatusPage /> },
             { path: "/test",      element: <TestPage /> },
+            { path: "/data",      element: <DataPage /> },
             { path: "/level-up",  element: <LevelUpPage /> },
             { path: "/equipment", element: <EquipmentPage /> },
 
@@ -106,6 +108,7 @@ const mobileRoutes: RouteObject[] = [
             { path: "/settings",  element: <SettingsPage /> },
             { path: "/status",    element: <StatusPage /> },
             { path: "/test",      element: <TestPage /> },
+            { path: "/data",      element: <DataPage /> },
             { path: "/level-up",  element: <LevelUpPage /> },
             { path: "/equipment", element: <MobileEquipmentPage /> },
 

@@ -1,5 +1,3 @@
-import JSONCrush from "jsoncrush"
-
 import type { RootState } from "@app/state"
 import type {
     BuildData,
@@ -14,7 +12,7 @@ import {
     // AmmunitionSelectors,
     // SpellsSelectors,
 } from "@app/features"
-import { CONFIG, JsUrl, compact } from "@app/util"
+import { compact } from "@app/util"
 
 const selectRawBuildData = (rootState: RootState): BuildData => {
     return {
@@ -28,7 +26,7 @@ const selectRawBuildData = (rootState: RootState): BuildData => {
     }
 }
 
-const selectCompacted = (rootState: RootState): Partial<BuildData> => {
+const selectCompact = (rootState: RootState): Partial<BuildData> => {
     return compact(selectRawBuildData(rootState))
 }
 
@@ -38,6 +36,6 @@ const selectMinified = (rootState: RootState): Partial<CompactBuildData.CompactB
 
 export const BuildDataSelectors = {
     raw: selectRawBuildData,
-    compacted: selectCompacted,
+    compact: selectCompact,
     // minified: selectMinified,
 }

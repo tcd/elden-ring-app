@@ -40,32 +40,31 @@ const selectHash = (rootState: RootState): string => {
     return hash.replace(/^#/, "")
 }
 
-// -----------------------------------------------------------------------------
-// Query Params
-// -----------------------------------------------------------------------------
-
-/**
- * A URL search string, beginning with a `?`.
- *
- * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#location.search
- */
-const _selectSearch = (rootState: RootState): string => CoreSelectors.location(rootState)?.search
-
-const selectQueryParams = (rootState: RootState): URLSearchParams => {
-    const search = _selectSearch(rootState)
-    if (isBlank(search)) {
-        return new URLSearchParams()
-    }
-    const queryString = search.replace(/^\?/, "")
-    const searchParams = new URLSearchParams(queryString)
-    return searchParams
-}
+// // -----------------------------------------------------------------------------
+// // Query Params
+// // -----------------------------------------------------------------------------
+//
+// /**
+//  * A URL search string, beginning with a `?`.
+//  *
+//  * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#location.search
+//  */
+// const _selectSearch = (rootState: RootState): string => CoreSelectors.location(rootState)?.search
+//
+// const selectQueryParams = (rootState: RootState): URLSearchParams => {
+//     const search = _selectSearch(rootState)
+//     if (isBlank(search)) {
+//         return new URLSearchParams()
+//     }
+//     const queryString = search.replace(/^\?/, "")
+//     const searchParams = new URLSearchParams(queryString)
+//     return searchParams
+// }
 
 // =============================================================================
 
 export const DerivedSelectors = {
     pathname: selectPathname,
     hash: selectHash,
-    queryParams: selectQueryParams,
     previousLocation: selectPreviousLocation,
 }

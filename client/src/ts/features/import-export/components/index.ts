@@ -1,1 +1,1 @@
-export * from "./DataImportPage"
+export * from "./DataPage"
