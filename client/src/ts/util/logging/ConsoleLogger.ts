@@ -1,8 +1,12 @@
+/* eslint-disable no-console */
 import { ILogger, LogLevel } from "@app/types"
 import { CONFIG } from "@app/config"
 import { isBlank, isObject } from "@app/util"
 
-import { getCallsite, getCallingFunction } from "./callsite"
+import {
+    // getCallsite,
+    getCallingFunction,
+} from "./callsite"
 
 const LogLevelIds: Record<LogLevel, number> = {
     trace: 0,
@@ -35,7 +39,7 @@ export class ConsoleLogger implements ILogger {
             return null
         }
 
-        let fixedOptionalParams
+        // let fixedOptionalParams
 
         if (isBlank(message)) {
             message = `[${getCallingFunction()}]`
