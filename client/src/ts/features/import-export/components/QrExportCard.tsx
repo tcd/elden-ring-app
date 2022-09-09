@@ -1,16 +1,15 @@
 import { useSelector, useDispatch } from "react-redux"
-import { QRCode } from "react-qrcode-logo"
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, Divider, Button } from "@mui/material"
 
 import { Actions, Selectors } from "@app/state"
-import { ErButton, ErCard, MdiIcon } from "@app/features/common"
+import { ErButton, ErCard } from "@app/features/common"
+
+import { ErQrCode } from "./ErQrCode"
 
 export const QrExportCard = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
-    const buildData = useSelector(Selectors.ImportExport.buildData.compact)
-    const loading = useSelector(Selectors.ImportExport.requests.buildUrl.pending)
     const url = useSelector(Selectors.ImportExport.requests.buildUrl.response)
 
     const handleClick = () => {
@@ -19,27 +18,21 @@ export const QrExportCard = (_props: unknown): JSX.Element => {
 
     return (
         <ErCard title="Export">
-            <Box sx={{ display: "flex", flexFlow: "column nowrap"}}>
+            <Box sx={{ display: "flex", flexFlow: "column nowrap" }}>
                 <ErButton onClick={handleClick}>
                     Generate Url
                 </ErButton>
-                <hr style={{ width: "100%" }}/>
+                <Button variant="elden-ring" onClick={handleClick}>
+                    Generate Url
+                </Button>
+                {/* <hr style={{ width: "100%" }}/> */}
+                <Divider />
                 <Typography variant="body">
                     {url ?? "no url yet"}
                 </Typography>
+                <Divider />
+                <ErQrCode url={url}/>
             </Box>
-            {/* <QRCode
-                // value="https://c.tenor.com/sD2StBC5bT8AAAAC/animated-rainbow.gif"
-                value={encodedBuildData}
-                // logoImage={assetPath("images/.square.svg")}
-                // removeQrCodeBehindLogo={true}
-                qrStyle="dots"
-                // size={150}
-                // bgColor={"#FFFFFF"}
-                // fgColor={"#000000"}
-                // fgColor={}
-                // logoWidth={150 * 0.2}
-            /> */}
         </ErCard>
     )
 }
