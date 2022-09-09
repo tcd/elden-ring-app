@@ -1,9 +1,8 @@
 import type { Components } from "@mui/material"
 import type {} from "@mui/x-data-grid/themeAugmentation"
 
+import { ThemeVars } from "../variables"
 import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
-import { colors } from "../variables/colors"
-import { ZWSP } from "../variables/zwsp"
 import { baseStyles } from "./base-styles"
 
 export const components: Components = {
@@ -40,7 +39,7 @@ export const components: Components = {
                 // width: "100%",
                 // TODO: open pull request for this?
                 "&:after": {
-                    content: ZWSP,
+                    content: ThemeVars.ZWSP,
                     visibility: "hidden",
                 },
             },
@@ -83,7 +82,7 @@ export const components: Components = {
     MuiDataGrid: {
         styleOverrides: {
             root: {
-                backgroundColor: colors.black,
+                backgroundColor: ThemeVars.colors.black,
                 ".MuiDataGrid-cell": {
                     outline: "none !important",
                     boxShadow: "none !important",
