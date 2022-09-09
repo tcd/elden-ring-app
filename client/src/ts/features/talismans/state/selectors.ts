@@ -1,4 +1,4 @@
-import { Talisman, TalismanSlotId, TalismanSet } from "@app/types"
+import { Talisman, TalismanSlotId } from "@app/types"
 import { compactArray, isBlank } from "@app/util"
 import { RootState } from "@app/state"
 import { selectTalismans } from "@app/features/builder/state/selectors/api"
@@ -13,7 +13,7 @@ const _selectTalisman = (rootState: RootState, name?: string) => {
 }
 
 const selectActiveSlotId    = (rootState: RootState): TalismanSlotId => selectTalismansSlice(rootState).activeSlotId
-const selectTalismanNames   = (rootState: RootState): TalismanSet => selectTalismansSlice(rootState).talismanNames
+const selectTalismanNames   = (rootState: RootState): Record<TalismanSlotId, string> => selectTalismansSlice(rootState).talismanNames
 const selectHasMenuScrolled = (rootState: RootState): boolean => selectTalismansSlice(rootState).menuHasScrolled
 
 const _selectTalismanNameBySlotId = (rootState: RootState, slotId: TalismanSlotId) => {

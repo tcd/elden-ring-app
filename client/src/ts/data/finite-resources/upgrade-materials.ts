@@ -21,9 +21,39 @@ export interface FiniteResource {
     metadata?: any
 }
 
-export type FiniteResourceChecklist = { [key: string]: boolean }
+export type FiniteResourceId =
+    | "101"
+    | "102"
+    | "103"
+    | "104"
+    | "105"
+    | "106"
+    | "107"
+    | "108"
+    | "109"
+    | "110"
+    // Somber Ancient Dragon Smithing Stones
+    | "201"
+    | "202"
+    | "203"
+    | "204"
+    | "205"
+    | "206"
+    | "207"
+    | "208"
+    // Great Grave Gloveworts
+    | "301"
+    | "302"
+    | "303"
+    | "304"
+    | "305"
+    // Great Ghost Gloveworts
+    | "401"
+    | "402"
+    | "403"
+    | "404"
 
-export const UpgradeMaterialsChecklist: FiniteResourceChecklist = {
+export const UpgradeMaterialsChecklist: Record<FiniteResourceId, boolean> = {
     // Ancient Dragon Smithing Stones
     "101": false,
     "102": false,

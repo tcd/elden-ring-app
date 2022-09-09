@@ -1,5 +1,5 @@
 import type {
-    TalismanSet,
+    TalismanSlotId,
     WeaponSlotId,
 } from "@app/types"
 
@@ -50,7 +50,7 @@ export type CompactWeapons = Record<WeaponSlotId, CompactWeaponSettings>
 export type CompactBuildData =
     CompactAttributes &
     CompactArmor &
-    TalismanSet &
+    Record<TalismanSlotId, string> &
     CompactWeapons &
     {
         /** Starting Class Id */

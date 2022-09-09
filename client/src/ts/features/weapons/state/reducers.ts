@@ -15,11 +15,10 @@ import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
 import { EquipmentActions } from "@app/features/equipment"
+import { ImportExportActions } from "@app/features/import-export"
 
-import {
-    WeaponsState,
-    INITIAL_WEAPONS_STATE as INITIAL_STATE,
-} from "./state"
+import type { WeaponsState } from "./state"
+import { INITIAL_WEAPONS_STATE as INITIAL_STATE } from "./state"
 import { noWeaponsSelected } from "./helpers"
 
 export const reducers = {
@@ -160,6 +159,11 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<WeaponsState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_STATE)
+        .addCase(ImportExportActions.importData.fulfilled, (_state, { payload }): WeaponsState => ({
+            ...INITIAL_STATE,
+            slots: { ...payload?.weapons },
+            importComplete: true,
+        }))
         .addCase(StartingClassActions.confirmStartingClassName, (state: WeaponsState, { payload: { name } }) => {
             if (noWeaponsSelected(state)) {
                 const sClass = startingClassByName(name)

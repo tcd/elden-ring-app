@@ -10,6 +10,7 @@ export interface SpellsState {
     oldName: string
     menuHasScrolled: boolean
     slots: Record<SpellSlotId, string>
+    importComplete: boolean
 
     activeName: string
     activeIndex: number
@@ -20,6 +21,7 @@ export const INITIAL_SPELLS_STATE: SpellsState = {
     activeSlotId: null,
     oldName: null,
     menuHasScrolled: false,
+    importComplete: false,
     slots: {
         "S1":  null,
         "S2":  null,

@@ -14,12 +14,14 @@ export interface StartingClassState {
     startingClassName: StartingClassName
     pendingStartingClassName: StartingClassName
     confirmingStartingClass: boolean
+    importComplete: boolean
 }
 
 export const INITIAL_STARTING_CLASS_STATE: StartingClassState = {
     startingClassName: null,
     pendingStartingClassName: null,
     confirmingStartingClass: false,
+    importComplete: false,
 }
 
 export const StartingClassSlice = createSlice({

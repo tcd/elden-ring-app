@@ -1,15 +1,14 @@
-import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
+import type { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
 import type { AmmunitionSlotId } from "@app/types"
 import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { EquipmentActions } from "@app/features/equipment"
+import { ImportExportActions } from "@app/features/import-export"
 
-import {
-    AmmunitionState,
-    INITIAL_AMMUNITION_STATE as INITIAL_STATE,
-} from "./state"
+import type { AmmunitionState } from "./state"
+import { INITIAL_AMMUNITION_STATE as INITIAL_STATE } from "./state"
 
 export const reducers = {
     setActiveSlotId(state: AmmunitionState, { payload: { id } }: PayloadAction<{ id: AmmunitionSlotId }>) {
@@ -23,6 +22,12 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<AmmunitionState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_STATE)
+        .addCase(ImportExportActions.importData.fulfilled, (_, { payload: { ammunition = {} } }): AmmunitionState => ({
+            ...INITIAL_STATE,
+            // @ts-ignore: next-line
+            slots: { ...ammunition },
+            importComplete: true,
+        }))
         .addCase(EquipmentActions.navigate.fulfilled, (state: AmmunitionState, { payload: { id, type } }) => {
             if (type === "Ammunition") {
                 state.oldName = state.slots[id]

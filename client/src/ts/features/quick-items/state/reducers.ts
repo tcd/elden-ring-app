@@ -5,11 +5,10 @@ import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { EquipmentActions } from "@app/features/equipment"
+import { ImportExportActions } from "@app/features/import-export"
 
-import {
-    QuickItemsState,
-    INITIAL_QUICK_ITEMS_STATE as INITIAL_STATE,
-} from "./state"
+import type { QuickItemsState } from "./state"
+import { INITIAL_QUICK_ITEMS_STATE as INITIAL_STATE } from "./state"
 
 export const reducers = {
     setActiveSlot(state: QuickItemsState, { payload: { id } }: PayloadAction<{ id: QuickItemSlotId }>) {
@@ -20,6 +19,12 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<QuickItemsState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_STATE)
+        .addCase(ImportExportActions.importData.fulfilled, (_, { payload: { quickItems = {} } }): QuickItemsState => ({
+            ...INITIAL_STATE,
+            // @ts-ignore: next-line
+            slots: { ...quickItems },
+            importComplete: true,
+        }))
         .addCase(EquipmentActions.navigate.fulfilled, (state, { payload: { id, type } }) => {
             if (type === "QuickItem") {
                 // @ts-ignore: next-line

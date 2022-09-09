@@ -1,9 +1,6 @@
-import { RootState } from "@app/state"
-
-import {
-    FiniteResource,
-    FiniteResources,
-} from "@app/data"
+import type { RootState } from "@app/state"
+import type { FiniteResource } from "@app/data"
+import { FiniteResources } from "@app/data"
 
 // const selectChecklistState = (state: RootState) => { return state?.Checklist }
 

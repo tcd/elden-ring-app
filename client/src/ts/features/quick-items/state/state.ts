@@ -7,13 +7,13 @@ import { reducers, extraReducers } from "./reducers"
 
 export interface QuickItemsState {
     activeSlotId: QuickItemSlotId
-    mobileTab: "grid" | "detail" | "status"
     slots: Record<QuickItemSlotId, string>
+    importComplete: boolean
 }
 
 export const INITIAL_QUICK_ITEMS_STATE: QuickItemsState = {
     activeSlotId: null,
-    mobileTab: "grid",
+    importComplete: false,
     slots: {
         "Q1": "",
         "Q2": "",

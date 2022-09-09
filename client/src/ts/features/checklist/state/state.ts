@@ -2,23 +2,26 @@ import { createSlice } from "@reduxjs/toolkit"
 
 import { FeatureKeys } from "@app/constants"
 import {
-    FiniteResourceChecklist,
+    FiniteResourceId,
     UpgradeMaterialsChecklist,
 } from "@app/data"
 
 import { reducers, extraReducers } from "./reducers"
 
 export interface ChecklistState {
-    obtainedResources: FiniteResourceChecklist
+    obtainedResources: Record<FiniteResourceId, boolean>
+    importComplete: boolean
 }
 
 export const INITIAL_CHECKLIST_STATE: ChecklistState = {
+    importComplete: false,
     obtainedResources: {
         ...UpgradeMaterialsChecklist,
     },
 }
 
 const initialDevState: ChecklistState = {
+    importComplete: false,
     obtainedResources: {
         ...UpgradeMaterialsChecklist,
         "102": true,

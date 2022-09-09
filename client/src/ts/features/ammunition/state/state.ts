@@ -10,6 +10,7 @@ export interface AmmunitionState {
     activeSlotId: AmmunitionSlotId
     oldName: string
     menuHasScrolled: boolean
+    importComplete: boolean
 }
 
 export const INITIAL_AMMUNITION_STATE: AmmunitionState = {
@@ -22,6 +23,7 @@ export const INITIAL_AMMUNITION_STATE: AmmunitionState = {
     activeSlotId: null,
     oldName: null,
     menuHasScrolled: false,
+    importComplete: false,
 }
 
 export const AmmunitionSlice = createSlice({

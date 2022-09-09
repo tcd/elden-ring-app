@@ -1,15 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import type { TalismanSet, TalismanSlotId } from "@app/types"
+import type { TalismanSlotId } from "@app/types"
 import { FeatureKeys } from "@app/constants"
 
 import { reducers, extraReducers } from "./reducers"
 
 export interface TalismansState {
-    talismanNames: TalismanSet
+    // FIXME: rename to `slots`
+    talismanNames: Record<TalismanSlotId, string>
     activeSlotId: TalismanSlotId
     oldTalismanName?: string
     menuHasScrolled: boolean
+    importComplete: boolean
 }
 
 export const INITIAL_TALISMANS_STATE: TalismansState = {
@@ -22,6 +24,7 @@ export const INITIAL_TALISMANS_STATE: TalismansState = {
     activeSlotId: null,
     oldTalismanName: null,
     menuHasScrolled: false,
+    importComplete: false,
 }
 
 const initialDevState: TalismansState = {

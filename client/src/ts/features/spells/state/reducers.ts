@@ -6,6 +6,7 @@ import { isBlank } from "@app/util"
 import { CoreActions } from "@app/features/core"
 import { RoutingActions } from "@app/features/routing"
 import { StartingClassActions } from "@app/features/starting-class"
+import { ImportExportActions } from "@app/features/import-export"
 
 import type { SpellsState } from "./state"
 import { INITIAL_SPELLS_STATE as INITIAL_STATE } from "./state"
@@ -44,6 +45,12 @@ export const reducers = {
 export const extraReducers = (builder: ActionReducerMapBuilder<SpellsState>) => {
     builder
         .addCase(CoreActions.resetState, () => INITIAL_STATE)
+        .addCase(ImportExportActions.importData.fulfilled, (_, { payload: { spells = {} } }): SpellsState => ({
+            ...INITIAL_STATE,
+            // @ts-ignore: next-line
+            slots: { ...spells },
+            importComplete: true,
+        }))
         .addCase(StartingClassActions.confirmStartingClassName, (state: SpellsState, { payload: { name } }) => {
             if (noSpellsSelected(state)) {
                 const sClass = startingClassByName(name)

@@ -7,6 +7,7 @@ import { reducers, extraReducers } from "./reducers"
 
 export interface LevelUpState {
     attributes: Attributes
+    importComplete: boolean
 }
 
 export const INITIAL_LEVEL_UP_STATE: LevelUpState = {
@@ -20,6 +21,7 @@ export const INITIAL_LEVEL_UP_STATE: LevelUpState = {
         "faith":        0,
         "arcane":       0,
     },
+    importComplete: false,
 }
 
 // const initialDevState: LevelUpState = {
