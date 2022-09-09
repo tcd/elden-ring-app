@@ -3,7 +3,7 @@ import Color from "color"
 
 // import { getImageSrcManual } from "@app/util"
 
-import * as ThemeVars from "../variables"
+import { ThemeVars } from "../variables"
 import * as helpers from "../helpers"
 // import * as mixins from "../sx/mixins"
 
