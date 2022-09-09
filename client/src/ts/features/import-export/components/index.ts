@@ -1,2 +1,1 @@
-export * from "./DataPage"
-export * from "./ImportDataPage"
+export * from "./pages"

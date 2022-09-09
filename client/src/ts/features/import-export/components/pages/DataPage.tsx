@@ -6,8 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2"
 import { Actions, Selectors } from "@app/state"
 import { ErPage, ErCard } from "@app/features/common"
 
-import { TestTable } from "./TestTable"
-import { QrExportCard } from "./QrExportCard"
+import { TestTable, QrExportCard } from "../misc"
 
 export const DataPage = (_props: unknown): JSX.Element => {
 
