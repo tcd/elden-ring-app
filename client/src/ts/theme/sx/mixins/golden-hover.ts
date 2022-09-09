@@ -10,6 +10,7 @@ import { pointerOnHoverChildren } from "./pointer-on-hover"
 export const goldenHover = {
     ...pointerOnHoverChildren,
     "&:hover": {
+        backgroundColor: "initial",
         cursor: "pointer",
         boxShadow: boxShadow({
             x:      "0px",

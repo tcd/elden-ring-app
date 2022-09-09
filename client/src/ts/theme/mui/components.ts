@@ -1,9 +1,11 @@
-import type { Components } from "@mui/material"
+import type { Components, LinkProps } from "@mui/material"
 import type {} from "@mui/x-data-grid/themeAugmentation"
+import { experimental_sx as sx } from "@mui/material/styles"
 
 import { ThemeVars } from "../variables"
 import * as mixins from "../sx/mixins"
 import { baseStyles } from "./base-styles"
+import { LinkBehavior } from "./LinkBehavior"
 
 export const components: Components = {
     MuiCssBaseline: {
@@ -46,11 +48,29 @@ export const components: Components = {
         },
     },
     // -------------------------------------------------------------------------
+    // Links
+    // -------------------------------------------------------------------------
+    MuiLink: {
+        defaultProps: {
+            component: LinkBehavior,
+        } as LinkProps,
+        styleOverrides: {
+            root: sx({
+                textDecoration: "none",
+                "&:hover, &:focus, &:active, &.Mui-focusVisible": {
+                    textDecoration: "underline",
+                    // outline: "none",
+                },
+            }),
+        },
+    },
+    // -------------------------------------------------------------------------
     // Buttons
     // -------------------------------------------------------------------------
     MuiButtonBase: {
         defaultProps: {
             disableRipple: true,
+            LinkComponent: LinkBehavior,
         },
         styleOverrides: {
             root: {
