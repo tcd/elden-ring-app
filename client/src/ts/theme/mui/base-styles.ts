@@ -1,14 +1,43 @@
-import type { CSSObject } from "@mui/material"
+import type { CSSInterpolation, CSSObject } from "@mui/material"
+import Color from "color"
 
 // import { getImageSrcManual } from "@app/util"
 
-import { startingClass } from "../variables/variables.scss"
-import { typography } from "../variables/typography"
-import { gradients } from "../variables/gradients"
-// import { colors } from "../variables/colors"
-// import { cssUrl } from "../helpers/css-url"
-import { scrollbar } from "../helpers/scrollbar"
-import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
+import * as ThemeVars from "../variables"
+import * as helpers from "../helpers"
+// import * as mixins from "../sx/mixins"
+
+
+/** `<a></a>` */
+const anchor: CSSInterpolation = {
+    textDecoration: "none",
+    color: ThemeVars.colors.gold.light,
+    "&:hover, &:active, &:focus": {
+        cursor: "pointer",
+        textDecoration: "underline",
+        color: Color(ThemeVars.colors.gold.light).darken(0.2).hexa(),
+    },
+    "& *": {
+        "&:hover": {
+            cursor: "pointer",
+        },
+    },
+}
+
+/**
+ * - `<ul></ul>`
+ * - `<ol></ol>`
+ * - `<li></li>`
+ */
+const lists: CSSInterpolation = {
+    listStyle: "none",
+    listStylePosition: "inside",
+    paddingLeft: "0px",
+    marginLeft: "0px",
+    marginBottom: "default",
+    marginBlockStart: "0px",
+    marginBlockEnd: "0px",
+}
 
 // =============================================================================
 // Resets
@@ -20,7 +49,7 @@ const _htmlAndBody: CSSObject = {
     padding: "0px !important",
     // paddingRight: "0px !important",
     overflow: "auto !important",
-    ...scrollbar(),
+    ...helpers.scrollbar(),
 }
 
 const html: CSSObject = _htmlAndBody
@@ -29,37 +58,18 @@ const body: CSSObject = {
     ..._htmlAndBody,
     display: "flex",
     flexFlow: "column nowrap",
-    color: typography.colorFg,
+    color: ThemeVars.typography.colorFg,
     backgroundColor: "black",
-    fontFamily: typography.fontFamily.display,
-    // "*::before, *::after": {
-    //     boxSizing: "border-box",
-    // },
+    fontFamily: ThemeVars.typography.fontFamily.display,
+    "*::before, *::after": {
+        boxSizing: "border-box",
+    },
     "& *": {
         boxSizing: "border-box",
-        fontFamily: typography.fontFamily.display,
+        fontFamily: ThemeVars.typography.fontFamily.display,
     },
-    "& a": {
-        textDecoration: "none",
-        "&:hover, &:active, &:focus": {
-            cursor: "pointer",
-            // textDecoration: "underline",
-        },
-        "& *": {
-            "&:hover": {
-                cursor: "pointer",
-            },
-        },
-    },
-    "& ol, & ul, & li": {
-        listStyle: "none",
-        listStylePosition: "inside",
-        paddingLeft: "0px",
-        marginLeft: "0px",
-        marginBottom: "default",
-        marginBlockStart: "0px",
-        marginBlockEnd: "0px",
-    },
+    "& a":              anchor,
+    "& ol, & ul, & li": lists,
 }
 
 // =============================================================================
@@ -90,8 +100,8 @@ const root: CSSObject = {
 
     "&.startingClassPage": {
         backgroundImage: "none !important",
-        backgroundColor: startingClass.bgGradientColorLeft,
-        background: gradients.startingClassBackground + " !important",
+        backgroundColor: ThemeVars.startingClass.bgGradientColorLeft,
+        background: ThemeVars.gradients.startingClassBackground + " !important",
     },
 }
 

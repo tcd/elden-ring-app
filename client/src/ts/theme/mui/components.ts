@@ -3,6 +3,7 @@ import type {} from "@mui/x-data-grid/themeAugmentation"
 
 import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
 import { colors } from "../variables/colors"
+import { ZWSP } from "../variables/zwsp"
 import { baseStyles } from "./base-styles"
 
 export const components: Components = {
@@ -25,6 +26,29 @@ export const components: Components = {
             },
         },
     },
+    MuiMenuItem: {
+        styleOverrides: {
+            root: {
+                listStylePosition: "unset",
+                paddingLeft: "0.5rem !important",
+            },
+        },
+    },
+    MuiDivider: {
+        styleOverrides: {
+            root: {
+                // width: "100%",
+                // TODO: open pull request for this?
+                "&:after": {
+                    content: ZWSP,
+                    visibility: "hidden",
+                },
+            },
+        },
+    },
+    // -------------------------------------------------------------------------
+    // Buttons
+    // -------------------------------------------------------------------------
     MuiButtonBase: {
         defaultProps: {
             disableRipple: true,
@@ -53,14 +77,9 @@ export const components: Components = {
             },
         },
     },
-    MuiMenuItem: {
-        styleOverrides: {
-            root: {
-                listStylePosition: "unset",
-                paddingLeft: "0.5rem !important",
-            },
-        },
-    },
+    // -------------------------------------------------------------------------
+    // Data Grid
+    // -------------------------------------------------------------------------
     MuiDataGrid: {
         styleOverrides: {
             root: {
