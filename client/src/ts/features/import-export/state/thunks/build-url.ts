@@ -20,7 +20,7 @@ export const buildUrl = createAsyncThunk<string, void, { rejectValue: string | S
     try {
         const rootState = thunkApi.getState() as RootState
         const rawData = Selectors.ImportExport.buildData.compact(rootState)
-        const longUrl = `${CONFIG.clientUrl}/data?data=${JSON.stringify(rawData)}`
+        const longUrl = `${CONFIG.clientUrl}/import?data=${JSON.stringify(rawData)}`
 
         const response = await BitlyClient.shorten(longUrl)
         return response.link

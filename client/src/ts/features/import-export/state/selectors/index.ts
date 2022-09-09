@@ -1,4 +1,4 @@
-import { RequestsSelectors } from "./RequestsSelectors"
+import { RequestsSelectors } from "./requests"
 import { BuildDataSelectors } from "./BuildDataSelectors"
 import { WipSelectors } from "./WipSelectors"
 
