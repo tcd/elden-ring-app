@@ -55,6 +55,7 @@ export const components: Components = {
         styleOverrides: {
             root: {
                 textTransform: "none",
+                letterSpacing: "normal",
             },
         },
     },
@@ -65,6 +66,7 @@ export const components: Components = {
         styleOverrides: {
             root: {
                 textTransform: "none",
+                letterSpacing: "normal",
                 ...mixins.pointerOnHover,
             },
         },
@@ -80,6 +82,8 @@ export const components: Components = {
                     padding: `${ThemeVars.button.verticalPadding} ${ThemeVars.button.horizontalPadding}`,
                     backgroundColor: ThemeVars.button.colorBg,
                     color: ThemeVars.button.colorFg,
+                    fontSize: "15px",
+                    lineHeight: "normal",
                     ...mixins.goldenHover,
                 },
             },
