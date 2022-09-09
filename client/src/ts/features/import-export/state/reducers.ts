@@ -21,9 +21,9 @@ export const extraReducers = (builder: ActionReducerMapBuilder<ImportExportState
         .addCase(buildUrl.pending, (state) => {
             state.requests.buildUrl.status = "pending"
         })
-        .addCase(buildUrl.rejected, (state, _action) => {
+        .addCase(buildUrl.rejected, (state, action) => {
             state.requests.buildUrl.status = "rejected"
-            // TODO: handle error
+            state.requests.buildUrl.error = action.payload
         })
         .addCase(buildUrl.fulfilled, (state, action: PayloadAction<string>) => {
             state.requests.buildUrl.status = "fulfilled"

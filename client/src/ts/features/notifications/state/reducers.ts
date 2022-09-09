@@ -4,6 +4,7 @@ import type { INotificationOptions } from "@app/types"
 import { updateArray } from "@app/util"
 import {
     CoreActions,
+    ImportExportActions,
 } from "@app/features"
 
 import type { NotificationsState } from "./state"
@@ -11,8 +12,8 @@ import { INITIAL_NOTIFICATIONS_STATE as INITIAL_STATE } from "./state"
 import {
     createNotification,
     // notifySuccess,
-    // notifyError,
-    // notifyErrorManual,
+    notifyError,
+    notifyErrorManual,
 } from "./helpers"
 
 export const reducers = {
@@ -55,4 +56,9 @@ export const extraReducers = (builder: ActionReducerMapBuilder<NotificationsStat
                 // ],
             }
         })
+        // ---------------------------------------------------------------------
+        // Import/Export
+        // ---------------------------------------------------------------------
+        .addCase(ImportExportActions.buildUrl.rejected,   (state, action) => notifyError(state, action, "Unable to build url"))
+        .addCase(ImportExportActions.importData.rejected, (state, action) => notifyErrorManual(state, action.payload))
 }

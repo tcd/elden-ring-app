@@ -2,7 +2,7 @@ import type { PayloadAction } from "@reduxjs/toolkit"
 // import { v4 as uuidV4 } from "uuid";
 
 import type { INotification, INotificationOptions } from "@app/types"
-import { isBlank } from "@app/util"
+import { isAxiosSerializedError, isBlank } from "@app/util"
 
 import { NotificationsState } from "./state"
 
@@ -40,36 +40,40 @@ export const notifyErrorManual = (state: NotificationsState, message: string): N
     }))
     return state
 }
-//
-// // https://github.com/reduxjs/redux-toolkit/blob/master/packages/toolkit/src/createAsyncThunk.ts
-// export const notifyError = (state: NotificationsState, _action: any, message: string): NotificationsState => {
-//     const action: PayloadAction<IApiResponse, any, { rejectValue: IApiResponse }> = _action
-//     let _message = ""
-//     if (isBlank(action?.payload)) {
-//         state.notifications.push(createNotification({
-//             variant: "error",
-//             message: message,
-//         }))
-//         return state
-//     }
-//     if (action?.payload?.status && [401, 403].includes(action.payload.status)) {
-//         state.notifications.push(createNotification({
-//             variant: "error",
-//             message: "Unauthorized",
-//         }))
-//         return state
-//     }
-//     if (action.payload?.properlyFormatted) {
-//         if (action.payload?.status) {
-//             _message += `${action.payload.status}: `
-//         }
-//         if (!isBlank(action.payload?.errorResponse?.message)) {
-//             _message += action.payload?.errorResponse?.message
-//         }
-//     }
-//     state.notifications.push(createNotification({
-//         variant: "error",
-//         message: (_message == "" ? message : _message),
-//     }))
-//     return state
-// }
+
+// https://github.com/reduxjs/redux-toolkit/blob/master/packages/toolkit/src/createAsyncThunk.ts
+export const notifyError = (state: NotificationsState, _action: any, message: string): NotificationsState => {
+    const action: PayloadAction<any, any, { rejectValue: string | any }> = _action
+    let _message = ""
+
+    // go with default message if action has no payload
+    if (isBlank(action?.payload)) {
+        state.notifications.push(createNotification({
+            variant: "error",
+            message: message,
+        }))
+        return state
+    }
+
+    if (isAxiosSerializedError(action?.payload)) {
+        state.notifications.push(createNotification({
+            variant: "error",
+            message: action?.payload?.message ?? "Axios Error",
+        }))
+        return state
+    }
+
+    // if (action?.payload?.status && [401, 403].includes(action.payload.status)) {
+    //     state.notifications.push(createNotification({
+    //         variant: "error",
+    //         message: "Unauthorized",
+    //     }))
+    //     return state
+    // }
+    _message = "Error"
+    state.notifications.push(createNotification({
+        variant: "error",
+        message: (_message == "" ? message : _message),
+    }))
+    return state
+}

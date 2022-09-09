@@ -8,7 +8,7 @@ import { logger } from "@app/util"
 
 const actionName = `${FeatureKeys.ImportExport}/importData`
 
-export const importData = createAsyncThunk<BuildData, string>(actionName, async (encodedData: string, thunkApi) => {
+export const importData = createAsyncThunk<BuildData, string, { rejectValue: any }>(actionName, async (encodedData: string, thunkApi) => {
     try {
         const data: BuildData = JSON.parse(encodedData)
         return data

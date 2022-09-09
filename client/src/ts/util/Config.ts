@@ -10,6 +10,7 @@ export interface IConfig {
     version: string
     clientUrl: string
     bitlyToken: string
+    firebaseApiKey: string
 }
 
 class Configuration implements IConfig {
@@ -21,6 +22,7 @@ class Configuration implements IConfig {
     public version: string
     public clientUrl: string
     public bitlyToken: string
+    public firebaseApiKey: string
 
     constructor() {
         this.nodeEnv        = this.getNodeEnv()
@@ -30,6 +32,7 @@ class Configuration implements IConfig {
         this.version        = process?.env["VERSION"] ?? ""
         this.clientUrl      = process?.env["CLIENT_URL"] ?? ""
         this.bitlyToken     = process?.env["BITLY_TOKEN"] ?? ""
+        this.firebaseApiKey = process?.env["FIREBASE_API_KEY"] ?? ""
     }
 
     public production(): boolean {
@@ -37,6 +40,7 @@ class Configuration implements IConfig {
     }
 
     public toJson(): any {
+        if (this.getNodeEnv() === "production") { return null }
         return {
             nodeEnv:        this.nodeEnv,
             logLevel:       this.logLevel,
@@ -44,7 +48,8 @@ class Configuration implements IConfig {
             apiServerRoot:  this.apiServerRoot,
             version:        this.version,
             clientUrl:      this.clientUrl,
-            bitlyToken:      this.bitlyToken,
+            bitlyToken:     this.bitlyToken,
+            firebaseApiKey: this.firebaseApiKey,
         }
     }
 
