@@ -2,7 +2,7 @@ import type { Components } from "@mui/material"
 import type {} from "@mui/x-data-grid/themeAugmentation"
 
 import { ThemeVars } from "../variables"
-import { pointerOnHover } from "../sx/mixins/pointer-on-hover"
+import * as mixins from "../sx/mixins"
 import { baseStyles } from "./base-styles"
 
 export const components: Components = {
@@ -21,7 +21,7 @@ export const components: Components = {
     MuiSvgIcon: {
         styleOverrides: {
             root: {
-                ...pointerOnHover,
+                ...mixins.pointerOnHover,
             },
         },
     },
@@ -65,14 +65,30 @@ export const components: Components = {
         styleOverrides: {
             root: {
                 textTransform: "none",
-                ...pointerOnHover,
+                ...mixins.pointerOnHover,
             },
         },
+        variants: [
+            {
+                props: { variant: "elden-ring" },
+                style: {
+                    textTransform: "none",
+                    position: "relative",
+                    borderRadius: "0px",
+                    border: `1px solid ${ThemeVars.button.borderColor}`,
+                    /** vertical, horizontal */
+                    padding: `${ThemeVars.button.verticalPadding} ${ThemeVars.button.horizontalPadding}`,
+                    backgroundColor: ThemeVars.button.colorBg,
+                    color: ThemeVars.button.colorFg,
+                    ...mixins.goldenHover,
+                },
+            },
+        ],
     },
     MuiListItemButton: {
         styleOverrides: {
             root: {
-                ...pointerOnHover,
+                ...mixins.pointerOnHover,
             },
         },
     },

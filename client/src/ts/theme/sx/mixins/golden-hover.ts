@@ -1,4 +1,4 @@
-import type { SxProps } from "@mui/material"
+// import type { SxProps } from "@mui/material"
 
 import { colors } from "@app/theme/variables/colors"
 import { gradients } from "@app/theme/variables/gradients"
@@ -7,7 +7,7 @@ import { rgba, boxShadow } from "@app/theme/helpers"
 
 import { pointerOnHoverChildren } from "./pointer-on-hover"
 
-export const goldenHover: SxProps = {
+export const goldenHover = {
     ...pointerOnHoverChildren,
     "&:hover": {
         cursor: "pointer",

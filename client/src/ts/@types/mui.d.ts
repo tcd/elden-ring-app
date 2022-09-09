@@ -53,8 +53,8 @@
 // =============================================================================
 
 // Update the Typography's variant prop options
-declare module "@mui/material/Typography" {
-    interface TypographyPropsVariantOverrides {
+export declare module "@mui/material/Typography" {
+    export interface TypographyPropsVariantOverrides {
         // add new
         pageName: true
         body: true
@@ -73,5 +73,15 @@ declare module "@mui/material/Typography" {
         caption: false
         button: false
         overline: false
+    }
+}
+
+// =============================================================================
+// Buttons
+// =============================================================================
+
+export declare module "@mui/material/Button" {
+    export interface ButtonPropsVariantOverrides {
+        "elden-ring": true
     }
 }
