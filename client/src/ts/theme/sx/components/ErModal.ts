@@ -48,11 +48,17 @@ const contentSx: SxProps = {
     py: "25px",
 
     flexGrow: 1,
+
     display: "flex",
-    // flexDirection: "column",
-    flexWrap: "nowrap",
+    flexFlow: "column nowrap",
     justifyContent: "center",
     alignItems: "center",
+
+    // NOTE: this might come back to bite me in the butt.
+    "& > :first-child": {
+        flexGrow: 1,
+        height: "100%",
+    },
 }
 
 /** `.er__modal > header` */

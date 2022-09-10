@@ -1,12 +1,13 @@
 import { useSelector, useDispatch } from "react-redux"
-import { Box, Typography, Divider, Button, SxProps } from "@mui/material"
+import { Box, Typography, Button, SxProps } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
-import { ErCard, ErModal } from "@app/features/common"
+import { ErCard, ErModal, ErHr } from "@app/features/common"
 
 import { ErQrCode } from "../ErQrCode"
 import { CopyableLink } from "./CopyableLink"
+
 
 export const ExportModal = (_props: unknown): JSX.Element => {
 
@@ -39,12 +40,6 @@ const ExportModalContent = ({ url }: ExportModalContentProps): JSX.Element => {
     return (
         <Box sx={ComponentSx.ExportCard.root}>
             <CopyableLink url={url} />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            {/* <Divider /> */}
             <ErQrCode url={url} />
         </Box>
     )

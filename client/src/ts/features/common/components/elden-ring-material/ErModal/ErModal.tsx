@@ -11,8 +11,8 @@ const styles = {
 
 export const ErModal = (props: ErModalProps): JSX.Element => {
 
-    const contentElement = (contentProps: React.ComponentPropsWithRef<"div">, children: React.ReactNode) => {
-        return <Content {...props} {...contentProps}>{children}</Content>
+    const contentElement = (contentProps: React.ComponentPropsWithRef<"div">, _children: React.ReactNode) => {
+        return <Content {...props} {...contentProps}>{props?.children && props.children}</Content>
     }
 
     return (
@@ -22,8 +22,6 @@ export const ErModal = (props: ErModalProps): JSX.Element => {
             isOpen={props.isOpen}
             onRequestClose={props.onClose}
             ariaHideApp={false}
-        >
-            <>{props?.children}</>
-        </ReactModal>
+        />
     )
 }

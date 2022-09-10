@@ -23,7 +23,7 @@ export const CopyableLink = ({ url }: { url: string }): JSX.Element => {
             <Box sx={ComponentSx.ExportCard.CopyableLink.typography}>
                 {url}
             </Box>
-            <CopyIcon fontSize="small" sx={{ m: 1 }} />
+            <CopyIcon fontSize="small" sx={{ m: 1, ml: 3 }} />
         </Box>
     )
 }

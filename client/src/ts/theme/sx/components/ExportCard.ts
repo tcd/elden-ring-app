@@ -1,11 +1,11 @@
 import type { SxProps } from "@mui/material"
+import merge from "lodash/merge"
+import Color from "color"
 
-import { ThemeVars } from "@app/theme"
+import { ThemeVars, ThemeBreakpoints } from "@app/theme"
 
 import {
-    textShadow,
     pointerOnHover,
-    invisibleContent,
 } from "../mixins"
 
 // =============================================================================
@@ -13,31 +13,33 @@ import {
 const root: SxProps = {
     display: "flex",
     flexFlow: "column nowrap",
-    // background: "blue",
     width: "90%",
     alignItems: "center",
+    justifyContent: "space-around",
     pb: 5,
+    [ThemeBreakpoints.down("sm")]: {
+        width: "75%",
+    },
 }
 
 // =============================================================================
 
-const CopyableLink__root: SxProps = {
+const CopyableLink__root: SxProps = merge(pointerOnHover, {
     display: "flex",
     flexFlow: "row nowrap",
-    // justifyContent: "center", // horizontal
     justifyContent: "space-between", // horizontal
     alignItems: "center", // vertical
 
-    p: 1,
-    // background: "red",
-    background: ThemeVars.modal.colorBorder,
+    py: 1,
+    pl: 2,
+    pr: 1,
+    mb: 5,
+    backgroundColor: ThemeVars.modal.colorBorder,
     borderRadius: "5px",
-
-    // "&:hover": {
-    //     cursor: "pointer",
-    // },
-    ...pointerOnHover,
-}
+    "&:hover": {
+        backgroundColor: Color(ThemeVars.modal.colorBorder).darken(0.2).hexa(),
+    },
+})
 
 const CopyableLink__typography: SxProps = {
     fontFamily: ThemeVars.typography.fontFamily.caption,
