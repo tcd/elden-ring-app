@@ -37,3 +37,4 @@ x 2022-07-24 2022-07-16 Equipment Detail first sections all have 6 rows, use tha
 x 2022-09-04 2022-09-04 Fix header title vertical align @removedBootstrap
 2022-09-04 Assess accessibility
 2022-09-06 Lighten red color on `YouDied` component
+2022-09-10 Name custom builds

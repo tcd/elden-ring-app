@@ -1,2 +1,2 @@
-export * from "./firebase.types"
+export * from "./types"
 export * from "./FirebaseClient"
