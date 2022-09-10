@@ -21,6 +21,7 @@ import {
  * - `.er__dialog__bottomBorder`
  */
 const borderSx: SxProps = {
+    width: "100%",
     height: "3px",
     background: ThemeVars.gradients.modalHorizontalBorder,
 }
@@ -32,7 +33,6 @@ const borderSx: SxProps = {
 const innerBorderWrapperSx: SxProps = {
     content: ThemeVars.ZWSP,
     width: "100%",
-
     display: "flex",
     justifyContent: "center",
 }
@@ -54,6 +54,7 @@ const innerBorderContentSx: SxProps = {
 // =============================================================================
 
 const equipmentMenuSx: SxProps = {
+    width: "94.44444444%",
     height: "3px",
     my: "6px",
     background: ThemeVars.gradients.equipmentMenuDivider,
