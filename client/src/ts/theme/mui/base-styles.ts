@@ -1,4 +1,4 @@
-import type { CSSInterpolation, CSSObject } from "@mui/material"
+import type { SxProps } from "@mui/material"
 import Color from "color"
 
 // import { getImageSrcManual } from "@app/util"
@@ -9,7 +9,7 @@ import * as helpers from "../helpers"
 
 
 /** `<a></a>` */
-const anchor: CSSInterpolation = {
+const anchor: SxProps = {
     textDecoration: "none",
     color: ThemeVars.colors.gold.light,
     "&:hover, &:active, &:focus": {
@@ -29,7 +29,7 @@ const anchor: CSSInterpolation = {
  * - `<ol></ol>`
  * - `<li></li>`
  */
-const lists: CSSInterpolation = {
+const lists: SxProps = {
     listStyle: "none",
     listStylePosition: "inside",
     paddingLeft: "0px",
@@ -43,7 +43,7 @@ const lists: CSSInterpolation = {
 // Resets
 // =============================================================================
 
-const _htmlAndBody: CSSObject = {
+const _htmlAndBody: SxProps = {
     height: "100%",
     margin: "0px !important",
     padding: "0px !important",
@@ -52,9 +52,9 @@ const _htmlAndBody: CSSObject = {
     ...helpers.scrollbar(),
 }
 
-const html: CSSObject = _htmlAndBody
+const html: SxProps = _htmlAndBody
 
-const body: CSSObject = {
+const body: SxProps = {
     ..._htmlAndBody,
     display: "flex",
     flexFlow: "column nowrap",
@@ -81,7 +81,7 @@ const body: CSSObject = {
  *
  * `body > #root`
  */
-const root: CSSObject = {
+const root: SxProps = {
     padding: 0,
     margin: 0,
     // height: "100vh",

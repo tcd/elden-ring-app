@@ -1,6 +1,6 @@
 import type { Components, LinkProps } from "@mui/material"
 import type {} from "@mui/x-data-grid/themeAugmentation"
-import { experimental_sx as sx } from "@mui/material/styles"
+// import { experimental_sx as sx } from "@mui/material/styles"
 
 import { ThemeVars } from "../variables"
 import * as mixins from "../sx/mixins"
@@ -55,13 +55,13 @@ export const components: Components = {
             component: LinkBehavior,
         } as LinkProps,
         styleOverrides: {
-            root: sx({
+            root: {
                 textDecoration: "none",
                 "&:hover, &:focus, &:active, &.Mui-focusVisible": {
                     textDecoration: "underline",
                     // outline: "none",
                 },
-            }),
+            },
         },
     },
     // -------------------------------------------------------------------------

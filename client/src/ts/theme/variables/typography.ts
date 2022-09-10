@@ -57,6 +57,7 @@ export const defaultTextShadow: Property.TextShadow = `${offset} ${offset} 0px b
 type Variant =
     | "allVariants"
     | "pageName"
+    | "statColumn"
     | "body"
     | "h1"
     | "h2"
@@ -79,6 +80,13 @@ const typographyVariants: Partial<Record<Variant, React.CSSProperties>> = {
     },
     body: {
         color: typography.colorFg,
+    },
+    statColumn: {
+        color: typography.colorFg,
+        fontSize: typography.statRowFontSize,
+        // FIXME: should this be "pre"?
+        whiteSpace: "nowrap",
+        boxSizing: "border-box",
     },
     h1: {
         color: colors.gold.light,

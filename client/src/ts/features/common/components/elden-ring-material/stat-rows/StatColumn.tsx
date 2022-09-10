@@ -2,6 +2,7 @@ import { Box } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
 import type { ComparisonColor } from "@app/types"
+
 import type { StatColumnProps } from "./types"
 
 const COLOR_MAP: Record<ComparisonColor, string> = {

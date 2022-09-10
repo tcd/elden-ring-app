@@ -1,3 +1,4 @@
+import type { SystemStyleObject } from "@mui/system"
 import Color from "color"
 
 import type { Css } from "@app/types"
@@ -38,15 +39,19 @@ export type ScrollbarFuncOptions = {
 }
 
 /**
+ * ## Source
  *
- * ## See
+ * - [`@mui/material/darkScrollbar`](https://github.com/mui/material-ui/blob/552f04e24d617a7b1d5cd83eaf14e8c19395ac24/packages/mui-material/src/darkScrollbar/index.ts)
+ *
+ * ## See Also
  *
  * - [MDN - `scrollbar-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color)
  * - [MDN - `scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width)
  * - [MDN - `::-webkit-scrollbar`](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
  * - [From 2009](https://webkit.org/blog/363/styling-scrollbars/)
+ * - [bottom right corner](https://stackoverflow.com/a/11668105/7687024)
  */
-export const scrollbar = () => {
+export const scrollbar = (): SystemStyleObject => {
 
     const activeBg = Color(COLORS.thumb).darken(0.2).string()
 
@@ -64,6 +69,9 @@ export const scrollbar = () => {
             backgroundColor: COLORS.thumb,
             minHeight: 22,
             border: `3x solid ${trackGradient}`,
+        },
+        "&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner": {
+            background: `${COLORS.center1} ${trackGradient}`,
         },
         "&::-webkit-scrollbar-thumb:focus,  & *::-webkit-scrollbar-thumb:focus":  { backgroundColor: activeBg },
         "&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active": { backgroundColor: activeBg },
