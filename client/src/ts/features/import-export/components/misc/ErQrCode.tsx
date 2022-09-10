@@ -42,6 +42,7 @@ export const ErQrCode = ({ url }: ErQrCodeProps): JSX.Element => {
             <MuiImg
                 src={qrImage}
                 alt="qr code"
+                responsive={true}
             />
             <Box sx={{ display: "none" }}>
                 <QRCode

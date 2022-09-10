@@ -6,7 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2"
 import { Actions, Selectors } from "@app/state"
 import { ErPage, ErCard } from "@app/features/common"
 
-import { TestTable, QrExportCard } from "../misc"
+import { TestTable, QrExportCard, ExportModal } from "../misc"
 
 export const DataPage = (_props: unknown): JSX.Element => {
 
@@ -26,6 +26,7 @@ export const DataPage = (_props: unknown): JSX.Element => {
 
     return (
         <ErPage pageName="data">
+            <ExportModal />
             <Container>
                 <Grid container direction="row">
 
