@@ -1,5 +1,5 @@
-import type { AmmunitionSlotId, WeaponSlotId } from "@app/types"
-import { weaponSlotDisplayName, ammunitionSlotDisplayName } from "@app/util"
+import type { AmmunitionSlotId, QuickItemSlotId, TalismanSlotId, WeaponSlotId } from "@app/types"
+import { weaponSlotDisplayName, ammunitionSlotDisplayName, quickItemSlotDisplayName, talismanSlotDisplayName } from "@app/util"
 import { RootState } from "@app/state"
 import { ArmorSelectors } from "@app/features/armor"
 import { TalismansSelectors } from "@app/features/talismans"
@@ -28,9 +28,9 @@ const selectGridTitle = (rootState: RootState): string => {
     switch (activeType) {
         case "Armor":      return slotId?.toString()
         case "Weapon":     return weaponSlotDisplayName(slotId as WeaponSlotId)
-        case "Talisman":   return `Talisman ${slotId}`
+        case "Talisman":   return talismanSlotDisplayName(slotId as TalismanSlotId)
         case "Ammunition": return ammunitionSlotDisplayName(slotId as AmmunitionSlotId)
-        case "QuickItem":  return `Quick Item ${slotId}`
+        case "QuickItem":  return quickItemSlotDisplayName(slotId as QuickItemSlotId)
         default: return "no title"
     }
 }
@@ -69,7 +69,7 @@ const _selectArmorDescription = (rootState: RootState): string => {
 const _selectTalismanDescription = (rootState: RootState): string => {
     const slotId        = selectActiveSlotId(rootState)
     const talismanNames = TalismansSelectors.slots(rootState)
-    const description   = talismanNames?.[slotId] ?? `Talisman ${slotId}`
+    const description   = talismanNames?.[slotId] ?? "-"
     return description
 }
 

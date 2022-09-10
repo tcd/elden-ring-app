@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 
 import { TALISMAN_SORT_GROUPS, RefMap } from "@app/types"
 import { Actions, Selectors } from "@app/state"
-import { scrollToEquipmentCell, getImageSrc } from "@app/util"
+import { scrollToEquipmentCell, getImageSrc, talismanSlotDisplayName } from "@app/util"
 import { EquipmentMenu } from "@app/features/equipment-menu"
 
 export const TalismanMenuGrid = (): JSX.Element => {
@@ -61,8 +61,8 @@ export const TalismanMenuGrid = (): JSX.Element => {
 
     return (
         <EquipmentMenu.EquipmentMenu
-            title={`Talisman ${activeSlot}`}
-            subTitle={activeName}
+            title={talismanSlotDisplayName(activeSlot)}
+            subTitle={activeName ?? "-"}
             ref={menuRef}
         >
             {sections}
