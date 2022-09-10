@@ -1,5 +1,4 @@
 export * from "./ErBlank"
-export * from "./ErButton"
 export * from "./ErCard"
 export * from "./ErContextMenu"
 export * from "./ErDialog"

@@ -1,8 +1,7 @@
 import { forwardRef } from "react"
-import { Box } from "@mui/material"
+import { Box, Button } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { ErButton } from "@app/features/common"
 
 import type { ErDialogProps } from "./types"
 import { Content } from "./Content"
@@ -11,13 +10,14 @@ export const Dialog = forwardRef<HTMLDivElement, ErDialogProps>(function Dialog(
 
     const $options = props.options.map(({ title, handler }) => {
         return (
-            <ErButton
+            <Button
                 key={title}
+                variant="elden-ring"
                 onClick={handler}
                 sx={{ marginTop: "15px", marginBottom: "15px" }}
             >
                 {title}
-            </ErButton>
+            </Button>
         )
     })
 

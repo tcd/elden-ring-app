@@ -104,6 +104,7 @@ export const components: Components = {
                     color: ThemeVars.button.colorFg,
                     fontSize: "15px",
                     lineHeight: "normal",
+                    transitionDuration: "0s !important",
                     ...mixins.goldenHover,
                 },
             },

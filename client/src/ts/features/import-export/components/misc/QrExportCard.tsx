@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { Box, Typography, Divider, Button } from "@mui/material"
 
 import { Actions, Selectors } from "@app/state"
-import { ErButton, ErCard } from "@app/features/common"
+import { ErCard } from "@app/features/common"
 
 import { ErQrCode } from "./ErQrCode"
 
@@ -19,9 +19,6 @@ export const QrExportCard = (_props: unknown): JSX.Element => {
     return (
         <ErCard title="Export">
             <Box sx={{ display: "flex", flexFlow: "column nowrap" }}>
-                <ErButton onClick={handleClick}>
-                    Generate Url
-                </ErButton>
                 <Button variant="elden-ring" onClick={handleClick}>
                     Generate Url
                 </Button>

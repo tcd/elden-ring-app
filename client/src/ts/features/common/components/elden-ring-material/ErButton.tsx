@@ -12,6 +12,9 @@ const defaultProps: Partial<ErButtonProps> = {
 
 export type ErButtonProps = Omit<ButtonBaseProps, "disableRipple">
 
+/**
+ * @deprecated use "@mui/material/button" with variant "elden-ring"
+ */
 export const ErButton = forwardRef<HTMLButtonElement, ErButtonProps>(function ErButton(props, ref) {
 
     const {
