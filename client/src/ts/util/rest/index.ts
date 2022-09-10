@@ -1,3 +1,3 @@
 export * from "./ApiClient"
-export * from "./BitlyClient"
+export * from "./bitly"
 export * from "./FirebaseClient"
