@@ -8,7 +8,7 @@ import {
     isAxiosError,
     logger,
     CONFIG,
-    // sleep,
+    sleep,
     SerializedAxiosError,
     serializeAxiosError,
 } from "@app/util"
@@ -17,7 +17,8 @@ const actionName = `${FeatureKeys.ImportExport}/buildUrl`
 
 export const buildUrl = createAsyncThunk<string, void, { rejectValue: string | SerializedAxiosError }>(actionName, async (_, thunkApi) => {
     try {
-        // await sleep(1_000)
+        await sleep(1_000)
+        return "https://eldenring.page.link/29hQ"
 
         const rootState = thunkApi.getState() as RootState
         const rawData = Selectors.ImportExport.buildData.compact(rootState)
