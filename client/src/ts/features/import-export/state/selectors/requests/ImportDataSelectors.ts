@@ -16,6 +16,11 @@ const selectDone = (rootState: RootState): boolean => {
     )
 }
 
+const selectFailed = (rootState: RootState): boolean => {
+    return rootState.ImportExport.requests.importData.status === "rejected"
+}
+
 export const ImportDataSelectors = {
     done: selectDone,
+    failed: selectFailed,
 }

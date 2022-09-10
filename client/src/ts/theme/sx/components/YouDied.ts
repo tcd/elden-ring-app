@@ -5,6 +5,8 @@ import {
     ThemeBreakpoints,
 } from "@app/theme"
 
+import { hoverPlus } from "../mixins"
+
 // =============================================================================
 
 const rootSx: SxProps = {
@@ -44,6 +46,10 @@ const linkSx: SxProps = {
     [ThemeBreakpoints.down("md")]: {
         fontSize: "1.75rem",
     },
+    ...hoverPlus({
+        color: ThemeVars.youDied.red,
+        textDecoration: "underline",
+    }),
 }
 
 export const YouDied = {

@@ -2,20 +2,28 @@ import { createAsyncThunk } from "@reduxjs/toolkit"
 
 import type { BuildData } from "@app/types"
 import { FeatureKeys } from "@app/constants"
-import { logger, isBuildData } from "@app/util"
+import { logger, isBuildData, isBlank } from "@app/util"
 
 const actionName = `${FeatureKeys.ImportExport}/importData`
 
-export const importData = createAsyncThunk<BuildData, BuildData, { rejectValue: string }>(actionName, async (data: BuildData, thunkApi) => {
+export const importData = createAsyncThunk<BuildData, any, { rejectValue: string }>(actionName, async (queryParams: any, thunkApi) => {
     try {
-        if (isBuildData(data)) {
-            return data
+
+        if (isBlank(queryParams?.data)) {
+            return thunkApi.rejectWithValue("invalid query params")
+        }
+        let buildData: BuildData
+
+        try {
+            buildData = JSON.parse(queryParams.data)
+        } catch (error) {
+            return thunkApi.rejectWithValue("invalid data param")
+        }
+
+        if (isBuildData(buildData)) {
+            return buildData
         } else {
-            logger.warn({
-                message: "invalid build data for import",
-                data,
-            })
-            return thunkApi.rejectWithValue("invalid data")
+            return thunkApi.rejectWithValue("invalid build data")
         }
     } catch (error) {
         logger.warn(error)

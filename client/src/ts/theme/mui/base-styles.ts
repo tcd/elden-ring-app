@@ -48,7 +48,7 @@ const _htmlAndBody: CSSObject = {
     margin: "0px !important",
     padding: "0px !important",
     // paddingRight: "0px !important",
-    overflow: "auto !important",
+    overflow: "hidden",
     ...helpers.scrollbar(),
 }
 
@@ -92,6 +92,7 @@ const root: CSSObject = {
     flexFlow: "column nowrap",
 
     // overflowY: "scroll",
+    overflow: "auto !important",
 
     // backgroundImage: cssUrl(getImageSrcManual("ui/background", "public")),
     // backgroundRepeat: "no-repeat",

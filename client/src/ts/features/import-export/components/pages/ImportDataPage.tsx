@@ -6,7 +6,7 @@ import { Backdrop, CircularProgress } from "@mui/material"
 import type { BuildData } from "@app/types"
 import { isBlank } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { ErPage } from "@app/features/common"
+import { ErPage, YouDied } from "@app/features/common"
 
 export const ImportDataPage = (_props: unknown): JSX.Element => {
 
@@ -14,11 +14,15 @@ export const ImportDataPage = (_props: unknown): JSX.Element => {
     const navigate = useNavigate()
 
     const done = useSelector(Selectors.ImportExport.requests.importData.done)
+    const failed = useSelector(Selectors.ImportExport.requests.importData.failed)
 
-    const [queryParams, setQueryParams] = useState<BuildData>({} as unknown as BuildData)
+    const [queryParams, setQueryParams] = useState<any>({})
     const [dispatched, setDispatched]   = useState<boolean>(false)
+    const [paramsSet, setParamsSet]     = useState<boolean>(false)
 
     useEffect(() => {
+        if (paramsSet) { return }
+        if (dispatched) { return }
         // const params = new Proxy(new URLSearchParams(window.location.search.replace(/^\?/, "")), {
         //     // @ts-ignore: next-line
         //     get: (searchParams, prop) => searchParams.get(prop),
@@ -26,7 +30,8 @@ export const ImportDataPage = (_props: unknown): JSX.Element => {
         const urlSearchParams = new URLSearchParams(window.location.search)
         const params = Object.fromEntries(urlSearchParams.entries()) as unknown as BuildData
         setQueryParams(params)
-    }, [])
+        setParamsSet(true)
+    }, [dispatched, paramsSet, setParamsSet])
 
     useEffect(() => {
         if (dispatched) { return }
@@ -38,13 +43,28 @@ export const ImportDataPage = (_props: unknown): JSX.Element => {
 
     useEffect(() => {
         if (done === true) {
+            dispatch(Actions.Notifications.addNotification({
+                message: "Build Data Imported",
+                variant: "success",
+            }))
             navigate("/", { replace: true })
         }
-    }, [navigate, done])
+    }, [dispatch, navigate, done])
+
+    if (failed) {
+        return (
+            <ErPage pageName="data">
+                <YouDied
+                    to="/"
+                    title="Import Failed"
+                />
+            </ErPage>
+        )
+    }
 
     return (
         <ErPage pageName="data">
-            <Backdrop sx={{ zIndex: 1_000_000 }} open={true}>
+            <Backdrop sx={{ zIndex: 1_000_000 }} open={!failed}>
                 <CircularProgress />
             </Backdrop>
         </ErPage>

@@ -60,5 +60,5 @@ export const extraReducers = (builder: ActionReducerMapBuilder<NotificationsStat
         // Import/Export
         // ---------------------------------------------------------------------
         .addCase(ImportExportActions.buildUrl.rejected,   (state, action) => notifyError(state, action, "Unable to build url"))
-        .addCase(ImportExportActions.importData.rejected, (state, action) => notifyErrorManual(state, action.payload))
+        // .addCase(ImportExportActions.importData.rejected, (state, action) => notifyErrorManual(state, action.payload))
 }
