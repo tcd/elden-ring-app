@@ -38,8 +38,6 @@ export abstract class FirebaseClient {
                 },
                 data: data,
             }
-            // const url = axios.getUri(config)
-            // return url
             const response = await axios.request(config)
             return response.data
         } catch (error) {
