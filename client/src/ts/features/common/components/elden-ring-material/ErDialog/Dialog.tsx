@@ -24,7 +24,7 @@ export const Dialog = forwardRef<HTMLDivElement, ErDialogProps>(function Dialog(
     return (
         <Box ref={ref} sx={ComponentSx.ErDialog.dialogSx}>
 
-            <Box sx={ComponentSx.ErDialog.borderSx} />
+            <Box component="hr" sx={ComponentSx.ErDialog.borderSx} />
 
             <Box component="header" sx={ComponentSx.ErDialog.headerSx}>
                 {props.title}
@@ -34,7 +34,7 @@ export const Dialog = forwardRef<HTMLDivElement, ErDialogProps>(function Dialog(
                 {$options}
             </Content>
 
-            <Box sx={ComponentSx.ErDialog.borderSx} />
+            <Box component="hr" sx={ComponentSx.ErDialog.borderSx} />
 
         </Box>
     )

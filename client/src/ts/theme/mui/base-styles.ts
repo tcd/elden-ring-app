@@ -70,6 +70,29 @@ const body: SxProps = {
     },
     "& a":              anchor,
     "& ol, & ul, & li": lists,
+    // -------------------------------------------------------------------------
+    // Fucking User Agent Stylesheets
+    // -------------------------------------------------------------------------
+    "& hr": {
+        // display:           "block",
+        // unicodeBidi:       "isolate",
+        // marginBlockStart:  "0.5em",
+        // marginBlockEnd:    "0.5em",
+        // marginInlineStart: "auto",
+        // marginInlineEnd:   "auto",
+        // overflow:          "hidden",
+        // borderStyle:       "inset",
+        // borderWidth:       "1px",
+        display:           "unset",
+        unicodeBidi:       "unset",
+        marginBlockStart:  "unset",
+        marginBlockEnd:    "unset",
+        marginInlineStart: "unset",
+        marginInlineEnd:   "unset",
+        overflow:          "unset",
+        borderStyle:       "unset",
+        borderWidth:       "unset",
+    },
 }
 
 // =============================================================================

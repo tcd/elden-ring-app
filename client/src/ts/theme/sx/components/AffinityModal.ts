@@ -109,15 +109,15 @@ const headerTitle: SxProps = {
 // =============================================================================
 
 /**
- * - `er__affinityModal > .top-border`
- * - `er__affinityModal > .bottom-border`
+ * - `.er__affinityModal > .top-border`
+ * - `.er__affinityModal > .bottom-border`
  */
 const horizontalBorder: SxProps = {
     height: "3px",
     background: ThemeVars.gradients.affinityModalHorizontalBorder,
 }
 
-/** `.inner-border-wrapper` */
+/** `.er__affinityModal >.inner-border-wrapper` */
 const innerBorderWrapper: SxProps = {
     content: ThemeVars.ZWSP,
     width: "100%",
@@ -125,7 +125,7 @@ const innerBorderWrapper: SxProps = {
     justifyContent: "center",
 }
 
-/** `.inner-border-wrapper > .inner-border` */
+/** `.er__affinityModal > .inner-border-wrapper > .inner-border` */
 const innerBorderContent: SxProps = {
     textAlign: "center",
     width: "90%",

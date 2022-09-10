@@ -31,12 +31,12 @@ export const Content = forwardRef(function Content(props: ErModalProps, ref) {
 
 // =============================================================================
 
-const OuterBorder = (_props: unknown): JSX.Element => <Box sx={ComponentSx.ErModal.borderSx} />
+const OuterBorder = (_props: unknown): JSX.Element => <Box component="hr" sx={ComponentSx.ErModal.borderSx} />
 
 const InnerBorder = (_props: unknown): JSX.Element => {
     return (
         <Box sx={ComponentSx.ErModal.innerBorderWrapperSx}>
-            <Box sx={ComponentSx.ErModal.innerBorderContentSx} />
+            <Box component="hr" sx={ComponentSx.ErModal.innerBorderContentSx} />
         </Box>
     )
 }

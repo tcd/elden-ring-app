@@ -38,3 +38,5 @@ x 2022-09-04 2022-09-04 Fix header title vertical align @removedBootstrap
 2022-09-04 Assess accessibility
 2022-09-06 Lighten red color on `YouDied` component
 2022-09-10 Name custom builds
+2022-09-10 Show weapon with affinity name in weapon menu
+2022-09-10 WeaponSkillMenuGrid threw an error due to conditional hooks.
