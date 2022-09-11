@@ -1,6 +1,5 @@
 import {
     PageName,
-    PageTitle,
     PAGE_NAME_TITLES,
     PAGE_NAME_ICONS,
     DEFAULT_PAGE_ICON,
@@ -12,10 +11,17 @@ import { selectCustomizing } from "@app/features/weapons/state/selectors/selecto
 import { selectSlice } from "./select-slice"
 
 const selectReduxReady    = (rootState: RootState): boolean  => selectSlice(rootState)?.reduxReady
-const selectPageName      = (rootState: RootState): PageName => selectSlice(rootState)?.pageName ?? null
 const selectSideNavOpened = (rootState: RootState): boolean  => selectSlice(rootState)?.sideNavOpened
+const selectPageName      = (rootState: RootState): PageName => selectSlice(rootState)?.pageName  ?? null
+const selectPageTitle     = (rootState: RootState)           => selectSlice(rootState)?.pageTitle ?? null
+const selectPageIcon      = (rootState: RootState)           => selectSlice(rootState)?.pageIcon  ?? null
 
-const selectTitle = (rootState: RootState): PageTitle => {
+const selectTitle = (rootState: RootState): string => {
+    const pageTitle = selectPageTitle(rootState)
+    if (pageTitle) {
+        return pageTitle
+    }
+
     const pageName = selectPageName(rootState)
     const ashesOfWar = selectCustomizing(rootState)
     if (ashesOfWar) {
@@ -25,6 +31,11 @@ const selectTitle = (rootState: RootState): PageTitle => {
 }
 
 const selectTitleIconUrl = (rootState: RootState): string => {
+    const pageIcon = selectPageIcon(rootState)
+    if (pageIcon) {
+        return HEADER_ICONS[pageIcon]
+    }
+
     const pageName = selectPageName(rootState)
     const ashesOfWar = selectCustomizing(rootState)
     if (ashesOfWar) {
