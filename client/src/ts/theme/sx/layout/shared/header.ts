@@ -1,5 +1,6 @@
 import type { SxProps } from "@mui/material"
 
+import { HEADER_ICONS } from "@app/types"
 import { getImageSrcManual } from "@app/util"
 import {
     ThemeVars,
@@ -75,8 +76,8 @@ const icon: SxProps = {
     backgroundSize: "cover",
     willChange: "background-image",
     // transition: "background-image 0.1s ease-in 0s",
-    transition: transition({ property: "background-image", duration: "0.5s", timing: "ease-in-out" }),
-    backgroundImage: cssUrl("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="),
+    transition: transition({ property: "background-image", duration: "0.4s", timing: "ease-in-out" }),
+    backgroundImage: cssUrl(HEADER_ICONS.empty),
 }
 
 /** `.er__appHeader__title` */
