@@ -1,4 +1,4 @@
-import { WeaponAffinityName } from "@app/types"
+import type { WeaponAffinityName } from "@app/types"
 
 export interface WeaponSettings {
     // weapon_id: number

@@ -1,8 +1,2 @@
-import {
-    // RefObject,
-    // LegacyRef,
-    MutableRefObject,
-} from "react"
-
-// type RefMap = Record<string, LegacyRef<HTMLDivElement>>
-export type RefMap<T = HTMLDivElement> = Record<string, MutableRefObject<T>>
+// type RefMap = Record<string, React.LegacyRef<HTMLDivElement>>
+export type RefMap<T = HTMLDivElement> = Record<string, React.MutableRefObject<T>>
