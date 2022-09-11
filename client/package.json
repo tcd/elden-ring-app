@@ -53,6 +53,7 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.5.0",
+        "html2canvas": "^1.4.1",
         "include-media": "^1.4.10",
         "json-loader": "^0.5.7",
         "json2mq": "^0.2.0",
@@ -108,8 +109,6 @@
         "moment": "^2.29.4",
         "rimraf": "^3.0.2",
         "s3-sync-client": "^3.0.3",
-        "sassdoc": "^2.7.4",
-        "sassdoc-extras": "^3.0.0",
         "shelljs": "^0.8.5",
         "typedoc": "^0.23.7",
         "webpack-bundle-analyzer": "^4.6.1"
