@@ -1,7 +1,7 @@
 import capitalize from "lodash/capitalize"
 
 import { Dmg, Ammunition } from "@app/types"
-import { SpecialCharacters } from "@app/util"
+import { SpecialCharacters } from "@app/constants"
 import {
     StatRow,
     EquipmentDetail,

@@ -5,7 +5,7 @@ import {
     WeaponSettings,
 } from "@app/types"
 
-import { isBlank } from "./is-blank"
+import { isBlank } from "./helpers/is-blank"
 
 const STARTING_CLASS_NAME_IDS: Record<StartingClassName, CompactBuildData.StartingClassId> = {
     "Vagabond":   1,

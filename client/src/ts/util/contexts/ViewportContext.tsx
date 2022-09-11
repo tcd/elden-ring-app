@@ -9,8 +9,8 @@ import {
 import type { DeviceSize } from "@app/types"
 import { ThemeVars } from "@app/theme"
 
-import { ScreenSize } from "../ScreenSize"
-import { isBlank } from "../is-blank"
+import { ScreenSize } from "../web/ScreenSize"
+import { isBlank } from "../helpers/is-blank"
 
 /**
  * - https://www.w3.org/TR/screen-orientation/#screen-orientation-types-and-locks

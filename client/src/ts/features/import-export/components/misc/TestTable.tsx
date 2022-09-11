@@ -24,7 +24,6 @@ export const TestTable = (_props: unknown): JSX.Element => {
     const minified        = useSelector(Selectors.ImportExport.buildData.minified)
     const minifiedCompact = useSelector(Selectors.ImportExport.buildData.minifiedCompact)
 
-    const jsurl = useSelector(Selectors.ImportExport.wip.jsurl)
     const json = useSelector(Selectors.ImportExport.wip.json)
     const minifiedUrl = useSelector(Selectors.ImportExport.wip.minifiedCompact)
     const btoa = useSelector(Selectors.ImportExport.wip.btoa)
@@ -38,7 +37,6 @@ export const TestTable = (_props: unknown): JSX.Element => {
         { type: "url",  data: "localhost:8080/data",           name: "test" },
         { type: "url",  data: json,                            name: "JSON.stringify()" },
         { type: "url",  data: btoa,                            name: "btoa()" },
-        { type: "url",  data: jsurl,                           name: "JsUrl.stringify()" },
         { type: "url",  data: jsonCrush,                       name: "JSONCrush.crush()" },
         { type: "url",  data: minifiedUrl,                     name: "minified url" },
     ]

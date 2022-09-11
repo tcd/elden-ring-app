@@ -1,6 +1,6 @@
-import { RefObject } from "react"
+import type { RefObject } from "react"
 
-import { RefMap } from "@app/types"
+import type { RefMap } from "@app/types"
 import { isBlank } from "@app/util"
 
 export const scrollToEquipmentCell = (

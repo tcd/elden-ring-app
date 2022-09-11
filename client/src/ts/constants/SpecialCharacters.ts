@@ -1,7 +1,7 @@
 /**
  * HTML character codes.
  */
-export const SpecialCharacters = {
+export const SpecialCharacters = <const>{
     /** &infin; */
     infinity: "∞",
     /** &copy; */
@@ -14,4 +14,4 @@ export const SpecialCharacters = {
     doubleQuote: '"',
     /** &nbsp; */
     space: " ",
-} as const
+}

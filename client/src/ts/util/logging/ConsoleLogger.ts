@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 import { ILogger, LogLevel } from "@app/types"
 import { CONFIG } from "@app/config"
-import { isBlank, isObject } from "@app/util"
 
+import { isBlank } from "../helpers/is-blank"
+import { isObject } from "../srk"
 import {
     // getCallsite,
     getCallingFunction,

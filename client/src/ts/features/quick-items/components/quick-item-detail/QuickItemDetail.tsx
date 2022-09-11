@@ -1,6 +1,6 @@
 
-import { QuickItem } from "@app/types"
-import { SpecialCharacters } from "@app/util"
+import type { QuickItem } from "@app/types"
+import { SpecialCharacters } from "@app/constants"
 import {
     EquipmentDetail,
     EquipmentDetailProps,

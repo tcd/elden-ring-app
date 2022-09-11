@@ -4,7 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2"
 import type { Grid2Props as GridProps} from "@mui/material/Unstable_Grid2"
 
 import type { QuickItem } from "@app/types"
-import { SpecialCharacters } from "@app/util"
+import { SpecialCharacters } from "@app/constants"
 import {
     StatRow,
     EquipmentDetail,

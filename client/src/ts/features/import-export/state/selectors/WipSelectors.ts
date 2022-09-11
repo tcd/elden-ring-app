@@ -29,13 +29,6 @@ const withBtoa = (rootState: RootState): string => {
     return url
 }
 
-const withJsUrl = (rootState: RootState): string => {
-    const json = compact(rootState)
-    const encodedData = JsUrl.stringify(json)
-    const url = `${CONFIG.clientUrl}/data?data=${encodedData}`
-    return url
-}
-
 const withJsonCrush = (rootState: RootState): string => {
     const json = compact(rootState)
     const crushed = JSONCrush.crush(JSON.stringify(json))
@@ -55,6 +48,5 @@ export const WipSelectors = {
     json: withJsonStringify,
     minifiedCompact: withMinify,
     btoa: withBtoa,
-    jsurl: withJsUrl,
     jsonCrush: withJsonCrush,
 }

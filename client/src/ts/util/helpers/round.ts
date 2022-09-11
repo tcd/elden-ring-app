@@ -1,4 +1,4 @@
-import { isBlank } from "@app/util"
+import { isBlank } from "./is-blank"
 
 /**
  *

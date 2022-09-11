@@ -1,6 +1,6 @@
 import type { BuildData } from "@app/types"
 
-import { isBlank } from "./is-blank"
+import { isBlank } from "./helpers/is-blank"
 
 export const isBuildData = (input: any): input is BuildData => {
     return !isBlank(input?.startingClass)

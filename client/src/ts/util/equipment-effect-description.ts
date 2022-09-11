@@ -1,4 +1,4 @@
-import { EquipmentEffect } from "@app/types"
+import type { EquipmentEffect } from "@app/types"
 import { isBlank } from "@app/util"
 
 export const equipmentEffectDescription = (effect: EquipmentEffect): string => {

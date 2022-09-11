@@ -8,7 +8,7 @@ import {
 
 import { ThemeVars } from "@app/theme"
 import { ErPage, ErTextField, Br } from "@app/features/common"
-import { SpecialCharacters, Audio, getCssVariable } from "@app/util"
+import { Audio, getCssVariable } from "@app/util"
 
 export const TestPage = (_props: unknown): JSX.Element => {
 
@@ -36,7 +36,7 @@ export const TestPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="about">
             <Container>
-                {/* <p>This is a development page. You shouldn{SpecialCharacters.singleQuote}t be here.</p>
+                {/* <p>This is a development page. You shouldn&apos;t be here.</p>
                 <Button variant="elden-ring" onClick={playClick}>click</Button>
                 <Br />
                 <Button variant="contained" onClick={playSlider}>slider</Button>
