@@ -8,16 +8,13 @@
 }
 
 * {
-    @include mixins.customScrollbar();
-    // @include m.invisibleScrollbar();
-    box-sizing: border-box !important;
     font-size: 15px;
     cursor: url(v.$image-cursor-default), auto;
 }
 
-span {
-    text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
-}
+// span {
+//     text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+// }
 
 hr.er__hr {
     height: 1.75px;
