@@ -7,6 +7,7 @@ const links = {
     calculator: "https://www.reddit.com/r/Eldenring/comments/tbco46/elden_ring_weapon_calculator/",
     tarnished: "https://www.reddit.com/user/TarnishedSpreadsheet/",
     fextralife: "https://eldenring.wiki.fextralife.com/Elden+Ring+Wiki",
+    voicy: "https://www.voicy.network/",
 }
 
 export const Credit = (): JSX.Element => {
@@ -18,6 +19,9 @@ export const Credit = (): JSX.Element => {
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
                     Most defensive calculations are from the Fextralife <Anchor href={links.fextralife} content="Elden Ring Wiki" />.
+                </ListItem>
+                <ListItem sx={{ display: "list-item" }}>
+                    Some of the audio I recorded myself, other sound bites are from <Anchor href={links.voicy} content="Voicy" />.
                 </ListItem>
             </List>
         </AboutPageSection>
