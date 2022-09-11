@@ -34,7 +34,7 @@ export const TestPage = (_props: unknown): JSX.Element => {
     }, [])
 
     return (
-        <ErPage pageName="about">
+        <ErPage pageName="about" title="Test" icon="empty">
             <Container>
                 {/* <p>This is a development page. You shouldn&apos;t be here.</p>
                 <Button variant="elden-ring" onClick={playClick}>click</Button>
