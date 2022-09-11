@@ -1,6 +1,7 @@
 import { List, ListItem } from "@mui/material"
 
 import { Anchor } from "@app/features/common"
+
 import { AboutPageSection } from "."
 
 const links = {
