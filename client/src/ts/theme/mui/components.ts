@@ -89,6 +89,9 @@ export const components: Components = {
                 letterSpacing: "normal",
                 ...mixins.pointerOnHover,
             },
+            contained: {
+                textShadow: "none",
+            },
         },
         variants: [
             {
