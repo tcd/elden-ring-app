@@ -8,13 +8,13 @@ export interface ErTextFieldProps {
 
 export const ErTextField = (props: ErTextFieldProps): JSX.Element => {
     return (
-        <Box sx={ComponentSx.forms.TextField.root}>
-            <Box sx={ComponentSx.forms.TextField.border.topLeft} />
-            <Box sx={ComponentSx.forms.TextField.border.bottomLeft} />
-            <Box sx={ComponentSx.forms.TextField.border.topRight} />
-            <Box sx={ComponentSx.forms.TextField.border.bottomRight} />
-            <Box>
-                <Box component="span">
+        <Box sx={ComponentSx.forms.TextField.wrapper.root}>
+            <Box sx={ComponentSx.forms.TextField.wrapper.content}>
+                <Box sx={ComponentSx.forms.TextField.border.topLeft} />
+                <Box sx={ComponentSx.forms.TextField.border.bottomLeft} />
+                <Box sx={ComponentSx.forms.TextField.border.topRight} />
+                <Box sx={ComponentSx.forms.TextField.border.bottomRight} />
+                <Box sx={ComponentSx.forms.TextField.input.root}>
                     testing
                 </Box>
             </Box>

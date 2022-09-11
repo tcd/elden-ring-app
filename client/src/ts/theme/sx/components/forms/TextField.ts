@@ -1,6 +1,9 @@
 import type { SxProps } from "@mui/material"
 
-import { ThemeVars } from "@app/theme"
+import {
+    ThemeVars,
+    boxShadow,
+} from "@app/theme"
 
 import {
     textShadow,
@@ -8,48 +11,17 @@ import {
     invisibleContent,
 } from "../../mixins"
 
-// TODO: `#weapon-skill-grid-menu`
-// "#weapon-skill-grid-menu": {
-//     position: "relative",
-// }
-
-
-/**
- * Couldn't recreate the SASS calculations for this in JS.
- *
- * ```css
- * linear-gradient(
- *     90deg,
- *     #352f271a   0%,
- *     #352f2740  10%,
- *     #352f27bf  50%,
- *     #352f2740  90%,
- *     #352f271a 100%
- * )
- * ```
- */
 const itemGradient = "linear-gradient(90deg, #352f271a 0%, #352f2740 10%, #352f27bf 50%, #352f2740 90%, #352f271a 100%)"
 
-/**
- * Couldn't recreate the SASS calculations for this in JS.
- *
- * ```css
- * linear-gradient(
- *      90deg,
- *      #52493c1a   0%,
- *      #52493c40  10%,
- *      #52493cbf  50%,
- *      #52493c40  90%,
- *      #52493c1a 100%
- * );
- * ```
- */
 const itemActiveGradient = "linear-gradient(90deg, #52493c1a 0%, #52493c40 10%, #52493cbf 50%, #52493c40 90%, #52493c1a 100%)"
+
+const borderSize = "2px"
 
 const colors = {
     inputBg: "#24231c",
     rootBg: "#292720",
     border: "#aeaeae",
+    // border: "red",
     background: [
         "#252621",
         "#21211c",
@@ -61,27 +33,61 @@ const colors = {
     ],
 } as const
 
-const borderSize = "2px"
-
-// =============================================================================
-// Root
-// =============================================================================
-
-const root: SxProps = {
-    boxSizing: "border-box",
-    position: "relative",
-
+const flexCenter: SxProps = {
     display: "flex",
     flexFlow: "column nowrap",
     justifyContent: "center", // vertical
-    alignItems: "center", // horizontal
+    // alignItems: "center", // horizontal
+}
 
-    width: "250px",
+
+// =============================================================================
+// Wrapper
+// =============================================================================
+
+const wrapper_root: SxProps = {
+    // boxSizing: "content-box",
+    // position: "relative",
+
+
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "center", // horizontal
+    // alignItems: "center", // vertical
+
+    // textAlign: "center",
+
+    width: "300px",
     height: "50px",
 
-    backgroundColor: colors.rootBg,
+    px: "20px",
+    // m: 0,
 
-    borderRadius: "0px",
+    backgroundColor: colors.rootBg,
+    // backgroundColor: "royalblue",
+
+    // borderRadius: "0px",
+
+    // borderLeft: `${borderSize} solid ${colors.border}`,
+    // borderRight: `${borderSize} solid ${colors.border}`,
+}
+
+const wrapper_content: SxProps = {
+    boxSizing: "border-box",
+    position: "relative",
+
+    ...flexCenter,
+    textAlign: "center",
+
+    width: "250px",
+    // height: "50px",
+
+    p: "7.5px",
+
+    backgroundColor: colors.rootBg,
+    // backgroundColor: "indianred",
+
+    // borderRadius: "0px",
 
     borderLeft: `${borderSize} solid ${colors.border}`,
     borderRight: `${borderSize} solid ${colors.border}`,
@@ -92,7 +98,8 @@ const root: SxProps = {
 // -----------------------------------------------------------------------------
 
 const _border: SxProps = {
-    content: ThemeVars.ZWSP,
+    ...invisibleContent,
+    boxSizing: "border-box",
     position: "absolute",
     height: borderSize,
     width: "10px",
@@ -128,6 +135,10 @@ const border_bottomRight: SxProps = {
 // =============================================================================
 
 const input_root: SxProps = {
+    ...flexCenter,
+    boxSizing: "border-box",
+    flexGrow: 1,
+    flexShrink: 0,
     backgroundColor: colors.inputBg,
 }
 
@@ -136,7 +147,10 @@ const input_root: SxProps = {
 // =============================================================================
 
 export const TextField = {
-    root,
+    wrapper: {
+        root: wrapper_root,
+        content: wrapper_content,
+    },
     border: {
         topLeft: border_topLeft,
         bottomLeft: border_bottomLeft,
