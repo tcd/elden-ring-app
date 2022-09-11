@@ -1,4 +1,5 @@
 export * from "./custom-table"
+export * from "./elden-ring-forms"
 export * from "./elden-ring-material"
 export * from "./equipment-detail"
 export * from "./scroll"

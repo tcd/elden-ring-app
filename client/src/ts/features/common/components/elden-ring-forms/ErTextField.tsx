@@ -1,4 +1,6 @@
-import { Box, SxProps } from "@mui/material"
+import { Box } from "@mui/material"
+
+import { ComponentSx } from "@app/theme"
 
 export interface ErTextFieldProps {
 
@@ -6,21 +8,16 @@ export interface ErTextFieldProps {
 
 export const ErTextField = (props: ErTextFieldProps): JSX.Element => {
     return (
-        <Box>
-
+        <Box sx={ComponentSx.forms.TextField.root}>
+            <Box sx={ComponentSx.forms.TextField.border.topLeft} />
+            <Box sx={ComponentSx.forms.TextField.border.bottomLeft} />
+            <Box sx={ComponentSx.forms.TextField.border.topRight} />
+            <Box sx={ComponentSx.forms.TextField.border.bottomRight} />
+            <Box>
+                <Box component="span">
+                    testing
+                </Box>
+            </Box>
         </Box>
     )
-}
-
-const borderColor = "#9a9990"
-
-const sx: Record<string, SxProps> = {
-    root: {
-        position: "relative",
-        boxSizing: "border-box",
-        backgroundColor: "#252621",
-        borderRadius: "0px",
-        borderLeft: `1px solid ${borderColor}`,
-        borderRight: `1px solid ${borderColor}`,
-    },
 }

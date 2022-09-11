@@ -1,8 +1,9 @@
 import { useEffect } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
+import { Box, Container } from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
-import { ErPage } from "@app/features/common"
+import { ErPage, ErTextField } from "@app/features/common"
 import { SpecialCharacters, Audio, getCssVariable } from "@app/util"
 
 export const TestPage = (_props: unknown): JSX.Element => {
@@ -26,9 +27,18 @@ export const TestPage = (_props: unknown): JSX.Element => {
 
     return (
         <ErPage pageName="about">
-            <p>This is a development page. You shouldn{SpecialCharacters.singleQuote}t be here.</p>
-            <button onClick={playClick}>click</button>
-            <button onClick={playSlider}>slider</button>
+            <Container>
+                <p>This is a development page. You shouldn{SpecialCharacters.singleQuote}t be here.</p>
+                <button onClick={playClick}>click</button>
+                <button onClick={playSlider}>slider</button>
+                <br />
+                <br />
+                <br />
+                <Box>
+                    <ErTextField />
+                </Box>
+            </Container>
+
         </ErPage>
     )
 }
