@@ -3,9 +3,9 @@ import type { SxProps } from "@mui/material"
 import { getImageSrcManual } from "@app/util"
 import {
     ThemeVars,
-    // EldenRingMaterialTheme as Theme,
     cssUrl,
     mediaQuery,
+    transition,
 } from "@app/theme"
 
 import { pointerOnHover } from "../../mixins"
@@ -68,6 +68,15 @@ const icon: SxProps = {
 
     marginLeft:  { xs: "35px", md: "40px" },
     marginRight: { xs: "20px", md: "15px" },
+
+    backgroundOrigin: "content-box",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "contain",
+    backgroundSize: "cover",
+    willChange: "background-image",
+    // transition: "background-image 0.1s ease-in 0s",
+    transition: transition({ property: "background-image", duration: "0.5s", timing: "ease-in-out" }),
+    backgroundImage: cssUrl("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="),
 }
 
 /** `.er__appHeader__title` */

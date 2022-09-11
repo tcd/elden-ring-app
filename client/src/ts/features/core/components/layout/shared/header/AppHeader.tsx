@@ -1,9 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Box } from "@mui/material"
 
-import { LayoutSx } from "@app/theme"
+import { LayoutSx, cssUrl } from "@app/theme"
 import { Actions, Selectors } from "@app/state"
-import { MuiImg } from "@app/features/common"
 
 export const AppHeader = (_props: unknown): JSX.Element => {
 
@@ -23,11 +22,9 @@ export const AppHeader = (_props: unknown): JSX.Element => {
         <Box component="header" sx={LayoutSx.shared.header.root}>
             <Box sx={LayoutSx.shared.header.background} />
             <Box sx={LayoutSx.shared.header.content}>
-                <MuiImg
-                    src={imageUrl}
-                    alt={title}
+                <Box
                     onClick={handleIconClick}
-                    sx={LayoutSx.shared.header.icon}
+                    sx={{ ...LayoutSx.shared.header.icon, backgroundImage: cssUrl(imageUrl) }}
                 />
                 <Box component="h1" sx={LayoutSx.shared.header.title}>
                     {title}

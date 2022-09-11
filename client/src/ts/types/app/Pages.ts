@@ -81,6 +81,7 @@ export const HeaderIconIds = {
     "ashes-of-war":   "ui/title-icons/ashes-of-war",
     "crafting":       "ui/title-icons/crafting",
     "equipment":      "ui/title-icons/equipment",
+    "empty":          "ui/title-icons/empty",
     "finger-reader":  "ui/title-icons/finger-reader",
     "gestures":       "ui/title-icons/gestures",
     "great-runes":    "ui/title-icons/great-runes",
@@ -108,10 +109,7 @@ const HEADER_ICON_SIZE: CloudflareVariant = "128"
 export const HEADER_ICONS = Object.entries(HeaderIconIds).reduce((acc, [key, value]) => {
     acc[key] = getImageSrcManual(value, HEADER_ICON_SIZE)
     return acc
-// }, {}) as unknown as Record<keyof typeof _titleIcons, string>
 }, {}) as unknown as Record<HeaderIconId, string>
-
-export const DEFAULT_PAGE_ICON = HEADER_ICONS["site-of-grace"]
 
 export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "about":          HEADER_ICONS.map,

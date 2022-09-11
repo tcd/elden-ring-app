@@ -2,7 +2,6 @@ import {
     PageName,
     PAGE_NAME_TITLES,
     PAGE_NAME_ICONS,
-    DEFAULT_PAGE_ICON,
     HEADER_ICONS,
 } from "@app/types"
 import type { RootState } from "@app/state"
@@ -41,7 +40,7 @@ const selectTitleIconUrl = (rootState: RootState): string => {
     if (ashesOfWar) {
         return HEADER_ICONS["ashes-of-war"]
     }
-    return PAGE_NAME_ICONS?.[pageName] ?? DEFAULT_PAGE_ICON
+    return PAGE_NAME_ICONS?.[pageName] ?? HEADER_ICONS.empty
 }
 
 // =============================================================================
