@@ -1,9 +1,9 @@
 import { forwardRef } from "react"
-import merge from "lodash/merge"
 import type { ButtonBaseProps } from "@mui/material"
 import { ButtonBase } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
+import { merge } from "@app/util"
 
 const defaultProps: Partial<ErButtonProps> = {
     // className: "er__button",
@@ -22,7 +22,7 @@ export const ErButton = forwardRef<HTMLButtonElement, ErButtonProps>(function Er
         ...rest
     } = props
 
-    const mergedProps = merge({}, defaultProps, rest)
+    const mergedProps = merge(defaultProps, rest)
 
     return (
         <ButtonBase {...mergedProps} disableRipple={true} ref={ref}>

@@ -1,9 +1,9 @@
-import merge from "lodash/merge"
 import { Box, BoxProps } from "@mui/material"
 
 import { normalList } from "@app/theme"
+import { merge } from "@app/util"
 
-export type NormalListProps = BoxProps<"li">
+export type NormalListProps = BoxProps<"ul">
 
 export const NormalList = (props: NormalListProps): JSX.Element => {
     let {
@@ -12,7 +12,7 @@ export const NormalList = (props: NormalListProps): JSX.Element => {
         ...otherProps
     } = props
 
-    sx = merge({}, normalList, sx)
+    sx = merge(normalList, sx)
 
     return (
         <Box sx={sx} {...otherProps}>

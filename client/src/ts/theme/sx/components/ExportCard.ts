@@ -1,8 +1,8 @@
 import type { SxProps } from "@mui/material"
-import merge from "lodash/merge"
 import Color from "color"
 
 import { ThemeVars, ThemeBreakpoints } from "@app/theme"
+import { merge } from "@app/util"
 
 import {
     pointerOnHover,
@@ -29,7 +29,6 @@ const CopyableLink__root: SxProps = merge(pointerOnHover, {
     flexFlow: "row nowrap",
     justifyContent: "space-between", // horizontal
     alignItems: "center", // vertical
-
     py: 1,
     pl: 2,
     pr: 1,

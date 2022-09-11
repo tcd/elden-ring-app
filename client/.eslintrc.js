@@ -56,6 +56,10 @@ module.exports = {
         "keyword-spacing": ["warn", { "after": true }],
         "space-before-blocks": ["warn"],
         "no-console": "warn",
+        "no-restricted-imports": ["warn", {
+            "name": "lodash/merge",
+            "message": "Please use the wrapped merge function from `@app/util` instead.",
+        }],
         // ---------------------------------------------------------------------
         // React
         // https://github.com/yannickcr/eslint-plugin-react

@@ -1,13 +1,12 @@
-import merge from "lodash/merge"
 import Box from "@mui/material/Box"
 import {
     DataGrid as MuiDataGrid,
     DataGridProps as MuiDataGridProps,
 } from "@mui/x-data-grid"
 
-import { useLogging } from "@app/util"
+import { useLogging, merge } from "@app/util"
 
-import { ErTableProps } from "./types"
+import type { ErTableProps } from "./types"
 
 const defaultProps: Partial<ErTableProps> = {
     height: "635px",
@@ -29,7 +28,7 @@ export const ErTable = <T,>(props: ErTableProps<T>): JSX.Element => {
         height,
         BoxProps,
         ...rest
-    } = merge({}, defaultProps, props)
+    } = merge(defaultProps, props)
 
     const boxProps = merge(
         { sx: { height: height } },

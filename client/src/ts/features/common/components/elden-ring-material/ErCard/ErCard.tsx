@@ -1,10 +1,9 @@
-import merge from "lodash/merge"
 import type { SxProps } from "@mui/material"
 import { Box } from "@mui/material"
 
-import { IconNamesKey } from "@app/constants"
+import type { IconNamesKey } from "@app/types"
 import { ComponentSx } from "@app/theme"
-import { isBlank } from "@app/util"
+import { isBlank, merge } from "@app/util"
 import { ErIcon } from "@app/features/common"
 
 import { ErCardBorder } from "./ErCardBorder"
@@ -39,7 +38,7 @@ export const ErCard = (props: ErCardProps): JSX.Element => {
         ...rest
     } = props
 
-    const mergedProps = merge({}, defaultProps, rest)
+    const mergedProps = merge(defaultProps, rest)
 
     return (
         <Box component="article" sx={mergedProps.sx}>
