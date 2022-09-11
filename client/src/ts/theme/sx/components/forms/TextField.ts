@@ -3,6 +3,7 @@ import type { SxProps } from "@mui/material"
 import {
     ThemeVars,
     boxShadow,
+    rgba,
 } from "@app/theme"
 
 import {
@@ -39,6 +40,20 @@ const flexCenter: SxProps = {
     justifyContent: "center", // vertical
     // alignItems: "center", // horizontal
 }
+
+/**
+ * ## See:
+ *
+ * - [Stack Overflow - Square brackets with CSS](https://stackoverflow.com/a/41807110/7687024)
+ */
+const bracketBorders = (color = "#ffb1bb", size = "2px"): SxProps => ({
+    backgroundImage: Array(4).fill(`linear-gradient(${color}, ${color})`).join(", "),
+    backgroundRepeat: "no-repeat",
+    backgroundSize: `2px ${size}`,
+    backgroundPosition: ["top left", "top right", "bottom left", "bottom right"].join(", "),
+    border: `solid ${color}`,
+    borderWidth: `0 ${size}`,
+})
 
 
 // =============================================================================
@@ -79,7 +94,9 @@ const wrapper_content: SxProps = {
     ...flexCenter,
     textAlign: "center",
 
-    width: "250px",
+    // width: "250px", // correct-ish
+
+    width: "100px",
     // height: "50px",
 
     p: "7.5px",
@@ -89,8 +106,9 @@ const wrapper_content: SxProps = {
 
     // borderRadius: "0px",
 
-    borderLeft: `${borderSize} solid ${colors.border}`,
-    borderRight: `${borderSize} solid ${colors.border}`,
+    // borderLeft: `${borderSize} solid ${colors.border}`,
+    // borderRight: `${borderSize} solid ${colors.border}`,
+    ...bracketBorders(),
 }
 
 // -----------------------------------------------------------------------------
@@ -98,12 +116,38 @@ const wrapper_content: SxProps = {
 // -----------------------------------------------------------------------------
 
 const _border: SxProps = {
-    ...invisibleContent,
-    boxSizing: "border-box",
+    // ...invisibleContent,
+    // boxSizing: "border-box",
     position: "absolute",
     height: borderSize,
     width: "10px",
     background: colors.border,
+    m: "0px",
+    p: "0px",
+    boxShadow: boxShadow({
+        x: "0px",
+        y: "0px",
+        blur: "1.0px",
+        spread: "1.0px",
+        // color: rgba(colors.border, 0.5).hexa(),
+        color: "blue",
+    }),
+}
+
+const border_left: SxProps = {
+    ..._border,
+    height: "100%",
+    width: borderSize,
+    top: 0,
+    left: 0,
+}
+
+const border_right: SxProps = {
+    ..._border,
+    height: "100%",
+    width: borderSize,
+    top: 0,
+    right: 0,
 }
 
 const border_topLeft: SxProps = {
@@ -152,6 +196,8 @@ export const TextField = {
         content: wrapper_content,
     },
     border: {
+        left: border_left,
+        right: border_right,
         topLeft: border_topLeft,
         bottomLeft: border_bottomLeft,
         topRight: border_topRight,

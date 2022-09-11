@@ -36,14 +36,14 @@ export const TestPage = (_props: unknown): JSX.Element => {
     return (
         <ErPage pageName="about">
             <Container>
-                <p>This is a development page. You shouldn{SpecialCharacters.singleQuote}t be here.</p>
+                {/* <p>This is a development page. You shouldn{SpecialCharacters.singleQuote}t be here.</p>
                 <Button variant="elden-ring" onClick={playClick}>click</Button>
                 <Br />
                 <Button variant="contained" onClick={playSlider}>slider</Button>
                 <Br />
                 <Button variant="outlined" onClick={playOpenMenu}>open menu</Button>
-                <Br />
-                <Box>
+                <Br /> */}
+                <Box sx={{ p: 1 }}>
                     <ErTextField />
                 </Box>
             </Container>
