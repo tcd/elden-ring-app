@@ -1,0 +1,6 @@
+export * from "./game-start"
+export * from "./menu-click"
+export * from "./new-location"
+export * from "./open-menu"
+export * from "./slider"
+export * from "./you-died"

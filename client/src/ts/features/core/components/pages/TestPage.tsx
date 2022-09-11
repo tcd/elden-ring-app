@@ -1,9 +1,13 @@
 import { useEffect } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
-import { Box, Container } from "@mui/material"
+import {
+    Box,
+    Button,
+    Container,
+} from "@mui/material"
 
 import { ThemeVars } from "@app/theme"
-import { ErPage, ErTextField } from "@app/features/common"
+import { ErPage, ErTextField, Br } from "@app/features/common"
 import { SpecialCharacters, Audio, getCssVariable } from "@app/util"
 
 export const TestPage = (_props: unknown): JSX.Element => {
@@ -16,8 +20,12 @@ export const TestPage = (_props: unknown): JSX.Element => {
         Audio.slider()
     }
 
-    useHotkeys("left, right", playClick)
-    useHotkeys("up, down", playSlider)
+    const playOpenMenu = () => {
+        Audio.openMenu()
+    }
+
+    // useHotkeys("left, right", playClick)
+    // useHotkeys("up, down", playSlider)
     useHotkeys("left, right", () => { console.log("left or right")})
     useHotkeys("up, down", () => { console.log("up or down")})
 
@@ -29,11 +37,12 @@ export const TestPage = (_props: unknown): JSX.Element => {
         <ErPage pageName="about">
             <Container>
                 <p>This is a development page. You shouldn{SpecialCharacters.singleQuote}t be here.</p>
-                <button onClick={playClick}>click</button>
-                <button onClick={playSlider}>slider</button>
-                <br />
-                <br />
-                <br />
+                <Button variant="elden-ring" onClick={playClick}>click</Button>
+                <Br />
+                <Button variant="contained" onClick={playSlider}>slider</Button>
+                <Br />
+                <Button variant="outlined" onClick={playOpenMenu}>open menu</Button>
+                <Br />
                 <Box>
                     <ErTextField />
                 </Box>
