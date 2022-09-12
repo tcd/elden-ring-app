@@ -1,12 +1,10 @@
 import { useEffect } from "react"
-import { useHotkeys } from "react-hotkeys-hook"
 import {
     Box,
     Button,
     Container,
 } from "@mui/material"
 
-import { ThemeVars } from "@app/theme"
 import { ErPage, ErTextField, Br } from "@app/features/common"
 import { Audio, getCssVariable } from "@app/util"
 
@@ -24,10 +22,9 @@ export const TestPage = (_props: unknown): JSX.Element => {
         Audio.openMenu()
     }
 
-    // useHotkeys("left, right", playClick)
-    // useHotkeys("up, down", playSlider)
-    useHotkeys("left, right", () => { console.log("left or right")})
-    useHotkeys("up, down", () => { console.log("up or down")})
+    const playCloseMenu = () => {
+        Audio.closeMenu()
+    }
 
     useEffect(() => {
         logCssVariables()
@@ -37,14 +34,18 @@ export const TestPage = (_props: unknown): JSX.Element => {
         <ErPage pageName="about" title="Test" icon="empty">
             <Container>
                 {/* <p>This is a development page. You shouldn&apos;t be here.</p>
-                <Button variant="elden-ring" onClick={playClick}>click</Button>
+                    <Button variant="elden-ring" onClick={playClick}>click</Button>
                 <Br />
                 <Button variant="contained" onClick={playSlider}>slider</Button>
                 <Br />
                 <Button variant="outlined" onClick={playOpenMenu}>open menu</Button>
+                <Br />
+                <Button variant="text" onClick={playOpenMenu}>open menu</Button>
                 <Br /> */}
                 <Box sx={{ p: 1 }}>
-                    <ErTextField />
+                    <ErTextField
+                        label="Test #1"
+                    />
                 </Box>
             </Container>
 
