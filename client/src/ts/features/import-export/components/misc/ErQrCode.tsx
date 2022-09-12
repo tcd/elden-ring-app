@@ -62,12 +62,13 @@ const QR_CODE_SIZE: Integer = 150
 
 const qrCodeProps: Partial<IProps> = {
     id: "er-data-qr-canvas",
-    ecLevel: "M",
+    // ecLevel: "M",
+    qrStyle: "dots",
     size: QR_CODE_SIZE,
-    qrStyle: "squares",
     quietZone: 10, // default
-    fgColor: ThemeVars.colors.blue,
+    // fgColor: ThemeVars.colors.blue,
+    fgColor: ThemeVars.colors.gold.light,
+    bgColor: "#36362d",
     // logoWidth: (QR_CODE_SIZE * 0.2),
     // removeQrCodeBehindLogo: true,
-    // logoImage: "",
 }
