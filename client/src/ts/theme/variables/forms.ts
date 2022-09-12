@@ -4,11 +4,11 @@ export const forms = <const>{
          * - width of vertical borders
          * - height of horizontal borders
          */
-        borderThickness: "1px",
+        borderThickness: "1.0px",
         /**
          * how far the vertical borders cover from either side
          */
-        borderLength: "4px",
+        borderLength: "6px",
         colors: {
             inputBg: "#24231c",
             rootBg: "#292720",
@@ -26,11 +26,16 @@ export const forms = <const>{
         },
         zIndex: {
             root:             2_000,
+
             wrapper:          2_010,
+
             borders:          2_020,
-            horizontalBorder: 2_020,
-            verticalBorder:   2_020,
+
+            // horizontalBorder: 2_020,
+            // verticalBorder:   2_020,
+
             absolute:         2_040,
+
             input:            2_100,
         },
     },

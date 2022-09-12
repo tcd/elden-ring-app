@@ -96,7 +96,7 @@ const absolute: SxProps = {
 
     backgroundColor: "transparent",
 
-    ...bracketBorders(vars.colors.border, vars.borderThickness),
+    ...bracketBorders(vars.colors.border, vars.borderThickness, vars.borderLength),
 }
 
 // =============================================================================

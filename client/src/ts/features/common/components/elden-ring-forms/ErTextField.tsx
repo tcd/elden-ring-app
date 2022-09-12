@@ -10,6 +10,11 @@ export const ErTextField = (props: ErTextFieldProps): JSX.Element => {
     return (
         <Box sx={ComponentSx.forms.TextField.wrapper.root}>
             <Box sx={ComponentSx.forms.TextField.wrapper.content}>
+                {/* <Box sx={ComponentSx.forms.TextField.borders.horizontal.wrapper}>
+                    <Box sx={ComponentSx.forms.TextField.borders.horizontal.segment} />
+                    <Box sx={ComponentSx.forms.TextField.borders.horizontal.spacer} />
+                    <Box sx={ComponentSx.forms.TextField.borders.horizontal.segment} />
+                </Box> */}
                 <Box sx={ComponentSx.forms.TextField.wrapper.absolute} />
                 <Box sx={ComponentSx.forms.TextField.borders.topLeft} />
                 <Box sx={ComponentSx.forms.TextField.borders.bottomLeft} />
