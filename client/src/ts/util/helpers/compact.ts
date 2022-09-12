@@ -1,6 +1,5 @@
-import isPlainObject from "lodash/isPlainObject"
-
 import { isBlank } from "./is-blank"
+import { isPlainObject } from "./is-plain-object"
 
 /**
  * Make a copy of `object` with all blank values removed.
@@ -39,8 +38,8 @@ export const compact = <T extends object>(object: T, exclude: string[] = []): Pa
     return result
 }
 
-export const compactArray = (array: any[]) => {
-    const result: any[] = []
+export const compactArray = <T>(array: T[]): T[] => {
+    const result = []
     for (const item of array) {
         if (isBlank(item)) {
             continue
