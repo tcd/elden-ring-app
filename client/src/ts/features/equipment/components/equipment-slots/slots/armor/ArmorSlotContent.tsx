@@ -2,8 +2,7 @@ import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import type { ArmorType } from "@app/constants"
-import type { Armor } from "@app/types"
+import type { Armor, ArmorType } from "@app/types"
 import { Actions } from "@app/state"
 import { getImageSrc } from "@app/util"
 
