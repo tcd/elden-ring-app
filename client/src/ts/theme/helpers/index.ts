@@ -1,5 +1,6 @@
 export * from "./add-transparency"
 export * from "./box-shadow"
+export * from "./bracket-borders"
 export * from "./css-url"
 export * from "./CssMath"
 export * from "./gradient-stops"

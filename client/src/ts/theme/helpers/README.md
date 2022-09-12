@@ -13,3 +13,18 @@
 - Colors
     - [Named Colors (Level 4, ,*extended color keywords*)](https://drafts.csswg.org/css-color-4/#named-colors)
     - [CSS Color Module Level 5](https://drafts.csswg.org/css-color/#color-syntax)
+
+
+### Flex Cheat Sheet
+
+| direction |   center   |            rule            |
+| --------- | ---------- | -------------------------- |
+| column    | vertical   | `justify-content: center;` |
+| column    | horizontal | `align-items: center;`     |
+| row       | vertical   | `align-items: center;`     |
+| row       | horizontal | `justify-content: center;` |
+
+| direction | vertical | horizontal |
+| --------- | -------- | ---------- |
+| column    | content  | items      |
+| row       | items    | content    |
