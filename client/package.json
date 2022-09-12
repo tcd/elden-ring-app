@@ -14,7 +14,7 @@
         "deploy:prod": "cross-env NODE_ENV=production node ./config/scripts/deploy.js",
         "deploy:staging": "cross-env NODE_ENV=staging node ./config/scripts/deploy.js",
         "tag": "node ./config/scripts/tag.mjs",
-        "docs:sass": "cross-env sassdoc ./src/styles --config ./config/.sassdocrc.yml"
+        "docs:ts": "cross-env typedoc --options ./typedoc.json"
     },
     "dependencies": {
         "@babel/core": "^7.17.8",
@@ -111,7 +111,7 @@
         "rimraf": "^3.0.2",
         "s3-sync-client": "^3.0.3",
         "shelljs": "^0.8.5",
-        "typedoc": "^0.23.7",
+        "typedoc": "^0.23.14",
         "webpack-bundle-analyzer": "^4.6.1"
     }
 }

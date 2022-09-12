@@ -1,4 +1,13 @@
-// https://jsdoc.app/about-configuring-jsdoc.html
 {
-
+    "plugins": [],
+    "recurseDepth": 10,
+    "opts": {
+        "recurse": true,
+        "destination": "./docs/"
+    },
+    "source": {
+        "include": ["src"],
+        "excludePattern": "node_modules"
+    },
+    "sourceType": "module"
 }

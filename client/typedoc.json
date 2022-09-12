@@ -1,0 +1,9 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "name": "elden-ring-app",
+    "out": "./docs/tsx",
+    "readme": "./README.md",
+    "entryPoints": [
+        "./src/ts/constants/index.ts",
+    ],
+}
