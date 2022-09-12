@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import { ArmorType } from "@app/constants"
-import { Armor } from "@app/types"
+import type { Armor, ArmorType } from "@app/types"
 import { MouseOverPopover, ErContextMenu, ErContextMenuOption } from "@app/features/common"
 import { Actions } from "@app/state"
 

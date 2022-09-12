@@ -1,7 +1,7 @@
 import { forwardRef } from "react"
 import { useDispatch } from "react-redux"
 
-import type { AmmunitionSlotId } from "@app/constants"
+import type { AmmunitionSlotId } from "@app/types"
 import { Actions } from "@app/state"
 
 import { EquipmentSlot } from "../EquipmentSlot"

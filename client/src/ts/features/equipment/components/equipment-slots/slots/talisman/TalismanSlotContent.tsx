@@ -2,8 +2,7 @@ import { forwardRef } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import type { TalismanSlotId } from "@app/constants"
-import type { Talisman } from "@app/types"
+import type { Talisman, TalismanSlotId } from "@app/types"
 import { getImageSrc } from "@app/util"
 import { Actions } from "@app/state"
 

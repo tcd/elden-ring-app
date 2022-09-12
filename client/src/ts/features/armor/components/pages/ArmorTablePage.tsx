@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux"
 import { MenuItem, TextField } from "@mui/material"
 
-import { ArmorTypes, ArmorType } from "@app/constants"
-import { Armor } from "@app/types"
+import { ArmorTypes } from "@app/constants"
+import { Armor, ArmorType } from "@app/types"
 import {
     Heading,
     CustomTable,

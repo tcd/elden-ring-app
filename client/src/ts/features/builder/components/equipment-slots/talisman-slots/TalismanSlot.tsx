@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import type { TalismanSlotId } from "@app/constants"
-import { Talisman } from "@app/types"
+import type { Talisman, TalismanSlotId } from "@app/types"
 import { MouseOverPopover, ErContextMenu } from "@app/features/common"
 import { Actions } from "@app/state"
 

@@ -1,7 +1,7 @@
 import JSONCrush from "jsoncrush"
 
 import type { RootState } from "@app/state"
-import { CONFIG, JsUrl } from "@app/util"
+import { CONFIG } from "@app/util"
 
 import { BuildDataSelectors } from "./BuildDataSelectors"
 
