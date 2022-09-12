@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 
-import { IconNamesKey } from "@app/constants"
+import type { IconNamesKey } from "@app/types"
 import { IconUrls } from "@app/util"
 import { ComponentSx } from "@app/theme"
 import { MuiImg } from "@app/features/common"

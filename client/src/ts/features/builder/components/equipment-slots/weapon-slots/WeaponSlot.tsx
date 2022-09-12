@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
-import type { WeaponSlotId } from "@app/constants"
-import type { WeaponSlotData } from "@app/types"
+import type { WeaponSlotData, WeaponSlotId } from "@app/types"
 import { weaponSlotDisplayName } from "@app/util"
 import { Actions } from "@app/state"
 import { MouseOverPopover, ErContextMenu } from "@app/features/common"

@@ -19,6 +19,8 @@ const FOOTERS_BY_PAGE: Record<PageName, JSX.Element> = {
     "armor":          <ArmorFooter />,
     "ashes-of-war":   <AshesOfWarFooter />,
     "builder":        <BuilderFooter />,
+    "checklist":      <NoFooter />,
+    "data":           <NoFooter />,
     "equipment":      <EquipmentFooter />,
     "level-up":       <NoFooter />,
     "not-found":      <NoFooter />,

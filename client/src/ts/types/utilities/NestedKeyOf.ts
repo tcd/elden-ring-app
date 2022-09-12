@@ -17,6 +17,7 @@ type DotNotation<T extends string> = T extends ("" | Builtin) ? "" : `.${T}`
 export type NestedKeyOf<T> =
     (T extends (Array<any> | Builtin) ? "" : (
         T extends object
+            // @ts-ignore: next-line
             ? { [K in Exclude<keyof T, symbol>]: `${K}${DotNotation<NestedKeyOf<T[K]>>}` }[Exclude<keyof T, symbol>]
             : ""
     ) extends infer D ? Extract<D, string> : never) | keyof T

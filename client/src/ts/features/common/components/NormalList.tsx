@@ -1,9 +1,10 @@
-import { Box, BoxProps } from "@mui/material"
+import type { BoxProps } from "@mui/material"
+import { Box } from "@mui/material"
 
 import { normalList } from "@app/theme"
 import { merge } from "@app/util"
 
-export type NormalListProps = BoxProps<"ul">
+export type NormalListProps = Omit<BoxProps<"ul">, "component">
 
 export const NormalList = (props: NormalListProps): JSX.Element => {
     let {
@@ -15,7 +16,10 @@ export const NormalList = (props: NormalListProps): JSX.Element => {
     sx = merge(normalList, sx)
 
     return (
-        <Box sx={sx} {...otherProps}>
+        <Box
+            sx={sx}
+            component="ul"
+            {...otherProps}>
             {children && children}
         </Box>
     )

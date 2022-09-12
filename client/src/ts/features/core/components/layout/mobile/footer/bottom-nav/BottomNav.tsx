@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { Link as RouterLink } from "react-router-dom"
+import type { To } from "react-router-dom"
 import {
     BottomNavigationAction,
     BottomNavigation,
@@ -9,7 +10,12 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 import { Selectors } from "@app/state"
 import { useHash } from "@app/util"
 
-import { BottomNavActionProps } from "./BottomNavAction"
+export interface BottomNavActionProps {
+    value: string
+    label: string
+    to: To
+    icon: JSX.Element
+}
 
 export interface BottomNavProps {
     actions: BottomNavActionProps[]
