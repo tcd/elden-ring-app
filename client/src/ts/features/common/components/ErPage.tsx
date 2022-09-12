@@ -7,20 +7,28 @@ import type { HeaderIconId, PageName } from "@app/types"
 import { Actions } from "@app/state"
 import { RouterHelper } from "@app/features/routing/components/RouterHelper"
 
-export interface ErPageProps {
+export type ErPageProps =
+    (
+        {
+            pageName: PageName
+        } | {
+            // TODO: remove this. no pageName allowed if you set things manually.
+            pageName?: PageName
+            title: string
+            icon: HeaderIconId
+        }
+    ) & {
     // FIXME: builder is the only thing using this. Need to remove it.
     id?: string
-    pageName: PageName
-    title?: string
-    icon?: HeaderIconId
     children?: ReactNode
     sx?: SxProps
 }
 
 const DEFAULT_PROPS: Partial<ErPageProps> = {
-    id: undefined,
+    pageName: undefined,
     title: null,
     icon: null,
+    id: undefined,
     sx: {
         boxSizing: "border-box",
         height: "100%",
