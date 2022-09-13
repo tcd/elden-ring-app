@@ -6,23 +6,11 @@ import {
     useCallback,
 } from "react"
 
-import type { DeviceSize } from "@app/types"
+import type { DeviceSize, Orientation } from "@app/types"
 import { ThemeVars } from "@app/theme"
 
 import { ScreenSize } from "../web/ScreenSize"
 import { isBlank } from "../helpers/is-blank"
-
-/**
- * - https://www.w3.org/TR/screen-orientation/#screen-orientation-types-and-locks
- * - https://www.w3.org/TR/screen-orientation/#ref-for-dom-orientationtype-1
- */
-type OrientationType =
-    | "portrait-primary"
-    | "portrait-secondary"
-    | "landscape-primary"
-    | "landscape-secondary"
-
-export type Orientation = "portrait" | "landscape"
 
 export interface IViewportContext {
     width: number
