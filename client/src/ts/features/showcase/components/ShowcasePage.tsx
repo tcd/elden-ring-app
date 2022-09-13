@@ -5,6 +5,7 @@ import { ErPage } from "@app/features/common"
 import {
     Buttons,
     Cards,
+    ContextMenu,
     HorizontalRule,
     Lists,
     YouDied,
@@ -18,6 +19,7 @@ export const ShowcasePage = (_props: unknown): JSX.Element => {
                 <Buttons />
                 <Cards />
                 <HorizontalRule />
+                <ContextMenu />
                 <YouDied />
             </Container>
         </ErPage>
