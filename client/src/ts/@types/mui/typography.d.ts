@@ -5,6 +5,7 @@ export declare module "@mui/material/Typography" {
         pageName: true
         body: true
         statColumn: true
+        code: true
 
         // remove old
         // h1: false

@@ -59,13 +59,14 @@ type Variant =
     | "pageName"
     | "statColumn"
     | "body"
+    | "code"
     | "h1"
     | "h2"
     | "h3"
     | "h4"
     | "h5"
 
-const typographyVariants: Partial<Record<Variant, React.CSSProperties>> = {
+const typographyVariants: Record<Variant, React.CSSProperties> = {
     allVariants: {
         fontFamily: typography.fontFamily.display,
         textShadow: defaultTextShadow,
@@ -80,6 +81,9 @@ const typographyVariants: Partial<Record<Variant, React.CSSProperties>> = {
     },
     body: {
         color: typography.colorFg,
+    },
+    code: {
+        fontFamily: [`'Ubuntu Mono'`, "monospace"].join(", "),
     },
     statColumn: {
         color: typography.colorFg,
