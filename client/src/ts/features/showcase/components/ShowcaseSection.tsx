@@ -15,8 +15,8 @@ export const ShowcaseSection = (props: ShowcaseSectionProps): JSX.Element => {
     } = props
 
     return (
-        <Box sx={{ display: "flex", flexFlow: "column nowrap"}}>
-            <Typography>{title}</Typography>
+        <Box sx={{ display: "flex", flexFlow: "column nowrap", mt: "50px" }}>
+            <Typography variant="h4">{title}</Typography>
             <ErHr variant="full" sx={{ mb: 1 }}/>
             <>
                 {children}
