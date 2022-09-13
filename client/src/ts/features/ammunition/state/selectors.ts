@@ -4,6 +4,7 @@ import { isBlank } from "@app/util"
 
 import type { AmmunitionState } from "./state"
 
+/** @private */
 const selectSlice = (rootState: RootState): AmmunitionState => rootState?.Ammunition
 
 const selectSlots = (rootState: RootState) => selectSlice(rootState)?.slots

@@ -6,6 +6,7 @@ import type { SpellsState } from "../state"
 
 const selectAllSpells = BuilderSelectors.api.spells
 
+/** @private */
 const selectSlice = (rootState: RootState): SpellsState => rootState.Spells
 
 const selectSlots = (rootState: RootState) => selectSlice(rootState)?.slots

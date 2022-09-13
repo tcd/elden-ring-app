@@ -1,5 +1,6 @@
 import type { RootState } from "@app/state"
 
+/** @private */
 const _selectSlice = (rootState: RootState) => rootState?.Notifications
 
 const selectNotifications = (rootState: RootState) => _selectSlice(rootState)?.notifications ?? []

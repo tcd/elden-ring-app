@@ -9,6 +9,7 @@ import type { LevelUpState } from "./state"
 // Helpers
 // =============================================================================
 
+/** @private */
 const _selectSlice = (rootState: RootState): LevelUpState => rootState?.LevelUp
 const selectAttributes = (rootState: RootState) => _selectSlice(rootState)?.attributes
 

@@ -5,6 +5,7 @@ import { isBlank } from "@app/util"
 
 import { StartingClassState } from "./state"
 
+/** @private */
 const _selectSlice = (rootState: RootState): StartingClassState => rootState?.StartingClass
 
 const selectStartingClassName        = (rootState: RootState): StartingClassName =>  _selectSlice(rootState)?.startingClassName

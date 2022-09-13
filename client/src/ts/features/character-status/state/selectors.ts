@@ -1,6 +1,8 @@
-import { RootState } from "@app/state"
-import { CharacterStatusState } from "."
+import type { RootState } from "@app/state"
 
+import type { CharacterStatusState } from "."
+
+/** @private */
 const selectSlice = (rootState: RootState): CharacterStatusState => {
     return rootState.CharacterStatus
 }
