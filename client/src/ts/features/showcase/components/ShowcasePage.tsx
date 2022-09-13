@@ -7,6 +7,7 @@ import {
     Cards,
     HorizontalRule,
     Lists,
+    YouDied,
 } from "./sections"
 
 export const ShowcasePage = (_props: unknown): JSX.Element => {
@@ -17,6 +18,7 @@ export const ShowcasePage = (_props: unknown): JSX.Element => {
                 <Buttons />
                 <Cards />
                 <HorizontalRule />
+                <YouDied />
             </Container>
         </ErPage>
     )
