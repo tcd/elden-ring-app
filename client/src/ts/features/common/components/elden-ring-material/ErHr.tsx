@@ -14,7 +14,7 @@ export type ErHrProps = Omit<BoxProps<"hr">, "component" | "children"> &  {
     variant?: ErHrVariant
 }
 
-export const ErHr = forwardRef(function ErHr(props: ErHrProps, ref) {
+export const ErHr = forwardRef<HTMLHRElement, ErHrProps>(function ErHr(props: ErHrProps, ref) {
 
     const {
         variant = "full",
@@ -22,32 +22,12 @@ export const ErHr = forwardRef(function ErHr(props: ErHrProps, ref) {
     } = props
 
     switch (variant) {
-        case "full":  return <VARIANTS.Full  {...otherProps} />
-        case "inner": return <VARIANTS.Inner {...otherProps} />
-        case "menu":  return <VARIANTS.Menu  {...otherProps} />
+        case "full":  return <VARIANTS.Full  ref={ref} {...otherProps} />
+        case "inner": return <VARIANTS.Inner ref={ref} {...otherProps} />
+        case "menu":  return <VARIANTS.Menu  ref={ref} {...otherProps} />
         default: return null
     }
 })
-
-// export const ErHr = forwardRef(function ErHr(props: ErHrProps, ref) {
-//
-//     let {
-//         sx        = {},
-//         fullWidth = false,
-//     } = props
-//
-//     if (fullWidth !== false) {
-//         sx = { ...ComponentSx.ErHr.borderSx, ...sx }
-//         return <Box ref={ref} component="hr" sx={sx} />
-//     } else {
-//         sx = { ...ComponentSx.ErHr.innerBorderWrapperSx, ...sx }
-//         return (
-//             <Box ref={ref} sx={sx}>
-//                 <Box component="hr" sx={ComponentSx.ErHr.innerBorderContentSx} />
-//             </Box>
-//         )
-//     }
-// })
 
 const VARIANTS = {
 

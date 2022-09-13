@@ -8,6 +8,11 @@ import {
     // ThemeBreakpoints,
 } from "@app/theme"
 
+const hr: SxProps = {
+    display: "block",
+    content: ThemeVars.ZWSP,
+}
+
 // =============================================================================
 // Modal, Affinity Modal, Dialog
 // =============================================================================
@@ -21,6 +26,7 @@ import {
  * - `.er__dialog__bottomBorder`
  */
 const borderSx: SxProps = {
+    ...hr,
     width: "100%",
     height: "3px",
     background: ThemeVars.gradients.modalHorizontalBorder,
@@ -31,7 +37,6 @@ const borderSx: SxProps = {
  * - `.er__affinityModal >.inner-border-wrapper`
  */
 const innerBorderWrapperSx: SxProps = {
-    content: ThemeVars.ZWSP,
     width: "100%",
     display: "flex",
     justifyContent: "center",
@@ -42,7 +47,7 @@ const innerBorderWrapperSx: SxProps = {
  * - `.er__affinityModal > .inner-border-wrapper > .inner-border`
  */
 const innerBorderContentSx: SxProps = {
-    content: ThemeVars.ZWSP,
+    ...hr,
     textAlign: "center",
     width: "90%",
     height: "2px",
@@ -54,6 +59,7 @@ const innerBorderContentSx: SxProps = {
 // =============================================================================
 
 const equipmentMenuSx: SxProps = {
+    ...hr,
     width: "94.44444444%",
     height: "3px",
     my: "6px",
