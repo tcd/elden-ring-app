@@ -11,7 +11,7 @@ import {
 
 export const ShowcasePage = (_props: unknown): JSX.Element => {
     return (
-        <ErPage title="Showcase" icon="gestures" sx={{ display: "flex", flexFlow: "column nowrap"}}>
+        <ErPage title="Showcase" icon="gestures" sx={{ display: "flex", flexFlow: "column nowrap" }}>
             <Container>
                 <Lists />
                 <Buttons />
