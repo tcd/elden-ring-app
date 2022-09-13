@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
+import { ErrorBoundary } from "@app/features/common"
 import { WeaponSkillMenuGrid } from "@app/features/weapons/components"
 
 export const WeaponSkillMenu = (_props: unknown): JSX.Element => {
@@ -12,6 +13,10 @@ export const WeaponSkillMenu = (_props: unknown): JSX.Element => {
         return null
     }
 
-    return <WeaponSkillMenuGrid />
+    return (
+        <ErrorBoundary>
+            <WeaponSkillMenuGrid />
+        </ErrorBoundary>
+    )
 }
 

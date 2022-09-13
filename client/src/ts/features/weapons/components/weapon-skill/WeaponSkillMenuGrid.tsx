@@ -2,7 +2,7 @@ import { createRef, useEffect, useRef } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
-import { scrollToEquipmentCell, getImageSrc } from "@app/util"
+import { scrollToEquipmentCell, getImageSrc, reduceToObject } from "@app/util"
 import { Actions, Selectors } from "@app/state"
 import { EquipmentMenu } from "@app/features/equipment-menu"
 
@@ -19,11 +19,11 @@ export const WeaponSkillMenuGrid = (_props: unknown): JSX.Element => {
 
     const menuRef = createRef<HTMLDivElement>()
 
-    const refs: RefMap = skills.reduce((acc, value) => {
+    const refs: RefMap = reduceToObject(
+        skills,
         // eslint-disable-next-line react-hooks/rules-of-hooks
-        acc[value.name] = useRef<HTMLDivElement>(null)
-        return acc
-    }, {})
+        (skill) => [skill.name, useRef<HTMLDivElement>(null)],
+    )
 
     const handleClick = (name: string) => {
         dispatch(Actions.Weapons.setWeaponSkill({ name }))
