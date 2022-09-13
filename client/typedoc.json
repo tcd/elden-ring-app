@@ -4,6 +4,11 @@
     "out": "./docs/tsx",
     "readme": "./README.md",
     "entryPointStrategy": "expand",
+    "excludeExternals": true,
+    "plugin": [
+        "typedoc-plugin-extras",
+        "typedoc-plugin-missing-exports",
+    ],
     "entryPoints": [
         "./src/ts/@types/global.d.ts",
         "./src/ts/app/index.ts",
