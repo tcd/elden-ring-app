@@ -12,6 +12,7 @@ import {
     SettingsPage,
     TestPage,
 } from "@app/features/core"
+import { ShowcasePage } from "@app/features/showcase"
 // import {
 //     BuilderPage,
 //     MobileBuilderPage,
@@ -65,6 +66,7 @@ const desktopRoutes: RouteObject[] = [
             // { index: true, element: <HomePage /> },
             // { path: "/", element: <HomePage /> },
             { path: "/",          element: <EquipmentPage /> },
+            { path: "/showcase",   element: <ShowcasePage /> },
             { path: "/about",     element: <AboutPage /> },
             { path: "/import",    element: <ImportDataPage /> },
             // { path: "/builder",   element: <BuilderPage /> },
