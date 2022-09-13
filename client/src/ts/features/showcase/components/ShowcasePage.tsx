@@ -8,6 +8,8 @@ import {
     ContextMenu,
     HorizontalRule,
     Lists,
+    Modal,
+    Tooltip,
     YouDied,
 } from "./sections"
 
@@ -20,6 +22,8 @@ export const ShowcasePage = (_props: unknown): JSX.Element => {
                 <Cards />
                 <HorizontalRule />
                 <ContextMenu />
+                <Modal />
+                <Tooltip />
                 <YouDied />
             </Container>
         </ErPage>
