@@ -10,7 +10,7 @@ export interface ErListProps {
     sx?: SxProps
 }
 
-export const ErList = forwardRef<HTMLUListElement>(function ErList(props: ErListProps, ref) {
+export const ErList = forwardRef<HTMLUListElement, ErListProps>(function ErList(props: ErListProps, ref) {
 
     let {
         children = null,

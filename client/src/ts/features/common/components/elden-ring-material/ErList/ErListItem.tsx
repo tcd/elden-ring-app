@@ -1,4 +1,4 @@
-import type { BoxProps } from "@mui/material"
+import type { BoxProps, SxProps } from "@mui/material"
 import { Box } from "@mui/material"
 import { forwardRef } from "react"
 
@@ -8,6 +8,7 @@ import { ComponentSx } from "@app/theme"
 export interface ErListItemProps {
     active?: boolean
     children?: React.ReactNode
+    sx?: SxProps
 }
 
 export const ErListItem = forwardRef<HTMLLIElement, ErListItemProps>(function ErListItem(props: ErListItemProps, ref) {
@@ -15,15 +16,16 @@ export const ErListItem = forwardRef<HTMLLIElement, ErListItemProps>(function Er
     const {
         children = null,
         active = false,
+        sx = {},
     } = props
 
-    const sx = active ? ComponentSx.ErList.li.active : ComponentSx.ErList.li.base
+    const baseSx = active ? ComponentSx.ErList.li.active : ComponentSx.ErList.li.base
 
     return (
         <Box
             ref={ref}
             component="li"
-            sx={sx}
+            sx={{ ...baseSx, ...sx }}
         >
             {children && children}
         </Box>
