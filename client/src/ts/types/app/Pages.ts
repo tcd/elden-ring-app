@@ -62,7 +62,8 @@ export const PAGE_NAME_TITLES: Record<PageName, PageTitle> = {
     "data":           "Data",
     "equipment":      "Equipment",
     "level-up":       "Level Up",
-    "not-found":      "Not Found",
+    // @ts-ignore: next-line
+    "not-found":      "",
     "quick-items":    "Quick Items",
     "settings":       "System",
     "spell":          "Memorize Spells",
@@ -122,7 +123,7 @@ export const PAGE_NAME_ICONS: Record<PageName, string> = {
     "data":           HEADER_ICONS["system"],
     "equipment":      HEADER_ICONS.equipment,
     "level-up":       HEADER_ICONS["level-up"],
-    "not-found":      HEADER_ICONS["site-of-grace"],
+    "not-found":      HEADER_ICONS.empty,
     "quick-items":    HEADER_ICONS.inventory,
     "settings":       HEADER_ICONS.system,
     "spell":          HEADER_ICONS.spells,
