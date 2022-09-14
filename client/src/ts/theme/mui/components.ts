@@ -1,9 +1,8 @@
 import type { Components, LinkProps } from "@mui/material"
 import type {} from "@mui/x-data-grid/themeAugmentation"
-// import { experimental_sx as sx } from "@mui/material/styles"
 
-import { ThemeVars } from "../variables"
 import * as mixins from "../sx/mixins"
+import { ThemeVars } from "../variables"
 import { baseStyles } from "./base-styles"
 import { LinkBehavior } from "./LinkBehavior"
 
@@ -76,6 +75,7 @@ export const components: Components = {
             root: {
                 textTransform: "none",
                 letterSpacing: "normal",
+                fontSize: "15px",
             },
         },
     },
@@ -87,6 +87,7 @@ export const components: Components = {
             root: {
                 textTransform: "none",
                 letterSpacing: "normal",
+                fontSize: "15px",
                 ...mixins.pointerOnHover,
             },
             contained: {
