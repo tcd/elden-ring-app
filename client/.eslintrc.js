@@ -62,6 +62,12 @@ module.exports = {
             "message": "Please use the wrapped merge function from `@app/util` instead.",
         }],
         // ---------------------------------------------------------------------
+        // Rules that don't play nice with TypeScript.
+        // These are handled by `@typescript-eslint`.
+        // ---------------------------------------------------------------------
+        "no-unused-vars": "off",
+        "no-loss-of-precision": "off",
+        // ---------------------------------------------------------------------
         // React
         // https://github.com/yannickcr/eslint-plugin-react
         // ---------------------------------------------------------------------
@@ -73,8 +79,7 @@ module.exports = {
         // https://github.com/typescript-eslint/typescript-eslint
         // ---------------------------------------------------------------------
         "@typescript-eslint/no-empty-interface": ["off"],
-        // "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-        "no-unused-vars": "off", // This doesn't play nice with TypeScript
+        "@typescript-eslint/no-loss-of-precision": "off",
         "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
         "@typescript-eslint/no-explicit-any": ["off"],
         "@typescript-eslint/type-annotation-spacing": ["warn"],
