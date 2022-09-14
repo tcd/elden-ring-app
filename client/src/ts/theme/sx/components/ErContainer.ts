@@ -44,6 +44,10 @@ const inner: SxProps = {
         // backgroundColor: "blue",
         width: "1159px",
     },
+    "@media (min-width: 1400px)": {
+        // backgroundColor: "blue",
+        width: "80%",
+    },
 }
 
 /**
