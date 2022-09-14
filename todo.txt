@@ -41,3 +41,4 @@ x 2022-09-04 2022-09-04 Fix header title vertical align @removedBootstrap
 2022-09-10 Show weapon with affinity name in weapon menu
 2022-09-10 WeaponSkillMenuGrid threw an error due to conditional hooks.
 2022-09-10 Style notifications like message rating popups in game
+x 2022-09-13 2022-09-13 Combine `MouseOverPopover` and `ErTooltip` components.
