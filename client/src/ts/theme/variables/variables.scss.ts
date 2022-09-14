@@ -114,6 +114,38 @@ export const affinityModal = <const>{
     //     colorBg: Color(modal.colorBg).lighten(.05).hexa(),
     //     colorActiveBg: Color(modal.colorBg).lighten(.15).hexa(),
     // },
+    gradients: {
+        /**
+         * Couldn't recreate the SASS calculations for this in JS.
+         *
+         * ```css
+         * linear-gradient(
+         *     90deg,
+         *     #352f271a   0%,
+         *     #352f2740  10%,
+         *     #352f27bf  50%,
+         *     #352f2740  90%,
+         *     #352f271a 100%
+         * )
+         * ```
+         */
+        item: "linear-gradient(90deg, #352f271a 0%, #352f2740 10%, #352f27bf 50%, #352f2740 90%, #352f271a 100%)",
+        /**
+         * Couldn't recreate the SASS calculations for this in JS.
+         *
+         * ```css
+         * linear-gradient(
+         *      90deg,
+         *      #52493c1a   0%,
+         *      #52493c40  10%,
+         *      #52493cbf  50%,
+         *      #52493c40  90%,
+         *      #52493c1a 100%
+         * );
+         * ```
+         */
+        itemActive: "linear-gradient(90deg, #52493c1a 0%, #52493c40 10%, #52493cbf 50%, #52493c40 90%, #52493c1a 100%)",
+    },
 }
 
 // ----------------------------------------------------------------------------
