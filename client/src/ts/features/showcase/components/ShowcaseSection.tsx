@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box, SxProps, Typography } from "@mui/material"
 
 import { ErHr } from "@app/features/common"
 
@@ -15,12 +15,20 @@ export const ShowcaseSection = (props: ShowcaseSectionProps): JSX.Element => {
     } = props
 
     return (
-        <Box sx={{ display: "flex", flexFlow: "column nowrap", mt: "50px" }}>
+        <Box sx={sx}>
             <Typography variant="h4">{title}</Typography>
-            <ErHr variant="full" sx={{ mb: 1 }}/>
-            <>
-                {children}
-            </>
+            <ErHr variant="full" sx={{ mt: 1, mb: 2 }}/>
+            {children}
         </Box>
     )
+}
+
+const sx: SxProps = {
+    display: "flex",
+    flexGrow: 1,
+    flexFlow: "column nowrap",
+    justifyContent: "stretch",
+    alignItems: "stretch",
+    mx: "50px",
+    mt: "25px",
 }

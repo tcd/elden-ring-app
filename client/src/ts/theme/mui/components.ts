@@ -17,6 +17,8 @@ export const components: Components = {
     MuiTypography: {
         defaultProps: {
             display: "inline",
+            // @ts-ignore: next-line
+            component: "div",
         },
     },
     MuiSvgIcon: {
