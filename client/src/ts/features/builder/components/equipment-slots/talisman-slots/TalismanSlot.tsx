@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
 import type { Talisman, TalismanSlotId } from "@app/types"
-import { MouseOverPopover, ErContextMenu } from "@app/features/common"
+import { ErTooltip, ErContextMenu } from "@app/features/common"
 import { Actions } from "@app/state"
 
 import { TalismanSlotContent } from "./TalismanSlotContent"
@@ -45,9 +45,9 @@ export const TalismanSlot = (props: TalismanSlotProps): JSX.Element => {
 
     return (
         <ErContextMenu id={`${id}-slot--context-menu`} options={menuItems}>
-            <MouseOverPopover id={`talisman-slot-${id}--popover`} popoverContent={titleString}>
+            <ErTooltip id={`talisman-slot-${id}--popover`} popoverContent={titleString}>
                 <TalismanSlotContent {...props} />
-            </MouseOverPopover>
+            </ErTooltip>
         </ErContextMenu>
     )
 }

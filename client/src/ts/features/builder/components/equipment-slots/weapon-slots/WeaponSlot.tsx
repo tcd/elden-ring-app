@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux"
 import type { WeaponSlotData, WeaponSlotId } from "@app/types"
 import { weaponSlotDisplayName } from "@app/util"
 import { Actions } from "@app/state"
-import { MouseOverPopover, ErContextMenu } from "@app/features/common"
+import { ErTooltip, ErContextMenu } from "@app/features/common"
 
 import { WeaponSlotContent } from "./WeaponSlotContent"
 
@@ -63,9 +63,9 @@ export const WeaponSlot = (props: WeaponSlotContextMenuProps): JSX.Element => {
 
     return (
         <ErContextMenu id={`${props.slotId}--slot-context-menu`} options={menuItems}>
-            <MouseOverPopover id={`weapon-slot-${props.slotId}--popover`} popoverContent={titleString}>
+            <ErTooltip id={`weapon-slot-${props.slotId}--popover`} popoverContent={titleString}>
                 <WeaponSlotContent {...props} />
-            </MouseOverPopover>
+            </ErTooltip>
         </ErContextMenu>
     )
 }

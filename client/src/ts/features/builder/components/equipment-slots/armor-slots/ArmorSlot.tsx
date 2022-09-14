@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
 import type { Armor, ArmorType } from "@app/types"
-import { MouseOverPopover, ErContextMenu, ErContextMenuOption } from "@app/features/common"
+import { ErTooltip, ErContextMenu, ErContextMenuOption } from "@app/features/common"
 import { Actions } from "@app/state"
 
 import { ArmorSlotContent } from "./ArmorSlotContent"
@@ -41,9 +41,9 @@ export const ArmorSlot = (props: ArmorSlotProps) => {
 
     return (
         <ErContextMenu id={`${props.type}-slot-context-menu`} options={menuItems}>
-            <MouseOverPopover id={`armor-slot-${props.type}`} popoverContent={titleString}>
+            <ErTooltip id={`armor-slot-${props.type}`} popoverContent={titleString}>
                 <ArmorSlotContent {...props} />
-            </MouseOverPopover>
+            </ErTooltip>
         </ErContextMenu>
     )
 }

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material"
 
-import { MouseOverPopover } from "@app/features/common"
+import { ErTooltip } from "@app/features/common"
 import { ComponentSx } from "@app/theme"
 
 import { StatColumn } from "./StatColumn"
@@ -26,9 +26,9 @@ export const StatRowPlusPlus = (props: StatRowPlusPlusProps): JSX.Element => {
 
     if (props?.description) {
         return (
-            <MouseOverPopover id={`stat-row-${props.title}`} popoverContent={props.description}>
+            <ErTooltip id={`stat-row-${props.title}`} popoverContent={props.description}>
                 <_StatRowPlusPlus {...props} />
-            </MouseOverPopover>
+            </ErTooltip>
         )
     }
 

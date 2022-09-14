@@ -1,1 +1,1 @@
-export * from "./ErTooltipContent"
+export * from "./ErTooltip"
