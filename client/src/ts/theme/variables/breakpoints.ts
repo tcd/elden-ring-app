@@ -1,6 +1,6 @@
 import type { BreakpointsOptions } from "@mui/material"
 
-export const gridBreakpoints = {
+export const gridBreakpoints = <const>{
     xs:     0, // extra-small
     sm:   550, // small
     md:   750, // medium
@@ -38,11 +38,16 @@ export const breakpointsOptions: BreakpointsOptions = {
         // "xxl",
     ],
     values: {
-        xs: gridBreakpoints.xs,   // extra-small
-        sm: gridBreakpoints.sm,   // mobile
-        md: gridBreakpoints.md,   // tablet
-        lg: gridBreakpoints.lg,   // laptop
-        xl: gridBreakpoints.xl,   // desktop
-        // xxl: gridBreakpoints.xxl, // extra-extra-large
+        xs: gridBreakpoints.xs, // extra-small
+        sm: gridBreakpoints.sm, // mobile
+        md: gridBreakpoints.md, // tablet
+        lg: gridBreakpoints.lg, // laptop
+        xl: gridBreakpoints.xl, // desktop
+        zero:        0, // xs
+        mobile:    550,
+        tablet:    750,
+        laptop:    990,
+        desktop: 1_200,
+        tv:      2_000, // This isn't important
     },
 }

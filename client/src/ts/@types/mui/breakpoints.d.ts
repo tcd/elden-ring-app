@@ -20,16 +20,14 @@
 // Attempt #2
 // -----------------------------------------------------------------------------
 
-// declare module "@mui/material/styles" {
-//     interface BreakpointOverrides {
-//         xs: true// removes the `xs` breakpoint
-//         sm: true
-//         md: true
-//         lg: true
-//         xl: true
-//         xxl: true
-//         // tablet: true; // adds the `tablet` breakpoint
-//         // laptop: true;
-//         // desktop: true;
-//     }
-// }
+// https://mui.com/material-ui/customization/breakpoints/#custom-breakpoints
+export declare module "@mui/material/styles" {
+    export interface BreakpointOverrides {
+        zero: true
+        mobile: true
+        tablet: true
+        laptop: true
+        desktop: true
+        tv: true
+    }
+}

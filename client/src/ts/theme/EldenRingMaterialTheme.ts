@@ -13,6 +13,13 @@ const options: ThemeOptions = {
     typography: typographyOptions,
     components: components,
     breakpoints: breakpointsOptions,
+    direction: "ltr",
+    // zIndex: undefined,
+    // shadows: undefined,
+    // shape: undefined,
+    // spacing: undefined,
+    // transitions: undefined,
+    // mixins: undefined,
 }
 
 // =============================================================================
