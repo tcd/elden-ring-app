@@ -1,17 +1,14 @@
-import {
-    createRef,
-    useEffect,
-    Fragment,
-    useRef,
-} from "react"
+import { createRef, useEffect, useRef } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { RefMap, WEAPON_SKILL_SORT_GROUPS } from "@app/types"
-import { scrollToEquipmentCell } from "@app/util"
+import { scrollToEquipmentCell, getImageSrc, reduceToObject } from "@app/util"
 import { Actions, Selectors } from "@app/state"
-import { WeaponSkillMenuImage, AffinityModal } from "@app/features/weapons/components"
+import { EquipmentMenu } from "@app/features/equipment-menu"
 
-export const WeaponSkillMenuGrid = (): JSX.Element => {
+import { AffinityModal } from "../affinity-modal"
+
+export const WeaponSkillMenuGrid = (_props: unknown): JSX.Element => {
 
     const dispatch = useDispatch()
 
@@ -20,18 +17,13 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     const menuHasScrolled  = useSelector(Selectors.Weapons.menuHasScrolled)
     // const choosingAffinity = useSelector(Selectors.Weapons.smithing.choosingAffinity)
 
-    const classNames = ["er__equipmentMenu__gridColumn"]
-
-    // if (choosingAffinity) {
-    //     classNames.push("no-vertical-overflow")
-    // }
-
     const menuRef = createRef<HTMLDivElement>()
 
-    const refs: RefMap = skills.reduce((acc, value) => {
-        acc[value.name] = useRef<HTMLDivElement>(null)
-        return acc
-    }, {})
+    const refs: RefMap = reduceToObject(
+        skills,
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        (skill) => [skill.name, useRef<HTMLDivElement>(null)],
+    )
 
     const handleClick = (name: string) => {
         dispatch(Actions.Weapons.setWeaponSkill({ name }))
@@ -40,50 +32,48 @@ export const WeaponSkillMenuGrid = (): JSX.Element => {
     const sections = WEAPON_SKILL_SORT_GROUPS.map((sortGroup, index) => {
         const sectionSkills = skills.filter(x => x.sort_group == sortGroup)
         const skillCells = sectionSkills.map((skill) => {
-            const key = `weapon-skill-${skill.name}`
-            let classes = "er__equipmentMenu__gridCell inactive"
-            if (skill.name === activeName) {
-                classes = "er__equipmentMenu__gridCell active"
-            }
             return (
-                <div
-                    key={key}
+                <EquipmentMenu.Cell
+                    key={`weapon-skills-${skill.name}`}
+                    title={skill.name}
+                    active={skill.name === activeName}
+                    onClick={handleClick}
+                    img={getImageSrc("Weapon Skill", skill.name, "256")}
                     ref={refs[skill.name]}
-                    className={classes}
-                    onClick={() => handleClick(skill.name)}
-                >
-                    <WeaponSkillMenuImage weaponSkill={skill} />
-                </div>
+                />
             )
         })
 
-        const divider = (index + 1 < WEAPON_SKILL_SORT_GROUPS.length) ? <div className="er__equipmentMenu__gridSectionBorder"></div> : null
+        if (skillCells.length == 0) {
+            return null
+        }
 
         return (
-            <Fragment key={sortGroup}>
-                <section className="er__equipmentMenu__gridSection">
-                    {skillCells}
-                </section>
-                {divider}
-            </Fragment>
+            <EquipmentMenu.Section
+                key={sortGroup}
+                id={`weapon-skill-group-${sortGroup}`}
+                divider={index + 1 < WEAPON_SKILL_SORT_GROUPS.length}
+            >
+                {skillCells}
+            </EquipmentMenu.Section>
         )
-    })
+    }).filter(x => x != null)
 
     useEffect(() => {
         scrollToEquipmentCell(activeName, menuHasScrolled, refs, menuRef, () => {
             dispatch(Actions.Weapons.scrollMenu())
         })
-    }, [menuHasScrolled, activeName, refs, menuRef])
+    }, [dispatch, menuHasScrolled, activeName, refs, menuRef])
 
     return (
-        <div
+        <EquipmentMenu.EquipmentMenu
             id="weapon-skill-grid-menu"
-            // className={classNames.join(" ")}
-            className="er__equipmentMenu__gridColumn"
+            title="Melee Armaments"
+            subTitle={activeName}
             ref={menuRef}
         >
-            <AffinityModal />
             {sections}
-        </div>
+            <AffinityModal />
+        </EquipmentMenu.EquipmentMenu>
     )
 }

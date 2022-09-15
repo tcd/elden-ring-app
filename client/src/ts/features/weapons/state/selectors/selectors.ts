@@ -1,4 +1,4 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 import {
     CalculatedWeaponStats,
     SlimWeaponData,
@@ -6,9 +6,9 @@ import {
 } from "elden-ring-calculator"
 
 import { Unarmed, UnarmedStats } from "@app/data"
-import { WeaponSlotId } from "@app/constants"
 import {
     Weapon,
+    WeaponSlotId,
     WeaponSlots,
     WeaponSettings,
     WeaponSkill,
@@ -48,7 +48,6 @@ export const selectActiveSlotId     = (rootState: RootState): WeaponSlotId => se
 export const selectHasMenuScrolled  = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.menuHasScrolled
 export const selectCustomizing      = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.customizingWeapon
 export const selectChoosingAffinity = (rootState: RootState): boolean      => selectWeaponsSlice(rootState)?.choosingAffinity
-export const selectMobileTab        = (rootState: RootState)               => selectWeaponsSlice(rootState)?.mobileTab
 
 const selectR1Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R1?.weapon_name
 const selectR2Name = (rootState: RootState): string => selectWeaponSlots(rootState)?.R2?.weapon_name
@@ -278,7 +277,6 @@ export const selectAshOfWarOptions = (rootState: RootState): WeaponSkill[] => {
     if (isBlank(skills)) {
         return []
     }
-    // debugger
     return skills.filter(x => x.compatible_weapon_types.includes(weapon.weapon_type))
 }
 

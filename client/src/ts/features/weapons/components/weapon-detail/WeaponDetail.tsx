@@ -5,13 +5,13 @@ import {
     getImageSrc,
     isBlank,
 } from "@app/util"
+import type { ComparisonColor } from "@app/types"
 import {
-    ErCard2,
-    ErCard2Props,
-    StatRowColor,
     EquipmentDetail,
     EquipmentDetailProps,
-} from "@app/shared"
+    EquipmentDetailCard,
+} from "@app/features/common"
+
 import {
     WeaponAttackStats,
     WeaponScalingStats,
@@ -20,14 +20,6 @@ import {
     EmptyWeaponDetail,
     weaponPassiveEffects,
 } from "."
-
-const cardProps: Partial<ErCard2Props> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
 
 export const WeaponDetail = (_props: unknown): JSX.Element => {
 
@@ -46,24 +38,23 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
 
     const weaponImgSrc = getImageSrc("Weapon", weapon.name, "256")
 
-    let weightColor: StatRowColor = "default"
+    let weightColor: ComparisonColor = "default"
 
     const newWeight = weapon.weight
     const oldWeight = oldWeapon.weight
 
-    if      (newWeight >  oldWeight) { weightColor = "blue"    }
-    else if (newWeight == oldWeight) { weightColor = "default" }
-    else if (newWeight <  oldWeight) { weightColor = "red"     }
+    if      (newWeight > oldWeight) { weightColor = "blue" }
+    else if (newWeight < oldWeight) { weightColor = "red"  }
 
     let weaponSkillImgSrc = null
     if (activeSkill?.ash_of_war) {
         weaponSkillImgSrc = getImageSrc("Weapon Skill", activeSkill.name, "256")
     }
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         title: displayName,
         includePassiveEffects: true,
-        includeSecondaryImage: true,
+        includeSecondaryImage: !weapon.is_special,
         primaryImage: {
             src: weaponImgSrc,
             alt: "weapon",
@@ -85,38 +76,39 @@ export const WeaponDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
-                    <ul>
-                        <WeaponAttackStats
-                            newStats={newStats}
-                            oldStats={oldStats}
-                        />
-                    </ul>
-                </ErCard2>
-                <ErCard2 title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
-                    <ul>
-                        <WeaponDefenseStats
-                            newWeapon={weapon}
-                            oldWeapon={oldWeapon}
-                        />
-                    </ul>
-                </ErCard2>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
-                    <WeaponScalingStats
+
+            <EquipmentDetailCard title="Attack Power" icon="AttackPower">
+                <ul>
+                    <WeaponAttackStats
                         newStats={newStats}
                         oldStats={oldStats}
                     />
-                </ErCard2>
-                <ErCard2 title="Attributes Required" icon="AttributesRequired" {...cardProps}>
-                    <WeaponRequirementStats
-                        weapon={weapon}
-                        attributes={attributes}
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Guarded Damage Negation" icon="GuardedDmgNegation">
+                <ul>
+                    <WeaponDefenseStats
+                        newWeapon={weapon}
+                        oldWeapon={oldWeapon}
                     />
-                </ErCard2>
-            </section>
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attribute Scaling" icon="AttributeScaling">
+                <WeaponScalingStats
+                    newStats={newStats}
+                    oldStats={oldStats}
+                />
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attributes Required" icon="AttributesRequired">
+                <WeaponRequirementStats
+                    weapon={weapon}
+                    attributes={attributes}
+                />
+            </EquipmentDetailCard>
+
         </EquipmentDetail>
     )
 }

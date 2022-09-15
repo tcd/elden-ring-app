@@ -1,36 +1,25 @@
-import { IconButton } from "@mui/material"
-// import KeenSlider, { TrackSlidesConfigOption } from "keen-slider"
-import { useKeenSlider } from "keen-slider/react"
+import { KeenSliderHooks, KeenSliderInstance, useKeenSlider } from "keen-slider/react"
+import { Box } from "@mui/material"
+import IconButton from "@mui/material/IconButton"
 
+import type { DeviceSize } from "@app/types"
 import { STARTING_CLASSES } from "@app/data"
-import { getImageSrcManual } from "@app/util"
-import { StartingClassOption } from "."
+import { getImageSrcManual, ScreenSize } from "@app/util"
+import { ComponentSx } from "@app/theme"
+import { MuiImg } from "@app/features/common"
 
-const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left", "128")
-const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
+import { Option } from "./Option"
 
 export const StartingClassMenu = (_props: unknown): JSX.Element => {
 
-    // useEffect(() => {
-    //     const ignore = (event: Event) => {
-    //         // console.log(event)
-    //         event.stopPropagation()
-    //         event.preventDefault()
-    //     }
-    //     document.getElementById("er__startingClass__menu__options").addEventListener("scroll", ignore)
-    //     document.getElementById("er__startingClass__menu__options").addEventListener("mousewheel", ignore)
-    //     return () => {
-    //         document.getElementById("er__startingClass__menu__options")?.removeEventListener("scroll", ignore)
-    //         document.getElementById("er__startingClass__menu__options")?.removeEventListener("mousewheel", ignore)
-    //     }
-    // }, [])
+    const slidesPerView = slidesByDevice[ScreenSize.deviceSize] ?? 3
 
     const [refCallback, slider] = useKeenSlider(
         {
             selector: ".er__startingClass__menu__option",
             loop: true,
             slides: {
-                perView: 3,
+                perView: slidesPerView,
                 spacing: (): number => { return 20 },
             },
             defaultAnimation: {
@@ -45,31 +34,75 @@ export const StartingClassMenu = (_props: unknown): JSX.Element => {
         ],
     )
 
-    const options = STARTING_CLASSES.map((sClass) => <StartingClassOption key={sClass.name} sClass={sClass} />)
+    // QUESTION: can this be rendered outside the component? I don't think it accesses anything.
+    const options = STARTING_CLASSES.map((sClass) => <Option key={sClass.name} sClass={sClass} />)
 
-    const handleScrollLeft = (): void => {
-        slider.current.prev()
-    }
+    return (
+        <Box sx={ComponentSx.StartingClassPage.menu}>
+            <LeftArrow slider={slider} />
+            <Box
+                ref={refCallback}
+                component="ul"
+                className="keen-slider"
+                sx={ComponentSx.StartingClassPage.options.root}
+            >
+                {options}
+            </Box>
+            <RightArrow slider={slider} />
+        </Box>
+    )
+}
 
-    const handleScrollRight = (): void => {
-        slider.current.next()
+// =============================================================================
+
+const slidesByDevice: Record<DeviceSize, number> = {
+    mobile:  1,
+    tablet:  2,
+    laptop:  3,
+    desktop: 3,
+}
+
+const leftArrowSrc  = getImageSrcManual("ui/misc/arrow-left",  "128")
+const rightArrowSrc = getImageSrcManual("ui/misc/arrow-right", "128")
+
+// =============================================================================
+
+interface ArrowProps {
+    slider: React.MutableRefObject<KeenSliderInstance<any, any, KeenSliderHooks>>
+}
+
+const LeftArrow = ({ slider }: ArrowProps): JSX.Element => {
+
+    const handleClick = (): void => {
+        slider?.current?.prev()
     }
 
     return (
-        <div id="er__startingClass__menu">
-            <div className="er__startingClass__menu__arrowContainer">
-                <IconButton onClick={handleScrollLeft}>
-                    <img src={leftArrowSrc} />
-                </IconButton>
-            </div>
-            <ul id="er__startingClass__menu__options" ref={refCallback} className="keen-slider">
-                {options}
-            </ul>
-            <div className="er__startingClass__menu__arrowContainer">
-                <IconButton onClick={handleScrollRight}>
-                    <img src={rightArrowSrc} />
-                </IconButton>
-            </div>
-        </div>
+        <Box sx={ComponentSx.StartingClassPage.arrowContainer}>
+            <IconButton onClick={handleClick} sx={ComponentSx.StartingClassPage.arrow}>
+                <MuiImg
+                    src={leftArrowSrc}
+                    alt="scroll left"
+                />
+            </IconButton>
+        </Box>
+    )
+}
+
+const RightArrow = ({ slider }: ArrowProps): JSX.Element => {
+
+    const handleClick = (): void => {
+        slider?.current?.next()
+    }
+
+    return (
+        <Box sx={ComponentSx.StartingClassPage.arrowContainer}>
+            <IconButton onClick={handleClick} sx={ComponentSx.StartingClassPage.arrow}>
+                <MuiImg
+                    src={rightArrowSrc}
+                    alt="scroll right"
+                />
+            </IconButton>
+        </Box>
     )
 }

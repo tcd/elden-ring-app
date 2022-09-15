@@ -1,4 +1,3 @@
-export * from "./compact"
 export * from "./flatten-object"
 export * from "./is-object"
 export * from "./is-boolean"

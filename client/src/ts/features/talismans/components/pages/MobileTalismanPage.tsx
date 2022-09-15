@@ -1,13 +1,18 @@
-import { useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-import { Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { useHash } from "@app/util"
+import { ErPage } from "@app/features/common"
 import { TalismanDetail, TalismanMenu } from "@app/features/talismans/components"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 
 export const MobileTalismanPage = (_props: unknown): JSX.Element => {
 
-    const tab = useSelector(Selectors.Talismans.mobileTab)
+    const tab = useHash()
+    const navigate = useNavigate()
+
+    if (tab === "") {
+        navigate("#grid", { replace: true })
+    }
 
     let content: JSX.Element = null
 
@@ -19,8 +24,8 @@ export const MobileTalismanPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="talisman">
+        <ErPage pageName="talisman">
             {content}
-        </Page>
+        </ErPage>
     )
 }

@@ -1,13 +1,14 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 
 import {
     LEVEL_HP_MAP,
     LEVEL_FP_MAP,
     LEVEL_STAMINA_MAP,
 } from "@app/data"
-import { ResistanceStatName } from "@app/constants"
-import { RootState } from "@app/state"
+import type { ResistanceStatName } from "@app/types"
+import type { RootState } from "@app/state"
 import { ArmorSelectors as Armor } from "@app/features/armor"
+
 import { LevelsSelectors as Level } from "./LevelsSelectors"
 
 // https://eldenring.wiki.fextralife.com/Discovery

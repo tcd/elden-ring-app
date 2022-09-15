@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
 
+import type { AttributeName } from "@app/types"
 import { FeatureKeys } from "@app/constants"
-import { AttributeName } from "@app/types"
 import { RootState, Selectors } from "@app/state"
 
 const actionType = `${FeatureKeys.LevelUp}/incrementAttribute`

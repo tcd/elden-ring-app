@@ -1,0 +1,102 @@
+@use "@variables" as var;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
+
+#er__mobileLayout {
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    height: 100%;
+    // background-color: red;
+
+    #er__mobileLayout__outletWrapper {
+        box-sizing: border-box;
+        flex-grow: 1;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        overflow-y: scroll;
+    }
+
+    #er__appHeader__root {
+        width: 100%;
+        align-self: flex-start;
+        justify-self: flex-start;
+        margin: 0px;
+        padding: 0px;
+        flex-shrink: 0;
+        // position: relative;
+        display: flex;
+
+        // height: (v.$mobileHeader-height + (v.$mobileHeader-topMargin * 2));
+        height: var.$mobileHeader-height;
+
+        #er__appHeader__background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: var.$mobileHeader-topMargin;
+            height: 86px;
+            width: 100%;
+            // background-image: m.cloudflareUrl("ui/header/400/public");
+            background-repeat: no-repeat;
+            background-position: left center;
+            // background-size: $size;
+            @include media("<350px")            { background-image: functions.cloudflareUrl("ui/header/300/public"); }
+            @include media(">=350px", "<400px") { background-image: functions.cloudflareUrl("ui/header/350/public"); }
+            @include media(">=400px", "<811px") { background-image: functions.cloudflareUrl("ui/header/400/public"); }
+            @include media(">=811px")           { background-image: functions.cloudflareUrl("ui/header/811/public"); }
+        }
+
+        #er__appHeader__content {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: var.$mobileHeader-contentHeight;
+            margin-top: var.$mobileHeader-topMargin;
+
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            // padding-left: 40px;
+
+            .er__appHeader__icon {
+                @include mixins.square(var.$header-imageSize);
+                margin-left: 35px;
+                margin-right: 20px;
+
+                @include mixins.pointerOnHover;
+            }
+
+            .er__appHeader__title {
+                margin-bottom: 0px;
+                color: var.$gold;
+                font-size: 34px;
+            }
+        }
+    }
+
+    // #app-footer {
+    //     box-sizing: border-box;
+    //     width: 100%;
+    //     margin-left: 0px;
+    //     margin-right: 0px;
+    //     margin-bottom: 0px;
+    //     padding: 3px;
+    //     text-align: center;
+    //     height: 30px;
+    //     color: map-get(v.$EldenRingColor, menu-fg);
+    //     background-color: #292927;
+    // }
+
+    #er__mobileLayout__footerRoot {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        justify-self: flex-end;
+    }
+}

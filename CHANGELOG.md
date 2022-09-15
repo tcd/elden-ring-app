@@ -6,13 +6,62 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 
 ## [Unreleased]
+
+
+## [0.9.0] - 2022-09-14
+### Added
+- Add proper data import/export
+- Add app features:
+    - `ImportExport` 
+    - `Notifications` 
+- Add Dependencies: 
+    - `@mui/x-data-grid`
+### Changed
+- Remove dependencies:
+    - `jquery`
+    - `bootstrap`
+- Bump material ui version
+- So many other things I can't remember. Feel free to ask.
+
+
+## [0.8.0] - 2022-09-03
+### Added
+- Add `CharacterStatus` feature
+- Add initial audio features
+### Changed
+- Try out new responsive styles for equipment slot grid
+- Remove dependencies:
+    - `@mdi/react`
+### Fixed
+- Major style fixes.
+- Update mobile dialog styles
+- Remove console.log statement in viewport context
+
+
+## [0.7.0] - 2022-08-08
+### Added
+- Add `soundsEnabled` to core state
+### Fixed
+- Disable redux devtools in production
+- Fix links in `CHANGELOG.md`
+- Fix starting class menu on mobile
+- Fix mobile styles on starting menu page
+
+
+## [0.6.2] - 2022-07-30
+### Fixed 
+- Fixed new deployment script
+
+
+## [0.6.1] - 2022-07-30
 ### Added
 - Add GitHub issue templates
+- Add cross-platform deployment scripts
+- Begin work on custom scroll-bars
 ### Changed 
 - Rename folder `right-side-panels` to `character-status`
 - Evenly distribute rows in main equipment detail section
 - Sync styles for both *Character Status* panels
-### Fixed
 
 
 ## [0.6.0] - 2022-07-19
@@ -83,10 +132,23 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 - Initial release
 
 
-<!-- ======================================================================= -->
-<!-- Links                                                                   -->
-<!-- ======================================================================= -->
-
 [keep-a-changelog]: https://keepachangelog.com/en/1.0.0/
 [semver]: https://semver.org/spec/v2.0.0.html
 [keen-slider]: https://github.com/rcbyr/keen-slider
+[usehooks-ts]: https://github.com/juliencrn/usehooks-ts
+[react-hotkeys-hook]: https://github.com/JohannesKlauss/react-hotkeys-hook
+
+[Unreleased]: https://github.com/tcd/elden-ring-app/compare/v0.8.0...HEAD
+[0.7.0]: https://github.com/tcd/elden-ring-app/compare/v0.7.0...v0.8.0
+[0.7.0]: https://github.com/tcd/elden-ring-app/compare/v0.6.2...v0.7.0
+[0.6.2]: https://github.com/tcd/elden-ring-app/compare/v0.6.1...v0.6.2 
+[0.6.1]: https://github.com/tcd/elden-ring-app/compare/v0.6.0...v0.6.1 
+[0.6.0]: https://github.com/tcd/elden-ring-app/compare/v0.5.2...v0.6.0 
+[0.5.2]: https://github.com/tcd/elden-ring-app/compare/v0.5.1...v0.5.2 
+[0.5.1]: https://github.com/tcd/elden-ring-app/compare/v0.5.0...v0.5.1 
+[0.5.0]: https://github.com/tcd/elden-ring-app/compare/v0.4.1...v0.5.0 
+[0.4.1]: https://github.com/tcd/elden-ring-app/compare/v0.3.0...v0.4.1 
+[0.3.0]: https://github.com/tcd/elden-ring-app/compare/v0.2.1...v0.3.0 
+[0.2.1]: https://github.com/tcd/elden-ring-app/compare/v0.2.0...v0.2.1 
+[0.2.0]: https://github.com/tcd/elden-ring-app/compare/v0.1.0...v0.2.0 
+[0.1.0]: https://github.com/tcd/elden-ring-app/releases/v0.1.0

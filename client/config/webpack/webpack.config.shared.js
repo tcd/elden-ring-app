@@ -3,6 +3,8 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+// const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 
 const { ROOT_FOLDER } = require("./helpers")
 const version = require("../../package.json").version
@@ -33,12 +35,13 @@ const webpackConfig = {
         }),
         new webpack.ProvidePlugin({
             process: "process/browser",
-            $:      "jquery",
-            jQuery: "jquery",
         }),
         new webpack.DefinePlugin({
             "process.env.VERSION": JSON.stringify(`v${version}`),
         }),
+        // new BundleAnalyzerPlugin({
+        //     excludeAssets: "kitchenSink.dist.js"
+        // }),
     ],
     resolve: {
         extensions: ["*", ".js", ".jsx", ".tsx", ".ts", ".scss"],
@@ -53,6 +56,7 @@ const webpackConfig = {
             "@functions": path.join(ROOT_FOLDER, "src", "styles", "helpers", "functions", "_index.scss"),
             "@mixins":    path.join(ROOT_FOLDER, "src", "styles", "helpers", "mixins",    "_index.scss"),
             "@variables": path.join(ROOT_FOLDER, "src", "styles", "helpers", "variables", "_index.scss"),
+            "@media":     path.join(ROOT_FOLDER, "src", "styles", "helpers", "helpers",   "_mediaQueries.scss"),
         },
     },
     optimization: {
@@ -88,8 +92,8 @@ const webpackConfig = {
             {
                 test: /\.s?css$/,
                 use: [
-                    "style-loader",
-                    "css-loader",
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
                     {
                         // https://webpack.js.org/loaders/sass-loader/
                         loader: "sass-loader",
@@ -97,6 +101,19 @@ const webpackConfig = {
                             sourceMap: true,
                             // Prefer `dart-sass`
                             implementation: require.resolve("sass"),
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.styl$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    {
+                        loader: "stylus-loader", // compiles Stylus to CSS
+                        options: {
+                            sourceMap: true,
                         },
                     },
                 ],

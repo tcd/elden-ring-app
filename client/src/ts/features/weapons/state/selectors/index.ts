@@ -12,7 +12,6 @@ export const WeaponsSelectors = {
     activeSlotId:      Core.selectActiveSlotId,
     menuHasScrolled:   Core.selectHasMenuScrolled,
     equipmentSlotData: Core.selectEquipmentSlotData,
-    mobileTab:         Core.selectMobileTab,
     active: {
         weapon:            Core.selectActiveWeapon,
         weaponName:        Core.selectActiveWeaponName,

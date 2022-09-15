@@ -29,3 +29,16 @@ x 2022-07-08 2022-07-07 Rewrite starting class scroll to be virtual @client
 2022-07-11 Fix talisman options
 x 2022-07-24 2022-07-16 Equipment Detail first sections all have 6 rows, use that to style.
 2022-07-23 Fix equipment detail image sizes.
+2022-08-08 Audio: menu open
+2022-08-08 Audio: menu close
+2022-08-08 Audio: you died
+2022-08-31 Update AttributeRow component @scssToSx
+2022-08-31 Update EmptyTalismanDetail component @scssToSx
+x 2022-09-04 2022-09-04 Fix header title vertical align @removedBootstrap
+2022-09-04 Assess accessibility
+2022-09-06 Lighten red color on `YouDied` component
+2022-09-10 Name custom builds
+2022-09-10 Show weapon with affinity name in weapon menu
+2022-09-10 WeaponSkillMenuGrid threw an error due to conditional hooks.
+2022-09-10 Style notifications like message rating popups in game
+x 2022-09-13 2022-09-13 Combine `MouseOverPopover` and `ErTooltip` components.

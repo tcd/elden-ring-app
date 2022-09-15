@@ -7,7 +7,9 @@ import {
 } from "@mui/material"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 
-import { AboutPageSection } from "."
+import { pointerOnHover } from "@app/theme"
+
+import { AboutPageSection } from "./AboutPageSection"
 
 interface SectionItemProps {
     link: string
@@ -19,13 +21,13 @@ const SectionItem = (props: SectionItemProps): JSX.Element => {
 
     const secondaryAction = (
         <IconButton
-            className="er__hoverPointer"
             edge="end"
             aria-label="open"
             component="a"
             href={props.link}
+            sx={pointerOnHover}
         >
-            <OpenInNewIcon className="er__hoverPointer" />
+            <OpenInNewIcon />
         </IconButton>
     )
 
@@ -34,12 +36,10 @@ const SectionItem = (props: SectionItemProps): JSX.Element => {
     }
 
     return (
-        <ListItemButton onClick={handleClick} className="er__hoverPointer">
+        <ListItemButton onClick={handleClick} sx={pointerOnHover}>
             <ListItemText
                 primary={<>{props.name}</>}
-                primaryTypographyProps={{ className: "er__hoverPointer" }}
                 secondary={<>{props.description}</>}
-                secondaryTypographyProps={{ className: "er__hoverPointer" }}
             />
         </ListItemButton>
     )
@@ -61,7 +61,7 @@ const related: SectionItemProps[] = [
         link: "https://eldenring.wiki.fextralife.com/Build+Calculator",
         name: "Fextralife - Elden Ring Build Calculator (Fextralife)",
         description: (
-            <em className="er__hoverPointer">
+            <em>
                 &quot;Please note this calculator is currently in its BETA stage&quot;
             </em>
         ),
@@ -85,7 +85,7 @@ const related: SectionItemProps[] = [
         link: "https://mapgenie.io/elden-ring/checklists/boss-checklist",
         name: "Elden Ring: Boss Checklist",
         description: (
-            <em className="er__hoverPointer">
+            <em>
                 &quot;Use this interactive checklist to find all bosses, demigods &amp; invaders in Elden Ring. Use the options below to filter by region.&quot;
             </em>
         ),
@@ -93,13 +93,13 @@ const related: SectionItemProps[] = [
     {
         link: "https://eldenring.miyawiki.com/elden-ring-character-planner/",
         name: (
-            <span className="er__hoverPointer">
+            <span>
                 <del>Miyawiki - Elden Ring Character Planner</del>
                 no longer online
             </span>
         ),
         description: (
-            <em className="er__hoverPointer">
+            <em>
                 &quot;Use this interactive checklist to find all bosses, demigods &amp; invaders in Elden Ring. Use the options below to filter by region.&quot;
             </em>
         ),

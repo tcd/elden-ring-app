@@ -1,5 +1,4 @@
-import { ArmorType } from "@app/constants"
-import { Armor } from "@app/types"
+import type { ArmorType, Armor } from "@app/types"
 
 export const NO_ARMOR: Armor = {
     id: -1,

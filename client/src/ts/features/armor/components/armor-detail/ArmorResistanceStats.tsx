@@ -1,6 +1,6 @@
 import { NO_ARMOR } from "@app/data"
 import { isBlank } from "@app/util"
-import { StatRow, StatRowProps } from "@app/shared"
+import { StatRow, StatRowProps } from "@app/features/common"
 import { ArmorDetailProps } from "."
 
 export const ARMOR_RESISTANCE_STATS = [

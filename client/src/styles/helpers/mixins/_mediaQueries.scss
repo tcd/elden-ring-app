@@ -1,26 +1,26 @@
-@use "@variables" as v;
+@use "@variables" as var;
 
 /// up to 500px
 @mixin media-mobile {
-    @media (max-width: map-get(v.$breakpoints, "mobile")) { @content; }
+    @media (max-width: map-get(var.$breakpoints, "mobile")) { @content; }
 }
 
 @mixin media-tablet-down {
-    @media (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+    @media (max-width: map-get(var.$breakpoints, "laptop")) { @content; }
 }
 
 /// 770px and up
 @mixin media-tablet {
     // @media (min-width: map-get(v.$breakpoints, "mobile")) and (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
-    @media (max-width: map-get(v.$breakpoints, "tablet")) { @content; }
+    @media (max-width: map-get(var.$breakpoints, "tablet")) { @content; }
 }
 
 /// 990px and up
 @mixin media-laptop {
-    @media (max-width: map-get(v.$breakpoints, "laptop")) { @content; }
+    @media (max-width: map-get(var.$breakpoints, "laptop")) { @content; }
 }
 
 /// 1200px and up
 @mixin media-desktop {
-    @media (min-width: map-get(v.$breakpoints, "desktop")) { @content; }
+    @media (min-width: map-get(var.$breakpoints, "desktop")) { @content; }
 }

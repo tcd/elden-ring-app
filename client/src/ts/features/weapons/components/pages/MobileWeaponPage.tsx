@@ -1,14 +1,18 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
 
-import { Actions, Selectors } from "@app/state"
-import { Page } from "@app/shared"
+import { useHash } from "@app/util"
+import { ErPage } from "@app/features/common"
 import { WeaponDetail, WeaponMenu } from "@app/features/weapons/components"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 
 export const MobileWeaponPage = (_props: unknown): JSX.Element => {
 
-    const tab = useSelector(Selectors.Weapons.mobileTab)
+    const tab = useHash()
+    const navigate = useNavigate()
+
+    if (tab === "") {
+        navigate("#grid", { replace: true })
+    }
 
     let content: JSX.Element = null
 
@@ -20,8 +24,8 @@ export const MobileWeaponPage = (_props: unknown): JSX.Element => {
     }
 
     return (
-        <Page pageName="weapon">
+        <ErPage pageName="weapon">
             {content}
-        </Page>
+        </ErPage>
     )
 }

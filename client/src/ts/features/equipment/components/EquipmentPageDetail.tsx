@@ -10,21 +10,13 @@ import { QuickItemDetail } from "@app/features/quick-items/components"
 
 const DETAILS_BY_TYPE: Record<EquipmentType, JSX.Element> = {
     "Ammunition": <AmmunitionDetail />,
-    "Armor": <ArmorDetail />,
-    "Talisman": <TalismanDetail />,
-    "Weapon": <WeaponDetail />,
-    "QuickItem": <QuickItemDetail />,
+    "Armor":      <ArmorDetail />,
+    "Talisman":   <TalismanDetail />,
+    "Weapon":     <WeaponDetail />,
+    "QuickItem":  <QuickItemDetail />,
 }
 
 export const EquipmentPageDetail = (_props: unknown): JSX.Element => {
-
     const activeType = useSelector(Selectors.Equipment.activeType)
-
-    const detailComponent = DETAILS_BY_TYPE[activeType]
-
-    return (
-        <div id="er__equipmentPageDetail">
-            {detailComponent}
-        </div>
-    )
+    return DETAILS_BY_TYPE[activeType]
 }

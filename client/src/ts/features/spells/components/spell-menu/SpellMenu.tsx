@@ -2,7 +2,7 @@ import { Fragment } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
 import { Actions, Selectors } from "@app/state"
-import { CharacterStatus } from "@app/features/builder"
+import { CharacterStatus } from "@app/features/character-status"
 import { SpellDetail, SpellMenuImage } from "@app/features/spells/components"
 
 const spellCategories = [
@@ -17,7 +17,7 @@ const spellCategories = [
     "Frenzied Flame Incantations",
     "Godskin Apostle Incantations",
     "Golden Order Incantations",
-    "Servants OF Rot Incantations",
+    "Servants Of Rot Incantations",
     "Two Fingers Incantations",
     // Sorceries
     "Aberrant Sorceries",

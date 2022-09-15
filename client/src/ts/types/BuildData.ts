@@ -1,15 +1,23 @@
-import { StartingClassName } from "@app/constants"
-import {
+import type { FiniteResourceId } from "@app/data"
+import type {
+    StartingClassName,
     ArmorSet,
     Attributes,
-    TalismanSet,
+    TalismanSlotId,
     WeaponSlots,
+    AmmunitionSlotId,
+    SpellSlotId,
+    QuickItemSlotId,
 } from "@app/types"
 
 export interface BuildData {
-    startingClassName: StartingClassName
+    ammunition?: Record<AmmunitionSlotId, string>
+    armor: ArmorSet
     attributes: Attributes
-    armorNames: ArmorSet
-    talismanNames: TalismanSet
-    weaponNames: WeaponSlots
+    checklist?: Record<FiniteResourceId, boolean>
+    quickItems?: Record<QuickItemSlotId, string>
+    spells?: Record<SpellSlotId, string>
+    startingClass: StartingClassName
+    talismans: Record<TalismanSlotId, string>
+    weapons: WeaponSlots
 }

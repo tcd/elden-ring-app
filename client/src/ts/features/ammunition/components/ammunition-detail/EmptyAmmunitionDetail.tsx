@@ -1,15 +1,15 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 
 import { Dmg } from "@app/types"
 import {
-    ErCard2,
-    ErCard2Props,
+    ErCard,
+    ErCardProps,
     StatRow,
     EquipmentDetail,
     EquipmentDetailProps,
-} from "@app/shared"
+} from "@app/features/common"
 
-const cardProps: Partial<ErCard2Props> = {
+const cardProps: Partial<ErCardProps> = {
     smallTitle: true,
     sx: {
         mx: 3,
@@ -25,7 +25,7 @@ export const EmptyAmmunitionDetail = (_props: unknown): JSX.Element => {
         return (<StatRow key={key} title={title} value={"-"} />)
     })
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         includeSecondaryImage: false,
         includePassiveEffects: true,
         primaryImage: {
@@ -53,11 +53,11 @@ export const EmptyAmmunitionDetail = (_props: unknown): JSX.Element => {
     return (
         <EquipmentDetail {...props}>
             <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
+                <ErCard title="Attack Power" icon="AttackPower" {...cardProps}>
                     <ul>
                         {attackRows}
                     </ul>
-                </ErCard2>
+                </ErCard>
             </section>
         </EquipmentDetail>
     )

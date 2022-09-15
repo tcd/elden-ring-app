@@ -1,16 +1,17 @@
-import { Heading } from "@app/shared"
+import { Box, Container } from "@mui/material"
+
+import { Heading } from "@app/features/common"
 import { TalismansTable } from "@app/features/talismans"
 
-export const TalismansTablePage = (): JSX.Element => {
-
+export const TalismansTablePage = (_props: unknown): JSX.Element => {
     return (
-        <div className="container flex-stretch-column">
-            <div style={{ height: "20%" }}>
+        <Container sx={{ display: "flex", flexGrow: 1, flexFlow: "column nowrap", alignItems: "stretch", "& > div": { flexGrow: 1 } }}>
+            <Box sx={{ height: "20%" }}>
                 <Heading title="Talismans" />
-            </div>
-            <div>
+            </Box>
+            <Box>
                 <TalismansTable />
-            </div>
-        </div>
+            </Box>
+        </Container>
     )
 }

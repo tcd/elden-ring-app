@@ -10,11 +10,7 @@ export const TalismanMenu = (): JSX.Element => {
 
     if (isBlank(activeSlot)) {
         return null
-    } else {
-        return (
-            <div className="er__equipmentMenu">
-                <TalismanMenuGrid />
-            </div>
-        )
     }
+
+    return <TalismanMenuGrid />
 }

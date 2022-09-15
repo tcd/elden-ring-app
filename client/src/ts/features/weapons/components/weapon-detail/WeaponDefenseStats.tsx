@@ -1,4 +1,4 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 
 import {
     Dmg,
@@ -11,7 +11,7 @@ import {
 import {
     StatRow,
     StatRowProps,
-} from "@app/shared"
+} from "@app/features/common"
 
 export interface WeaponDefenseStatsProps {
     newWeapon: Weapon

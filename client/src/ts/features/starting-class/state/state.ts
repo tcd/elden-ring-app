@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FeatureKeys, StartingClassName } from "@app/constants"
+import type { StartingClassName } from "@app/types"
+import { FeatureKeys } from "@app/constants"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface StartingClassState {
@@ -12,12 +14,14 @@ export interface StartingClassState {
     startingClassName: StartingClassName
     pendingStartingClassName: StartingClassName
     confirmingStartingClass: boolean
+    importComplete: boolean
 }
 
 export const INITIAL_STARTING_CLASS_STATE: StartingClassState = {
     startingClassName: null,
     pendingStartingClassName: null,
     confirmingStartingClass: false,
+    importComplete: false,
 }
 
 export const StartingClassSlice = createSlice({

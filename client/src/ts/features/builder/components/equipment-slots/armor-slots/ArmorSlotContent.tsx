@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { Box, SxProps } from "@mui/material"
 
-import { ArmorType } from "@app/constants"
-import { Armor } from "@app/types"
-import { getImageSrc, EquipmentSlotImageUrls, cssUrl } from "@app/util"
+import type { Armor, ArmorType } from "@app/types"
+import { cssUrl } from "@app/theme"
+import { getImageSrc, EquipmentSlotImageUrls } from "@app/util"
 import { Actions } from "@app/state"
 
 interface ArmorSlotProps {
@@ -13,7 +13,7 @@ interface ArmorSlotProps {
     armor?: Armor
 }
 
-const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
+export const ArmorSlotContent = forwardRef(function ArmorSlotContent({ type, armor }: ArmorSlotProps, ref) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -29,9 +29,10 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
     if (armor) {
         classNames.push("er__equipmentSlot--filled")
         armorImage  = <img
-            className="img-fluid"
+            // className="img-fluid"
             alt={armor.name}
             src={getImageSrc("Armor", armor.name, "256")}
+            style={{ width: "90%" }}
         />
     }
 
@@ -53,6 +54,3 @@ const armorSlotContent = forwardRef(({ type, armor }: ArmorSlotProps, ref) => {
         </Box>
     )
 })
-
-armorSlotContent.displayName = "ArmorSlotContent"
-export const ArmorSlotContent = armorSlotContent

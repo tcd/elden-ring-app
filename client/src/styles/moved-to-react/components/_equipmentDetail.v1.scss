@@ -1,0 +1,76 @@
+@use "@variables"as var;
+@use "@mixins" as mixins;
+
+.er__equipmentDetailV1 {
+
+    display: flex;
+    flex-direction: column;
+
+    .er__equipmentDetailV1__cardContent {
+        display: flex;
+        flex-flow: row nowrap;
+        // width: 100%;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-items: stretch;
+        align-content: stretch;
+
+        &>* {
+            flex-grow: 1;
+        }
+    }
+
+    section.er__equipmentDetailV1__section {
+        .er__card {
+            width: 100%;
+        }
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .er__equipmentDetailV1__imageColumn {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: end;
+        align-items: end;
+        // align-content: end;
+        // align-items: flex-end;
+        // justify-items: end;
+        // align-content: flex-end;
+        // justify-content: end;
+        // height: 50%;
+        // width: 50%;
+        // align-self: flex-end;
+    }
+
+    .er__equipmentDetailV1__imageWrapper {
+        @include mixins.square($size: var.$equipmentDetail-primary-image-size, $max: true);
+        @include mixins.media-mobile { @include mixins.square($size: var.$equipmentDetail-primary-image-size--mobile, $max: true); }
+        @include mixins.equipmentMenuBoxShadow;
+        padding: 5px;
+
+        &.empty {
+            div:before {
+                content: "";
+                display: block;
+            }
+        }
+    }
+
+    .er__equipmentDetailV1__secondaryImageWrapper {
+        @include mixins.square($size: var.$equipmentDetail-secondary-image-size, $max: true);
+        @include mixins.media-mobile { @include mixins.square($size: var.$equipmentDetail-secondary-image-size--mobile, $max: true); }
+        @include mixins.equipmentMenuBoxShadow;
+        margin-right: 6px;
+        padding: 5px;
+
+        &.empty {
+            box-shadow: none;
+            div:before {
+                content: "";
+                display: block;
+            }
+        }
+
+    }
+}

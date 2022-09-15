@@ -1,21 +1,15 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 
 import { Dmg } from "@app/types"
 import {
-    ErCard2,
-    ErCard2Props,
     EquipmentDetail,
     EquipmentDetailProps,
+    EquipmentDetailCard,
     StatRow,
-} from "@app/shared"
+    WeaponFpCost,
+} from "@app/features/common"
 
-const cardProps: Partial<ErCard2Props> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
+import { FlexBox } from "./FlexBox"
 
 export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
 
@@ -43,8 +37,8 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
         value="-"
     />)
 
-    const props: Partial<EquipmentDetailProps> = {
-        // primaryImage: { src: null },
+    const props: EquipmentDetailProps = {
+        primaryImage: { src: null },
         includeSecondaryImage: true,
         includePassiveEffects: true,
         mainSectionRows: {
@@ -52,55 +46,62 @@ export const EmptyWeaponDetail = (_props: unknown): JSX.Element => {
             row2: { type: "StatRow", props: { title: "-", value: null } },
             // row3: null,
             row4: { type: "StatRow", props: { title: "-",       value: null } },
-            row5: { type: "StatRow", props: { title: "FP Cost", value: "-" } },
+            row5: { type: "StatRow", props: { title: "FP Cost", value: <WeaponFpCost /> } },
             row6: { type: "StatRow", props: { title: "Weight",  value: "-" } },
         },
     }
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attack Power" icon="AttackPower" {...cardProps}>
-                    <ul>
-                        {attackRows}
-                    </ul>
-                </ErCard2>
-                <ErCard2 title="Guarded Damage Negation" icon="GuardedDmgNegation" {...cardProps}>
-                    <ul>
-                        {defenseRows}
-                    </ul>
-                </ErCard2>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Attribute Scaling" icon="AttributeScaling" {...cardProps}>
-                    <div className="row">
-                        <div className="col">
+
+            <EquipmentDetailCard title="Attack Power" icon="AttackPower">
+                <ul>
+                    {attackRows}
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Guarded Damage Negation" icon="GuardedDmgNegation">
+                <ul>
+                    {defenseRows}
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attribute Scaling" icon="AttributeScaling">
+                <FlexBox
+                    left={
+                        <>
                             <StatRow title="Str" value="-" />
                             <StatRow title="Int" value="-" />
                             <StatRow title="Arc" value="-" />
-                        </div>
-                        <div className="col-1"></div>
-                        <div className="col">
+                        </>
+                    }
+                    right={
+                        <>
                             <StatRow title="Dex" value="-" />
                             <StatRow title="Fai" value="-" />
-                        </div>
-                    </div>
-                </ErCard2>
-                <ErCard2 title="Attributes Required" icon="AttributesRequired" {...cardProps}>
-                    <div className="row">
-                        <div className="col">
+                        </>
+                    }
+                />
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Attributes Required" icon="AttributesRequired">
+                <FlexBox
+                    left={
+                        <>
                             <StatRow title="Str" value="-" />
                             <StatRow title="Int" value="-" />
                             <StatRow title="Arc" value="-" />
-                        </div>
-                        <div className="col-1"></div>
-                        <div className="col">
+                        </>
+                    }
+                    right={
+                        <>
                             <StatRow title="Dex" value="-" />
                             <StatRow title="Fai" value="-" />
-                        </div>
-                    </div>
-                </ErCard2>
-            </section>
+                        </>
+                    }
+                />
+            </EquipmentDetailCard>
+
         </EquipmentDetail>
     )
 }

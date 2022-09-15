@@ -1,12 +1,12 @@
 import { ActionReducerMapBuilder, PayloadAction } from "@reduxjs/toolkit"
 
-import { PageName } from "@app/types"
-import { CoreState, INITIAL_CORE_STATE } from "./state"
-
+import { HeaderIconId, PageName } from "@app/types"
 import { StartingClassActions } from "@app/features/starting-class"
 import { ArmorActions } from "@app/features/armor"
 import { TalismansActions } from "@app/features/talismans"
 import { WeaponsActions } from "@app/features/weapons"
+
+import { CoreState, INITIAL_CORE_STATE } from "./state"
 
 export const reducers = {
     // -------------------------------------------------------------------------
@@ -22,12 +22,40 @@ export const reducers = {
     clearPageName: (state: CoreState) => {
         state.pageName = null
     },
+    setPageTitle: (state: CoreState, { payload }: PayloadAction<string>) => {
+        state.pageTitle = payload
+    },
+    clearPageTitle: (state: CoreState) => {
+        state.pageTitle = null
+    },
+    setPageIcon: (state: CoreState, { payload }: PayloadAction<HeaderIconId>) => {
+        state.pageIcon = payload
+    },
+    clearPageIcon: (state: CoreState) => {
+        state.pageIcon = null
+    },
     // -------------------------------------------------------------------------
     // SideNav
     // -------------------------------------------------------------------------
     openSideNav:         (state: CoreState) => { state.sideNavOpened = true                   },
     closeSideNav:        (state: CoreState) => { state.sideNavOpened = false                  },
     toggleSideNavOpened: (state: CoreState) => { state.sideNavOpened = (!state.sideNavOpened) },
+    // -------------------------------------------------------------------------
+    // Preferences
+    // -------------------------------------------------------------------------
+    toggleSounds: (state: CoreState) => {
+        state.preferences.sounds = (!state.preferences.sounds)
+    },
+    toggleConsole: (state: CoreState) => {
+        if (state.preferences.console == "Xbox") {
+            state.preferences.console = "PlayStation"
+        } else {
+            state.preferences.console = "Xbox"
+        }
+    },
+    setConsole: (state: CoreState, { payload }: PayloadAction<"Xbox" | "PlayStation">) => {
+        state.preferences.console = payload
+    },
 }
 
 export const extraReducers = (builder: ActionReducerMapBuilder<CoreState>) => {
@@ -35,7 +63,7 @@ export const extraReducers = (builder: ActionReducerMapBuilder<CoreState>) => {
         // ---------------------------------------------------------------------
         // From Other Slices
         // ---------------------------------------------------------------------
-        // TODO: remove all this. These pages should set their own titles.
+        // FIXME: remove all this. These pages should set their own titles.
         .addCase(StartingClassActions.confirmStartingClassName, (state) => { state.pageName = "equipment" })
         .addCase(ArmorActions.openArmorMenu,                    (state) => { state.pageName = "armor"     })
         .addCase(ArmorActions.closeArmorMenu,                   (state) => { state.pageName = "equipment" })

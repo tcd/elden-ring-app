@@ -1,20 +1,17 @@
 import { Backdrop, CircularProgress } from "@mui/material"
 
+import { ThemeVars } from "@app/theme"
+
 export interface LoadingOverlayProps {
     open?: boolean
 }
 
-const defaultProps: LoadingOverlayProps = {
-    open: true,
-}
-
 export const LoadingOverlay = (props: LoadingOverlayProps): JSX.Element => {
-    props = {
-        ...defaultProps,
-        ...props,
-    }
+    const {
+        open = true,
+    } = props
     return (
-        <Backdrop id="er__loadingBackdrop" open={props.open}>
+        <Backdrop open={open} sx={{ background: ThemeVars.gradients.startingClassBackground }}>
             <CircularProgress color="inherit" />
         </Backdrop>
     )

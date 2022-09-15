@@ -1,9 +1,8 @@
 import { useSelector } from "react-redux"
-import { mdiAccount } from "@mdi/js"
 
 import { DESCRIPTIONS } from "@app/data"
 import { Selectors } from "@app/state"
-import { ErCard, StatRow } from "@app/shared"
+import { ErCard, StatRow } from "@app/features/common"
 
 export const Overview = (_props: unknown): JSX.Element => {
 
@@ -11,7 +10,7 @@ export const Overview = (_props: unknown): JSX.Element => {
     const runes = useSelector(Selectors.Meta.Levels.runesForNextLevel)
 
     return (
-        <ErCard title="Overview" iconPath={mdiAccount} className={"mr-5"}>
+        <ErCard title="Overview" icon="BaseStats">
             <ul>
                 <StatRow title="Level" value={level} />
                 <br/>

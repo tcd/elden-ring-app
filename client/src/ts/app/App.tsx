@@ -1,15 +1,18 @@
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/integration/react"
-import { HistoryRouter as Router } from "redux-first-history/rr6"
+import { BrowserRouter as Router } from "react-router-dom"
 import { CssBaseline, ThemeProvider } from "@mui/material"
+import { ConfirmProvider } from "material-ui-confirm"
 
-import { logger, EldenRingMaterialTheme } from "@app/util"
-import { store, persistor, history } from "@app/state"
-import { LoggingProvider, ViewportProvider } from "@app/shared"
+
+import { EldenRingMaterialTheme } from "@app/theme"
+import { store, persistor } from "@app/state"
+import { LoggingProvider, ViewportProvider, logger } from "@app/util"
 import { AppHelmet } from "@app/features/core"
-import { AppRoutesComponent } from "@app/features/router"
+import { AppRoutesComponent } from "@app/features/routing"
+import { AppNotifications } from "@app/features/notifications"
 
-export const App = () => {
+export const App = (_props: unknown): JSX.Element => {
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
@@ -18,9 +21,12 @@ export const App = () => {
                         <ThemeProvider theme={EldenRingMaterialTheme}>
                             <AppHelmet />
                             <CssBaseline />
-                            <Router history={history}>
-                                <AppRoutesComponent />
-                            </Router>
+                            <AppNotifications />
+                            <ConfirmProvider>
+                                <Router>
+                                    <AppRoutesComponent />
+                                </Router>
+                            </ConfirmProvider>
                         </ThemeProvider>
                     </ViewportProvider>
                 </LoggingProvider>

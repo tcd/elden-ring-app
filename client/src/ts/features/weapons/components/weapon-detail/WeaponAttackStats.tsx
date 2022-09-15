@@ -1,11 +1,11 @@
-import { capitalize } from "lodash"
+import capitalize from "lodash/capitalize"
 
 import { Dmg } from "@app/types"
 import { isBlank } from "@app/util"
 import {
     StatRowPlusPlus,
     StatRowPlusPlusProps,
-} from "@app/shared"
+} from "@app/features/common"
 import { ComparableWeaponProps } from "."
 
 export const WeaponAttackStats = (props: ComparableWeaponProps): JSX.Element => {

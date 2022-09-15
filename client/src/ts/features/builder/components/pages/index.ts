@@ -1,2 +1,2 @@
 export * from "./BuilderPage"
-export * from "./StatusPage"
+export * from "./MobileBuilderPage"

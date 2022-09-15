@@ -1,0 +1,11 @@
+export type StartingClassName =
+    | "Vagabond"
+    | "Warrior"
+    | "Hero"
+    | "Bandit"
+    | "Astrologer"
+    | "Prophet"
+    | "Samurai"
+    | "Prisoner"
+    | "Confessor"
+    | "Wretch"

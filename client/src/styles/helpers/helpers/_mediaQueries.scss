@@ -1,0 +1,12 @@
+/**
+ * - https://github.com/eduardoboucas/include-media/issues/194
+ */
+@use "@variables" as var;
+
+$breakpoints: var.$breakpoints;
+
+
+// @use "include-media" as im;
+// @use "include-media/dist/include-media" as * with (
+    // @import "include-media" (
+@import "include-media/dist/include-media";

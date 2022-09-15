@@ -3,93 +3,18 @@
 @use "@functions" as functions;
 @use "../helpers" as h;
 
-html, body {
-    height: 100%;
-    margin: 0px !important;
-    padding: 0px !important;
-    padding-right: 0px !important;
-    overflow: auto !important;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    color: v.$body-color-fg;
-    background-color: v.$body-color-bg;
-}
-
 #root {
-    margin:  0px;
-    padding: 0px;
-    // height: 100vh;
-    height: 100%;
-    // overflow-y: scroll;
-    flex-grow: 1;
-    display: flex;
-    flex-flow: column nowrap;
     @include mixins.backgroundImage(h.$main-menu-encoded-background);
-    // background-color: blue;
 }
 
 * {
-    @include mixins.customScrollbar();
-    // @include m.invisibleScrollbar();
-    box-sizing: border-box !important;
     font-size: 15px;
     cursor: url(v.$image-cursor-default), auto;
 }
 
-a {
-    @include mixins.pointerOnHover;
-    text-decoration: none;
-    // &:active,
-    // &:focus,
-    // &:hover {
-    //     text-decoration: underline;
-    // }
-    // &:visited {}
-}
-
-ol, ul, li {
-    list-style: none;
-    list-style-position: inside;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-bottom: default !important;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-}
-
-li.MuiMenuItem-root {
-    list-style-position: default;
-    padding-left: 0.5rem !important;
-}
-
-ol.normal,
-ul.normal {
-    display: block;
-    list-style-type: disc;
-    list-style-position: inside;
-    margin-block-start: 0.5rem;
-    margin-block-end: 0.5rem;
-    // margin-inline-start: 0px;
-    // margin-inline-end: 0px;
-    // padding-inline-start: 40px;
-    li {
-        list-style-type: disc;
-        list-style-position: inside;
-    }
-}
-
-span {
-    text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
-}
-
-.d-flex {
-    // margin-bottom: 0.4rem;
-    margin-bottom: 0px;
-}
+// span {
+//     text-shadow: v.$text-shadow-offset v.$text-shadow-offset black;
+// }
 
 hr.er__hr {
     height: 1.75px;
@@ -98,6 +23,3 @@ hr.er__hr {
         v.$gold;
 }
 
-.er__hoverPointer {
-    @include mixins.pointerOnHover;
-}

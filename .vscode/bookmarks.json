@@ -19,6 +19,16 @@
 					"label": "TS wizardry?"
 				}
 			]
+		},
+		{
+			"path": "client/src/ts/theme/variables/vanilla-extract/vars.css.ts",
+			"bookmarks": [
+				{
+					"line": 2,
+					"column": 21,
+					"label": "Vanilla Extract Variables"
+				}
+			]
 		}
 	]
 }

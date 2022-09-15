@@ -1,9 +1,9 @@
-import { RootState } from "@app/state"
-import { QuickItemsState } from "./state"
+import type { RootState } from "@app/state"
 
+import type { QuickItemsState } from "./state"
+
+/** @private */
 const _selectSlice = (rootState: RootState): QuickItemsState => rootState?.QuickItems
-
-const selectMobileTab = (rootState: RootState) => _selectSlice(rootState)?.mobileTab
 
 const selectActiveSlotId = (rootState: RootState): any => {
     return _selectSlice(rootState)?.activeSlotId
@@ -11,5 +11,4 @@ const selectActiveSlotId = (rootState: RootState): any => {
 
 export const QuickItemsSelectors = {
     activeSlotId: selectActiveSlotId,
-    mobileTab: selectMobileTab,
 }

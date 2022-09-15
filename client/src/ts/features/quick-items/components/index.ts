@@ -1,2 +1,3 @@
+export * from "./pages"
+
 export * from "./quick-item-detail"
-export * from "./QuickItemsPage"

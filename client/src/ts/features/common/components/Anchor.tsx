@@ -1,13 +1,14 @@
-import {
-    ReactNode,
-    AnchorHTMLAttributes,
-    DetailedHTMLProps,
-} from "react"
+import { styled } from "@mui/material"
+
+import { ComponentSx } from "@app/theme"
+
+// @ts-ignore: next-line
+const A = styled("a")(ComponentSx.Anchor)
 
 export interface AnchorProps {
     href: string
-    content: ReactNode
-    newTab?: false
+    content: React.ReactNode
+    newTab?: boolean
 }
 
 const defaultProps: Partial<AnchorProps> = {
@@ -27,15 +28,15 @@ export const Anchor = (props: AnchorProps): JSX.Element => {
         newTab,
     }= { ...defaultProps, ...props }
 
-    const aProps: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> = {
+    const aProps: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> = {
         href: href,
         target: newTab ? "_blank" : undefined,
         rel: "noopener noreferrer",
     }
 
     return (
-        <a {...aProps}>
+        <A {...aProps}>
             {content}
-        </a>
+        </A>
     )
 }

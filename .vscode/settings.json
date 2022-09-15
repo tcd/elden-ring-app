@@ -2,8 +2,9 @@
     // "terminal.integrated.defaultProfile.windows": "PowerShell",
     // "terminal.integrated.defaultProfile.windows":"Ubuntu-20.04 (WSL)",
     "files.associations": {
-        "conf.json": "jsonc",   // jsdoc config
-        ".env*":     "dotenv",
+        "conf.json":    "jsonc",   // jsdoc config
+        ".env*":        "dotenv",
+        "typedoc.json": "jsonc",
     },
     "files.exclude": {
         "client/src/ts/data/kitchen-sink/kitchen-sink.json": true,
@@ -27,25 +28,36 @@
     ],
     "cSpell.words": [
         "affectable",
+        "bgcolor",
+        "Bitlink",
+        "bitlinks",
         "Booleanish",
         "callsite",
         "chunkhash",
         "clsx",
         "csstype",
+        "currentcolor",
+        "deeplinks",
         "egjs",
         "Giraudel",
+        "hexa",
         "Imageable",
         "Mugen",
         "offcanvas",
         "OptimusPrinceps",
+        "Overridable",
         "persistor",
+        "Rdtc",
         "reduxjs",
+        "resizer",
         "scroller",
         "semibold",
+        "swipeable",
         "tslog",
         "unequip",
         "unstyled",
-        "zindex"
+        "zindex",
+        "ZWSP"
     ],
     "search.exclude": {
         ".vscode/**":  true,

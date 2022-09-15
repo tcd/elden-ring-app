@@ -1,47 +1,46 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FeatureKeys, TalismanSlotId } from "@app/constants"
-import { TalismanSet } from "@app/types"
+import type { TalismanSlotId } from "@app/types"
+import { FeatureKeys } from "@app/constants"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface TalismansState {
-    talismanNames: TalismanSet
+    // FIXME: rename to `slots`
+    talismanNames: Record<TalismanSlotId, string>
     activeSlotId: TalismanSlotId
     oldTalismanName?: string
     menuHasScrolled: boolean
-    mobileTab: "grid" | "detail" | "status"
+    importComplete: boolean
 }
 
 export const INITIAL_TALISMANS_STATE: TalismansState = {
     talismanNames: {
-        "1": null,
-        "2": null,
-        "3": null,
-        "4": null,
+        "T1": null,
+        "T2": null,
+        "T3": null,
+        "T4": null,
     },
     activeSlotId: null,
     oldTalismanName: null,
     menuHasScrolled: false,
-    mobileTab: "grid",
+    importComplete: false,
 }
 
 const initialDevState: TalismansState = {
     ...INITIAL_TALISMANS_STATE,
     talismanNames: {
         ...INITIAL_TALISMANS_STATE.talismanNames,
-        "1": "Red-Feathered Branchsword",
-        // "2": "Ritual Sword Talisman",
-        // "3": "Blue-Feathered Branchsword",
-        "4": "Ritual Shield Talisman",
+        "T1": "Red-Feathered Branchsword",
+        // "T2": "Ritual Sword Talisman",
+        // "T3": "Blue-Feathered Branchsword",
+        "T4": "Ritual Shield Talisman",
     },
 }
 
-// const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = INITIAL_TALISMANS_STATE
-
 export const TalismansSlice = createSlice({
     name: FeatureKeys.Talismans,
-    initialState: _initialState,
+    initialState: INITIAL_TALISMANS_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })

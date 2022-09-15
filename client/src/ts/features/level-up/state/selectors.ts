@@ -1,13 +1,15 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 
-import { AttributeName } from "@app/types"
-import { RootState } from "@app/state"
-import { LevelUpState } from "./state"
+import type { AttributeName } from "@app/types"
+import type { RootState } from "@app/state"
+
+import type { LevelUpState } from "./state"
 
 // =============================================================================
 // Helpers
 // =============================================================================
 
+/** @private */
 const _selectSlice = (rootState: RootState): LevelUpState => rootState?.LevelUp
 const selectAttributes = (rootState: RootState) => _selectSlice(rootState)?.attributes
 

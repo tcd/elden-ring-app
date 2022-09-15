@@ -1,0 +1,46 @@
+@use "@variables"as var;
+@use "@mixins" as mixins;
+@use "@functions" as functions;
+
+
+#er__contextMenu {
+    background: functions.customGradient(90deg, var.$contextMenu-color-bg, var.$modal-body-stops);
+    width: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    z-index: var.$zindex-contextMenu;
+
+    ul {
+        flex-grow: 1;
+        margin-bottom:  0px;
+        margin-top:     0px;
+        margin-left:    10px;
+        margin-right:   10px;
+        padding-top:    10px;
+        padding-bottom: 10px;
+        li {
+            @include mixins.pointerOnHover;
+            height: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: functions.customGradient(90deg, var.$contextMenuItem-color-bg, var.$contextMenu-item-stops);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                background: functions.customGradient(90deg, var.$contextMenuItem-color-bg-active, var.$contextMenu-item-stops);
+            }
+        }
+    }
+
+    .bottom-border,
+    .top-border {
+        height: 2px;
+        background:
+            functions.customGradient(90deg, var.$modal-color-bg, var.$modal-top-bottom-border-stops),
+            var.$modal-color-border;
+    }
+}

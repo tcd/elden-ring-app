@@ -1,4 +1,4 @@
-import { Talisman, TalismanSlotId, TalismanSet } from "@app/types"
+import { Talisman, TalismanSlotId } from "@app/types"
 import { compactArray, isBlank } from "@app/util"
 import { RootState } from "@app/state"
 import { selectTalismans } from "@app/features/builder/state/selectors/api"
@@ -13,18 +13,17 @@ const _selectTalisman = (rootState: RootState, name?: string) => {
 }
 
 const selectActiveSlotId    = (rootState: RootState): TalismanSlotId => selectTalismansSlice(rootState).activeSlotId
-const selectTalismanNames   = (rootState: RootState): TalismanSet => selectTalismansSlice(rootState).talismanNames
+const selectTalismanNames   = (rootState: RootState): Record<TalismanSlotId, string> => selectTalismansSlice(rootState).talismanNames
 const selectHasMenuScrolled = (rootState: RootState): boolean => selectTalismansSlice(rootState).menuHasScrolled
-const selectMobileTab       = (rootState: RootState) => selectTalismansSlice(rootState).mobileTab
 
 const _selectTalismanNameBySlotId = (rootState: RootState, slotId: TalismanSlotId) => {
     return selectTalismanNames(rootState)?.[slotId]
 }
 
-const selectTalisman1Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "1")
-const selectTalisman2Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "2")
-const selectTalisman3Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "3")
-const selectTalisman4Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "4")
+const selectTalisman1Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T1")
+const selectTalisman2Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T2")
+const selectTalisman3Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T3")
+const selectTalisman4Name = (rootState: RootState): string => _selectTalismanNameBySlotId(rootState, "T4")
 
 const selectTalisman1 = (rootState: RootState): Talisman => { return _selectTalisman(rootState, selectTalisman1Name(rootState)) }
 const selectTalisman2 = (rootState: RootState): Talisman => { return _selectTalisman(rootState, selectTalisman2Name(rootState)) }
@@ -111,5 +110,4 @@ export const TalismansSelectors = {
      */
     options: selectTalismanOptions,
     menuHasScrolled: selectHasMenuScrolled,
-    mobileTab: selectMobileTab,
 }

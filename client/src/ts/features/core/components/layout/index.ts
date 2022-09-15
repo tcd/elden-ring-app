@@ -1,1 +1,2 @@
-export * from "./AppLayout"
+export * from "./desktop"
+export * from "./mobile"

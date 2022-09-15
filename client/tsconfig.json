@@ -6,7 +6,14 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "jsx": "react-jsx",
-        "lib": ["dom", "dom.iterable", "esnext"],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
+        "types": [
+            "node",
+        ],
         "module": "esnext",
         "moduleResolution": "node",
         "noEmit": true,
@@ -18,20 +25,23 @@
         "strict": false,
         "noImplicitAny": false,
         "target": "es5",
-        "baseUrl": "./",
+        "baseUrl": "src/",
         "paths": {
-            "@app/*": ["./src/ts/*"],
-            // "@state": ["./src/ts/state/index.ts"],
-            "@util": ["./src/ts/util/index.ts"],
-            "@types": ["./src/ts/types/index.ts"],
-            "@assets/*": ["./src/assets/*"],
-            "@app/shared": ["./src/ts/features/common/index.ts"],
-            "@app/theme": ["./src/ts/util/theme/index.ts"],
-            "@app/constants": ["./src/ts/types/constants/index.ts"],
-            "@app/config": ["./src/ts/util/Config.ts"],
+            "@app/*":         ["ts/*"],
+            "@app/theme":     ["ts/theme/index.ts"],
+            "@app/config":    ["ts/util/Config.ts"],
+            "@assets/*":      ["assets/*"],
         },
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/ts/@types",
+        ],
     },
     "include": [
-        "src",
+        "./src/ts/**/*.ts",
+        "./src/ts/**/*.tsx",
+    ],
+    "exclude": [
+        "config",
     ]
 }

@@ -1,29 +1,16 @@
-import { SxProps } from "@mui/material"
-import {
-    mdiScript,
-    mdiFileCode,
-} from "@mdi/js"
-
-import { Talisman } from "@app/types"
+import type { Talisman } from "@app/types"
 import { equipmentEffectDescription, getImageSrc, isBlank } from "@app/util"
 import {
-    ErCard2,
-    ErCard2Props,
     EquipmentDetail,
     EquipmentDetailProps,
-} from "@app/shared"
-import { EmptyTalismanDetail } from "."
+    EquipmentDetailFullCard,
+    NormalList,
+} from "@app/features/common"
+
+import { EmptyTalismanDetail } from "./EmptyTalismanDetail"
 
 export interface TalismanDetailContentProps {
     talisman: Talisman
-}
-
-const cardProps: Partial<ErCard2Props> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
 }
 
 export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps): JSX.Element => {
@@ -40,7 +27,7 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
         )
     })
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         title: talisman.name,
         includePassiveEffects: false,
         primaryImage: {
@@ -54,18 +41,17 @@ export const TalismanDetailContent = ({ talisman }: TalismanDetailContentProps):
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
-                    <p>{talisman.description}</p>
-                </ErCard2>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Item Effect" icon='PassiveEffects' {...cardProps}>
-                    <ul className="normal">
-                        {effects}
-                    </ul>
-                </ErCard2>
-            </section>
+
+            <EquipmentDetailFullCard title="Description" icon="ItemEffect">
+                <p>{talisman.description}</p>
+            </EquipmentDetailFullCard>
+
+            <EquipmentDetailFullCard title="Item Effect" icon="PassiveEffects">
+                <NormalList>
+                    {effects}
+                </NormalList>
+            </EquipmentDetailFullCard>
+
         </EquipmentDetail>
     )
 }

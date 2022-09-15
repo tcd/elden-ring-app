@@ -1,4 +1,4 @@
-import { sum } from "lodash"
+import sum from "lodash/sum"
 
 import { LEVEL_EQUIP_LOAD_MAP } from "@app/data"
 import { Encumbrance, EquipmentEffectMethod, EquipmentEffectType, Stat } from "@app/types"

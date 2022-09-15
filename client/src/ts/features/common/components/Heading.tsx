@@ -1,5 +1,5 @@
-import { CSSProperties } from "React"
-import Typography from "@mui/material/Typography"
+import type { CSSProperties } from "react"
+import { Box, Typography, Divider } from "@mui/material"
 
 export interface HeadingProps {
     title: string
@@ -29,23 +29,19 @@ export const Heading = (props: HeadingProps): JSX.Element => {
     }
 
     return (
+        <Box>
 
-        <div className="er__heading row" style={style}>
-            <div className="col">
-                <div className="d-flex justify-content-between">
-                    <Typography variant="h4" gutterBottom component="div">
-                        {props.title}
-                    </Typography>
-                    <div className="row">
-                        <div className="col">
-                            <div className="h-100 d-flex align-items-end justify-content-center">
-                                {children && children}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr className="er__hr mb-5" />
-            </div>
-        </div>
+            <Box sx={{ display: "flex", justifyContent: "space-between" }} style={style}>
+                <Typography variant="h1" gutterBottom component="div">
+                    {props.title}
+                </Typography>
+                <Box sx={{ height: "100%", display: "flex", justifyContent: "center", alignItems: "end" }}>
+                    {children && children}
+                </Box>
+            </Box>
+
+            <Divider />
+
+        </Box>
     )
 }

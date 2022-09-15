@@ -1,40 +1,32 @@
 import {
     EquipmentDetail,
+    EquipmentDetailFullCard,
     EquipmentDetailProps,
-    ErCard2,
-    ErCard2Props,
-} from "@app/shared"
-
-const cardProps: Partial<ErCard2Props> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
+    NormalList,
+} from "@app/features/common"
 
 export const EmptyTalismanDetail = (_props: unknown): JSX.Element => {
-
-    const props: Partial<EquipmentDetailProps> = {
-        includePassiveEffects: true,
-        mainSectionRows: {
-            row6: { type: "StatRow", props: { title: "Weight", value: "-" } },
-        },
-    }
-
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Description" icon="ItemEffect" {...cardProps}>
-                    <p>-</p>
-                </ErCard2>
-            </section>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Item Effect" icon="PassiveEffects" {...cardProps}>
-                    <ul className="normal">
-                    </ul>
-                </ErCard2>
-            </section>
+
+            <EquipmentDetailFullCard title="Description" icon="ItemEffect">
+                <p>-</p>
+            </EquipmentDetailFullCard>
+
+            <EquipmentDetailFullCard title="Item Effect" icon="PassiveEffects">
+                <NormalList>
+                </NormalList>
+            </EquipmentDetailFullCard>
+
         </EquipmentDetail>
     )
+}
+
+// =============================================================================
+
+const props: EquipmentDetailProps = {
+    includePassiveEffects: false,
+    mainSectionRows: {
+        row6: { type: "StatRow", props: { title: "Weight", value: "-" } },
+    },
 }

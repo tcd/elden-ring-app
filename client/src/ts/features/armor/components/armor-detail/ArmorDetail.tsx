@@ -2,27 +2,19 @@ import { useSelector } from "react-redux"
 
 import { NO_ARMOR } from "@app/data"
 import { getImageSrc, isBlank } from "@app/util"
+import type { ComparisonColor } from "@app/types"
 import {
-    ErCard2,
-    ErCard2Props,
-    StatRowColor,
     EquipmentDetail,
     EquipmentDetailProps,
-} from "@app/shared"
+    EquipmentDetailCard,
+} from "@app/features/common"
 import { Selectors } from "@app/state"
+
 import {
     ArmorDefenseStats,
     ArmorResistanceStats,
     EmptyArmorDetail,
 } from "."
-
-const cardProps: Partial<ErCard2Props> = {
-    smallTitle: true,
-    sx: {
-        mx: 3,
-        my: 2,
-    },
-}
 
 export const ArmorDetail = (_props: unknown): JSX.Element => {
 
@@ -37,13 +29,13 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
 
     const imageSrc = getImageSrc("Armor", armor.name, "256")
 
-    let weightColor: StatRowColor = "default"
+    let weightColor: ComparisonColor = "default"
     if (oldArmor.id != -1) {
         if      (armor.weight > oldArmor.weight) { weightColor = "red"  }
         else if (armor.weight < oldArmor.weight) { weightColor = "blue" }
     }
 
-    const props: Partial<EquipmentDetailProps> = {
+    const props: EquipmentDetailProps = {
         title: armor.name,
         primaryImage: { src: imageSrc, alt: "armor" },
         includeSecondaryImage: false,
@@ -55,24 +47,25 @@ export const ArmorDetail = (_props: unknown): JSX.Element => {
 
     return (
         <EquipmentDetail {...props}>
-            <section className="er__equipmentDetail__section">
-                <ErCard2 title="Damage Negation" icon="DamageNegation" {...cardProps}>
-                    <ul>
-                        <ArmorDefenseStats
-                            armor={armor}
-                            oldArmor={oldArmor}
-                        />
-                    </ul>
-                </ErCard2>
-                <ErCard2 title="Resistance" icon="Resistance" {...cardProps}>
-                    <ul>
-                        <ArmorResistanceStats
-                            armor={armor}
-                            oldArmor={oldArmor}
-                        />
-                    </ul>
-                </ErCard2>
-            </section>
+
+            <EquipmentDetailCard title="Damage Negation" icon="DamageNegation">
+                <ul>
+                    <ArmorDefenseStats
+                        armor={armor}
+                        oldArmor={oldArmor}
+                    />
+                </ul>
+            </EquipmentDetailCard>
+
+            <EquipmentDetailCard title="Resistance" icon="Resistance">
+                <ul>
+                    <ArmorResistanceStats
+                        armor={armor}
+                        oldArmor={oldArmor}
+                    />
+                </ul>
+            </EquipmentDetailCard>
+
         </EquipmentDetail>
     )
 }

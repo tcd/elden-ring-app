@@ -1,0 +1,5 @@
+@use "@variables"as var;
+
+.er__tooltip {
+    z-index: var.$zindex-tooltip;
+}

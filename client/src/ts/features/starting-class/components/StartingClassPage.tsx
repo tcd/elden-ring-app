@@ -3,14 +3,19 @@ import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
-import { Page } from "@app/shared"
-import { StartingClassMenu, StartingClassConfirmationDialog } from "."
+import { ComponentSx } from "@app/theme"
+import { ErPage } from "@app/features/common"
+
+import { StartingClassMenu } from "./StartingClassMenu"
+import { ConfirmationDialog } from "./ConfirmationDialog"
+import { Footer } from "./Footer"
+import { BigBorder  } from "./borders"
 
 export const StartingClassPage = (_props: unknown): JSX.Element => {
 
     const navigate = useNavigate()
     const shouldRedirect = useSelector(Selectors.StartingClass.shouldRedirectFromStartingClassPage)
-    const lastMainPage = useSelector(Selectors.Router.lastMainPage)
+    const lastMainPage = useSelector(Selectors.Routing.lastMainPage)
 
     useEffect(() => {
         if (shouldRedirect) {
@@ -23,16 +28,12 @@ export const StartingClassPage = (_props: unknown): JSX.Element => {
     }, [navigate, lastMainPage, shouldRedirect])
 
     return (
-        <Page pageName="starting-class" className="er__startingClass">
-            <StartingClassConfirmationDialog />
-            <div className="er__startingClass__topBorder"></div>
+        <ErPage pageName="starting-class" sx={ComponentSx.StartingClassPage.root}>
+            <ConfirmationDialog />
+            <BigBorder />
             <StartingClassMenu />
-            <div className="er__startingClass__bottomBorder"></div>
-            <div className="er__startingClass__footer">
-                <span className="er__startingClass__bottomText">
-                    Select a base for creating your character
-                </span>
-            </div>
-        </Page>
+            <BigBorder />
+            <Footer />
+        </ErPage>
     )
 }

@@ -1,15 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FeatureKeys, ArmorType } from "@app/constants"
-import { ArmorSet } from "@app/types"
-import { reducers, extraReducers } from "./redeucers"
+import type { ArmorType, ArmorSet } from "@app/types"
+import { FeatureKeys } from "@app/constants"
+
+import { reducers, extraReducers } from "./reducers"
 
 export interface ArmorState {
+    // FIXME: rename to `slots`
     armorNames: ArmorSet
+    // FIXME: rename to `activeSlotId`
     activeType?: "all" | ArmorType
     oldName: string
     menuHasScrolled: boolean
-    mobileTab: "grid" | "detail" | "status"
+    importComplete: boolean
 }
 
 export const INITIAL_ARMOR_STATE: ArmorState = {
@@ -22,7 +25,7 @@ export const INITIAL_ARMOR_STATE: ArmorState = {
     activeType: null,
     oldName: null,
     menuHasScrolled: false,
-    mobileTab: "grid",
+    importComplete: false,
 }
 const initialDevState: ArmorState = {
     ...INITIAL_ARMOR_STATE,
@@ -32,12 +35,9 @@ const initialDevState: ArmorState = {
     },
 }
 
-// const _initialState = CONFIG.production() ? initialState : initialDevState
-const _initialState = INITIAL_ARMOR_STATE
-
 export const ArmorSlice = createSlice({
     name: FeatureKeys.Armor,
-    initialState: _initialState,
+    initialState: INITIAL_ARMOR_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })

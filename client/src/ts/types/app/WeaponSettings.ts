@@ -1,4 +1,4 @@
-import { WeaponAffinityName } from "@app/types"
+import type { WeaponAffinityName } from "@app/types"
 
 export interface WeaponSettings {
     // weapon_id: number
@@ -8,6 +8,7 @@ export interface WeaponSettings {
     weapon_skill_name?: string
 }
 
+// FIXME: move out of `@app/types`
 export const DEFAULT_WEAPON_SETTINGS: WeaponSettings = {
     // weapon_id: null,
     weapon_name: null,

@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { FeatureKeys, WeaponSlotId } from "@app/constants"
+import { FeatureKeys } from "@app/constants"
 import {
+    WeaponSlotId,
     WeaponSlots,
     DEFAULT_WEAPON_SETTINGS,
     WeaponSettings,
 } from "@app/types"
+
 import { reducers, extraReducers } from "./reducers"
 
 export interface WeaponsState {
@@ -15,7 +17,7 @@ export interface WeaponsState {
     customizingWeapon: boolean
     choosingAffinity: boolean
     menuHasScrolled: boolean
-    mobileTab: "grid" | "detail" | "status"
+    importComplete: boolean
 }
 
 const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
@@ -30,11 +32,11 @@ const DEFAULT_WEAPON_SLOTS: WeaponSlots = {
 export const INITIAL_WEAPONS_STATE: WeaponsState = {
     slots: { ...DEFAULT_WEAPON_SLOTS },
     oldWeapon: null,
-    activeSlotId: null,
+    activeSlotId: "R1",
     customizingWeapon: false,
     choosingAffinity:  false,
     menuHasScrolled:   false,
-    mobileTab: null,
+    importComplete: false,
 }
 
 const devState: WeaponsState = {
@@ -57,12 +59,9 @@ const devState: WeaponsState = {
     // oldWeapon: { weapon_name: "Dagger", level: 1, affinity_name: "Standard" },
 }
 
-// const _initialState = CONFIG.production() ? initialState : devState
-const _initialState = INITIAL_WEAPONS_STATE
-
 export const WeaponsSlice = createSlice({
     name: FeatureKeys.Weapons,
-    initialState: _initialState,
+    initialState: INITIAL_WEAPONS_STATE,
     reducers: reducers,
     extraReducers: extraReducers,
 })

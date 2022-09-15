@@ -1,4 +1,4 @@
-import { Heading } from "@app/shared"
+import { Heading } from "@app/features/common"
 
 export const HomePage = (_props: unknown): JSX.Element => {
 

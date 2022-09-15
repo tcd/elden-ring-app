@@ -2,7 +2,9 @@ import { useSelector } from "react-redux"
 
 import { Selectors } from "@app/state"
 import { isBlank } from "@app/util"
-import { EmptyTalismanDetail, TalismanDetailContent } from "."
+
+import { EmptyTalismanDetail } from "./EmptyTalismanDetail"
+import { TalismanDetailContent } from "./TalismanDetailContent"
 
 export const TalismanDetail = (_props: unknown): JSX.Element => {
 
@@ -10,7 +12,7 @@ export const TalismanDetail = (_props: unknown): JSX.Element => {
 
     if (isBlank(talisman)) {
         return <EmptyTalismanDetail />
-    } else {
-        return <TalismanDetailContent talisman={talisman} />
     }
+
+    return <TalismanDetailContent talisman={talisman} />
 }

@@ -1,6 +1,8 @@
-import { ArmorType } from "@app/constants"
-import { BaseEntity, EquipmentEffect } from "@app/types"
-
+import type {
+    BaseEntity,
+    ArmorType,
+    EquipmentEffect,
+} from "@app/types"
 
 export type ArmorSet = Record<ArmorType, string>
 

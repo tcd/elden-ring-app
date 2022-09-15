@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit"
+import { configureStore } from "@reduxjs/toolkit"
 import {
     persistStore,
     persistReducer,
@@ -12,74 +12,44 @@ import {
 import storage from "redux-persist/lib/storage" // defaults to localStorage for web
 import { getPersistConfig } from "redux-deep-persist"
 
-import { FeatureKeys } from "@app/constants"
-import {
-    AmmunitionSlice,
-    ArmorSlice,
-    BuilderSlice,
-    ChecklistSlice,
-    CoreSlice,
-    EquipmentSlice,
-    LevelUpSlice,
-    QuickItemsSlice,
-    SpellsSlice,
-    StartingClassSlice,
-    TalismansSlice,
-    WeaponsSlice,
-    // Router
-    createReduxHistory,
-    routerMiddleware,
-    routerReducer,
-} from "@app/features"
+import { CONFIG } from "@app/util"
 
-const rootReducer = combineReducers({
-    [FeatureKeys.Ammunition]:    AmmunitionSlice.reducer,
-    [FeatureKeys.Armor]:         ArmorSlice.reducer,
-    [FeatureKeys.Builder]:       BuilderSlice.reducer,
-    [FeatureKeys.Checklist]:     ChecklistSlice.reducer,
-    [FeatureKeys.Core]:          CoreSlice.reducer,
-    [FeatureKeys.Equipment]:     EquipmentSlice.reducer,
-    [FeatureKeys.LevelUp]:       LevelUpSlice.reducer,
-    [FeatureKeys.QuickItems]:    QuickItemsSlice.reducer,
-    [FeatureKeys.Router]:        routerReducer,
-    [FeatureKeys.Spells]:        SpellsSlice.reducer,
-    [FeatureKeys.StartingClass]: StartingClassSlice.reducer,
-    [FeatureKeys.Talismans]:     TalismansSlice.reducer,
-    [FeatureKeys.Weapons]:       WeaponsSlice.reducer,
-})
+import { rootReducer } from "./root-reducer"
+import type { RootState } from "./state"
+
+export const persistList: NestedKeyOf<RootState>[] = [
+    "Core.preferences",
+    // "Armor.activeType",
+    "Armor.armorNames",
+    // "Armor.oldName",
+    "LevelUp.attributes",
+    // "Checklist.obtainedResources",
+    // "Spells.spellNames",
+    "StartingClass.startingClassName",
+    // "Talismans.activeSlotId",
+    // "Talismans.oldTalismanName",
+    "Talismans.talismanNames",
+    // "Weapons.activeSlotId",
+    // "Weapons.choosingAffinity",
+    // "Weapons.customizingWeapon",
+    // "Weapons.oldWeapon",
+    "Weapons.slots",
+]
 
 const persistConfig = getPersistConfig({
     rootReducer,
-    key: "root",
+    key: "elden-ring-app",
     version: 1,
     storage: storage,
-    // blacklist: [
-    //     "router",
-    // ],
-    whitelist: [
-        // "Armor.activeType",
-        "Armor.armorNames",
-        // "Armor.oldName",
-        "LevelUp.attributes",
-        // "Checklist.obtainedResources",
-        // "Spells.spellNames",
-        "StartingClass.startingClassName",
-        // "Talismans.activeSlotId",
-        // "Talismans.oldTalismanName",
-        "Talismans.talismanNames",
-        // "Weapons.activeSlotId",
-        // "Weapons.choosingAffinity",
-        // "Weapons.customizingWeapon",
-        // "Weapons.oldWeapon",
-        "Weapons.slots",
-    ],
+    // @ts-ignore: next-line
+    whitelist: persistList,
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 export const store = configureStore({
     reducer: persistedReducer,
-    devTools: true,
+    devTools: !CONFIG.production(),
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         // immutableCheck:    { ignoredPaths: ["Builder.everythingRequest.response"] },
         // serializableCheck: { ignoredPaths: ["Builder.everythingRequest.response"] },
@@ -87,15 +57,7 @@ export const store = configureStore({
         serializableCheck: {
             ignoredActions: [ FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER ],
         },
-    }).concat(routerMiddleware),
+    }),
 })
 
-export const history = createReduxHistory(store)
-
 export const persistor = persistStore(store)
-
-export type RootState = ReturnType<typeof store.getState>
-
-export type AppDispatch = typeof store.dispatch
-
-export type AnySelector<T = any> = (rootState: RootState) => T

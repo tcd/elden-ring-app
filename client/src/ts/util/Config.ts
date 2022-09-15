@@ -4,39 +4,52 @@ export type NodeEnvironment = "test" | "development" | "production"
 
 export interface IConfig {
     nodeEnv: NodeEnvironment
+    logLevel: LogLevel
     cloudflareHash: string
     apiServerRoot: string
     version: string
-    logLevel: LogLevel
+    clientUrl: string
+    bitlyToken: string
+    firebaseApiKey: string
 }
 
 class Configuration implements IConfig {
 
     public nodeEnv: NodeEnvironment
+    public logLevel: LogLevel
     public cloudflareHash: string
     public apiServerRoot: string
     public version: string
-    public logLevel: LogLevel
+    public clientUrl: string
+    public bitlyToken: string
+    public firebaseApiKey: string
 
     constructor() {
         this.nodeEnv        = this.getNodeEnv()
+        this.logLevel       = process?.env["ER_LOG_LEVEL"] as LogLevel ?? "error"
         this.cloudflareHash = process?.env["CLOUDFLARE_HASH"] ?? ""
         this.apiServerRoot  = process?.env["API_SERVER_ROOT"] ?? ""
         this.version        = process?.env["VERSION"] ?? ""
-        this.logLevel       = process?.env["ER_LOG_LEVEL"] as LogLevel ?? "error"
+        this.clientUrl      = process?.env["CLIENT_URL"] ?? ""
+        this.bitlyToken     = process?.env["BITLY_TOKEN"] ?? ""
+        this.firebaseApiKey = process?.env["FIREBASE_API_KEY"] ?? ""
     }
 
     public production(): boolean {
-        return this.nodeEnv == "production"
+        return this.nodeEnv != "development"
     }
 
     public toJson(): any {
+        if (this.getNodeEnv() === "production") { return null }
         return {
             nodeEnv:        this.nodeEnv,
+            logLevel:       this.logLevel,
             cloudflareHash: this.cloudflareHash,
             apiServerRoot:  this.apiServerRoot,
             version:        this.version,
-            logLevel:       this.logLevel,
+            clientUrl:      this.clientUrl,
+            bitlyToken:     this.bitlyToken,
+            firebaseApiKey: this.firebaseApiKey,
         }
     }
 

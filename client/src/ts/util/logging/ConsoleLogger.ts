@@ -1,7 +1,13 @@
+/* eslint-disable no-console */
 import { ILogger, LogLevel } from "@app/types"
 import { CONFIG } from "@app/config"
-import { isBlank } from "@app/util"
-// import { getCallsite } from "./getCallsite";
+
+import { isBlank } from "../helpers/is-blank"
+import { isObject } from "../srk"
+import {
+    // getCallsite,
+    getCallingFunction,
+} from "./callsite"
 
 const LogLevelIds: Record<LogLevel, number> = {
     trace: 0,
@@ -24,8 +30,8 @@ const LogLevelIds: Record<LogLevel, number> = {
 export class ConsoleLogger implements ILogger {
     public trace(message?: any, ...optionalParams: any[]) { this._log("trace", message, ...optionalParams) }
     public debug(message?: any, ...optionalParams: any[]) { this._log("debug", message, ...optionalParams) }
-    public info (message?: any, ...optionalParams: any[]) { this._log("info",  message, ...optionalParams)  }
-    public warn (message?: any, ...optionalParams: any[]) { this._log("warn",  message, ...optionalParams)  }
+    public info (message?: any, ...optionalParams: any[]) { this._log("info",  message, ...optionalParams) }
+    public warn (message?: any, ...optionalParams: any[]) { this._log("warn",  message, ...optionalParams) }
     public error(message?: any, ...optionalParams: any[]) { this._log("error", message, ...optionalParams) }
     public fatal(message?: any, ...optionalParams: any[]) { this._log("fatal", message, ...optionalParams) }
 
@@ -33,34 +39,40 @@ export class ConsoleLogger implements ILogger {
         if (!this._shouldLog(level)) {
             return null
         }
+
+        // let fixedOptionalParams
+
         if (isBlank(message)) {
-            message = "[no message]"
+            message = `[${getCallingFunction()}]`
+        } else if (isObject(message)) {
+            optionalParams = [message]
+            message = `[${getCallingFunction()}]`
         } else {
-            if (isBlank(optionalParams)) {
-                switch (level) {
-                    case "trace": console.trace(message); break
-                    case "debug": console.debug(message); break
-                    case "info":  console.info(message);  break
-                    case "warn":  console.warn(message);  break
-                    case "error": console.error(message); break
-                    case "fatal": console.error(message); break
-                    default: break
-                }
-                return null
-            } else {
-                if (isBlank(optionalParams)) {
-                    switch (level) {
-                        case "trace": console.trace(message, ...optionalParams); break
-                        case "debug": console.debug(message, ...optionalParams); break
-                        case "info":  console.info(message,  ...optionalParams); break
-                        case "warn":  console.warn(message,  ...optionalParams); break
-                        case "error": console.error(message, ...optionalParams); break
-                        case "fatal": console.error(message, ...optionalParams); break
-                        default: break
-                    }
-                    return null
-                }
+            message = `[${getCallingFunction()}] ${message}`
+        }
+
+        if (isBlank(optionalParams)) {
+            switch (level) {
+                case "trace": console.trace(message); break
+                case "debug": console.debug(message); break
+                case "info":  console.info(message);  break
+                case "warn":  console.warn(message);  break
+                case "error": console.error(message); break
+                case "fatal": console.error(message); break
+                default: break
             }
+            return null
+        } else {
+            switch (level) {
+                case "trace": console.trace(message, ...optionalParams); break
+                case "debug": console.debug(message, ...optionalParams); break
+                case "info":  console.info(message,  ...optionalParams); break
+                case "warn":  console.warn(message,  ...optionalParams); break
+                case "error": console.error(message, ...optionalParams); break
+                case "fatal": console.error(message, ...optionalParams); break
+                default: break
+            }
+            return null
         }
     }
 

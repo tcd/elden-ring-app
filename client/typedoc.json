@@ -1,0 +1,24 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "name": "elden-ring-app",
+    "out": "./docs/tsx",
+    "readme": "./README.md",
+    "entryPointStrategy": "expand",
+    "excludeExternals": true,
+    "plugin": [
+        "typedoc-plugin-extras",
+        "typedoc-plugin-missing-exports",
+    ],
+    "entryPoints": [
+        "./src/ts/@types/global.d.ts",
+        "./src/ts/app/index.ts",
+        "./src/ts/constants/index.ts",
+        "./src/ts/data/index.ts",
+        "./src/ts/features/index.ts",
+        "./src/ts/state/index.ts",
+        // "./src/ts/theme/index.ts",
+        "./src/ts/types/index.ts",
+        "./src/ts/util/index.ts",
+    ],
+    "tsconfig": "./tsconfig.json"
+}

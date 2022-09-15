@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Z-index master list
 //
-// Warning: Avoid customizing these values.
+// ~~Warning: Avoid customizing these values.~~
 // They're used for a bird's eye view of components dependent on the z-axis and are designed to all work together.
 // ----------------------------------------------------------------------------
 
@@ -25,6 +25,10 @@ $zindex-popover:                    1070;
 $zindex-tooltip:                    1080;
 // $zindex-toast:                      1090;
 $zindex-contextMenu:                  1100;
+$zindex-scrollBar:                    1000;
+$zindex-scrollBar-button:             1005;
+$zindex-scrollBar-track:              1010;
+$zindex-scrollBar-thumb:              1020;
 $zindex-sideNav-backdrop:             1190;
 $zindex-sideNav:                      1200;
 // scss-docs-end zindex-stack
