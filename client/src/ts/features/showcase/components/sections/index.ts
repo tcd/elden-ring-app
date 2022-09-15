@@ -1,6 +1,7 @@
 export * from "./Buttons"
 export * from "./Cards"
 export * from "./ContextMenu"
+export * from "./Dialog"
 export * from "./HorizontalRule"
 export * from "./Lists"
 export * from "./Modal"

@@ -7,6 +7,7 @@ import {
     Buttons,
     Cards,
     ContextMenu,
+    Dialog,
     HorizontalRule,
     Lists,
     Modal,
@@ -72,7 +73,7 @@ function a11yProps(index: number) {
 }
 
 const VerticalTabs = (): JSX.Element => {
-    const [value, setValue] = useState(0)
+    const [value, setValue] = useState(8)
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue)
@@ -98,6 +99,7 @@ const VerticalTabs = (): JSX.Element => {
                 <Tab label="Tooltip"         {...a11yProps(6)} />
                 <Tab label="You Died"        {...a11yProps(7)} />
                 <Tab label="Tabs"            {...a11yProps(8)} />
+                <Tab label="Dialog"          {...a11yProps(9)} />
             </MuiTabs>
 
             <TabPanel value={value} index={0}>
@@ -126,6 +128,9 @@ const VerticalTabs = (): JSX.Element => {
             </TabPanel>
             <TabPanel value={value} index={8}>
                 <Tabs />
+            </TabPanel>
+            <TabPanel value={value} index={9}>
+                <Dialog />
             </TabPanel>
         </Box>
     )

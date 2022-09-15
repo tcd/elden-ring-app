@@ -36,12 +36,12 @@ export const Modal = (_props: unknown): JSX.Element => {
         <ShowcaseSection title="ErModal">
             <ErModal {...modalProps}>
                 <Typography variant="body">
-                    It displays whatever child components it&quot;s passed.
+                    It displays whatever child components it&apos;s passed.
                 </Typography>
             </ErModal>
             <ErModal {...footerModalProps}>
                 <Typography variant="body">
-                    You can also pass content to be displayed in the modal&quot;s footer
+                    You can also pass content to be displayed in the modal&apos;s footer
                 </Typography>
             </ErModal>
             <Grid container direction="row">
