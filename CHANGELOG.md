@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
 
 
 ## [Unreleased]
+
+
+## [0.9.0] - 2022-09-14
 ### Added
+- Add proper data import/export
 - Add app features:
     - `ImportExport` 
     - `Notifications` 
@@ -17,6 +21,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
     - `jquery`
     - `bootstrap`
 - Bump material ui version
+- So many other things I can't remember. Feel free to ask.
 
 
 ## [0.8.0] - 2022-09-03
