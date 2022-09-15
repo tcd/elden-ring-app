@@ -21,7 +21,7 @@ The format is based on [Keep a Changelog][keep-a-changelog], and this project ad
     - `jquery`
     - `bootstrap`
 - Bump material ui version
-- So many other things I can't remember. Feel free to ask.
+- So many other things I can't remember. Feel free to ask. It was 454 commits. I'm only human.
 
 
 ## [0.8.0] - 2022-09-03
