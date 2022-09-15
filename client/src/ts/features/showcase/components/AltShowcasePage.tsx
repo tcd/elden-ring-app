@@ -1,4 +1,4 @@
-import { Tabs, Tab, Box } from "@mui/material"
+import { Tabs as MuiTabs, Tab, Box } from "@mui/material"
 import { useState } from "react"
 
 import { ErPage, ErContainer } from "@app/features/common"
@@ -10,6 +10,7 @@ import {
     HorizontalRule,
     Lists,
     Modal,
+    Tabs,
     Tooltip,
     YouDied,
 } from "./sections"
@@ -80,7 +81,7 @@ const VerticalTabs = (): JSX.Element => {
     return (
         <Box sx={{ flexGrow: 1, bgcolor: "background.paper", display: "flex" }} >
 
-            <Tabs
+            <MuiTabs
                 orientation="vertical"
                 variant="scrollable"
                 value={value}
@@ -96,7 +97,8 @@ const VerticalTabs = (): JSX.Element => {
                 <Tab label="Modal"           {...a11yProps(5)} />
                 <Tab label="Tooltip"         {...a11yProps(6)} />
                 <Tab label="You Died"        {...a11yProps(7)} />
-            </Tabs>
+                <Tab label="Tabs"            {...a11yProps(8)} />
+            </MuiTabs>
 
             <TabPanel value={value} index={0}>
                 <Lists />
@@ -121,6 +123,9 @@ const VerticalTabs = (): JSX.Element => {
             </TabPanel>
             <TabPanel value={value} index={7}>
                 <YouDied />
+            </TabPanel>
+            <TabPanel value={value} index={8}>
+                <Tabs />
             </TabPanel>
         </Box>
     )
