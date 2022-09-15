@@ -12,7 +12,14 @@ const styles = {
 export const ErModal = (props: ErModalProps): JSX.Element => {
 
     const contentElement = (contentProps: React.ComponentPropsWithRef<"div">, _children: React.ReactNode) => {
-        return <Content {...props} {...contentProps}>{props?.children && props.children}</Content>
+        return (
+            <Content
+                {...props}
+                {...contentProps}
+            >
+                {props?.children && props.children}
+            </Content>
+        )
     }
 
     return (

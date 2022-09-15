@@ -1,16 +1,7 @@
-import type {
-    SxProps,
-    // Theme as MuiTheme,
-} from "@mui/material"
+import type { SxProps } from "@mui/material"
 
-import {
-    ThemeVars,
-    ThemeBreakpoints,
-} from "@app/theme"
-
-import {
-    textShadow,
-} from "../mixins"
+import { ThemeVars } from "@app/theme"
+import { textShadow } from "@app/theme/sx/mixins"
 
 /** `.er__modal__overlay` */
 const overlayStyles: React.CSSProperties = {
@@ -55,7 +46,7 @@ const contentSx: SxProps = {
     alignItems: "center",
 
     // NOTE: this might come back to bite me in the butt.
-    "& > :first-child": {
+    "& > :first-of-type": {
         flexGrow: 1,
         height: "100%",
     },
@@ -77,9 +68,8 @@ const footerSx: SxProps = {
     paddingBottom: "15px",
 
     display: "flex",
-    flexDirection: "row",
-    flexWrap: "nowrap",
-    justifyContent: "spaceAround",
+    flexFlow: "row nowrap",
+    justifyContent: "space-around",
 }
 
 const borderSx: SxProps = {

@@ -7,7 +7,11 @@ import type { ErModalProps } from "./types"
 
 export const Content = forwardRef(function Content(props: ErModalProps, ref) {
     return (
-        <Box ref={ref} sx={ComponentSx.ErModal.modalSx}>
+        <Box
+            id="er__modalContent"
+            ref={ref}
+            sx={ComponentSx.ErModal.modalSx}
+        >
             <OuterBorder />
 
             <Box component="header" sx={ComponentSx.ErModal.headerSx}>

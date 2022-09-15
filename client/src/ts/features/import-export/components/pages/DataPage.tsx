@@ -26,7 +26,7 @@ export const DataPage = (_props: unknown): JSX.Element => {
 
     return (
         <ErPage pageName="data">
-            <ExportModal />
+            {/* <ExportModal open={true} /> */}
             <Container>
                 <Grid container direction="row">
 

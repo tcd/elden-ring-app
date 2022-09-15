@@ -1,46 +1,44 @@
-import { useSelector, useDispatch } from "react-redux"
-import { Box, Typography, Button, SxProps } from "@mui/material"
+import { useSelector } from "react-redux"
+import { Box, Button } from "@mui/material"
 
 import { ComponentSx } from "@app/theme"
-import { Actions, Selectors } from "@app/state"
-import { ErCard, ErModal, ErHr } from "@app/features/common"
+import { Selectors } from "@app/state"
+import { ErModal } from "@app/features/common"
 
 import { ErQrCode } from "../ErQrCode"
 import { CopyableLink } from "./CopyableLink"
 
+export type ExportModalProps = {
+    open: boolean
+    onClose: () => void
+}
 
-export const ExportModal = (_props: unknown): JSX.Element => {
+export const ExportModal = (props: ExportModalProps): JSX.Element => {
 
-    const dispatch = useDispatch()
+    const {
+        open,
+        onClose,
+    } = props
 
-    // const url = useSelector(Selectors.ImportExport.requests.buildUrl.response)
-    const url = "https://eldenring.page.link/29hQ"
+    const url = useSelector(Selectors.ImportExport.requests.buildUrl.response)
 
-    const handleClick = () => {
-        dispatch(Actions.ImportExport.buildUrl())
-    }
+    const $footer = (
+        <Button variant="elden-ring" onClick={onClose}>
+            Close
+        </Button>
+    )
 
     return (
         <ErModal
-            isOpen={true}
+            isOpen={open}
+            onClose={onClose}
             title="Character Build Data"
+            footerContent={$footer}
         >
-            <ExportModalContent url={url}/>
+            <Box sx={ComponentSx.ExportCard.root}>
+                <CopyableLink url={url} />
+                <ErQrCode url={url} />
+            </Box>
         </ErModal>
-    )
-}
-
-
-interface ExportModalContentProps {
-    url: string
-}
-
-const ExportModalContent = ({ url }: ExportModalContentProps): JSX.Element => {
-
-    return (
-        <Box sx={ComponentSx.ExportCard.root}>
-            <CopyableLink url={url} />
-            <ErQrCode url={url} />
-        </Box>
     )
 }
