@@ -4,69 +4,103 @@ import type { CSSSelectorObjectOrCssVariables } from "@mui/system"
 import { buttonUnstyledClasses } from "@mui/base/ButtonUnstyled"
 import { tabUnstyledClasses } from "@mui/base/TabUnstyled"
 
-import { ThemeVars } from "@app/theme"
-
-const blue = {
-    50: "#F0F7FF",
-    100: "#C2E0FF",
-    200: "#80BFFF",
-    300: "#66B2FF",
-    400: "#3399FF",
-    500: "#007FFF",
-    600: "#0072E5",
-    700: "#0059B2",
-    800: "#004C99",
-    900: "#003A75",
-}
-
-const grey = {
-    50: "#f6f8fa",
-    100: "#eaeef2",
-    200: "#d0d7de",
-    300: "#afb8c1",
-    400: "#8c959f",
-    500: "#6e7781",
-    600: "#57606a",
-    700: "#424a53",
-    800: "#32383f",
-    900: "#24292f",
-}
+import { boxShadow } from "@app/theme/helpers"
+import { invisibleContent } from "@app/theme/sx/mixins"
+import { ThemeVars } from "@app/theme/variables"
 
 const Vars = {
     bg: "#1f1e19",
     borderColors: [
         "#434037",
     ],
+    hover: "#4b4b3f",
+    panelBg: "#2c2922",
 }
 
+const py = (arg: string) => ({ paddingTop:  arg, paddingBottom: arg })
+const px = (arg: string) => ({ paddingLeft: arg, paddingRight:  arg })
+const my = (arg: string) => ({ marginTop:   arg, marginBottom:  arg })
+const mx = (arg: string) => ({ marginLeft:  arg, marginRight:   arg })
+
+// =============================================================================
+// Mixins
+// =============================================================================
+
+const _afterActive: SxProps = {
+    content: ThemeVars.ZWSP,
+    position: "absolute",
+    // boxSizing: "content-box",
+
+    top: 0,
+    left: 0,
+    transform: "translate(50%)",
+
+    height: "100%",
+    width: "50%",
+
+    // width: "25%",
+
+    // ...px("25%"),
+
+    boxShadow: boxShadow({
+        x: "0px",
+        y: "0px",
+        blur: "5px",
+        spread: "5px",
+        color: ThemeVars.colors.gold.dark,
+    }),
+    opacity: 0.5,
+}
+
+const _activeTab: SxProps = {
+    backgroundColor: "rebeccapurple",
+    boxShadow: [
+        boxShadow({
+            x: "5px",
+            y: "5px",
+            blur: "5px",
+            spread: "5px",
+            color: ThemeVars.colors.gold.dark,
+        }),
+        "inset" + boxShadow({
+            x: "0px",
+            y: "0px",
+            blur: "5px",
+            spread: "5px",
+            color: ThemeVars.colors.gold.dark,
+        }),
+    ].join(", "),
+    "&::after": _afterActive,
+}
+
+// =============================================================================
+// Sx
+// =============================================================================
 
 const tab: SxProps = {
-    fontFamily: "IBM Plex Sans, sans-serif",
-    color: "#fff",
+    position: "relative",
+    color: ThemeVars.colors.gold.light,
     cursor: "pointer",
-    fontSize: "0.875rem",
-    fontWeight: 600,
     backgroundColor: "transparent",
     width: "100%",
-    padding: "10px 12px",
-    margin: "6px 6px",
+    ...py("10px"),
+    ...px("12px"),
+    margin: "6px",
     border: "none",
-    borderRadius: "7px",
+    borderRadius: "0px",
     display: "flex",
     justifyContent: "center",
 
     "&:hover": {
-        backgroundColor: blue[400],
+        ..._activeTab,
     },
 
     "&:focus": {
-        color: "#fff",
-        outline: `3px solid ${blue[200]}`,
+        outline: `3px solid ${ThemeVars.colors.gold.light}`,
     },
 
     [`&.${tabUnstyledClasses.selected}`]: {
-        backgroundColor: "#fff",
-        color: blue[600],
+        ..._activeTab,
     },
 
     [`&.${buttonUnstyledClasses.disabled}`]: {
@@ -77,26 +111,27 @@ const tab: SxProps = {
 
 const tabPanel: SxProps = {
     width: "100%",
-    fontFamily: "IBM Plex Sans, sans-serif",
     fontSize: "0.875rem",
-    padding: "20px 12px",
+    ...py("20px"),
+    ...px("12px"),
     background: "#fff",
-    border: `1px solid ${grey[700]}`,
-    borderRadius: "12px",
+    // border: `1px solid ${grey[700]}`,
+    borderRadius: "0px",
     opacity: 0.6,
+    textShadow: "none",
+    backgroundColor: Vars.panelBg,
 }
 
 const tabList: SxProps = {
-    minWidth: "400px",
+    minWidth: "100px",
     backgroundColor: Vars.bg,
-    borderRadius: "12px",
-    marginBottom: "16px",
+    borderRadius: "0px",
+    // marginBottom: "16px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     alignContent: "space-between",
 }
-
 
 export const ErTabs = {
     tab,
