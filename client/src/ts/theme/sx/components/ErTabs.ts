@@ -31,38 +31,33 @@ const _afterActive: SxProps = {
     position: "absolute",
     // boxSizing: "content-box",
 
-    top: 0,
+    top: "-10%",
     left: 0,
     transform: "translate(50%)",
 
-    height: "100%",
+    height: "120%",
     width: "50%",
 
     // width: "25%",
 
     // ...px("25%"),
 
-    boxShadow: boxShadow({
-        x: "0px",
-        y: "0px",
-        blur: "5px",
-        spread: "5px",
-        color: ThemeVars.colors.gold.dark,
-    }),
-    opacity: 0.5,
-}
-
-const _activeTab: SxProps = {
-    backgroundColor: "rebeccapurple",
+    // boxShadow: boxShadow({
+    //     x: "0px",
+    //     y: "0px",
+    //     blur: "5px",
+    //     spread: "5px",
+    //     color: ThemeVars.colors.gold.dark,
+    // }),
     boxShadow: [
         boxShadow({
-            x: "5px",
-            y: "5px",
+            x: "0px",
+            y: "0px",
             blur: "5px",
             spread: "5px",
             color: ThemeVars.colors.gold.dark,
         }),
-        "inset" + boxShadow({
+        "inset " + boxShadow({
             x: "0px",
             y: "0px",
             blur: "5px",
@@ -70,6 +65,27 @@ const _activeTab: SxProps = {
             color: ThemeVars.colors.gold.dark,
         }),
     ].join(", "),
+    opacity: 0.5,
+}
+
+const _activeTab: SxProps = {
+    // backgroundColor: "rebeccapurple",
+    // boxShadow: [
+    //     boxShadow({
+    //         x: "5px",
+    //         y: "5px",
+    //         blur: "5px",
+    //         spread: "5px",
+    //         color: ThemeVars.colors.gold.dark,
+    //     }),
+    //     "inset" + boxShadow({
+    //         x: "0px",
+    //         y: "0px",
+    //         blur: "5px",
+    //         spread: "5px",
+    //         color: ThemeVars.colors.gold.dark,
+    //     }),
+    // ].join(", "),
     "&::after": _afterActive,
 }
 
